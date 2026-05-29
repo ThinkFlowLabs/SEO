@@ -195,6 +195,46 @@
 
   .table-scroll { overflow-x: auto; }
 
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #F4C7C5; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
   /* ============ PILLS / CALLOUTS ============ */
   .callout {
     background: var(--coral-sft); border: 1px solid #F4C7C5;
@@ -315,6 +355,7 @@
       <a href="#snapshot">Snapshot</a>
       <a href="#critical">Critical</a>
       <a href="#quickwins">Quick Wins</a>
+      <a href="#hierarchy">URL Catalog</a>
       <a href="#keywords">Keywords</a>
       <a href="#schema">Schema</a>
       <a href="#content">Content</a>
@@ -681,170 +722,826 @@
 <!-- =================== PAGE-BY-PAGE HIERARCHY =================== -->
 <section id="hierarchy" class="alt">
   <div class="wrap">
-    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · Page-by-Page Hierarchy</span></div>
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · URL × Error × Fix Catalog</span></div>
     <h2>Every page,<br><em class="display-italic">audited</em>.</h2>
-    <p class="lede" style="margin-top:18px; max-width:720px;">A live Playwright crawl of 12 template URLs. Each card shows H1/H2 status, schema status, canonical status, and the single most pressing fix.</p>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Each card below maps a specific URL (or URL pattern) to its concrete issues, the current broken state we observed, and the exact code-level fix. Organized by category so a dev can ticket the work in one pass. URLs are real, pulled from the 16-month GSC export and the live Playwright crawl.</p>
 
     <div class="ornament">· · ·</div>
 
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>https://chefpost.com/&nbsp; <span class="badge brand">HOMEPAGE</span></h4>
-        <span class="small">2,020 clicks · 88,523 imp · pos 29.7</span>
+    <!-- ============ SUBSECTION A: TOP UNIQUE URLs ============ -->
+    <div class="sub-eyebrow">A · Top unique URLs (individual breakdowns)</div>
+
+    <!-- HOMEPAGE -->
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/</div>
+          <div class="url-audit-meta">2,020 clicks · 88,523 imp · pos 29.7 · Lighthouse Perf 0.65 · LCP 6.1s</div>
+        </div>
+        <span class="badge crit">P0 · HOMEPAGE</span>
       </div>
-      <p>H1 present ✓ · H2 structure ✓ · <strong>No Organization / WebSite / SearchAction schema</strong>. Carousel renders the same chef cards twice (DOM duplication). Hero LCP image not optimized → 6.1s LCP. No og:image → no social previews.</p>
-      <div class="pc-issues">
-        <span class="pc-issue">No Organization schema</span>
-        <span class="pc-issue">DOM duplication in carousel</span>
-        <span class="pc-issue">LCP 6.1s</span>
-        <span class="pc-issue">Missing og:image</span>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">LCP fails Core Web Vitals</div>
+          <div class="issue-current">Largest Contentful Paint = 6.1s on mobile. Google "Good" threshold is &lt; 2.5s. 4 render-blocking JS files + 3 render-blocking stylesheets.</div>
+          <div class="issue-fix"><b>Fix:</b> Inline critical CSS for the hero. Add <code>fetchpriority="high"</code> + explicit width/height to the LCP image. Defer all non-critical JS with <code>&lt;script defer&gt;</code> or <code>async</code>. Preconnect analytics origins.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No Organization / WebSite / SearchAction schema</div>
+          <div class="issue-current">Zero JSON-LD on the homepage. Sitelinks search box and brand panel are ineligible.</div>
+          <div class="issue-fix"><b>Fix:</b> Add Organization schema (name, logo, sameAs socials, address) + WebSite schema with <code>potentialAction:SearchAction</code> pointing at <code>/filter?q={search_term_string}</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Missing og:image</div>
+          <div class="issue-current">No <code>&lt;meta property="og:image"&gt;</code> tag at all. Facebook/LinkedIn/WhatsApp shares render as a blank card.</div>
+          <div class="issue-fix"><b>Fix:</b> Add a 1200×630 hero share image, e.g. <code>&lt;meta property="og:image" content="https://chefpost.com/og/home.jpg"&gt;</code> plus <code>og:title</code>, <code>og:description</code>, <code>og:type=website</code>, <code>og:url</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Carousel renders chef cards twice</div>
+          <div class="issue-current">The "Featured chefs" section renders the same chef cards twice in the DOM (carousel + grid). Confuses crawlers + ships duplicate H3s.</div>
+          <div class="issue-fix"><b>Fix:</b> Render once. Use CSS scroll-snap or a single-source carousel library that mounts items in one DOM list.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Placeholder GA4 ID firing</div>
+          <div class="issue-current">Hardcoded test ID <code>G-12345HHDSD</code> fires alongside the real <code>G-41JH1G30DC</code>. Pollutes reports + adds ~80 KB of unused tagging.</div>
+          <div class="issue-fix"><b>Fix:</b> Remove the placeholder GA4 ID from GTM and any inline script. Audit GTM for unused tags.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Accessibility overlay (acsbapp.com)</div>
+          <div class="issue-current">Loads ~200KB of JS. These widgets do not create WCAG compliance and are increasingly the target of lawsuits.</div>
+          <div class="issue-fix"><b>Fix:</b> Remove the overlay. Run a real a11y audit + remediate the actual top issues (alt text, contrast, focus order).</div>
+        </div>
+        <div class="url-issue ok">
+          <div class="issue-name">H1 present, viewport set, HTTPS, lang="en"</div>
+          <div class="issue-current">Basics all pass on this URL.</div>
+          <div class="issue-fix">No action.</div>
+        </div>
       </div>
     </div>
 
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/meal-prep</h4>
-        <span class="small">106 clicks · 18,011 imp · pos 18.6 · LCP 4.5s</span>
+    <!-- ANTI-INFLAMMATORY BLOG POST -->
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/blog/7-days-anti-inflammatory-meal-plan</div>
+          <div class="url-audit-meta">39 clicks · 44,845 imp · pos 13.4 · 0.09% CTR · LARGEST OPPORTUNITY</div>
+        </div>
+        <span class="badge crit">P0 · CRITICAL</span>
       </div>
-      <p>Mid-funnel commercial page underperforming at pos 18. Needs a true Service schema (price range, area served, image, provider), proper H1, FAQ schema using the 10 PAA cost/booking questions.</p>
-      <div class="pc-issues">
-        <span class="pc-issue">No Service schema</span>
-        <span class="pc-issue">No FAQ schema</span>
-        <span class="pc-issue">LCP 4.5s</span>
-      </div>
-    </div>
-
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/become-a-personal-chef</h4>
-        <span class="small">106 clicks · 12,954 imp · pos 8.3 · two-sided supply pipeline</span>
-      </div>
-      <p>Canonical points to <code class="mono">/career/</code> instead of self. H1 present but jumps straight to H4 with no H2/H3. Only 304 words of body copy.</p>
-      <div class="pc-issues">
-        <span class="pc-issue">Canonical mismatch</span>
-        <span class="pc-issue">Broken heading skip</span>
-        <span class="pc-issue warn">Thin content (304 words)</span>
-      </div>
-    </div>
-
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/events</h4>
-        <span class="small">18 clicks · 5,345 imp · pos 9.8</span>
-      </div>
-      <p>No H1. og:image rendered as literal string <code class="mono">"[object Object]"</code>. No Event schema on individual experiences. Chef-card H3s duplicate (carousel + grid).</p>
-      <div class="pc-issues">
-        <span class="pc-issue">No H1</span>
-        <span class="pc-issue">Broken og:image</span>
-        <span class="pc-issue">No Event schema</span>
-      </div>
-    </div>
-
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/about-us</h4>
-        <span class="small">23 clicks · 11,354 imp · pos 5.6 · 0.20% CTR</span>
-      </div>
-      <p>No H1. Body copy 266 words (too thin for a trust-building page). Missing Organization schema. Position 5.6 with 0.20% CTR signals SERP appearance is failing, needs an enticing title + meta + AboutPage schema.</p>
-      <div class="pc-issues">
-        <span class="pc-issue">No H1</span>
-        <span class="pc-issue warn">Thin content</span>
-        <span class="pc-issue">No Organization schema</span>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Canonical bug</div>
+          <div class="issue-current">Ships <code>&lt;link rel="canonical" href="https://chefpost.com/blog/"&gt;</code> (the index). Google has been routing 16 months of signal to the wrong URL.</div>
+          <div class="issue-fix"><b>Fix:</b> Set self-canonical:<br><code>&lt;link rel="canonical" href="https://chefpost.com/blog/7-days-anti-inflammatory-meal-plan"&gt;</code></div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No H1</div>
+          <div class="issue-current">Page has no <code>&lt;h1&gt;</code> element. Title shows in the browser tab via <code>&lt;title&gt;</code> only.</div>
+          <div class="issue-fix"><b>Fix:</b> Wrap the post title in an <code>&lt;h1&gt;</code> at the top of the article container, before any body copy.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Empty / generic title</div>
+          <div class="issue-current">Current <code>&lt;title&gt;</code> is generic. SERP loses the click to competitor titles that match "free PDF + recipes" intent.</div>
+          <div class="issue-fix"><b>Fix:</b> Rewrite to <code>"7-Day Anti-Inflammatory Meal Plan (Free PDF + Chef-Made Recipes)"</code>. Keep ≤ 60 chars to avoid SERP truncation on mobile.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No BlogPosting schema</div>
+          <div class="issue-current">No <code>BlogPosting</code> JSON-LD. Article rich-result eligibility = 0.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>BlogPosting</code> with <code>headline</code>, <code>author</code>, <code>datePublished</code>, <code>dateModified</code>, <code>image</code>, <code>publisher</code>, <code>mainEntityOfPage</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No Recipe schema</div>
+          <div class="issue-current">This is a 7-day meal plan. <code>Recipe</code> schema would unlock the Recipe carousel, 3–5× SERP CTR.</div>
+          <div class="issue-fix"><b>Fix:</b> Add a <code>Recipe</code> object per day or one master Recipe with <code>recipeIngredient</code>, <code>recipeInstructions</code>, <code>totalTime</code>, <code>nutrition</code>, <code>recipeYield</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Broken og:image</div>
+          <div class="issue-current"><code>og:image</code> renders as the literal string <code>"[object Object]"</code> (template serialization bug). No social previews work.</div>
+          <div class="issue-fix"><b>Fix:</b> In the OG template helper, serialize the image object to a URL string before rendering. Validate with <code>JSON.stringify(image)</code> in dev.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Substack copy splits authority</div>
+          <div class="issue-current">A near-duplicate post exists at <code>blog.chefpost.com/p/the-anti-inflammatory-meal-plan-that</code> (Substack subdomain) collecting impressions separately.</div>
+          <div class="issue-fix"><b>Fix:</b> Migrate Substack content into <code>/blog/</code> + 301 the Substack URL to this one. Consolidates link equity.</div>
+        </div>
       </div>
     </div>
 
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/faq</h4>
-        <span class="small">14 clicks · 6,178 imp · pos 6.7</span>
+    <!-- HOW MUCH POST -->
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/blog/how-much-is-a-personal-chef-less-than-you-think</div>
+          <div class="url-audit-meta">32 clicks · 6,788 imp · pos 4.5 · COMMERCIAL INTENT</div>
+        </div>
+        <span class="badge crit">P0 · METADATA NULL</span>
       </div>
-      <p><strong>FAQ Q&amp;A in H2 tags, zero FAQPage schema.</strong> Highest-ROI schema win on the site, eligible for FAQ rich results in 1 hour of dev. Question about "COVID-19 safety protocols" still present in 2026 (remove).</p>
-      <div class="pc-issues">
-        <span class="pc-issue">No FAQPage schema</span>
-        <span class="pc-issue">No H1</span>
-        <span class="pc-issue warn">Stale content (COVID)</span>
-      </div>
-    </div>
-
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/blog/7-days-anti-inflammatory-meal-plan&nbsp; <span class="badge crit">PRIORITY</span></h4>
-        <span class="small">39 clicks · 44,845 imp · pos 13.4 · 0.09% CTR</span>
-      </div>
-      <p><strong>Canonical = <code class="mono">/blog/</code></strong> (the index, not self). No H1. No BlogPosting / Recipe / FAQ schema. og:image = <code class="mono">"[object Object]"</code>. This single page is the largest organic opportunity on the site.</p>
-      <div class="pc-issues">
-        <span class="pc-issue">Canonical bug</span>
-        <span class="pc-issue">No H1</span>
-        <span class="pc-issue">No BlogPosting schema</span>
-        <span class="pc-issue">No Recipe schema</span>
-        <span class="pc-issue">Broken og:image</span>
-      </div>
-    </div>
-
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/blog/how-much-is-a-personal-chef-less-than-you-think</h4>
-        <span class="small">32 clicks · 6,788 imp · pos 4.5 · invisible to search</span>
-      </div>
-      <p><strong>Title is literally "<code class="mono">| Chefpost</code>"</strong>. Meta description = null. og:title = null. Canonical = <code class="mono">/blog/</code>. No H1. Despite all that, the page ranks pos 4.5, meaning Google likes the content. Fix the metadata and this becomes a top-3 page for one of the most commercial keywords in the niche.</p>
-      <div class="pc-issues">
-        <span class="pc-issue">Empty title</span>
-        <span class="pc-issue">Null meta description</span>
-        <span class="pc-issue">Canonical bug</span>
-        <span class="pc-issue">No H1</span>
-      </div>
-    </div>
-
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/blog (index)</h4>
-        <span class="small">1 click · 3,320 imp · pos 7.3</span>
-      </div>
-      <p>Article title + date concatenated with no whitespace in H2 (<code class="mono">"...CommunityApr 25th, 2024"</code>). Suggests a JSX template bug, not a copy issue.</p>
-      <div class="pc-issues">
-        <span class="pc-issue">DOM concat bug</span>
-        <span class="pc-issue">No ItemList schema</span>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Empty title</div>
+          <div class="issue-current">Page ships <code>&lt;title&gt;| Chefpost&lt;/title&gt;</code>, literally a pipe and the brand. No content for Google to score.</div>
+          <div class="issue-fix"><b>Fix:</b> Rewrite to <code>"How Much Does a Private Chef Cost in 2026? Real Pricing by City"</code>. This page already ranks pos 4.5 on the content alone, a real title pushes it to top 3.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Null meta description</div>
+          <div class="issue-current"><code>&lt;meta name="description"&gt;</code> tag has no content. Google generates a snippet from random body text.</div>
+          <div class="issue-fix"><b>Fix:</b> Add a 150-char meta with the price ranges: <code>"Hourly $49–$200, per-guest $50–$300, weekly meal prep $300–$800. Real Chefpost pricing by city for Miami, NYC, Hamptons + Florida."</code></div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Null og:title / og:description</div>
+          <div class="issue-current">All Open Graph fields null. Shared on social = blank card.</div>
+          <div class="issue-fix"><b>Fix:</b> Mirror the title + meta description into <code>og:title</code> + <code>og:description</code>. Add a real <code>og:image</code> (chef + price visual).</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Canonical bug</div>
+          <div class="issue-current">Same canonical bug as the anti-inflammatory post: canonicals to <code>/blog/</code> index.</div>
+          <div class="issue-fix"><b>Fix:</b> Set self-canonical to this URL.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No H1</div>
+          <div class="issue-current">No H1 in the rendered DOM.</div>
+          <div class="issue-fix"><b>Fix:</b> Wrap the post title in <code>&lt;h1&gt;</code> inside the article container.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No FAQ / BlogPosting schema</div>
+          <div class="issue-current">The post answers ~10 pricing questions but ships no FAQPage or BlogPosting schema.</div>
+          <div class="issue-fix"><b>Fix:</b> Add FAQPage schema using questions 1, 2, 5, 7, 8 from the PAA list (Section 07) + BlogPosting wrapper.</div>
+        </div>
       </div>
     </div>
 
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/chef/francesco-nyc &nbsp;<span class="badge opp">STAR EARNER</span></h4>
-        <span class="small">281 clicks · 16,432 imp · pos 8.2 · top chef profile</span>
+    <!-- MEAL-PREP -->
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/meal-prep</div>
+          <div class="url-audit-meta">106 clicks · 18,011 imp · pos 18.6 · LCP 4.5s · 0.59% CTR</div>
+        </div>
+        <span class="badge crit">P0</span>
       </div>
-      <p>Best-performing chef profile and still has <strong>no canonical at all</strong>, no Person/LocalBusiness/Service schema, no og/twitter tags (all null), no H1. This template applies to every chef in the marketplace, the leverage is sitewide.</p>
-      <div class="pc-issues">
-        <span class="pc-issue">No canonical</span>
-        <span class="pc-issue">No Person schema</span>
-        <span class="pc-issue">No og/twitter</span>
-        <span class="pc-issue">No H1</span>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">No Service schema</div>
+          <div class="issue-current">Commercial money-page with no <code>Service</code> or <code>AggregateOffer</code> markup. Google has no structured way to surface pricing or area.</div>
+          <div class="issue-fix"><b>Fix:</b> Add Service schema with <code>serviceType="Personal chef meal prep"</code>, <code>provider</code> → Organization, <code>areaServed</code>, <code>offers:AggregateOffer</code> with <code>lowPrice</code>/<code>highPrice</code>/<code>priceCurrency</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No FAQ schema</div>
+          <div class="issue-current">Page covers cost, groceries, weekly cadence, but no FAQ Q&amp;A markup.</div>
+          <div class="issue-fix"><b>Fix:</b> Add FAQPage schema using questions 1, 10, 11, 13, 14, 24 from the PAA list.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">LCP 4.5s on mobile</div>
+          <div class="issue-current">Largest Contentful Paint nearly 2× the Google "Good" threshold.</div>
+          <div class="issue-fix"><b>Fix:</b> Same fixes as homepage, defer render-blocking JS, inline critical CSS, preload the hero image.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Title underperforms</div>
+          <div class="issue-current">Generic title delivers 0.59% CTR at pos 18, should be 2%+.</div>
+          <div class="issue-fix"><b>Fix:</b> Rewrite to <code>"Personal Chef Meal Prep, Delivered Weekly | Chefpost"</code> + meta description with weekly cadence + included groceries + dietary filters.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Trailing-slash duplicate</div>
+          <div class="issue-current"><code>/meal-prep/</code> (with trailing slash) is also indexed, 55 impressions. Splits CTR data.</div>
+          <div class="issue-fix"><b>Fix:</b> 301 <code>/meal-prep/</code> → <code>/meal-prep</code> at the edge. Pick one URL convention (no trailing slash) sitewide.</div>
+        </div>
       </div>
     </div>
 
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/filter (main browse experience)</h4>
-        <span class="small">29 clicks · 12,051 imp · pos 21.7</span>
+    <!-- BECOME A PERSONAL CHEF -->
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/become-a-personal-chef</div>
+          <div class="url-audit-meta">106 clicks · 12,954 imp · pos 8.3 · 0.82% CTR · supply-side</div>
+        </div>
+        <span class="badge high">P1</span>
       </div>
-      <p>The main browse UX on a marketplace, 84 images, 2,281 words, <strong>zero headings of any level</strong>. Filter URLs with <code class="mono">address=undefined&amp;latitude=undefined</code> also being indexed,156 impressions on garbage URLs. Duplicate filter URLs at <code class="mono">?cuisine_id=18</code> and <code class="mono">?cuisine_id=italian</code> (ID + slug versions).</p>
-      <div class="pc-issues">
-        <span class="pc-issue">Zero headings</span>
-        <span class="pc-issue">Garbage URLs indexed</span>
-        <span class="pc-issue">Duplicate slug+ID</span>
-        <span class="pc-issue">No CollectionPage / ItemList schema</span>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Canonical mismatch</div>
+          <div class="issue-current">Ships <code>&lt;link rel="canonical" href="https://chefpost.com/career/"&gt;</code>, points to a different URL slug. Google may drop one of the two.</div>
+          <div class="issue-fix"><b>Fix:</b> Decide on one slug. Either set self-canonical here AND 301 <code>/career/</code> → <code>/become-a-personal-chef</code>, OR consolidate to <code>/career/</code> + 301 in the reverse direction.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Broken heading hierarchy</div>
+          <div class="issue-current">H1 present, but then jumps to H4 with no H2 / H3 in between.</div>
+          <div class="issue-fix"><b>Fix:</b> Replace H4s with H2s. Use H3 only for sub-points under each H2.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Thin content (304 words)</div>
+          <div class="issue-current">Two-sided marketplace supply page with under 350 words. Competitors (Cozymeal, Take a Chef) ship 1,200–2,000 words on equivalent pages.</div>
+          <div class="issue-fix"><b>Fix:</b> Expand to ~1,200 words: average earnings, payout cadence, how matching works, what chefpost handles vs the chef, testimonials with photos, "apply in 3 steps".</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Title undersells the upside</div>
+          <div class="issue-current">Generic title produces 0.82% CTR at pos 8.</div>
+          <div class="issue-fix"><b>Fix:</b> Rewrite earnings-led: <code>"Become a Personal Chef on Chefpost (Earn $80–$200/hr, Set Your Own Schedule)"</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No JobPosting / Person schema</div>
+          <div class="issue-current">Eligible for Google for Jobs rich result.</div>
+          <div class="issue-fix"><b>Fix:</b> Add Service or JobPosting schema with <code>employmentType:"CONTRACTOR"</code>, <code>baseSalary</code> as a <code>MonetaryAmountDistribution</code>, <code>jobLocationType</code>.</div>
+        </div>
       </div>
     </div>
 
-    <div class="page-card">
-      <div class="page-card-head">
-        <h4>/contact-us</h4>
-        <span class="small">6 clicks · 5,060 imp · pos 8.2</span>
+    <!-- ABOUT US -->
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/about-us</div>
+          <div class="url-audit-meta">23 clicks · 11,354 imp · pos 5.6 · 0.20% CTR</div>
+        </div>
+        <span class="badge med">P1</span>
       </div>
-      <p>No H1. Trailing-slash variant <code class="mono">/contact-us/</code> also indexed. Body copy 284 words. No ContactPage / Organization schema.</p>
-      <div class="pc-issues">
-        <span class="pc-issue">No H1</span>
-        <span class="pc-issue">Slash duplication</span>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">No H1</div>
+          <div class="issue-current">Page has no H1 element at all.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>&lt;h1&gt;About Chefpost&lt;/h1&gt;</code> at the top of the page body.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Thin content (266 words)</div>
+          <div class="issue-current">266 words on a trust-building / brand page. Below the threshold Google treats as a credible brand surface.</div>
+          <div class="issue-fix"><b>Fix:</b> Expand to ~800 words: founding story, mission, team photos, press mentions, marketplace stats (chefs onboarded, cities served, total bookings), trust badges.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No Organization / AboutPage schema</div>
+          <div class="issue-current">Missing the Organization + AboutPage combination that earns the brand Knowledge Panel.</div>
+          <div class="issue-fix"><b>Fix:</b> Add Organization schema with founders, foundingDate, address, sameAs socials + an AboutPage wrapper referencing the Organization <code>@id</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">SERP CTR 0.20% at pos 5.6</div>
+          <div class="issue-current">Excellent position but 1/5 the CTR a position-5 result should earn, title/meta is failing.</div>
+          <div class="issue-fix"><b>Fix:</b> Rewrite title to <code>"About Chefpost, The Private Chef Marketplace for Miami, NYC &amp; Beyond"</code> + meta with chef count + cities + 2026 milestone.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Trailing-slash duplicate</div>
+          <div class="issue-current"><code>/about-us/</code> indexed separately (2 imp). Same content, two URLs.</div>
+          <div class="issue-fix"><b>Fix:</b> 301 <code>/about-us/</code> → <code>/about-us</code>.</div>
+        </div>
       </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/faq</div>
+          <div class="url-audit-meta">14 clicks · 6,178 imp · pos 6.7</div>
+        </div>
+        <span class="badge crit">P0 · EASIEST WIN</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">FAQ Q&amp;A in H2s, no FAQPage schema</div>
+          <div class="issue-current">Page literally contains Q&amp;A in <code>&lt;h2&gt;</code> + <code>&lt;p&gt;</code> structure with zero JSON-LD. The highest-ROI schema win on the entire site, eligible for FAQ rich snippets in 1 hour of dev.</div>
+          <div class="issue-fix"><b>Fix:</b> Add a FAQPage JSON-LD block (see Section 06 for the snippet template). Map each existing Q to a <code>Question</code> object with an <code>acceptedAnswer</code>. Use the 30 PAA questions from Section 07 to expand to 30+ entries.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No H1</div>
+          <div class="issue-current">No <code>&lt;h1&gt;</code> on the FAQ page.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>&lt;h1&gt;Frequently Asked Questions&lt;/h1&gt;</code> at the top.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Stale content (COVID)</div>
+          <div class="issue-current">A "COVID-19 safety protocols" question is still in the FAQ in 2026. Signals to readers + Google that the page hasn't been maintained.</div>
+          <div class="issue-fix"><b>Fix:</b> Delete the COVID question. Audit other questions for staleness (e.g. "minimum guests for 2020 holidays", "pre-pandemic policies").</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVENTS -->
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/events</div>
+          <div class="url-audit-meta">18 clicks · 5,345 imp · pos 9.8 · 0.34% CTR</div>
+        </div>
+        <span class="badge high">P1</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">No H1</div>
+          <div class="issue-current">Page has no <code>&lt;h1&gt;</code>.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>&lt;h1&gt;Private Chef Events: Dinner Parties, Yacht Charters, Tastings&lt;/h1&gt;</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">og:image = "[object Object]"</div>
+          <div class="issue-current">Same template bug as the blog. Renders the literal string <code>"[object Object]"</code> instead of a URL.</div>
+          <div class="issue-fix"><b>Fix:</b> Serialize the OG image to a URL string in the template helper.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No Event schema on individual experiences</div>
+          <div class="issue-current">Each chef "event" (dinner party menu, yacht service, cooking class) has no <code>Event</code> JSON-LD. Ineligible for the Event Knowledge Graph.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>Event</code> schema per experience with <code>name</code>, <code>startDate</code>, <code>location</code>, <code>offers.price</code>, <code>performer</code>:Person → chef.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Duplicate chef-card H3s (carousel + grid)</div>
+          <div class="issue-current">Same chef rendered twice in DOM.</div>
+          <div class="issue-fix"><b>Fix:</b> Single source of truth for the cards. Use CSS for carousel display, not duplicate DOM.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Trailing-slash duplicate</div>
+          <div class="issue-current"><code>/events/</code> with trailing slash also indexed (8 clicks, 385 imp).</div>
+          <div class="issue-fix"><b>Fix:</b> 301 <code>/events/</code> → <code>/events</code>.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOG INDEX -->
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/blog</div>
+          <div class="url-audit-meta">1 click · 3,320 imp · pos 7.3 (the canonical destination of every blog post bug)</div>
+        </div>
+        <span class="badge med">P2</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">JSX concatenation bug in card H2s</div>
+          <div class="issue-current">Article H2s render as <code>"&hellip;CommunityApr 25th, 2024"</code>, title and date concatenated with no whitespace. Tells us a template literal is missing a space.</div>
+          <div class="issue-fix"><b>Fix:</b> In the card component, add a space (or a separator span) between title and date: <code>{title}{' · '}{date}</code> instead of <code>{title}{date}</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No CollectionPage / ItemList schema</div>
+          <div class="issue-current">Blog index renders 30+ posts with no <code>ItemList</code> or <code>CollectionPage</code> markup.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>CollectionPage</code> with <code>mainEntity:ItemList</code> referencing each post by its self-canonical URL.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRANCESCO PROFILE -->
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/chef/francesco-nyc</div>
+          <div class="url-audit-meta">281 clicks · 16,432 imp · pos 8.2 · TOP CHEF PROFILE</div>
+        </div>
+        <span class="badge opp">STAR EARNER</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">No canonical at all</div>
+          <div class="issue-current">No <code>&lt;link rel="canonical"&gt;</code> tag on the page. Google picks one of the duplicates (www, booking, http, dev) at random as the canonical.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>&lt;link rel="canonical" href="https://chefpost.com/chef/francesco-nyc"&gt;</code>. Apply to every chef profile via template.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No Person / LocalBusiness / Service schema</div>
+          <div class="issue-current">Top-performing chef profile has zero JSON-LD. No knowledge panel eligibility, no rich review snippets.</div>
+          <div class="issue-fix"><b>Fix:</b> Add a <code>@graph</code> with: <code>Person</code> (name, image, jobTitle, knowsAbout, sameAs), <code>LocalBusiness</code> (areaServed, priceRange), and <code>Service</code> (provider:@id of Person, offers:AggregateOffer, aggregateRating from reviews).</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">All og:* and twitter:* fields null</div>
+          <div class="issue-current">Sharing this chef profile produces a blank card on every platform.</div>
+          <div class="issue-fix"><b>Fix:</b> Populate <code>og:title</code> = chef name + cuisine, <code>og:description</code> = bio teaser, <code>og:image</code> = chef portrait, <code>twitter:card</code> = summary_large_image.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No H1</div>
+          <div class="issue-current">Chef name is in an H3 or visually-styled div, not an H1.</div>
+          <div class="issue-fix"><b>Fix:</b> Wrap chef name in <code>&lt;h1&gt;Chef Francesco, Italian Cuisine, NYC&lt;/h1&gt;</code>.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Cross-subdomain duplicates exist</div>
+          <div class="issue-current">Same chef indexed at <code>https://www.chefpost.com/chef/francesco-nyc</code> (281 clicks!) and <code>https://booking.chefpost.com/chef/francesco-nyc</code>. See subsection F.</div>
+          <div class="issue-fix"><b>Fix:</b> 301 the www + booking variants to the canonical host. Same template change fixes 100+ chef profiles at once.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTER -->
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/filter</div>
+          <div class="url-audit-meta">29 clicks · 12,051 imp · pos 21.7 · MAIN BROWSE UX</div>
+        </div>
+        <span class="badge crit">P0</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Zero headings of any level</div>
+          <div class="issue-current">84 images, 2,281 words of content, no H1/H2/H3/H4/H5/H6 anywhere. This is your main browse experience on a marketplace.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>&lt;h1&gt;Browse Private Chefs Near You&lt;/h1&gt;</code> as the page header. Use H2 for each filter group (Cuisine, Location, Event type). Use H3 for each chef card (chef name).</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No CollectionPage / ItemList schema</div>
+          <div class="issue-current">Marketplace category page with no <code>ItemList</code> markup. Ineligible for the carousel rich result.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>CollectionPage</code> with <code>mainEntity:ItemList</code>, each <code>ListItem</code> pointing at a chef profile.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Trailing-slash duplicate</div>
+          <div class="issue-current"><code>/filter/</code> also indexed (62 imp, pos 2.89).</div>
+          <div class="issue-fix"><b>Fix:</b> 301 <code>/filter/</code> → <code>/filter</code>.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">~50 parameter-variant child URLs indexed</div>
+          <div class="issue-current">See <strong>subsection H</strong> below for the full list of broken filter URLs.</div>
+          <div class="issue-fix"><b>Fix:</b> See subsection H, add <code>noindex</code> meta to all filter-with-params URLs, OR canonical them all to <code>/filter</code>.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT US -->
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/contact-us</div>
+          <div class="url-audit-meta">6 clicks · 5,060 imp · pos 8.2</div>
+        </div>
+        <span class="badge med">P2</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">No H1</div>
+          <div class="issue-current">No <code>&lt;h1&gt;</code> on a key conversion page.</div>
+          <div class="issue-fix"><b>Fix:</b> <code>&lt;h1&gt;Contact Chefpost&lt;/h1&gt;</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">No ContactPage / Organization schema</div>
+          <div class="issue-current">No JSON-LD. Email, phone, hours, address don't surface in Google panels.</div>
+          <div class="issue-fix"><b>Fix:</b> Add <code>ContactPage</code> + <code>Organization</code> with <code>contactPoint</code> array (email, phone, contactType), <code>address</code>, <code>openingHours</code>.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Trailing-slash duplicate</div>
+          <div class="issue-current"><code>/contact-us/</code> also in the index (1 imp). Same content, two URLs.</div>
+          <div class="issue-fix"><b>Fix:</b> 301 <code>/contact-us/</code> → <code>/contact-us</code>.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SUBSECTION B: BLOG POST PATTERN ============ -->
+    <div class="sub-eyebrow">B · All blog posts (same template bug, same fix)</div>
+
+    <div class="url-group">
+      <h4>Every <code>/blog/*</code> URL ships the same canonical bug</h4>
+      <p>Across the 16-month GSC export, every blog detail page we sampled inherits the same 4 template-level issues: canonical points to <code>/blog/</code> (the index), no <code>&lt;h1&gt;</code>, no <code>BlogPosting</code> JSON-LD, and <code>og:image</code> serializes as <code>"[object Object]"</code>. Fixing the post template once fixes them all.</p>
+      <div class="url-list">
+        <span><code>/blog/7-days-anti-inflammatory-meal-plan</code> <span class="cnt">44,845 imp</span></span>
+        <span><code>/blog/how-much-is-a-personal-chef-less-than-you-think</code> <span class="cnt">6,788 imp</span></span>
+        <span><code>/blog/a-local-guide-for-top-private-chefs-in-miami</code> <span class="cnt">9,492 imp</span></span>
+        <span><code>/blog/dinner-party-ideas-for-all-types-of-celebrations</code> <span class="cnt">5,082 imp</span></span>
+        <span><code>/blog/healthy-meal-prep-ideas---tips-from-the-pros</code> <span class="cnt">6,496 imp</span></span>
+        <span><code>/blog/how-to-set-the-table-for-a-dinner-party</code> <span class="cnt">6,955 imp</span></span>
+        <span><code>/blog/the-benefits-of-meal-prep-services</code> <span class="cnt">5,931 imp</span></span>
+        <span><code>/blog/save-time-and-stay-healthy</code> <span class="cnt">5,546 imp</span></span>
+        <span><code>/blog/7-easy-meal-prep-ideas-to-save-time-and-stay-healthy</code> <span class="cnt">904 imp</span></span>
+        <span><code>/blog/the-benefits-of-hosting-regular-in-person-events</code> <span class="cnt">3,472 imp</span></span>
+        <span><code>/blog/new-years-eve-in-miami</code> <span class="cnt">2,014 imp</span></span>
+        <span><code>/blog/how-to-plan-meals-for-the-week</code> <span class="cnt">334 imp</span></span>
+        <span><code>/blog/private-chef-for-a-night</code> <span class="cnt">46 imp</span></span>
+        <span><code>/blog/the-ultimate-guide-to-host-this-holiday-season</code> <span class="cnt">205 imp</span></span>
+        <span><code>/blog/summer-gatherings-with-a-chef-at-home</code> <span class="cnt">189 imp</span></span>
+        <span><code>/blog/celebrating-fathers-day-in-miami-how-to-create-the-perfect-at-home-experience</code> <span class="cnt">37 imp</span></span>
+        <span><code>/blog/i-went-to-a-yoga-retreat-and-turned-vegetarian-this-is-my-story</code> <span class="cnt">215 imp</span></span>
+        <span><code>/blog/how-to-host-a-dinner-party</code> <span class="cnt">63 imp</span></span>
+        <span><code>/blog/christmas-party-ideas-for-2022</code> <span class="cnt">stale title</span></span>
+      </div>
+      <div class="group-fix"><b>Template-level fix (apply in the BlogPost component):</b><br>
+        <ol style="margin: 6px 0 0 18px; padding: 0;">
+          <li>Change canonical to self: <code>&lt;link rel="canonical" href={`https://chefpost.com${asPath}`}&gt;</code></li>
+          <li>Render the post title as <code>&lt;h1&gt;{post.title}&lt;/h1&gt;</code> inside the article container.</li>
+          <li>Add a <code>BlogPosting</code> JSON-LD block with author, datePublished, dateModified, image, mainEntityOfPage.</li>
+          <li>Fix the OG image helper to return a URL string, not the raw image object.</li>
+          <li>Rename <code>/blog/christmas-party-ideas-for-2022</code> URL to <code>-2026</code> or 301 it, AND update the on-page content + dateModified.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ============ SUBSECTION C: CHEF PROFILE PATTERN ============ -->
+    <div class="sub-eyebrow">C · All chef profiles (template-wide gap)</div>
+
+    <div class="url-group">
+      <h4>Every <code>/chef/*</code> URL is missing schema, canonical, og tags and H1</h4>
+      <p>Same template bug applies to every chef in the marketplace. Fixing it once unlocks structured-data SERP features on ~80 chef profiles. The top earners are the priority list, but a single template change covers all of them.</p>
+      <div class="url-list">
+        <span><code>/chef/francesco-nyc</code> <span class="cnt">281 clicks</span></span>
+        <span><code>/chef/chefpost-curated-1458</code> <span class="cnt">38 clicks</span></span>
+        <span><code>/chef/farid</code> <span class="cnt">35 clicks</span></span>
+        <span><code>/chef/chef-gina-2</code> <span class="cnt">31 clicks</span></span>
+        <span><code>/chef/chef-hazal-767</code> <span class="cnt">24 clicks</span></span>
+        <span><code>/chef/joe-cipolla-1501</code> <span class="cnt">18 clicks</span></span>
+        <span><code>/chef/chef-mark-921</code> <span class="cnt">14 clicks</span></span>
+        <span><code>/chef/elena-landa-1362</code> <span class="cnt">14 clicks</span></span>
+        <span><code>/chef/tarey-new-jersey</code> <span class="cnt">12 clicks</span></span>
+        <span><code>/chef/carolina-Miami</code> <span class="cnt">10 clicks</span></span>
+        <span><code>/chef/mariangela-colangelo-1604</code> <span class="cnt">10 clicks</span></span>
+        <span><code>/chef/chef-taciana-816</code> <span class="cnt">9 clicks</span></span>
+        <span><code>/chef/ali-mike-1407</code> <span class="cnt">8 clicks</span></span>
+        <span><code>/chef/carolina-potocnik-1456</code> <span class="cnt">8 clicks</span></span>
+        <span><code>/chef/Chef Camilo</code> <span class="cnt">8 clicks (SPACE!)</span></span>
+        <span><code>/chef/chef-vivian-932</code> <span class="cnt">7 clicks</span></span>
+        <span><code>/chef/david-WestPalmBeach</code> <span class="cnt">7 clicks</span></span>
+        <span><code>/chef/chef-fernando-940</code> <span class="cnt">+ Events subpages</span></span>
+        <span><code>/chef/tayler-barnes-1489</code> <span class="cnt">6 clicks</span></span>
+        <span><code>/chef/javier-1369</code> <span class="cnt">5 clicks</span></span>
+        <span><code>/chef/chef-anna-515</code> <span class="cnt">5 clicks</span></span>
+        <span><code>/chef/chef-emilio-799</code> <span class="cnt">4+ clicks</span></span>
+        <span><code>/chef/amanda-NYC</code> <span class="cnt">4 clicks</span></span>
+        <span><code>/chef/lohanna-Miami</code> <span class="cnt">5 clicks</span></span>
+        <span><code>/chef/paola-1421</code> <span class="cnt">3 clicks</span></span>
+        <span><code>/chef/lorena-Miami</code> <span class="cnt">3 clicks</span></span>
+        <span><code>/chef/Chef-Pinky</code> <span class="cnt">466 imp</span></span>
+        <span><code>/chef/magaly-NYC</code> <span class="cnt">385 imp</span></span>
+        <span><code>/chef/Natasha</code> <span class="cnt">7 clicks (www host!)</span></span>
+        <span><code>/chef/julia-c</code> <span class="cnt">231 imp</span></span>
+        <span><code>/chef/chef-adonte-l-775</code> <span class="cnt">106 imp</span></span>
+        <span><code>/chef/chef-reni-miami</code> <span class="cnt">41 imp</span></span>
+        <span style="grid-column: 1 / -1; color: var(--muted);">…plus ~50 more chef profiles with the same template gap.</span>
+      </div>
+      <div class="group-fix"><b>Template-level fix (apply in the ChefProfile component):</b><br>
+        <ol style="margin: 6px 0 0 18px; padding: 0;">
+          <li>Add self-canonical: <code>&lt;link rel="canonical" href={`https://chefpost.com/chef/${slug}`}&gt;</code>.</li>
+          <li>Add <code>&lt;h1&gt;{chef.name}, {chef.cuisine}, {chef.city}&lt;/h1&gt;</code>.</li>
+          <li>Add a <code>@graph</code> JSON-LD with <code>Person</code>, <code>LocalBusiness</code>, <code>Service</code>, and an <code>AggregateRating</code> derived from any reviews on the page.</li>
+          <li>Populate <code>og:title</code>/<code>og:description</code>/<code>og:image</code>/<code>twitter:card</code> from the chef's portrait + bio fields.</li>
+          <li>Strip slug-rewrite legacy: normalize all slugs to lowercase + hyphens (see subsection L).</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ============ SUBSECTION D: HTTP -> HTTPS ============ -->
+    <div class="sub-eyebrow">D · http:// host still indexed (12% of all clicks)</div>
+
+    <div class="url-group">
+      <h4><code>http://chefpost.com/</code> serves the same content as the canonical host</h4>
+      <p>GSC tracks the non-HTTPS host as a separate property earning <strong>424 clicks / 27,216 impressions / pos 5.42</strong>. That's 12% of all your search clicks routed through an insecure URL.</p>
+      <div class="url-list">
+        <span><code>http://chefpost.com/</code> <span class="cnt">424 clicks · pos 5.4</span></span>
+      </div>
+      <div class="group-fix"><b>Fix (1 line of edge config):</b> Force-upgrade all <code>http://</code> traffic to <code>https://</code> at the load balancer or Vercel/Cloudflare edge with a 301:<br>
+        <code>http://chefpost.com/{path} → https://chefpost.com/{path}  [301]</code><br>
+        Also enable HSTS (<code>Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code>) so browsers refuse to downgrade.
+      </div>
+    </div>
+
+    <!-- ============ SUBSECTION E: WWW ============ -->
+    <div class="sub-eyebrow">E · www.chefpost.com, duplicate chef profiles indexed (281 clicks on www!)</div>
+
+    <div class="url-group">
+      <h4><code>www.chefpost.com</code> is indexed as a separate host</h4>
+      <p>The www. variant of the host has its own indexed copies of chef pages, including the top-earning one. <strong>281 of Chefpost's 3,583 clicks are on www., not on the canonical bare-host.</strong> That's signal Google would otherwise consolidate.</p>
+      <div class="url-list">
+        <span><code>www.chefpost.com/chef/francesco-nyc</code> <span class="cnt">281 clicks!</span></span>
+        <span><code>www.chefpost.com/chef/Natasha</code> <span class="cnt">7 clicks</span></span>
+        <span><code>www.chefpost.com/chef/julia-c/Events/yacht-chef-4</code> <span class="cnt">5 clicks</span></span>
+        <span><code>www.chefpost.com/chef/paola-1516</code> <span class="cnt">5 clicks</span></span>
+        <span><code>www.chefpost.com/chef/Natasha/Events/ultimate-bbq-experience-2</code> <span class="cnt">3 clicks</span></span>
+        <span><code>www.chefpost.com/chef/Chef Camilo</code> <span class="cnt">SPACE in URL</span></span>
+        <span><code>www.chefpost.com/chef/Chef-Pinky</code></span>
+        <span><code>www.chefpost.com/chef/magaly-NYC</code></span>
+        <span><code>www.chefpost.com/chef/carolina-Miami</code></span>
+        <span><code>www.chefpost.com/chef/chef-gina-2</code></span>
+        <span><code>www.chefpost.com/chef/francesco-nyc/Events/elevated-italian-dinner</code></span>
+        <span><code>www.chefpost.com/chef/francesco-nyc/Meal-Prep/meal-prep-with-your-ingredients-nyc</code></span>
+        <span><code>www.chefpost.com/chef/farid/Events/italian-buffet-2</code></span>
+        <span><code>www.chefpost.com/chef/paola-1421/Events/mexican-extravaganza</code></span>
+        <span><code>www.chefpost.com/filter?cuisine_id=18, 19, 20, 34, etc.</code></span>
+        <span style="grid-column: 1 / -1; color: var(--muted);">…plus ~50 more <code>www.</code> chef + event URLs in the index.</span>
+      </div>
+      <div class="group-fix"><b>Fix (edge rule):</b> 301 every <code>www.chefpost.com/*</code> request to <code>chefpost.com/*</code> at the CDN. This single rule reclaims the 281 francesco clicks and consolidates ~50 duplicate URLs in one shot. Pick the bare host as canonical (you already do, most internal links go there).</div>
+    </div>
+
+    <!-- ============ SUBSECTION F: BOOKING ============ -->
+    <div class="sub-eyebrow">F · booking.chefpost.com, production-looking subdomain duplicating chef pages</div>
+
+    <div class="url-group">
+      <h4><code>booking.chefpost.com</code> serves the same chef + event content as the canonical host</h4>
+      <p>This subdomain ships the booking flow but also re-serves the marketing pages, and they're indexed. Splits authority and creates parallel canonical confusion.</p>
+      <div class="url-list">
+        <span><code>booking.chefpost.com/chef/wilmer-Miami</code> <span class="cnt">6 clicks</span></span>
+        <span><code>booking.chefpost.com/chef/francesco-nyc</code> <span class="cnt">1 click</span></span>
+        <span><code>booking.chefpost.com/chef/chef-hazal-NYC/Events/shabbat-experience</code> <span class="cnt">1 click</span></span>
+        <span><code>booking.chefpost.com/chef/amanda-NYC/Events/gourmet-farm-to-table-plated-dinner-minimum-8-guests</code></span>
+        <span><code>booking.chefpost.com/chef/julia-c/Events/party-feast-buffet-perfect-for-large-gatherings-2</code></span>
+        <span><code>booking.chefpost.com/chef/farid</code></span>
+        <span><code>booking.chefpost.com/chef/Natasha/Events/ultimate-bbq-experience-2</code></span>
+        <span><code>booking.chefpost.com/chef/magaly-NYC</code></span>
+        <span><code>booking.chefpost.com/chef/eunice-lumbera-1562</code></span>
+        <span><code>booking.chefpost.com/chef/chef-mark-921/Meal-Prep/cooking-session-with-customers-ingredients-28</code></span>
+        <span><code>booking.chefpost.com/chef/wilmer-Miami/Meal-Prep/cooking-session</code></span>
+        <span><code>booking.chefpost.com/chef/Chef Camilo/Events/celebrating-rosh-hashanah</code> <span class="cnt">SPACE</span></span>
+        <span><code>booking.chefpost.com/filter</code></span>
+        <span><code>booking.chefpost.com/filter?cuisine_id=42, 45, 19, 23, 16, 32</code></span>
+        <span style="grid-column: 1 / -1; color: var(--muted);">…~30 more <code>booking.</code> URLs indexed.</span>
+      </div>
+      <div class="group-fix"><b>Fix:</b> Decide on the role of <code>booking.</code>. Two options:
+        <ul style="margin: 6px 0 0 18px; padding: 0;">
+          <li><b>Option A (recommended):</b> Collapse booking + marketing onto the canonical host. 301 every public <code>booking.chefpost.com/*</code> to <code>chefpost.com/*</code>. Keep only the in-app booking endpoints (post-login) on the subdomain.</li>
+          <li><b>Option B:</b> If <code>booking.</code> must serve public chef pages, add <code>&lt;link rel="canonical" href="https://chefpost.com/..."&gt;</code> to every page on <code>booking.</code> pointing to the bare-host equivalent.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ SUBSECTION G: DEV ============ -->
+    <div class="sub-eyebrow">G · dev.chefpost.com, your development server is in Google's index</div>
+
+    <div class="url-group warn">
+      <h4><code>dev.chefpost.com</code> is publicly crawlable and producing real clicks</h4>
+      <p>This is both a security concern and an SEO concern. Real users found and clicked through the dev server. Every URL below is in Google's index right now.</p>
+      <div class="url-list">
+        <span><code>dev.chefpost.com/chef/chef-emilio-799/Events/brunch-venezolano-2</code> <span class="cnt">3 clicks!</span></span>
+        <span><code>dev.chefpost.com/chef/johanna-miami</code> <span class="cnt">1 click</span></span>
+        <span><code>dev.chefpost.com/chef/chef-hazal-767</code> <span class="cnt">1 click</span></span>
+        <span><code>dev.chefpost.com/chef/elena-landa-1362/Events/signature-bbq-by-chef-elena</code> <span class="cnt">1 click</span></span>
+        <span><code>dev.chefpost.com/chef/chef-vivian-932/Meal-Prep/cooking-session-with-customers-ingredients-23</code></span>
+        <span><code>dev.chefpost.com/chef/celeste-westpalmbeach</code></span>
+        <span><code>dev.chefpost.com/chef/celeste-westpalmbeach/Meal-Prep/eat-good-feel-good</code></span>
+        <span><code>dev.chefpost.com/chef/lohanna-Miami/Events/delicious-small-bites</code></span>
+        <span><code>dev.chefpost.com/chef/paola-miami/Events/vegetarian-fine-dining</code></span>
+        <span><code>dev.chefpost.com/chef/paola-1516/Events/short-rib-spectacular</code></span>
+        <span><code>dev.chefpost.com/chef/paola-1516/Events/eastern-mediterranean-experience-2</code></span>
+        <span><code>dev.chefpost.com/chef/chefpost-curated-1458/Meal-Prep/anti-inflammatory-meal-prep-includes-ingredients</code></span>
+        <span><code>dev.chefpost.com/chef/chefpost-curated-1458/Meal-Prep/mediterranean-meal-prep-includes-organic-ingredients-2</code></span>
+        <span><code>dev.chefpost.com/chef/chef-hazal-767/Events/brunch-special-3</code></span>
+        <span><code>dev.chefpost.com/chef/chef-hazal-767/Events/turkish-brunch-2</code></span>
+        <span><code>dev.chefpost.com/chef/chef-hazal-767/Events/vegan-party</code></span>
+        <span><code>dev.chefpost.com/chef/chef-hazal-767/Events/international-appetizers-3</code></span>
+        <span><code>dev.chefpost.com/chef/chef-cuinn-813</code></span>
+        <span><code>dev.chefpost.com/chef/sam-NY</code></span>
+        <span><code>dev.chefpost.com/chef/arturo-m</code></span>
+        <span><code>dev.chefpost.com/chef/amanda-NYC</code></span>
+        <span><code>dev.chefpost.com/chef/amanda-NYC/Events/springtime-brunch-experience</code></span>
+        <span><code>dev.chefpost.com/chef/amanda-NYC/Events/beautiful-springtime-lunch-or-dinner</code></span>
+        <span><code>dev.chefpost.com/chef/amanda-NYC/Events/gourmet-farm-to-table-plated-dinner-minimum-8-guests</code></span>
+        <span><code>dev.chefpost.com/chef/javier-1369/Events/nikkei-sushis-ceviches-party</code></span>
+        <span><code>dev.chefpost.com/chef/javier-1369/Events/latino-appetizers-party-3</code></span>
+        <span><code>dev.chefpost.com/chef/chef-gina-2/Events/homemade-breakfast</code></span>
+        <span><code>dev.chefpost.com/chef/chef-gina-2/Events/brunch-bites-3</code></span>
+        <span><code>dev.chefpost.com/chef/chef-gina-2/Events/italian-themed-experience</code></span>
+        <span><code>dev.chefpost.com/chef/chef-mark-921/Events/mexican-party</code></span>
+        <span><code>dev.chefpost.com/chef/chef-mark-921/Events/brazilian-rodizio-2</code></span>
+        <span><code>dev.chefpost.com/chef/chef-emilio-799/Events/paella-party-2</code></span>
+        <span><code>dev.chefpost.com/chef/joe-cipolla-1501</code></span>
+        <span><code>dev.chefpost.com/chef/farid</code></span>
+        <span><code>dev.chefpost.com/chef/lorena-Miami</code></span>
+        <span><code>dev.chefpost.com/chef/wilmer-Miami</code></span>
+        <span><code>dev.chefpost.com/chef/magaly-NYC</code></span>
+        <span><code>dev.chefpost.com/chef/magaly-NYC/Meal-Prep/homemade-meal-prep-includes-ingredients-2</code></span>
+        <span><code>dev.chefpost.com/chef/Chef-Pinky/Meal-Prep/meal-prep-including-ingredients</code></span>
+        <span><code>dev.chefpost.com/chef/chefpost-curated-1458</code></span>
+        <span><code>dev.chefpost.com/chef/chefpost-curated-1458/Events/casual-summer-gathering</code></span>
+        <span><code>dev.chefpost.com/chef/elena-landa-1362/Events/family-dinner-3</code></span>
+        <span><code>dev.chefpost.com/chef/elena-landa-1362/Meal-Prep/one-day-meal-prep-session-includes-ingredients-4</code></span>
+        <span><code>dev.chefpost.com/chef/tayler-barnes-1489/Meal-Prep/cooking-session-with-chefs-ingredients-2</code></span>
+        <span><code>dev.chefpost.com/chef/ali-mike-1407/Events/greek-inspired-cuisine-2</code></span>
+        <span><code>dev.chefpost.com/chef/carolina-potocnik-1456/Events/the-fall-festive-table-2</code></span>
+        <span><code>dev.chefpost.com/chef/carolina-potocnik-1456/Events/valentines-day-love-on-a-plate</code></span>
+        <span><code>dev.chefpost.com/chef/carolina-potocnik-1456/Events/argentine-asado-bliss-family-style-winter-platters-bbq-experience-2</code></span>
+        <span><code>dev.chefpost.com/chef/david-WestPalmBeach/Events/elevated-experience</code></span>
+        <span><code>dev.chefpost.com/filter?cuisine_id=37</code></span>
+        <span><code>dev.chefpost.com/filter?cuisine_id=45</code></span>
+        <span><code>dev.chefpost.com/filter?cuisine_id=27</code></span>
+        <span><code>dev.chefpost.com/</code></span>
+      </div>
+      <div class="group-fix"><b>Fix (three layers of defense):</b>
+        <ol style="margin: 6px 0 0 18px; padding: 0;">
+          <li><b>Auth-wall it:</b> add HTTP Basic auth (or your IDP SSO) at the load balancer so anonymous traffic gets a 401.</li>
+          <li><b>Robots:</b> serve <code>robots.txt</code> with <code>User-agent: *  Disallow: /</code> from the dev host.</li>
+          <li><b>Meta + header:</b> add <code>&lt;meta name="robots" content="noindex, nofollow"&gt;</code> and the response header <code>X-Robots-Tag: noindex, nofollow</code> on every dev response.</li>
+          <li><b>Remove from index:</b> Submit a Google Search Console "Removals" request for <code>https://dev.chefpost.com/*</code> after the auth-wall is up.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ============ SUBSECTION H: BLOG SUBSTACK ============ -->
+    <div class="sub-eyebrow">H · blog.chefpost.com, Substack splits the blog authority</div>
+
+    <div class="url-group">
+      <h4><code>blog.chefpost.com</code> is a separate Substack with overlapping content</h4>
+      <p>A Substack blog hosts content that overlaps with the main <code>/blog/</code>, including a near-duplicate of the anti-inflammatory meal plan. Authority splits between two surfaces.</p>
+      <div class="url-list">
+        <span><code>blog.chefpost.com/p/the-anti-inflammatory-meal-plan-that</code> <span class="cnt">3 clicks · 227 imp</span></span>
+        <span><code>blog.chefpost.com/p/how-to-plan-a-dinner-party-timeline</code> <span class="cnt">2 clicks · 1,874 imp</span></span>
+        <span><code>blog.chefpost.com/p/what-is-a-good-pregnancy-meal-plan</code> <span class="cnt">1 click · 2,121 imp</span></span>
+        <span><code>blog.chefpost.com/p/eating-clean-never-tasted-so-good</code> <span class="cnt">1 click</span></span>
+        <span><code>blog.chefpost.com/p/my-favorite-personal-chefs-in-new</code></span>
+        <span><code>blog.chefpost.com/p/mediterranean-meal-plan</code></span>
+        <span><code>blog.chefpost.com/p/the-art-of-hosting-a-meaningful-gathering</code></span>
+        <span><code>blog.chefpost.com/p/a-new-year-reset</code></span>
+        <span><code>blog.chefpost.com/p/meet-chef-gina</code></span>
+        <span><code>blog.chefpost.com/p/hosting-ideas-for-your-next-gathering</code></span>
+        <span><code>blog.chefpost.com/p/the-most-thoughtful-gift-ideas</code></span>
+        <span><code>blog.chefpost.com/p/how-to-host-a-thanksgiving-dinner</code></span>
+        <span><code>blog.chefpost.com/p/how-to-host-a-holiday-party-without</code></span>
+        <span><code>blog.chefpost.com/p/how-to-host-a-friendsgiving-dinner</code></span>
+        <span><code>blog.chefpost.com/p/valentines-day-ideas-5-unique-and</code></span>
+        <span><code>blog.chefpost.com/p/the-ultimate-fall-meal-plan-by-master</code></span>
+        <span><code>blog.chefpost.com/p/family-meal-prep-plus-juicy-gluten</code></span>
+        <span><code>blog.chefpost.com/s/featured-chefs</code> · <code>/s/recipes</code> · <code>/s/meal-plans</code> · <code>/s/hosting-guides</code></span>
+        <span><code>blog.chefpost.com/about</code> · <code>/archive</code></span>
+      </div>
+      <div class="group-fix"><b>Fix:</b> Migrate the Substack content into <code>chefpost.com/blog/</code>:
+        <ol style="margin: 6px 0 0 18px; padding: 0;">
+          <li>For each Substack post worth keeping, create a matching post at <code>/blog/{slug}/</code>.</li>
+          <li>301 the Substack URL to its new <code>/blog/{slug}</code> destination. Substack supports the redirect via their dashboard.</li>
+          <li>Disable Substack indexing in the meantime: add a <code>&lt;meta name="robots" content="noindex"&gt;</code> if you can't 301 immediately.</li>
+          <li>Update the global nav so the "Blog" link points to <code>/blog</code>, not to <code>blog.chefpost.com</code>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ============ SUBSECTION I: FILTER URLs ============ -->
+    <div class="sub-eyebrow">I · Filter URLs (broken parameters + ID-vs-slug duplicates)</div>
+
+    <div class="url-group">
+      <h4>~50 filter-with-params URLs are indexed, including <code>address=undefined</code></h4>
+      <p>The filter page generates URLs from URL params. Some of those URLs are broken (<code>undefined</code> values), some duplicate the same content under two slugs (ID vs slug), and none of them carry their own value as separate index entries.</p>
+      <div class="url-list">
+        <span style="grid-column: 1 / -1; font-family: var(--sans); font-weight: 600; color: var(--coral-dk); margin-bottom: 2px;">Broken (undefined params):</span>
+        <span><code>/filter?address=undefined&amp;latitude=undefined&amp;longitude=undefined&amp;categories&amp;date&amp;side_filter=false</code> <span class="cnt">156 imp</span></span>
+        <span style="grid-column: 1 / -1; font-family: var(--sans); font-weight: 600; color: var(--coral-dk); margin-top: 10px; margin-bottom: 2px;">Geo-filter URLs being indexed (5 cities):</span>
+        <span><code>/filter?address=Miami, FL, USA&amp;latitude=25.7616798&amp;longitude=-80.1917902&amp;categories&amp;date&amp;side_filter=false</code> <span class="cnt">559 imp</span></span>
+        <span><code>/filter?address=Fort Lauderdale, FL, USA&amp;...&amp;categories&amp;date&amp;side_filter=false</code> <span class="cnt">1,534 imp</span></span>
+        <span><code>/filter?address=West Palm Beach, FL, USA&amp;...</code> <span class="cnt">1,225 imp</span></span>
+        <span><code>/filter?address=Boca Raton, FL, USA&amp;...</code> <span class="cnt">1,127 imp</span></span>
+        <span><code>/filter?address=Tampa, FL, USA&amp;...</code> <span class="cnt">598 imp</span></span>
+        <span><code>/filter?address=New York, NY, USA&amp;...</code> <span class="cnt">51 imp</span></span>
+        <span style="grid-column: 1 / -1; font-family: var(--sans); font-weight: 600; color: var(--coral-dk); margin-top: 10px; margin-bottom: 2px;">ID + slug duplicates (every cuisine has two indexed URLs):</span>
+        <span><code>/filter?cuisine_id=18</code> and <code>/filter?cuisine_id=italian</code></span>
+        <span><code>/filter?cuisine_id=14</code> and <code>/filter?cuisine_id=mexican</code></span>
+        <span><code>/filter?cuisine_id=22</code> and <code>/filter?cuisine_id=mediterranean</code></span>
+        <span><code>/filter?cuisine_id=29</code> and <code>/filter?cuisine_id=asian</code></span>
+        <span><code>/filter?cuisine_id=39, 41, 44, 47, 48, 49, 51</code> (numeric IDs)</span>
+        <span><code>/filter?cuisine_id=french-cuisine, spanish-cuisine, caribbean, kosher, vegetarian, vegan, brunch, seafood, american, latin, fusion-cuisine, wholesome-healthy, indian, colombian-11</code></span>
+        <span style="grid-column: 1 / -1; font-family: var(--sans); font-weight: 600; color: var(--coral-dk); margin-top: 10px; margin-bottom: 2px;">Non-cuisine "category" abuses:</span>
+        <span><code>/filter?cuisine_id=bbq-experience</code> <span class="cnt">not a cuisine</span></span>
+        <span><code>/filter?cuisine_id=date-night-ideas</code> <span class="cnt">not a cuisine</span></span>
+        <span><code>/filter?cuisine_id=spring-favorites</code> <span class="cnt">not a cuisine</span></span>
+        <span><code>/filter?cuisine_id=bachelorette-party</code> <span class="cnt">not a cuisine</span></span>
+        <span><code>/filter?cuisine_id=small-bites-appetizers</code></span>
+      </div>
+      <div class="group-fix"><b>Fix (two parts):</b>
+        <ol style="margin: 6px 0 0 18px; padding: 0;">
+          <li><b>Block the broken URL pattern at the app level.</b> Don't render <code>/filter</code> with <code>undefined</code> values, redirect to bare <code>/filter</code> instead. In the React/Next page handler: <code>if (address === 'undefined') return res.redirect(301, '/filter');</code></li>
+          <li><b>Choose one canonical slug per cuisine.</b> Numeric ID OR human slug, not both. Add <code>&lt;link rel="canonical"&gt;</code> on every filter result page pointing to the chosen slug. Recommend the human slug (better for SEO + sharing).</li>
+          <li><b>Decide: index or noindex?</b> If you want geo-filter URLs to rank (e.g. <code>?address=Miami</code> as a stand-in for a Miami landing page), promote them to real <code>/private-chef-miami</code> pages with full schema (Section 05). Otherwise add <code>&lt;meta name="robots" content="noindex, follow"&gt;</code> to every <code>/filter?*</code> URL.</li>
+          <li><b>Add a parameter handling hint</b> in <code>robots.txt</code> + GSC URL Parameters tool so Google can deprioritize the query-string variations.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ============ SUBSECTION J: TRAILING SLASH ============ -->
+    <div class="sub-eyebrow">J · Trailing-slash duplicates</div>
+
+    <div class="url-group">
+      <h4>Several pages are indexed with AND without a trailing slash</h4>
+      <p>Same content, two URLs, two impression counts, half the CTR signal each.</p>
+      <div class="url-list">
+        <span><code>/about-us</code> and <code>/about-us/</code></span>
+        <span><code>/contact-us</code> and <code>/contact-us/</code></span>
+        <span><code>/events</code> and <code>/events/</code> <span class="cnt">385 imp on /events/</span></span>
+        <span><code>/meal-prep</code> and <code>/meal-prep/</code> <span class="cnt">55 imp on /meal-prep/</span></span>
+        <span><code>/filter</code> and <code>/filter/</code> <span class="cnt">62 imp on /filter/</span></span>
+      </div>
+      <div class="group-fix"><b>Fix:</b> Pick one rule sitewide (we recommend <em>no trailing slash</em>) and enforce it with a single 301 redirect rule at the edge: <code>/foo/ → /foo  [301]</code>. Update the global nav links to use the canonical form. Add a self-canonical to every page that explicitly excludes the trailing slash.</div>
+    </div>
+
+    <!-- ============ SUBSECTION K: URL SLUG BUGS ============ -->
+    <div class="sub-eyebrow">K · Slug bugs, literal spaces &amp; mixed casing in chef URLs</div>
+
+    <div class="url-group warn">
+      <h4>Two onboarding bugs are producing broken-looking URLs</h4>
+      <p>The chef-onboarding form is accepting raw chef names as slugs instead of normalizing them. Result: URL-encoded spaces (<code>%20</code>) and mixed-case capitalization in URLs.</p>
+      <div class="url-list">
+        <span style="grid-column: 1 / -1; font-family: var(--sans); font-weight: 600; color: var(--amber); margin-bottom: 2px;">Literal SPACE in URL (encoded as %20):</span>
+        <span><code>/chef/Chef Camilo</code> <span class="cnt">8 clicks</span></span>
+        <span><code>/chef/Chef Camilo/Events/christmas-noche-buena</code></span>
+        <span><code>/chef/Chef Camilo/Events/turkish-luncheon-x-enne</code></span>
+        <span><code>/chef/Chef Camilo/Events/burger-bash</code></span>
+        <span><code>/chef/Chef Camilo/Events/pizza-oven-party</code></span>
+        <span><code>/chef/Chef Camilo/Events/pizza-oven-party-2</code></span>
+        <span><code>/chef/Chef Camilo/Events/shabbat-dinner</code></span>
+        <span><code>/chef/Chef Camilo/Events/something-special</code></span>
+        <span><code>/chef/Chef Camilo/Events/something-special-2</code></span>
+        <span><code>/chef/Chef Camilo/Events/brunch-reverie-family-style</code></span>
+        <span><code>/chef/Chef Camilo/Events/cuban-breakfast</code></span>
+        <span style="grid-column: 1 / -1; font-family: var(--sans); font-weight: 600; color: var(--amber); margin-top: 10px; margin-bottom: 2px;">Capitalized slug (breaks URL consistency):</span>
+        <span><code>/chef/Chef-Pinky</code> <span class="cnt">466 imp</span></span>
+        <span><code>/chef/Chef-Pinky/Meal-Prep/meal-prep-including-ingredients</code></span>
+        <span><code>/chef/Natasha</code> <span class="cnt">should be /natasha</span></span>
+        <span><code>/chef/Natasha/Events/ultimate-bbq-experience-2</code></span>
+        <span><code>/chef/Natasha/Events/tavola-calda-experience</code></span>
+        <span><code>/chef/David-...</code>, <code>/chef/Maria-...</code>, pattern repeats</span>
+        <span style="grid-column: 1 / -1; font-family: var(--sans); font-weight: 600; color: var(--amber); margin-top: 10px; margin-bottom: 2px;">Inconsistent slug structure within sub-pages:</span>
+        <span><code>/Meal-Prep/</code> vs <code>/meal-prep/</code>, capitalized path segments</span>
+        <span><code>/Events/</code> vs <code>/events/</code>, same</span>
+      </div>
+      <div class="group-fix"><b>Fix:</b>
+        <ol style="margin: 6px 0 0 18px; padding: 0;">
+          <li><b>Onboarding form:</b> slugify chef name on save, lowercase + replace spaces/special chars with hyphens. <code>"Chef Camilo" → "chef-camilo"</code>.</li>
+          <li><b>Backfill:</b> migrate existing slugs to the new format. Add 301 redirects from the broken slug to the clean one.</li>
+          <li><b>Normalize path casing:</b> 301 every <code>/Meal-Prep/*</code> → <code>/meal-prep/*</code> and <code>/Events/*</code> → <code>/events/*</code> at the edge.</li>
+          <li><b>Add a slug validator</b> in the chef admin so this can't regress.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ============ SUMMARY ============ -->
+    <div class="callout opp" style="margin-top: 56px;">
+      <strong>The compound effect:</strong> almost every issue in subsections D–G is fixed by <em>three edge rules</em> (301 http→https, 301 www→bare, 301 booking→bare) plus <em>noindexing dev</em>. Almost every issue in subsections B + C is fixed by <em>two template changes</em> (BlogPost + ChefProfile components). Subsection I is one filter-page handler change. The full URL pollution problem ships in a single 2-day sprint.
     </div>
   </div>
 </section>
