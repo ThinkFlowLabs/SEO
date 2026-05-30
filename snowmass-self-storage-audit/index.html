@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Snowmass Self Storage SEO Audit &amp; Growth Strategy · May 2026</title>
+<meta name="description" content="A technical, content, competitive and AI-visibility SEO audit of snowmassselfstorage.com prepared by ThinkFlowLabs, with quick wins, schema review, Roaring Fork corridor keyword strategy, and a 90-day roadmap." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --ink:        #0E1014;
+    --ink-2:      #1F2630;
+    --muted:      #5E6675;
+    --line:       #E6DFD2;
+    --line-2:     #EFE7D8;
+    --cream:      #FBF6EB;
+    --cream-2:    #F4ECD9;
+    --paper:      #FFFBF1;
+    --coral:      #36617F;
+    --coral-dk:   #264659;
+    --coral-sft:  #E3EBF1;
+    --gold:       #C89A4A;
+    --gold-sft:   #F6E7C7;
+    --green:      #1F7A6A;
+    --green-sft:  #DAEEE7;
+    --amber:      #B45309;
+    --amber-sft:  #FFE9BD;
+    --red-bg:     #FFEBE9;
+
+    --r-sm: 4px; --r-md: 10px; --r-lg: 18px; --r-xl: 26px;
+    --shadow-sm: 0 1px 0 rgba(20,18,12,.06);
+    --shadow-md: 0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --shadow-lg: 0 30px 80px -30px rgba(60,40,18,.36);
+
+    --serif:      "Fraunces", "Times New Roman", serif;
+    --sans:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:       "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--coral-dk); text-decoration: none; border-bottom: 1px solid rgba(40,60,90,.22); }
+  a:hover { border-bottom-color: var(--coral-dk); }
+
+  /* ============ LAYOUT ============ */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); position: relative; }
+  section.alt { background: var(--paper); }
+  section.dark { background: var(--ink); color: #F2EAD7; border-top-color: #2A2520; }
+  section.dark a { color: #FFD8AC; border-bottom-color: rgba(255,216,172,.3); }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.012em; line-height: 1.08; margin: 0; }
+  h1 { font-size: clamp(48px, 8vw, 96px); font-weight: 380; letter-spacing: -.03em; }
+  h2 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 400; letter-spacing: -.022em; }
+  h3 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.18; }
+  h4 { font-size: 19px; font-weight: 600; line-height: 1.3; font-family: var(--sans); letter-spacing: -.005em; }
+  .display-italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 500; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--coral-dk);
+  }
+  p { margin: 0 0 1em; }
+  p.lede { font-size: 21px; line-height: 1.55; color: var(--ink-2); }
+  ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
+  ul li, ol li { margin-bottom: .35em; }
+  strong { font-weight: 600; }
+  .mono { font-family: var(--mono); font-size: .9em; }
+  .small { font-size: 13px; color: var(--muted); }
+
+  /* ============ HERO ============ */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #E3EBF1 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-top: 0;
+    padding: 56px 0 96px;
+    overflow: hidden; position: relative;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%2336617F' opacity='.06'/></svg>");
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; position: relative; }
+  .hero h1 { margin-bottom: .18em; }
+  .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .hero .meta { font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+  .hero .by-line { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-2); margin-top: 36px; font-size: 14px; }
+  .hero .by-line span b { color: var(--ink); font-weight: 600; }
+  .hero-side {
+    background: white; border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 30px; box-shadow: var(--shadow-md);
+    font-size: 14px;
+  }
+  .hero-side h4 { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-family: var(--sans); margin-bottom: 16px; font-weight: 600; }
+  .hero-side dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; }
+  .hero-side dt { color: var(--muted); }
+  .hero-side dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .hero-side .severity-strip { margin: 22px -30px -30px; padding: 18px 30px; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); color: white; border-radius: 0 0 var(--r-lg) var(--r-lg); display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ TLDR (Executive Summary) ============ */
+  .tldr { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; }
+  .tldr h2 em { font-style: italic; color: var(--coral); font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .tldr-bullets { font-size: 17px; line-height: 1.6; }
+  .tldr-bullets li { margin-bottom: 16px; padding-left: 4px; }
+  .tldr-bullets li::marker { color: var(--coral); }
+  .verdict-card {
+    background: var(--ink); color: #F2EAD7;
+    border-radius: var(--r-lg); padding: 36px;
+    position: sticky; top: 24px;
+  }
+  .verdict-card h4 { color: #F6E7C7; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; font-weight: 500; }
+  .verdict-card p { font-size: 15px; line-height: 1.65; color: #D8CDB5; }
+  .verdict-card .score-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--mono); font-size: 12px; }
+  .verdict-card .score-row b { color: white; font-size: 18px; }
+  @media (max-width: 820px) { .tldr { grid-template-columns: 1fr; } .verdict-card { position: static; } }
+
+  /* ============ KPI GRID ============ */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 22px 18px; position: relative; overflow: hidden;
+  }
+  .kpi-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+  .kpi-value small { font-size: 17px; color: var(--muted); margin-left: 4px; font-family: var(--sans); font-weight: 500; }
+  .kpi-trend { font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+  .kpi-trend.up { color: var(--green); }
+  .kpi-trend.dn { color: var(--coral-dk); }
+  .kpi.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; } .kpi-value { font-size: 36px; } }
+
+  /* ============ FINDINGS CARDS ============ */
+  .findings { display: grid; gap: 24px; }
+  .finding {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 36px; display: grid; grid-template-columns: 88px 1fr; gap: 28px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+  }
+  .finding .num {
+    font-family: var(--serif); font-size: 78px; font-weight: 400; line-height: 1; color: var(--coral); letter-spacing: -.04em; opacity: .9;
+  }
+  .finding h3 { margin-bottom: 8px; }
+  .finding .impact-line { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; font-family: var(--mono); letter-spacing: .02em; }
+  .finding p { font-size: 16px; }
+  .finding .fix {
+    background: var(--cream-2); padding: 18px 22px; border-radius: var(--r-md);
+    margin-top: 18px; border-left: 3px solid var(--coral); font-size: 15.5px;
+  }
+  .finding .fix b { color: var(--ink); }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+  }
+  .badge.crit { background: var(--coral); color: white; }
+  .badge.high { background: var(--amber-sft); color: var(--amber); }
+  .badge.med { background: var(--gold-sft); color: var(--gold); }
+  .badge.opp { background: var(--green-sft); color: var(--green); }
+  .badge.brand { background: var(--ink); color: var(--cream); }
+  @media (max-width: 820px) {
+    .finding { grid-template-columns: 1fr; padding: 26px; }
+    .finding .num { font-size: 56px; }
+  }
+
+  /* ============ DATA TABLES ============ */
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14.5px;
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  }
+  th { text-align: left; font-weight: 600; padding: 14px 16px; background: var(--cream-2); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  td.kw { font-weight: 500; }
+  td .badge { font-size: 10px; padding: 3px 8px; }
+
+  .table-scroll { overflow-x: auto; }
+
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #F4C7C5; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
+  /* ============ PILLS / CALLOUTS ============ */
+  .callout {
+    background: var(--coral-sft); border: 1px solid #F4C7C5;
+    border-radius: var(--r-md); padding: 22px 26px;
+    font-size: 15.5px; color: var(--coral-dk); margin: 24px 0;
+  }
+  .callout.opp { background: var(--green-sft); border-color: #BFE0D6; color: #135548; }
+  .callout.warn { background: var(--amber-sft); border-color: #F2D5A0; color: var(--amber); }
+  .callout strong { color: inherit; }
+
+  /* ============ TWO-COL ============ */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ============ HIERARCHY CARDS ============ */
+  .page-card {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+  .page-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .page-card-head h4 { font-family: var(--mono); font-size: 14px; color: var(--ink); letter-spacing: 0; word-break: break-all; }
+  .pc-issues { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pc-issue { font-size: 11.5px; padding: 3px 9px; border-radius: 4px; background: var(--coral-sft); color: var(--coral-dk); font-weight: 600; }
+  .pc-issue.ok { background: var(--green-sft); color: var(--green); }
+  .pc-issue.warn { background: var(--amber-sft); color: var(--amber); }
+
+  /* ============ ROADMAP ============ */
+  .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .road-col {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 28px;
+  }
+  .road-col .label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 12.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--coral-dk); margin-bottom: 6px; }
+  .road-col .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--coral); }
+  .road-col h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 18px; }
+  .road-col ul { list-style: none; padding: 0; }
+  .road-col li { padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .road-col li:last-child { border-bottom: 0; }
+  .road-col li .check { width: 18px; height: 18px; border: 1.5px solid var(--line); border-radius: 4px; margin-top: 2px; }
+  .road-col li .pri { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; align-self: start; }
+  @media (max-width: 1000px) { .roadmap { grid-template-columns: 1fr; } }
+
+  /* ============ SCHEMA SNIPPETS ============ */
+  pre.code {
+    background: #1A1F26; color: #DCD0AE; padding: 22px 26px;
+    border-radius: var(--r-md); font-family: var(--mono); font-size: 13px;
+    overflow-x: auto; line-height: 1.55; margin: 18px 0;
+  }
+  .code .k { color: #FFD89B; }
+  .code .s { color: #B5DCC7; }
+  .code .c { color: #6E6452; font-style: italic; }
+
+  /* ============ FOOTER ============ */
+  footer { padding: 56px 0 36px; background: var(--ink); color: #BAB099; text-align: center; }
+  footer .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 28px; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  footer .small { color: #76705F; }
+
+  /* ============ STICKY NAV ============ */
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 246, 235, 0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  .topnav .inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .topnav a { color: var(--ink); border-bottom: 0; font-size: 13px; font-weight: 500; }
+  .topnav .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 20px; font-variation-settings: "SOFT" 100, "WONK" 1; border: 0; }
+  .topnav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .topnav nav { display: none; } }
+
+  /* ============ HORIZONTAL BAR CHART ============ */
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 80px; gap: 14px; align-items: center; padding: 8px 0; font-size: 14px; }
+  .bar-bg { height: 22px; background: var(--cream-2); border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); }
+  .bar-fill.alt { background: linear-gradient(90deg, var(--gold) 0%, #A77F35 100%); }
+  .bar-fill.green { background: linear-gradient(90deg, #2C9D8B 0%, var(--green) 100%); }
+  .bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; text-align: right; color: var(--ink-2); }
+  @media (max-width: 600px) { .bar-row { grid-template-columns: 120px 1fr 60px; font-size: 13px; } }
+
+  /* ============ DIVIDERS ============ */
+  .ornament { text-align: center; margin: 48px 0; color: var(--coral); font-family: var(--serif); font-size: 22px; letter-spacing: .4em; opacity: .7; }
+  .section-eyebrow { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .section-eyebrow .bar { width: 36px; height: 1px; background: var(--coral); }
+
+  /* ============ MISC ============ */
+  .quote {
+    border-left: 3px solid var(--coral); padding: 12px 0 12px 26px;
+    font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink-2);
+    font-style: italic; margin: 28px 0;
+  }
+  .quote cite { display: block; margin-top: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: normal; letter-spacing: .04em; }
+
+  details.acc { background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 22px; margin-bottom: 10px; }
+  details.acc summary { cursor: pointer; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.acc summary::after { content: "+"; font-family: var(--serif); font-size: 22px; color: var(--coral); }
+  details.acc[open] summary::after { content: "−"; }
+  details.acc[open] { box-shadow: var(--shadow-md); }
+  details.acc .body { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: white; }
+    section { padding: 28px 0; page-break-inside: avoid; }
+    .topnav, .hero::before { display: none; }
+    .finding, .road-col, table { box-shadow: none; }
+    a { color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="wrap inner">
+    <a href="#top" class="mark">snowmass self storage · seo audit</a>
+    <nav>
+      <a href="#tldr">Summary</a>
+      <a href="#snapshot">Snapshot</a>
+      <a href="#critical">Critical</a>
+      <a href="#quickwins">Quick Wins</a>
+      <a href="#hierarchy">URL Catalog</a>
+      <a href="#keywords">Keywords</a>
+      <a href="#schema">Schema</a>
+      <a href="#content">Content</a>
+      <a href="#backlinks">Backlinks</a>
+      <a href="#llm">AI/LLM</a>
+      <a href="#roadmap">90-Day Plan</a>
+    </nav>
+  </div>
+</div>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="meta">SEO AUDIT &amp; GROWTH STRATEGY &nbsp;·&nbsp; CONFIDENTIAL</div>
+      <h1>How <em>Snowmass Self Storage</em><br>wins in <em>AI search</em><br>but vanishes in the <em>Aspen corridor</em>.</h1>
+      <p class="lede" style="margin-top:32px; max-width:600px;">
+        A 360° technical, content, competitive and AI-visibility audit of <strong>snowmassselfstorage.com</strong>, built from a live Playwright crawl, DataForSEO Labs ranked-keyword and SERP data, a mobile Lighthouse audit, and a flagship 5-prompt x 4-model AI-citation test. The headline is unusual: your AI and technical foundations are excellent, but your classic organic presence in the Aspen / Roaring Fork market is close to invisible.
+      </p>
+      <div class="by-line">
+        <span>Prepared by <b>ThinkFlowLabs</b></span>
+        <span>·</span>
+        <span>Issued <b>May 29, 2026</b></span>
+        <span>·</span>
+        <span>Market <b>Roaring Fork Valley, Colorado</b></span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h4>AT-A-GLANCE</h4>
+      <dl>
+        <dt>AI citations (5x4 grid)</dt><dd>16 of 20</dd>
+        <dt>Brand-term organic rank</dt><dd>#1</dd>
+        <dt>&quot;self storage aspen co&quot; rank</dt><dd>absent (own domain)</dd>
+        <dt>Ranked keywords (US)</dt><dd>~14</dd>
+        <dt>Lighthouse Perf (mobile)</dt><dd>0.89</dd>
+        <dt>Mobile LCP</dt><dd>1.9s (passes)</dd>
+        <dt>Schema live</dt><dd>SelfStorage + FAQ + Offers</dd>
+        <dt>Google rating in SERP</dt><dd>none surfaced</dd>
+      </dl>
+      <div class="severity-strip">
+        <span>Overall health</span>
+        <span>🟢 AI-strong, organically invisible</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="tldr" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">Executive Summary</span></div>
+    <div class="tldr">
+      <div>
+        <h2>The situation in <em class="display-italic">60 seconds</em>.</h2>
+        <p class="lede" style="margin-top:24px;">
+          Snowmass Self Storage has built something most small storage facilities never achieve: it is cited in <strong>16 of 20</strong> flagship-AI answers, almost always as the #1 recommendation, and its technical foundation (rich schema, fast Core Web Vitals) is genuinely excellent. The problem is the opposite of the usual audit. The site is <strong>almost completely absent from classic organic search</strong> in the Aspen corridor it serves. It ranks #1 for its own name and essentially nowhere else.
+        </p>
+        <ol class="tldr-bullets" style="margin-top:24px;">
+          <li><strong>You already win in AI, but you are invisible in organic.</strong> Across Claude, Gemini, GPT-5.5 and Sonar you were cited 16 of 20 times and usually listed #1 for Snowmass-specific prompts. Yet for the money keyword "self storage aspen co" your own domain does not appear in the mobile SERP at all, you surface only through the Aspen Chamber directory and a Yelp list.</li>
+          <li><strong>You rank #1 organically for exactly one thing: your own brand name.</strong> DataForSEO shows only ~14 ranked keywords. "aspen storage units" sits at #42, "aspen self storage" at #22, and the high-intent local pack is owned end-to-end by Aspen Self Storage Warehouses, Low Cost Storage Aspen and Aspen Secure Storage.</li>
+          <li><strong>Your technical and structured-data work is already done, and done well.</strong> The site ships full <code class="mono">SelfStorage</code> schema (geo, hours, 9 amenities), an <code class="mono">OfferCatalog</code> with 15 priced units, and a 12-question <code class="mono">FAQPage</code>. Lighthouse is Perf 0.89, LCP 1.9s, CLS 0.002, all Core Web Vitals pass. This is why AI cites you. It is not the problem.</li>
+          <li><strong>Competitors show reviews; you show none in the SERP.</strong> Aspen Self Storage Warehouses surfaces at 4.8 from 38 reviews in the local pack. Snowmass Self Storage shows no rating at all, which costs you both the local pack and the "best storage in Aspen" AI answers as queries broaden.</li>
+          <li><strong>The fix is content and corridor pages, not a rebuild.</strong> A handful of dedicated Aspen, Basalt, Carbondale and Roaring Fork Valley pages, a pricing/cost page, a review drive and GBP optimization would convert your AI dominance into matching organic and local-pack visibility.</li>
+        </ol>
+      </div>
+      <div class="verdict-card">
+        <h4>Our verdict</h4>
+        <p>Snowmass Self Storage has done the hard, technical part that almost every competitor skips: clean schema, priced offers, a real FAQ, and a fast site. That is why four frontier AI models already name you first for Snowmass storage. What you have not done is publish the first-party organic content that wins the Aspen corridor on Google, so a strong brand is leaking the entire non-brand market to rivals and directories.</p>
+        <p>Optimize the Google Business Profile and launch a review drive in <strong>30 days</strong>. Build the Aspen / Basalt / Carbondale corridor and cost pages in <strong>60 days</strong>. Earn the local citations and re-measure in <strong>90 days</strong>. We project Snowmass Self Storage can move from invisible to a top-5 organic baseline for non-brand Aspen terms, into the Aspen local pack, and from 16 of 20 to 19+ of 20 AI citations that hold even as queries broaden to "Roaring Fork Valley".</p>
+        <div class="score-row">
+          <span>HEALTH&nbsp; <b>64/100</b></span>
+          <span>UPSIDE&nbsp; <b>+210%</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="snapshot">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">01 · State of the Site</span></div>
+    <h2>What the search data<br><em class="display-italic">actually</em> says.</h2>
+    <p class="lede" style="margin-top:18px; max-width: 720px;">Snowmass Self Storage is a rare inversion of the typical audit. The AI presence and technical foundation are excellent; the classic organic footprint in the Aspen corridor is the gap. The distance between those two is the entire opportunity.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="kpi-grid">
+      <div class="kpi cta">
+        <div class="kpi-label">AI citations</div>
+        <div class="kpi-value">16<small>/20</small></div>
+<div class="kpi-trend up">↑ usually #1 on Snowmass</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Brand-term rank</div>
+        <div class="kpi-value">#1</div>
+<div class="kpi-trend up">↑ owns its own name</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">&quot;aspen storage units&quot;</div>
+        <div class="kpi-value">#42</div>
+<div class="kpi-trend dn">off page one</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Ranked keywords</div>
+        <div class="kpi-value">~14</div>
+<div class="kpi-trend dn">thin organic footprint</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Lighthouse Perf</div>
+        <div class="kpi-value">0.89</div>
+<div class="kpi-trend up">↑ all CWV pass</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Mobile LCP</div>
+        <div class="kpi-value">1.9s</div>
+<div class="kpi-trend up">↑ well under 2.5s</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Schema live</div>
+        <div class="kpi-value">rich</div>
+<div class="kpi-trend up">↑ SelfStorage+FAQ+Offers</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Reviews in SERP</div>
+        <div class="kpi-value">none</div>
+<div class="kpi-trend dn">rival shows 38</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">The Aspen-corridor terms you should own</h3>
+    <p style="max-width:780px; margin-top: 12px;">These are real Roaring Fork Valley searches with live demand. You are cited for most of them in AI answers, but your own domain ranks #1 only for your brand name, while competitors and directories take every non-brand click. Each is unlocked by a corridor landing page, reviews, or GBP, not by a rebuild.</p>
+
+    <div class="table-scroll" style="margin-top: 22px;">
+      <table>
+        <thead><tr>
+          <th>Local keyword</th>
+          <th class="num">Volume / mo</th>
+          <th class="num">KD</th>
+          <th class="num">Current rank</th>
+          <th>Status</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="kw">snowmass self storage</td><td class="num">50</td><td class="num">low</td><td class="num">#1 organic</td><td><span class="badge opp">DEFEND</span></td></tr>
+          <tr><td class="kw">aspen self storage</td><td class="num">70</td><td class="num">low</td><td class="num">~#22</td><td><span class="badge crit">PAGE 3</span></td></tr>
+          <tr><td class="kw">aspen storage units</td><td class="num">90</td><td class="num">low</td><td class="num">~#42</td><td><span class="badge crit">PAGE 4+</span></td></tr>
+          <tr><td class="kw">self storage aspen co</td><td class="num">110+</td><td class="num">low</td><td class="num">absent (own domain)</td><td><span class="badge crit">NOT RANKING</span></td></tr>
+          <tr><td class="kw">low cost storage aspen</td><td class="num">50</td><td class="num">low</td><td class="num">~#15</td><td><span class="badge high">COMPETITOR TERM</span></td></tr>
+          <tr><td class="kw">storage units basalt co</td><td class="num">70+</td><td class="num">low</td><td class="num">absent</td><td><span class="badge opp">NO PAGE</span></td></tr>
+          <tr><td class="kw">roaring fork valley storage</td><td class="num">40+</td><td class="num">low</td><td class="num">absent</td><td><span class="badge opp">NO PAGE</span></td></tr>
+          <tr><td class="kw">storage units carbondale co</td><td class="num">90+</td><td class="num">low</td><td class="num">absent</td><td><span class="badge opp">NO PAGE</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:64px;">Storage demand in the Roaring Fork Valley is steady and corridor-wide</h3>
+    <p style="max-width:780px; margin-top: 12px;">Self-storage search along the Aspen to Glenwood Hwy 82 corridor is stable year-round with a seasonal move-in peak. The demand is permanent and split across towns (Aspen, Snowmass, Basalt, Carbondale, Glenwood). The winner is whoever publishes the cleanest first-party page per town and carries the most reviews.</p>
+
+    <div style="margin-top: 22px; background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 28px;">
+      <div class="bar-row"><span>aspen storage (corridor head)</span>
+        <div class="bar-bg"><div class="bar-fill " style="width:70%"></div></div>
+        <span class="bar-val">high intent</span>
+      </div>
+      <div class="bar-row"><span>self storage aspen co</span>
+        <div class="bar-bg"><div class="bar-fill " style="width:68%"></div></div>
+        <span class="bar-val">110+/mo</span>
+      </div>
+      <div class="bar-row"><span>storage near me (local)</span>
+        <div class="bar-bg"><div class="bar-fill green" style="width:60%"></div></div>
+        <span class="bar-val">+57% YoY</span>
+      </div>
+      <div class="bar-row"><span>rv / vehicle storage (seasonal)</span>
+        <div class="bar-bg"><div class="bar-fill alt" style="width:45%"></div></div>
+        <span class="bar-val">summer peak</span>
+      </div>
+      <div class="bar-row"><span>basalt / carbondale storage (gap)</span>
+        <div class="bar-bg"><div class="bar-fill alt" style="width:35%"></div></div>
+        <span class="bar-val">unowned</span>
+      </div>
+      <p class="small" style="margin-top:12px;">Demand is consistent and spread across the corridor; differentiation comes from per-town pages, reviews and the GBP, not from chasing national volume.</p>
+    </div>
+  </div>
+</section>
+
+<section id="critical" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">02 · The Five Critical Findings</span></div>
+    <h2>What's <em class="display-italic">actually</em><br>holding the site back.</h2>
+    <p class="lede" style="margin-top: 18px; max-width: 720px;">Each finding below came from the live site, the Lighthouse audit, or the search data, not from theory. None requires a rebuild. Together they explain why a facility that AI names first is still missing from the Aspen organic results entirely.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="findings">
+      <article class="finding">
+        <div class="num">1</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · ORGANIC VISIBILITY</span></div>
+          <h3>Absent from the "self storage aspen co" organic results, ranks #1 only for its own brand.</h3>
+          <p class="impact-line">Impact: The highest-intent commercial term in your market does not return your domain at all. Competitors and directories take 100% of the non-brand click.</p>
+          <p>For "self storage aspen co" on mobile, <strong>snowmassselfstorage.com does not appear anywhere in the SERP</strong>. You surface only indirectly, through the Aspen Chamber business directory (rank ~#13) and as a name inside a Yelp "Best 10" list. DataForSEO Labs confirms it: only ~14 ranked keywords, and the only top-10 organic ranking is for the brand term "snowmass self storage" (#1). Non-brand intent goes to Aspen Self Storage Warehouses (organic #1 + local pack #1), Low Cost Storage Aspen, All Hours Storage and the aggregators (Sparefoot, SelfStorage.com).</p>
+          <div class="fix"><b>Fix:</b> Build first-party, indexable corridor landing pages, one per town you serve (Aspen, Basalt, Carbondale, Glenwood, Woody Creek), each with its own copy, unit table, map, hours and FAQ. Internally link them from the homepage. This is the single biggest organic lever you have, and it is pure greenfield. Eta: <strong>1-2 weeks copy + dev.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">2</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · REVIEWS / GBP</span></div>
+          <h3>No Google rating surfaces in the SERP. Your top rival shows 4.8 from 38 reviews.</h3>
+          <p class="impact-line">Impact: Reviews drive the local pack and the "best storage in Aspen" AI answers, the exact place your citations fade as queries broaden.</p>
+          <p>In the Aspen local pack, Aspen Self Storage Warehouses shows <strong>4.8 stars from 38 reviews</strong>; Snowmass Self Storage <strong>surfaces no rating at all</strong>. In a corridor this size, review count is the deciding factor in both Google's local ranking and the way Claude, GPT, Gemini and Sonar order their "best storage near Aspen" lists, they lead with the most-reviewed facility. You have the AI mindshare; you are missing the social proof that lets it hold up when the query says "Aspen" instead of "Snowmass".</p>
+          <div class="fix"><b>Fix:</b> Optimize/verify the Google Business Profile (categories, photos, services, Q&A, both Snowmass and Aspen service areas) and launch a review drive: one-tap Google review links at move-in by SMS/email, a QR code at the gate and counter. Target <strong>25+ reviews in 90 days</strong>. Highest-ROI off-site move on the list. Eta: <strong>ongoing, start week 1.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">3</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · AI CORRIDOR DECAY</span></div>
+          <h3>AI citations are strong for "Snowmass" but decay as queries broaden to Aspen / Roaring Fork.</h3>
+          <p class="impact-line">Impact: You are cited 4/4 on Snowmass prompts but only 2/4 on "Roaring Fork Valley" and 3/4 on "near Aspen" / cost, the broader, higher-volume queries.</p>
+          <p>The 5x4 AI grid is clear: on "Best self storage in Snowmass" all four models cite you, usually #1. But on "Self storage in the Roaring Fork Valley" only Claude and GPT-5.5 cite you (Gemini and Sonar drop you), and on cost prompts you slip to 3/4. The reason is that your on-page copy and schema are anchored almost entirely to "Snowmass"; the models have less first-party Aspen / Basalt / Carbondale / pricing text to ground a broader recommendation, so they fall back to competitors like Aspen Self Storage Warehouses and All Hours Storage.</p>
+          <div class="fix"><b>Fix:</b> Publish corridor + pricing pages (Aspen, Basalt, Carbondale, Roaring Fork Valley, "how much does storage cost near Aspen") with quotable, plain-prose answers and matching FAQ schema. This is the exact text the dropping models need to keep citing you. Eta: <strong>part of the corridor page build.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">4</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · CONTENT DEPTH</span></div>
+          <h3>The site is too thin to rank organically, with one ~441-word page and no corridor or pricing pages.</h3>
+          <p class="impact-line">Impact: ~441 words total, ~14 ranked keywords, no dedicated Aspen / Basalt / Carbondale / Roaring Fork / pricing pages to capture corridor intent.</p>
+          <p>The homepage runs roughly <strong>441 words</strong> and is effectively the whole site. There is no indexable landing page per town in the service area (Aspen, Snowmass, Woody Creek, Basalt, Carbondale, Glenwood Springs), and no page targeting the obvious modifiers (pricing/cost, RV/vehicle, climate, business storage). Directories like the Aspen Chamber and Yelp outrank you for your own market precisely because they publish more structured corridor content about storage than your own site does.</p>
+          <div class="fix"><b>Fix:</b> Add a real landing page per corridor town with address context, map, hours, unit table, amenities and FAQ, plus a "how much does storage cost near Aspen / Snowmass" pricing hub. Expand the homepage past 600 words and link out to the new pages. Eta: <strong>1-2 weeks copy + dev.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">5</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · LOCAL PACK</span></div>
+          <h3>Absent from the Aspen local pack while three rivals own all three slots.</h3>
+          <p class="impact-line">Impact: The map pack for "self storage aspen co" is held end-to-end by competitors; you appear on no map surface for the corridor's head term.</p>
+          <p>The local pack for "self storage aspen co" is <strong>Aspen Self Storage Warehouses, Low Cost Storage Aspen and Aspen Secure Storage</strong>, all three slots. Snowmass Self Storage does not appear. For a facility on Hwy 82 that explicitly serves Aspen, this is a pure GBP and proximity-signal gap: the profile needs Aspen-area service areas, correct primary category, photos and reviews so Google associates you with the corridor, not only the Old Snowmass pin.</p>
+          <div class="fix"><b>Fix:</b> Optimize the GBP with Aspen and Roaring Fork service areas, the correct primary category (Self-storage facility), 15+ geotagged photos, services with prices, and a steady review flow. Pair with the corridor landing pages so the on-site signal matches the profile. Eta: <strong>half day + ongoing.</strong></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="callout opp" style="margin-top: 36px;">
+      <strong>Bottom line:</strong> this is the inverse of a typical audit. The technical and AI foundations are <em>already excellent</em>, rich schema, fast Core Web Vitals, 16-of-20 AI citations. The gap is entirely classic organic and local: first-party corridor pages, reviews and a GBP tuned to Aspen. Closing it converts a facility that AI already names first into one that also wins Google.
+    </div>
+  </div>
+</section>
+
+<section id="quickwins">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · Quick Wins</span></div>
+    <h2>What we'd ship<br><em class="display-italic">first</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:720px;">Ordered by effort and impact. The first three can ship in the first week and start closing the organic / local gap without touching the strong technical base.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th style="width: 36px;">#</th>
+        <th>Quick win</th>
+        <th>Where</th>
+        <th>Effort</th>
+        <th>Expected lift</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><strong>Optimize the Google Business Profile</strong> with Aspen + Roaring Fork service areas, primary category, photos, services.</td><td>Google Business</td><td>Half day</td><td>Local-pack eligibility in the Aspen market; map presence beyond Old Snowmass.</td></tr>
+        <tr><td class="num">2</td><td><strong>Launch a Google review drive</strong> with one-tap links + gate/counter QR codes.</td><td>GBP + counter</td><td>Ongoing</td><td>Moves local-pack rank and "best storage Aspen" AI lists. Target 25+.</td></tr>
+        <tr><td class="num">3</td><td><strong>Build an Aspen storage landing page</strong> (first-party, indexable).</td><td>New URL</td><td>1-2 days</td><td>Capture the head term you are entirely absent from organically.</td></tr>
+        <tr><td class="num">4</td><td><strong>Build Basalt + Carbondale corridor pages.</strong></td><td>New URLs</td><td>2-3 days</td><td>Greenfield non-brand terms with no first-party owner from you today.</td></tr>
+        <tr><td class="num">5</td><td><strong>Add a pricing / cost page</strong> ("how much does storage cost near Aspen").</td><td>New URL</td><td>1 day</td><td>Answers the cost prompts AI drops you on; quotable for LLMs.</td></tr>
+        <tr><td class="num">6</td><td><strong>Expand the homepage past 600 words</strong> and link to corridor pages.</td><td>Homepage</td><td>Half day</td><td>More organic surface; internal-link equity to new pages.</td></tr>
+        <tr><td class="num">7</td><td><strong>Add a Roaring Fork Valley overview page</strong> tying the corridor together.</td><td>New URL</td><td>1 day</td><td>Recovers the "Roaring Fork Valley" prompt Gemini/Sonar drop you on.</td></tr>
+        <tr><td class="num">8</td><td><strong>Tighten a11y + SEO headroom</strong> (alt text, headings) toward 100.</td><td>All pages</td><td>2-3 hours</td><td>Pushes Lighthouse a11y 90 / SEO 92 to near-perfect; minor but free.</td></tr>
+        <tr><td class="num">9</td><td><strong>Claim/complete the Aspen Chamber + Yelp listings</strong> you already appear in.</td><td>Directories</td><td>1-2 hours</td><td>Convert third-party placements into owned, NAP-consistent citations.</td></tr>
+        <tr><td class="num">10</td><td><strong>Add AggregateRating schema</strong> once review volume supports it.</td><td>Templates</td><td>1 hour</td><td>Star eligibility in results to match the rich schema already live.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top:56px;">Title &amp; meta rewrites for the highest-value pages</h3>
+    <p style="max-width:780px; margin-top:8px;">The current homepage title and meta are clean and on-brand. These are targeted titles/metas for the new corridor and pricing pages that will carry your non-brand organic visibility.</p>
+    <div class="table-scroll" style="margin-top:18px;">
+    <table>
+      <thead><tr><th>Page</th><th>Recommended &lt;title&gt;</th><th>Recommended meta description</th></tr></thead>
+      <tbody>
+        <tr><td><code class="mono">/aspen-storage (new)</code></td><td>Self Storage Near Aspen, CO, 24/7 Drive-Up Units | Snowmass Self Storage</td><td>Secure self storage minutes from Aspen on Hwy 82. 24/7 access, drive-up and RV/vehicle units, online rentals from $115/mo. Check availability today.</td></tr>
+        <tr><td><code class="mono">/storage-cost-aspen-snowmass (new)</code></td><td>How Much Does Storage Cost Near Aspen &amp; Snowmass, CO? (2026)</td><td>Storage prices near Aspen and Snowmass start around $115/mo. Compare unit sizes and rates at Snowmass Self Storage, then reserve online in minutes.</td></tr>
+        <tr><td><code class="mono">/roaring-fork-valley-storage (new)</code></td><td>Self Storage in the Roaring Fork Valley, CO | Snowmass Self Storage</td><td>One secure, locally owned facility serving Aspen, Snowmass, Basalt, Carbondale and Glenwood. 24/7 access, drive-up units, online booking on Hwy 82.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="hierarchy" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · URL × Error × Fix Catalog</span></div>
+    <h2>Every fixable issue,<br>by <em class="display-italic">URL</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">A page-by-page catalog of what is working, what is missing, and the exact fix. Because the technical base is strong, the catalog is mostly about pages that do not exist yet, the greenfield corridor and pricing pages that would carry your non-brand organic visibility.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <span class="sub-eyebrow">Page-by-page audit</span>
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.snowmassselfstorage.com/</div>
+          <div class="url-audit-meta">Homepage · organic #1 for brand · absent for non-brand Aspen terms</div>
+        </div>
+        <span class="badge crit">P0 · CONTENT DEPTH</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ok">
+        <div class="issue-name">Schema (SelfStorage + FAQ + Offers)</div>
+        <div class="issue-current">Full SelfStorage with geo/hours/9 amenities, OfferCatalog with 15 priced units, 12-question FAQPage.</div>
+        <div class="issue-fix"><b>Fix:</b> Keep, this is excellent and is why AI cites you. Extend the same pattern to new pages.</div>
+      </div>
+      <div class="url-issue ok">
+        <div class="issue-name">Core Web Vitals</div>
+        <div class="issue-current">Perf 0.89, LCP 1.9s, CLS 0.002, og:image present, self-canonical.</div>
+        <div class="issue-fix"><b>Fix:</b> No action needed. This is already done right.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">Thin content (~441 words)</div>
+        <div class="issue-current">Effectively the whole site; anchored to "Snowmass" only.</div>
+        <div class="issue-fix"><b>Fix:</b> Expand past 600 words, add Aspen/corridor context, link to new town pages.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">No internal links to corridor pages</div>
+        <div class="issue-current">No Aspen/Basalt/Carbondale pages exist to link to.</div>
+        <div class="issue-fix"><b>Fix:</b> Build the corridor pages (below) and link them from the homepage.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">A11y / SEO headroom</div>
+        <div class="issue-current">Lighthouse a11y 90, SEO 92.</div>
+        <div class="issue-fix"><b>Fix:</b> Audit alt text + heading order to push both toward 100.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">aspenchamber.org/business-directory/snowmass-self-storage</div>
+          <div class="url-audit-meta">Third-party directory · ranks ~#13 for &quot;self storage aspen co&quot;</div>
+        </div>
+        <span class="badge high">P1 · OWN IT</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ">
+        <div class="issue-name">Your only Aspen SERP placement is borrowed</div>
+        <div class="issue-current">You appear in the Aspen SERP only via the Chamber directory, not your own domain.</div>
+        <div class="issue-fix"><b>Fix:</b> Claim/complete the Chamber listing with consistent NAP, then build the first-party Aspen page that should outrank it.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">yelp.com (Best 10 Self Storage near Aspen)</div>
+          <div class="url-audit-meta">Aggregator listing · names &quot;Snowmass Self Storage&quot; in snippet</div>
+        </div>
+        <span class="badge med">P2 · CLAIM</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue warn">
+        <div class="issue-name">Unclaimed / no rating surfaced</div>
+        <div class="issue-current">You are named inside Yelp's list but no rating shows for you.</div>
+        <div class="issue-fix"><b>Fix:</b> Claim the Yelp listing, complete NAP, add photos, and seed reviews to surface a rating.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">Google Business Profile (Snowmass Self Storage)</div>
+          <div class="url-audit-meta">Maps / local pack · absent from the Aspen pack</div>
+        </div>
+        <span class="badge high">P1 · OPTIMIZE</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ">
+        <div class="issue-name">No rating surfaced; not in Aspen pack</div>
+        <div class="issue-current">Rival shows 4.8 (38). You show no rating and miss all three Aspen pack slots.</div>
+        <div class="issue-fix"><b>Fix:</b> Verify, set Aspen + Roaring Fork service areas, primary category, photos, services with prices, run a review drive.</div>
+      </div>
+      </div>
+    </div>
+
+    <span class="sub-eyebrow">Pattern-level issues</span>
+    <div class="url-group opp">
+      <h4>Pages to build (each is an uncontested corridor query)</h4>
+      <p>These pages do not exist yet and you have no first-party owner for them. Each maps to real Aspen-corridor intent where you are currently absent from organic.</p>
+      <div class="url-list">
+      <span><code>/aspen-storage</code> <span class="cnt">head term</span></span>
+      <span><code>/storage-units-basalt-co</code></span>
+      <span><code>/storage-units-carbondale-co</code></span>
+      <span><code>/storage-glenwood-springs-co</code></span>
+      <span><code>/woody-creek-storage</code></span>
+      <span><code>/roaring-fork-valley-storage</code> <span class="cnt">corridor hub</span></span>
+      <span><code>/storage-cost-aspen-snowmass</code> <span class="cnt">pricing</span></span>
+      <span><code>/rv-vehicle-storage-aspen</code> <span class="cnt">seasonal</span></span>
+      </div>
+      <div class="group-fix"><b>Template-level fix:</b> Build as lightweight, schema-rich landing pages reusing your existing SelfStorage + FAQ + Offer pattern. Even 350-450 words each, with a unit table and quotable FAQ, will outrank the directories on these long-tail corridor terms and stop your AI citations decaying on broad queries.</div>
+    </div>
+  </div>
+</section>
+
+<section id="keywords">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">05 · Keyword Strategy</span></div>
+    <h2>The corridor keywords<br>that <em class="display-italic">change</em> the business.</h2>
+    <p class="lede" style="margin-top:18px; max-width:720px;">The Roaring Fork market is low-difficulty: target terms have keyword difficulty well under 15. You are cited for them in AI but rank for almost none of them organically. The job is to publish a first-party page per intent and per town, then let your already-strong schema do the rest.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th>Target keyword</th>
+        <th class="num">Volume / mo</th>
+        <th class="num">KD</th>
+        <th>Intent</th>
+        <th>Recommended URL</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="kw">self storage aspen co</td><td class="num">110+</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/aspen-storage</code></td></tr>
+        <tr><td class="kw">aspen storage units</td><td class="num">90</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/aspen-storage</code></td></tr>
+        <tr><td class="kw">aspen self storage</td><td class="num">70</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/aspen-storage</code></td></tr>
+        <tr><td class="kw">storage units carbondale co</td><td class="num">90+</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/storage-units-carbondale-co</code></td></tr>
+        <tr><td class="kw">storage units basalt co</td><td class="num">70+</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/storage-units-basalt-co</code></td></tr>
+        <tr><td class="kw">roaring fork valley storage</td><td class="num">40+</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/roaring-fork-valley-storage</code></td></tr>
+        <tr><td class="kw">storage cost near aspen</td><td class="num">50+</td><td class="num">low</td><td>Informational</td><td><code class="mono">/storage-cost-aspen-snowmass</code></td></tr>
+        <tr><td class="kw">snowmass self storage</td><td class="num">50</td><td class="num">low</td><td>Navigational</td><td><code class="mono">/ (homepage)</code></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top: 64px;">Corridor & service pages: the next tier</h3>
+    <p style="max-width:760px; margin-top:8px;">A page per Hwy 82 town plus a corridor hub and a pricing page lets you capture intent you currently send to Aspen Self Storage Warehouses, the directories and the aggregators.</p>
+    <div class="table-scroll" style="margin-top:22px;">
+    <table>
+      <thead><tr><th>Landing page</th><th>Primary KW</th><th class="num">Vol/mo</th><th>What it needs</th></tr></thead>
+      <tbody>
+        <tr><td><code class="mono">/aspen-storage</code></td><td class="kw">self storage aspen co</td><td class="num">110+</td><td>First-party Aspen page; SelfStorage schema, map, unit table, reviews, FAQ. Your #1 organic priority.</td></tr>
+        <tr><td><code class="mono">/storage-units-basalt-co</code></td><td class="kw">storage units basalt</td><td class="num">70+</td><td>Greenfield; All Hours / Store It All / StorageMart own Basalt today, no first-party owner from you.</td></tr>
+        <tr><td><code class="mono">/storage-units-carbondale-co</code></td><td class="kw">storage units carbondale</td><td class="num">90+</td><td>Greenfield corridor town; pair with FAQ + Offer schema.</td></tr>
+        <tr><td><code class="mono">/roaring-fork-valley-storage</code></td><td class="kw">roaring fork valley storage</td><td class="num">40+</td><td>Corridor hub; recovers the prompt Gemini/Sonar drop you on.</td></tr>
+        <tr><td><code class="mono">/storage-cost-aspen-snowmass</code></td><td class="kw">storage cost aspen snowmass</td><td class="num">50+</td><td>Pricing page; quotable for the cost prompts AI omits you on. Lead with the $115/mo figure.</td></tr>
+        <tr><td><code class="mono">/rv-vehicle-storage-aspen</code></td><td class="kw">rv storage aspen</td><td class="num">40+</td><td>Seasonal vehicle/RV angle; Service schema; uncontested locally.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout"><strong>Watch out:</strong> ignore the out-of-market terms the keyword tools surface, your domain shows accidental, page-6+ relevance for Steamboat Springs and Northglenn (Denver suburb) terms. Those are noise, not reach. Every dollar of effort belongs on the low-difficulty Aspen-to-Glenwood corridor terms above, where AI already favors you and the organic door is wide open.</div>
+  </div>
+</section>
+
+<section id="schema" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">06 · Schema Markup Plan</span></div>
+    <h2>The structured data is<br><em class="display-italic">already strong</em>, here's how to extend it.</h2>
+    <p class="lede" style="margin-top:18px; max-width:740px;">Unlike most audits, you do not need a schema rescue. The homepage already ships SelfStorage (geo, hours, 9 amenities), an OfferCatalog with 15 priced units, and a 12-question FAQPage. This rollout is about replicating that excellent pattern onto the new corridor pages, then adding the review layer.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="three-col">
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge crit">PHASE 1 · WEEK 1</span></div>
+        <h4>Foundations</h4>
+        <p style="margin-top:8px; font-size:14.5px;">Reuse the existing SelfStorage pattern on each new corridor page · keep the homepage SelfStorage + FAQPage + OfferCatalog exactly as-is · add BreadcrumbList across the new page set.</p>
+        <p class="small" style="margin-top:10px;">Effort: bundled with page build · Impact: every new Aspen/Basalt/Carbondale page inherits the same AI-citation-winning structure that already works on the homepage.</p>
+      </div>
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge high">PHASE 2 · WEEK 2-3</span></div>
+        <h4>Local depth</h4>
+        <p style="margin-top:8px; font-size:14.5px;">Service schema on the RV/vehicle and pricing pages · areaServed expanded to name Aspen, Basalt, Carbondale, Glenwood explicitly on each corridor node · Offer/UnitPriceSpecification mirrored from the homepage OfferCatalog.</p>
+        <p class="small" style="margin-top:10px;">Effort: 1 dev day · Impact: gives the models the per-town and pricing data they need to keep citing you as queries broaden.</p>
+      </div>
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge med">PHASE 3 · WEEK 4-6</span></div>
+        <h4>Content &amp; reviews</h4>
+        <p style="margin-top:8px; font-size:14.5px;">AggregateRating once review volume grows (you have none surfaced today) · Review schema embedding Google reviews · ImageObject with geo on facility photos · sameAs linking GBP, Yelp and the Aspen Chamber listing to anchor the entity across the corridor.</p>
+        <p class="small" style="margin-top:10px;">Effort: 1 day · Impact: star eligibility to match the rich schema already present, plus stronger entity consolidation.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Reference snippet: SelfStorage + LocalBusiness</h3>
+    <p>You already ship a populated SelfStorage node. The key extension is naming each corridor town in areaServed and replicating the node per landing page, here is the shape to mirror.</p>
+<pre class="code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "SelfStorage",
+  "@id": "https://www.snowmassselfstorage.com/#facility",
+  "name": "Snowmass Self Storage",
+  "address": {"@type":"PostalAddress","streetAddress":"26870 Hwy 82",
+    "addressLocality":"Snowmass","addressRegion":"CO","postalCode":"81654"},
+  "geo": {"@type":"GeoCoordinates","latitude":39.27,"longitude":-106.96},
+  "telephone": "+1-970-XXX-XXXX",
+  "openingHours": "Mo-Su 00:00-24:00",
+  "priceRange": "$$",
+  "areaServed": [
+    {"@type":"City","name":"Aspen"},
+    {"@type":"City","name":"Snowmass"},
+    {"@type":"City","name":"Basalt"},
+    {"@type":"City","name":"Carbondale"},
+    {"@type":"City","name":"Glenwood Springs"},
+    {"@type":"City","name":"Woody Creek"}
+  ],
+  "amenityFeature": [
+    {"@type":"LocationFeatureSpecification","name":"24/7 access","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Drive-up units","value":true},
+    {"@type":"LocationFeatureSpecification","name":"RV / vehicle storage","value":true}
+  ]
+}
+&lt;/script&gt;</pre>
+
+    <h3 style="margin-top:48px;">Reference snippet: FAQPage</h3>
+<pre class="code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a storage unit cost near Aspen and Snowmass, CO?",
+      "acceptedAnswer": {"@type":"Answer",
+        "text": "Near Aspen and Snowmass, Snowmass Self Storage offers units starting around $115/mo, with drive-up and RV/vehicle options. Pricing varies by size; reserve and pay online with 24/7 gate access at 26870 Hwy 82."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does Snowmass Self Storage serve Aspen and the Roaring Fork Valley?",
+      "acceptedAnswer": {"@type":"Answer",
+        "text": "Yes. Snowmass Self Storage is locally owned on Hwy 82 and serves Aspen, Snowmass, Woody Creek, Basalt, Carbondale and Glenwood Springs across the Roaring Fork Valley, with 24/7 access and online rentals."}
+    }
+    /* ...mirror onto each corridor page from the Section 07 set */
+  ]
+}
+&lt;/script&gt;</pre>
+  </div>
+</section>
+
+<section id="content">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">07 · Content Strategy</span></div>
+    <h2>A small content layer<br>that earns the next <em class="display-italic">12 months</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">A storage facility does not need a blog mill, it needs a handful of evergreen, corridor-anchored pages that Google ranks and AI engines quote. Because your schema is already strong, each page mostly needs good prose. Ten pieces, sequenced.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>#</th><th>Title</th><th>Target keyword</th><th>Publish by</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><strong>Self Storage Near Aspen, CO (location hub)</strong></td><td class="kw">self storage aspen co</td><td>Wk 1</td><td>Your #1 organic gap; the term your domain is entirely absent for today.</td></tr>
+        <tr><td class="num">2</td><td><strong>How Much Does Storage Cost Near Aspen & Snowmass? (2026)</strong></td><td class="kw">storage cost aspen snowmass</td><td>Wk 2</td><td>Pricing intent AI drops you on; lead with the $115/mo figure models already quote.</td></tr>
+        <tr><td class="num">3</td><td><strong>Storage Units in Basalt, CO</strong></td><td class="kw">storage units basalt co</td><td>Wk 3</td><td>Greenfield corridor town owned today by All Hours / StorageMart.</td></tr>
+        <tr><td class="num">4</td><td><strong>Storage Units in Carbondale, CO</strong></td><td class="kw">storage units carbondale co</td><td>Wk 4</td><td>Greenfield corridor town; captures Sopris/CubeSmart intent.</td></tr>
+        <tr><td class="num">5</td><td><strong>Self Storage in the Roaring Fork Valley</strong></td><td class="kw">roaring fork valley storage</td><td>Wk 5</td><td>Corridor hub; recovers the prompt Gemini and Sonar drop you on.</td></tr>
+        <tr><td class="num">6</td><td><strong>RV, Boat & Vehicle Storage Near Aspen</strong></td><td class="kw">rv storage aspen</td><td>Wk 6</td><td>Seasonal demand; uncontested locally; ties to your 24/7 drive-up angle.</td></tr>
+        <tr><td class="num">7</td><td><strong>Storage for Glenwood Springs & Woody Creek</strong></td><td class="kw">storage glenwood springs co</td><td>Wk 7</td><td>Completes corridor coverage end-to-end on Hwy 82.</td></tr>
+        <tr><td class="num">8</td><td><strong>Moving to the Roaring Fork Valley? A Storage Checklist</strong></td><td class="kw">moving to aspen co</td><td>Wk 8</td><td>Top-of-funnel; links to every corridor page.</td></tr>
+        <tr><td class="num">9</td><td><strong>Seasonal Storage for Aspen Ski & Mountain Gear</strong></td><td class="kw">seasonal storage aspen</td><td>Wk 10</td><td>Skis, bikes, camping, vehicle storage for second-home owners.</td></tr>
+        <tr><td class="num">10</td><td><strong>Snowmass Self Storage FAQ (schema hub)</strong></td><td class="kw">snowmass storage faq</td><td>Wk 12</td><td>Extends the existing 12-question FAQPage to power AI answers corridor-wide.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top: 56px;">The supporting cluster: 30 FAQ-schema questions</h3>
+    <p style="max-width:780px;">Pre-validated questions (from the live SERP People-Also-Ask, your existing 12-question FAQ, and the AI test) to extend FAQPage schema across the homepage, corridor pages and a /faq hub. These are exactly the prompts the AI engines are answering today, and the ones they drop you on.</p>
+
+    <div class="three-col" style="margin-top: 22px;">
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Cost &amp; Pricing</h4>
+        <ol style="margin-top:10px; font-size:14px;">
+          <li>How much does a storage unit cost near Aspen, CO?</li>
+          <li>What is the cheapest storage unit near Snowmass?</li>
+          <li>How much is a 10x10 storage unit in the Roaring Fork Valley?</li>
+          <li>Do you offer an online or move-in discount?</li>
+          <li>Are there admin, lock or insurance fees?</li>
+          <li>Is month-to-month rental available?</li>
+          <li>How much does RV / vehicle storage cost near Aspen?</li>
+          <li>Do you require a deposit?</li>
+          <li>What size unit do I need for a 2-bedroom home?</li>
+          <li>Why is storage cheaper here than in Aspen proper?</li>
+        </ol>
+      </div>
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Access &amp; Service Area</h4>
+        <ol start="11" style="margin-top:10px; font-size:14px;">
+          <li>Do you offer 24/7 access?</li>
+          <li>Are units drive-up?</li>
+          <li>Where exactly is Snowmass Self Storage?</li>
+          <li>Do you serve Aspen?</li>
+          <li>Do you serve Basalt and Carbondale?</li>
+          <li>Do you serve Glenwood Springs and Woody Creek?</li>
+          <li>How far is the facility from downtown Aspen?</li>
+          <li>How do I get a gate code?</li>
+          <li>Is the lot gated and secure?</li>
+          <li>Can I store an RV, boat or trailer?</li>
+        </ol>
+      </div>
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Renting &amp; Use</h4>
+        <ol start="21" style="margin-top:10px; font-size:14px;">
+          <li>How do I rent a unit online?</li>
+          <li>Can I move in the same day?</li>
+          <li>What do I need to bring to rent?</li>
+          <li>Do you offer business / contractor storage?</li>
+          <li>Can I store seasonal ski and mountain gear?</li>
+          <li>What can&#x27;t I store in a unit?</li>
+          <li>How do I pay my bill online?</li>
+          <li>How much notice to move out?</li>
+          <li>Do you have climate-controlled units?</li>
+          <li>Are you locally owned?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="backlinks" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">08 · Backlink Strategy</span></div>
+    <h2>From a handful of links<br>to <em class="display-italic">corridor authority</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Snowmass Self Storage has a very small backlink and citation footprint, and the placements it does have (Aspen Chamber, Yelp) are third-party rather than owned. In a corridor this size you do not need many links, you need the right local citations across every Hwy 82 town, all with identical NAP (name, address, phone).</p>
+
+    <div class="ornament">· · ·</div>
+
+    <h3>Tier 1: Local citations & directories (Weeks 1-2)</h3>
+    <p>Lowest friction, highest local-SEO value. Ensure identical NAP across every corridor town listing.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google Business Profile</strong></td><td class="mono" style="font-size:12.5px;">business.google.com</td><td>Verify, Aspen + Roaring Fork service areas, full categories, photos, services, Q&A.</td></tr>
+          <tr><td><strong>Bing Places + Apple Business Connect</strong></td><td class="mono" style="font-size:12.5px;">bingplaces.com</td><td>Two more map surfaces; quick wins.</td></tr>
+          <tr><td><strong>Yelp (claim existing listing)</strong></td><td class="mono" style="font-size:12.5px;">yelp.com</td><td>You already appear named, claim and complete it.</td></tr>
+          <tr><td><strong>Aspen Chamber business directory</strong></td><td class="mono" style="font-size:12.5px;">aspenchamber.org</td><td>You already rank here, claim and optimize the profile.</td></tr>
+          <tr><td><strong>Sparefoot / SelfStorage.com listing</strong></td><td class="mono" style="font-size:12.5px;">sparefoot.com</td><td>They take corridor organic slots, be listed and accurate there too.</td></tr>
+          <tr><td><strong>Basalt / Carbondale / Glenwood chambers</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>One citation per corridor town to widen geographic relevance.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:48px;">Tier 2: Local relevance & partnerships (Weeks 3-6)</h3>
+    <p>Referral + link value from the Roaring Fork community.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Aspen Times / Aspen Daily News</strong></td><td class="mono" style="font-size:12.5px;">aspentimes.com</td><td>Local-business feature or seasonal storage tip column.</td></tr>
+          <tr><td><strong>Local movers & real-estate agents</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Preferred-vendor cross-links for relocations and second homes.</td></tr>
+          <tr><td><strong>Aspen / Snowmass property managers</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Second-home and seasonal-gear storage referral partners.</td></tr>
+          <tr><td><strong>RV dealers & ski/bike shops (seasonal)</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Vehicle and gear storage referral partners.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:48px;">Tier 3: Reviews as ranking signal (ongoing)</h3>
+    <p>Not links, but the single biggest off-site lever in this market and the one your rivals already use.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google reviews drive</strong></td><td class="mono" style="font-size:12.5px;">business.google.com</td><td>One-tap links at move-in; target 25+. Rival shows 38.</td></tr>
+          <tr><td><strong>Yelp + Facebook reviews</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Diversify review sources for AI grounding and the local pack.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout opp" style="margin-top:32px;"><strong>The shortcut:</strong> in a corridor this size, a handful of accurate local citations across every Hwy 82 town plus a steady review drip will move you further than any link-building campaign. Get the NAP identical everywhere, convert your borrowed Chamber/Yelp placements into owned ones, then let reviews compound.</div>
+  </div>
+</section>
+
+<section id="competitive">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">09 · Competitive Landscape</span></div>
+    <h2>Who's in the way<br>and how <em class="display-italic">catchable</em> they are.</h2>
+    <p class="lede" style="margin-top:18px; max-width:740px;">Combined view from the live Aspen SERP, the local pack, and the brands the AI engines actually cite. Every competitor here is a Roaring Fork independent or a regional operator, the battleground is the Hwy 82 corridor from Aspen to Glenwood.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Competitor</th><th class="num">Type</th><th class="num">Distance / scope</th><th>Why they matter</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Aspen Self Storage Warehouses</strong></td><td class="num">Independent</td><td class="num">Aspen</td><td>The brand to beat. Local pack #1 + organic #1, 4.8 from 38 reviews, cited ~12x by AI. Your top displacement target.</td></tr>
+        <tr><td><strong>Low Cost Storage Aspen</strong></td><td class="num">Independent</td><td class="num">Aspen</td><td>Local pack #2, owns its own brand term you also rank for (#15). Price-led positioning. Cited ~6x.</td></tr>
+        <tr><td><strong>Aspen Secure Storage</strong></td><td class="num">Independent</td><td class="num">Aspen</td><td>Local pack #3, open 24h. Rounds out the Aspen pack you are missing from.</td></tr>
+        <tr><td><strong>All Hours Storage</strong></td><td class="num">Independent</td><td class="num">Basalt</td><td>Cited ~11x by AI, organic in the Aspen SERP. Strong Basalt presence; corridor competitor.</td></tr>
+        <tr><td><strong>Store It All</strong></td><td class="num">Independent</td><td class="num">Basalt</td><td>Organic in the Aspen SERP; another unowned Basalt slot you should contest. Cited ~4x.</td></tr>
+        <tr><td><strong>Basalt Mini Storage / StorageMart Basalt</strong></td><td class="num">Independent / Regional</td><td class="num">Basalt</td><td>Cited ~6x and ~5x respectively in AI answers; own the Basalt corridor town today.</td></tr>
+        <tr><td><strong>Aggregators (Sparefoot, SelfStorage.com, Yelp)</strong></td><td class="num">Directory</td><td class="num">national</td><td>Not facilities, but they take the corridor organic slots, including the Yelp list that names you. Beat them with deeper first-party town pages.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="quote" style="margin-top: 56px;">
+      "Snowmass Self Storage is cited first by four frontier AI models for Snowmass storage, yet its own domain does not appear in the Aspen organic results at all. The corridor is all local independents and directories with thin first-party town coverage, the door to the Aspen-to-Glenwood top results is wide open for whoever publishes corridor pages and earns reviews first."
+      <cite>DataForSEO SERP + local pack + AI-citation composite, May 2026</cite>
+    </div>
+  </div>
+</section>
+
+<section id="llm" class="dark">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow" style="color:#FFD8AC;">10 · AI / LLM Visibility</span></div>
+    <h2 style="color:#FFFBF1;">16 citations.<br>Out of <em style="color:#F4A8A2; font-style:italic;">twenty</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px; color:#D8CDB5;">We tested the flagship models powering AI search today: <strong>Claude Sonnet 4.6</strong>, <strong>Gemini 3.1 Pro</strong>, <strong>GPT-5.5</strong> and <strong>Sonar-Reasoning-Pro</strong> (Perplexity). Five high-intent prompts x four models = twenty live web-search calls. Snowmass Self Storage was cited <strong>16 times</strong>, almost always as the #1 recommendation on Snowmass-specific prompts, an outstanding result. The one weakness: citations fade as the query broadens to "Aspen", "Roaring Fork Valley" and cost.</p>
+
+    <div class="ornament" style="color:#FFD8AC;">· · ·</div>
+
+    <div style="background: #1A1F26; border: 1px solid #3A3530; border-radius: var(--r-lg); padding: 32px 34px; margin-bottom: 56px;">
+      <div style="display:flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; flex-wrap: wrap; gap: 12px;">
+        <h3 style="color:#FFFBF1;">The 5 prompts we sent (verbatim)</h3>
+        <span class="small" style="color:#76705F; font-family: var(--mono);">user_prompt · web_search=true · same string to all 4 models</span>
+      </div>
+      <ol style="color:#FFE8A8; font-family: var(--serif); font-size: 19px; line-height: 1.7; padding-left: 1.4em; margin: 0;">
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Best self storage in Snowmass, CO"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How do I rent a storage unit near Aspen and Snowmass, Colorado?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Self storage near Aspen, Colorado"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How much does a storage unit cost near Aspen / Snowmass, CO?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Self storage in the Roaring Fork Valley, Colorado"</span></li>
+      </ol>
+      <p class="small" style="color:#76705F; margin-top: 22px; font-size: 13px;">Why these five: each maps to a real corridor query with live demand (discovery, how-to, broad-geo, price, regional). The set is built to stress-test where your strong Snowmass citation holds up as the geography widens, and to be re-run every 30 days to track movement.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 style="color:#FFFBF1;">The 5 prompts × 4 models matrix</h3>
+        <div style="background:#1A1F26; border-radius: var(--r-md); padding: 22px 22px; margin-top: 14px; font-size:13.5px; color:#D8CDB5;">
+          <table style="background:transparent; border:0; color:#D8CDB5;">
+            <thead><tr style="background:transparent;">
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 10px; font-size:11px;">Prompt</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Claude<br>Sonnet 4.6</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Gemini<br>3.1 Pro</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">GPT-5.5</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Sonar<br>R-Pro</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Best self storage in Snowmass, CO</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">How to rent near Aspen / Snowmass</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Self storage near Aspen, CO</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">How much does storage cost near Aspen / Snowmass</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;"><strong style="color:#FFFBF1;">Self storage in the Roaring Fork Valley</strong></td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small" style="color:#76705F; margin-top:12px;">Run May 29, 2026 via DataForSEO AI Optimization API with web_search=true. Per model: Claude 5/5, GPT-5.5 5/5, Gemini 3/5, Sonar 3/5. Total ~$1.20 across 20 calls.</p>
+      </div>
+
+      <div>
+        <h3 style="color:#FFFBF1;">Who AI cites instead</h3>
+        <p style="color:#D8CDB5; font-size:14.5px; margin-bottom:14px;">Mentions across all 20 calls, the brands you are competing with for AI visibility.</p>
+        <div style="background:#1A1F26; border-radius: var(--r-md); padding: 18px 22px; font-size:14px;">
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span><strong style="color:#FFE8A8;">Snowmass Self Storage</strong></span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill green" style="width:100%"></div></div>
+            <span class="bar-val" style="color:#FFE8A8;"><strong>16×</strong></span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Aspen Self Storage Warehouses</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:75%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">12×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>All Hours Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:69%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">11×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Low Cost Storage Aspen</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:38%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">6×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Basalt Mini Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:38%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">6×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>StorageMart</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:31%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">5×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Store It All</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:25%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">4×</span>
+          </div>
+        </div>
+        <p class="small" style="color:#76705F; margin-top:12px;">You are cited more than any competitor (16x) and usually listed first on Snowmass prompts. But Aspen Self Storage Warehouses (12x) and All Hours Storage (11x) close the gap on the broader "Aspen" and "Roaring Fork Valley" prompts, exactly where Gemini and Sonar drop you. Corridor pages are what keep you first as the query widens.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 56px; background: linear-gradient(135deg, #1F2630 0%, #1A1F26 100%); border: 1px solid #3A3530; border-radius: var(--r-lg); padding: 36px;">
+      <div style="display:flex; gap:24px; align-items:flex-start;">
+        <div style="font-family: var(--serif); font-size:78px; line-height:1; color:#FFE8A8; font-style:italic; font-variation-settings: 'SOFT' 100, 'WONK' 1;">16</div>
+        <div>
+          <div style="margin-bottom: 8px;"><span class="badge opp">THE 80% YOU ALREADY OWN</span></div>
+          <h3 style="color:#FFFBF1; margin-bottom: 12px;">You are already the AI answer for Snowmass. The job is to stay first as the query widens to Aspen.</h3>
+          <p style="color:#D8CDB5; font-size:15.5px;">GPT-5.5 called Snowmass Self Storage the "best overall choice... locally owned, 24/7 access, drive-up units, RV/vehicle storage, small units from $115/month." Perplexity said "the top self-storage option actually in Snowmass... contact Snowmass Self Storage." Claude and GPT-5.5 cite you on all five prompts; your rich SelfStorage + FAQ + priced-Offer schema is being quoted almost verbatim.</p><p style="color:#D8CDB5; font-size:15.5px; margin-top:12px;">The pattern is clear: where you have first-party text (Snowmass, pricing, amenities) AI names you first; where you do not (broad Aspen, Basalt, Roaring Fork Valley) Gemini and Sonar fall back to <code class="mono" style="background:#2C2823; padding:2px 6px; border-radius:4px;">Aspen Self Storage Warehouses</code>. Publish corridor + cost pages and you move from <strong>16 of 20 (Snowmass-only)</strong> to <strong>19+ of 20 (corridor-wide, still #1)</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top: 56px;">
+      <div>
+        <h3 style="color:#FFFBF1;">Why this matters now</h3>
+        <p style="color:#D8CDB5;">AI search (ChatGPT, Perplexity, Gemini, Google AI Overviews) is displacing a growing share of "near me" storage discovery in resort markets, where many tenants are second-home owners researching online. The four models tested are exactly what powers those surfaces. You already win, the risk is that you only win the narrow "Snowmass" query while rivals own the higher-volume "Aspen" and "Roaring Fork Valley" ones.</p>
+      </div>
+      <div>
+        <h3 style="color:#FFFBF1;">What earns citations</h3>
+        <ol style="color:#D8CDB5;">
+          <li><strong>Corridor landing pages</strong> (Aspen, Basalt, Carbondale, Glenwood) with quotable prose, the text the dropping models need.</li>
+          <li><strong>A pricing page</strong> that states costs in plain language, the format LLMs extract for "how much" prompts.</li>
+          <li><strong>Review volume</strong> past Aspen Self Storage Warehouses' 38, AI lists lead with the most-reviewed facility on broad queries.</li>
+          <li><strong>areaServed schema</strong> naming every corridor town, so the models can ground a "Roaring Fork Valley" answer in you.</li>
+          <li><strong>Consistent NAP + sameAs</strong> across GBP, Yelp and the Aspen Chamber to consolidate the entity corridor-wide.</li>
+          <li><strong>An /faq hub</strong> extending your existing 12-question FAQPage to mirror the broad Aspen and cost prompts above.</li>
+        </ol>
+        <h3 style="margin-top: 28px; color:#FFFBF1;">90-day LLM target</h3>
+        <p style="color:#D8CDB5;">Re-run this same 5x4 grid in 90 days. Move from <strong>16 of 20</strong> to <strong>19+ of 20</strong>, and, more importantly, hold the #1 position as the query broadens from "Snowmass" to "Aspen" and "Roaring Fork Valley". Recapturing Gemini and Sonar on the broad prompts (currently the only misses) is the clearest single KPI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">11 · 90-Day Roadmap</span></div>
+    <h2>What happens<br>in the next <em class="display-italic">90 days</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Three sprints. Because the technical and schema base is already strong, the work front-loads local (GBP, reviews) and content (corridor + pricing pages), then authority and re-measurement. Each item has a priority tag (P0 = must-ship).</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="roadmap">
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 0-30</div>
+        <h3>Local &amp; foundation</h3>
+        <p class="small">Tune the GBP and start reviews, the off-site signals you lack while rivals have them.</p>
+        <ul>
+          <li><div class="check"></div><span>Verify + optimize GBP (Aspen + Roaring Fork service areas)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Start Google review drive (one-tap links + QR)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Claim Yelp + Aspen Chamber listings (NAP-consistent)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Build /aspen-storage first-party page</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Reuse SelfStorage + FAQ schema on the new page</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Expand homepage past 600 words + internal links</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Tighten a11y / SEO headroom toward 100</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Add BreadcrumbList schema to new page set</span><span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 31-60</div>
+        <h3>Corridor &amp; content</h3>
+        <p class="small">Turn the AI strength into matching organic coverage across the corridor.</p>
+        <ul>
+          <li><div class="check"></div><span>Build Basalt + Carbondale + Glenwood town pages</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Publish the pricing / cost page ($115/mo)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Build the Roaring Fork Valley corridor hub</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>areaServed + Offer schema on every corridor page</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Publish RV/vehicle + seasonal-gear pages</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Hit 25+ Google reviews</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Tier 1 citations across all corridor-town chambers</span><span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 61-90</div>
+        <h3>Authority &amp; AI</h3>
+        <p class="small">Compound the gains and re-measure.</p>
+        <ul>
+          <li><div class="check"></div><span>Add AggregateRating once review volume supports it</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Publish remaining content (moving, seasonal)</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Tier 2 partnerships (movers, property managers, RV/ski)</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Re-run flagship 5x4 LLM grid, target 19+/20</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Re-check Aspen local pack + non-brand organic ranks</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Confirm corridor pages indexed + ranking</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Review AI citation breadth (hold #1 on broad queries)</span><span class="pri">P0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Targets at 90 days</h3>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Non-brand organic</div>
+        <div class="kpi-value">Top 5</div>
+<div class="kpi-trend up">↑ from absent</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Google reviews</div>
+        <div class="kpi-value">25+</div>
+<div class="kpi-trend up">↑ from 0 shown</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Ranked keywords</div>
+        <div class="kpi-value">35+</div>
+<div class="kpi-trend up">↑ from ~14</div>
+      </div>
+      <div class="kpi cta">
+        <div class="kpi-label">LLM citations</div>
+        <div class="kpi-value">19<small>/20</small></div>
+<div class="kpi-trend up">↑ from 16</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Aspen local pack</div>
+        <div class="kpi-value">Top 3</div>
+<div class="kpi-trend up">↑ from absent</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Corridor pages</div>
+        <div class="kpi-value">6+</div>
+<div class="kpi-trend up">↑ from 0</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Lighthouse Perf</div>
+        <div class="kpi-value">0.89<small>+</small></div>
+<div class="kpi-trend up">→ hold (already passing)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Local citations</div>
+        <div class="kpi-value">8+</div>
+<div class="kpi-trend up">↑ from ~2 (borrowed)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="appendix">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">Appendix</span></div>
+    <h2>Methodology &amp; <em class="display-italic">sources</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <details class="acc" open>
+      <summary>Data sources used in this audit</summary>
+      <div class="body">
+        <ul>
+          <li><strong>DataForSEO</strong>, Lighthouse mobile audit, on-page parse, live SERP scans (US, en), Labs (ranked keywords, competitors, keyword ideas, keyword overview), Google Trends.</li>
+          <li><strong>Playwright</strong>, live crawl at desktop 1440 / tablet 768 / mobile 375. H1-H4 extraction, meta + og + twitter + JSON-LD inspection, alt text counts, tech stack detection.</li>
+          <li><strong>Perplexity + Brave Search</strong>, industry trends, local competitor landscape, seasonal demand, backlink prospecting, PAA harvesting.</li>
+          <li><strong>Flagship LLM citation test</strong>, 5 prompts × 4 frontier models = 20 live calls via DataForSEO AI Optimization, every call with web_search enabled. Models: Claude Sonnet 4.6, Gemini 3.1 Pro, GPT-5.5, Sonar-Reasoning-Pro. The verbatim prompts:
+            <ol style="margin-top:6px; font-size:14.5px;">
+              <li><code class="mono">"Best self storage in Snowmass, CO"</code></li>
+              <li><code class="mono">"How do I rent a storage unit near Aspen and Snowmass, Colorado?"</code></li>
+              <li><code class="mono">"Self storage near Aspen, Colorado"</code></li>
+              <li><code class="mono">"How much does a storage unit cost near Aspen / Snowmass, CO?"</code></li>
+              <li><code class="mono">"Self storage in the Roaring Fork Valley, Colorado"</code></li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Files produced as part of this engagement</summary>
+      <div class="body"><ul>
+          <li><code class="mono">audit/RESEARCH-SUMMARY.md</code> · consolidated findings</li>
+          <li><code class="mono">audit/dataforseo/</code> · ranked keywords, SERP, Lighthouse, keyword data</li>
+          <li><code class="mono">screenshots/01-homepage-desktop.png</code> · live crawl capture</li>
+          <li><code class="mono">research/llm-flagship-run/</code> · 20 raw AI responses + citation tally</li>
+          <li>This <strong>HTML report</strong> at <code class="mono">report/index.html</code></li>
+      </ul></div>
+    </details>
+
+    <details class="acc">
+      <summary>What we deliberately did NOT do</summary>
+      <div class="body"><ul>
+          <li>We did not deploy any change to the live site, every fix is a costed recommendation.</li>
+          <li>We did not crawl every URL, the homepage (effectively the whole site) and the third-party placements are covered.</li>
+          <li>We did not claim or modify the Google Business Profile, that should happen with brand permissions.</li>
+          <li>We did not buy or place any backlinks, citations are recommendations.</li>
+      </ul></div>
+    </details>
+
+    <details class="acc">
+      <summary>Limitations &amp; caveats</summary>
+      <div class="body"><ul>
+          <li>DataForSEO Labs shows ~14 ranked keywords; very small sites can rank for more long-tail terms than the index captures.</li>
+          <li>Lighthouse is a single lab run; field (CrUX) data may differ. The site already passes, so this is for monitoring only.</li>
+          <li>The LLM test is a 20-call sample (5 prompts x 4 flagship models). Re-run monthly with the same prompts so the trend is comparable.</li>
+          <li>Google review counts and local-pack order shift continuously; figures captured May 29, 2026.</li>
+      </ul></div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mark">thinkflowlabs</div>
+    <p style="margin-top: 18px;">Prepared for snowmassselfstorage.com · May 29, 2026</p>
+    <p class="small" style="margin-top:6px;">Open this file in your browser. Use Cmd/Ctrl+P to export a printable PDF.</p>
+  </div>
+</footer>
+
+</body>
+</html>

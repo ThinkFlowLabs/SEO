@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Friday Harbor Storage SEO Audit &amp; Growth Strategy · May 2026</title>
+<meta name="description" content="A technical, content, competitive and AI-visibility SEO audit of fridayharborstorage.com prepared by ThinkFlowLabs, centered on the Sound Storage brand/domain split, with quick wins, schema plan, local keyword strategy, and a 90-day roadmap." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --ink:        #0E1014;
+    --ink-2:      #1F2630;
+    --muted:      #5E6675;
+    --line:       #E6DFD2;
+    --line-2:     #EFE7D8;
+    --cream:      #FBF6EB;
+    --cream-2:    #F4ECD9;
+    --paper:      #FFFBF1;
+    --coral:      #246A7E;
+    --coral-dk:   #184C5B;
+    --coral-sft:  #DCEAEE;
+    --gold:       #C89A4A;
+    --gold-sft:   #F6E7C7;
+    --green:      #1F7A6A;
+    --green-sft:  #DAEEE7;
+    --amber:      #B45309;
+    --amber-sft:  #FFE9BD;
+    --red-bg:     #FFEBE9;
+
+    --r-sm: 4px; --r-md: 10px; --r-lg: 18px; --r-xl: 26px;
+    --shadow-sm: 0 1px 0 rgba(20,18,12,.06);
+    --shadow-md: 0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --shadow-lg: 0 30px 80px -30px rgba(60,40,18,.36);
+
+    --serif:      "Fraunces", "Times New Roman", serif;
+    --sans:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:       "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--coral-dk); text-decoration: none; border-bottom: 1px solid rgba(40,60,90,.22); }
+  a:hover { border-bottom-color: var(--coral-dk); }
+
+  /* ============ LAYOUT ============ */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); position: relative; }
+  section.alt { background: var(--paper); }
+  section.dark { background: var(--ink); color: #F2EAD7; border-top-color: #2A2520; }
+  section.dark a { color: #FFD8AC; border-bottom-color: rgba(255,216,172,.3); }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.012em; line-height: 1.08; margin: 0; }
+  h1 { font-size: clamp(48px, 8vw, 96px); font-weight: 380; letter-spacing: -.03em; }
+  h2 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 400; letter-spacing: -.022em; }
+  h3 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.18; }
+  h4 { font-size: 19px; font-weight: 600; line-height: 1.3; font-family: var(--sans); letter-spacing: -.005em; }
+  .display-italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 500; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--coral-dk);
+  }
+  p { margin: 0 0 1em; }
+  p.lede { font-size: 21px; line-height: 1.55; color: var(--ink-2); }
+  ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
+  ul li, ol li { margin-bottom: .35em; }
+  strong { font-weight: 600; }
+  .mono { font-family: var(--mono); font-size: .9em; }
+  .small { font-size: 13px; color: var(--muted); }
+
+  /* ============ HERO ============ */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #DCEAEE 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-top: 0;
+    padding: 56px 0 96px;
+    overflow: hidden; position: relative;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%23246A7E' opacity='.06'/></svg>");
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; position: relative; }
+  .hero h1 { margin-bottom: .18em; }
+  .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .hero .meta { font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+  .hero .by-line { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-2); margin-top: 36px; font-size: 14px; }
+  .hero .by-line span b { color: var(--ink); font-weight: 600; }
+  .hero-side {
+    background: white; border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 30px; box-shadow: var(--shadow-md);
+    font-size: 14px;
+  }
+  .hero-side h4 { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-family: var(--sans); margin-bottom: 16px; font-weight: 600; }
+  .hero-side dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; }
+  .hero-side dt { color: var(--muted); }
+  .hero-side dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .hero-side .severity-strip { margin: 22px -30px -30px; padding: 18px 30px; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); color: white; border-radius: 0 0 var(--r-lg) var(--r-lg); display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ TLDR (Executive Summary) ============ */
+  .tldr { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; }
+  .tldr h2 em { font-style: italic; color: var(--coral); font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .tldr-bullets { font-size: 17px; line-height: 1.6; }
+  .tldr-bullets li { margin-bottom: 16px; padding-left: 4px; }
+  .tldr-bullets li::marker { color: var(--coral); }
+  .verdict-card {
+    background: var(--ink); color: #F2EAD7;
+    border-radius: var(--r-lg); padding: 36px;
+    position: sticky; top: 24px;
+  }
+  .verdict-card h4 { color: #F6E7C7; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; font-weight: 500; }
+  .verdict-card p { font-size: 15px; line-height: 1.65; color: #D8CDB5; }
+  .verdict-card .score-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--mono); font-size: 12px; }
+  .verdict-card .score-row b { color: white; font-size: 18px; }
+  @media (max-width: 820px) { .tldr { grid-template-columns: 1fr; } .verdict-card { position: static; } }
+
+  /* ============ KPI GRID ============ */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 22px 18px; position: relative; overflow: hidden;
+  }
+  .kpi-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+  .kpi-value small { font-size: 17px; color: var(--muted); margin-left: 4px; font-family: var(--sans); font-weight: 500; }
+  .kpi-trend { font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+  .kpi-trend.up { color: var(--green); }
+  .kpi-trend.dn { color: var(--coral-dk); }
+  .kpi.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; } .kpi-value { font-size: 36px; } }
+
+  /* ============ FINDINGS CARDS ============ */
+  .findings { display: grid; gap: 24px; }
+  .finding {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 36px; display: grid; grid-template-columns: 88px 1fr; gap: 28px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+  }
+  .finding .num {
+    font-family: var(--serif); font-size: 78px; font-weight: 400; line-height: 1; color: var(--coral); letter-spacing: -.04em; opacity: .9;
+  }
+  .finding h3 { margin-bottom: 8px; }
+  .finding .impact-line { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; font-family: var(--mono); letter-spacing: .02em; }
+  .finding p { font-size: 16px; }
+  .finding .fix {
+    background: var(--cream-2); padding: 18px 22px; border-radius: var(--r-md);
+    margin-top: 18px; border-left: 3px solid var(--coral); font-size: 15.5px;
+  }
+  .finding .fix b { color: var(--ink); }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+  }
+  .badge.crit { background: var(--coral); color: white; }
+  .badge.high { background: var(--amber-sft); color: var(--amber); }
+  .badge.med { background: var(--gold-sft); color: var(--gold); }
+  .badge.opp { background: var(--green-sft); color: var(--green); }
+  .badge.brand { background: var(--ink); color: var(--cream); }
+  @media (max-width: 820px) {
+    .finding { grid-template-columns: 1fr; padding: 26px; }
+    .finding .num { font-size: 56px; }
+  }
+
+  /* ============ DATA TABLES ============ */
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14.5px;
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  }
+  th { text-align: left; font-weight: 600; padding: 14px 16px; background: var(--cream-2); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  td.kw { font-weight: 500; }
+  td .badge { font-size: 10px; padding: 3px 8px; }
+
+  .table-scroll { overflow-x: auto; }
+
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #F4C7C5; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
+  /* ============ PILLS / CALLOUTS ============ */
+  .callout {
+    background: var(--coral-sft); border: 1px solid #F4C7C5;
+    border-radius: var(--r-md); padding: 22px 26px;
+    font-size: 15.5px; color: var(--coral-dk); margin: 24px 0;
+  }
+  .callout.opp { background: var(--green-sft); border-color: #BFE0D6; color: #135548; }
+  .callout.warn { background: var(--amber-sft); border-color: #F2D5A0; color: var(--amber); }
+  .callout strong { color: inherit; }
+
+  /* ============ TWO-COL ============ */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ============ HIERARCHY CARDS ============ */
+  .page-card {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+  .page-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .page-card-head h4 { font-family: var(--mono); font-size: 14px; color: var(--ink); letter-spacing: 0; word-break: break-all; }
+  .pc-issues { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pc-issue { font-size: 11.5px; padding: 3px 9px; border-radius: 4px; background: var(--coral-sft); color: var(--coral-dk); font-weight: 600; }
+  .pc-issue.ok { background: var(--green-sft); color: var(--green); }
+  .pc-issue.warn { background: var(--amber-sft); color: var(--amber); }
+
+  /* ============ ROADMAP ============ */
+  .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .road-col {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 28px;
+  }
+  .road-col .label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 12.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--coral-dk); margin-bottom: 6px; }
+  .road-col .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--coral); }
+  .road-col h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 18px; }
+  .road-col ul { list-style: none; padding: 0; }
+  .road-col li { padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .road-col li:last-child { border-bottom: 0; }
+  .road-col li .check { width: 18px; height: 18px; border: 1.5px solid var(--line); border-radius: 4px; margin-top: 2px; }
+  .road-col li .pri { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; align-self: start; }
+  @media (max-width: 1000px) { .roadmap { grid-template-columns: 1fr; } }
+
+  /* ============ SCHEMA SNIPPETS ============ */
+  pre.code {
+    background: #1A1F26; color: #DCD0AE; padding: 22px 26px;
+    border-radius: var(--r-md); font-family: var(--mono); font-size: 13px;
+    overflow-x: auto; line-height: 1.55; margin: 18px 0;
+  }
+  .code .k { color: #FFD89B; }
+  .code .s { color: #B5DCC7; }
+  .code .c { color: #6E6452; font-style: italic; }
+
+  /* ============ FOOTER ============ */
+  footer { padding: 56px 0 36px; background: var(--ink); color: #BAB099; text-align: center; }
+  footer .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 28px; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  footer .small { color: #76705F; }
+
+  /* ============ STICKY NAV ============ */
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 246, 235, 0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  .topnav .inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .topnav a { color: var(--ink); border-bottom: 0; font-size: 13px; font-weight: 500; }
+  .topnav .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 20px; font-variation-settings: "SOFT" 100, "WONK" 1; border: 0; }
+  .topnav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .topnav nav { display: none; } }
+
+  /* ============ HORIZONTAL BAR CHART ============ */
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 80px; gap: 14px; align-items: center; padding: 8px 0; font-size: 14px; }
+  .bar-bg { height: 22px; background: var(--cream-2); border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); }
+  .bar-fill.alt { background: linear-gradient(90deg, var(--gold) 0%, #A77F35 100%); }
+  .bar-fill.green { background: linear-gradient(90deg, #2C9D8B 0%, var(--green) 100%); }
+  .bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; text-align: right; color: var(--ink-2); }
+  @media (max-width: 600px) { .bar-row { grid-template-columns: 120px 1fr 60px; font-size: 13px; } }
+
+  /* ============ DIVIDERS ============ */
+  .ornament { text-align: center; margin: 48px 0; color: var(--coral); font-family: var(--serif); font-size: 22px; letter-spacing: .4em; opacity: .7; }
+  .section-eyebrow { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .section-eyebrow .bar { width: 36px; height: 1px; background: var(--coral); }
+
+  /* ============ MISC ============ */
+  .quote {
+    border-left: 3px solid var(--coral); padding: 12px 0 12px 26px;
+    font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink-2);
+    font-style: italic; margin: 28px 0;
+  }
+  .quote cite { display: block; margin-top: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: normal; letter-spacing: .04em; }
+
+  details.acc { background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 22px; margin-bottom: 10px; }
+  details.acc summary { cursor: pointer; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.acc summary::after { content: "+"; font-family: var(--serif); font-size: 22px; color: var(--coral); }
+  details.acc[open] summary::after { content: "−"; }
+  details.acc[open] { box-shadow: var(--shadow-md); }
+  details.acc .body { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: white; }
+    section { padding: 28px 0; page-break-inside: avoid; }
+    .topnav, .hero::before { display: none; }
+    .finding, .road-col, table { box-shadow: none; }
+    a { color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="wrap inner">
+    <a href="#top" class="mark">friday harbor storage · seo audit</a>
+    <nav>
+      <a href="#tldr">Summary</a>
+      <a href="#snapshot">Snapshot</a>
+      <a href="#critical">Critical</a>
+      <a href="#quickwins">Quick Wins</a>
+      <a href="#hierarchy">URL Catalog</a>
+      <a href="#keywords">Keywords</a>
+      <a href="#schema">Schema</a>
+      <a href="#content">Content</a>
+      <a href="#backlinks">Backlinks</a>
+      <a href="#llm">AI/LLM</a>
+      <a href="#roadmap">90-Day Plan</a>
+    </nav>
+  </div>
+</div>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="meta">SEO AUDIT &amp; GROWTH STRATEGY &nbsp;·&nbsp; CONFIDENTIAL</div>
+      <h1>Your search equity<br>lives on the <em>wrong domain</em><br>on <em>San Juan Island</em>.</h1>
+      <p class="lede" style="margin-top:32px; max-width:600px;">
+        A 360° technical, content, competitive and AI-visibility audit of <strong>fridayharborstorage.com</strong>, built from a live Playwright crawl, DataForSEO Labs ranked-keyword and SERP data, a mobile Lighthouse audit, and a flagship 5-prompt x 4-model AI-citation test. The headline: the facility's entire search and AI presence is credited to its legacy brand <strong>Sound Storage</strong> (sound-storage.com), while the new domain you are launching is effectively invisible.
+      </p>
+      <div class="by-line">
+        <span>Prepared by <b>ThinkFlowLabs</b></span>
+        <span>·</span>
+        <span>Issued <b>May 30, 2026</b></span>
+        <span>·</span>
+        <span>Market <b>Friday Harbor, WA (San Juan Island)</b></span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h4>AT-A-GLANCE</h4>
+      <dl>
+        <dt>Organic rank, head term (legacy brand)</dt><dd>#1</dd>
+        <dt>Organic rank, new domain</dt><dd>absent</dd>
+        <dt>Ranked keywords, fridayharborstorage.com</dt><dd>0</dd>
+        <dt>AI citations, all credited to brand</dt><dd>Sound Storage</dd>
+        <dt>Lighthouse Perf (mobile)</dt><dd>0.81</dd>
+        <dt>Mobile LCP</dt><dd>3.2s</dd>
+        <dt>Schema types live (new domain)</dt><dd>1 (WebSite only)</dd>
+        <dt>LLM citations (5x4 grid)</dt><dd>15 of 20</dd>
+      </dl>
+      <div class="severity-strip">
+        <span>Overall health</span>
+        <span>🟠 Strong business, invisible domain</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="tldr" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">Executive Summary</span></div>
+    <div class="tldr">
+      <div>
+        <h2>The situation in <em class="display-italic">60 seconds</em>.</h2>
+        <p class="lede" style="margin-top:24px;">
+          The business is genuinely strong: it ranks <strong>#1 organically</strong> for the head term and is cited in <strong>15 of 20</strong> flagship-AI answers. The problem is that every bit of that equity is credited to the legacy brand <strong>Sound Storage</strong> (sound-storage.com), while the domain you are auditing, <strong>fridayharborstorage.com</strong>, has zero ranked keywords and was cited zero times. Google and the AI models see two disconnected businesses. Consolidating them is the single move that unlocks everything else.
+        </p>
+        <ol class="tldr-bullets" style="margin-top:24px;">
+          <li><strong>Your search and AI equity is on the wrong domain.</strong> The legacy brand "Sound Storage" (sound-storage.com) ranks #1 organically and is cited in 15 of 20 AI answers. The new domain, fridayharborstorage.com, has 0 ranked keywords and was cited 0 times. They are the same facility at 840 Mullis Rd, but search engines and LLMs treat them as two unrelated entities.</li>
+          <li><strong>The new domain is technically thin and unoptimized.</strong> Generic title "Self Storage Units" (no city, no brand), a templated meta, only WebSite schema (no LocalBusiness / SelfStorage / FAQPage), no og:image, and a ~197-word homepage. In its current state it cannot rank or earn an AI citation.</li>
+          <li><strong>AI loves the business, 15 of 20.</strong> Across Claude Sonnet 4.6, Gemini 3.1 Pro, GPT-5.5 and Sonar-Reasoning-Pro, the facility was cited 15 times. ChatGPT (GPT-5.5) cited it only twice. But 100% of those citations name "Sound Storage," not fridayharborstorage.com, so the equity does not transfer to the new site.</li>
+          <li><strong>Boat/RV is the one vertical AI does not credit you for, 1 of 4.</strong> Only Gemini named the facility for boat/RV, even though you actually offer it. The models default to San Juan Business Park, Roche Harbor Marine and One Stop Storage. A dedicated boat/RV page closes a real, addressable gap.</li>
+          <li><strong>Most of the upside is one decision plus ~5 fixes</strong>, not a rebuild. Pick one primary brand, consolidate the two domains (301 / canonical, cross-link, migrate NAP, citations and reviews), then ship schema, real content and the boat/RV page so the 15/20 AI equity lands where you want it.</li>
+        </ol>
+      </div>
+      <div class="verdict-card">
+        <h4>Our verdict</h4>
+        <p>Friday Harbor Storage has already done the expensive part, it owns the organic #1 result and the AI answer for storage on San Juan Island. The catch is that all of it is credited to the legacy <strong>Sound Storage</strong> brand on a different domain, while the new fridayharborstorage.com sits empty: no rankings, no citations, generic markup, thin content.</p>
+        <p>Decide the primary brand and consolidate the two domains (301-redirect or canonical-unify, cross-link, migrate NAP, reviews and citations) in <strong>30 days</strong>. Ship LocalBusiness + FAQ schema, real city/brand titles and a boat/RV page in <strong>60 days</strong>. Earn the local citations and review velocity that anchor the chosen brand in <strong>90 days</strong>. We project the consolidated site can carry the existing #1 organic position and move from 15 of 20 AI citations (all on the legacy brand) to 18+ of 20 on the brand you actually want to grow.</p>
+        <div class="score-row">
+          <span>HEALTH&nbsp; <b>48/100</b></span>
+          <span>UPSIDE&nbsp; <b>+220%</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="snapshot">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">01 · State of the Site</span></div>
+    <h2>What the search data<br><em class="display-italic">actually</em> says.</h2>
+    <p class="lede" style="margin-top:18px; max-width: 720px;">The facility punches far above the audited website, because the website being audited is not the one earning the equity. The legacy Sound Storage brand is doing all the work; the new domain is a blank slate. The split between them is the entire opportunity.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Organic rank (head term)</div>
+        <div class="kpi-value">#1</div>
+<div class="kpi-trend up">↑ on legacy brand</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">New domain organic rank</div>
+        <div class="kpi-value">absent</div>
+<div class="kpi-trend dn">not in top 20</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Ranked keywords (new domain)</div>
+        <div class="kpi-value">0</div>
+<div class="kpi-trend dn">no footprint</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">AI citation brand</div>
+        <div class="kpi-value">Sound</div>
+<div class="kpi-trend dn">0 cite new domain</div>
+      </div>
+      <div class="kpi cta">
+        <div class="kpi-label">LLM citations</div>
+        <div class="kpi-value">15<small>/20</small></div>
+<div class="kpi-trend up">↑ strong, wrong brand</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Lighthouse Perf</div>
+        <div class="kpi-value">0.81</div>
+<div class="kpi-trend dn">LCP 3.2s to fix</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Schema types (new domain)</div>
+        <div class="kpi-value">1</div>
+<div class="kpi-trend dn">WebSite only</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Homepage words</div>
+        <div class="kpi-value">197</div>
+<div class="kpi-trend dn">thin content</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">The local terms the business should own (and on which domain)</h3>
+    <p style="max-width:780px; margin-top: 12px;">These are real San Juan Island searches with live demand. The legacy Sound Storage brand wins the top organic slots today; fridayharborstorage.com ranks for none of them. Each line is a query whose equity needs to be consolidated onto a single chosen brand before it can compound.</p>
+
+    <div class="table-scroll" style="margin-top: 22px;">
+      <table>
+        <thead><tr>
+          <th>Local keyword</th>
+          <th class="num">Volume / mo</th>
+          <th class="num">KD</th>
+          <th class="num">Current rank</th>
+          <th>Status</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="kw">self storage friday harbor wa</td><td class="num">170+</td><td class="num">low</td><td class="num">#1 (Sound)</td><td><span class="badge crit">SPLIT</span></td></tr>
+          <tr><td class="kw">storage units friday harbor</td><td class="num">210</td><td class="num">low</td><td class="num">#1 (Sound)</td><td><span class="badge crit">SPLIT</span></td></tr>
+          <tr><td class="kw">san juan island storage</td><td class="num">140</td><td class="num">low</td><td class="num">top (Sound)</td><td><span class="badge high">CONSOLIDATE</span></td></tr>
+          <tr><td class="kw">heated storage friday harbor</td><td class="num">70+</td><td class="num">low</td><td class="num">cited (Sound)</td><td><span class="badge opp">DIFFERENTIATOR</span></td></tr>
+          <tr><td class="kw">storage friday harbor (new domain)</td><td class="num">210</td><td class="num">low</td><td class="num">absent</td><td><span class="badge crit">0 RANK</span></td></tr>
+          <tr><td class="kw">boat storage san juan island</td><td class="num">90+</td><td class="num">low</td><td class="num">weak</td><td><span class="badge opp">GAP</span></td></tr>
+          <tr><td class="kw">rv storage friday harbor</td><td class="num">70+</td><td class="num">low</td><td class="num">weak</td><td><span class="badge opp">NO PAGE</span></td></tr>
+          <tr><td class="kw">storage unit cost friday harbor</td><td class="num">50+</td><td class="num">low</td><td class="num">cited (Sound)</td><td><span class="badge med">no page on new site</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:64px;">Storage demand on San Juan Island is steady, local and seasonal</h3>
+    <p style="max-width:780px; margin-top: 12px;">Island storage search is stable year-round with a summer move-in and a boating-season peak. Demand is permanent and local; the winner is whoever has the cleanest local signals on a single brand, the most reviews, and a real boat/RV presence.</p>
+
+    <div style="margin-top: 22px; background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 28px;">
+      <div class="bar-row"><span>self storage friday harbor wa</span>
+        <div class="bar-bg"><div class="bar-fill " style="width:70%"></div></div>
+        <span class="bar-val">steady</span>
+      </div>
+      <div class="bar-row"><span>storage units friday harbor</span>
+        <div class="bar-bg"><div class="bar-fill " style="width:72%"></div></div>
+        <span class="bar-val">210/mo</span>
+      </div>
+      <div class="bar-row"><span>heated storage (differentiator)</span>
+        <div class="bar-bg"><div class="bar-fill green" style="width:55%"></div></div>
+        <span class="bar-val">year-round</span>
+      </div>
+      <div class="bar-row"><span>boat / rv storage (seasonal)</span>
+        <div class="bar-bg"><div class="bar-fill alt" style="width:48%"></div></div>
+        <span class="bar-val">summer peak</span>
+      </div>
+      <div class="bar-row"><span>fridayharborstorage.com demand</span>
+        <div class="bar-bg"><div class="bar-fill alt" style="width:4%"></div></div>
+        <span class="bar-val">0 captured</span>
+      </div>
+      <p class="small" style="margin-top:12px;">Demand is consistent; differentiation comes from a unified brand, reviews, schema, heated units and a free moving truck, not from chasing volume.</p>
+    </div>
+  </div>
+</section>
+
+<section id="critical" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">02 · The Five Critical Findings</span></div>
+    <h2>What's <em class="display-italic">actually</em><br>holding the site back.</h2>
+    <p class="lede" style="margin-top: 18px; max-width: 720px;">Each finding below came from the live site, the Lighthouse audit, the live SERP, or the AI-citation test, not from theory. The first finding is the headline: a brand and domain split that makes a #1 business effectively invisible on the domain it is launching.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="findings">
+      <article class="finding">
+        <div class="num">1</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · BRAND / DOMAIN SPLIT</span></div>
+          <h3>Your search and AI equity lives on Sound Storage, not on the domain you are launching.</h3>
+          <p class="impact-line">Impact: The new domain has 0 ranked keywords and 0 AI citations. The legacy brand carries everything, and the two are not connected in any way Google or the LLMs recognize.</p>
+          <p>This is the same facility at 840 Mullis Rd, marketed under two brands on two domains: the legacy <strong>Sound Storage</strong> (<code class="mono">sound-storage.com</code>) and the new <strong>Friday Harbor Storage</strong> (<code class="mono">fridayharborstorage.com</code>). The legacy brand's Friday Harbor page is the <strong>#1 organic result</strong> for the head term and the brand is cited in <strong>15 of 20</strong> AI answers. The new domain ranks for <strong>0 keywords</strong> and was cited <strong>0 times</strong> by any model. Google and the AI engines see two disconnected entities, so none of the legacy equity flows to the site you are trying to grow.</p><p>This is not a small technical nit, it is the reason this audit scores the audited domain so low despite a strong underlying business. Until the two brands are unified, every other fix on a blank domain compounds slowly from zero.</p>
+          <div class="fix"><b>Fix:</b> Pick <strong>one</strong> primary brand, then consolidate: 301-redirect (or canonical-unify) the secondary domain to the primary, cross-link the two, migrate the NAP, the directory citations and the Google reviews to the chosen brand, and add <code class="mono">sameAs</code> linking both names and the GBP. This single decision transfers the 15/20 AI equity and the #1 organic position to the intended site. Eta: <strong>scoping + redirect map in week 1; full migration over 30 days.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">2</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · SCHEMA / ON-PAGE</span></div>
+          <h3>fridayharborstorage.com ships only WebSite schema, a generic title, and no og:image.</h3>
+          <p class="impact-line">Impact: The new domain sends almost no structured or on-page signal: no LocalBusiness, no SelfStorage, no FAQ, a title with no city or brand, and blank social previews.</p>
+          <p>The new homepage carries a generic <code class="mono">&lt;title&gt;</code> of <strong>"Self Storage Units"</strong> (no city, no brand), a templated meta description ("Find secure self storage near you..."), and <strong>only <code class="mono">WebSite</code> JSON-LD</strong>, no <code class="mono">SelfStorage</code> / <code class="mono">LocalBusiness</code> and no <code class="mono">FAQPage</code>. There is <strong>no <code class="mono">og:image</code></strong>, so shares on Facebook, iMessage and WhatsApp render blank. This is precisely the structured-data layer the AI engines (especially Claude) lean on, and it is why the new domain earns nothing.</p>
+          <div class="fix"><b>Fix:</b> Rewrite the title to <code class="mono">Friday Harbor Storage, Heated &amp; Boat/RV Storage on San Juan Island, WA</code>, add a <code class="mono">SelfStorage</code> / <code class="mono">LocalBusiness</code> node for 840 Mullis Rd with geo, hours (gate 6am-10pm), telephone and <code class="mono">amenityFeature</code>, add <code class="mono">FAQPage</code>, and ship a branded 1200x630 <code class="mono">og:image</code>. Snippet in Section 06. Eta: <strong>1 dev day.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">3</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · CONTENT DEPTH</span></div>
+          <h3>A ~197-word homepage with 0 ranked keywords cannot rank or be quoted.</h3>
+          <p class="impact-line">Impact: The new domain has no content for Google to index against local intent and nothing for an AI engine to quote. It earns 0 organic keywords today.</p>
+          <p>The fridayharborstorage.com homepage runs roughly <strong>197 words</strong> with no service or location depth, and the domain ranks for <strong>0 keywords</strong> in DataForSEO Labs. By contrast the legacy Sound Storage brand earns volume, though mostly on its mainland Washington locations (Mill Creek, Lynnwood, Port Angeles, Oak Harbor), not on Friday Harbor terms. The island market is all local independents, The Storage Place (the oldest on the island), One Stop Storage, San Juan Storage, Safe Harbor Storage, Store More Storage and Starr Storage, with no national chain. There is room to own the island outright with deeper, locally-anchored content on a single brand.</p>
+          <div class="fix"><b>Fix:</b> Expand the homepage to 600+ words anchored to Friday Harbor and San Juan Island, then build dedicated pages for heated units, boat/RV storage, a size guide and a cost page. Each can be lightweight (300-400 words) with a unit table and FAQ and still outrank thin local rivals on these low-difficulty island terms. Eta: <strong>3-4 days copy + dev.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">4</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · VERTICAL GAP</span></div>
+          <h3>Boat/RV is the one vertical AI does not credit you for, 1 of 4.</h3>
+          <p class="impact-line">Impact: Despite offering boat and RV storage, the facility is cited for it only by Gemini. The other three models default to marinas and rivals, so you lose a high-value, seasonal island query.</p>
+          <p>On the prompt "Boat and RV storage on San Juan Island," only <strong>Gemini 3.1 Pro</strong> named the facility (1 of 4 models). Claude, GPT-5.5 and Sonar all defaulted to San Juan Business Park, Roche Harbor Marine, Friday Harbor Boat &amp; RV Storage and One Stop Storage. This is an island where boating is central, so boat/RV demand is real and seasonal, and the facility genuinely offers it, yet has no page or listing presence the models can find. This is the most addressable single gap in the AI results.</p>
+          <div class="fix"><b>Fix:</b> Build a dedicated boat/RV storage page on the chosen brand (drive-up + outdoor parking, dimensions, seasonal pricing, gate hours, Service schema), then add the facility to the boat/RV-relevant directories and marina-adjacent listings so the models have something to cite. Eta: <strong>1 day page + listings.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">5</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · CWV / REVIEWS</span></div>
+          <h3>Mobile LCP is 3.2s, and reviews and citations have not migrated to the new brand.</h3>
+          <p class="impact-line">Impact: The one weak Lighthouse metric is LCP; otherwise the new domain is technically clean. Separately, the reviews and citations that drive both rank and AI answers all still point at the legacy brand.</p>
+          <p>DataForSEO Lighthouse (mobile) is actually decent: Performance <strong>0.81</strong>, SEO <strong>0.92</strong>, <strong>CLS 0.017</strong> (well within "Good"), FCP 0.6s and TBT 0ms. The one metric to address is <strong>LCP = 3.2s</strong> (Google's "Good" threshold is &lt;2.5s), driven by the hero image. Just as important off-page: the Google reviews and the directory citations (Chamber, Yelp, Birdeye, SpareFoot) all resolve to <strong>Sound Storage</strong>, so as long as the brand stays split the new domain inherits none of that social proof.</p>
+          <div class="fix"><b>Fix:</b> Serve the hero/LCP image with explicit <code class="mono">width</code>/<code class="mono">height</code> + <code class="mono">fetchpriority="high"</code> and preload it to bring LCP under 2.5s. In parallel, as part of the consolidation, migrate the NAP, reviews and citations to the chosen primary brand and run a review drive there. Eta: <strong>LCP fix 1-2 hours; citation/review migration ongoing from week 1.</strong></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="callout opp" style="margin-top: 36px;">
+      <strong>Bottom line:</strong> this is a <em>strong</em> business that is <em>invisible on the domain it is launching</em>. The fix is not a rebuild, it is a decision (pick one brand) plus a consolidation that pours the existing #1 organic position and 15-of-20 AI equity into the site you actually want to grow. Heated units and the only "free moving truck" on the island are genuine differentiators, lean into them once the brand is unified.
+    </div>
+  </div>
+</section>
+
+<section id="quickwins">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · Quick Wins</span></div>
+    <h2>What we'd ship<br><em class="display-italic">first</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:720px;">Ordered by effort and impact. The first move is the brand/domain decision, everything else compounds off it. The next three can ship in the first week.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th style="width: 36px;">#</th>
+        <th>Quick win</th>
+        <th>Where</th>
+        <th>Effort</th>
+        <th>Expected lift</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><strong>Decide the primary brand and map the 301 / canonical consolidation</strong> of sound-storage.com and fridayharborstorage.com.</td><td>Both domains</td><td>1-2 days scoping</td><td>Transfers the #1 organic position + 15/20 AI equity to the intended site. The single highest-impact move.</td></tr>
+        <tr><td class="num">2</td><td><strong>Rewrite the title &amp; meta</strong> with city + brand ("Friday Harbor Storage, San Juan Island, WA").</td><td>Template head</td><td>1 hour</td><td>Basic relevance the current generic "Self Storage Units" title throws away.</td></tr>
+        <tr><td class="num">3</td><td><strong>Add SelfStorage + LocalBusiness schema</strong> for 840 Mullis Rd + FAQPage.</td><td>Templates</td><td>1 dev day</td><td>Local + AI-citation eligibility. Biggest structured-data win on the new domain.</td></tr>
+        <tr><td class="num">4</td><td><strong>Add og:image (1200x630) sitewide.</strong></td><td>Template head</td><td>1 hour</td><td>Working social/iMessage/WhatsApp previews; more referral clicks.</td></tr>
+        <tr><td class="num">5</td><td><strong>Fix LCP</strong>: size, preload and prioritize the hero image.</td><td>Homepage</td><td>1-2 hours</td><td>Brings the one weak metric under 2.5s; mobile ranking eligibility.</td></tr>
+        <tr><td class="num">6</td><td><strong>Cross-link the two brands</strong> and add <code class="mono">sameAs</code> to both + the GBP.</td><td>Both sites + GBP</td><td>2 hours</td><td>Tells Google and the LLMs the two names are one business.</td></tr>
+        <tr><td class="num">7</td><td><strong>Build a boat/RV storage page</strong> with Service schema.</td><td>New URL</td><td>1 day</td><td>Closes the weakest AI vertical (1/4) on a seasonal island query.</td></tr>
+        <tr><td class="num">8</td><td><strong>Expand the homepage to 600+ words</strong> anchored to Friday Harbor / San Juan Island.</td><td>Homepage</td><td>Half day</td><td>Gives Google and AI something local to index and quote.</td></tr>
+        <tr><td class="num">9</td><td><strong>Migrate NAP + citations + reviews</strong> to the chosen primary brand.</td><td>Directories + GBP</td><td>Ongoing</td><td>Moves the off-site social proof onto the brand you are growing.</td></tr>
+        <tr><td class="num">10</td><td><strong>Add a heated-units page</strong> and a cost page.</td><td>New URLs</td><td>1 day</td><td>Owns the heated differentiator + answers the "cost" AI prompt directly.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top:56px;">Title &amp; meta rewrites for the highest-value pages</h3>
+    <p style="max-width:780px; margin-top:8px;">The current title is the generic, brand-less default "Self Storage Units." These rewrites add the city, the brand and the island's real differentiators (heated units, boat/RV, free moving truck) to the pages that should rank.</p>
+    <div class="table-scroll" style="margin-top:18px;">
+    <table>
+      <thead><tr><th>Page</th><th>Recommended &lt;title&gt;</th><th>Recommended meta description</th></tr></thead>
+      <tbody>
+        <tr><td><code class="mono">/ (homepage)</code></td><td>Friday Harbor Storage, Heated &amp; Boat/RV Storage on San Juan Island, WA</td><td>Heated and unheated storage units (5x5 to 10x25), boat and RV parking, plus the island's only free moving truck. Electronic gate, fenced and lit at 840 Mullis Rd. Reserve online.</td></tr>
+        <tr><td><code class="mono">/heated-storage</code></td><td>Heated Storage Units in Friday Harbor, WA | Friday Harbor Storage</td><td>Climate-protected heated storage on San Juan Island, ground-level and elevator second-story units from 5x5 to 10x25. Check availability and rent online.</td></tr>
+        <tr><td><code class="mono">/boat-rv-storage</code></td><td>Boat &amp; RV Storage on San Juan Island, WA | Friday Harbor Storage</td><td>Secure boat and RV storage in Friday Harbor with electronic gate access, fenced and lit. Seasonal and year-round spaces at 840 Mullis Rd. Check availability.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="hierarchy" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · URL × Error × Fix Catalog</span></div>
+    <h2>Every fixable issue,<br>by <em class="display-italic">URL</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">A page-by-page catalog of what is working, what is broken, and the exact fix, across both the new domain and the legacy brand. The central thread is the same: equity is split across two domains that need to become one.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <span class="sub-eyebrow">Page-by-page audit</span>
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.fridayharborstorage.com/</div>
+          <div class="url-audit-meta">New-domain homepage · 0 ranked keywords · cited by 0 AI models</div>
+        </div>
+        <span class="badge crit">P0 · HIGH IMPACT</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ">
+        <div class="issue-name">Equity split from sound-storage.com</div>
+        <div class="issue-current">Same facility, separate domain; none of the legacy brand's #1 rank or 15/20 AI citations flow here.</div>
+        <div class="issue-fix"><b>Fix:</b> Consolidate: pick one primary brand, 301/canonical-unify, cross-link, sameAs (see Section 02 finding 1).</div>
+      </div>
+      <div class="url-issue ">
+        <div class="issue-name">Generic title, no city/brand</div>
+        <div class="issue-current">&lt;title&gt; is "Self Storage Units"; meta is a template with no city/state/brand.</div>
+        <div class="issue-fix"><b>Fix:</b> Rewrite with brand + city + differentiators (see Section 03).</div>
+      </div>
+      <div class="url-issue ">
+        <div class="issue-name">Only WebSite schema</div>
+        <div class="issue-current">No SelfStorage/LocalBusiness, no FAQPage.</div>
+        <div class="issue-fix"><b>Fix:</b> Add a SelfStorage LocalBusiness node for 840 Mullis Rd + FAQPage (Section 06).</div>
+      </div>
+      <div class="url-issue ">
+        <div class="issue-name">No og:image</div>
+        <div class="issue-current">Shares render with no thumbnail.</div>
+        <div class="issue-fix"><b>Fix:</b> Add 1200x630 og:image to the template head.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">Thin content (~197 words)</div>
+        <div class="issue-current">No service or location depth.</div>
+        <div class="issue-fix"><b>Fix:</b> Expand to 600+ words; add unit table, amenities, FAQ, links to service pages.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">CWV: LCP 3.2s</div>
+        <div class="issue-current">Hero LCP above the 2.5s "Good" threshold; CLS 0.017 is fine.</div>
+        <div class="issue-fix"><b>Fix:</b> Size + preload + fetchpriority on the hero image.</div>
+      </div>
+      <div class="url-issue ok">
+        <div class="issue-name">Canonical, H1, SEO 0.92</div>
+        <div class="issue-current">Self-canonical correct, real H1 ("Friday Harbor Storage"), Lighthouse SEO 0.92.</div>
+        <div class="issue-fix"><b>Fix:</b> Keep, these are already right.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://sound-storage.com/copy-of-port-townsend-hwy-20</div>
+          <div class="url-audit-meta">Legacy brand&#x27;s &quot;Friday Harbor&quot; page · #1 organic for the head term</div>
+        </div>
+        <span class="badge high">P1 · MIGRATE</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ">
+        <div class="issue-name">Carries all the local equity</div>
+        <div class="issue-current">This is the top organic result and the page AI resolves citations to, on the brand you may be retiring.</div>
+        <div class="issue-fix"><b>Fix:</b> Decide the canonical home for this content; 301 to the chosen brand's heated/Friday-Harbor page, preserving the URL equity.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">Auto-named URL slug</div>
+        <div class="issue-current">URL is "copy-of-port-townsend-hwy-20," not a clean Friday Harbor slug.</div>
+        <div class="issue-fix"><b>Fix:</b> On the consolidated site use a clean /friday-harbor or / slug and 301 the old one.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://sound-storage.com/ (home + mainland locations)</div>
+          <div class="url-audit-meta">Legacy brand home · ranks for mainland WA terms (Mill Creek, Lynnwood, Oak Harbor)</div>
+        </div>
+        <span class="badge med">P2 · SCOPE</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue warn">
+        <div class="issue-name">Mixed-market ranked profile</div>
+        <div class="issue-current">~28 of 40 ranked keywords are mainland Sound Storage locations, not Friday Harbor.</div>
+        <div class="issue-fix"><b>Fix:</b> Confirm which locations belong under which brand before redirecting; do not 301 away mainland equity if those facilities are separate businesses.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.fridayharborstorage.com/ (missing service pages)</div>
+          <div class="url-audit-meta">Service pages that do not exist yet on the new domain</div>
+        </div>
+        <span class="badge med">P2 · BUILD</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue warn">
+        <div class="issue-name">No heated / boat-RV / cost pages</div>
+        <div class="issue-current">Single thin homepage; no pages for the verticals AI is asked about.</div>
+        <div class="issue-fix"><b>Fix:</b> Build heated-storage, boat-rv-storage, size-guide and cost pages with schema (Sections 05-07).</div>
+      </div>
+      </div>
+    </div>
+
+    <span class="sub-eyebrow">Pattern-level issues</span>
+    <div class="url-group opp">
+      <h4>Missing pages to build (each is an uncontested island query)</h4>
+      <p>These pages do not exist on the new domain and have no strong local owner. Each maps to real San Juan Island intent, several to differentiators only this facility offers.</p>
+      <div class="url-list">
+      <span><code>/heated-storage-friday-harbor</code> <span class="cnt">differentiator</span></span>
+      <span><code>/boat-rv-storage-san-juan-island</code> <span class="cnt">seasonal</span></span>
+      <span><code>/storage-unit-cost-friday-harbor</code></span>
+      <span><code>/storage-sizes-5x5-to-10x25</code></span>
+      <span><code>/free-moving-truck</code> <span class="cnt">differentiator</span></span>
+      <span><code>/san-juan-island-storage</code> <span class="cnt">service area</span></span>
+      <span><code>/ground-level-vs-elevator-storage</code></span>
+      <span><code>/faq</code> <span class="cnt">schema host</span></span>
+      </div>
+      <div class="group-fix"><b>Template-level fix:</b> Build as lightweight, schema-rich landing pages on the chosen primary brand. Even 300-400 words each, with a unit table and FAQ, will outrank thin island rivals on these low-difficulty local terms, and give the AI models something on your domain to cite.</div>
+    </div>
+  </div>
+</section>
+
+<section id="keywords">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">05 · Keyword Strategy</span></div>
+    <h2>The island keywords<br>that <em class="display-italic">change</em> the business.</h2>
+    <p class="lede" style="margin-top:18px; max-width:720px;">San Juan Island is a low-difficulty market: most target terms have keyword difficulty in the single digits and the field is all local independents with thin sites. The job is not to find volume, it is to consolidate the existing #1 equity onto one brand and then build the pages that own these terms outright.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th>Target keyword</th>
+        <th class="num">Volume / mo</th>
+        <th class="num">KD</th>
+        <th>Intent</th>
+        <th>Recommended URL</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="kw">self storage friday harbor wa</td><td class="num">170+</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/ (chosen brand)</code></td></tr>
+        <tr><td class="kw">storage units friday harbor</td><td class="num">210</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/ (chosen brand)</code></td></tr>
+        <tr><td class="kw">san juan island storage</td><td class="num">140</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/san-juan-island-storage</code></td></tr>
+        <tr><td class="kw">heated storage friday harbor</td><td class="num">70+</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/heated-storage-friday-harbor</code></td></tr>
+        <tr><td class="kw">boat storage san juan island</td><td class="num">90+</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/boat-rv-storage-san-juan-island</code></td></tr>
+        <tr><td class="kw">rv storage friday harbor</td><td class="num">70+</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/boat-rv-storage-san-juan-island</code></td></tr>
+        <tr><td class="kw">storage unit cost friday harbor</td><td class="num">50+</td><td class="num">low</td><td>Informational</td><td><code class="mono">/storage-unit-cost-friday-harbor</code></td></tr>
+        <tr><td class="kw">storage unit sizes friday harbor</td><td class="num">60+</td><td class="num">low</td><td>Informational</td><td><code class="mono">/storage-sizes-5x5-to-10x25</code></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top: 64px;">Service & differentiator pages: the next tier</h3>
+    <p style="max-width:760px; margin-top:8px;">Once the brand is unified, a small set of service and differentiator pages will let you capture intent the legacy brand only earns indirectly, and own the heated + boat/RV + free-moving-truck angles no island rival can match.</p>
+    <div class="table-scroll" style="margin-top:22px;">
+    <table>
+      <thead><tr><th>Landing page</th><th>Primary KW</th><th class="num">Vol/mo</th><th>What it needs</th></tr></thead>
+      <tbody>
+        <tr><td><code class="mono">/heated-storage-friday-harbor</code></td><td class="kw">heated storage friday harbor</td><td class="num">70+</td><td>SelfStorage + Service schema; heated vs unheated, ground-level + elevator units.</td></tr>
+        <tr><td><code class="mono">/boat-rv-storage-san-juan-island</code></td><td class="kw">boat storage san juan island</td><td class="num">90+</td><td>Service schema; closes the 1/4 AI gap; gate hours, dimensions, seasonal pricing.</td></tr>
+        <tr><td><code class="mono">/storage-unit-cost-friday-harbor</code></td><td class="kw">storage unit cost friday harbor</td><td class="num">50+</td><td>Pricing page with FAQ; answers the cost prompt AI engines quote.</td></tr>
+        <tr><td><code class="mono">/free-moving-truck</code></td><td class="kw">free moving truck friday harbor</td><td class="num"></td><td>Owns the island's only-free-truck differentiator; links to rental flow.</td></tr>
+        <tr><td><code class="mono">/san-juan-island-storage</code></td><td class="kw">san juan island storage</td><td class="num">140</td><td>Island-wide service-area page; ferry/island context.</td></tr>
+        <tr><td><code class="mono">/storage-sizes-5x5-to-10x25</code></td><td class="kw">storage unit sizes friday harbor</td><td class="num">60+</td><td>Size guide 5x5 to 10x25 with ItemList + FAQ schema.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout"><strong>Watch out:</strong> do not chase the mainland "Sound Storage of Mill Creek / Lynnwood" terms the legacy domain ranks for, they are a different market and irrelevant to a Friday Harbor facility. And do not optimize both domains for the same island terms, that splits the equity further. Pick one brand and concentrate every island keyword on it.</div>
+  </div>
+</section>
+
+<section id="schema" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">06 · Schema Markup Plan</span></div>
+    <h2>The structured data<br>the new domain needs to <em class="display-italic">ship</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:740px;">Currently the new domain ships only WebSite JSON-LD. The rollout below is small and high-leverage, and it should be deployed on the chosen primary brand as part of consolidation. Phase 1 (SelfStorage + FAQ) is one dev day and directly targets the local results and AI citations.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="three-col">
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge crit">PHASE 1 · WEEK 1</span></div>
+        <h4>Foundations</h4>
+        <p style="margin-top:8px; font-size:14.5px;">SelfStorage / LocalBusiness for 840 Mullis Rd (geo, openingHours for the 6am-10pm gate, telephone, priceRange) · FAQPage (homepage + /faq) · BreadcrumbList (every page) · sameAs linking both brand names + the GBP.</p>
+        <p class="small" style="margin-top:10px;">Effort: 1 dev day · Impact: local relevance, FAQ rich results, AI-citation eligibility (esp. Claude), brand consolidation signal.</p>
+      </div>
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge high">PHASE 2 · WEEK 2-3</span></div>
+        <h4>Local depth</h4>
+        <p style="margin-top:8px; font-size:14.5px;">Service schema on the heated, boat/RV and free-moving-truck pages · amenityFeature (heated units, electronic gate, fenced/lit, ground-level + elevator, boat/RV) · Offer/AggregateOffer with 5x5 to 10x25 unit price bands.</p>
+        <p class="small" style="margin-top:10px;">Effort: 1-2 dev days · Impact: rich pricing/amenity signals; matches the data AI engines need to quote for heated and boat/RV prompts.</p>
+      </div>
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge med">PHASE 3 · WEEK 4-6</span></div>
+        <h4>Content &amp; reviews</h4>
+        <p style="margin-top:8px; font-size:14.5px;">AggregateRating once reviews are migrated to the chosen brand · ImageObject with geo on facility photos · Review schema embedding the Google/Birdeye reviews · ProductGroup for unit sizes.</p>
+        <p class="small" style="margin-top:10px;">Effort: 1 day · Impact: star eligibility + reinforces the single consolidated entity.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Reference snippet: SelfStorage + LocalBusiness</h3>
+    <p>Ship this in Phase 1 on the chosen primary brand. The single SelfStorage node anchors 840 Mullis Rd as one island entity, and the sameAs array tells search engines that Friday Harbor Storage and Sound Storage are the same business.</p>
+<pre class="code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SelfStorage",
+      "@id": "https://www.fridayharborstorage.com/#facility",
+      "name": "Friday Harbor Storage",
+      "alternateName": "Sound Storage, Friday Harbor",
+      "address": {"@type":"PostalAddress","streetAddress":"840 Mullis Rd",
+        "addressLocality":"Friday Harbor","addressRegion":"WA","postalCode":"98250"},
+      "telephone": "+1-360-378-4000",
+      "openingHours": "Mo-Su 06:00-22:00",
+      "priceRange": "$$",
+      "sameAs": [
+        "https://sound-storage.com/",
+        "https://www.fridayharborstorage.com/"
+      ],
+      "amenityFeature": [
+        {"@type":"LocationFeatureSpecification","name":"Heated units","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Electronic gate 6am-10pm","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Fenced and lit","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Boat and RV storage","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Free moving truck","value":true}
+      ]
+    }
+  ]
+}
+&lt;/script&gt;</pre>
+
+    <h3 style="margin-top:48px;">Reference snippet: FAQPage</h3>
+<pre class="code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a storage unit cost in Friday Harbor, WA?",
+      "acceptedAnswer": {"@type":"Answer",
+        "text": "On San Juan Island, units at Friday Harbor Storage range from a 5x5 up to a 10x25, in both heated and unheated options. Heated units carry a premium for climate-sensitive belongings. All rentals are month-to-month at 840 Mullis Rd in Friday Harbor."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer heated storage units?",
+      "acceptedAnswer": {"@type":"Answer",
+        "text": "Yes. Friday Harbor Storage offers both heated and unheated units, ground-level and second-story (elevator-accessed), so you can protect climate-sensitive items through the island's wet winters."}
+    }
+    /* ...add the rest of the FAQ set from Section 07 */
+  ]
+}
+&lt;/script&gt;</pre>
+  </div>
+</section>
+
+<section id="content">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">07 · Content Strategy</span></div>
+    <h2>A small content layer<br>that earns the next <em class="display-italic">12 months</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">A storage facility does not need a blog mill, it needs a handful of evergreen, locally-anchored pages on a single brand that Google and AI engines can quote. Ten pieces, sequenced, leaning into the island's heated-storage, boat/RV and free-moving-truck differentiators.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>#</th><th>Title</th><th>Target keyword</th><th>Publish by</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><strong>Friday Harbor Storage, Heated &amp; Unheated Units on San Juan Island</strong></td><td class="kw">self storage friday harbor wa</td><td>Wk 1</td><td>Consolidated homepage; the anchor for the chosen brand and the head term.</td></tr>
+        <tr><td class="num">2</td><td><strong>Heated Storage Units in Friday Harbor, WA</strong></td><td class="kw">heated storage friday harbor</td><td>Wk 2</td><td>Owns the heated differentiator; answers AI prompt P3 directly.</td></tr>
+        <tr><td class="num">3</td><td><strong>Boat &amp; RV Storage on San Juan Island</strong></td><td class="kw">boat storage san juan island</td><td>Wk 3</td><td>Closes the weakest AI vertical (1/4); seasonal island demand.</td></tr>
+        <tr><td class="num">4</td><td><strong>How Much Does Storage Cost in Friday Harbor? (2026)</strong></td><td class="kw">storage unit cost friday harbor</td><td>Wk 4</td><td>Pricing intent AI quotes; answers prompt P4 directly.</td></tr>
+        <tr><td class="num">5</td><td><strong>Storage Unit Size Guide: 5x5 to 10x25 for San Juan Island</strong></td><td class="kw">storage unit sizes friday harbor</td><td>Wk 5</td><td>Informational; ItemList + FAQ schema.</td></tr>
+        <tr><td class="num">6</td><td><strong>The Only Free Moving Truck on San Juan Island</strong></td><td class="kw">free moving truck friday harbor</td><td>Wk 6</td><td>Differentiator no island rival can match; top-of-funnel.</td></tr>
+        <tr><td class="num">7</td><td><strong>Renting Storage on San Juan Island: A Ferry-and-Move Checklist</strong></td><td class="kw">rent storage san juan island</td><td>Wk 8</td><td>Answers prompt P2 (how to rent); links to the rental flow.</td></tr>
+        <tr><td class="num">8</td><td><strong>Ground-Level vs Elevator Second-Story Storage</strong></td><td class="kw">ground level storage friday harbor</td><td>Wk 9</td><td>Explains the facility's two access types; long-tail.</td></tr>
+        <tr><td class="num">9</td><td><strong>Seasonal Storage for Island Gear: Boats, Kayaks, Camping</strong></td><td class="kw">seasonal storage san juan island</td><td>Wk 10</td><td>Boating, kayaking, camping gear; seasonal demand.</td></tr>
+        <tr><td class="num">10</td><td><strong>Friday Harbor Storage FAQ (schema hub)</strong></td><td class="kw">storage faq friday harbor</td><td>Wk 12</td><td>Powers FAQPage schema across the site + AI answers.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top: 56px;">The supporting cluster: 30 FAQ-schema questions</h3>
+    <p style="max-width:780px;">Pre-validated questions (from the live SERP People-Also-Ask and the AI test) to power FAQPage schema across the homepage, service pages and a /faq hub on the chosen brand. These are exactly the prompts the AI engines are answering today.</p>
+
+    <div class="three-col" style="margin-top: 22px;">
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Cost &amp; Sizes</h4>
+        <ol style="margin-top:10px; font-size:14px;">
+          <li>How much does a storage unit cost in Friday Harbor, WA?</li>
+          <li>How much more do heated units cost than unheated?</li>
+          <li>What sizes do you offer? (5x5 to 10x25.)</li>
+          <li>How much is a 10x10 storage unit on San Juan Island?</li>
+          <li>What size do I need for a 2-bedroom home?</li>
+          <li>Is month-to-month rental available?</li>
+          <li>How much does boat or RV storage cost?</li>
+          <li>Do you offer ground-level units?</li>
+          <li>What does a second-story elevator unit cost?</li>
+          <li>Are there admin, lock or insurance fees?</li>
+        </ol>
+      </div>
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Heated, Boat &amp; Access</h4>
+        <ol start="11" style="margin-top:10px; font-size:14px;">
+          <li>Do you offer heated storage units?</li>
+          <li>What is the difference between heated and unheated?</li>
+          <li>Can I store a boat or RV here?</li>
+          <li>What are the gate hours? (6am to 10pm.)</li>
+          <li>Is the facility fenced and lit?</li>
+          <li>Is there an electronic gate?</li>
+          <li>Do you have ground-level and elevator access?</li>
+          <li>Can I reach my unit at night?</li>
+          <li>How do I get a gate code?</li>
+          <li>Is there outdoor parking for trailers?</li>
+        </ol>
+      </div>
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Renting &amp; The Island</h4>
+        <ol start="21" style="margin-top:10px; font-size:14px;">
+          <li>How do I rent a storage unit on San Juan Island?</li>
+          <li>Do you have a free moving truck?</li>
+          <li>Can I move in the same day?</li>
+          <li>What do I need to bring to rent?</li>
+          <li>Where is the facility? (840 Mullis Rd.)</li>
+          <li>Are Friday Harbor Storage and Sound Storage the same place?</li>
+          <li>Do you sell boxes and packing supplies?</li>
+          <li>Can I reserve a unit online?</li>
+          <li>What can&#x27;t I store in a unit?</li>
+          <li>How much notice to move out?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="backlinks" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">08 · Backlink Strategy</span></div>
+    <h2>From a handful of links<br>to <em class="display-italic">island authority</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">The new domain has effectively no backlink or citation footprint; what exists points at the legacy Sound Storage brand. In a market this small you do not need many links, you need the right local citations, all migrated to one chosen brand with identical NAP (name, address, phone).</p>
+
+    <div class="ornament">· · ·</div>
+
+    <h3>Tier 1: Consolidate & claim local citations (Weeks 1-2)</h3>
+    <p>Lowest friction, highest local-SEO value. The priority is migrating every existing citation onto the chosen primary brand with identical NAP for 840 Mullis Rd.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google Business Profile</strong></td><td class="mono" style="font-size:12.5px;">business.google.com</td><td>Confirm one profile for the chosen brand; full categories, photos, Q&A, services; sameAs both domains.</td></tr>
+          <tr><td><strong>Bing Places + Apple Business Connect</strong></td><td class="mono" style="font-size:12.5px;">bingplaces.com</td><td>Two more map surfaces; align NAP to the chosen brand.</td></tr>
+          <tr><td><strong>Yelp (claim & merge)</strong></td><td class="mono" style="font-size:12.5px;">yelp.com</td><td>Reconcile the Sound Storage and Friday Harbor listings to avoid a duplicate.</td></tr>
+          <tr><td><strong>SpareFoot / SelfStorage.com listing</strong></td><td class="mono" style="font-size:12.5px;">sparefoot.com</td><td>They rank for your terms; be listed and accurate under one brand.</td></tr>
+          <tr><td><strong>San Juan Island Chamber of Commerce</strong></td><td class="mono" style="font-size:12.5px;">sanjuanisland.org</td><td>Local authority + referral; update to the chosen brand.</td></tr>
+          <tr><td><strong>Skagit Valley / island directories</strong></td><td class="mono" style="font-size:12.5px;">skagitvalleydirectory.com</td><td>Baseline NAP citations; reconcile to one brand.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:48px;">Tier 2: Local relevance & partnerships (Weeks 3-6)</h3>
+    <p>Referral + link value from the San Juan Island community.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>The Journal of the San Juan Islands (local paper)</strong></td><td class="mono" style="font-size:12.5px;">sanjuanjournal.com</td><td>Local-business feature or seasonal storage tip column.</td></tr>
+          <tr><td><strong>Local movers & real-estate agents</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Preferred-vendor cross-links; pair with the free moving truck offer.</td></tr>
+          <tr><td><strong>Marinas & boat dealers (Roche Harbor, Friday Harbor)</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Boat/RV storage referral partners; close the boat vertical gap.</td></tr>
+          <tr><td><strong>Island realtor & relocation blogs</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>"Where to store while you move to the island" mentions.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:48px;">Tier 3: Reviews as ranking signal (ongoing)</h3>
+    <p>Not links, but the single biggest off-site lever, and they must be consolidated onto one brand.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google reviews drive</strong></td><td class="mono" style="font-size:12.5px;">business.google.com</td><td>One-tap links at move-in on the chosen brand; QR at the gate.</td></tr>
+          <tr><td><strong>Birdeye / Yelp / Facebook reviews</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Migrate and diversify review sources for AI grounding.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout opp" style="margin-top:32px;"><strong>The shortcut:</strong> in a market this small, the win is not more links, it is fewer brands. Consolidate every existing Sound Storage citation and review onto one chosen brand with identical NAP, then let reviews compound. 5 to 8 accurate, unified local citations will move you further than any link-building campaign.</div>
+  </div>
+</section>
+
+<section id="competitive">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">09 · Competitive Landscape</span></div>
+    <h2>Who's in the way<br>and how <em class="display-italic">catchable</em> they are.</h2>
+    <p class="lede" style="margin-top:18px; max-width:740px;">Combined view from the live Friday Harbor SERP, the organic results, and the brands the AI engines actually cite. Every competitor here is a local independent, there is no national chain on San Juan Island. The biggest competitor, in a sense, is your own split brand.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Competitor</th><th class="num">Type</th><th class="num">Distance / scope</th><th>Why they matter</th></tr></thead>
+      <tbody>
+        <tr><td><strong>The Storage Place</strong></td><td class="num">Independent</td><td class="num">San Juan Island</td><td>Oldest storage operator on the island. Ranks #2 organic, cited ~13x by AI. Your top displacement target.</td></tr>
+        <tr><td><strong>One Stop Storage</strong></td><td class="num">Independent</td><td class="num">San Juan Island</td><td>Ranks #4 organic, cited ~9x. Shows up for rental and boat/RV prompts where you do not.</td></tr>
+        <tr><td><strong>San Juan Storage</strong></td><td class="num">Independent</td><td class="num">San Juan Island</td><td>Cited ~8x; appears via Skagit directory + Google Sites. Lighter site, catchable.</td></tr>
+        <tr><td><strong>Safe Harbor Storage</strong></td><td class="num">Independent</td><td class="num">San Juan Island</td><td>Cited ~3x; named in Yelp "Best 10" lists. Smaller footprint.</td></tr>
+        <tr><td><strong>Store More Storage</strong></td><td class="num">Independent</td><td class="num">San Juan Island</td><td>Cited ~3x; appears in island directory lists. Catchable.</td></tr>
+        <tr><td><strong>Starr Storage</strong></td><td class="num">Independent</td><td class="num">San Juan Island</td><td>Seen in AI answers (~1x), not in the organic top 20. Minor presence.</td></tr>
+        <tr><td><strong>Directories (Yelp, SpareFoot, MapQuest)</strong></td><td class="num">Directory</td><td class="num">national</td><td>Not facilities, but they take organic slots for your terms. Beat them with deeper local pages on one brand.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="quote" style="margin-top: 56px;">
+      "The facility already holds the #1 organic result and 15 of 20 AI citations on San Juan Island, but every bit of it is credited to the legacy Sound Storage brand, not the new domain. The market is all local independents with thin sites; the door to owning the island outright is wide open for whoever unifies their brand and ships schema, a boat/RV page and reviews first."
+      <cite>DataForSEO SERP + AI-citation composite, May 2026</cite>
+    </div>
+  </div>
+</section>
+
+<section id="llm" class="dark">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow" style="color:#FFD8AC;">10 · AI / LLM Visibility</span></div>
+    <h2 style="color:#FFFBF1;">15 citations.<br>Zero on <em style="color:#F4A8A2; font-style:italic;">your domain</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px; color:#D8CDB5;">We tested the flagship models powering AI search today: <strong>Claude Sonnet 4.6</strong>, <strong>Gemini 3.1 Pro</strong>, <strong>GPT-5.5</strong> and <strong>Sonar-Reasoning-Pro</strong> (Perplexity). Five high-intent prompts x four models = twenty live web-search calls. The facility was cited <strong>15 times</strong>, an excellent result, but <strong>100% of those citations name the legacy "Sound Storage" brand</strong>; fridayharborstorage.com was cited zero times. The equity is real, it is just on the wrong domain.</p>
+
+    <div class="ornament" style="color:#FFD8AC;">· · ·</div>
+
+    <div style="background: #1A1F26; border: 1px solid #3A3530; border-radius: var(--r-lg); padding: 32px 34px; margin-bottom: 56px;">
+      <div style="display:flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; flex-wrap: wrap; gap: 12px;">
+        <h3 style="color:#FFFBF1;">The 5 prompts we sent (verbatim)</h3>
+        <span class="small" style="color:#76705F; font-family: var(--mono);">user_prompt · web_search=true · same string to all 4 models</span>
+      </div>
+      <ol style="color:#FFE8A8; font-family: var(--serif); font-size: 19px; line-height: 1.7; padding-left: 1.4em; margin: 0;">
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Best self storage in Friday Harbor, WA"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How do I rent a storage unit on San Juan Island, Washington?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Heated storage units in Friday Harbor, WA"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How much does a storage unit cost in Friday Harbor, WA?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Boat and RV storage on San Juan Island, Washington"</span></li>
+      </ol>
+      <p class="small" style="color:#76705F; margin-top: 22px; font-size: 13px;">Why these five: each maps to a real San Juan Island query with live demand (discovery, how-to, heated, price, boat/RV). The set is designed to be re-run every 30 days to track whether citations move from the Sound Storage brand onto the chosen primary domain.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 style="color:#FFFBF1;">The 5 prompts × 4 models matrix</h3>
+        <div style="background:#1A1F26; border-radius: var(--r-md); padding: 22px 22px; margin-top: 14px; font-size:13.5px; color:#D8CDB5;">
+          <table style="background:transparent; border:0; color:#D8CDB5;">
+            <thead><tr style="background:transparent;">
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 10px; font-size:11px;">Prompt</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Claude<br>Sonnet 4.6</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Gemini<br>3.1 Pro</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">GPT-5.5</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Sonar<br>R-Pro</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;"><strong style="color:#FFFBF1;">Best self storage in Friday Harbor, WA</strong></td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">How do I rent a storage unit on San Juan Island</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Heated storage units in Friday Harbor, WA</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">How much does a storage unit cost in Friday Harbor</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Boat and RV storage on San Juan Island</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small" style="color:#76705F; margin-top:12px;">Run May 30, 2026 via DataForSEO AI Optimization API with web_search=true. Per model: Gemini 5/5, Claude 4/5, Sonar 4/5, GPT-5.5 2/5. Every one of these 15 citations credits "Sound Storage" (sound-storage.com), NOT fridayharborstorage.com. Total ~$1.20 across 20 calls.</p>
+      </div>
+
+      <div>
+        <h3 style="color:#FFFBF1;">Who AI cites instead</h3>
+        <p style="color:#D8CDB5; font-size:14.5px; margin-bottom:14px;">Mentions across all 20 calls, the brands you are competing with for AI visibility.</p>
+        <div style="background:#1A1F26; border-radius: var(--r-md); padding: 18px 22px; font-size:14px;">
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span><strong style="color:#FFE8A8;">Sound Storage (this facility)</strong></span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill green" style="width:100%"></div></div>
+            <span class="bar-val" style="color:#FFE8A8;"><strong>15×</strong></span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>The Storage Place</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:87%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">13×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>One Stop Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:60%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">9×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>San Juan Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:53%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">8×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Safe Harbor Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:20%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">3×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Store More Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:20%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">3×</span>
+          </div>
+        </div>
+        <p class="small" style="color:#76705F; margin-top:12px;">The 15 citations for this facility all name "Sound Storage," never fridayharborstorage.com. The Storage Place is the closest rival at ~13, usually listed alongside or just behind. GPT-5.5 (2/5) is the laggard and often leads with The Storage Place or One Stop Storage instead.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 56px; background: linear-gradient(135deg, #1F2630 0%, #1A1F26 100%); border: 1px solid #3A3530; border-radius: var(--r-lg); padding: 36px;">
+      <div style="display:flex; gap:24px; align-items:flex-start;">
+        <div style="font-family: var(--serif); font-size:78px; line-height:1; color:#FFE8A8; font-style:italic; font-variation-settings: 'SOFT' 100, 'WONK' 1;">15</div>
+        <div>
+          <div style="margin-bottom: 8px;"><span class="badge opp">EQUITY ON THE WRONG DOMAIN</span></div>
+          <h3 style="color:#FFFBF1; margin-bottom: 12px;">The AI loves your business. It just calls it by the other name.</h3>
+          <p style="color:#D8CDB5; font-size:15.5px;">GPT-5.5 called it "my pick, probably the best all-around self-storage option in Friday Harbor." Perplexity led with it, noting it "offers the most features (heated/unheated units, RV/boat storage, free moving truck)." Gemini cited it in all five prompts. This is exactly the AI position any island facility would want.</p><p style="color:#D8CDB5; font-size:15.5px; margin-top:12px;">But all 15 citations resolve to <strong>Sound Storage</strong> (sound-storage.com), its Chamber and Birdeye listings, never to <code class="mono" style="background:#2C2823; padding:2px 6px; border-radius:4px;">fridayharborstorage.com</code>. Consolidate the two brands, ship <code class="mono" style="background:#2C2823; padding:2px 6px; border-radius:4px;">SelfStorage</code> + <code class="mono" style="background:#2C2823; padding:2px 6px; border-radius:4px;">FAQPage</code> schema on the chosen domain, and add the boat/RV page, and you move from <strong>15 of 20 (on the legacy brand)</strong> to <strong>18+ of 20 on the brand you actually want to grow</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top: 56px;">
+      <div>
+        <h3 style="color:#FFFBF1;">Why this matters now</h3>
+        <p style="color:#D8CDB5;">AI search (ChatGPT, Perplexity, Gemini, Google AI Overviews) is displacing a growing share of "near me" storage discovery on the island. The four models tested are exactly what powers those surfaces. The business is already the default answer, the risk is that the answer keeps pointing at a brand and domain you may be retiring, so a customer who later searches the new name finds nothing.</p>
+      </div>
+      <div>
+        <h3 style="color:#FFFBF1;">What earns citations</h3>
+        <ol style="color:#D8CDB5;">
+          <li><strong>Brand consolidation</strong> so the chosen domain inherits the 15/20 equity instead of fighting it.</li>
+          <li><strong>SelfStorage + LocalBusiness schema</strong> for 840 Mullis Rd, the signal Claude rewards and the new domain lacks.</li>
+          <li><strong>FAQPage schema</strong> answering cost, heated and access questions in plain prose, the format LLMs extract.</li>
+          <li><strong>A boat/RV page + marina listings</strong> to close the weakest vertical (cited only 1 of 4).</li>
+          <li><strong>Migrated reviews + consistent NAP + sameAs</strong> so both names resolve to one entity.</li>
+          <li><strong>An /faq hub</strong> mirroring the exact prompts above so every model finds a quotable answer on your domain.</li>
+        </ol>
+        <h3 style="margin-top: 28px; color:#FFFBF1;">90-day LLM target</h3>
+        <p style="color:#D8CDB5;">Re-run this same 5x4 grid in 90 days. Hold the 15+ of 20 citation rate, but move the citations from "Sound Storage" onto the chosen primary brand, and capture the boat/RV prompt (currently 1/4) and GPT-5.5 (currently 2/5). The clearest single KPI is the first time a model cites fridayharborstorage.com by name.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">11 · 90-Day Roadmap</span></div>
+    <h2>What happens<br>in the next <em class="display-italic">90 days</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Three sprints. The brand/domain consolidation comes first (it unblocks both Google and AI), then schema, content and the boat/RV page, then authority and reviews. Each item has a priority tag (P0 = must-ship).</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="roadmap">
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 0-30</div>
+        <h3>Consolidate &amp; found</h3>
+        <p class="small">Decide the brand, unify the domains, ship the structured-data and on-page basics.</p>
+        <ul>
+          <li><div class="check"></div><span>Decide the primary brand (Friday Harbor vs Sound)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Build the 301 / canonical-unify redirect map</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Cross-link both sites + sameAs on both + GBP</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Rewrite title + meta with city/brand</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>SelfStorage + LocalBusiness schema (840 Mullis Rd)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>FAQPage schema on homepage + /faq</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Add og:image sitewide; fix LCP (size/preload hero)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Expand homepage to 600+ words</span><span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 31-60</div>
+        <h3>Pages &amp; verticals</h3>
+        <p class="small">Build the differentiator pages and close the boat/RV gap.</p>
+        <ul>
+          <li><div class="check"></div><span>Build /heated-storage-friday-harbor</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Build /boat-rv-storage-san-juan-island + listings</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Publish cost + size-guide + free-moving-truck pages</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Service + amenityFeature + Offer schema on new pages</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Migrate NAP + citations to the chosen brand</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Start Google review drive on the chosen brand</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Tier 1 local citations (Chamber, directories)</span><span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 61-90</div>
+        <h3>Authority &amp; AI</h3>
+        <p class="small">Compound the gains and re-measure.</p>
+        <ul>
+          <li><div class="check"></div><span>Add AggregateRating once reviews are migrated</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Publish remaining content pieces (seasonal, ground-level)</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Tier 2 partnerships (movers, marinas, realtors)</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Re-run flagship 5x4 LLM grid, target 18+/20 on chosen brand</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Re-run Lighthouse, target Perf 0.90+, LCP &lt;2.5s</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Re-check organic rank for core terms on chosen domain</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Confirm first AI citation of the new brand by name</span><span class="pri">P0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Targets at 90 days</h3>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Organic rank (head)</div>
+        <div class="kpi-value">#1</div>
+<div class="kpi-trend up">hold on chosen brand</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Ranked keywords (chosen domain)</div>
+        <div class="kpi-value">25+</div>
+<div class="kpi-trend up">↑ from 0</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">AI citation brand</div>
+        <div class="kpi-value">Chosen</div>
+<div class="kpi-trend up">↑ from Sound only</div>
+      </div>
+      <div class="kpi cta">
+        <div class="kpi-label">LLM citations</div>
+        <div class="kpi-value">18<small>/20</small></div>
+<div class="kpi-trend up">↑ from 15</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Lighthouse Perf</div>
+        <div class="kpi-value">0.90<small>+</small></div>
+<div class="kpi-trend up">↑ from 0.81</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Mobile LCP</div>
+        <div class="kpi-value"><2.5s</div>
+<div class="kpi-trend up">↑ from 3.2s</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Schema types</div>
+        <div class="kpi-value">6+</div>
+<div class="kpi-trend up">↑ from 1</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Boat/RV AI cites</div>
+        <div class="kpi-value">3<small>/4</small></div>
+<div class="kpi-trend up">↑ from 1/4</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="appendix">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">Appendix</span></div>
+    <h2>Methodology &amp; <em class="display-italic">sources</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <details class="acc" open>
+      <summary>Data sources used in this audit</summary>
+      <div class="body">
+        <ul>
+          <li><strong>DataForSEO</strong>, Lighthouse mobile audit, on-page parse, live SERP scans (US, en), Labs (ranked keywords, competitors, keyword ideas, keyword overview), Google Trends.</li>
+          <li><strong>Playwright</strong>, live crawl at desktop 1440 / tablet 768 / mobile 375. H1-H4 extraction, meta + og + twitter + JSON-LD inspection, alt text counts, tech stack detection.</li>
+          <li><strong>Perplexity + Brave Search</strong>, industry trends, local competitor landscape, seasonal demand, backlink prospecting, PAA harvesting.</li>
+          <li><strong>Flagship LLM citation test</strong>, 5 prompts × 4 frontier models = 20 live calls via DataForSEO AI Optimization, every call with web_search enabled. Models: Claude Sonnet 4.6, Gemini 3.1 Pro, GPT-5.5, Sonar-Reasoning-Pro. The verbatim prompts:
+            <ol style="margin-top:6px; font-size:14.5px;">
+              <li><code class="mono">"Best self storage in Friday Harbor, WA"</code></li>
+              <li><code class="mono">"How do I rent a storage unit on San Juan Island, Washington?"</code></li>
+              <li><code class="mono">"Heated storage units in Friday Harbor, WA"</code></li>
+              <li><code class="mono">"How much does a storage unit cost in Friday Harbor, WA?"</code></li>
+              <li><code class="mono">"Boat and RV storage on San Juan Island, Washington"</code></li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Files produced as part of this engagement</summary>
+      <div class="body"><ul>
+          <li><code class="mono">audit/RESEARCH-SUMMARY.md</code> · consolidated findings</li>
+          <li><code class="mono">audit/dataforseo/</code> · ranked keywords, SERP, Lighthouse, keyword data</li>
+          <li><code class="mono">screenshots/01-homepage-desktop.png</code> · live crawl capture</li>
+          <li><code class="mono">research/llm-flagship-run/</code> · 20 raw AI responses + citation tally</li>
+          <li>This <strong>HTML report</strong> at <code class="mono">report/index.html</code></li>
+      </ul></div>
+    </details>
+
+    <details class="acc">
+      <summary>What we deliberately did NOT do</summary>
+      <div class="body"><ul>
+          <li>We did not deploy any change to either domain, every fix is a costed recommendation.</li>
+          <li>We did not execute the domain consolidation; the brand decision and redirect plan need brand owner sign-off.</li>
+          <li>We did not crawl every URL; the high-impact pages (new-domain home, the legacy Friday Harbor page, the legacy home) are covered.</li>
+          <li>We did not claim, merge or modify any Google Business Profile or directory listing, that should happen with brand permissions.</li>
+          <li>We did not buy or place any backlinks, citations are recommendations.</li>
+      </ul></div>
+    </details>
+
+    <details class="acc">
+      <summary>Limitations &amp; caveats</summary>
+      <div class="body"><ul>
+          <li>fridayharborstorage.com shows 0 ranked keywords; brand-new or very thin domains can rank for a few long-tail terms the index has not yet captured.</li>
+          <li>The sound-storage.com profile was capped at 40 returned keywords and mixes mainland Washington locations with Friday Harbor; confirm which facilities belong under which brand before redirecting.</li>
+          <li>Lighthouse is a single lab run; field (CrUX) data may differ. Re-run after fixes.</li>
+          <li>The LLM test is a 20-call sample (5 prompts x 4 flagship models). All 15 client citations credit the Sound Storage brand. Re-run monthly with the same prompts so the trend is comparable.</li>
+          <li>Google review counts and organic order shift continuously; figures captured May 30, 2026.</li>
+      </ul></div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mark">thinkflowlabs</div>
+    <p style="margin-top: 18px;">Prepared for fridayharborstorage.com · May 30, 2026</p>
+    <p class="small" style="margin-top:6px;">Open this file in your browser. Use Cmd/Ctrl+P to export a printable PDF.</p>
+  </div>
+</footer>
+
+</body>
+</html>

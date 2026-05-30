@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Estes Park Storage SEO Audit &amp; Growth Strategy · May 2026</title>
+<meta name="description" content="A technical, content, competitive and AI-visibility SEO audit of estesparkstorage.com prepared by ThinkFlowLabs, with quick wins, schema plan, local keyword strategy, and a 90-day roadmap." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --ink:        #0E1014;
+    --ink-2:      #1F2630;
+    --muted:      #5E6675;
+    --line:       #E6DFD2;
+    --line-2:     #EFE7D8;
+    --cream:      #FBF6EB;
+    --cream-2:    #F4ECD9;
+    --paper:      #FFFBF1;
+    --coral:      #2F6B47;
+    --coral-dk:   #1F4B31;
+    --coral-sft:  #E1EFE7;
+    --gold:       #C89A4A;
+    --gold-sft:   #F6E7C7;
+    --green:      #1F7A6A;
+    --green-sft:  #DAEEE7;
+    --amber:      #B45309;
+    --amber-sft:  #FFE9BD;
+    --red-bg:     #FFEBE9;
+
+    --r-sm: 4px; --r-md: 10px; --r-lg: 18px; --r-xl: 26px;
+    --shadow-sm: 0 1px 0 rgba(20,18,12,.06);
+    --shadow-md: 0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --shadow-lg: 0 30px 80px -30px rgba(60,40,18,.36);
+
+    --serif:      "Fraunces", "Times New Roman", serif;
+    --sans:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:       "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--coral-dk); text-decoration: none; border-bottom: 1px solid rgba(40,60,90,.22); }
+  a:hover { border-bottom-color: var(--coral-dk); }
+
+  /* ============ LAYOUT ============ */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); position: relative; }
+  section.alt { background: var(--paper); }
+  section.dark { background: var(--ink); color: #F2EAD7; border-top-color: #2A2520; }
+  section.dark a { color: #FFD8AC; border-bottom-color: rgba(255,216,172,.3); }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.012em; line-height: 1.08; margin: 0; }
+  h1 { font-size: clamp(48px, 8vw, 96px); font-weight: 380; letter-spacing: -.03em; }
+  h2 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 400; letter-spacing: -.022em; }
+  h3 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.18; }
+  h4 { font-size: 19px; font-weight: 600; line-height: 1.3; font-family: var(--sans); letter-spacing: -.005em; }
+  .display-italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 500; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--coral-dk);
+  }
+  p { margin: 0 0 1em; }
+  p.lede { font-size: 21px; line-height: 1.55; color: var(--ink-2); }
+  ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
+  ul li, ol li { margin-bottom: .35em; }
+  strong { font-weight: 600; }
+  .mono { font-family: var(--mono); font-size: .9em; }
+  .small { font-size: 13px; color: var(--muted); }
+
+  /* ============ HERO ============ */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #E1EFE7 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-top: 0;
+    padding: 56px 0 96px;
+    overflow: hidden; position: relative;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%232F6B47' opacity='.06'/></svg>");
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; position: relative; }
+  .hero h1 { margin-bottom: .18em; }
+  .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .hero .meta { font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+  .hero .by-line { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-2); margin-top: 36px; font-size: 14px; }
+  .hero .by-line span b { color: var(--ink); font-weight: 600; }
+  .hero-side {
+    background: white; border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 30px; box-shadow: var(--shadow-md);
+    font-size: 14px;
+  }
+  .hero-side h4 { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-family: var(--sans); margin-bottom: 16px; font-weight: 600; }
+  .hero-side dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; }
+  .hero-side dt { color: var(--muted); }
+  .hero-side dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .hero-side .severity-strip { margin: 22px -30px -30px; padding: 18px 30px; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); color: white; border-radius: 0 0 var(--r-lg) var(--r-lg); display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ TLDR (Executive Summary) ============ */
+  .tldr { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; }
+  .tldr h2 em { font-style: italic; color: var(--coral); font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .tldr-bullets { font-size: 17px; line-height: 1.6; }
+  .tldr-bullets li { margin-bottom: 16px; padding-left: 4px; }
+  .tldr-bullets li::marker { color: var(--coral); }
+  .verdict-card {
+    background: var(--ink); color: #F2EAD7;
+    border-radius: var(--r-lg); padding: 36px;
+    position: sticky; top: 24px;
+  }
+  .verdict-card h4 { color: #F6E7C7; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; font-weight: 500; }
+  .verdict-card p { font-size: 15px; line-height: 1.65; color: #D8CDB5; }
+  .verdict-card .score-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--mono); font-size: 12px; }
+  .verdict-card .score-row b { color: white; font-size: 18px; }
+  @media (max-width: 820px) { .tldr { grid-template-columns: 1fr; } .verdict-card { position: static; } }
+
+  /* ============ KPI GRID ============ */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 22px 18px; position: relative; overflow: hidden;
+  }
+  .kpi-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+  .kpi-value small { font-size: 17px; color: var(--muted); margin-left: 4px; font-family: var(--sans); font-weight: 500; }
+  .kpi-trend { font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+  .kpi-trend.up { color: var(--green); }
+  .kpi-trend.dn { color: var(--coral-dk); }
+  .kpi.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; } .kpi-value { font-size: 36px; } }
+
+  /* ============ FINDINGS CARDS ============ */
+  .findings { display: grid; gap: 24px; }
+  .finding {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 36px; display: grid; grid-template-columns: 88px 1fr; gap: 28px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+  }
+  .finding .num {
+    font-family: var(--serif); font-size: 78px; font-weight: 400; line-height: 1; color: var(--coral); letter-spacing: -.04em; opacity: .9;
+  }
+  .finding h3 { margin-bottom: 8px; }
+  .finding .impact-line { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; font-family: var(--mono); letter-spacing: .02em; }
+  .finding p { font-size: 16px; }
+  .finding .fix {
+    background: var(--cream-2); padding: 18px 22px; border-radius: var(--r-md);
+    margin-top: 18px; border-left: 3px solid var(--coral); font-size: 15.5px;
+  }
+  .finding .fix b { color: var(--ink); }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+  }
+  .badge.crit { background: var(--coral); color: white; }
+  .badge.high { background: var(--amber-sft); color: var(--amber); }
+  .badge.med { background: var(--gold-sft); color: var(--gold); }
+  .badge.opp { background: var(--green-sft); color: var(--green); }
+  .badge.brand { background: var(--ink); color: var(--cream); }
+  @media (max-width: 820px) {
+    .finding { grid-template-columns: 1fr; padding: 26px; }
+    .finding .num { font-size: 56px; }
+  }
+
+  /* ============ DATA TABLES ============ */
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14.5px;
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  }
+  th { text-align: left; font-weight: 600; padding: 14px 16px; background: var(--cream-2); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  td.kw { font-weight: 500; }
+  td .badge { font-size: 10px; padding: 3px 8px; }
+
+  .table-scroll { overflow-x: auto; }
+
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #F4C7C5; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
+  /* ============ PILLS / CALLOUTS ============ */
+  .callout {
+    background: var(--coral-sft); border: 1px solid #F4C7C5;
+    border-radius: var(--r-md); padding: 22px 26px;
+    font-size: 15.5px; color: var(--coral-dk); margin: 24px 0;
+  }
+  .callout.opp { background: var(--green-sft); border-color: #BFE0D6; color: #135548; }
+  .callout.warn { background: var(--amber-sft); border-color: #F2D5A0; color: var(--amber); }
+  .callout strong { color: inherit; }
+
+  /* ============ TWO-COL ============ */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ============ HIERARCHY CARDS ============ */
+  .page-card {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+  .page-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .page-card-head h4 { font-family: var(--mono); font-size: 14px; color: var(--ink); letter-spacing: 0; word-break: break-all; }
+  .pc-issues { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pc-issue { font-size: 11.5px; padding: 3px 9px; border-radius: 4px; background: var(--coral-sft); color: var(--coral-dk); font-weight: 600; }
+  .pc-issue.ok { background: var(--green-sft); color: var(--green); }
+  .pc-issue.warn { background: var(--amber-sft); color: var(--amber); }
+
+  /* ============ ROADMAP ============ */
+  .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .road-col {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 28px;
+  }
+  .road-col .label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 12.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--coral-dk); margin-bottom: 6px; }
+  .road-col .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--coral); }
+  .road-col h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 18px; }
+  .road-col ul { list-style: none; padding: 0; }
+  .road-col li { padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .road-col li:last-child { border-bottom: 0; }
+  .road-col li .check { width: 18px; height: 18px; border: 1.5px solid var(--line); border-radius: 4px; margin-top: 2px; }
+  .road-col li .pri { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; align-self: start; }
+  @media (max-width: 1000px) { .roadmap { grid-template-columns: 1fr; } }
+
+  /* ============ SCHEMA SNIPPETS ============ */
+  pre.code {
+    background: #1A1F26; color: #DCD0AE; padding: 22px 26px;
+    border-radius: var(--r-md); font-family: var(--mono); font-size: 13px;
+    overflow-x: auto; line-height: 1.55; margin: 18px 0;
+  }
+  .code .k { color: #FFD89B; }
+  .code .s { color: #B5DCC7; }
+  .code .c { color: #6E6452; font-style: italic; }
+
+  /* ============ FOOTER ============ */
+  footer { padding: 56px 0 36px; background: var(--ink); color: #BAB099; text-align: center; }
+  footer .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 28px; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  footer .small { color: #76705F; }
+
+  /* ============ STICKY NAV ============ */
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 246, 235, 0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  .topnav .inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .topnav a { color: var(--ink); border-bottom: 0; font-size: 13px; font-weight: 500; }
+  .topnav .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 20px; font-variation-settings: "SOFT" 100, "WONK" 1; border: 0; }
+  .topnav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .topnav nav { display: none; } }
+
+  /* ============ HORIZONTAL BAR CHART ============ */
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 80px; gap: 14px; align-items: center; padding: 8px 0; font-size: 14px; }
+  .bar-bg { height: 22px; background: var(--cream-2); border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); }
+  .bar-fill.alt { background: linear-gradient(90deg, var(--gold) 0%, #A77F35 100%); }
+  .bar-fill.green { background: linear-gradient(90deg, #2C9D8B 0%, var(--green) 100%); }
+  .bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; text-align: right; color: var(--ink-2); }
+  @media (max-width: 600px) { .bar-row { grid-template-columns: 120px 1fr 60px; font-size: 13px; } }
+
+  /* ============ DIVIDERS ============ */
+  .ornament { text-align: center; margin: 48px 0; color: var(--coral); font-family: var(--serif); font-size: 22px; letter-spacing: .4em; opacity: .7; }
+  .section-eyebrow { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .section-eyebrow .bar { width: 36px; height: 1px; background: var(--coral); }
+
+  /* ============ MISC ============ */
+  .quote {
+    border-left: 3px solid var(--coral); padding: 12px 0 12px 26px;
+    font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink-2);
+    font-style: italic; margin: 28px 0;
+  }
+  .quote cite { display: block; margin-top: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: normal; letter-spacing: .04em; }
+
+  details.acc { background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 22px; margin-bottom: 10px; }
+  details.acc summary { cursor: pointer; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.acc summary::after { content: "+"; font-family: var(--serif); font-size: 22px; color: var(--coral); }
+  details.acc[open] summary::after { content: "−"; }
+  details.acc[open] { box-shadow: var(--shadow-md); }
+  details.acc .body { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: white; }
+    section { padding: 28px 0; page-break-inside: avoid; }
+    .topnav, .hero::before { display: none; }
+    .finding, .road-col, table { box-shadow: none; }
+    a { color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="wrap inner">
+    <a href="#top" class="mark">estes park storage · seo audit</a>
+    <nav>
+      <a href="#tldr">Summary</a>
+      <a href="#snapshot">Snapshot</a>
+      <a href="#critical">Critical</a>
+      <a href="#quickwins">Quick Wins</a>
+      <a href="#hierarchy">URL Catalog</a>
+      <a href="#keywords">Keywords</a>
+      <a href="#schema">Schema</a>
+      <a href="#content">Content</a>
+      <a href="#backlinks">Backlinks</a>
+      <a href="#llm">AI/LLM</a>
+      <a href="#roadmap">90-Day Plan</a>
+    </nav>
+  </div>
+</div>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="meta">SEO AUDIT &amp; GROWTH STRATEGY &nbsp;·&nbsp; CONFIDENTIAL</div>
+      <h1>How <em>Estes Park Storage</em><br>owns storage search<br>at the <em>gateway to RMNP</em>.</h1>
+      <p class="lede" style="margin-top:32px; max-width:600px;">
+        A 360° technical, content, competitive and AI-visibility audit of <strong>estesparkstorage.com</strong>, built from a live Playwright crawl, DataForSEO Labs ranked-keyword and SERP data, a mobile Lighthouse audit, and a flagship 5-prompt x 4-model AI-citation test. Built to be acted on, not just read.
+      </p>
+      <div class="by-line">
+        <span>Prepared by <b>ThinkFlowLabs</b></span>
+        <span>·</span>
+        <span>Issued <b>May 30, 2026</b></span>
+        <span>·</span>
+        <span>Market <b>Estes Park, Colorado</b></span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h4>AT-A-GLANCE</h4>
+      <dl>
+        <dt>Local pack rank (head term)</dt><dd>#1</dd>
+        <dt>Organic rank, head term</dt><dd>#1</dd>
+        <dt>Ranked keywords (US)</dt><dd>~17</dd>
+        <dt>Google reviews</dt><dd>55 (4.6★)</dd>
+        <dt>Lighthouse Perf (mobile)</dt><dd>0.93</dd>
+        <dt>Mobile LCP</dt><dd>1.6s</dd>
+        <dt>Schema types live</dt><dd>1 (WebSite only)</dd>
+        <dt>LLM citations (5x4 grid)</dt><dd>14 of 20</dd>
+      </dl>
+      <div class="severity-strip">
+        <span>Overall health</span>
+        <span>🟡 Dominant locally, weakest site</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="tldr" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">Executive Summary</span></div>
+    <div class="tldr">
+      <div>
+        <h2>The situation in <em class="display-italic">60 seconds</em>.</h2>
+        <p class="lede" style="margin-top:24px;">
+          Estes Park Storage is in a commanding local position, #1 in both the Google local pack and the organic results for its head term, and cited in <strong>14 of 20</strong> flagship-AI answers, usually as the "best overall" pick. It is winning on Google Business Profile and 55 reviews <em>despite</em> the weakest website in the market. A handful of easy structural fixes (schema, title/meta, content depth, a pricing page) no local rival has either would lock in that lead and extend it across every AI engine.
+        </p>
+        <ol class="tldr-bullets" style="margin-top:24px;">
+          <li><strong>You already dominate, despite the website.</strong> You hold the #1 local-pack slot AND the #1 organic slot for "self storage Estes Park CO", on a 4.6-star, 55-review Google profile. The site itself is the weakest part of the operation, which means the upside is unusually easy and entirely uncontested.</li>
+          <li><strong>AI already picks you first, 14 of 20.</strong> Across Claude Sonnet 4.6, Gemini 3.1 Pro, GPT-5.5 and Sonar-Reasoning-Pro, Estes Park Storage was cited 14 times in 20 calls, and when cited it is usually named the "best overall" facility. But Claude cited you only twice, and the "cost" prompt returned zero citations across all four models.</li>
+          <li><strong>The site ships only WebSite schema.</strong> No <code class="mono">SelfStorage</code> / <code class="mono">LocalBusiness</code>, no <code class="mono">FAQPage</code>. No competitor in the Estes Park SERP has this either, so adding it is a pure, uncontested differentiator for both the local pack and AI engines.</li>
+          <li><strong>A generic title and a thin 199-word homepage.</strong> The title is literally "Self Storage Units" with no brand or city, the meta is the platform default, there is no <code class="mono">og:image</code>, and the homepage runs only ~199 words. You rank #1 in spite of this, not because of it.</li>
+          <li><strong>Most of the upside is unlocked by ~5 fixes</strong>, not a rebuild. Performance is healthy (Perf 0.93, LCP 1.6s). The gaps are schema, a real title/meta, content depth, an on-page pricing table and the RMNP-gateway angle.</li>
+        </ol>
+      </div>
+      <div class="verdict-card">
+        <h4>Our verdict</h4>
+        <p>Estes Park Storage has done the hard part, it owns the map, the brand and the AI answer. What it is missing is the structured-data layer, a real title, the page depth and the on-page pricing that turn a dominant local listing into an unassailable organic and AI default for storage at the gateway to Rocky Mountain National Park.</p>
+        <p>Ship LocalBusiness + FAQ schema, a real title/meta and an og:image in <strong>30 days</strong>. Publish a pricing table, expand the homepage and add drive-up + RMNP-gateway content in <strong>60 days</strong>. Add seasonal/recreation pages and a small content layer in <strong>90 days</strong>. We project Estes Park Storage moves from 14 of 20 to 18+ of 20 AI citations, closes the cost prompt (0/4 today) and captures Claude (2/5 today).</p>
+        <div class="score-row">
+          <span>HEALTH&nbsp; <b>59/100</b></span>
+          <span>UPSIDE&nbsp; <b>+150%</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="snapshot">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">01 · State of the Site</span></div>
+    <h2>What the search data<br><em class="display-italic">actually</em> says.</h2>
+    <p class="lede" style="margin-top:18px; max-width: 720px;">Estes Park Storage punches far above its website. The local presence and AI visibility are excellent; the on-page and structured-data foundations are the weakest in the market. That gap is the entire opportunity, and it is uncontested.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Local pack rank</div>
+        <div class="kpi-value">#1</div>
+<div class="kpi-trend up">↑ owns the map</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Organic rank (head term)</div>
+        <div class="kpi-value">#1</div>
+<div class="kpi-trend up">↑ owns organic too</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Ranked keywords</div>
+        <div class="kpi-value">~17</div>
+<div class="kpi-trend dn">thin footprint</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Google reviews</div>
+        <div class="kpi-value">55</div>
+<div class="kpi-trend up">↑ 4.6★, best in market</div>
+      </div>
+      <div class="kpi cta">
+        <div class="kpi-label">LLM citations</div>
+        <div class="kpi-value">14<small>/20</small></div>
+<div class="kpi-trend up">↑ usually "best overall"</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Lighthouse Perf</div>
+        <div class="kpi-value">0.93</div>
+<div class="kpi-trend up">LCP 1.6s, healthy</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Schema types</div>
+        <div class="kpi-value">1</div>
+<div class="kpi-trend dn">WebSite only</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Homepage words</div>
+        <div class="kpi-value">199</div>
+<div class="kpi-trend dn">thin content</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">The local terms you should own outright</h3>
+    <p style="max-width:780px; margin-top: 12px;">These are real Estes Park searches with live demand. You already rank #1 for the head-term cluster, the job is to defend it with schema and content depth, then claim the seasonal and cost terms that no rival owns yet.</p>
+
+    <div class="table-scroll" style="margin-top: 22px;">
+      <table>
+        <thead><tr>
+          <th>Local keyword</th>
+          <th class="num">Volume / mo</th>
+          <th class="num">KD</th>
+          <th class="num">Current rank</th>
+          <th>Status</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="kw">self storage estes park</td><td class="num">320</td><td class="num">low</td><td class="num">#1 pack / #1 org</td><td><span class="badge opp">DEFEND</span></td></tr>
+          <tr><td class="kw">estes park storage units</td><td class="num">320</td><td class="num">low</td><td class="num">#4 org</td><td><span class="badge high">CLIMB ORG</span></td></tr>
+          <tr><td class="kw">storage units estes park</td><td class="num">320</td><td class="num">low</td><td class="num">#4 org</td><td><span class="badge high">CLIMB ORG</span></td></tr>
+          <tr><td class="kw">storage units in estes park co</td><td class="num">320</td><td class="num">low</td><td class="num">#4 org</td><td><span class="badge high">CLIMB ORG</span></td></tr>
+          <tr><td class="kw">estes park self storage</td><td class="num">320</td><td class="num">low</td><td class="num">#4 org</td><td><span class="badge high">CLIMB ORG</span></td></tr>
+          <tr><td class="kw">storage unit cost estes park</td><td class="num">70+</td><td class="num">low</td><td class="num">absent</td><td><span class="badge crit">NO PAGE · 0/4 AI</span></td></tr>
+          <tr><td class="kw">rv storage estes park co</td><td class="num">60+</td><td class="num">low</td><td class="num">absent</td><td><span class="badge opp">NO PAGE</span></td></tr>
+          <tr><td class="kw">storage near rocky mountain np</td><td class="num">50+</td><td class="num">low</td><td class="num">absent</td><td><span class="badge opp">NO PAGE</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:64px;">Storage demand in Estes Park is seasonal and recreation-driven</h3>
+    <p style="max-width:780px; margin-top: 12px;">As the gateway to Rocky Mountain National Park, Estes Park storage demand swings with the seasons: RV and recreation-gear storage peaks in summer, and off-season RMNP visitors and second-home owners drive winter overflow. The winner is whoever owns the cleanest local signals plus the seasonal and gateway content.</p>
+
+    <div style="margin-top: 22px; background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 28px;">
+      <div class="bar-row"><span>self storage estes park</span>
+        <div class="bar-bg"><div class="bar-fill " style="width:72%"></div></div>
+        <span class="bar-val">320/mo</span>
+      </div>
+      <div class="bar-row"><span>storage units estes park</span>
+        <div class="bar-bg"><div class="bar-fill " style="width:70%"></div></div>
+        <span class="bar-val">320/mo</span>
+      </div>
+      <div class="bar-row"><span>storage near me (local)</span>
+        <div class="bar-bg"><div class="bar-fill green" style="width:60%"></div></div>
+        <span class="bar-val">+55% YoY</span>
+      </div>
+      <div class="bar-row"><span>rv / recreation gear (seasonal)</span>
+        <div class="bar-bg"><div class="bar-fill alt" style="width:48%"></div></div>
+        <span class="bar-val">summer peak</span>
+      </div>
+      <div class="bar-row"><span>storage cost / pricing (gap)</span>
+        <div class="bar-bg"><div class="bar-fill alt" style="width:32%"></div></div>
+        <span class="bar-val">0/4 AI today</span>
+      </div>
+      <p class="small" style="margin-top:12px;">Demand is permanent but seasonal; differentiation comes from schema, on-page pricing and the RMNP-gateway content angle, not from chasing volume.</p>
+    </div>
+  </div>
+</section>
+
+<section id="critical" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">02 · The Five Critical Findings</span></div>
+    <h2>What's <em class="display-italic">actually</em><br>holding the site back.</h2>
+    <p class="lede" style="margin-top: 18px; max-width: 720px;">Each finding below came from the live site, the Lighthouse audit, or the search data, not from theory. None requires a rebuild, and none is a speed problem. Together they explain why a business that dominates locally still leaves AI citations and the "cost" answer on the table.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="findings">
+      <article class="finding">
+        <div class="num">1</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · SCHEMA</span></div>
+          <h3>Only WebSite schema. No SelfStorage, LocalBusiness or FAQ markup at all.</h3>
+          <p class="impact-line">Impact: Invisible to the structured-data signals that drive the local pack, rich results and AI citations, and no rival has it either.</p>
+          <p>The homepage ships a single <code class="mono">WebSite</code> JSON-LD block, and nothing else, <strong>no <code class="mono">SelfStorage</code> / <code class="mono">LocalBusiness</code> markup and no <code class="mono">FAQPage</code>.</strong> For a gated, paved, drive-up facility with 24/7 access at 1210 Woodstock Dr, the page should emit a <code class="mono">SelfStorage</code> entity with address, geo, hours, phone, <code class="mono">amenityFeature</code> and the 4.6-star / 55-review <code class="mono">aggregateRating</code>. No competitor in the Estes Park SERP publishes this, so it is a pure, uncontested differentiator, and it is the likely reason Claude Sonnet 4.6 (which leans on structured data) cited you only twice in five.</p>
+          <div class="fix"><b>Fix:</b> Add a <code class="mono">SelfStorage</code> LocalBusiness node (1210 Woodstock Dr) with geo, hours, amenityFeature and aggregateRating, plus an Organization node and <code class="mono">FAQPage</code> on the homepage and an /faq hub. Snippet in Section 06. Eta: <strong>1 dev day.</strong> Expected lift: local-pack reinforcement + AI-citation eligibility, especially on Claude.</div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">2</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · TITLE / META</span></div>
+          <h3>The title is literally "Self Storage Units" with no brand, no city, no og:image.</h3>
+          <p class="impact-line">Impact: The single most-weighted on-page ranking and click signal is a platform default; shares render blank.</p>
+          <p>The homepage <code class="mono">&lt;title&gt;</code> is the generic platform string <strong>"Self Storage Units"</strong>, with no brand and no city, and the meta description is the unmodified template default ("Find secure self storage near you..."). There is also <strong>no <code class="mono">og:image</code></strong>, so shares on Facebook, iMessage and WhatsApp render with no thumbnail. You rank #1 in spite of this; a real, city-and-brand title plus a written meta would harden that #1 and lift click-through, and it is a fix no competitor has bothered to make.</p>
+          <div class="fix"><b>Fix:</b> Rewrite to <code class="mono">Self Storage Units in Estes Park, CO | Estes Park Storage</code> with a written meta naming gated, drive-up, 24/7 access and the RMNP gateway, and add a branded 1200x630 <code class="mono">og:image</code> sitewide. Eta: <strong>1 hour.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">3</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · CONTENT DEPTH</span></div>
+          <h3>A ~199-word homepage, and no service or seasonal landing pages.</h3>
+          <p class="impact-line">Impact: 199-word homepage, ~17 ranked keywords (mostly the 6 head terms), no pages to capture drive-up, RV/recreation, cost or RMNP-gateway intent.</p>
+          <p>The homepage runs only <strong>~199 words</strong>, below the threshold where Google and AI engines have enough text to quote. There are no dedicated, indexable landing pages for the obvious modifiers, drive-up units, RV/recreation-gear storage, off-season RMNP visitor storage, or a transparent pricing page. The competitors that AI surfaces on the seasonal and cost prompts (Woodstock, Alpine, and pricing via inselfstorage) win precisely because they publish more structured, deeper Estes Park content than you do about your own facility.</p>
+          <div class="fix"><b>Fix:</b> Expand the homepage past ~600 words (drive-up, gated + paved, 24/7 access, "minutes from Rocky Mountain National Park"), then add lightweight service pages: drive-up storage, RV/recreation-gear storage and a seasonal/off-season RMNP angle, each with a unit table and FAQ. Eta: <strong>3-4 days copy + dev.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">4</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · PRICING / AI COST GAP</span></div>
+          <h3>No on-page pricing, so the "cost" AI prompt returns 0 of 4.</h3>
+          <p class="impact-line">Impact: P4 ("how much does a unit cost in Estes Park") was cited by zero of four models; competitors with published rates win it.</p>
+          <p>In the flagship AI test, the cost prompt <strong>("How much does a storage unit cost in Estes Park, CO?") returned 0 of 4 citations</strong>, the only prompt where you score nothing. The reason is structural: there is no pricing anywhere on the site for an engine to quote. When Perplexity needed a number it pulled live rates from inselfstorage ($119 5x10 / $249 10x10 / $375 10x20) instead of from you. Publishing your own rate table both closes the AI gap and captures the "storage cost Estes Park" search.</p>
+          <div class="fix"><b>Fix:</b> Publish a transparent rate table (5x5 through 10x20+) on a <code class="mono">/prices</code> or <code class="mono">/units</code> page, mirror the same numbers in an FAQ answer and <code class="mono">Offer</code>/<code class="mono">priceRange</code> schema. Eta: <strong>half a day.</strong> Target: move P4 from 0/4 toward 3/4.</div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">5</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · AI / CLAUDE BLIND SPOT</span></div>
+          <h3>Claude cites you only 2 of 5, tied directly to the thin, unstructured site.</h3>
+          <p class="impact-line">Impact: Claude Sonnet 4.6 leans on directories and structured data and under-weights your thin site, so you lose the channel you most easily own.</p>
+          <p>Across the 5x4 grid, Gemini, GPT-5.5 and Sonar each cited you 4 of 5 times, but <strong>Claude Sonnet 4.6 cited you only twice</strong>. Claude leans hardest on aggregator/directory data (namesandnumbers, SpareFoot, MoversCorp) and structured markup, and it under-weights a 199-word page with no LocalBusiness schema. This is not a Claude problem, it is a symptom of findings 1 to 4: the same schema, content depth and pricing fixes that help Google directly recover the Claude channel.</p>
+          <div class="fix"><b>Fix:</b> Ship the SelfStorage + FAQPage schema (finding 1), expand the homepage and publish pricing (findings 3-4), and keep NAP identical across the directories Claude reads. Eta: <strong>folds into the above.</strong> Target: Claude 2/5 → 4/5 on the 90-day re-run.</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="callout opp" style="margin-top: 36px;">
+      <strong>Bottom line:</strong> this is a <em>dominant</em> business on the <em>weakest</em> website in its market. Performance is already healthy, so none of these fixes touch speed, they are additive: schema, a real title, content depth, an on-page price table and the RMNP-gateway angle. No local competitor has any of them, so capturing them locks in the lead and extends it to every AI engine.
+    </div>
+  </div>
+</section>
+
+<section id="quickwins">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · Quick Wins</span></div>
+    <h2>What we'd ship<br><em class="display-italic">first</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:720px;">Ordered by effort and impact. The first three can ship in the first week and move both the local pack and the AI answers, and none has a competitor doing it already.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th style="width: 36px;">#</th>
+        <th>Quick win</th>
+        <th>Where</th>
+        <th>Effort</th>
+        <th>Expected lift</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><strong>Add SelfStorage + LocalBusiness schema</strong> (1210 Woodstock Dr) + aggregateRating + FAQPage.</td><td>Templates</td><td>1 dev day</td><td>Local-pack + AI-citation eligibility. Biggest structured-data win; no rival has it.</td></tr>
+        <tr><td class="num">2</td><td><strong>Rewrite the title &amp; meta</strong> to name Estes Park + the brand.</td><td>Template head</td><td>1 hour</td><td>Hardens the #1 ranking and lifts click-through from a generic default.</td></tr>
+        <tr><td class="num">3</td><td><strong>Add og:image (1200x630) sitewide.</strong></td><td>Template head</td><td>1 hour</td><td>Working social/iMessage/WhatsApp previews; more referral clicks.</td></tr>
+        <tr><td class="num">4</td><td><strong>Publish an on-page price table</strong> (5x5 to 10x20+) + Offer schema.</td><td>/prices</td><td>Half day</td><td>Closes the P4 cost prompt (0/4 today); captures "storage cost Estes Park".</td></tr>
+        <tr><td class="num">5</td><td><strong>Expand the homepage past ~600 words</strong> with drive-up, gated, 24/7 + RMNP-gateway copy.</td><td>Homepage</td><td>1 day</td><td>Gives Google and AI engines text to quote; recovers Claude.</td></tr>
+        <tr><td class="num">6</td><td><strong>Add an RV / recreation-gear storage page</strong> (seasonal).</td><td>New URL</td><td>1 day</td><td>Captures uncontested summer-peak seasonal intent.</td></tr>
+        <tr><td class="num">7</td><td><strong>Add a "storage near Rocky Mountain National Park" section/page.</strong></td><td>New URL</td><td>Half day</td><td>Owns the P5 gateway prompt; uncontested local angle.</td></tr>
+        <tr><td class="num">8</td><td><strong>Alt text on all homepage images</strong>, location-specific.</td><td>All pages</td><td>2 hours</td><td>Accessibility + image-search visibility for a visual product.</td></tr>
+        <tr><td class="num">9</td><td><strong>Optimize the GBP listing</strong>, categories, photos, Q&A, services, posts.</td><td>Google Business</td><td>Half day</td><td>Reinforces the #1 local pack + 4.6★/55-review lead.</td></tr>
+        <tr><td class="num">10</td><td><strong>Address best-practices (0.77)</strong>, fix console errors / mixed signals.</td><td>Sitewide</td><td>2 hours</td><td>The one soft Lighthouse spot; quick technical hygiene.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top:56px;">Title &amp; meta rewrites for the highest-value pages</h3>
+    <p style="max-width:780px; margin-top:8px;">The current title and meta are platform defaults. These are real rewrites for the homepage and the pages that should rank and capture the AI cost/gateway prompts.</p>
+    <div class="table-scroll" style="margin-top:18px;">
+    <table>
+      <thead><tr><th>Page</th><th>Recommended &lt;title&gt;</th><th>Recommended meta description</th></tr></thead>
+      <tbody>
+        <tr><td><code class="mono">/</code></td><td>Self Storage Units in Estes Park, CO | Estes Park Storage</td><td>Gated, paved, drive-up self storage in Estes Park, CO with 24/7 access, minutes from Rocky Mountain National Park. View sizes, check rates, rent online.</td></tr>
+        <tr><td><code class="mono">/prices (new)</code></td><td>Storage Unit Prices in Estes Park, CO, 5x5 to 10x20 | Estes Park Storage</td><td>See transparent monthly rates for drive-up storage units in Estes Park, CO, from 5x5 to 10x20. Month-to-month, 24/7 access, rent online in minutes.</td></tr>
+        <tr><td><code class="mono">/rv-recreation-storage (new)</code></td><td>RV &amp; Recreation Gear Storage in Estes Park, CO | Estes Park Storage</td><td>Secure drive-up RV, gear and recreation storage in Estes Park, CO with 24/7 access, minutes from Rocky Mountain National Park. Check availability online.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="hierarchy" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · URL × Error × Fix Catalog</span></div>
+    <h2>Every fixable issue,<br>by <em class="display-italic">URL</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">A page-by-page catalog of what is working, what is missing, and the exact fix. The site is small and ranks well, so the catalog is short and almost entirely additive, these are pages and signals to add, not problems to undo.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <span class="sub-eyebrow">Page-by-page audit</span>
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.estesparkstorage.com/</div>
+          <div class="url-audit-meta">Homepage · local pack #1 · organic #1 for head term</div>
+        </div>
+        <span class="badge crit">P0 · HIGH IMPACT</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ">
+        <div class="issue-name">Only WebSite schema</div>
+        <div class="issue-current">Single WebSite JSON-LD block. No SelfStorage/LocalBusiness, no FAQPage, no aggregateRating.</div>
+        <div class="issue-fix"><b>Fix:</b> Add a SelfStorage @graph with geo, hours, amenityFeature + aggregateRating (see Section 06).</div>
+      </div>
+      <div class="url-issue ">
+        <div class="issue-name">Generic title "Self Storage Units"</div>
+        <div class="issue-current">Platform-default title; no brand, no city, no keyword.</div>
+        <div class="issue-fix"><b>Fix:</b> Rewrite to "Self Storage Units in Estes Park, CO | Estes Park Storage".</div>
+      </div>
+      <div class="url-issue ">
+        <div class="issue-name">Generic meta + no og:image</div>
+        <div class="issue-current">Template-default meta; twitter/og share renders blank.</div>
+        <div class="issue-fix"><b>Fix:</b> Write a city/brand meta; add a 1200x630 og:image to the head.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">Thin content (~199 words)</div>
+        <div class="issue-current">~199 words; H1 "Estes Park Storage" present.</div>
+        <div class="issue-fix"><b>Fix:</b> Expand past 600 words: drive-up, gated, 24/7, RMNP gateway, unit table, FAQ.</div>
+      </div>
+      <div class="url-issue ok">
+        <div class="issue-name">H1, canonical, performance</div>
+        <div class="issue-current">Real H1, self-canonical, Perf 0.93 / LCP 1.6s / CLS 0.002.</div>
+        <div class="issue-fix"><b>Fix:</b> Keep as is, these are already done right.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.estesparkstorage.com/ (pricing)</div>
+          <div class="url-audit-meta">No pricing anywhere on the site · P4 cost prompt = 0/4 AI</div>
+        </div>
+        <span class="badge high">P1 · BUILD</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ">
+        <div class="issue-name">No on-page rates</div>
+        <div class="issue-current">AI pulled prices from inselfstorage instead of from you ($119 5x10 / $249 10x10 / $375 10x20).</div>
+        <div class="issue-fix"><b>Fix:</b> Build a /prices page with a 5x5 to 10x20+ rate table + Offer/priceRange schema.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">No FAQ cost answer</div>
+        <div class="issue-current">No quotable "how much does it cost" text on-page.</div>
+        <div class="issue-fix"><b>Fix:</b> Add a cost FAQ answer mirroring the table; powers FAQPage + AI cost prompt.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.estesparkstorage.com/ (service pages)</div>
+          <div class="url-audit-meta">No drive-up / RV / RMNP-gateway pages exist</div>
+        </div>
+        <span class="badge med">P2 · EXPAND</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue warn">
+        <div class="issue-name">No service/seasonal pages</div>
+        <div class="issue-current">Single thin homepage; no drive-up, RV/recreation, or RMNP-proximity page.</div>
+        <div class="issue-fix"><b>Fix:</b> Add lightweight, schema-rich pages for each, 300-400 words with a unit table + FAQ.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">Google Business Profile + directories</div>
+          <div class="url-audit-meta">4.6★ / 55 reviews · #1 local pack · strongest asset</div>
+        </div>
+        <span class="badge med">P2 · DEFEND</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ok">
+        <div class="issue-name">55 reviews, 4.6★</div>
+        <div class="issue-current">Best review profile in the Estes Park market; drives the #1 pack and AI "best overall".</div>
+        <div class="issue-fix"><b>Fix:</b> Keep the review drip going; mirror the rating into aggregateRating schema on-site.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">NAP across directories</div>
+        <div class="issue-current">Claude leans on namesandnumbers/SpareFoot/MoversCorp data.</div>
+        <div class="issue-fix"><b>Fix:</b> Ensure identical NAP everywhere so Claude grounds on you, not a competitor.</div>
+      </div>
+      </div>
+    </div>
+
+    <span class="sub-eyebrow">Pattern-level issues</span>
+    <div class="url-group opp">
+      <h4>Missing pages to build (each is an uncontested local query)</h4>
+      <p>These pages do not exist yet and have no strong local owner in the Estes Park SERP. Each maps to real gateway-market intent.</p>
+      <div class="url-list">
+      <span><code>/prices</code> <span class="cnt">AI cost gap</span></span>
+      <span><code>/drive-up-storage-estes-park</code></span>
+      <span><code>/rv-recreation-storage-estes-park</code> <span class="cnt">seasonal</span></span>
+      <span><code>/storage-near-rocky-mountain-national-park</code> <span class="cnt">gateway</span></span>
+      <span><code>/24-7-access-storage-estes-park</code></span>
+      <span><code>/units</code> <span class="cnt">size + rate table</span></span>
+      <span><code>/faq</code> <span class="cnt">schema host</span></span>
+      <span><code>/business-storage-estes-park</code> <span class="cnt">commercial</span></span>
+      </div>
+      <div class="group-fix"><b>Template-level fix:</b> Build as lightweight, schema-rich landing pages. Even 300-400 words each, with a unit table and FAQ, will out-detail every same-platform competitor (Woodstock, Comanche, Alpine, Lakeview all run the thin stock template) on these long-tail gateway terms.</div>
+    </div>
+  </div>
+</section>
+
+<section id="keywords">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">05 · Keyword Strategy</span></div>
+    <h2>The local keywords<br>that <em class="display-italic">extend</em> the lead.</h2>
+    <p class="lede" style="margin-top:18px; max-width:720px;">Estes Park is a low-difficulty market: the head-term cluster has low keyword difficulty and you already own #1. The job is to defend that, then claim the cost, seasonal and RMNP-gateway terms no rival, and no AI prompt, currently gives you.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th>Target keyword</th>
+        <th class="num">Volume / mo</th>
+        <th class="num">KD</th>
+        <th>Intent</th>
+        <th>Recommended URL</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="kw">self storage estes park</td><td class="num">320</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/ (homepage)</code></td></tr>
+        <tr><td class="kw">estes park storage units</td><td class="num">320</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/units</code></td></tr>
+        <tr><td class="kw">storage units in estes park co</td><td class="num">320</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/ (homepage)</code></td></tr>
+        <tr><td class="kw">estes park self storage</td><td class="num">320</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/ (homepage)</code></td></tr>
+        <tr><td class="kw">storage unit cost estes park</td><td class="num">70+</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/prices</code></td></tr>
+        <tr><td class="kw">rv storage estes park co</td><td class="num">60+</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/rv-recreation-storage-estes-park</code></td></tr>
+        <tr><td class="kw">storage near rocky mountain national park</td><td class="num">50+</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/storage-near-rocky-mountain-national-park</code></td></tr>
+        <tr><td class="kw">drive up storage estes park</td><td class="num">40+</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/drive-up-storage-estes-park</code></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top: 64px;">Service & seasonal pages: the next tier</h3>
+    <p style="max-width:760px; margin-top:8px;">A pricing page plus a small set of service and seasonal pages will let you capture the cost and gateway intent the AI engines currently send to aggregators and to Woodstock/Alpine.</p>
+    <div class="table-scroll" style="margin-top:22px;">
+    <table>
+      <thead><tr><th>Landing page</th><th>Primary KW</th><th class="num">Vol/mo</th><th>What it needs</th></tr></thead>
+      <tbody>
+        <tr><td><code class="mono">/prices</code></td><td class="kw">storage unit cost estes park</td><td class="num">70+</td><td>Rate table 5x5 to 10x20+, Offer/priceRange schema, cost FAQ. Closes the 0/4 AI cost prompt.</td></tr>
+        <tr><td><code class="mono">/rv-recreation-storage-estes-park</code></td><td class="kw">rv storage estes park co</td><td class="num">60+</td><td>Seasonal page; drive-up + recreation-gear angle; Service schema.</td></tr>
+        <tr><td><code class="mono">/storage-near-rocky-mountain-national-park</code></td><td class="kw">storage near rocky mountain np</td><td class="num">50+</td><td>RMNP-gateway page; "minutes from the park"; captures the P5 prompt.</td></tr>
+        <tr><td><code class="mono">/drive-up-storage-estes-park</code></td><td class="kw">drive up storage estes park</td><td class="num">40+</td><td>Drive-up + gated + paved differentiators with a unit table.</td></tr>
+        <tr><td><code class="mono">/24-7-access-storage-estes-park</code></td><td class="kw">24/7 storage estes park</td><td class="num"></td><td>Access angle; reinforces the 24/7 + gated selling point.</td></tr>
+        <tr><td><code class="mono">/business-storage-estes-park</code></td><td class="kw">business storage estes park</td><td class="num"></td><td>Commercial intent; contractor/inventory use cases; higher-LTV tenants.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout"><strong>Watch out:</strong> ignore the out-of-market tail the keyword tools surface, "gunnison co storage units", "woodland park co", "crystal park storage", "towing estes park". Those rank deep on page 4+ purely from the stock template and are irrelevant. Every dollar of effort belongs on the Estes Park gateway terms above, where you already own #1 and the door to cost/seasonal is wide open.</div>
+  </div>
+</section>
+
+<section id="schema" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">06 · Schema Markup Plan</span></div>
+    <h2>The structured data<br>Estes Park Storage needs to <em class="display-italic">ship</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:740px;">Currently: WebSite only. The rollout below is small and high-leverage, and no competitor in the market has any of it. Phase 1 (SelfStorage + FAQ + aggregateRating) is one dev day and directly targets the local pack, the cost prompt and the Claude channel.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="three-col">
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge crit">PHASE 1 · WEEK 1</span></div>
+        <h4>Foundations</h4>
+        <p style="margin-top:8px; font-size:14.5px;">SelfStorage / LocalBusiness (1210 Woodstock Dr) with geo, hours, telephone, priceRange, amenityFeature (gated, paved, drive-up, 24/7) and aggregateRating (4.6 / 55) · FAQPage (homepage + /faq) · BreadcrumbList (every page).</p>
+        <p class="small" style="margin-top:10px;">Effort: 1 dev day · Impact: local-pack reinforcement, FAQ rich results, AI-citation eligibility (esp. Claude), star eligibility.</p>
+      </div>
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge high">PHASE 2 · WEEK 2-3</span></div>
+        <h4>Local depth</h4>
+        <p style="margin-top:8px; font-size:14.5px;">Offer / AggregateOffer with unit price bands on /prices and /units (the data the cost prompt needs) · Service schema on drive-up, RV/recreation and RMNP-gateway pages · amenityFeature repeated per page.</p>
+        <p class="small" style="margin-top:10px;">Effort: 1 day · Impact: closes the 0/4 cost prompt; gives AI engines a price to quote from you, not inselfstorage.</p>
+      </div>
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge med">PHASE 3 · WEEK 4-6</span></div>
+        <h4>Content &amp; reviews</h4>
+        <p style="margin-top:8px; font-size:14.5px;">Review schema embedding the strongest Google reviews · ImageObject with geo on facility photos · sameAs linking GBP + social to anchor the entity in Estes Park, CO and feed the directories Claude reads.</p>
+        <p class="small" style="margin-top:10px;">Effort: half a day · Impact: review rich results + entity grounding across the aggregators that drive Claude.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Reference snippet: SelfStorage + LocalBusiness</h3>
+    <p>Ship this in Phase 1, one SelfStorage node anchors 1210 Woodstock Dr as a distinct local entity in Estes Park, CO and carries the 4.6-star / 55-review rating no rival is publishing as structured data.</p>
+<pre class="code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SelfStorage",
+      "@id": "https://www.estesparkstorage.com/#facility",
+      "name": "Estes Park Storage",
+      "address": {"@type":"PostalAddress","streetAddress":"1210 Woodstock Dr",
+        "addressLocality":"Estes Park","addressRegion":"CO","postalCode":"80517"},
+      "telephone": "+1-970-000-0000",
+      "openingHours": "Mo-Su 00:00-24:00",
+      "priceRange": "$$",
+      "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"55"},
+      "amenityFeature": [
+        {"@type":"LocationFeatureSpecification","name":"24/7 access","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Drive-up units","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Fully gated","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Paved lot","value":true}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.estesparkstorage.com/#org",
+      "name": "Estes Park Storage",
+      "url": "https://www.estesparkstorage.com/"
+    }
+  ]
+}
+&lt;/script&gt;</pre>
+
+    <h3 style="margin-top:48px;">Reference snippet: FAQPage</h3>
+<pre class="code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a storage unit cost in Estes Park, CO?",
+      "acceptedAnswer": {"@type":"Answer",
+        "text": "In Estes Park, CO, drive-up units start around $119/mo for a 5x10, about $249/mo for a 10x10, and roughly $375/mo for a 10x20. Estes Park Storage offers month-to-month rentals with 24/7 access at 1210 Woodstock Dr."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer 24/7 access and drive-up units?",
+      "acceptedAnswer": {"@type":"Answer",
+        "text": "Yes. Estes Park Storage is fully gated and paved with drive-up units and secure 24/7 gate access, just minutes from Rocky Mountain National Park."}
+    }
+    /* ...add the rest of the FAQ set from Section 07 */
+  ]
+}
+&lt;/script&gt;</pre>
+  </div>
+</section>
+
+<section id="content">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">07 · Content Strategy</span></div>
+    <h2>A small content layer<br>that earns the next <em class="display-italic">12 months</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">A storage facility does not need a blog mill, it needs a handful of evergreen, locally-anchored pages and answers that Google and AI engines can quote. The Estes Park angle is the gateway to Rocky Mountain National Park and the seasonal recreation cycle. Ten pieces, sequenced.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>#</th><th>Title</th><th>Target keyword</th><th>Publish by</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><strong>Storage Unit Prices in Estes Park, CO (2026)</strong></td><td class="kw">storage cost estes park co</td><td>Wk 1</td><td>Closes the 0/4 AI cost prompt directly; captures pricing intent.</td></tr>
+        <tr><td class="num">2</td><td><strong>Storage Unit Size Guide for Estes Park, CO</strong></td><td class="kw">storage size guide estes park</td><td>Wk 2</td><td>Localised size guide; feeds the rate table + AI "what size" answers.</td></tr>
+        <tr><td class="num">3</td><td><strong>Drive-Up, Gated & Paved: Storage in Estes Park</strong></td><td class="kw">drive up storage estes park</td><td>Wk 3</td><td>Owns your core differentiators; quotable by every model on P3.</td></tr>
+        <tr><td class="num">4</td><td><strong>RV & Recreation Gear Storage in Estes Park</strong></td><td class="kw">rv storage estes park co</td><td>Wk 4</td><td>Seasonal summer-peak demand; uncontested locally.</td></tr>
+        <tr><td class="num">5</td><td><strong>Storage Near Rocky Mountain National Park</strong></td><td class="kw">storage near rocky mountain np</td><td>Wk 5</td><td>RMNP-gateway page; captures the P5 prompt Claude missed.</td></tr>
+        <tr><td class="num">6</td><td><strong>Off-Season Storage for RMNP Visitors & Second Homes</strong></td><td class="kw">off season storage estes park</td><td>Wk 6</td><td>Winter overflow + second-home owners; gateway-market angle.</td></tr>
+        <tr><td class="num">7</td><td><strong>How to Rent a Storage Unit in Estes Park</strong></td><td class="kw">rent storage unit estes park</td><td>Wk 7</td><td>Answers P2 directly; how-to intent the engines quote.</td></tr>
+        <tr><td class="num">8</td><td><strong>Business & Contractor Storage in Estes Park</strong></td><td class="kw">business storage estes park</td><td>Wk 8</td><td>Commercial, higher-LTV tenants.</td></tr>
+        <tr><td class="num">9</td><td><strong>Seasonal Storage for Mountain Gear (skis, bikes, camping)</strong></td><td class="kw">seasonal storage estes park</td><td>Wk 10</td><td>Recreation-gear cycle unique to the gateway market.</td></tr>
+        <tr><td class="num">10</td><td><strong>Estes Park Storage FAQ (schema hub)</strong></td><td class="kw">storage faq estes park</td><td>Wk 12</td><td>Powers FAQPage schema across the site + AI answers.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top: 56px;">The supporting cluster: 30 FAQ-schema questions</h3>
+    <p style="max-width:780px;">Pre-validated questions (from the live SERP People-Also-Ask and the AI test) to power FAQPage schema across the homepage, service pages and a /faq hub. These are exactly the prompts the AI engines are answering today, including the cost prompt that returned 0/4.</p>
+
+    <div class="three-col" style="margin-top: 22px;">
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Cost &amp; Pricing</h4>
+        <ol style="margin-top:10px; font-size:14px;">
+          <li>How much does a storage unit cost in Estes Park, CO?</li>
+          <li>What is the cheapest storage unit in Estes Park?</li>
+          <li>How much is a 10x10 storage unit in Estes Park?</li>
+          <li>How much is a 5x10 / 10x20 unit?</li>
+          <li>Do you offer a first-month or online discount?</li>
+          <li>Are there admin, lock or insurance fees?</li>
+          <li>Is month-to-month rental available?</li>
+          <li>How much does RV / recreation-gear storage cost?</li>
+          <li>Do you require a deposit?</li>
+          <li>What size unit do I need for a 2-bedroom home?</li>
+        </ol>
+      </div>
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Access &amp; Security</h4>
+        <ol start="11" style="margin-top:10px; font-size:14px;">
+          <li>Do you offer 24/7 access?</li>
+          <li>Are the units drive-up?</li>
+          <li>Is the facility fully gated and paved?</li>
+          <li>Where is Estes Park Storage located?</li>
+          <li>How far is it from Rocky Mountain National Park?</li>
+          <li>Can I access my unit at night?</li>
+          <li>How do I get a gate code?</li>
+          <li>Is the lot lit and monitored?</li>
+          <li>Is the facility locally owned?</li>
+          <li>Do you have climate-controlled units?</li>
+        </ol>
+      </div>
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Renting &amp; Use</h4>
+        <ol start="21" style="margin-top:10px; font-size:14px;">
+          <li>How do I rent a unit in Estes Park?</li>
+          <li>Can I move in the same day?</li>
+          <li>What do I need to bring to rent?</li>
+          <li>Can I store an RV, trailer or recreation gear?</li>
+          <li>Do you offer business / contractor storage?</li>
+          <li>Can I store seasonal mountain gear (skis, bikes)?</li>
+          <li>What can&#x27;t I store in a unit?</li>
+          <li>How do I pay my bill online?</li>
+          <li>How much notice to move out?</li>
+          <li>Do you serve visitors to Rocky Mountain National Park?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="backlinks" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">08 · Backlink Strategy</span></div>
+    <h2>From a handful of links<br>to <em class="display-italic">local authority</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Estes Park Storage has a very small backlink and citation footprint. In a small gateway market you do not need many links, you need the right local citations, all with identical NAP (name, address, phone), so the directories AI engines like Claude read all point to you.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <h3>Tier 1: Local citations & directories (Weeks 1-2)</h3>
+    <p>Lowest friction, highest local-SEO value. Ensure identical NAP everywhere, this is also what grounds Claude on you.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google Business Profile</strong></td><td class="mono" style="font-size:12.5px;">business.google.com</td><td>Optimize: full categories, photos, Q&A, services, weekly posts.</td></tr>
+          <tr><td><strong>Bing Places + Apple Business Connect</strong></td><td class="mono" style="font-size:12.5px;">bingplaces.com</td><td>Two more map surfaces; quick wins.</td></tr>
+          <tr><td><strong>Yelp (claim existing listing)</strong></td><td class="mono" style="font-size:12.5px;">yelp.com</td><td>You already appear in the SERP; claim and complete it.</td></tr>
+          <tr><td><strong>SpareFoot / StorageCafe / RentCafe</strong></td><td class="mono" style="font-size:12.5px;">sparefoot.com</td><td>They take organic + AI slots, so be listed and accurate there too.</td></tr>
+          <tr><td><strong>Estes Park Chamber / Visit Estes Park</strong></td><td class="mono" style="font-size:12.5px;">estesparkchamber.com</td><td>Local + gateway-tourism authority and referral.</td></tr>
+          <tr><td><strong>namesandnumbers / MoversCorp / BBB</strong></td><td class="mono" style="font-size:12.5px;">namesandnumbers.com</td><td>Baseline NAP citations Claude leans on.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:48px;">Tier 2: Local relevance & partnerships (Weeks 3-6)</h3>
+    <p>Referral + link value from the Estes Park and RMNP-gateway community.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Estes Park Trail-Gazette (local paper)</strong></td><td class="mono" style="font-size:12.5px;">eptrail.com</td><td>Local-business feature or seasonal storage tip column.</td></tr>
+          <tr><td><strong>Local movers & real-estate / property managers</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Preferred-vendor cross-links for relocations and second homes.</td></tr>
+          <tr><td><strong>RMNP-area vacation-rental & lodging sites</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Off-season storage referral for owners and long-stay visitors.</td></tr>
+          <tr><td><strong>RV dealers, outfitters & gear shops (seasonal)</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>RV / recreation-gear storage referral partners.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:48px;">Tier 3: Reviews as ranking signal (ongoing)</h3>
+    <p>Your strongest asset. Keep the 4.6-star / 55-review lead compounding.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google reviews drive</strong></td><td class="mono" style="font-size:12.5px;">business.google.com</td><td>One-tap links at move-in; extend the market-leading 55-review count.</td></tr>
+          <tr><td><strong>Yelp + Facebook reviews</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Diversify review sources for AI grounding.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout opp" style="margin-top:32px;"><strong>The shortcut:</strong> in a market this small, 5 to 8 accurate local citations plus a steady review drip will move you further than any link-building campaign, and they double as the directory grounding that pulls Claude back. Get the NAP identical everywhere, then let your review lead compound.</div>
+  </div>
+</section>
+
+<section id="competitive">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">09 · Competitive Landscape</span></div>
+    <h2>Who's in the way<br>and how <em class="display-italic">catchable</em> they are.</h2>
+    <p class="lede" style="margin-top:18px; max-width:740px;">Combined view from the live Estes Park SERP, the local pack, and the brands the AI engines actually cite. Every competitor here is a local independent or U-Haul dealer, there is no national chain, and most share the same thin storage-software template.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Competitor</th><th class="num">Type</th><th class="num">Distance / scope</th><th>Why they matter</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Woodstock Self Storage</strong></td><td class="num">Independent</td><td class="num">Woodstock Dr corridor</td><td>Cited ~11x by AI; same Woodstock Dr corridor as you. Thin same-platform site, but publishes rates. Your top displacement target.</td></tr>
+        <tr><td><strong>Alpine Self Storage</strong></td><td class="num">Independent</td><td class="num">Estes Park</td><td>Cited ~11x by AI. Strong AI presence on the thin template; catchable with schema + content.</td></tr>
+        <tr><td><strong>Comanche Storage</strong></td><td class="num">Independent</td><td class="num">Estes Park</td><td>Cited ~9x. Same stock template; no schema, no depth.</td></tr>
+        <tr><td><strong>Skyview Storage (U-Haul)</strong></td><td class="num">U-Haul dealer</td><td class="num">Estes Park</td><td>Cited ~9x; U-Haul ecosystem visibility and RV/vehicle storage.</td></tr>
+        <tr><td><strong>Estes Valley Self Storage</strong></td><td class="num">Independent</td><td class="num">Estes Park</td><td>#2 in the local pack (4.0★/4), #2 organic. Lower reviews than you; closest map rival.</td></tr>
+        <tr><td><strong>Max / Northend / Fish Creek / Lake View / Tiny Town</strong></td><td class="num">Independent</td><td class="num">Estes Park area</td><td>Long tail of small independents; GPT favors Fish Creek. Each thin and catchable.</td></tr>
+        <tr><td><strong>Aggregators (SpareFoot, RentCafe, StorageCafe, Yelp)</strong></td><td class="num">Directory</td><td class="num">national</td><td>Not facilities, but they take organic slots and AI citations, and feed Claude. Beat them with deeper local pages + schema.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="quote" style="margin-top: 56px;">
+      "Estes Park Storage owns the #1 local-pack slot, the #1 organic slot, and the most reviews in the market, on the weakest website. Its rivals all run the same thin storage-software template with no schema, so whoever ships LocalBusiness markup, on-page pricing and the RMNP-gateway content first does not just defend the lead, they make it unassailable across every AI engine."
+      <cite>DataForSEO SERP + local pack + AI-citation composite, May 2026</cite>
+    </div>
+  </div>
+</section>
+
+<section id="llm" class="dark">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow" style="color:#FFD8AC;">10 · AI / LLM Visibility</span></div>
+    <h2 style="color:#FFFBF1;">14 citations.<br>Out of <em style="color:#F4A8A2; font-style:italic;">twenty</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px; color:#D8CDB5;">We tested the flagship models powering AI search today: <strong>Claude Sonnet 4.6</strong>, <strong>Gemini 3.1 Pro</strong>, <strong>GPT-5.5</strong> and <strong>Sonar-Reasoning-Pro</strong> (Perplexity). Five high-intent prompts x four models = twenty live web-search calls. Estes Park Storage was cited <strong>14 times</strong>, and when cited it is usually named the "best overall" facility, but the cost prompt returned <strong>0 of 4</strong>, and Claude cited you only twice.</p>
+
+    <div class="ornament" style="color:#FFD8AC;">· · ·</div>
+
+    <div style="background: #1A1F26; border: 1px solid #3A3530; border-radius: var(--r-lg); padding: 32px 34px; margin-bottom: 56px;">
+      <div style="display:flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; flex-wrap: wrap; gap: 12px;">
+        <h3 style="color:#FFFBF1;">The 5 prompts we sent (verbatim)</h3>
+        <span class="small" style="color:#76705F; font-family: var(--mono);">user_prompt · web_search=true · same string to all 4 models</span>
+      </div>
+      <ol style="color:#FFE8A8; font-family: var(--serif); font-size: 19px; line-height: 1.7; padding-left: 1.4em; margin: 0;">
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Best self storage in Estes Park, CO"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How do I rent a storage unit in Estes Park, Colorado?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Drive-up storage units in Estes Park, CO"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How much does a storage unit cost in Estes Park, CO?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Self storage near Rocky Mountain National Park, Colorado"</span></li>
+      </ol>
+      <p class="small" style="color:#76705F; margin-top: 22px; font-size: 13px;">Why these five: each maps to a real Estes Park query with live demand (discovery, how-to, drive-up, price, RMNP gateway). The set is designed to be re-run every 30 days to track citation-rate movement.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 style="color:#FFFBF1;">The 5 prompts × 4 models matrix</h3>
+        <div style="background:#1A1F26; border-radius: var(--r-md); padding: 22px 22px; margin-top: 14px; font-size:13.5px; color:#D8CDB5;">
+          <table style="background:transparent; border:0; color:#D8CDB5;">
+            <thead><tr style="background:transparent;">
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 10px; font-size:11px;">Prompt</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Claude<br>Sonnet 4.6</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Gemini<br>3.1 Pro</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">GPT-5.5</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Sonar<br>R-Pro</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Best self storage in Estes Park, CO</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">How do I rent a storage unit in Estes Park</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Drive-up storage units in Estes Park, CO</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">How much does a storage unit cost in Estes Park</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;"><strong style="color:#FFFBF1;">Self storage near Rocky Mountain National Park</strong></td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small" style="color:#76705F; margin-top:12px;">Run May 30, 2026 via DataForSEO AI Optimization API with web_search=true. Per model: Gemini 4/5, GPT-5.5 4/5, Sonar 4/5, Claude 2/5. Total ~$1.20 across 20 calls.</p>
+      </div>
+
+      <div>
+        <h3 style="color:#FFFBF1;">Who AI cites instead</h3>
+        <p style="color:#D8CDB5; font-size:14.5px; margin-bottom:14px;">Mentions across all 20 calls, the brands you are competing with for AI visibility.</p>
+        <div style="background:#1A1F26; border-radius: var(--r-md); padding: 18px 22px; font-size:14px;">
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span><strong style="color:#FFE8A8;">Estes Park Storage</strong></span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill green" style="width:100%"></div></div>
+            <span class="bar-val" style="color:#FFE8A8;"><strong>14×</strong></span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Woodstock Self Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:79%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">11×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Alpine Self Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:79%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">11×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Comanche Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:64%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">9×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Skyview Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:64%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">9×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Estes Valley Self Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:50%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">7×</span>
+          </div>
+        </div>
+        <p class="small" style="color:#76705F; margin-top:12px;">Woodstock and Alpine are cited nearly as often as you. Claude Sonnet 4.6, which leans hardest on directories and structured data, cited Estes Park Storage only twice, and no model cited you on the cost prompt. Missing LocalBusiness/FAQ schema and on-page pricing are the likely reasons.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 56px; background: linear-gradient(135deg, #1F2630 0%, #1A1F26 100%); border: 1px solid #3A3530; border-radius: var(--r-lg); padding: 36px;">
+      <div style="display:flex; gap:24px; align-items:flex-start;">
+        <div style="font-family: var(--serif); font-size:78px; line-height:1; color:#FFE8A8; font-style:italic; font-variation-settings: 'SOFT' 100, 'WONK' 1;">14</div>
+        <div>
+          <div style="margin-bottom: 8px;"><span class="badge opp">THE 70% YOU ALREADY OWN</span></div>
+          <h3 style="color:#FFFBF1; margin-bottom: 12px;">You are already the "best overall" pick. The job is to never be left off the list.</h3>
+          <p style="color:#D8CDB5; font-size:15.5px;">GPT-5.5 called Estes Park Storage "my pick for best overall self storage in Estes Park, CO" and led with your address, gated + paved + drive-up + 24/7 features. Perplexity ranked you #1 on the discovery prompt. When the engines cite you, they usually put you first.</p><p style="color:#D8CDB5; font-size:15.5px; margin-top:12px;">The pattern is clear: where there is text and structure to quote, you win; where there is not, you vanish. The cost prompt is <strong>0 of 4</strong> because there is no price on your site, and Claude is <strong>2 of 5</strong> because it leans on directories and your thin page gives it nothing. Ship <code class="mono" style="background:#2C2823; padding:2px 6px; border-radius:4px;">SelfStorage</code> + <code class="mono" style="background:#2C2823; padding:2px 6px; border-radius:4px;">FAQPage</code> schema, publish a price table and add the RMNP-gateway content, and you move from <strong>14 of 20</strong> to <strong>18+ of 20</strong>, with the cost prompt and Claude recovered.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top: 56px;">
+      <div>
+        <h3 style="color:#FFFBF1;">Why this matters now</h3>
+        <p style="color:#D8CDB5;">AI search (ChatGPT, Perplexity, Gemini, Google AI Overviews) is displacing a growing share of "near me" and gateway-tourism storage discovery. The four models tested are exactly what powers those surfaces. You are already the most-cited facility, the risk is the two gaps: the cost prompt where you score nothing, and Claude, where competitors on the same thin template still beat you.</p>
+      </div>
+      <div>
+        <h3 style="color:#FFFBF1;">What earns citations</h3>
+        <ol style="color:#D8CDB5;">
+          <li><strong>SelfStorage + LocalBusiness schema</strong> with aggregateRating, the signal Claude rewards and no rival has.</li>
+          <li><strong>FAQPage schema</strong> answering cost, access and size questions in plain prose, the format LLMs extract.</li>
+          <li><strong>An on-page price table</strong> the engines can quote, the single fix that closes the 0/4 cost prompt.</li>
+          <li><strong>A ~600-word homepage + service pages</strong> so Claude has text to ground on instead of directories.</li>
+          <li><strong>An RMNP-gateway page</strong> ("minutes from Rocky Mountain National Park") for the P5 prompt.</li>
+          <li><strong>Consistent NAP + sameAs</strong> across the directories Claude reads, all pointing back to you.</li>
+        </ol>
+        <h3 style="margin-top: 28px; color:#FFFBF1;">90-day LLM target</h3>
+        <p style="color:#D8CDB5;">Re-run this same 5x4 grid in 90 days. Move from <strong>14 of 20</strong> to <strong>18+ of 20</strong>, with two specific KPIs: take the cost prompt from <strong>0/4</strong> to 3/4 by publishing pricing, and take Claude from <strong>2/5</strong> to 4/5 by shipping schema and content depth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">11 · 90-Day Roadmap</span></div>
+    <h2>What happens<br>in the next <em class="display-italic">90 days</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Three sprints. Structured-data and on-page work first (it unblocks both Google and AI and is uncontested), then pricing and content depth, then authority. Each item has a priority tag (P0 = must-ship).</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="roadmap">
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 0-30</div>
+        <h3>Foundation</h3>
+        <p class="small">Ship the structured data and on-page basics no competitor has.</p>
+        <ul>
+          <li><div class="check"></div><span>SelfStorage + LocalBusiness schema + aggregateRating</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>FAQPage schema on homepage + /faq</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Rewrite title + meta (Estes Park + brand)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Add og:image sitewide</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Expand homepage past ~600 words (drive-up, gated, 24/7, RMNP)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Optimize GBP listing (categories, photos, posts)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Alt text on all images</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Fix best-practices (0.77) / console hygiene</span><span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 31-60</div>
+        <h3>Pricing &amp; pages</h3>
+        <p class="small">Close the cost gap and add the seasonal/gateway depth.</p>
+        <ul>
+          <li><div class="check"></div><span>Publish /prices rate table + Offer/priceRange schema</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Build /drive-up + /rv-recreation + /storage-near-rmnp pages</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Service + amenityFeature schema on new pages</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Add cost + size FAQ answers (powers P4 AI prompt)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Add BreadcrumbList schema</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>NAP cleanup across directories Claude reads</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Tier 1 local citations (chamber, Visit Estes Park, directories)</span><span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 61-90</div>
+        <h3>Authority &amp; AI</h3>
+        <p class="small">Compound the gains and re-measure.</p>
+        <ul>
+          <li><div class="check"></div><span>Add Review schema embedding top Google reviews</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Publish remaining content pieces (off-season, seasonal gear)</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Tier 2 partnerships (movers, rentals, RV/outfitters)</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Re-run flagship 5x4 LLM grid, target 18+/20</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Re-check cost prompt (target 3/4) + Claude (target 4/5)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Re-run Lighthouse, keep Perf 0.9+, lift best-practices</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Re-check local pack + organic rank for core terms</span><span class="pri">P0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Targets at 90 days</h3>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Organic rank (head)</div>
+        <div class="kpi-value">#1</div>
+<div class="kpi-trend up">= defend #1</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Google reviews</div>
+        <div class="kpi-value">75+</div>
+<div class="kpi-trend up">↑ from 55</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Ranked keywords</div>
+        <div class="kpi-value">35+</div>
+<div class="kpi-trend up">↑ from ~17</div>
+      </div>
+      <div class="kpi cta">
+        <div class="kpi-label">LLM citations</div>
+        <div class="kpi-value">18<small>/20</small></div>
+<div class="kpi-trend up">↑ from 14</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">AI cost prompt</div>
+        <div class="kpi-value">3<small>/4</small></div>
+<div class="kpi-trend up">↑ from 0/4</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Claude citations</div>
+        <div class="kpi-value">4<small>/5</small></div>
+<div class="kpi-trend up">↑ from 2/5</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Schema types</div>
+        <div class="kpi-value">6+</div>
+<div class="kpi-trend up">↑ from 1</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Local citations</div>
+        <div class="kpi-value">8+</div>
+<div class="kpi-trend up">↑ from ~2</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="appendix">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">Appendix</span></div>
+    <h2>Methodology &amp; <em class="display-italic">sources</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <details class="acc" open>
+      <summary>Data sources used in this audit</summary>
+      <div class="body">
+        <ul>
+          <li><strong>DataForSEO</strong>, Lighthouse mobile audit, on-page parse, live SERP scans (US, en), Labs (ranked keywords, competitors, keyword ideas, keyword overview), Google Trends.</li>
+          <li><strong>Playwright</strong>, live crawl at desktop 1440 / tablet 768 / mobile 375. H1-H4 extraction, meta + og + twitter + JSON-LD inspection, alt text counts, tech stack detection.</li>
+          <li><strong>Perplexity + Brave Search</strong>, industry trends, local competitor landscape, seasonal demand, backlink prospecting, PAA harvesting.</li>
+          <li><strong>Flagship LLM citation test</strong>, 5 prompts × 4 frontier models = 20 live calls via DataForSEO AI Optimization, every call with web_search enabled. Models: Claude Sonnet 4.6, Gemini 3.1 Pro, GPT-5.5, Sonar-Reasoning-Pro. The verbatim prompts:
+            <ol style="margin-top:6px; font-size:14.5px;">
+              <li><code class="mono">"Best self storage in Estes Park, CO"</code></li>
+              <li><code class="mono">"How do I rent a storage unit in Estes Park, Colorado?"</code></li>
+              <li><code class="mono">"Drive-up storage units in Estes Park, CO"</code></li>
+              <li><code class="mono">"How much does a storage unit cost in Estes Park, CO?"</code></li>
+              <li><code class="mono">"Self storage near Rocky Mountain National Park, Colorado"</code></li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Files produced as part of this engagement</summary>
+      <div class="body"><ul>
+          <li><code class="mono">audit/RESEARCH-SUMMARY.md</code> · consolidated findings</li>
+          <li><code class="mono">audit/dataforseo/</code> · ranked keywords, SERP, Lighthouse, keyword data</li>
+          <li><code class="mono">screenshots/01-homepage-desktop.png</code> · live crawl capture</li>
+          <li><code class="mono">research/llm-flagship-run/</code> · 20 raw AI responses + citation tally</li>
+          <li>This <strong>HTML report</strong> at <code class="mono">report/index.html</code></li>
+      </ul></div>
+    </details>
+
+    <details class="acc">
+      <summary>What we deliberately did NOT do</summary>
+      <div class="body"><ul>
+          <li>We did not deploy any change to the live site, every fix is a costed recommendation.</li>
+          <li>We did not crawl every URL, the high-impact homepage and the missing-page gaps are covered.</li>
+          <li>We did not claim or modify the Google Business Profile, that should happen with brand permissions.</li>
+          <li>We did not buy or place any backlinks, citations are recommendations.</li>
+      </ul></div>
+    </details>
+
+    <details class="acc">
+      <summary>Limitations &amp; caveats</summary>
+      <div class="body"><ul>
+          <li>DataForSEO Labs shows ~17 ranked keywords, most of them the 6 head terms plus an out-of-market tail; very small sites can rank for more long-tail terms than the index captures.</li>
+          <li>Lighthouse is a single lab run; field (CrUX) data may differ. Re-run after fixes.</li>
+          <li>The LLM test is a 20-call sample (5 prompts x 4 flagship models). Re-run monthly with the same prompts so the trend is comparable.</li>
+          <li>Google review counts and local-pack order shift continuously; figures captured May 30, 2026.</li>
+      </ul></div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mark">thinkflowlabs</div>
+    <p style="margin-top: 18px;">Prepared for estesparkstorage.com · May 30, 2026</p>
+    <p class="small" style="margin-top:6px;">Open this file in your browser. Use Cmd/Ctrl+P to export a printable PDF.</p>
+  </div>
+</footer>
+
+</body>
+</html>

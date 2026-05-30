@@ -1,0 +1,1353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Slate River Storage SEO Audit &amp; Growth Strategy · May 2026</title>
+<meta name="description" content="A technical, content, competitive and AI-visibility SEO audit of slateriverstorage.com prepared by ThinkFlowLabs, with quick wins, a schema refinement plan, local keyword strategy, and a 90-day roadmap to win GPT-5.5 and page-one organic." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --ink:        #0E1014;
+    --ink-2:      #1F2630;
+    --muted:      #5E6675;
+    --line:       #E6DFD2;
+    --line-2:     #EFE7D8;
+    --cream:      #FBF6EB;
+    --cream-2:    #F4ECD9;
+    --paper:      #FFFBF1;
+    --coral:      #46698C;
+    --coral-dk:   #324C66;
+    --coral-sft:  #E6EDF4;
+    --gold:       #C89A4A;
+    --gold-sft:   #F6E7C7;
+    --green:      #1F7A6A;
+    --green-sft:  #DAEEE7;
+    --amber:      #B45309;
+    --amber-sft:  #FFE9BD;
+    --red-bg:     #FFEBE9;
+
+    --r-sm: 4px; --r-md: 10px; --r-lg: 18px; --r-xl: 26px;
+    --shadow-sm: 0 1px 0 rgba(20,18,12,.06);
+    --shadow-md: 0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --shadow-lg: 0 30px 80px -30px rgba(60,40,18,.36);
+
+    --serif:      "Fraunces", "Times New Roman", serif;
+    --sans:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:       "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--coral-dk); text-decoration: none; border-bottom: 1px solid rgba(40,60,90,.22); }
+  a:hover { border-bottom-color: var(--coral-dk); }
+
+  /* ============ LAYOUT ============ */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); position: relative; }
+  section.alt { background: var(--paper); }
+  section.dark { background: var(--ink); color: #F2EAD7; border-top-color: #2A2520; }
+  section.dark a { color: #FFD8AC; border-bottom-color: rgba(255,216,172,.3); }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.012em; line-height: 1.08; margin: 0; }
+  h1 { font-size: clamp(48px, 8vw, 96px); font-weight: 380; letter-spacing: -.03em; }
+  h2 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 400; letter-spacing: -.022em; }
+  h3 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.18; }
+  h4 { font-size: 19px; font-weight: 600; line-height: 1.3; font-family: var(--sans); letter-spacing: -.005em; }
+  .display-italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 500; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--coral-dk);
+  }
+  p { margin: 0 0 1em; }
+  p.lede { font-size: 21px; line-height: 1.55; color: var(--ink-2); }
+  ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
+  ul li, ol li { margin-bottom: .35em; }
+  strong { font-weight: 600; }
+  .mono { font-family: var(--mono); font-size: .9em; }
+  .small { font-size: 13px; color: var(--muted); }
+
+  /* ============ HERO ============ */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #E6EDF4 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-top: 0;
+    padding: 56px 0 96px;
+    overflow: hidden; position: relative;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%2346698C' opacity='.06'/></svg>");
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; position: relative; }
+  .hero h1 { margin-bottom: .18em; }
+  .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .hero .meta { font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+  .hero .by-line { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-2); margin-top: 36px; font-size: 14px; }
+  .hero .by-line span b { color: var(--ink); font-weight: 600; }
+  .hero-side {
+    background: white; border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 30px; box-shadow: var(--shadow-md);
+    font-size: 14px;
+  }
+  .hero-side h4 { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-family: var(--sans); margin-bottom: 16px; font-weight: 600; }
+  .hero-side dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; }
+  .hero-side dt { color: var(--muted); }
+  .hero-side dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .hero-side .severity-strip { margin: 22px -30px -30px; padding: 18px 30px; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); color: white; border-radius: 0 0 var(--r-lg) var(--r-lg); display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ TLDR (Executive Summary) ============ */
+  .tldr { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; }
+  .tldr h2 em { font-style: italic; color: var(--coral); font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .tldr-bullets { font-size: 17px; line-height: 1.6; }
+  .tldr-bullets li { margin-bottom: 16px; padding-left: 4px; }
+  .tldr-bullets li::marker { color: var(--coral); }
+  .verdict-card {
+    background: var(--ink); color: #F2EAD7;
+    border-radius: var(--r-lg); padding: 36px;
+    position: sticky; top: 24px;
+  }
+  .verdict-card h4 { color: #F6E7C7; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; font-weight: 500; }
+  .verdict-card p { font-size: 15px; line-height: 1.65; color: #D8CDB5; }
+  .verdict-card .score-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--mono); font-size: 12px; }
+  .verdict-card .score-row b { color: white; font-size: 18px; }
+  @media (max-width: 820px) { .tldr { grid-template-columns: 1fr; } .verdict-card { position: static; } }
+
+  /* ============ KPI GRID ============ */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 22px 18px; position: relative; overflow: hidden;
+  }
+  .kpi-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+  .kpi-value small { font-size: 17px; color: var(--muted); margin-left: 4px; font-family: var(--sans); font-weight: 500; }
+  .kpi-trend { font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+  .kpi-trend.up { color: var(--green); }
+  .kpi-trend.dn { color: var(--coral-dk); }
+  .kpi.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; } .kpi-value { font-size: 36px; } }
+
+  /* ============ FINDINGS CARDS ============ */
+  .findings { display: grid; gap: 24px; }
+  .finding {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 36px; display: grid; grid-template-columns: 88px 1fr; gap: 28px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+  }
+  .finding .num {
+    font-family: var(--serif); font-size: 78px; font-weight: 400; line-height: 1; color: var(--coral); letter-spacing: -.04em; opacity: .9;
+  }
+  .finding h3 { margin-bottom: 8px; }
+  .finding .impact-line { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; font-family: var(--mono); letter-spacing: .02em; }
+  .finding p { font-size: 16px; }
+  .finding .fix {
+    background: var(--cream-2); padding: 18px 22px; border-radius: var(--r-md);
+    margin-top: 18px; border-left: 3px solid var(--coral); font-size: 15.5px;
+  }
+  .finding .fix b { color: var(--ink); }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+  }
+  .badge.crit { background: var(--coral); color: white; }
+  .badge.high { background: var(--amber-sft); color: var(--amber); }
+  .badge.med { background: var(--gold-sft); color: var(--gold); }
+  .badge.opp { background: var(--green-sft); color: var(--green); }
+  .badge.brand { background: var(--ink); color: var(--cream); }
+  @media (max-width: 820px) {
+    .finding { grid-template-columns: 1fr; padding: 26px; }
+    .finding .num { font-size: 56px; }
+  }
+
+  /* ============ DATA TABLES ============ */
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14.5px;
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  }
+  th { text-align: left; font-weight: 600; padding: 14px 16px; background: var(--cream-2); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  td.kw { font-weight: 500; }
+  td .badge { font-size: 10px; padding: 3px 8px; }
+
+  .table-scroll { overflow-x: auto; }
+
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #F4C7C5; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
+  /* ============ PILLS / CALLOUTS ============ */
+  .callout {
+    background: var(--coral-sft); border: 1px solid #F4C7C5;
+    border-radius: var(--r-md); padding: 22px 26px;
+    font-size: 15.5px; color: var(--coral-dk); margin: 24px 0;
+  }
+  .callout.opp { background: var(--green-sft); border-color: #BFE0D6; color: #135548; }
+  .callout.warn { background: var(--amber-sft); border-color: #F2D5A0; color: var(--amber); }
+  .callout strong { color: inherit; }
+
+  /* ============ TWO-COL ============ */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ============ HIERARCHY CARDS ============ */
+  .page-card {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+  .page-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .page-card-head h4 { font-family: var(--mono); font-size: 14px; color: var(--ink); letter-spacing: 0; word-break: break-all; }
+  .pc-issues { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pc-issue { font-size: 11.5px; padding: 3px 9px; border-radius: 4px; background: var(--coral-sft); color: var(--coral-dk); font-weight: 600; }
+  .pc-issue.ok { background: var(--green-sft); color: var(--green); }
+  .pc-issue.warn { background: var(--amber-sft); color: var(--amber); }
+
+  /* ============ ROADMAP ============ */
+  .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .road-col {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 28px;
+  }
+  .road-col .label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 12.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--coral-dk); margin-bottom: 6px; }
+  .road-col .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--coral); }
+  .road-col h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 18px; }
+  .road-col ul { list-style: none; padding: 0; }
+  .road-col li { padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .road-col li:last-child { border-bottom: 0; }
+  .road-col li .check { width: 18px; height: 18px; border: 1.5px solid var(--line); border-radius: 4px; margin-top: 2px; }
+  .road-col li .pri { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; align-self: start; }
+  @media (max-width: 1000px) { .roadmap { grid-template-columns: 1fr; } }
+
+  /* ============ SCHEMA SNIPPETS ============ */
+  pre.code {
+    background: #1A1F26; color: #DCD0AE; padding: 22px 26px;
+    border-radius: var(--r-md); font-family: var(--mono); font-size: 13px;
+    overflow-x: auto; line-height: 1.55; margin: 18px 0;
+  }
+  .code .k { color: #FFD89B; }
+  .code .s { color: #B5DCC7; }
+  .code .c { color: #6E6452; font-style: italic; }
+
+  /* ============ FOOTER ============ */
+  footer { padding: 56px 0 36px; background: var(--ink); color: #BAB099; text-align: center; }
+  footer .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 28px; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  footer .small { color: #76705F; }
+
+  /* ============ STICKY NAV ============ */
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 246, 235, 0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  .topnav .inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .topnav a { color: var(--ink); border-bottom: 0; font-size: 13px; font-weight: 500; }
+  .topnav .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 20px; font-variation-settings: "SOFT" 100, "WONK" 1; border: 0; }
+  .topnav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .topnav nav { display: none; } }
+
+  /* ============ HORIZONTAL BAR CHART ============ */
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 80px; gap: 14px; align-items: center; padding: 8px 0; font-size: 14px; }
+  .bar-bg { height: 22px; background: var(--cream-2); border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); }
+  .bar-fill.alt { background: linear-gradient(90deg, var(--gold) 0%, #A77F35 100%); }
+  .bar-fill.green { background: linear-gradient(90deg, #2C9D8B 0%, var(--green) 100%); }
+  .bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; text-align: right; color: var(--ink-2); }
+  @media (max-width: 600px) { .bar-row { grid-template-columns: 120px 1fr 60px; font-size: 13px; } }
+
+  /* ============ DIVIDERS ============ */
+  .ornament { text-align: center; margin: 48px 0; color: var(--coral); font-family: var(--serif); font-size: 22px; letter-spacing: .4em; opacity: .7; }
+  .section-eyebrow { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .section-eyebrow .bar { width: 36px; height: 1px; background: var(--coral); }
+
+  /* ============ MISC ============ */
+  .quote {
+    border-left: 3px solid var(--coral); padding: 12px 0 12px 26px;
+    font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink-2);
+    font-style: italic; margin: 28px 0;
+  }
+  .quote cite { display: block; margin-top: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: normal; letter-spacing: .04em; }
+
+  details.acc { background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 22px; margin-bottom: 10px; }
+  details.acc summary { cursor: pointer; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.acc summary::after { content: "+"; font-family: var(--serif); font-size: 22px; color: var(--coral); }
+  details.acc[open] summary::after { content: "−"; }
+  details.acc[open] { box-shadow: var(--shadow-md); }
+  details.acc .body { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: white; }
+    section { padding: 28px 0; page-break-inside: avoid; }
+    .topnav, .hero::before { display: none; }
+    .finding, .road-col, table { box-shadow: none; }
+    a { color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="wrap inner">
+    <a href="#top" class="mark">slate river storage · seo audit</a>
+    <nav>
+      <a href="#tldr">Summary</a>
+      <a href="#snapshot">Snapshot</a>
+      <a href="#critical">Critical</a>
+      <a href="#quickwins">Quick Wins</a>
+      <a href="#hierarchy">URL Catalog</a>
+      <a href="#keywords">Keywords</a>
+      <a href="#schema">Schema</a>
+      <a href="#content">Content</a>
+      <a href="#backlinks">Backlinks</a>
+      <a href="#llm">AI/LLM</a>
+      <a href="#roadmap">90-Day Plan</a>
+    </nav>
+  </div>
+</div>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="meta">SEO AUDIT &amp; GROWTH STRATEGY &nbsp;·&nbsp; CONFIDENTIAL</div>
+      <h1>How <em>Slate River Storage</em><br>turns a strong local listing<br>into <em>default</em> storage search.</h1>
+      <p class="lede" style="margin-top:32px; max-width:600px;">
+        A 360° technical, content, competitive and AI-visibility audit of <strong>slateriverstorage.com</strong>, built from a live Playwright crawl, DataForSEO Labs ranked-keyword and SERP data, a mobile Lighthouse audit, and a flagship 5-prompt x 4-model AI-citation test. The technical foundation here is genuinely strong, so this report is about the off-page and AI gaps that stand between you and owning Crested Butte storage search.
+      </p>
+      <div class="by-line">
+        <span>Prepared by <b>ThinkFlowLabs</b></span>
+        <span>·</span>
+        <span>Issued <b>May 30, 2026</b></span>
+        <span>·</span>
+        <span>Market <b>Crested Butte, Colorado</b></span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h4>AT-A-GLANCE</h4>
+      <dl>
+        <dt>Local pack rank (head term)</dt><dd>#2</dd>
+        <dt>Organic rank, head term</dt><dd>#7</dd>
+        <dt>Ranked keywords (US, in-market)</dt><dd>~5</dd>
+        <dt>Google reviews</dt><dd>6 (5.0★, most in pack)</dd>
+        <dt>Lighthouse Perf (mobile)</dt><dd>0.82</dd>
+        <dt>Mobile LCP</dt><dd>2.9s</dd>
+        <dt>Schema types live</dt><dd>rich (SelfStorage + FAQ + Offer)</dd>
+        <dt>LLM citations (5x4 grid)</dt><dd>14 of 20</dd>
+      </dl>
+      <div class="severity-strip">
+        <span>Overall health</span>
+        <span>🟡 Strong base, off-page gap</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="tldr" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">Executive Summary</span></div>
+    <div class="tldr">
+      <div>
+        <h2>The situation in <em class="display-italic">60 seconds</em>.</h2>
+        <p class="lede" style="margin-top:24px;">
+          Slate River Storage is the best-built and best-reviewed facility in its market: rich schema is already live, Core Web Vitals are nearly clean, and AI engines cite it in <strong>14 of 20</strong> flagship answers. The catch is entirely off-page and AI-shaped, GPT-5.5 cites it in <strong>0 of 5</strong> prompts, the backlink footprint is two referring domains, and it does not rank top-20 organically for its own core term. The fixes are off-site authority, content depth and a single Core Web Vitals tune, not a technical rebuild.
+        </p>
+        <ol class="tldr-bullets" style="margin-top:24px;">
+          <li><strong>GPT-5.5 cites you zero times out of five.</strong> Claude (5/5) and Gemini (5/5) name Slate River in every prompt, and Perplexity in 4/5, but GPT-5.5, the highest-traffic AI assistant, defaults to CB Self Storage and other operators and never mentions you. That single blind spot is the headline gap in this report.</li>
+          <li><strong>Your technical foundation is already excellent.</strong> The homepage ships <code class="mono">SelfStorage</code> LocalBusiness, a 7-question <code class="mono">FAQPage</code>, <code class="mono">Offer</code> x3, <code class="mono">Service</code>, geo, hours and <code class="mono">BreadcrumbList</code>, with a correct canonical and a working og:image. CLS is a near-perfect 0.008. Most audits start by fixing schema; you are past that.</li>
+          <li><strong>The off-page footprint is tiny.</strong> Only ~2 referring domains and 5 backlinks total, and the site does not crack the top 20 organically for "self storage crested butte co" (it relies on the Google local pack at #2). The few high-volume "ranked" terms are vanity matches to unrelated out-of-state "Slate Storage" brands, not real traffic.</li>
+          <li><strong>Reviews are your single strongest asset, lean in.</strong> Slate River holds 5.0 from 6 reviews, the most of any facility in the local pack, and Perplexity called it "best-reviewed, most established." Doubling review volume reinforces both the local pack and the way LLMs order their "best storage" answers.</li>
+          <li><strong>Most of the upside is off-site, not a rebuild.</strong> The site is thin (~577 words) with no dedicated location/service pages, and mobile LCP at 2.9s caps Performance at 0.82. Beyond that one CWV tune, the work is content depth, local citations and earning your way into GPT-5.5.</li>
+        </ol>
+      </div>
+      <div class="verdict-card">
+        <h4>Our verdict</h4>
+        <p>Slate River Storage has already done what most facilities never do, it ships clean structured data, holds the strongest review signal in its local pack, and is cited by three of the four flagship AI models. The remaining gap is authority and reach: a thin backlink profile, no organic rank for the money term, and a complete miss in GPT-5.5.</p>
+        <p>Tune the one weak Core Web Vital (LCP) and deepen the homepage in <strong>30 days</strong>. Run a review drive and build location/service landing pages in <strong>60 days</strong>. Earn 8 to 12 local citations and re-measure the AI grid in <strong>90 days</strong>. We project Slate River can move from no organic top-20 rank to a top-3 organic baseline for its core terms, and from 14 of 20 to 18+ of 20 AI citations, with GPT-5.5 being the clearest single KPI.</p>
+        <div class="score-row">
+          <span>HEALTH&nbsp; <b>66/100</b></span>
+          <span>UPSIDE&nbsp; <b>+150%</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="snapshot">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">01 · State of the Site</span></div>
+    <h2>What the search data<br><em class="display-italic">actually</em> says.</h2>
+    <p class="lede" style="margin-top:18px; max-width: 720px;">Slate River Storage is well-built and well-reviewed, but under-reached. The on-page foundation is excellent; the off-page authority and organic footprint are thin, and one AI model cannot see you at all. The gap between the build quality and the reach is the entire opportunity.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Local pack rank</div>
+        <div class="kpi-value">#2</div>
+<div class="kpi-trend up">↑ most-reviewed in pack</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Organic rank (head term)</div>
+        <div class="kpi-value">absent</div>
+<div class="kpi-trend dn">no top-20 organic</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Referring domains</div>
+        <div class="kpi-value">~2</div>
+<div class="kpi-trend dn">5 backlinks total</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Google reviews</div>
+        <div class="kpi-value">6</div>
+<div class="kpi-trend up">↑ 5.0★, most in pack</div>
+      </div>
+      <div class="kpi cta">
+        <div class="kpi-label">LLM citations</div>
+        <div class="kpi-value">14<small>/20</small></div>
+<div class="kpi-trend dn">GPT-5.5 = 0/5</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Lighthouse Perf</div>
+        <div class="kpi-value">0.82</div>
+<div class="kpi-trend dn">LCP 2.9s caps it</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Schema</div>
+        <div class="kpi-value">rich</div>
+<div class="kpi-trend up">↑ SelfStorage + FAQ live</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Homepage words</div>
+        <div class="kpi-value">577</div>
+<div class="kpi-trend dn">thin content</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">The local terms you should own</h3>
+    <p style="max-width:780px; margin-top: 12px;">These are real Crested Butte and Gunnison Valley searches with live demand. You hold the local pack but do not yet rank organically for the head term, and you sit on page 4-5 for the Gunnison cluster. Each is winnable with content depth, a dedicated page, or off-page authority.</p>
+
+    <div class="table-scroll" style="margin-top: 22px;">
+      <table>
+        <thead><tr>
+          <th>Local keyword</th>
+          <th class="num">Volume / mo</th>
+          <th class="num">KD</th>
+          <th class="num">Current rank</th>
+          <th>Status</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="kw">self storage crested butte co</td><td class="num">210+</td><td class="num">low</td><td class="num">#2 pack / no org</td><td><span class="badge crit">NO ORG RANK</span></td></tr>
+          <tr><td class="kw">gunnison co storage units</td><td class="num">210</td><td class="num">low</td><td class="num">#41</td><td><span class="badge crit">PAGE 4</span></td></tr>
+          <tr><td class="kw">storage units gunnison</td><td class="num">210</td><td class="num">low</td><td class="num">#46</td><td><span class="badge crit">PAGE 5</span></td></tr>
+          <tr><td class="kw">gunnison storage</td><td class="num">210</td><td class="num">low</td><td class="num">#43</td><td><span class="badge crit">PAGE 5</span></td></tr>
+          <tr><td class="kw">gunnison secure storage</td><td class="num">70</td><td class="num">low</td><td class="num">#31</td><td><span class="badge high">PAGE 4</span></td></tr>
+          <tr><td class="kw">drive-up storage crested butte</td><td class="num">70+</td><td class="num">low</td><td class="num">pack only</td><td><span class="badge opp">NO PAGE</span></td></tr>
+          <tr><td class="kw">rv storage gunnison valley</td><td class="num">50+</td><td class="num">low</td><td class="num">absent</td><td><span class="badge opp">NO PAGE</span></td></tr>
+          <tr><td class="kw">storage units silt co</td><td class="num">30</td><td class="num">0.56</td><td class="num">#79</td><td><span class="badge med">out of market</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:64px;">Storage demand in the Gunnison Valley is steady and seasonal</h3>
+    <p style="max-width:780px; margin-top: 12px;">Self-storage search in a high-country resort market like Crested Butte is stable year-round with a strong seasonal layer, ski gear in winter, bikes and RVs in summer, second-home turnover in shoulder seasons. The demand is permanent and local; the winner is whoever has the cleanest local signals, the most reviews, and the deepest local content.</p>
+
+    <div style="margin-top: 22px; background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 28px;">
+      <div class="bar-row"><span>self storage crested butte co</span>
+        <div class="bar-bg"><div class="bar-fill " style="width:68%"></div></div>
+        <span class="bar-val">210+/mo</span>
+      </div>
+      <div class="bar-row"><span>gunnison valley storage cluster</span>
+        <div class="bar-bg"><div class="bar-fill " style="width:72%"></div></div>
+        <span class="bar-val">210/mo</span>
+      </div>
+      <div class="bar-row"><span>storage near me (local)</span>
+        <div class="bar-bg"><div class="bar-fill green" style="width:60%"></div></div>
+        <span class="bar-val">+57% YoY</span>
+      </div>
+      <div class="bar-row"><span>rv / boat / gear (seasonal)</span>
+        <div class="bar-bg"><div class="bar-fill alt" style="width:48%"></div></div>
+        <span class="bar-val">summer + ski peak</span>
+      </div>
+      <div class="bar-row"><span>drive-up storage (gap)</span>
+        <div class="bar-bg"><div class="bar-fill alt" style="width:30%"></div></div>
+        <span class="bar-val">no dedicated page</span>
+      </div>
+      <p class="small" style="margin-top:12px;">Demand is consistent and seasonal; differentiation comes from reviews, content depth and off-page authority, not from chasing volume.</p>
+    </div>
+  </div>
+</section>
+
+<section id="critical" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">02 · The Five Critical Findings</span></div>
+    <h2>What's <em class="display-italic">actually</em><br>holding the site back.</h2>
+    <p class="lede" style="margin-top: 18px; max-width: 720px;">Each finding below came from the live site, the Lighthouse audit, the SERP, or the AI test, not from theory. Notably, schema is not on this list, you already ship it. The gaps are AI visibility, off-page authority, content depth, and one Core Web Vital. None requires a rebuild.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="findings">
+      <article class="finding">
+        <div class="num">1</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · AI VISIBILITY</span></div>
+          <h3>GPT-5.5 cites you 0 of 5 times, and it is the highest-traffic AI assistant.</h3>
+          <p class="impact-line">Impact: ChatGPT, the most-used AI search surface, never names Slate River. It defaults to CB Self Storage and other operators in every Crested Butte storage prompt.</p>
+          <p>Across the 5x4 grid, <strong>Claude Sonnet 4.6 cited you 5/5, Gemini 3.1 Pro 5/5, and Sonar-Reasoning-Pro 4/5, but GPT-5.5 cited you 0/5.</strong> GPT instead leads its Crested Butte answers with CB Self Storage and other third-party operators. Because ChatGPT carries the most AI-search traffic of the four, this single blind spot is the most valuable visibility gap in the entire audit. The likely cause is reach, not markup: GPT-5.5 leans on broad web corroboration (third-party mentions, citations, directory presence), and your off-page footprint is the thinnest part of your profile.</p>
+          <div class="fix"><b>Fix:</b> Earn the corroborating web presence GPT rewards: claim and complete authoritative directory and citation listings with identical NAP, add quotable FAQ and pricing prose the model can extract, and grow third-party mentions (local press, chamber, partner pages). Snippet targets in Section 06 and 08. Eta: <strong>ongoing, start week 1.</strong> KPI: GPT-5.5 from 0/5 to 3+/5.</div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">2</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · OFF-PAGE AUTHORITY</span></div>
+          <h3>Only ~2 referring domains, and no top-20 organic rank for your core term.</h3>
+          <p class="impact-line">Impact: You hold the local pack at #2 but have no organic page-one presence for "self storage crested butte co", so you depend entirely on the map.</p>
+          <p>DataForSEO shows roughly <strong>2 referring domains and 5 backlinks total</strong>, an anemic profile even for a small market. The consequence is direct: the site does <strong>not rank in the top 20 organically</strong> for its money term and relies on the Google local pack (#2) for visibility. The few high-volume terms the tools report as "ranked" ("slate storage", "slate storage rocky river") are vanity matches to unrelated out-of-state "Slate Storage" brands, not real Crested Butte traffic. In a market this small you do not need many links; you need the right local citations, all with identical name, address and phone.</p>
+          <div class="fix"><b>Fix:</b> Build 8 to 12 high-quality local citations and partnership links (chamber, regional directories, movers, realtors, RV/ski outfitters), every one with identical NAP. Pair with the content pages in Section 07 so there is something link-worthy to point at. Eta: <strong>weeks 1-8, ongoing.</strong> Target: 12+ referring domains, top-3 organic for the head term.</div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">3</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · CONTENT DEPTH</span></div>
+          <h3>A 577-word homepage with no dedicated location or service pages.</h3>
+          <p class="impact-line">Impact: Too thin to rank organically and nothing for AI engines to quote on price, drive-up, RV or Gunnison-Valley intent.</p>
+          <p>The homepage runs about <strong>577 visible words</strong> and does the work of the entire site. There are no dedicated, indexable pages for the obvious modifiers, drive-up storage, RV/boat/vehicle storage, the Gunnison Valley service area, a storage size guide, or a pricing explainer. Third-party operators and aggregators (Yelp, Storagefront, CB Self Storage) take page-one organic slots precisely because they publish deeper, more structured content about Crested Butte storage than you do about your own facility. This thinness is also why GPT-5.5 has little of yours to corroborate and quote.</p>
+          <div class="fix"><b>Fix:</b> Build a small set of schema-rich landing pages, drive-up storage, RV/boat/vehicle, a Gunnison Valley service-area page, a size guide and a cost explainer, and expand the homepage past 800 words with a unit table, amenities and links to those pages. Eta: <strong>3-5 days copy + dev.</strong></div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">4</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · CORE WEB VITALS</span></div>
+          <h3>Mobile LCP is 2.9s, the one weak vital, capping Performance at 0.82.</h3>
+          <p class="impact-line">Impact: LCP scores just 0.35 in Lighthouse and holds mobile Performance at 0.82; everything else in the audit is green.</p>
+          <p>DataForSEO Lighthouse (mobile): Performance <strong>0.82</strong>, SEO 0.92, Accessibility 0.90, Best Practices 1.0. The one drag is <strong>LCP at 2.9s</strong> (score 0.35; Google's "Good" threshold is &lt;2.5s). Crucially, <strong>CLS is a near-perfect 0.008</strong>, so there is no layout-shift problem to solve, the fix is narrow and almost entirely about the hero/LCP image. Get LCP under 2.5s and Performance clears 0.90 with no other CWV work needed.</p>
+          <div class="fix"><b>Fix:</b> Serve the hero/LCP image at the right dimensions with explicit <code class="mono">width</code>/<code class="mono">height</code> + <code class="mono">fetchpriority="high"</code>, preload it, and use a modern format (AVIF/WebP) sized for mobile. The og:image is a 1920w PNG, so the LCP asset is likely oversized. Eta: <strong>half a day.</strong> Target: LCP &lt; 2.5s, Perf &gt; 0.90.</div>
+        </div>
+      </article>
+      <article class="finding">
+        <div class="num">5</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · REVIEW VELOCITY</span></div>
+          <h3>You lead the pack on reviews, 6 at 5.0, but the lead is thin and beatable.</h3>
+          <p class="impact-line">Impact: Reviews are your single strongest differentiator and a top driver of both local-pack order and "best storage" AI answers, but 6 reviews is a fragile lead.</p>
+          <p>Slate River holds a <strong>5.0 rating from 6 reviews</strong>, the most of any facility in its local pack, and Perplexity singled you out as "best-reviewed, most established." That is the reason three of four AI models cite you at all. But six reviews is a slim moat: a competitor running a review drive could overtake it in a month, and more reviews would push you from "listed second or third" toward "listed first" in the AI answers. This is the cheapest lever you have, and you are already winning it, press the advantage.</p>
+          <div class="fix"><b>Fix:</b> Launch a structured Google review drive: one-tap review link in every move-in SMS/email, a QR code at the gate and counter, and a target of <strong>25+ reviews</strong> while holding the 5.0. Surface review snippets on the homepage and location pages so AI engines can quote them. Eta: <strong>ongoing, start week 1.</strong></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="callout opp" style="margin-top: 36px;">
+      <strong>Bottom line:</strong> this is a <em>well-built</em> business held back <em>off the page</em>. Unlike most audits, the technical foundation, schema, canonical, og:image, CLS, is already done right. The wins here are reach: earn your way into GPT-5.5, build local authority, deepen the content, tune one image, and keep extending your review lead. That is the difference between owning the map and owning the entire search result.
+    </div>
+  </div>
+</section>
+
+<section id="quickwins">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · Quick Wins</span></div>
+    <h2>What we'd ship<br><em class="display-italic">first</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:720px;">Ordered by effort and impact. The first three can ship in the first week and move both the AI answers and the local pack. Note none of them is "add schema", you are past that.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th style="width: 36px;">#</th>
+        <th>Quick win</th>
+        <th>Where</th>
+        <th>Effort</th>
+        <th>Expected lift</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><strong>Launch a Google review drive</strong> with one-tap links + gate/counter QR codes.</td><td>GBP + counter</td><td>Ongoing</td><td>Extends your strongest asset; moves local-pack and AI ordering. Target 25+.</td></tr>
+        <tr><td class="num">2</td><td><strong>Tune the LCP image</strong>: resize, modern format, preload, fetchpriority.</td><td>Homepage</td><td>Half day</td><td>Clears Performance past 0.90; the only CWV gap. CLS already perfect.</td></tr>
+        <tr><td class="num">3</td><td><strong>Claim and complete authoritative directory citations</strong> (identical NAP).</td><td>Yelp, Bing, Apple, dirs</td><td>1 day</td><td>The corroboration GPT-5.5 rewards; starts closing the 0/5 gap.</td></tr>
+        <tr><td class="num">4</td><td><strong>Expand the homepage past 800 words</strong> with unit table, amenities, FAQ.</td><td>Homepage</td><td>Half day</td><td>Organic ranking eligibility; more quotable text for AI.</td></tr>
+        <tr><td class="num">5</td><td><strong>Build a drive-up storage landing page</strong> for Crested Butte.</td><td>New URL</td><td>1 day</td><td>Captures the drive-up query you currently hold in the pack only.</td></tr>
+        <tr><td class="num">6</td><td><strong>Build a Gunnison Valley service-area page.</strong></td><td>New URL</td><td>1 day</td><td>Targets the 210/mo Gunnison cluster you sit on page 4-5 for.</td></tr>
+        <tr><td class="num">7</td><td><strong>Add a transparent pricing / cost explainer page.</strong></td><td>New URL</td><td>Half day</td><td>Answers the "how much" prompt all four models field; AI-quotable.</td></tr>
+        <tr><td class="num">8</td><td><strong>Surface review snippets + AggregateRating</strong> on the homepage.</td><td>Homepage</td><td>2 hours</td><td>Star eligibility + review text AI engines can extract and cite.</td></tr>
+        <tr><td class="num">9</td><td><strong>Add descriptive, location-specific alt text</strong> on facility images.</td><td>All pages</td><td>2 hours</td><td>Accessibility (a11y 0.90) + image-search visibility.</td></tr>
+        <tr><td class="num">10</td><td><strong>Pursue 3-4 local partnership links</strong> (movers, realtors, outfitters).</td><td>Outreach</td><td>Ongoing</td><td>Off-page authority where you are thinnest (~2 ref domains).</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top:56px;">Title &amp; meta rewrites for the highest-value pages</h3>
+    <p style="max-width:780px; margin-top:8px;">The current homepage title and meta are already clean and well-optimised. These are targeted titles/metas for the new pages that should rank but do not exist yet.</p>
+    <div class="table-scroll" style="margin-top:18px;">
+    <table>
+      <thead><tr><th>Page</th><th>Recommended &lt;title&gt;</th><th>Recommended meta description</th></tr></thead>
+      <tbody>
+        <tr><td><code class="mono">/drive-up-storage-crested-butte</code></td><td>Drive-Up Storage Units in Crested Butte, CO | Slate River Storage</td><td>Secure drive-up self storage in Crested Butte, CO at 469 Riverland Dr, with 24/7 access and flexible sizing. Check availability and rent online in minutes.</td></tr>
+        <tr><td><code class="mono">/storage-gunnison-valley</code></td><td>Self Storage Serving the Gunnison Valley, CO | Slate River Storage</td><td>Self storage for the Gunnison Valley and Roaring Fork, with drive-up units, flexible sizes and online rentals at Slate River Storage in Crested Butte.</td></tr>
+        <tr><td><code class="mono">/storage-cost-crested-butte</code></td><td>How Much Does Storage Cost in Crested Butte, CO? | Slate River Storage</td><td>See what a storage unit costs in Crested Butte, CO, from compact 5x5 units to large drive-up spaces, with month-to-month rates and online rental at Slate River Storage.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="hierarchy" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · URL × Error × Fix Catalog</span></div>
+    <h2>Every fixable issue,<br>by <em class="display-italic">URL</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">A page-by-page catalog of what is working, what is thin, and the exact fix. This site does the technical work right, so the page-level catalog is short and almost entirely about depth and reach, the real catalog here is the list of pages that do not exist yet.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <span class="sub-eyebrow">Page-by-page audit</span>
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.slateriverstorage.com/</div>
+          <div class="url-audit-meta">Homepage · local pack #2 · no organic top-20 for head term</div>
+        </div>
+        <span class="badge crit">P0 · HIGH IMPACT</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ok">
+        <div class="issue-name">Schema, canonical, og:image</div>
+        <div class="issue-current">SelfStorage + FAQPage (7 Q&A) + Offer x3 + Service + geo + hours + BreadcrumbList; correct canonical; og:image present.</div>
+        <div class="issue-fix"><b>Fix:</b> Keep as is, this is already done right and rare for the market.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">Thin content (577 words)</div>
+        <div class="issue-current">One page does the work of the whole site; no unit table or depth.</div>
+        <div class="issue-fix"><b>Fix:</b> Expand past 800 words with a unit/size table, amenities, pricing and links to new location/service pages.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">LCP 2.9s (score 0.35)</div>
+        <div class="issue-current">Hero/LCP image likely oversized (og:image is a 1920w PNG); caps Perf at 0.82.</div>
+        <div class="issue-fix"><b>Fix:</b> Resize + modern format, preload, fetchpriority="high". CLS already 0.008.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">No organic rank for head term</div>
+        <div class="issue-current">Relies on local pack #2; no top-20 organic for "self storage crested butte co".</div>
+        <div class="issue-fix"><b>Fix:</b> Add content depth + internal links + off-page citations to earn an organic position.</div>
+      </div>
+      <div class="url-issue ok">
+        <div class="issue-name">Title, meta, H1</div>
+        <div class="issue-current">Clean title, strong meta, real H1 ("Slate River Storage").</div>
+        <div class="issue-fix"><b>Fix:</b> Keep as is.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.slateriverstorage.com/about-us</div>
+          <div class="url-audit-meta">About page · ranks #43-46 for the Gunnison storage cluster</div>
+        </div>
+        <span class="badge high">P1 · REFOCUS</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue warn">
+        <div class="issue-name">Wrong page ranking for money terms</div>
+        <div class="issue-current">/about-us ranks (weakly, #43-46) for "gunnison storage" / "storage units gunnison" instead of a purpose-built page.</div>
+        <div class="issue-fix"><b>Fix:</b> Build a dedicated Gunnison Valley service-area page and point internal links + schema at it; let /about-us be about the brand.</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">No service-area schema</div>
+        <div class="issue-current">Service area expressed as text only.</div>
+        <div class="issue-fix"><b>Fix:</b> Add areaServed (Crested Butte, Gunnison, Mt. Crested Butte, Almont) to the SelfStorage node.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.slateriverstorage.com/ (FAQ block)</div>
+          <div class="url-audit-meta">FAQPage schema · 7 Q&amp;A live on homepage</div>
+        </div>
+        <span class="badge med">P2 · EXTEND</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue ok">
+        <div class="issue-name">FAQPage already shipping</div>
+        <div class="issue-current">7 valid Question/Answer pairs in JSON-LD, eligible for FAQ treatment.</div>
+        <div class="issue-fix"><b>Fix:</b> Keep, and expand to cover cost, drive-up access, RV/seasonal and Gunnison-Valley questions (Section 07).</div>
+      </div>
+      <div class="url-issue warn">
+        <div class="issue-name">Answers thin on price/specifics</div>
+        <div class="issue-current">Q&A is generic; little quotable pricing or unit-size detail.</div>
+        <div class="issue-fix"><b>Fix:</b> Add concrete price bands and unit sizes so GPT-5.5 and the others have something specific to quote.</div>
+      </div>
+      </div>
+    </div>
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">rankings polluted by out-of-state &quot;Slate Storage&quot; brands</div>
+          <div class="url-audit-meta">Brand-entity confusion · vanity keyword matches</div>
+        </div>
+        <span class="badge med">P2 · DISAMBIGUATE</span>
+      </div>
+      <div class="url-audit-body">
+      <div class="url-issue warn">
+        <div class="issue-name">Out-of-market vanity rankings</div>
+        <div class="issue-current">Tools credit "slate storage rocky river" (OH), "slate storage palm harbor" (FL) etc., unrelated brands, as ranked keywords. "storage units silt co" (#79) is ~2.5 hrs away.</div>
+        <div class="issue-fix"><b>Fix:</b> Anchor the entity in Crested Butte: explicit geo + sameAs to GBP and socials, and ignore these vanity terms in reporting, they are not real traffic.</div>
+      </div>
+      </div>
+    </div>
+
+    <span class="sub-eyebrow">Pattern-level issues</span>
+    <div class="url-group opp">
+      <h4>Missing pages to build (each is an uncontested local query)</h4>
+      <p>These pages do not exist yet and have no strong local owner. Each maps to real Crested Butte / Gunnison Valley intent, and each gives GPT-5.5 something specific to corroborate and quote.</p>
+      <div class="url-list">
+      <span><code>/drive-up-storage-crested-butte</code></span>
+      <span><code>/rv-boat-vehicle-storage</code> <span class="cnt">seasonal</span></span>
+      <span><code>/storage-gunnison-valley</code> <span class="cnt">service area</span></span>
+      <span><code>/storage-cost-crested-butte</code></span>
+      <span><code>/storage-unit-size-guide</code></span>
+      <span><code>/seasonal-gear-storage</code> <span class="cnt">ski/bike</span></span>
+      <span><code>/storage-near-mt-crested-butte</code> <span class="cnt">service area</span></span>
+      <span><code>/faq</code> <span class="cnt">expand schema host</span></span>
+      </div>
+      <div class="group-fix"><b>Template-level fix:</b> Build as lightweight, schema-rich landing pages, even 300-500 words each with a unit table and FAQ. They give you organic surface area, quotable AI text, and link targets, the three things your strong-but-thin homepage cannot provide on its own.</div>
+    </div>
+  </div>
+</section>
+
+<section id="keywords">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">05 · Keyword Strategy</span></div>
+    <h2>The local keywords<br>that <em class="display-italic">change</em> the business.</h2>
+    <p class="lede" style="margin-top:18px; max-width:720px;">Crested Butte and the Gunnison Valley are low-difficulty markets, nearly every target term has competition under 0.15. You hold the local pack but barely rank organically, so the job is building the pages and authority to convert local-pack presence into top-3 organic and a default AI pick.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th>Target keyword</th>
+        <th class="num">Volume / mo</th>
+        <th class="num">KD</th>
+        <th>Intent</th>
+        <th>Recommended URL</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="kw">self storage crested butte co</td><td class="num">210+</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/ (homepage)</code></td></tr>
+        <tr><td class="kw">drive-up storage crested butte</td><td class="num">70+</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/drive-up-storage-crested-butte</code></td></tr>
+        <tr><td class="kw">storage units gunnison co</td><td class="num">210</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/storage-gunnison-valley</code></td></tr>
+        <tr><td class="kw">gunnison storage</td><td class="num">210</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/storage-gunnison-valley</code></td></tr>
+        <tr><td class="kw">gunnison secure storage</td><td class="num">70</td><td class="num">low</td><td>Transactional</td><td><code class="mono">/storage-gunnison-valley</code></td></tr>
+        <tr><td class="kw">rv storage gunnison valley</td><td class="num">50+</td><td class="num">low</td><td>Commercial</td><td><code class="mono">/rv-boat-vehicle-storage</code></td></tr>
+        <tr><td class="kw">storage unit cost crested butte</td><td class="num">40+</td><td class="num">low</td><td>Informational</td><td><code class="mono">/storage-cost-crested-butte</code></td></tr>
+        <tr><td class="kw">storage size guide</td><td class="num">1,000</td><td class="num">13</td><td>Informational</td><td><code class="mono">/storage-unit-size-guide</code></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top: 64px;">Location & service pages: the next tier</h3>
+    <p style="max-width:760px; margin-top:8px;">A small set of service-area and use-case pages will let you capture the intent you currently send to CB Self Storage, Gunnison Secure Storage, and the aggregators, while giving GPT-5.5 the corroborating content it needs.</p>
+    <div class="table-scroll" style="margin-top:22px;">
+    <table>
+      <thead><tr><th>Landing page</th><th>Primary KW</th><th class="num">Vol/mo</th><th>What it needs</th></tr></thead>
+      <tbody>
+        <tr><td><code class="mono">/storage-gunnison-valley</code></td><td class="kw">storage units gunnison co</td><td class="num">210</td><td>areaServed schema, drive-distance context, unit table; captures the Gunnison cluster you sit on page 4-5 for.</td></tr>
+        <tr><td><code class="mono">/drive-up-storage-crested-butte</code></td><td class="kw">drive-up storage crested butte</td><td class="num">70+</td><td>Service schema, drive-up angle, 24/7 access; converts a pack-only term to organic.</td></tr>
+        <tr><td><code class="mono">/rv-boat-vehicle-storage</code></td><td class="kw">rv storage gunnison valley</td><td class="num">50+</td><td>Seasonal page; vehicle/trailer/boat angle; Service schema and seasonal FAQ.</td></tr>
+        <tr><td><code class="mono">/storage-cost-crested-butte</code></td><td class="kw">storage unit cost crested butte</td><td class="num">40+</td><td>Transparent price bands; directly answers the AI "how much" prompt all 4 models field.</td></tr>
+        <tr><td><code class="mono">/seasonal-gear-storage</code></td><td class="kw">ski storage crested butte</td><td class="num"></td><td>Ski, bike, camping and hunting gear; high-country resort-market angle.</td></tr>
+        <tr><td><code class="mono">/storage-unit-size-guide</code></td><td class="kw">storage size guide</td><td class="num">1,000</td><td>ItemList/FAQ schema, localized to Crested Butte; recovers a large informational term.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout"><strong>Watch out:</strong> ignore the high-volume vanity terms the tools surface ("slate storage", "slate storage rocky river", "slate storage palm harbor"), they belong to unrelated out-of-state companies and send zero relevant traffic. "storage units silt co" is also out of market. Every dollar of effort belongs on the low-difficulty Crested Butte and Gunnison Valley terms above.</div>
+  </div>
+</section>
+
+<section id="schema" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">06 · Schema Markup Plan</span></div>
+    <h2>The structured data<br>Slate River already <em class="display-italic">ships</em>, and how to extend it.</h2>
+    <p class="lede" style="margin-top:18px; max-width:740px;">This is the rare audit where the schema section is mostly congratulations. The homepage already ships SelfStorage (LocalBusiness), a 7-question FAQPage, Offer x3, Service, geo, hours and BreadcrumbList. The plan below is about extending that strong base to the new pages and adding the review and area signals that close the AI gap.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="three-col">
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge crit">PHASE 1 · WEEK 1</span></div>
+        <h4>Foundations</h4>
+        <p style="margin-top:8px; font-size:14.5px;">Already live: SelfStorage / LocalBusiness with address, geo, hours and 12 LocationFeatureSpecification amenities · FAQPage (7 Q&A) · Offer x3 + PriceSpecification · Service x3 · BreadcrumbList. This is a strong, correct foundation, keep it.</p>
+        <p class="small" style="margin-top:10px;">Status: DONE · Action: verify in Rich Results Test after any homepage edit so the LCP/content changes do not break the JSON-LD.</p>
+      </div>
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge high">PHASE 2 · WEEK 2-3</span></div>
+        <h4>Local depth</h4>
+        <p style="margin-top:8px; font-size:14.5px;">Add areaServed (Crested Butte, Mt. Crested Butte, Gunnison, Almont, Roaring Fork) to the SelfStorage node · replicate SelfStorage + Service schema onto each new location/use-case page · add sameAs to GBP + socials to anchor the entity in Crested Butte and stop the out-of-state "Slate Storage" confusion.</p>
+        <p class="small" style="margin-top:10px;">Effort: 1 dev day · Impact: service-area coverage + entity disambiguation; gives GPT-5.5 a clearer, corroborated entity to cite.</p>
+      </div>
+      <div class="page-card">
+        <div style="margin-bottom: 14px;"><span class="badge med">PHASE 3 · WEEK 4-6</span></div>
+        <h4>Content &amp; reviews</h4>
+        <p style="margin-top:8px; font-size:14.5px;">Add AggregateRating (you have the 5.0 / 6 reviews to justify it) and embed Review schema from your Google reviews · expand FAQPage to cover cost, drive-up, RV and Gunnison-Valley questions · add ImageObject with geo on facility photos.</p>
+        <p class="small" style="margin-top:10px;">Effort: half a day · Impact: star eligibility + quotable review/price text that LLMs (especially GPT) can extract.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Reference snippet: SelfStorage + LocalBusiness</h3>
+    <p>You already ship SelfStorage. This is the small extension to add, areaServed for the Gunnison Valley plus an AggregateRating that reflects your 5.0 / 6-review lead and a sameAs to anchor the entity in Colorado.</p>
+<pre class="code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "SelfStorage",
+  "@id": "https://www.slateriverstorage.com/#facility",
+  "name": "Slate River Storage",
+  "address": {"@type":"PostalAddress","streetAddress":"469 Riverland Dr",
+    "addressLocality":"Crested Butte","addressRegion":"CO","postalCode":"81224"},
+  "telephone": "+1-970-000-0000",
+  "openingHours": "Mo-Su 00:00-24:00",
+  "priceRange": "$$",
+  "areaServed": [
+    {"@type":"City","name":"Crested Butte"},
+    {"@type":"City","name":"Mt. Crested Butte"},
+    {"@type":"City","name":"Gunnison"},
+    {"@type":"City","name":"Almont"}
+  ],
+  "sameAs": [
+    "https://www.google.com/maps/place/?q=place_id:SLATE_RIVER_GBP_ID",
+    "https://www.yelp.com/biz/slate-river-storage-crested-butte"
+  ],
+  "aggregateRating": {
+    "@type":"AggregateRating","ratingValue":"5.0","reviewCount":"6"
+  }
+}
+&lt;/script&gt;</pre>
+
+    <h3 style="margin-top:48px;">Reference snippet: FAQPage</h3>
+<pre class="code">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a storage unit cost in Crested Butte, CO?",
+      "acceptedAnswer": {"@type":"Answer",
+        "text": "In Crested Butte, CO, drive-up units at Slate River Storage range from compact 5x5 spaces up to large drive-up units, with month-to-month rates and no long-term contract. Reserve online at 469 Riverland Dr, off Hwy 135."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer drive-up units with 24/7 access?",
+      "acceptedAnswer": {"@type":"Answer",
+        "text": "Yes. Slate River Storage offers easy drive-up access and flexible sizing in Crested Butte, serving the Gunnison Valley and Roaring Fork, with convenient online rentals."}
+    }
+    /* ...extend with the cost, RV/seasonal and Gunnison-Valley questions from Section 07 */
+  ]
+}
+&lt;/script&gt;</pre>
+  </div>
+</section>
+
+<section id="content">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">07 · Content Strategy</span></div>
+    <h2>A small content layer<br>that earns the next <em class="display-italic">12 months</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">A storage facility does not need a blog mill, it needs a handful of evergreen, locally-anchored pages that Google can rank and AI engines can quote. For Slate River the goal is twofold: organic surface area and the corroborating text GPT-5.5 currently cannot find. Ten pieces, sequenced.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>#</th><th>Title</th><th>Target keyword</th><th>Publish by</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><strong>Drive-Up Storage Units in Crested Butte</strong></td><td class="kw">drive-up storage crested butte</td><td>Wk 1</td><td>Converts a pack-only term to organic; quotable for the drive-up AI prompt.</td></tr>
+        <tr><td class="num">2</td><td><strong>How Much Does Storage Cost in Crested Butte? (2026)</strong></td><td class="kw">storage cost crested butte</td><td>Wk 2</td><td>Answers the price prompt all four models field; gives GPT something to quote.</td></tr>
+        <tr><td class="num">3</td><td><strong>Self Storage for the Gunnison Valley</strong></td><td class="kw">storage units gunnison co</td><td>Wk 3</td><td>Targets the 210/mo Gunnison cluster you sit on page 4-5 for.</td></tr>
+        <tr><td class="num">4</td><td><strong>Storage Unit Size Guide for Crested Butte</strong></td><td class="kw">storage size guide</td><td>Wk 4</td><td>Recovers a large informational term; localized with a unit table.</td></tr>
+        <tr><td class="num">5</td><td><strong>RV, Boat & Vehicle Storage in the Gunnison Valley</strong></td><td class="kw">rv storage gunnison valley</td><td>Wk 5</td><td>Seasonal demand; uncontested locally.</td></tr>
+        <tr><td class="num">6</td><td><strong>Seasonal Gear Storage: Skis, Bikes & Camping</strong></td><td class="kw">ski storage crested butte</td><td>Wk 6</td><td>Resort-market angle; high-country second-home and gear intent.</td></tr>
+        <tr><td class="num">7</td><td><strong>Moving to Crested Butte? A Storage Checklist</strong></td><td class="kw">moving to crested butte</td><td>Wk 8</td><td>Top-of-funnel; links to location and size-guide pages.</td></tr>
+        <tr><td class="num">8</td><td><strong>Why Reviews Make Slate River the Best-Reviewed Choice</strong></td><td class="kw">best storage crested butte</td><td>Wk 9</td><td>Leans into your strongest asset; embeds review snippets AI can quote.</td></tr>
+        <tr><td class="num">9</td><td><strong>Storage Near Mt. Crested Butte & Almont</strong></td><td class="kw">storage near mt crested butte</td><td>Wk 10</td><td>Service-area expansion; captures resort-adjacent intent.</td></tr>
+        <tr><td class="num">10</td><td><strong>Slate River Storage FAQ (schema hub)</strong></td><td class="kw">storage faq crested butte</td><td>Wk 12</td><td>Expands the existing FAQPage; powers AI answers across the site.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin-top: 56px;">The supporting cluster: 30 FAQ-schema questions</h3>
+    <p style="max-width:780px;">Pre-validated questions (from the live SERP People-Also-Ask, your existing 7-question FAQ, and the AI test) to extend the FAQPage schema across the homepage, new pages and a /faq hub. These are exactly the prompts the AI engines, GPT-5.5 included, are answering today, so giving them quotable answers is how you get into ChatGPT.</p>
+
+    <div class="three-col" style="margin-top: 22px;">
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Cost &amp; Pricing</h4>
+        <ol style="margin-top:10px; font-size:14px;">
+          <li>How much does a storage unit cost in Crested Butte, CO?</li>
+          <li>What is the cheapest storage unit in Crested Butte?</li>
+          <li>How much is a 10x10 unit in the Gunnison Valley?</li>
+          <li>Do you offer an online or first-month discount?</li>
+          <li>Are there admin, lock or insurance fees?</li>
+          <li>Is month-to-month rental available?</li>
+          <li>How much does RV or vehicle storage cost?</li>
+          <li>Do you require a deposit?</li>
+          <li>What size unit do I need for a 2-bedroom home?</li>
+          <li>What does a large drive-up unit cost?</li>
+        </ol>
+      </div>
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Access &amp; Security</h4>
+        <ol start="11" style="margin-top:10px; font-size:14px;">
+          <li>Do you offer 24/7 access?</li>
+          <li>Are the units drive-up?</li>
+          <li>Is the facility gated and monitored?</li>
+          <li>Where is Slate River Storage located?</li>
+          <li>How do I find you off Hwy 135?</li>
+          <li>Can I access my unit at night or in winter?</li>
+          <li>How do I get a gate code?</li>
+          <li>Is the lot plowed and accessible in winter?</li>
+          <li>Do you have climate-controlled units?</li>
+          <li>Is the facility well lit?</li>
+        </ol>
+      </div>
+      <div class="page-card">
+        <h4 style="color: var(--coral-dk);">Renting &amp; Use</h4>
+        <ol start="21" style="margin-top:10px; font-size:14px;">
+          <li>How do I rent a unit online?</li>
+          <li>Can I move in the same day?</li>
+          <li>What do I need to bring to rent?</li>
+          <li>Do you serve the Gunnison Valley and Roaring Fork?</li>
+          <li>Can I store an RV, boat or trailer?</li>
+          <li>Can I store skis, bikes and camping gear?</li>
+          <li>Do you offer business or contractor storage?</li>
+          <li>What can&#x27;t I store in a unit?</li>
+          <li>How do I pay my bill online?</li>
+          <li>How much notice to move out?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="backlinks" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">08 · Backlink Strategy</span></div>
+    <h2>From two referring domains<br>to <em class="display-italic">local authority</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Slate River Storage has the thinnest off-page footprint in this audit, roughly 2 referring domains and 5 backlinks, and it is the direct cause of both the missing organic rank and the GPT-5.5 blind spot. In a small market you do not need many links; you need the right local citations and partner mentions, all with identical NAP (name, address, phone).</p>
+
+    <div class="ornament">· · ·</div>
+
+    <h3>Tier 1: Local citations & directories (Weeks 1-2)</h3>
+    <p>Lowest friction, highest local-SEO value, and the corroboration GPT-5.5 leans on. Identical NAP on every one.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google Business Profile</strong></td><td class="mono" style="font-size:12.5px;">business.google.com</td><td>Verify, full categories, photos, Q&A, services, posts.</td></tr>
+          <tr><td><strong>Yelp (claim existing listing)</strong></td><td class="mono" style="font-size:12.5px;">yelp.com</td><td>You already appear (#6/#13 organic); claim and complete it.</td></tr>
+          <tr><td><strong>Bing Places + Apple Business Connect</strong></td><td class="mono" style="font-size:12.5px;">bingplaces.com</td><td>Two more map surfaces; quick wins.</td></tr>
+          <tr><td><strong>Storagefront / SpareFoot / SelfStorage.com</strong></td><td class="mono" style="font-size:12.5px;">storagefront.com</td><td>Aggregators outrank you, so be listed and accurate there too.</td></tr>
+          <tr><td><strong>Gunnison-Crested Butte Chamber of Commerce</strong></td><td class="mono" style="font-size:12.5px;">gunnisoncrestedbutte.com</td><td>Local authority + referral link.</td></tr>
+          <tr><td><strong>Yellowpages / Manta / MapQuest / Bizapedia</strong></td><td class="mono" style="font-size:12.5px;">mapquest.com</td><td>Baseline NAP citations; you already appear on MapQuest.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:48px;">Tier 2: Local relevance & partnerships (Weeks 3-8)</h3>
+    <p>Referral + link value from the Crested Butte and Gunnison Valley community, the kind of mentions GPT-5.5 corroborates.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Crested Butte News / Gunnison Country Times</strong></td><td class="mono" style="font-size:12.5px;">crestedbuttenews.com</td><td>Local-business feature or a seasonal-storage tip column.</td></tr>
+          <tr><td><strong>Local movers & property managers</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Preferred-vendor cross-links for relocations and second-home turnover.</td></tr>
+          <tr><td><strong>Crested Butte / Gunnison realtor blogs</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>"Where to store while you move" mentions.</td></tr>
+          <tr><td><strong>Ski shops, bike shops & RV/outdoor outfitters</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Seasonal gear-storage referral partners.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:48px;">Tier 3: Reviews as ranking signal (ongoing)</h3>
+    <p>Not links, but your single biggest off-site asset and the reason 3 of 4 AI models cite you.</p>
+    <div class="table-scroll" style="margin-top:14px;">
+      <table>
+        <thead><tr><th>Opportunity</th><th>URL / Contact</th><th>Approach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google reviews drive</strong></td><td class="mono" style="font-size:12.5px;">business.google.com</td><td>One-tap links at move-in; target 25+ while holding 5.0.</td></tr>
+          <tr><td><strong>Yelp + Facebook reviews</strong></td><td class="mono" style="font-size:12.5px;">n/a</td><td>Diversify review sources for AI grounding and GPT corroboration.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout opp" style="margin-top:32px;"><strong>The shortcut:</strong> in a market this small, 8 to 12 accurate local citations plus a steady review drip will do more than any link-building campaign, and they are precisely the web corroboration GPT-5.5 needs to start citing you. Get the NAP identical everywhere, point a few partner links at your new content pages, then let reviews compound.</div>
+  </div>
+</section>
+
+<section id="competitive">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">09 · Competitive Landscape</span></div>
+    <h2>Who's in the way<br>and how <em class="display-italic">catchable</em> they are.</h2>
+    <p class="lede" style="margin-top:18px; max-width:740px;">Combined view from the live Crested Butte SERP, the local pack, and the brands the AI engines actually cite. Every competitor here is a local independent or a third-party manager, there is no national chain in Crested Butte. The market is small, thin-sited and wide open.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Competitor</th><th class="num">Type</th><th class="num">Distance / scope</th><th>Why they matter</th></tr></thead>
+      <tbody>
+        <tr><td><strong>CB Self Storage (PR Property Mgmt)</strong></td><td class="num">3rd-party manager</td><td class="num">Crested Butte</td><td>The brand to beat in AI. GPT-5.5 and others lead with it; ranks #5 organic; cited ~17x. Your top displacement target, especially in ChatGPT.</td></tr>
+        <tr><td><strong>Gunnison Secure Storage</strong></td><td class="num">Independent</td><td class="num">Gunnison</td><td>Cited ~15x; ranks #10 organic and #31 for its brand term. Owns the Gunnison-Valley cluster you are missing.</td></tr>
+        <tr><td><strong>Storage Brothers / Budget Storage</strong></td><td class="num">Independent</td><td class="num">Gunnison Valley</td><td>Cited ~8x by the AI models. Mid-tier presence; catchable with content depth.</td></tr>
+        <tr><td><strong>Plotts Mini Storage</strong></td><td class="num">Independent</td><td class="num">Gunnison area</td><td>Cited ~4x. Lighter web presence; an easy organic target.</td></tr>
+        <tr><td><strong>Valley Storage</strong></td><td class="num">Independent</td><td class="num">Gunnison Valley</td><td>Local independent in the AI consideration set; thin site.</td></tr>
+        <tr><td><strong>Antelope Creek / Brooks Fairway / Tomichi</strong></td><td class="num">Independent</td><td class="num">Gunnison Valley</td><td>Occasional AI mentions (1x each). Minimal web footprint; not a near-term threat.</td></tr>
+        <tr><td><strong>Aggregators (Yelp, Storagefront, MapQuest)</strong></td><td class="num">Directory</td><td class="num">national</td><td>Not facilities, but they take organic slots #6-13 for your terms. Beat them with deeper, schema-rich local pages.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="quote" style="margin-top: 56px;">
+      "Slate River Storage is the best-reviewed facility in the Crested Butte pack and ships the cleanest schema in the market, yet it has no organic top-20 rank for its core term and is invisible in GPT-5.5. The competitors are all thin-sited local independents, so the door to the top of both Google and ChatGPT is wide open for whoever builds content depth and local authority first."
+      <cite>DataForSEO SERP + local pack + AI-citation composite, May 2026</cite>
+    </div>
+  </div>
+</section>
+
+<section id="llm" class="dark">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow" style="color:#FFD8AC;">10 · AI / LLM Visibility</span></div>
+    <h2 style="color:#FFFBF1;">14 citations.<br>But <em style="color:#F4A8A2; font-style:italic;">zero</em> in GPT.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px; color:#D8CDB5;">We tested the flagship models powering AI search today: <strong>Claude Sonnet 4.6</strong>, <strong>Gemini 3.1 Pro</strong>, <strong>GPT-5.5</strong> and <strong>Sonar-Reasoning-Pro</strong> (Perplexity). Five high-intent prompts x four models = twenty live web-search calls. Slate River Storage was cited <strong>14 times</strong>, strong on Claude (5/5) and Gemini (5/5), good on Perplexity (4/5), but <strong>0 of 5 on GPT-5.5</strong>, the highest-traffic assistant of the four. That is the headline of this entire audit.</p>
+
+    <div class="ornament" style="color:#FFD8AC;">· · ·</div>
+
+    <div style="background: #1A1F26; border: 1px solid #3A3530; border-radius: var(--r-lg); padding: 32px 34px; margin-bottom: 56px;">
+      <div style="display:flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; flex-wrap: wrap; gap: 12px;">
+        <h3 style="color:#FFFBF1;">The 5 prompts we sent (verbatim)</h3>
+        <span class="small" style="color:#76705F; font-family: var(--mono);">user_prompt · web_search=true · same string to all 4 models</span>
+      </div>
+      <ol style="color:#FFE8A8; font-family: var(--serif); font-size: 19px; line-height: 1.7; padding-left: 1.4em; margin: 0;">
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Best self storage in Crested Butte, CO"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How do I rent a storage unit near Crested Butte, Colorado?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Drive-up storage units in Crested Butte, CO"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How much does a storage unit cost in Crested Butte, CO?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Self storage in the Gunnison Valley, Colorado"</span></li>
+      </ol>
+      <p class="small" style="color:#76705F; margin-top: 22px; font-size: 13px;">Why these five: each maps to a real Crested Butte / Gunnison Valley query with live demand (discovery, how-to, drive-up, price, service area). The set is designed to be re-run every 30 days to track citation-rate movement, with GPT-5.5 as the key KPI.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 style="color:#FFFBF1;">The 5 prompts × 4 models matrix</h3>
+        <div style="background:#1A1F26; border-radius: var(--r-md); padding: 22px 22px; margin-top: 14px; font-size:13.5px; color:#D8CDB5;">
+          <table style="background:transparent; border:0; color:#D8CDB5;">
+            <thead><tr style="background:transparent;">
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 10px; font-size:11px;">Prompt</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Claude<br>Sonnet 4.6</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Gemini<br>3.1 Pro</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">GPT-5.5</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Sonar<br>R-Pro</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Best self storage in Crested Butte, CO</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">How do I rent a unit near Crested Butte</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Drive-up storage units in Crested Butte</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">How much does a storage unit cost in CB</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;"><strong style="color:#FFFBF1;">Self storage in the Gunnison Valley</strong></td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small" style="color:#76705F; margin-top:12px;">Run May 30, 2026 via DataForSEO AI Optimization API with web_search=true. Per model: Claude 5/5, Gemini 5/5, Sonar 4/5, GPT-5.5 0/5. Total ~$1.20 across 20 calls.</p>
+      </div>
+
+      <div>
+        <h3 style="color:#FFFBF1;">Who AI cites instead</h3>
+        <p style="color:#D8CDB5; font-size:14.5px; margin-bottom:14px;">Mentions across all 20 calls, the brands you are competing with for AI visibility.</p>
+        <div style="background:#1A1F26; border-radius: var(--r-md); padding: 18px 22px; font-size:14px;">
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>CB Self Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:100%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">17×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Gunnison Secure Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:88%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">15×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span><strong style="color:#FFE8A8;">Slate River Storage</strong></span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill green" style="width:82%"></div></div>
+            <span class="bar-val" style="color:#FFE8A8;"><strong>14×</strong></span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Storage Brothers</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:47%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">8×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Plotts Mini Storage</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill alt" style="width:24%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">4×</span>
+          </div>
+        </div>
+        <p class="small" style="color:#76705F; margin-top:12px;">CB Self Storage and Gunnison Secure Storage are cited more often than you are, and GPT-5.5 leads with CB Self Storage in every prompt while never naming Slate River. Your thin off-page footprint, the corroboration GPT relies on, is the likely reason it cannot see you.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 56px; background: linear-gradient(135deg, #1F2630 0%, #1A1F26 100%); border: 1px solid #3A3530; border-radius: var(--r-lg); padding: 36px;">
+      <div style="display:flex; gap:24px; align-items:flex-start;">
+        <div style="font-family: var(--serif); font-size:78px; line-height:1; color:#FFE8A8; font-style:italic; font-variation-settings: 'SOFT' 100, 'WONK' 1;">0/5</div>
+        <div>
+          <div style="margin-bottom: 8px;"><span class="badge opp">THE GPT-5.5 BLIND SPOT</span></div>
+          <h3 style="color:#FFFBF1; margin-bottom: 12px;">Three of four models already cite you. The job is to win the fourth, and it is the biggest one.</h3>
+          <p style="color:#D8CDB5; font-size:15.5px;">Claude Sonnet 4.6 and Gemini 3.1 Pro name Slate River in all five prompts, and Perplexity flagged you as "best-reviewed, most established." GPT-5.5, the highest-traffic AI assistant, cited you <strong>zero</strong> times, leading instead with CB Self Storage.</p><p style="color:#D8CDB5; font-size:15.5px; margin-top:12px;">The pattern is clear: the models that lean on your strong schema and reviews (Claude, Gemini) already find you; the one that leans hardest on broad <strong>web corroboration</strong> (GPT) cannot, because your off-page footprint is just <code class="mono" style="background:#2C2823; padding:2px 6px; border-radius:4px;">~2 referring domains</code>. Build local citations and partner mentions, deepen the content GPT can quote, and extend your review lead, and you move from <strong>14 of 20 (GPT 0/5)</strong> to <strong>18+ of 20 (GPT 3+/5)</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top: 56px;">
+      <div>
+        <h3 style="color:#FFFBF1;">Why this matters now</h3>
+        <p style="color:#D8CDB5;">AI search (ChatGPT, Perplexity, Gemini, Google AI Overviews) is displacing a growing share of "near me" storage discovery, and ChatGPT carries the most of that traffic. You are already visible in three of four models; the live risk is that the single most-used assistant routes every Crested Butte storage question to a competitor while you stay invisible there.</p>
+      </div>
+      <div>
+        <h3 style="color:#FFFBF1;">What earns citations</h3>
+        <ol style="color:#D8CDB5;">
+          <li><strong>Local citations + partner mentions</strong>, the broad web corroboration GPT-5.5 rewards and you lack.</li>
+          <li><strong>Deeper, quotable content</strong> on cost, drive-up, RV and the Gunnison Valley, the text LLMs extract.</li>
+          <li><strong>Review volume past CB Self Storage</strong>, AI "best storage" lists lead with the most-reviewed facility, and you already lead the pack.</li>
+          <li><strong>Location + price pages</strong> the engines can quote directly for "cost" and "drive-up" prompts.</li>
+          <li><strong>AggregateRating + Review schema</strong> so your 5.0/6 lead is machine-readable.</li>
+          <li><strong>Consistent NAP + sameAs</strong> to disambiguate from the out-of-state "Slate Storage" brands.</li>
+        </ol>
+        <h3 style="margin-top: 28px; color:#FFFBF1;">90-day LLM target</h3>
+        <p style="color:#D8CDB5;">Re-run this same 5x4 grid in 90 days. Move from <strong>14 of 20</strong> to <strong>18+ of 20</strong>, and, above all, get <strong>GPT-5.5 from 0/5 to 3+/5</strong>. Capturing ChatGPT is the single clearest KPI in this audit, because it is where the most AI-search traffic is and the only model that cannot currently see you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">11 · 90-Day Roadmap</span></div>
+    <h2>What happens<br>in the next <em class="display-italic">90 days</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Three sprints. The technical work is light (one LCP tune), so the plan front-loads content depth and off-page authority, the two levers that unlock both organic rank and GPT-5.5. Each item has a priority tag (P0 = must-ship).</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="roadmap">
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 0-30</div>
+        <h3>Depth &amp; reach</h3>
+        <p class="small">Deepen the site and start the citation + review engines that close the AI gap.</p>
+        <ul>
+          <li><div class="check"></div><span>Tune the LCP image (resize, format, preload)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Expand homepage past 800 words + unit table</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Build /drive-up-storage + /storage-gunnison-valley</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Claim/complete Yelp, Bing, Apple, Storagefront listings</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Start Google review drive (one-tap links + QR)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Add AggregateRating + areaServed to existing schema</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Add location-specific alt text on facility images</span><span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 31-60</div>
+        <h3>Content &amp; citations</h3>
+        <p class="small">Turn the local strength into organic depth and feed GPT-5.5.</p>
+        <ul>
+          <li><div class="check"></div><span>Publish cost + RV/vehicle + size-guide pages</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Refocus /about-us; let new Gunnison page rank</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Service + areaServed schema on all new pages</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Tier 1 local citations (chamber, directories)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Hit 18+ Google reviews while holding 5.0</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Expand FAQPage with cost/drive-up/RV questions</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>sameAs + NAP cleanup to disambiguate Slate Storage</span><span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 61-90</div>
+        <h3>Authority &amp; AI</h3>
+        <p class="small">Compound the gains and re-measure, with GPT-5.5 as the headline KPI.</p>
+        <ul>
+          <li><div class="check"></div><span>Tier 2 partnerships (movers, realtors, outfitters)</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Publish seasonal + moving + review content</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Hit 25+ reviews; embed Review schema</span><span class="pri">P1</span></li>
+          <li><div class="check"></div><span>Re-run flagship 5x4 LLM grid, target 18+/20</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Specifically re-test GPT-5.5, target 3+/5</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Re-run Lighthouse, target Perf 0.90+, LCP &lt;2.5s</span><span class="pri">P0</span></li>
+          <li><div class="check"></div><span>Re-check local pack + earn organic top-3 for head term</span><span class="pri">P0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:64px;">Targets at 90 days</h3>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Organic rank (head)</div>
+        <div class="kpi-value">Top 3</div>
+<div class="kpi-trend up">↑ from none</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Google reviews</div>
+        <div class="kpi-value">25+</div>
+<div class="kpi-trend up">↑ from 6</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Referring domains</div>
+        <div class="kpi-value">12+</div>
+<div class="kpi-trend up">↑ from ~2</div>
+      </div>
+      <div class="kpi cta">
+        <div class="kpi-label">LLM citations</div>
+        <div class="kpi-value">18<small>/20</small></div>
+<div class="kpi-trend up">↑ from 14</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">GPT-5.5 citations</div>
+        <div class="kpi-value">3<small>/5</small></div>
+<div class="kpi-trend up">↑ from 0</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Lighthouse Perf</div>
+        <div class="kpi-value">0.90<small>+</small></div>
+<div class="kpi-trend up">↑ from 0.82</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Mobile LCP</div>
+        <div class="kpi-value"><2.5s</div>
+<div class="kpi-trend up">↑ from 2.9s</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Indexable pages</div>
+        <div class="kpi-value">8+</div>
+<div class="kpi-trend up">↑ from ~3</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="appendix">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">Appendix</span></div>
+    <h2>Methodology &amp; <em class="display-italic">sources</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <details class="acc" open>
+      <summary>Data sources used in this audit</summary>
+      <div class="body">
+        <ul>
+          <li><strong>DataForSEO</strong>, Lighthouse mobile audit, on-page parse, live SERP scans (US, en), Labs (ranked keywords, competitors, keyword ideas, keyword overview), Google Trends.</li>
+          <li><strong>Playwright</strong>, live crawl at desktop 1440 / tablet 768 / mobile 375. H1-H4 extraction, meta + og + twitter + JSON-LD inspection, alt text counts, tech stack detection.</li>
+          <li><strong>Perplexity + Brave Search</strong>, industry trends, local competitor landscape, seasonal demand, backlink prospecting, PAA harvesting.</li>
+          <li><strong>Flagship LLM citation test</strong>, 5 prompts × 4 frontier models = 20 live calls via DataForSEO AI Optimization, every call with web_search enabled. Models: Claude Sonnet 4.6, Gemini 3.1 Pro, GPT-5.5, Sonar-Reasoning-Pro. The verbatim prompts:
+            <ol style="margin-top:6px; font-size:14.5px;">
+              <li><code class="mono">"Best self storage in Crested Butte, CO"</code></li>
+              <li><code class="mono">"How do I rent a storage unit near Crested Butte, Colorado?"</code></li>
+              <li><code class="mono">"Drive-up storage units in Crested Butte, CO"</code></li>
+              <li><code class="mono">"How much does a storage unit cost in Crested Butte, CO?"</code></li>
+              <li><code class="mono">"Self storage in the Gunnison Valley, Colorado"</code></li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Files produced as part of this engagement</summary>
+      <div class="body"><ul>
+          <li><code class="mono">audit/RESEARCH-SUMMARY.md</code> · consolidated findings</li>
+          <li><code class="mono">audit/dataforseo/</code> · ranked keywords, SERP, Lighthouse, keyword data</li>
+          <li><code class="mono">screenshots/01-homepage-desktop.png</code> · live crawl capture</li>
+          <li><code class="mono">research/llm-flagship-run/</code> · 20 raw AI responses + citation tally</li>
+          <li>This <strong>HTML report</strong> at <code class="mono">report/index.html</code></li>
+      </ul></div>
+    </details>
+
+    <details class="acc">
+      <summary>What we deliberately did NOT do</summary>
+      <div class="body"><ul>
+          <li>We did not deploy any change to the live site, every fix is a costed recommendation.</li>
+          <li>We did not crawl every URL, the high-impact homepage, /about-us and FAQ block are covered.</li>
+          <li>We did not claim or modify the Google Business Profile, that should happen with brand permissions.</li>
+          <li>We did not buy or place any backlinks, citations are recommendations.</li>
+          <li>We did not name or analyse the owner's other facilities; this report covers Slate River Storage only.</li>
+      </ul></div>
+    </details>
+
+    <details class="acc">
+      <summary>Limitations &amp; caveats</summary>
+      <div class="body"><ul>
+          <li>DataForSEO Labs shows a very thin ranked-keyword profile; several reported terms are out-of-state "Slate Storage" brand matches, not real traffic.</li>
+          <li>Lighthouse is a single lab run; field (CrUX) data may differ. Re-run after the LCP fix.</li>
+          <li>The LLM test is a 20-call sample (5 prompts x 4 flagship models). Re-run monthly with the same prompts so the trend, especially GPT-5.5, is comparable.</li>
+          <li>Google review counts and local-pack order shift continuously; figures captured May 30, 2026.</li>
+      </ul></div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mark">thinkflowlabs</div>
+    <p style="margin-top: 18px;">Prepared for slateriverstorage.com · May 30, 2026</p>
+    <p class="small" style="margin-top:6px;">Open this file in your browser. Use Cmd/Ctrl+P to export a printable PDF.</p>
+  </div>
+</footer>
+
+</body>
+</html>
