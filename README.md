@@ -8,6 +8,7 @@ Each subfolder of this repo is one engagement. Pages are blocked from search eng
 
 | Client | Folder | URL |
 |---|---|---|
+| Medical Travel Colombia | [`/medical-travel-colombia-audit/`](./medical-travel-colombia-audit/) | https://thinkflowlabs.github.io/SEO/medical-travel-colombia-audit/ |
 | Chefpost | [`/chefpost-audit/`](./chefpost-audit/) | https://thinkflowlabs.github.io/SEO/chefpost-audit/ |
 
 ## How to add a new audit
