@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>ThinkFlow Labs SEO Audit &amp; Repositioning Strategy · June 2026</title>
+<meta name="description" content="A 360 degree SEO, technical and AI-visibility audit of thinkflowlabs.com, built around the repositioning to SEO plus LLM SEO only. Includes the 0-of-20 LLM citation test, a URL by error by fix catalog, an AEO/GEO keyword strategy, schema plan, content roadmap, backlink tiers and a 90-day plan." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --ink:        #0E1014;
+    --ink-2:      #1F2630;
+    --muted:      #5E6675;
+    --line:       #E6DFD2;
+    --line-2:     #EFE7D8;
+    --cream:      #FBF6EB;
+    --cream-2:    #F4ECD9;
+    --paper:      #FFFBF1;
+    /* Brand accent: ThinkFlow Labs electric indigo */
+    --coral:      #5B47E6;
+    --coral-dk:   #3D2BB0;
+    --coral-sft:  #EBE7FB;
+    --gold:       #C89A4A;
+    --gold-sft:   #F6E7C7;
+    --green:      #1F7A6A;
+    --green-sft:  #DAEEE7;
+    --amber:      #B45309;
+    --amber-sft:  #FFE9BD;
+    --red-bg:     #FFEBE9;
+
+    --r-sm: 4px; --r-md: 10px; --r-lg: 18px; --r-xl: 26px;
+    --shadow-sm: 0 1px 0 rgba(20,18,12,.06);
+    --shadow-md: 0 14px 38px -22px rgba(40,30,90,.30), 0 2px 0 rgba(20,18,12,.04);
+    --shadow-lg: 0 30px 80px -30px rgba(40,30,90,.36);
+
+    --serif:      "Fraunces", "Times New Roman", serif;
+    --sans:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:       "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--coral-dk); text-decoration: none; border-bottom: 1px solid rgba(61,43,176,.25); }
+  a:hover { border-bottom-color: var(--coral-dk); }
+
+  /* ============ LAYOUT ============ */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); position: relative; }
+  section.alt { background: var(--paper); }
+  section.dark { background: var(--ink); color: #ECE7F7; border-top-color: #2A2733; }
+  section.dark a { color: #C9BCFF; border-bottom-color: rgba(201,188,255,.3); }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.012em; line-height: 1.08; margin: 0; }
+  h1 { font-size: clamp(48px, 8vw, 96px); font-weight: 380; letter-spacing: -.03em; }
+  h2 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 400; letter-spacing: -.022em; }
+  h3 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.18; }
+  h4 { font-size: 19px; font-weight: 600; line-height: 1.3; font-family: var(--sans); letter-spacing: -.005em; }
+  .display-italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 500; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--coral-dk);
+  }
+  p { margin: 0 0 1em; }
+  p.lede { font-size: 21px; line-height: 1.55; color: var(--ink-2); }
+  ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
+  ul li, ol li { margin-bottom: .35em; }
+  strong { font-weight: 600; }
+  .mono { font-family: var(--mono); font-size: .9em; }
+  .small { font-size: 13px; color: var(--muted); }
+
+  /* ============ HERO ============ */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #EBE7FB 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-top: 0;
+    padding: 56px 0 96px;
+    overflow: hidden; position: relative;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%235B47E6' opacity='.07'/></svg>");
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; position: relative; }
+  .hero h1 { margin-bottom: .18em; }
+  .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .hero .meta { font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+  .hero .by-line { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-2); margin-top: 36px; font-size: 14px; }
+  .hero .by-line span b { color: var(--ink); font-weight: 600; }
+  .hero-side {
+    background: white; border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 30px; box-shadow: var(--shadow-md);
+    font-size: 14px;
+  }
+  .hero-side h4 { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-family: var(--sans); margin-bottom: 16px; font-weight: 600; }
+  .hero-side dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; }
+  .hero-side dt { color: var(--muted); }
+  .hero-side dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .hero-side .severity-strip { margin: 22px -30px -30px; padding: 18px 30px; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); color: white; border-radius: 0 0 var(--r-lg) var(--r-lg); display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ TLDR (Executive Summary) ============ */
+  .tldr { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; }
+  .tldr h2 em { font-style: italic; color: var(--coral); font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .tldr-bullets { font-size: 17px; line-height: 1.6; }
+  .tldr-bullets li { margin-bottom: 16px; padding-left: 4px; }
+  .tldr-bullets li::marker { color: var(--coral); }
+  .verdict-card {
+    background: var(--ink); color: #ECE7F7;
+    border-radius: var(--r-lg); padding: 36px;
+    position: sticky; top: 24px;
+  }
+  .verdict-card h4 { color: #E4DEF6; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; font-weight: 500; }
+  .verdict-card p { font-size: 15px; line-height: 1.65; color: #C8C2D8; }
+  .verdict-card .score-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--mono); font-size: 12px; }
+  .verdict-card .score-row b { color: white; font-size: 18px; }
+  @media (max-width: 820px) { .tldr { grid-template-columns: 1fr; } .verdict-card { position: static; } }
+
+  /* ============ KPI GRID ============ */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 22px 18px; position: relative; overflow: hidden;
+  }
+  .kpi-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+  .kpi-value small { font-size: 17px; color: var(--muted); margin-left: 4px; font-family: var(--sans); font-weight: 500; }
+  .kpi-trend { font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+  .kpi-trend.up { color: var(--green); }
+  .kpi-trend.dn { color: var(--coral-dk); }
+  .kpi.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; } .kpi-value { font-size: 36px; } }
+
+  /* ============ FINDINGS CARDS ============ */
+  .findings { display: grid; gap: 24px; }
+  .finding {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 36px; display: grid; grid-template-columns: 88px 1fr; gap: 28px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+  }
+  .finding .num {
+    font-family: var(--serif); font-size: 78px; font-weight: 400; line-height: 1; color: var(--coral); letter-spacing: -.04em; opacity: .9;
+  }
+  .finding h3 { margin-bottom: 8px; }
+  .finding .impact-line { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; font-family: var(--mono); letter-spacing: .02em; }
+  .finding p { font-size: 16px; }
+  .finding .fix {
+    background: var(--cream-2); padding: 18px 22px; border-radius: var(--r-md);
+    margin-top: 18px; border-left: 3px solid var(--coral); font-size: 15.5px;
+  }
+  .finding .fix b { color: var(--ink); }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+  }
+  .badge.crit { background: var(--coral); color: white; }
+  .badge.high { background: var(--amber-sft); color: var(--amber); }
+  .badge.med { background: var(--gold-sft); color: var(--gold); }
+  .badge.opp { background: var(--green-sft); color: var(--green); }
+  .badge.brand { background: var(--ink); color: var(--cream); }
+  @media (max-width: 820px) {
+    .finding { grid-template-columns: 1fr; padding: 26px; }
+    .finding .num { font-size: 56px; }
+  }
+
+  /* ============ DATA TABLES ============ */
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14.5px;
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  }
+  th { text-align: left; font-weight: 600; padding: 14px 16px; background: var(--cream-2); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  td.kw { font-weight: 500; }
+  td .badge { font-size: 10px; padding: 3px 8px; }
+
+  .table-scroll { overflow-x: auto; }
+
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #CFC6F4; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
+  /* ============ PILLS / CALLOUTS ============ */
+  .callout {
+    background: var(--coral-sft); border: 1px solid #CFC6F4;
+    border-radius: var(--r-md); padding: 22px 26px;
+    font-size: 15.5px; color: var(--coral-dk); margin: 24px 0;
+  }
+  .callout.opp { background: var(--green-sft); border-color: #BFE0D6; color: #135548; }
+  .callout.warn { background: var(--amber-sft); border-color: #F2D5A0; color: var(--amber); }
+  .callout strong { color: inherit; }
+
+  /* ============ TWO-COL ============ */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ============ ROADMAP ============ */
+  .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .road-col {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 28px;
+  }
+  .road-col .label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 12.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--coral-dk); margin-bottom: 6px; }
+  .road-col .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--coral); }
+  .road-col h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 18px; }
+  .road-col ul { list-style: none; padding: 0; }
+  .road-col li { padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .road-col li:last-child { border-bottom: 0; }
+  .road-col li .check { width: 18px; height: 18px; border: 1.5px solid var(--line); border-radius: 4px; margin-top: 2px; }
+  .road-col li .pri { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; align-self: start; }
+  @media (max-width: 1000px) { .roadmap { grid-template-columns: 1fr; } }
+
+  /* ============ SCHEMA SNIPPETS ============ */
+  pre.code {
+    background: #1A1F26; color: #DCD0AE; padding: 22px 26px;
+    border-radius: var(--r-md); font-family: var(--mono); font-size: 13px;
+    overflow-x: auto; line-height: 1.55; margin: 18px 0;
+  }
+  .code .k { color: #C9BCFF; }
+  .code .s { color: #B5DCC7; }
+  .code .c { color: #6E6452; font-style: italic; }
+
+  /* ============ FOOTER ============ */
+  footer { padding: 56px 0 36px; background: var(--ink); color: #ABA3C2; text-align: center; }
+  footer .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 28px; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  footer .small { color: #6F6A82; }
+
+  /* ============ STICKY NAV ============ */
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 246, 235, 0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  .topnav .inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .topnav a { color: var(--ink); border-bottom: 0; font-size: 13px; font-weight: 500; }
+  .topnav .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 20px; font-variation-settings: "SOFT" 100, "WONK" 1; border: 0; }
+  .topnav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .topnav nav { display: none; } }
+
+  /* ============ HORIZONTAL BAR CHART ============ */
+  .bar-row { display: grid; grid-template-columns: 210px 1fr 80px; gap: 14px; align-items: center; padding: 8px 0; font-size: 14px; }
+  .bar-bg { height: 22px; background: var(--cream-2); border-radius: 4px; overflow: hidden; position: relative; }
+  section.dark .bar-bg { background: #2A2733; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); }
+  .bar-fill.alt { background: linear-gradient(90deg, var(--gold) 0%, #A77F35 100%); }
+  .bar-fill.green { background: linear-gradient(90deg, #2C9D8B 0%, var(--green) 100%); }
+  .bar-fill.empty { background: repeating-linear-gradient(45deg, #3A3647, #3A3647 6px, #2E2B3A 6px, #2E2B3A 12px); }
+  .bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; text-align: right; color: var(--ink-2); }
+  section.dark .bar-val { color: #C8C2D8; }
+  @media (max-width: 600px) { .bar-row { grid-template-columns: 130px 1fr 56px; font-size: 13px; } }
+
+  /* ============ DIVIDERS ============ */
+  .ornament { text-align: center; margin: 48px 0; color: var(--coral); font-family: var(--serif); font-size: 22px; letter-spacing: .4em; opacity: .7; }
+  .section-eyebrow { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .section-eyebrow .bar { width: 36px; height: 1px; background: var(--coral); }
+
+  /* ============ MISC ============ */
+  .quote {
+    border-left: 3px solid var(--coral); padding: 12px 0 12px 26px;
+    font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink-2);
+    font-style: italic; margin: 28px 0;
+  }
+  .quote cite { display: block; margin-top: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: normal; letter-spacing: .04em; }
+
+  .prompt-card { background: #15131C; border: 1px solid #322C44; border-radius: var(--r-lg); padding: 30px 34px; margin: 28px 0; }
+  .prompt-card .tag { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #9C8FE0; margin-bottom: 18px; }
+  .prompt-card ol { margin: 0; padding-left: 1.4em; }
+  .prompt-card ol li { font-family: var(--serif); font-size: 19px; line-height: 1.4; color: #ECE7F7; margin-bottom: 14px; }
+  .prompt-card ol li::marker { color: #9C8FE0; }
+
+  .matrix { width: 100%; border-collapse: collapse; font-size: 14px; background: #15131C; border: 1px solid #322C44; border-radius: var(--r-md); overflow: hidden; }
+  .matrix th { background: #221E2E; color: #C8C2D8; border-bottom: 1px solid #322C44; padding: 12px 12px; font-size: 11px; }
+  .matrix td { padding: 12px 12px; border-bottom: 1px solid #2A2636; color: #ECE7F7; }
+  .matrix td.no { color: #E26D7E; font-family: var(--mono); text-align: center; font-weight: 700; }
+  .matrix td.yes { color: #6FE0B0; font-family: var(--mono); text-align: center; font-weight: 700; }
+  .matrix td.q { font-size: 13px; color: #C8C2D8; }
+  .matrix tr:last-child td { border-bottom: 0; }
+
+  details.acc { background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 22px; margin-bottom: 10px; }
+  details.acc summary { cursor: pointer; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.acc summary::after { content: "+"; font-family: var(--serif); font-size: 22px; color: var(--coral); }
+  details.acc[open] summary::after { content: "−"; }
+  details.acc[open] { box-shadow: var(--shadow-md); }
+  details.acc .body { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: white; }
+    section { padding: 28px 0; page-break-inside: avoid; }
+    .topnav, .hero::before { display: none; }
+    .finding, .road-col, table { box-shadow: none; }
+    a { color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ STICKY NAV ============ -->
+<div class="topnav">
+  <div class="wrap inner">
+    <a href="#top" class="mark">thinkflow labs · seo audit</a>
+    <nav>
+      <a href="#tldr">Summary</a>
+      <a href="#snapshot">Snapshot</a>
+      <a href="#critical">Critical</a>
+      <a href="#quickwins">Quick Wins</a>
+      <a href="#hierarchy">URL Catalog</a>
+      <a href="#keywords">Keywords</a>
+      <a href="#schema">Schema</a>
+      <a href="#content">Content</a>
+      <a href="#backlinks">Backlinks</a>
+      <a href="#llm">AI/LLM</a>
+      <a href="#roadmap">90-Day Plan</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="meta">SEO &amp; AI-Visibility Audit · Repositioning Brief · June 2026</div>
+      <h1>You sell LLM&nbsp;SEO.<br>No <em>LLM</em> has<br>heard of you.</h1>
+      <p class="lede" style="max-width:560px;">thinkflowlabs.com is repositioning to specialize in SEO and LLM&nbsp;SEO only. This audit measures where the site stands today (invisible, in both Google and AI), and lays out how to own the AEO/GEO category before the incumbents arrive.</p>
+      <div class="by-line">
+        <span><b>Prepared by</b> ThinkFlow Labs (internal)</span>
+        <span><b>Market</b> United States · English</span>
+        <span><b>Method</b> DataForSEO · Semrush · Playwright · 5×4 LLM test</span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h4>At a glance</h4>
+      <dl>
+        <dt>Authority Score</dt><dd>0 / 100</dd>
+        <dt>Ranked keywords (US)</dt><dd>1</dd>
+        <dt>Est. organic traffic</dt><dd>~0 / mo</dd>
+        <dt>LLM citations</dt><dd>0 / 20</dd>
+        <dt>Referring domains</dt><dd>21 (100% nofollow)</dd>
+        <dt>Services marketed</dt><dd>4 → 2</dd>
+        <dt>Rankable pages</dt><dd>1 (single SPA)</dd>
+      </dl>
+      <div class="severity-strip">
+        <span>Verdict</span>
+        <span>Rebuild around the wedge</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ EXECUTIVE SUMMARY ============ -->
+<section id="tldr" class="alt">
+  <div class="wrap tldr">
+    <div>
+      <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">01 · Executive Summary</span></div>
+      <h2>The cobbler's children have <em>no shoes</em>.</h2>
+      <p class="lede" style="margin:18px 0 26px;">ThinkFlow Labs is an AI marketing agency that wants to be known for getting brands cited by AI. Today, no AI cites ThinkFlow Labs, and Google barely knows it exists. That is not a crisis, it is the opening. The category the brand wants to own is the youngest, fastest-rising and least-defended niche in all of search.</p>
+      <ul class="tldr-bullets">
+        <li><strong>Invisible everywhere.</strong> Authority Score 0, one ranked US keyword (its own brand name, on page 2), roughly zero organic traffic, and <strong>0 of 20</strong> citations across five buyer prompts sent to four flagship AI models.</li>
+        <li><strong>Still selling the dismissed services.</strong> Google Ads and AI Voice Agents are marketed in the heroes, the footer, both meta titles, both meta descriptions, and five Service schema entries. The repositioning to SEO plus LLM SEO has not reached the website.</li>
+        <li><strong>Nothing to rank.</strong> The whole site is a single client-rendered page. The nav "pages" (Services, About, Blog, Careers) are in-page anchors, not real URLs. There is no SEO page, no LLM SEO page, no blog. You cannot rank for a category when you have not written a page about it.</li>
+        <li><strong>The wedge is wide open.</strong> "aeo agency" has keyword difficulty 3 and grew about 700% year over year at a $53 CPC. "ai seo agency" sits at difficulty 8, up 164%. "geo agency" is up roughly 1,157%. The vocabulary is so new that Google has no tight semantic cluster for it yet, a textbook early-mover signal.</li>
+        <li><strong>The fix is a rebuild, not a patch.</strong> Go English-first, ship real service and definition pages with FAQ schema, instrument the site (there is no Google Search Console and no analytics at all), disavow the Moldova link-spam, and start getting cited by publishing the definitional content LLMs quote.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="verdict-card">
+        <h4>The 60-second verdict</h4>
+        <p>thinkflowlabs.com has near-zero downside risk and enormous upside. There is no traffic to protect, no rankings to lose, and the destination category is rising fast with almost no entrenched competition. The job is to build the asset that does not exist yet: a focused, English-first, AEO/GEO-native site that earns AI citations by being the clearest source on the topic.</p>
+        <div class="score-row"><span>Organic visibility</span><b>2 / 100</b></div>
+        <div class="score-row"><span>Domain authority</span><b>0 / 100</b></div>
+        <div class="score-row"><span>AI / LLM visibility</span><b>0 / 20</b></div>
+        <div class="score-row"><span>Content depth</span><b>1 / 10</b></div>
+        <div class="score-row"><span>Measurement</span><b>0 / 10</b></div>
+        <div class="score-row"><span>Category opportunity</span><b>9 / 10</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATE OF THE SITE ============ -->
+<section id="snapshot">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">02 · State of the Site</span></div>
+    <h2>What the data <em>actually</em> shows.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">Pulled live from Semrush, DataForSEO and a full Playwright crawl on 23 June 2026. No Google Search Console history exists, the property was never verified, so every number below comes from third-party tools.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="kpi-grid">
+      <div class="kpi cta"><div class="kpi-label">Authority Score</div><div class="kpi-value">0</div><div class="kpi-trend dn">Semrush rank 8.9M</div></div>
+      <div class="kpi cta"><div class="kpi-label">Ranked KWs (US)</div><div class="kpi-value">1</div><div class="kpi-trend dn">brand only · pos 12-13</div></div>
+      <div class="kpi cta"><div class="kpi-label">Organic traffic</div><div class="kpi-value">~0<small>/mo</small></div><div class="kpi-trend dn">ETV ≈ 0.2</div></div>
+      <div class="kpi cta"><div class="kpi-label">LLM citations</div><div class="kpi-value">0<small>/20</small></div><div class="kpi-trend dn">0% across 4 models</div></div>
+      <div class="kpi"><div class="kpi-label">Referring domains</div><div class="kpi-value">21</div><div class="kpi-trend dn">100% nofollow · toxic</div></div>
+      <div class="kpi"><div class="kpi-label">Lighthouse SEO</div><div class="kpi-value">100</div><div class="kpi-trend up">code is fine</div></div>
+      <div class="kpi"><div class="kpi-label">Rankable pages</div><div class="kpi-value">1</div><div class="kpi-trend dn">single Vite SPA</div></div>
+      <div class="kpi"><div class="kpi-label">Analytics tags</div><div class="kpi-value">0</div><div class="kpi-trend dn">no GA4 · no GSC</div></div>
+    </div>
+
+    <div class="two-col" style="margin-top:36px;">
+      <div>
+        <h3 style="margin-bottom:14px;">The category is rising fast</h3>
+        <p class="small" style="margin-bottom:18px;">Google Trends (US, 12 months) and year-over-year keyword growth for the terms ThinkFlow Labs wants to own. These are the tailwinds.</p>
+        <div class="bar-row"><span>geo agency</span><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">+1,157%</span></div>
+        <div class="bar-row"><span>aeo agency</span><div class="bar-bg"><div class="bar-fill" style="width:62%"></div></div><span class="bar-val">+700%</span></div>
+        <div class="bar-row"><span>ai visibility</span><div class="bar-bg"><div class="bar-fill" style="width:62%"></div></div><span class="bar-val">+700%</span></div>
+        <div class="bar-row"><span>ai seo agency</span><div class="bar-bg"><div class="bar-fill alt" style="width:24%"></div></div><span class="bar-val">+164%</span></div>
+        <div class="bar-row"><span>ai search optimization</span><div class="bar-bg"><div class="bar-fill alt" style="width:18%"></div></div><span class="bar-val">+81%</span></div>
+        <div class="bar-row"><span>answer engine optimization</span><div class="bar-bg"><div class="bar-fill alt" style="width:14%"></div></div><span class="bar-val">+26%</span></div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:14px;">The whole footprint, in one table</h3>
+        <div class="table-scroll">
+        <table>
+          <thead><tr><th>Signal</th><th>Today</th></tr></thead>
+          <tbody>
+            <tr><td class="kw">Domain</td><td>thinkflowlabs.com (Vite SPA)</td></tr>
+            <tr><td class="kw">Only ranked keyword</td><td>"thinkflow" · pos 12-13 · page 2</td></tr>
+            <tr><td class="kw">Backlinks / ref domains</td><td class="num">57 / 21</td></tr>
+            <tr><td class="kw">Link profile</td><td>100% nofollow · Moldova PBN</td></tr>
+            <tr><td class="kw">Homepage word count</td><td class="num">~566</td></tr>
+            <tr><td class="kw">H1 tags on homepage</td><td class="num">2 (should be 1)</td></tr>
+            <tr><td class="kw">Services marketed</td><td>SEO, LLM SEO, Google Ads, Voice Agents</td></tr>
+            <tr><td class="kw">Languages</td><td>EN + ES, no switcher</td></tr>
+            <tr><td class="kw">Search Console</td><td>not set up</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout opp" style="margin-top:30px;"><strong>The one-line read:</strong> there is nothing to defend and everything to build. A from-scratch, English-first rebuild around AEO/GEO costs almost nothing in lost equity because there is almost no equity yet.</div>
+  </div>
+</section>
+
+<!-- ============ CRITICAL FINDINGS ============ -->
+<section id="critical" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · The Five Critical Findings</span></div>
+    <h2>Five things to fix <em>first</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Ordered by impact on the repositioning. The first is existential for a brand that sells AI visibility.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="findings">
+      <div class="finding">
+        <div class="num">1</div>
+        <div>
+          <span class="badge crit">P0 · Existential</span>
+          <h3 style="margin-top:12px;">Zero AI citations: the brand that sells LLM SEO is invisible to LLMs</h3>
+          <div class="impact-line">0 of 20 · five buyer prompts × four flagship models · web search on</div>
+          <p>We asked Claude Sonnet 4.6, Gemini 3.1 Pro, GPT-5.5 and Perplexity Sonar-Reasoning-Pro the exact questions a buyer would ask, including "which agency can get my brand cited by ChatGPT and Google AI Overviews?". ThinkFlow Labs was never mentioned, while roughly 40 competitors were. An agency that cannot get itself cited cannot credibly promise to get a client cited. This is the proof point the whole repositioning lives or dies on.</p>
+          <div class="fix"><b>Fix:</b> treat the brand as client zero. Publish the definitional and "best agency" content LLMs quote, build the entity footprint (Crunchbase, LinkedIn, Clutch, G2), get into the existing "best AEO agency" roundups, then re-run this exact 5×4 test every 30 days as the headline KPI.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">2</div>
+        <div>
+          <span class="badge crit">P0 · Repositioning</span>
+          <h3 style="margin-top:12px;">Nothing to rank: a single-page SPA with no service or content pages</h3>
+          <div class="impact-line">1 real page + 3 legal routes · "Blog" and "Careers" are dead anchors</div>
+          <p>The entire website is one client-rendered React page. Everything in the nav and footer (Services, About, Contact, Blog, Careers, and the four services) is an in-page anchor like <code>#llm-seo</code>, not a crawlable URL. There is no <code>/llm-seo</code>, no <code>/aeo</code>, no blog, no case studies, no pricing. Google and LLMs cite pages; this site is, in effect, one thin 566-word page.</p>
+          <div class="fix"><b>Fix:</b> build the architecture, a homepage pillar plus dedicated, server-rendered (or prerendered) pages for each money term and each definition, each with its own title, H1, copy and FAQ schema. This is the single highest-leverage move in the plan.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">3</div>
+        <div>
+          <span class="badge high">P1 · Repositioning</span>
+          <h3 style="margin-top:12px;">The site still sells the two dismissed services everywhere</h3>
+          <div class="impact-line">Google Ads + Voice Agents in heroes, footer, 2 titles, 2 descriptions, 5 schema items</div>
+          <p>The decision was made to specialize in SEO and LLM SEO only, but the website still markets Google Ads ("Reach your customers at the exact moment") and AI Voice Agents ("Voice agents that boost your sales") in the hero sections, the footer Services menu, both meta titles, both meta descriptions, and across five <code>Service</code> schema entries. A diffuse "we do everything" message is exactly what makes both Google and LLMs unsure what to rank or cite you for.</p>
+          <div class="fix"><b>Fix:</b> remove Google Ads and Voice Agents from all heroes, the footer, titles, descriptions and schema. Reduce the Service schema to two crisp entries (SEO, LLM SEO/AEO/GEO). Specialists get cited; generalists get ignored.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">4</div>
+        <div>
+          <span class="badge high">P1 · Targeting</span>
+          <h3 style="margin-top:12px;">Language and market confusion contradicts a US-English focus</h3>
+          <div class="impact-line">Bilingual ES/EN · no switcher · x-default → Spanish · meta targets "Colombia and United States"</div>
+          <p>The site is fully bilingual through a <code>?lang=</code> query parameter with no visible switcher. The default language is inconsistent (the home and privacy pages serve English; <code>/terms</code> and <code>/legal</code> declare <code>lang="es"</code> while showing English), the <code>hreflang x-default</code> points to Spanish, and the meta descriptions explicitly target "companies in Colombia and United States." For a US-English go-to-market, this sends mixed signals to search engines and dilutes relevance.</p>
+          <div class="fix"><b>Fix:</b> commit to English-first for the US. Make English the default and the <code>x-default</code>, remove the Spanish meta keywords and Twitter tags, and either drop the ES version or isolate it under a clean <code>/es/</code> path with correct reciprocal hreflang.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">5</div>
+        <div>
+          <span class="badge high">P1 · Foundation</span>
+          <h3 style="margin-top:12px;">No measurement, toxic backlinks, and a broken chatbot on every page</h3>
+          <div class="impact-line">0 analytics tags · 0 GSC · 100% nofollow PBN links · n8n widget CORS-blocked sitewide</div>
+          <p>There is no GA4, GTM, Pixel or Clarity anywhere, and Search Console was never set up, so the agency runs zero measurement on its own site. The 21 referring domains are 100% nofollow and dominated by a Moldova private-blog-network cluster on a shared IP plus a "fiverr-seo" spam domain. And the n8n "Hi there!" chat widget fails on every page (its Railway webhook is CORS-blocked, returning "Failed to fetch").</p>
+          <div class="fix"><b>Fix:</b> install GA4 + Search Console + Bing Webmaster on day one, file a disavow for the PBN cluster, and either repair the chatbot webhook (CORS allow-list) or remove the widget. A broken chatbot on an AI agency's site is the worst possible first impression.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUICK WINS ============ -->
+<section id="quickwins">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · Quick Wins</span></div>
+    <h2>Twelve fixes you can ship <em>this week</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">High impact, low effort. None of these require the full rebuild; they stop the bleeding and set the foundation.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>#</th><th>Fix</th><th>Why it matters</th><th>Effort</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td class="kw">Verify Google Search Console + Bing Webmaster</td><td>You cannot improve what you do not measure. This also unlocks indexing and query data.</td><td><span class="badge opp">5 min</span></td></tr>
+        <tr><td class="num">2</td><td class="kw">Install GA4 (and ideally Microsoft Clarity)</td><td>Zero analytics today. Needed to prove any future result, including AI referral traffic.</td><td><span class="badge opp">15 min</span></td></tr>
+        <tr><td class="num">3</td><td class="kw">Remove the duplicate H1 on the homepage</td><td>Two H1s confuse topical focus. One clear H1 stating "AI SEO / LLM SEO agency".</td><td><span class="badge opp">10 min</span></td></tr>
+        <tr><td class="num">4</td><td class="kw">Fix the canonical bug on /privacy, /terms, /legal</td><td>All three canonicalize to the homepage and duplicate its title, risking deindexing.</td><td><span class="badge opp">15 min</span></td></tr>
+        <tr><td class="num">5</td><td class="kw">Rewrite the title + meta around SEO + LLM SEO</td><td>Drop Google Ads and Voice Agents from the title tag. Lead with the category you want.</td><td><span class="badge opp">15 min</span></td></tr>
+        <tr><td class="num">6</td><td class="kw">Repair or remove the n8n chatbot</td><td>It fails sitewide ("Failed to fetch"). A broken AI widget on an AI agency site is damaging.</td><td><span class="badge med">30 min</span></td></tr>
+        <tr><td class="num">7</td><td class="kw">File a disavow for the Moldova PBN cluster</td><td>Toxic, shared-IP, 100% nofollow spam. Disavow before any real link building.</td><td><span class="badge med">45 min</span></td></tr>
+        <tr><td class="num">8</td><td class="kw">Make English the default + x-default</td><td>Today x-default points to Spanish. Align the site with the US-English target.</td><td><span class="badge med">30 min</span></td></tr>
+        <tr><td class="num">9</td><td class="kw">Compress the hero image (Cloudinary)</td><td>~4.3 MB of image savings available; LCP is 2.9s on a 6.6 MB page.</td><td><span class="badge opp">20 min</span></td></tr>
+        <tr><td class="num">10</td><td class="kw">Claim Crunchbase, LinkedIn, Clutch, G2 profiles</td><td>Entity footprint is the foundation of being recognized (and cited) by LLMs.</td><td><span class="badge med">2 hrs</span></td></tr>
+        <tr><td class="num">11</td><td class="kw">Add Organization schema with full sameAs</td><td>Link all profiles so AI and Google resolve ThinkFlow Labs as one consistent entity.</td><td><span class="badge opp">30 min</span></td></tr>
+        <tr><td class="num">12</td><td class="kw">Publish one definition page: "What is LLM SEO?"</td><td>Definitional pages are the fastest get-cited win. Ship one with FAQ schema this week.</td><td><span class="badge med">3 hrs</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ URL CATALOG ============ -->
+<section id="hierarchy" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">05 · URL × Error × Fix Catalog</span></div>
+    <h2>Every URL, every issue, the <em>exact</em> fix.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">The site only has a handful of real routes, so the bigger story is the architecture that does not exist yet. Both are catalogued below.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <span class="sub-eyebrow">The pages that exist</span>
+
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://www.thinkflowlabs.com/</div>
+          <div class="url-audit-meta">homepage · single SPA · ~566 words · the only marketing page</div>
+        </div>
+        <span class="badge crit">P0 · CRITICAL</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Off-strategy services</div>
+          <div class="issue-current">Hero + footer market all four services, including Google Ads and AI Voice Agents.</div>
+          <div class="issue-fix"><b>Fix:</b> strip to SEO + LLM SEO. Lead the hero with "AI SEO &amp; LLM SEO agency".</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Two H1 tags</div>
+          <div class="issue-current">The page renders two <code>&lt;h1&gt;</code> elements, splitting topical focus.</div>
+          <div class="issue-fix"><b>Fix:</b> one H1 with the primary keyword; demote the second to <code>&lt;h2&gt;</code>.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Thin content</div>
+          <div class="issue-current">~566 words total for a homepage that must establish category authority.</div>
+          <div class="issue-fix"><b>Fix:</b> expand to a 1,200+ word pillar with answer-first sections and an FAQ block.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Spanish meta on EN page</div>
+          <div class="issue-current">Spanish meta keywords + <code>og:image:alt</code> + Twitter tags persist on the English page.</div>
+          <div class="issue-fix"><b>Fix:</b> rewrite all meta in English; drop the legacy <code>keywords</code> tag entirely.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Client-side rendering</div>
+          <div class="issue-current">Vite SPA: content is injected by JS into <code>#root</code>. Weak base for AI crawlers.</div>
+          <div class="issue-fix"><b>Fix:</b> add SSR or prerendering so HTML is present without executing JS.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Broken chatbot</div>
+          <div class="issue-current">n8n widget webhook is CORS-blocked → "Failed to fetch" on load.</div>
+          <div class="issue-fix"><b>Fix:</b> allow-list the domain on the Railway webhook, or remove the widget.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Heavy hero</div>
+          <div class="issue-current">6.6 MB page, LCP 2.9s, ~4.3 MB of image savings available.</div>
+          <div class="issue-fix"><b>Fix:</b> serve next-gen formats at responsive sizes via Cloudinary transforms.</div>
+        </div>
+        <div class="url-issue ok">
+          <div class="issue-name">Technical base is sound</div>
+          <div class="issue-current">Lighthouse SEO 100, Best Practices 96, A11y 91. HTTPS, viewport, valid JSON-LD present.</div>
+          <div class="issue-fix"><b>Keep:</b> the code quality is good. The problem is strategy, content and authority.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">/privacy-policy &nbsp;·&nbsp; /terms &nbsp;·&nbsp; /legal</div>
+          <div class="url-audit-meta">the only non-home routes · 187-737 words each</div>
+        </div>
+        <span class="badge high">P1 · HIGH</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Canonical to homepage</div>
+          <div class="issue-current">All three set <code>rel=canonical</code> to <code>https://thinkflowlabs.com/</code> and duplicate the homepage title/description.</div>
+          <div class="issue-fix"><b>Fix:</b> self-referencing canonicals and unique titles per legal page.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">lang vs content mismatch</div>
+          <div class="issue-current"><code>/terms</code> and <code>/legal</code> declare <code>lang="es"</code> but display English copy.</div>
+          <div class="issue-fix"><b>Fix:</b> set <code>lang="en"</code> to match the rendered content.</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">No schema</div>
+          <div class="issue-current">Legal pages carry no structured data and no breadcrumbs.</div>
+          <div class="issue-fix"><b>Fix:</b> low priority, but add <code>BreadcrumbList</code> when the architecture lands.</div>
+        </div>
+      </div>
+    </div>
+
+    <span class="sub-eyebrow">The architecture that does not exist (the real opportunity)</span>
+
+    <div class="url-group warn">
+      <h4>Dead anchors masquerading as pages</h4>
+      <p>These appear in the nav and footer as if they were sections of the business, but each is only an in-page anchor on the homepage. None is a crawlable, rankable, or citable URL.</p>
+      <div class="url-list">
+        <span><code>#seo</code> <span class="cnt">should be /seo</span></span>
+        <span><code>#llm-seo</code> <span class="cnt">should be /llm-seo</span></span>
+        <span><code>#google-ads</code> <span class="cnt">remove</span></span>
+        <span><code>#voice-agents</code> <span class="cnt">remove</span></span>
+        <span><code>#about</code> <span class="cnt">should be /about</span></span>
+        <span><code>#contact</code> <span class="cnt">should be /contact</span></span>
+        <span><code>#blog</code> <span class="cnt">no blog exists</span></span>
+        <span><code>#careers</code> <span class="cnt">no careers exist</span></span>
+      </div>
+      <div class="group-fix"><b>Template-level fix:</b> promote the strategic anchors to real routes and delete the dead ones. Linking to <code>#blog</code> and <code>#careers</code> that do not exist erodes trust and wastes crawl signals.</div>
+    </div>
+
+    <div class="url-group opp">
+      <h4>Service pages to build (each a money keyword)</h4>
+      <p>Every page below maps to a commercial keyword that is both winnable and valuable. This is where pipeline comes from.</p>
+      <div class="url-list">
+        <span><code>/ai-seo-agency</code> <span class="cnt">KD 8 · +164%</span></span>
+        <span><code>/llm-seo</code> <span class="cnt">KD 21 · $8 CPC</span></span>
+        <span><code>/answer-engine-optimization</code> <span class="cnt">aeo agency KD 3</span></span>
+        <span><code>/generative-engine-optimization</code> <span class="cnt">geo agency +1,157%</span></span>
+        <span><code>/ai-visibility</code> <span class="cnt">KD 16 · +700%</span></span>
+        <span><code>/chatgpt-seo</code> <span class="cnt">KD 18</span></span>
+        <span><code>/pricing</code> <span class="cnt">transparent fees</span></span>
+        <span><code>/case-studies</code> <span class="cnt">proof + dog-food</span></span>
+      </div>
+      <div class="group-fix"><b>Template-level fix:</b> one page per service, each with a unique title, single H1, 800-1,200 words of answer-first copy, a 5-question FAQ block with <code>FAQPage</code> schema, and a clear CTA. These are the pages Google ranks and LLMs cite.</div>
+    </div>
+
+    <div class="url-group opp">
+      <h4>Definition pages to build (fastest get-cited wins)</h4>
+      <p>Definitional "what is X" pages have the highest odds of being quoted verbatim by ChatGPT, Gemini and Perplexity. The category vocabulary is new enough that a clean definition can become the source.</p>
+      <div class="url-list">
+        <span><code>/what-is-llm-seo</code></span>
+        <span><code>/what-is-answer-engine-optimization</code></span>
+        <span><code>/what-is-generative-engine-optimization</code></span>
+        <span><code>/seo-vs-aeo-vs-geo</code></span>
+        <span><code>/how-to-rank-in-chatgpt</code></span>
+        <span><code>/ai-seo-pricing</code></span>
+      </div>
+      <div class="group-fix"><b>Template-level fix:</b> lead each with a 40-60 word direct definition, add <code>DefinedTerm</code> + <code>FAQPage</code> schema, cite original data, and keep it fresh (ChatGPT favors URLs roughly 400 days newer than typical organic results).</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KEYWORD STRATEGY ============ -->
+<section id="keywords">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">06 · Keyword Strategy</span></div>
+    <h2>Win the <em>young</em> terms now, grow into the head later.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">The strategy is barbell: capture the low-difficulty, high-CPC AEO/GEO terms today (almost no competition), and build toward the harder head terms as authority compounds.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <span class="sub-eyebrow">Tier 1 · Build these service pages now (low difficulty, high value)</span>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Keyword</th><th class="num">Volume</th><th class="num">Difficulty</th><th class="num">YoY</th><th class="num">CPC</th><th>Intent</th></tr></thead>
+      <tbody>
+        <tr><td class="kw">aeo agency</td><td class="num">390</td><td class="num">3</td><td class="num">+700%</td><td class="num">$53</td><td>Transactional</td></tr>
+        <tr><td class="kw">ai seo agency</td><td class="num">1,000-2,900</td><td class="num">8-33</td><td class="num">+164%</td><td class="num">$23</td><td>Transactional</td></tr>
+        <tr><td class="kw">geo agency</td><td class="num">480</td><td class="num">low</td><td class="num">+1,157%</td><td class="num">-</td><td>Transactional</td></tr>
+        <tr><td class="kw">llm seo / llm optimization</td><td class="num">880-1,300</td><td class="num">18-21</td><td class="num">+23%</td><td class="num">$8</td><td>Commercial</td></tr>
+        <tr><td class="kw">ai visibility</td><td class="num">590-2,400</td><td class="num">16</td><td class="num">+700%</td><td class="num">$11</td><td>Commercial</td></tr>
+        <tr><td class="kw">chatgpt seo</td><td class="num">480</td><td class="num">18</td><td class="num">-46%</td><td class="num">-</td><td>Commercial</td></tr>
+        <tr><td class="kw">generative engine optimization services</td><td class="num">590-1,000</td><td class="num">6-29</td><td class="num">rising</td><td class="num">$13</td><td>Transactional</td></tr>
+        <tr><td class="kw">answer engine optimization agency</td><td class="num">390</td><td class="num">19</td><td class="num">rising</td><td class="num">$18</td><td>Transactional</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <span class="sub-eyebrow">Tier 2 · Rising head terms to grow into (pillar + authority play)</span>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Keyword</th><th class="num">Volume</th><th class="num">Difficulty</th><th class="num">YoY</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td class="kw">answer engine optimization</td><td class="num">2,400-3,600</td><td class="num">41-59</td><td class="num">+26%</td><td>Definition pillar</td></tr>
+        <tr><td class="kw">ai search optimization</td><td class="num">1,000-2,900</td><td class="num">35-48</td><td class="num">+81%</td><td>Homepage pillar</td></tr>
+        <tr><td class="kw">generative engine optimization</td><td class="num">5,400</td><td class="num">57-87</td><td class="num">rising</td><td>Definition pillar</td></tr>
+        <tr><td class="kw">ai seo</td><td class="num">8,100</td><td class="num">52</td><td class="num">-33%</td><td>Mature head term</td></tr>
+        <tr><td class="kw">seo agency</td><td class="num">27,100</td><td class="num">31</td><td class="num">-55%</td><td>Traditional-SEO buyers</td></tr>
+        <tr><td class="kw">seo consultant</td><td class="num">9,900</td><td class="num">30</td><td class="num">-64%</td><td>Traditional-SEO buyers</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout"><strong>Early-mover signal:</strong> when we pulled keyword ideas for "llm seo" and "aeo", the tools returned mostly off-topic terms. Google has not yet built a tight semantic cluster around this vocabulary. That is precisely the window in which a focused site can become the canonical source before the category consolidates.</div>
+  </div>
+</section>
+
+<!-- ============ SCHEMA PLAN ============ -->
+<section id="schema" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">07 · Schema Markup Plan</span></div>
+    <h2>Make the brand <em>machine-readable</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">Structured data is how you tell Google and LLMs exactly who you are and what you do. Today the homepage has decent schema but it markets five services; that has to become two, and every new page needs its own.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="two-col">
+      <div>
+        <h3 style="margin-bottom:8px;">Phase 1 · Fix what exists</h3>
+        <p class="small">Collapse the five Service entries to two (SEO, LLM SEO). Add a complete <code>Organization</code> with <code>sameAs</code> to every claimed profile. Remove the stray duplicate <code>WebSite</code> node.</p>
+        <h3 style="margin:22px 0 8px;">Phase 2 · Per-page schema</h3>
+        <p class="small">Each service page gets its own <code>Service</code> + <code>BreadcrumbList</code>. Each definition and FAQ block gets <code>FAQPage</code>. This is the layer that earns featured snippets and AI Overview citations.</p>
+        <h3 style="margin:22px 0 8px;">Phase 3 · Definitional authority</h3>
+        <p class="small">Glossary pages use <code>DefinedTerm</code> + <code>Article</code>; playbooks use <code>HowTo</code>. These maximize "what is X" citation odds.</p>
+        <h3 style="margin:22px 0 8px;">Phase 4 · E-E-A-T signals</h3>
+        <p class="small">Add <code>Person</code>/author schema with credentials, and <code>Review</code>/<code>AggregateRating</code> once real client reviews exist on the site.</p>
+      </div>
+      <div>
+        <p class="small" style="margin-bottom:6px;"><b>Corrected Organization + Service (Phase 1)</b></p>
+        <pre class="code"><span class="k">{</span>
+  <span class="s">"@context"</span>: <span class="s">"https://schema.org"</span>,
+  <span class="s">"@type"</span>: <span class="s">"ProfessionalService"</span>,
+  <span class="s">"name"</span>: <span class="s">"ThinkFlow Labs"</span>,
+  <span class="s">"url"</span>: <span class="s">"https://www.thinkflowlabs.com/"</span>,
+  <span class="s">"description"</span>: <span class="s">"AI SEO and LLM SEO agency"</span>,
+  <span class="s">"areaServed"</span>: <span class="s">"US"</span>,
+  <span class="s">"sameAs"</span>: <span class="k">[</span>
+    <span class="s">"https://www.linkedin.com/company/..."</span>,
+    <span class="s">"https://www.crunchbase.com/..."</span>,
+    <span class="s">"https://clutch.co/profile/..."</span>
+  <span class="k">]</span>,
+  <span class="s">"makesOffer"</span>: <span class="k">[</span>
+    <span class="k">{</span> <span class="s">"@type"</span>:<span class="s">"Service"</span>,
+      <span class="s">"name"</span>:<span class="s">"SEO"</span> <span class="k">}</span>,
+    <span class="k">{</span> <span class="s">"@type"</span>:<span class="s">"Service"</span>,
+      <span class="s">"name"</span>:<span class="s">"LLM SEO / AEO / GEO"</span> <span class="k">}</span>
+  <span class="k">]</span>
+<span class="k">}</span></pre>
+        <p class="small" style="margin:14px 0 6px;"><b>FAQPage for every definition page (Phase 2)</b></p>
+        <pre class="code"><span class="k">{</span>
+  <span class="s">"@context"</span>:<span class="s">"https://schema.org"</span>,
+  <span class="s">"@type"</span>:<span class="s">"FAQPage"</span>,
+  <span class="s">"mainEntity"</span>:<span class="k">[{</span>
+    <span class="s">"@type"</span>:<span class="s">"Question"</span>,
+    <span class="s">"name"</span>:<span class="s">"What is LLM SEO?"</span>,
+    <span class="s">"acceptedAnswer"</span>:<span class="k">{</span>
+      <span class="s">"@type"</span>:<span class="s">"Answer"</span>,
+      <span class="s">"text"</span>:<span class="s">"LLM SEO is the practice of..."</span>
+    <span class="k">}</span>
+  <span class="k">}]</span>
+<span class="k">}</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTENT STRATEGY ============ -->
+<section id="content">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">08 · Content Strategy</span></div>
+    <h2>Publish the pages LLMs <em>love to quote</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">Original research and clean definitions are the single biggest credibility differentiator in this category. Here is the first 10-piece roadmap, sequenced for fast citation wins.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th class="num">Wk</th><th>Piece</th><th>Type</th><th>Primary keyword</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td class="kw">AI Search Optimization (SEO + AEO + GEO + LLM): The Complete Guide</td><td>Homepage pillar</td><td>ai search optimization agency</td></tr>
+        <tr><td class="num">2</td><td class="kw">What Is LLM SEO? The Missing Layer in Your AI Search Strategy</td><td>Definition</td><td>what is llm optimization</td></tr>
+        <tr><td class="num">2</td><td class="kw">What Is Answer Engine Optimization (AEO)? How It Differs from SEO</td><td>Definition</td><td>what is answer engine optimization</td></tr>
+        <tr><td class="num">3</td><td class="kw">What Is Generative Engine Optimization (GEO)? Definition + US Use Cases</td><td>Definition</td><td>what is generative engine optimization</td></tr>
+        <tr><td class="num">4</td><td class="kw">How to Rank in ChatGPT, Gemini &amp; Perplexity: A Practical GEO Playbook</td><td>How-to</td><td>how to rank in chatgpt</td></tr>
+        <tr><td class="num">5</td><td class="kw">Why ChatGPT Never Mentions Your Brand (And How to Fix It)</td><td>Diagnostic / lead magnet</td><td>chatgpt not mentioning my brand</td></tr>
+        <tr><td class="num">6</td><td class="kw">SEO vs AEO vs GEO vs LLM Optimization: The 2026 Playbook</td><td>Comparison</td><td>seo vs aeo vs geo</td></tr>
+        <tr><td class="num">7</td><td class="kw">Best AI SEO (AEO/GEO) Agencies in the US 2026: An Expert Evaluation</td><td>Roundup / positioning</td><td>best ai seo agency us</td></tr>
+        <tr><td class="num">8</td><td class="kw">AI SEO Pricing in the US: Benchmark Study of AEO, GEO &amp; LLM Fees</td><td>Original research</td><td>ai seo pricing usa</td></tr>
+        <tr><td class="num">9</td><td class="kw">GEO Benchmark Report 2026: How Often Do US Brands Get Cited in AI?</td><td>Original research</td><td>geo benchmark report</td></tr>
+        <tr><td class="num">10</td><td class="kw">Case Study: 90-Day AI Search Turnaround for a US B2B SaaS Brand</td><td>Case study / proof</td><td>ai seo case study</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin:40px 0 8px;">The FAQ bank to seed across pages (28 questions)</h3>
+    <p class="small" style="margin-bottom:20px;">Each maps to <code>FAQPage</code> schema. Definitional ones cluster on glossary pages (highest get-cited odds); commercial ones live on service and pricing pages.</p>
+    <div class="three-col" style="font-size:14px;">
+      <div>
+        <p style="font-weight:600;color:var(--coral-dk);margin-bottom:6px;">Definitional</p>
+        <ul style="padding-left:1.1em;">
+          <li>What is LLM SEO?</li>
+          <li>What is Answer Engine Optimization?</li>
+          <li>What is Generative Engine Optimization?</li>
+          <li>What is AI search optimization?</li>
+          <li>What's the difference between AEO and SEO?</li>
+          <li>Is GEO just SEO with a new name?</li>
+          <li>How is AEO different from GEO and LLMO?</li>
+          <li>Mentions vs citations vs share of voice?</li>
+          <li>Where does ChatGPT pull results from?</li>
+          <li>How do LLMs decide which brands to recommend?</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:600;color:var(--coral-dk);margin-bottom:6px;">How-to / process</p>
+        <ul style="padding-left:1.1em;">
+          <li>How do I rank in ChatGPT?</li>
+          <li>How do I rank in Gemini and Perplexity?</li>
+          <li>How do I get started with AEO?</li>
+          <li>What schema should I use for AEO?</li>
+          <li>How do I track AI / LLM visibility?</li>
+          <li>What KPIs prove AEO is working?</li>
+          <li>How do I optimize content so AI cites it?</li>
+          <li>Does SEO help you rank in ChatGPT?</li>
+          <li>How long until I get cited in ChatGPT?</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:600;color:var(--coral-dk);margin-bottom:6px;">Commercial / buyer</p>
+        <ul style="padding-left:1.1em;">
+          <li>What is the best LLM SEO / AEO agency?</li>
+          <li>How much do AEO / GEO services cost?</li>
+          <li>Are AEO services worth it?</li>
+          <li>Can small businesses do AEO?</li>
+          <li>What are the best AEO / GEO tools?</li>
+          <li>How long does AEO take to work?</li>
+          <li>Does GEO/AEO actually work? (proof)</li>
+          <li>Can you guarantee a ChatGPT citation?</li>
+          <li>What does an AI visibility audit include?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BACKLINK STRATEGY ============ -->
+<section id="backlinks" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">09 · Backlink &amp; Citation Strategy</span></div>
+    <h2>Build a <em>citation graph</em>, not just links.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">LLMs cite high-authority media, community platforms (Reddit, Quora, LinkedIn) and "best agency" listicles. The plan targets all three, but step zero is cleaning up the spam.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="callout warn"><strong>Step 0, before any outreach:</strong> disavow the existing link profile. All 21 referring domains are nofollow and the cluster is dominated by a Moldova PBN on a shared IP plus a "fiverr-seo" spam domain. Building good links on top of toxic ones wastes the good ones.</div>
+
+    <div class="two-col" style="margin-top:8px;">
+      <div class="url-group">
+        <h4>Tier 1 · Entity foundation (do first)</h4>
+        <p>The profiles LLMs and knowledge graphs read to understand who you are. Consistent NAP + "AI SEO" descriptors everywhere.</p>
+        <div class="url-list"><span>Crunchbase</span><span>LinkedIn (company + founder)</span><span>Clutch</span><span>G2</span><span>Capterra</span><span>DesignRush</span><span>The Manifest</span><span>Semrush Agency Partners</span></div>
+      </div>
+      <div class="url-group">
+        <h4>Tier 2 · Authority media (highest citation value)</h4>
+        <p>The domains LLMs treat as primary SEO sources. Pitch guest articles + expert quotes via HARO-style channels.</p>
+        <div class="url-list"><span>Search Engine Journal</span><span>Search Engine Land</span><span>Moz Blog</span><span>Semrush / Ahrefs blogs</span><span>HubSpot</span><span>HARO / Connectively</span><span>Featured.com</span><span>Help A B2B Writer</span></div>
+      </div>
+      <div class="url-group opp">
+        <h4>Tier 3 · "Best AEO agency" listicles (fast LLM wins)</h4>
+        <p>These exact ranking pages already feed AI answers. Get added to them and you enter the LLM consideration set directly.</p>
+        <div class="url-list"><span>yesoptimist.com</span><span>minuttia.com</span><span>contently.com</span><span>firstpagesage.com</span><span>searchbloom.com</span><span>provenroi.com</span><span>generatemore.ai</span><span>answermaniac.ai</span></div>
+      </div>
+      <div class="url-group opp">
+        <h4>Tier 4 · Communities &amp; podcasts (where citations originate)</h4>
+        <p>Reddit, Quora and LinkedIn appear constantly in AI Overviews. Be genuinely useful; link sparingly.</p>
+        <div class="url-list"><span>r/SEO · r/TechSEO · r/bigseo</span><span>r/SaaS · r/seogrowth</span><span>Quora (AEO/GEO answers)</span><span>LinkedIn long-form</span><span>SEJ Show (podcast)</span><span>Marketing School (podcast)</span><span>Superpath / Online Geniuses</span><span>Traffic Think Tank</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPETITIVE LANDSCAPE ============ -->
+<section id="competitive">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">10 · Competitive Landscape</span></div>
+    <h2>How the leaders <em>prove</em> they are real.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">The agencies winning AEO/GEO citations share a repeatable playbook: name a methodology, publish deep manuals, run original research, build a tracking tool, and put a founder's face on it. None of this requires scale.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Agency</th><th>Positioning</th><th>How they prove credibility</th></tr></thead>
+      <tbody>
+        <tr><td class="kw">GreenBanana SEO</td><td>GEO agency, "get cited in ChatGPT &amp; AI Overviews"</td><td>Exact-match service page naming every AI platform. Cited by 3 of 4 models in our test.</td></tr>
+        <tr><td class="kw">First Page Sage</td><td>GEO + B2B thought leadership</td><td>Publishes the canonical "Top GEO Agencies" roundup, so it is both the source and a listee.</td></tr>
+        <tr><td class="kw">Percepture</td><td>GEO + digital PR</td><td>Dedicated GEO service page plus a "GEO insights" content hub.</td></tr>
+        <tr><td class="kw">iPullRank</td><td>"Relevance Engineering", enterprise</td><td>Mike King's AI Search Manual defines the discipline the industry uses.</td></tr>
+        <tr><td class="kw">Minuttia</td><td>B2B SaaS AEO</td><td>Proprietary AI-visibility tracker + its own "Best AEO Agencies" roundup.</td></tr>
+        <tr><td class="kw">NoGood</td><td>"Pioneering AEO agency"</td><td>Named and defined AEO for category-leading brands; heavy founder thought leadership.</td></tr>
+        <tr><td class="kw">Siege Media</td><td>Content + GEO framework</td><td>Detailed GEO how-to guide + a named client case study (Mentimeter).</td></tr>
+        <tr><td class="kw">Smart GEO Agency / LLMReach / Promptive</td><td>Pure-play GEO specialists</td><td>Tiny, new, but cited because their pages say exactly "get cited by ChatGPT".</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="quote">94% of CMOs plan to increase AEO spending this year. That budget surge has attracted every SEO agency and freelancer to slap "AEO" on their services page overnight. Most are repackaging the same playbook with a new label.<cite>The Optimist, "Best AEO Agencies 2026" (cited by Claude in our test)</cite></div>
+
+    <div class="callout opp"><strong>The takeaway:</strong> the smallest, newest agencies in our citation test (Smart GEO Agency, LLMReach, Growth Anchors, Promptive, SearchEdge, Ritner Digital, FORKOFF) still got cited, because they have an exact-match service page and definitional content. ThinkFlow Labs is not behind on resources, it is behind on publishing. That gap closes in weeks, not years.</div>
+  </div>
+</section>
+
+<!-- ============ AI / LLM VISIBILITY ============ -->
+<section id="llm" class="dark">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow" style="color:#9C8FE0;">11 · AI / LLM Visibility</span></div>
+    <h2>Zero citations. Out of <em class="display-italic" style="color:#B9AAFF;">twenty</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:800px; color:#C8C2D8;">We sent five real buyer questions to four flagship models with live web search, the same way a prospect would. ThinkFlow Labs was not cited, mentioned, or linked a single time. Roughly 40 other agencies were.</p>
+
+    <div class="prompt-card">
+      <div class="tag">user_prompt · web_search = true · same string sent to all four models</div>
+      <ol>
+        <li>Best SEO agency in Miami</li>
+        <li>How do I hire an LLM SEO or AEO agency in the United States?</li>
+        <li>Generative engine optimization (GEO) services for small businesses</li>
+        <li>How much does LLM SEO / AI search optimization cost per month in the United States?</li>
+        <li>Which agency can get my brand cited and recommended by ChatGPT and Google AI Overviews?</li>
+      </ol>
+    </div>
+
+    <div class="table-scroll" style="margin:28px 0;">
+    <table class="matrix">
+      <thead><tr><th>Prompt</th><th>Claude Sonnet 4.6</th><th>Gemini 3.1 Pro</th><th>GPT-5.5</th><th>Sonar-Reasoning-Pro</th></tr></thead>
+      <tbody>
+        <tr><td class="q">1 · Best SEO agency in Miami</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td class="q">2 · Hire LLM SEO / AEO agency</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td class="q">3 · GEO for small businesses</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td class="q">4 · LLM SEO cost per month</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td class="q">5 · Get cited by ChatGPT + AIO</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="color:#ECE7F7; margin:40px 0 6px;">Who got cited instead</h3>
+    <p class="small" style="color:#9890AC; margin-bottom:20px;">Agencies named across the 20 responses, by frequency. The bottom row is the brand this report is about.</p>
+    <div class="bar-row"><span style="color:#C8C2D8;">GreenBanana SEO</span><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">3</span></div>
+    <div class="bar-row"><span style="color:#C8C2D8;">First Page Sage</span><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">3</span></div>
+    <div class="bar-row"><span style="color:#C8C2D8;">Percepture</span><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">3</span></div>
+    <div class="bar-row"><span style="color:#C8C2D8;">Coalition Technologies</span><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">3</span></div>
+    <div class="bar-row"><span style="color:#C8C2D8;">Minuttia</span><div class="bar-bg"><div class="bar-fill alt" style="width:67%"></div></div><span class="bar-val">2</span></div>
+    <div class="bar-row"><span style="color:#C8C2D8;">Optimist · NoGood · Discovered Labs</span><div class="bar-bg"><div class="bar-fill alt" style="width:67%"></div></div><span class="bar-val">2</span></div>
+    <div class="bar-row"><span style="color:#C8C2D8;">iPullRank · Searchbloom · Marcel Digital</span><div class="bar-bg"><div class="bar-fill alt" style="width:33%"></div></div><span class="bar-val">1</span></div>
+    <div class="bar-row"><span style="color:#E26D7E; font-weight:600;">ThinkFlow Labs</span><div class="bar-bg"><div class="bar-fill empty" style="width:100%"></div></div><span class="bar-val" style="color:#E26D7E;">0</span></div>
+
+    <div class="callout opp" style="background:#16241F; border-color:#27513F; color:#9FE0C2; margin-top:34px;"><strong>The wedge, in one finding:</strong> the "best SEO agency in Miami" prompt was owned by 20-year-old firms and directories. But the AEO/GEO/"get cited by ChatGPT" prompts surfaced a fragmented field of tiny, often sub-two-year-old specialists. That category is winnable on content and clarity alone, not domain age or budget. ThinkFlow Labs should compete there, not on "Miami SEO".</div>
+  </div>
+</section>
+
+<!-- ============ 90-DAY ROADMAP ============ -->
+<section id="roadmap" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">12 · 90-Day Roadmap</span></div>
+    <h2>From invisible to <em>cited</em>, in three sprints.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">Each sprint has one theme and a measurable target. The headline KPI is simple: re-run the 5×4 LLM test on day 90 and move at least one cell from a dash to a checkmark.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="roadmap">
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 1-30</div>
+        <h3>Reposition &amp; instrument</h3>
+        <ul>
+          <li><span class="check"></span><span>Strip Google Ads + Voice Agents from site, titles, meta, schema</span><span class="pri">P0</span></li>
+          <li><span class="check"></span><span>Verify Search Console + Bing + install GA4</span><span class="pri">P0</span></li>
+          <li><span class="check"></span><span>Make English the default and x-default</span><span class="pri">P1</span></li>
+          <li><span class="check"></span><span>Fix canonical bug + duplicate H1</span><span class="pri">P1</span></li>
+          <li><span class="check"></span><span>Repair or remove the n8n chatbot</span><span class="pri">P1</span></li>
+          <li><span class="check"></span><span>Disavow the Moldova PBN cluster</span><span class="pri">P1</span></li>
+          <li><span class="check"></span><span>Claim Crunchbase, LinkedIn, Clutch, G2</span><span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 31-60</div>
+        <h3>Build the architecture</h3>
+        <ul>
+          <li><span class="check"></span><span>Add SSR / prerendering to the SPA</span><span class="pri">P0</span></li>
+          <li><span class="check"></span><span>Ship homepage pillar + 4 service pages (/ai-seo-agency, /llm-seo, /aeo, /geo)</span><span class="pri">P0</span></li>
+          <li><span class="check"></span><span>Ship 3 definition pages with FAQ schema</span><span class="pri">P0</span></li>
+          <li><span class="check"></span><span>Add per-page Service + FAQPage + Breadcrumb schema</span><span class="pri">P1</span></li>
+          <li><span class="check"></span><span>Publish "How to rank in ChatGPT" playbook</span><span class="pri">P1</span></li>
+          <li><span class="check"></span><span>Launch a /pricing page with transparent fees</span><span class="pri">P2</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="label"><span class="dot"></span> Days 61-90</div>
+        <h3>Earn authority &amp; citations</h3>
+        <ul>
+          <li><span class="check"></span><span>Publish the "Best AI SEO agencies" roundup + first case study</span><span class="pri">P0</span></li>
+          <li><span class="check"></span><span>Pitch 5 guest posts + answer HARO/Featured queries</span><span class="pri">P1</span></li>
+          <li><span class="check"></span><span>Get listed in 2 "best AEO agency" roundups</span><span class="pri">P1</span></li>
+          <li><span class="check"></span><span>Run a GEO benchmark study for original data</span><span class="pri">P2</span></li>
+          <li><span class="check"></span><span>Seed Reddit / Quora / LinkedIn answers</span><span class="pri">P2</span></li>
+          <li><span class="check"></span><span>Re-run the 5×4 LLM citation test</span><span class="pri">P0</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin:44px 0 14px;">90-day targets (measurable)</h3>
+    <div class="kpi-grid">
+      <div class="kpi cta"><div class="kpi-label">LLM citations</div><div class="kpi-value">≥1<small>/20</small></div><div class="kpi-trend up">from 0</div></div>
+      <div class="kpi cta"><div class="kpi-label">Indexed pages</div><div class="kpi-value">12+</div><div class="kpi-trend up">from 1</div></div>
+      <div class="kpi cta"><div class="kpi-label">Non-brand keywords</div><div class="kpi-value">15+</div><div class="kpi-trend up">from 0</div></div>
+      <div class="kpi cta"><div class="kpi-label">Real referring domains</div><div class="kpi-value">10+</div><div class="kpi-trend up">non-spam, from 0</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPENDIX ============ -->
+<section id="appendix">
+  <div class="wrap narrow">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">13 · Appendix</span></div>
+    <h2>Method, prompts &amp; <em>limitations</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <details class="acc" open>
+      <summary>Methodology</summary>
+      <div class="body">
+        <p>Conducted 23 June 2026. Four parallel research workstreams plus a flagship LLM citation test:</p>
+        <ul>
+          <li><b>Playwright crawl</b> of every reachable route at desktop, plus mobile and tablet for the homepage; extracted H1-H6, meta, canonical, hreflang, schema, word counts, analytics tags and tech stack.</li>
+          <li><b>DataForSEO</b>: ranked keywords, SERP competitors, keyword overview/ideas for 18 AEO/GEO seeds, Google Trends, and a mobile Lighthouse audit. (Backlinks API is not on the subscription, error 40204; backlinks sourced from Semrush.)</li>
+          <li><b>Semrush</b>: domain overview (Authority Score), organic research, backlink + anchor profile, and AEO/GEO keyword research.</li>
+          <li><b>Perplexity + Brave</b>: industry trends, competitor agency landscape, service packaging/pricing, content gaps, PAA questions and backlink targets.</li>
+          <li><b>Flagship LLM citation test</b>: five buyer prompts × four models, web search enabled, via DataForSEO's ai_optimization_llm_response.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>The five LLM prompts, verbatim</summary>
+      <div class="body">
+        <p>Sent identically to <code>claude-sonnet-4-6</code>, <code>gemini-3.1-pro-preview</code>, <code>gpt-5.5</code> and <code>sonar-reasoning-pro</code>, each with <code>web_search: true</code>:</p>
+        <ol>
+          <li>"Best SEO agency in Miami"</li>
+          <li>"How do I hire an LLM SEO or AEO (answer engine optimization) agency in the United States?"</li>
+          <li>"Generative engine optimization (GEO) services for small businesses"</li>
+          <li>"How much does LLM SEO / AI search optimization cost per month in the United States?"</li>
+          <li>"Which agency can get my brand cited and recommended by ChatGPT and Google AI Overviews?"</li>
+        </ol>
+        <p>Result: ThinkFlow Labs cited 0 times across all 20 responses.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Pricing benchmark for ThinkFlow Labs' own offer</summary>
+      <div class="body">
+        <p>From the cost prompt and packaging research, the US market clusters as: small business $1,000-$3,000/mo; mid-market $2,500-$7,500/mo (most-quoted "serious" band $2,500-$6,000); enterprise $10,000+/mo. One-time AI visibility audits run $1,500-$3,000 for SMB scope. A sensible boutique entry offer: a $1,500-$3,000 "AI Search Visibility Audit &amp; Roadmap" leading into a $1,500-$2,500/mo starter retainer and a $3,500-$6,000/mo growth retainer.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>What we did NOT do</summary>
+      <div class="body">
+        <ul>
+          <li>No Google Search Console history was analyzed, the property was never verified, so all ranking and impression data is third-party (DataForSEO + Semrush).</li>
+          <li>DataForSEO Backlinks API is not on the subscription; the backlink read comes from Semrush only.</li>
+          <li>We did not audit the Google Ads or Voice Agent offerings, since both are being dismissed.</li>
+          <li>We did not change any live site files; this is an audit and plan, not an implementation.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Limitations &amp; honest caveats</summary>
+      <div class="body">
+        <p>LLM responses are probabilistic and personalized; a 0/20 result is a strong signal of invisibility but not a mathematical guarantee of never being surfaced. Keyword difficulty and volume vary between Semrush and DataForSEO (both ranges are shown). Trends percentages are year-over-year and can be noisy at low absolute volume. The category itself is young, so today's low difficulty will not last; the strategic value of moving now is precisely that the window is open.</p>
+      </div>
+    </details>
+
+    <p class="small" style="margin-top:36px;">Prepared by ThinkFlow Labs for ThinkFlow Labs. Data current as of 23 June 2026. This document is set to noindex; it is for internal and shared use only.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mark">thinkflow labs</div>
+    <p class="small" style="margin-top:10px;">AI SEO &amp; LLM SEO · Repositioning Audit · June 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
