@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>MB Clean Solutions, Implementation Runbook · June 2026</title>
+<meta name="description" content="Step-by-step execution plan to implement the MB Clean Solutions SEO audit. Every task grounded in the real Next.js codebase with file paths, exact changes, and acceptance criteria, sequenced into three 30-day sprints." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#0C1B26; --ink-2:#293947; --muted:#5C6B78; --line:#DCE4EC; --line-2:#E8EEF4;
+    --cream:#F6F8FB; --cream-2:#ECF1F7; --paper:#FFFFFF;
+    --coral:#1B7FD0; --coral-dk:#0A4E7A; --coral-sft:#E1F0FB;
+    --gold:#B5821C; --gold-sft:#F6E7C7; --green:#1F7A6A; --green-sft:#DAEEE7;
+    --amber:#B45309; --amber-sft:#FFE9BD; --red-bg:#FFEBE9;
+    --r-sm:4px; --r-md:10px; --r-lg:18px; --r-xl:26px;
+    --shadow-sm:0 1px 0 rgba(12,27,38,.06);
+    --shadow-md:0 14px 38px -22px rgba(10,40,70,.32), 0 2px 0 rgba(12,27,38,.04);
+    --shadow-lg:0 30px 80px -30px rgba(10,40,70,.36);
+    --serif:"Fraunces","Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  a{color:var(--coral-dk);text-decoration:none;border-bottom:1px solid rgba(10,78,122,.25);}
+  a:hover{border-bottom-color:var(--coral-dk);}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .narrow{max-width:900px;margin:0 auto;padding:0 32px;}
+  section{padding:80px 0;border-top:1px solid var(--line);position:relative;}
+  section.alt{background:var(--paper);}
+  section.dark{background:var(--ink);color:#E7EEF4;border-top-color:#16303f;}
+  section.dark a{color:#8FD0FF;border-bottom-color:rgba(143,208,255,.3);}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:500;letter-spacing:-.012em;line-height:1.08;margin:0;}
+  h1{font-size:clamp(46px,7.5vw,88px);font-weight:380;letter-spacing:-.03em;}
+  h2{font-size:clamp(32px,4.4vw,54px);font-weight:400;letter-spacing:-.022em;}
+  h3{font-size:clamp(21px,2.5vw,28px);font-weight:500;line-height:1.18;}
+  h4{font-size:18px;font-weight:600;line-height:1.3;font-family:var(--sans);letter-spacing:-.005em;}
+  .display-italic{font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1;color:var(--coral);}
+  .eyebrow{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--coral-dk);}
+  p{margin:0 0 1em;}
+  p.lede{font-size:21px;line-height:1.55;color:var(--ink-2);}
+  ul,ol{margin:0 0 1em;padding-left:1.2em;}
+  ul li,ol li{margin-bottom:.4em;}
+  strong{font-weight:600;}
+  .mono{font-family:var(--mono);font-size:.9em;}
+  .small{font-size:13px;color:var(--muted);}
+  /* hero */
+  .hero{background:radial-gradient(60% 80% at 80% 0%,#DCEEFB 0%,transparent 60%),radial-gradient(50% 70% at 0% 70%,#DCEFEA 0%,transparent 55%),var(--cream);border-top:0;padding:52px 0 84px;overflow:hidden;position:relative;}
+  .hero::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%231B7FD0' opacity='.07'/></svg>");pointer-events:none;}
+  .hero-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:52px;align-items:end;position:relative;}
+  .hero h1{margin-bottom:.18em;}
+  .hero h1 em{font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1;color:var(--coral);}
+  .hero .meta{font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:30px;}
+  .hero .by-line{display:flex;gap:26px;align-items:center;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--line-2);margin-top:32px;font-size:14px;}
+  .hero .by-line span b{color:var(--ink);font-weight:600;}
+  .hero-side{background:white;border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;box-shadow:var(--shadow-md);font-size:14px;}
+  .hero-side h4{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;font-family:var(--sans);margin-bottom:16px;font-weight:600;}
+  .hero-side dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:12px 16px;}
+  .hero-side dt{color:var(--muted);}
+  .hero-side dd{margin:0;font-weight:500;text-align:right;font-variant-numeric:tabular-nums;}
+  .hero-side .severity-strip{margin:22px -30px -30px;padding:18px 30px;background:linear-gradient(90deg,var(--coral) 0%,var(--coral-dk) 100%);color:white;border-radius:0 0 var(--r-lg) var(--r-lg);display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:36px;}}
+  /* tables */
+  table{width:100%;border-collapse:collapse;font-size:14px;background:white;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;}
+  th{text-align:left;font-weight:600;padding:13px 15px;background:var(--cream-2);border-bottom:1px solid var(--line);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);}
+  td{padding:12px 15px;border-bottom:1px solid var(--line-2);vertical-align:top;}
+  tr:last-child td{border-bottom:0;}
+  td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap;}
+  td.kw{font-weight:500;}
+  .table-scroll{overflow-x:auto;}
+  /* badges */
+  .badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;}
+  .badge.crit{background:var(--coral);color:white;}
+  .badge.high{background:var(--amber-sft);color:var(--amber);}
+  .badge.med{background:var(--gold-sft);color:var(--gold);}
+  .badge.opp{background:var(--green-sft);color:var(--green);}
+  .badge.brand{background:var(--ink);color:var(--cream);}
+  /* callouts */
+  .callout{background:var(--coral-sft);border:1px solid #BBD7EE;border-radius:var(--r-md);padding:22px 26px;font-size:15.5px;color:var(--coral-dk);margin:24px 0;}
+  .callout.opp{background:var(--green-sft);border-color:#BFE0D6;color:#135548;}
+  .callout.warn{background:var(--amber-sft);border-color:#F2D5A0;color:var(--amber);}
+  .callout strong{color:inherit;}
+  /* code */
+  pre.code{background:#0E2230;color:#CFE3F0;padding:18px 22px;border-radius:var(--r-md);font-family:var(--mono);font-size:12.5px;overflow-x:auto;line-height:1.5;margin:10px 0;}
+  .code .k{color:#8FD0FF;} .code .s{color:#A7E0C8;} .code .c{color:#6E8090;font-style:italic;} .code .d{color:#F6A89A;}
+  /* TASK CARDS (runbook) */
+  .task{background:white;border:1px solid var(--line);border-radius:var(--r-md);margin-bottom:16px;overflow:hidden;box-shadow:var(--shadow-sm);}
+  .task.p0{border-left:4px solid var(--coral);}
+  .task.p1{border-left:4px solid var(--gold);}
+  .task.p2{border-left:4px solid var(--muted);}
+  .task-head{background:var(--cream-2);padding:15px 22px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+  .task-head .chk{width:21px;height:21px;border:2px solid var(--coral);border-radius:5px;flex-shrink:0;}
+  .task-id{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--coral-dk);background:white;border:1px solid var(--line);padding:3px 9px;border-radius:5px;white-space:nowrap;}
+  .task-head h4{flex:1;min-width:220px;font-size:16px;margin:0;}
+  .task-body{padding:4px 22px 12px;}
+  .task-row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:11px 0;border-top:1px solid var(--line-2);font-size:13.5px;}
+  .task-row:first-child{border-top:0;}
+  .task-row .rl{font-weight:700;color:var(--muted);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding-top:3px;}
+  .task-row .rc{color:var(--ink-2);line-height:1.55;}
+  .task-row .rc code{font-size:11.5px;background:rgba(12,27,38,.05);padding:1px 5px;border-radius:3px;font-family:var(--mono);}
+  .task-row.done .rl{color:var(--green);}
+  .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;font-weight:700;}
+  .tag.code{background:var(--coral-sft);color:var(--coral-dk);}
+  .tag.offsite{background:var(--gold-sft);color:#8C6516;}
+  .tag.measure{background:var(--green-sft);color:var(--green);}
+  .tag.eff{background:#EEF2F6;color:var(--muted);border:1px solid var(--line);}
+  @media(max-width:820px){.task-row{grid-template-columns:1fr;gap:3px;}}
+  /* sprint header */
+  .sprint-tag{display:flex;align-items:center;gap:10px;font-weight:700;font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--coral-dk);margin-bottom:8px;}
+  .sprint-tag .dot{width:9px;height:9px;border-radius:999px;background:var(--coral);}
+  /* dividers + eyebrow */
+  .ornament{text-align:center;margin:44px 0;color:var(--coral);font-family:var(--serif);font-size:22px;letter-spacing:.4em;opacity:.7;}
+  .section-eyebrow{display:flex;gap:14px;align-items:center;margin-bottom:16px;}
+  .section-eyebrow .bar{width:36px;height:1px;background:var(--coral);}
+  /* steps list */
+  .steps{counter-reset:step;list-style:none;padding:0;margin:0;}
+  .steps li{position:relative;padding:0 0 22px 52px;}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;background:var(--coral);color:white;font-family:var(--serif);font-size:17px;display:flex;align-items:center;justify-content:center;}
+  .steps li::after{content:"";position:absolute;left:16px;top:34px;bottom:0;width:1px;background:var(--line);}
+  .steps li:last-child{padding-bottom:0;} .steps li:last-child::after{display:none;}
+  .steps li b{display:block;font-size:16px;color:var(--ink);margin-bottom:3px;}
+  /* nav */
+  .topnav{position:sticky;top:0;z-index:50;background:rgba(246,248,251,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:14px 0;}
+  .topnav .inner{display:flex;justify-content:space-between;align-items:center;gap:32px;}
+  .topnav a{color:var(--ink);border-bottom:0;font-size:13px;font-weight:500;}
+  .topnav .mark{font-family:var(--serif);font-style:italic;color:var(--coral);font-size:20px;font-variation-settings:"SOFT" 100,"WONK" 1;border:0;}
+  .topnav nav{display:flex;gap:22px;flex-wrap:wrap;}
+  @media(max-width:980px){.topnav nav{display:none;}}
+  /* kpi */
+  .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .kpi{background:white;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;position:relative;overflow:hidden;}
+  .kpi-label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px;}
+  .kpi-value{font-family:var(--serif);font-size:42px;font-weight:400;line-height:1;letter-spacing:-.02em;color:var(--ink);}
+  .kpi-value small{font-size:16px;color:var(--muted);margin-left:3px;font-family:var(--sans);font-weight:500;}
+  .kpi-trend{font-size:12px;margin-top:8px;font-family:var(--mono);color:var(--green);}
+  .kpi.cta::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--coral);}
+  @media(max-width:820px){.kpi-grid{grid-template-columns:1fr 1fr;}.kpi-value{font-size:32px;}}
+  /* footer */
+  footer{padding:54px 0 36px;background:var(--ink);color:#AEBECB;text-align:center;}
+  footer .mark{font-family:var(--serif);font-style:italic;color:var(--coral);font-size:28px;font-variation-settings:"SOFT" 100,"WONK" 1;}
+  footer .small{color:#6E8090;}
+  details.acc{background:white;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 22px;margin-bottom:10px;}
+  details.acc summary{cursor:pointer;font-weight:600;outline:none;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+  details.acc summary::after{content:"+";font-family:var(--serif);font-size:22px;color:var(--coral);}
+  details.acc[open] summary::after{content:"−";}
+  details.acc[open]{box-shadow:var(--shadow-md);}
+  details.acc .body{margin-top:14px;font-size:15px;color:var(--ink-2);}
+  @media print{body{background:white;}section{padding:26px 0;page-break-inside:avoid;}.topnav,.hero::before{display:none;}.task,table{box-shadow:none;}a{color:var(--ink);}}
+</style>
+</head>
+<body>
+<a id="top"></a>
+
+<div class="topnav">
+  <div class="wrap inner">
+    <a href="#top" class="mark">mb clean · build plan</a>
+    <nav>
+      <a href="#start">Start Here</a>
+      <a href="#board">The Board</a>
+      <a href="#sprint1">Sprint 1</a>
+      <a href="#sprint2">Sprint 2</a>
+      <a href="#sprint3">Sprint 3</a>
+      <a href="#reference">Reference</a>
+      <a href="#done">Done = ?</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="meta">ThinkFlowLabs · Implementation Runbook · June 2026</p>
+      <h1>The audit, turned into a <em>checklist</em>.</h1>
+      <p class="lede" style="max-width:620px;margin-top:20px;">Twenty-two tasks, sequenced into three 30-day sprints, each grounded in the real MB Clean Solutions codebase with the exact file, the exact change, and a clear "done when". Hand this to any session (or developer) and it can execute without re-deriving a thing.</p>
+      <div class="by-line">
+        <span><b>Companion to</b> &nbsp;the <a href="./">June 2026 SEO Audit</a></span>
+        <span><b>Codebase</b> &nbsp;Next.js 16.1.6 · <span class="mono">Projects/mb-clean-solutions/site/</span></span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h4>The plan at a glance</h4>
+      <dl>
+        <dt>Total tasks</dt><dd>22</dd>
+        <dt>Code tasks</dt><dd>13</dd>
+        <dt>Off-site tasks</dt><dd>7</dd>
+        <dt>Measurement tasks</dt><dd>2</dd>
+        <dt>P0 (do first)</dt><dd style="color:var(--coral-dk)">7</dd>
+        <dt>Sprint 1 goal</dt><dd>3x CTR</dd>
+        <dt>Sprint 2 goal</dt><dd>Win niches</dd>
+        <dt>Sprint 3 goal</dt><dd>Compound</dd>
+      </dl>
+      <div class="severity-strip"><span>Horizon</span><span>90 days</span></div>
+    </aside>
+  </div>
+</header>
+
+<!-- 00 START HERE -->
+<section id="start">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">00 · Start Here (read before executing)</span></div>
+    <h2>Orientation for the<br>next <em class="display-italic">session</em>.</h2>
+    <p class="lede" style="margin-top:18px;max-width:820px;">Everything a fresh session needs to pick this up cold. Load these, learn the two tracks and the conventions, then work top to bottom.</p>
+    <div class="ornament">· · ·</div>
+
+    <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+      <div>
+        <h3 style="margin-bottom:12px;">Load this context first</h3>
+        <ol class="steps">
+          <li><b>The diagnosis</b>Read <span class="mono">Projects/mb-clean-solutions/analysis/FINDINGS.md</span> (master synthesis) and skim the live audit at <a href="./">/mb-clean-solutions-audit/</a>.</li>
+          <li><b>The evidence</b><span class="mono">audit/playwright-summary.md</span>, <span class="mono">audit/dataforseo/SUMMARY.md</span>, <span class="mono">research/llm-flagship-run/citation-tally.md</span>.</li>
+          <li><b>The codebase</b><span class="mono">Projects/mb-clean-solutions/site/</span> (Next.js 16 App Router, i18n en/es). The SEO layer lives in <span class="mono">src/lib/seo/</span> and <span class="mono">src/lib/content/</span>.</li>
+          <li><b>The data engine</b>Re-run <span class="mono">analysis/gsc_compare.py</span> against any new GSC export to refresh the numbers.</li>
+        </ol>
+      </div>
+      <div>
+        <h3 style="margin-bottom:12px;">Two tracks, run in parallel</h3>
+        <p style="font-size:15px;"><span class="tag code">CODE</span> &nbsp;Changes inside the Next.js repo. Each task names the file and the edit. Build + deploy via Vercel (the repo is its own git project on Vercel).</p>
+        <p style="font-size:15px;"><span class="tag offsite">OFFSITE</span> &nbsp;Work outside the repo: Google Business Profile, reviews, citations, the Vercel dashboard, the disavow upload. No code, but the highest lead leverage.</p>
+        <p style="font-size:15px;"><span class="tag measure">MEASURE</span> &nbsp;Re-run the audit instruments to prove lift.</p>
+        <div class="callout" style="margin-top:8px;font-size:14.5px;"><strong>Conventions.</strong> Each task has an ID (<span class="mono">S1-3</span> = Sprint 1, task 3), a priority badge (<span class="badge crit" style="font-size:9px;padding:2px 7px;">P0</span> do-first, <span class="badge med" style="font-size:9px;padding:2px 7px;">P1</span>, <span class="badge" style="font-size:9px;padding:2px 7px;background:#EEF2F6;color:var(--muted);">P2</span>), an effort tag, and a "Done when" acceptance line. The empty checkbox is for you to tick.</div>
+      </div>
+    </div>
+
+    <div class="callout warn" style="margin-top:30px;"><strong>The golden rule of sequencing:</strong> Sprint 1 converts the visibility you ALREADY have (titles, schema, GBP), no new authority required, so it pays back in weeks. Do not jump to building new pages (Sprint 2) before the title and schema fixes ship, or the new pages inherit the same CTR problem. Work the order.</p></div>
+
+    <h3 style="margin:44px 0 8px;">Why this order: the data behind the priorities</h3>
+    <p class="small" style="margin-bottom:16px;">Each sprint targets the specific number it can move most.</p>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Sprint</th><th>Targets this problem</th><th>The data</th><th>Expected lift</th></tr></thead>
+      <tbody>
+        <tr><td class="kw">1 · Convert</td><td>CTR collapse + intent mismatch</td><td>0.18% CTR on 33.6k impressions; /areas/ 10,117 impr / 2 clicks</td><td>3x CTR, clicks 20 to 60+</td></tr>
+        <tr><td class="kw">2 · Widen</td><td>Zero page-1 rankings + missing niches</td><td>0 KW on page 1; dealership 2,400/mo KD 8 has no page</td><td>8+ keywords to page 1</td></tr>
+        <tr><td class="kw">3 · Compound</td><td>Authority + AI + Spanish moat</td><td>4/20 AI citations; Spanish CTR 2.03% vs 0.13%</td><td>8/20 AI, Spanish footprint 2x</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- THE BOARD -->
+<section id="board" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">01 · The Board</span></div>
+    <h2>All 22 tasks,<br>one <em class="display-italic">table</em>.</h2>
+    <p class="lede" style="margin-top:18px;max-width:780px;">The master view. Detailed cards follow in the sprint sections. Print this page and check them off.</p>
+    <div class="ornament">· · ·</div>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>ID</th><th>Task</th><th>Track</th><th>Pri</th><th>Effort</th><th>Primary file / system</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">S1-1</td><td class="kw">Kill duplicate-brand title bug</td><td><span class="tag code">code</span></td><td><span class="badge crit">P0</span></td><td class="mono">XS</td><td class="mono">lib/content/areas.ts</td></tr>
+        <tr><td class="mono">S1-2</td><td class="kw">Add x-default hreflang</td><td><span class="tag code">code</span></td><td><span class="badge crit">P0</span></td><td class="mono">XS</td><td class="mono">lib/seo/metadata.ts</td></tr>
+        <tr><td class="mono">S1-3</td><td class="kw">Enable Vercel Web Analytics</td><td><span class="tag offsite">offsite</span></td><td><span class="badge crit">P0</span></td><td class="mono">XS</td><td class="mono">Vercel dashboard</td></tr>
+        <tr><td class="mono">S1-4</td><td class="kw">Fix "Kitchenin" H1 typo</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">XS</td><td class="mono">IndustryPageContent.tsx</td></tr>
+        <tr><td class="mono">S1-5</td><td class="kw">Rewrite home + top-20 titles/metas</td><td><span class="tag code">code</span></td><td><span class="badge crit">P0</span></td><td class="mono">M</td><td class="mono">content/* + metadata</td></tr>
+        <tr><td class="mono">S1-6</td><td class="kw">Add intent qualifier to service-city titles</td><td><span class="tag code">code</span></td><td><span class="badge crit">P0</span></td><td class="mono">S</td><td class="mono">[citySlug]/page.tsx</td></tr>
+        <tr><td class="mono">S1-7</td><td class="kw">Roll AggregateRating to all ranking pages</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">M</td><td class="mono">lib/seo/schemas.ts</td></tr>
+        <tr><td class="mono">S1-8</td><td class="kw">Optimize Google Business Profile</td><td><span class="tag offsite">offsite</span></td><td><span class="badge crit">P0</span></td><td class="mono">M</td><td class="mono">GBP</td></tr>
+        <tr><td class="mono">S1-9</td><td class="kw">Launch review engine (40+ in 90d)</td><td><span class="tag offsite">offsite</span></td><td><span class="badge crit">P0</span></td><td class="mono">M+</td><td class="mono">GBP + ops</td></tr>
+        <tr><td class="mono">S1-10</td><td class="kw">File the PBN disavow</td><td><span class="tag offsite">offsite</span></td><td><span class="badge med">P1</span></td><td class="mono">S</td><td class="mono">Search Console</td></tr>
+        <tr><td class="mono">S2-1</td><td class="kw">Rebuild /areas hubs as real local pages</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">M</td><td class="mono">AreaPageContent.tsx + areas.ts</td></tr>
+        <tr><td class="mono">S2-2</td><td class="kw">Build Auto Dealership Cleaning vertical</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">L</td><td class="mono">content/service-pages/</td></tr>
+        <tr><td class="mono">S2-3</td><td class="kw">Build Property-Mgmt + Medical Office pages</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">M</td><td class="mono">service-pages + industries</td></tr>
+        <tr><td class="mono">S2-4</td><td class="kw">Publish the South Florida Cost Guide</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">M</td><td class="mono">new content page</td></tr>
+        <tr><td class="mono">S2-5</td><td class="kw">Triage thin service-city pages (noindex/deepen)</td><td><span class="tag code">code</span></td><td><span class="badge" style="background:#EEF2F6;color:var(--muted)">P2</span></td><td class="mono">M</td><td class="mono">metadata noIndex flag</td></tr>
+        <tr><td class="mono">S2-6</td><td class="kw">Tier 1+2 citations &amp; local links</td><td><span class="tag offsite">offsite</span></td><td><span class="badge med">P1</span></td><td class="mono">M</td><td class="mono">directories + chambers</td></tr>
+        <tr><td class="mono">S2-7</td><td class="kw">Add offers/areaServed to Service schema</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">S</td><td class="mono">lib/seo/schemas.ts</td></tr>
+        <tr><td class="mono">S3-1</td><td class="kw">Standardize the "citable page" formula</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">M</td><td class="mono">service-page templates</td></tr>
+        <tr><td class="mono">S3-2</td><td class="kw">Expand Spanish to the wedge verticals</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">M</td><td class="mono">messages/ + content</td></tr>
+        <tr><td class="mono">S3-3</td><td class="kw">Consolidate brand vs mbfloorsolutions.com</td><td><span class="tag code">code</span></td><td><span class="badge med">P1</span></td><td class="mono">S</td><td class="mono">next.config redirects</td></tr>
+        <tr><td class="mono">S3-4</td><td class="kw">Tier 3+4 links &amp; digital PR</td><td><span class="tag offsite">offsite</span></td><td><span class="badge" style="background:#EEF2F6;color:var(--muted)">P2</span></td><td class="mono">M</td><td class="mono">industry + PR</td></tr>
+        <tr><td class="mono">S3-5</td><td class="kw">Re-run GSC compare + 20-call LLM test</td><td><span class="tag measure">measure</span></td><td><span class="badge med">P1</span></td><td class="mono">S</td><td class="mono">gsc_compare.py + LLM</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- SPRINT 1 -->
+<section id="sprint1">
+  <div class="wrap">
+    <div class="sprint-tag"><span class="dot"></span>Sprint 1 · Days 1 to 30</div>
+    <h2>Convert the visibility<br>you <em class="display-italic">already</em> have.</h2>
+    <p class="lede" style="margin-top:18px;max-width:820px;">No new authority needed. These tasks turn existing rankings into clicks by fixing the snippet and the local signals. Highest payback per hour in the whole plan.</p>
+    <div class="ornament">· · ·</div>
+
+    <div class="task p0">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-1</span><h4>Kill the duplicate-brand title bug</h4><span class="tag code">code</span><span class="badge crit">P0</span><span class="tag eff">XS</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Titles on ~24 /areas/ pages render the brand twice: <code>Commercial Cleaning Delray Beach | MB Clean Solutions | MB Clean Solutions</code>.</div></div>
+        <div class="task-row"><div class="rl">Why</div><div class="rc">These are your highest-impression pages (delray 2,200 impr, boynton 1,487, 0.02% CTR). The double brand wastes ~20 SERP chars and reads as low quality.</div></div>
+        <div class="task-row"><div class="rl">Root cause</div><div class="rc">The root <code>app/layout.tsx</code> sets <code>title.template: '%s | MB Clean Solutions'</code>, and every <code>metaTitle</code>/<code>metaTitleEs</code> in <code>lib/content/areas.ts</code> ALREADY ends with <code>| MB Clean Solutions</code>. The template appends it a second time.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">In <code>src/lib/content/areas.ts</code>, strip the trailing <code>| MB Clean Solutions</code> and <code>| MB Clean Solutions</code> (ES) from every <code>metaTitle</code>/<code>metaTitleEs</code>. Let the layout template add the brand once. (While here, apply the shorter rewrites from S1-5.)</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">View-source on <code>/areas/delray-beach</code> shows exactly one "MB Clean Solutions" in the title, under 60 chars total.</div></div>
+      </div>
+    </div>
+
+    <div class="task p0">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-2</span><h4>Add x-default hreflang</h4><span class="tag code">code</span><span class="badge crit">P0</span><span class="tag eff">XS</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">hreflang declares <code>en</code> and <code>es</code> but not <code>x-default</code>, so Google has no fallback for ambiguous searchers.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">In <code>src/lib/seo/metadata.ts</code>, inside <code>alternates.languages</code> (currently lines ~51-54), add one line:</div></div>
+        <div class="task-row"><div class="rl">Code</div><div class="rc"><pre class="code">languages: {
+  <span class="k">en</span>: alternateEn,
+  <span class="k">es</span>: alternateEs,
+  <span class="d">'x-default'</span>: alternateEn,   <span class="c">// add this</span>
+}</pre></div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Rendered <code>&lt;head&gt;</code> includes <code>&lt;link rel="alternate" hreflang="x-default" ...&gt;</code> site-wide. One edit fixes every page.</div></div>
+      </div>
+    </div>
+
+    <div class="task p0">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-3</span><h4>Enable Vercel Web Analytics</h4><span class="tag offsite">offsite</span><span class="badge crit">P0</span><span class="tag eff">XS</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">The <code>&lt;Analytics /&gt;</code> component is already mounted (<code>app/[locale]/layout.tsx:63</code>, imports <code>@vercel/analytics/next</code>), but <code>/_vercel/insights/script.js</code> returns 404 on every page, it is collecting nothing.</div></div>
+        <div class="task-row"><div class="rl">Why</div><div class="rc">The code is correct; the feature is just not switched on in the Vercel project. You are flying blind on real-user behavior.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">No code change. Vercel dashboard, MB Clean project, <strong>Analytics</strong> tab, click <strong>Enable Web Analytics</strong>. (Optional: also enable Speed Insights.) Redeploy if prompted.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc"><code>/_vercel/insights/script.js</code> returns 200 and the Analytics tab shows live pageviews.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-4</span><h4>Fix the broken "Kitchenin" H1</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">XS</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">The restaurant industry page H1 renders <code>Commercial Kitchenin South Florida</code>, missing the space, a visible typo on a public, ranking page (478 impr).</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">In <code>src/app/[locale]/(marketing)/industries/[industrySlug]/IndustryPageContent.tsx</code> (~line 168-171), the H1 joins <code>{industry.name}</code> with a hard-wrapped <code>in South Florida</code> with no separating space. Add a leading space: <code>{' '}in South Florida</code> or restructure the template literal. Audit all /industries/ H1s for the same join bug.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">H1 reads <code>... Commercial Kitchen in South Florida</code> with the space, on all industry pages.</div></div>
+      </div>
+    </div>
+
+    <div class="task p0">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-5</span><h4>Rewrite homepage + top-20 titles &amp; metas</h4><span class="tag code">code</span><span class="badge crit">P0</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Titles run 80-92 chars (truncated in SERP), metas 170-200 chars, value prop and price get cut off, no phone in the meta.</div></div>
+        <div class="task-row"><div class="rl">Rule</div><div class="rc">Title &le; 58 chars INCLUDING the <code>| MB Clean</code> the template adds (so the page part &le; ~44 chars). Meta &le; 155 chars, lead with the hook, end with the phone <code>(954) 482-5008</code>.</div></div>
+        <div class="task-row"><div class="rl">Where</div><div class="rc">Homepage metadata (its <code>generatePageMetadata</code> call), <code>lib/content/areas.ts</code> (area titles/descriptions), <code>lib/content/service-pages/*.ts</code> + <code>lib/content/city-service-data.ts</code> (service-city copy). Prioritize the 20 highest-impression URLs from the audit.</div></div>
+        <div class="task-row"><div class="rl">Library</div><div class="rc">Five ready rewrites are in the <a href="#reference">Reference</a> section. Use them as the pattern for the rest.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Top-20 pages: title &le; 58 chars, meta &le; 155 ending in the phone, no truncation in a SERP-width preview.</div></div>
+      </div>
+    </div>
+
+    <div class="task p0">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-6</span><h4>Add the intent qualifier to commercial titles</h4><span class="tag code">code</span><span class="badge crit">P0</span><span class="tag eff">S</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Service-city pages rank for residential queries ("hardwood floor cleaning davie fl", pos 4, 0 clicks). The snippet must pre-qualify so homeowners self-filter and B2B searchers know instantly.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">In <code>src/app/[locale]/(marketing)/services/[serviceSlug]/[citySlug]/page.tsx</code> (the <code>const title = ...</code> at ~line 31), bake a commercial qualifier into the pattern, e.g. <code>Commercial {Service} {City}, Offices &amp; Retail | From ${price}/sq ft</code>. Mirror in the ES path.</div></div>
+        <div class="task-row"><div class="rl">Example</div><div class="rc"><code>Commercial Carpet Cleaning Hialeah, Offices &amp; Retail | $0.30/sq ft</code></div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Every service-city title contains a commercial/offices qualifier and (where known) a price anchor.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-7</span><h4>Roll AggregateRating to every ranking page</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Star snippets show on service-city and /areas pages but are MISSING on <code>/services</code>, <code>/services/commercial-deep-cleaning</code>, <code>/industries/*</code>, <code>/contact</code>, <code>/about</code>.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">In <code>src/lib/seo/schemas.ts</code>, the <code>localBusinessSchema()</code> builder already carries <code>aggregateRating</code> (4.8 / 18). Add the same node to the service, industry and breadcrumb-bearing builders used by those pages (the builders at ~lines 201, 304, 388), and ensure each page renders it via <code>components/seo/JsonLd.tsx</code>. Add FAQPage to any /areas page lacking it.</div></div>
+        <div class="task-row"><div class="rl">Guardrail</div><div class="rc">Keep one consistent rating source (4.8 / 18) until real GBP reviews accrue, then update the count from S1-9.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Google Rich Results Test shows valid AggregateRating on /services, /industries/*, /contact, /about.</div></div>
+      </div>
+    </div>
+
+    <div class="task p0">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-8</span><h4>Optimize the Google Business Profile</h4><span class="tag offsite">offsite</span><span class="badge crit">P0</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Page 1 for every money term is split between a Google Map pack and national franchises. You are in neither. The GBP-tagged URL already converts at 0.54% (4-5x web), this is your cheapest lead source.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Fully populate GBP: all services as individual service items, every service-area city, 20+ photos (before/after floor jobs), correct hours, the Aventura NAP matching <code>schemas.ts</code>, and weekly Posts. Add the floor-care &amp; post-construction specialties prominently (they are your AI-cited wedge).</div></div>
+        <div class="task-row"><div class="rl">NAP to match</div><div class="rc"><code>(954) 482-5008</code> · 2980 NE 207th St, Suite 300 #141, Aventura, FL 33180. Must be byte-identical across GBP, the site footer, and schema.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">GBP is 100% complete, posting weekly, NAP-consistent with the site.</div></div>
+      </div>
+    </div>
+
+    <div class="task p0">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-9</span><h4>Launch the review engine</h4><span class="tag offsite">offsite</span><span class="badge crit">P0</span><span class="tag eff">M+</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Map-pack rivals carry 50 to 139 reviews; you carry ~18. Reviews are the single biggest local-pack ranking factor and the trust signal AI assistants weigh.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Stand up a repeatable ask: a GBP review short-link texted/emailed to every completed-job contact, a QR card left on-site, and a follow-up cadence. Target <strong>40+ reviews in 90 days</strong>. Feed the real count back into the schema (S1-7).</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">A documented review-request process is running and review count is climbing weekly toward 40+.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S1-10</span><h4>File the PBN disavow</h4><span class="tag offsite">offsite</span><span class="badge med">P1</span><span class="tag eff">S</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">14+ of the top-30 referring domains sit on one Moldova IP (195.20.19.178), a private blog network, plus spam-vendor anchors. Pure risk, zero value.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Build a <code>disavow.txt</code> with the cluster (domain list in <a href="#reference">Reference</a>) and upload via Search Console, Disavow Links tool. Stop buying any "backlink package", that is what created this.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">disavow.txt uploaded; no new toxic referring domains appear in the next Semrush pull.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPRINT 2 -->
+<section id="sprint2" class="alt">
+  <div class="wrap">
+    <div class="sprint-tag"><span class="dot"></span>Sprint 2 · Days 31 to 60</div>
+    <h2>Widen the footprint,<br>win the <em class="display-italic">niches</em>.</h2>
+    <p class="lede" style="margin-top:18px;max-width:820px;">With the snippet and local signals fixed, now claim the high-volume, low-difficulty terms you have no page for, and turn the /areas/ doorways into real landing pages.</p>
+    <div class="ornament">· · ·</div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S2-1</span><h4>Rebuild /areas hubs as real local pages</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">The 24 area pages are ~464-word near-duplicates with 0 images and no FAQ schema, classic doorway pattern, 10,117 impr / 2 clicks.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">In <code>AreaPageContent.tsx</code> / <code>CityPageContent.tsx</code> + the copy in <code>lib/content/areas.ts</code> (and the rich <code>localContext</code> already in <code>lib/content/city-service-data.ts</code>): expand each to 700+ words of city-specific proof, add 2-3 photos with alt text, an FAQ block + FAQPage schema, and internal links to the services you perform there.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Each /areas page is 700+ words, has images + FAQ schema, and is visibly unique from its neighbors.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S2-2</span><h4>Build the Auto Dealership Cleaning vertical</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">L</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">"auto dealership cleaning" 2,400/mo KD 8, "car dealer cleaning" 2,400 KD 9, "car dealership cleaning services" 1,300 KD 7. Only shencleaning ranks (pos 30-89, weak) and you have NO page.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Add <code>auto-dealership-cleaning.ts</code> to <code>src/lib/content/service-pages/</code> and register it in that folder's <code>index.ts</code> so it flows through the existing service + service-city routing. Use the "citable page" formula (price, process, certs, NAP). Generate the city set for Miami/Doral/Ft Lauderdale/WPB.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc"><code>/services/auto-dealership-cleaning</code> and its city pages are live, indexed, with schema + the qualifier titles.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S2-3</span><h4>Build Property-Management / HOA + Medical Office pages</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">"property management cleaning" 590/mo KD 6 (recurring-contract value) and "medical office cleaning" KD 4 (high-trust). Both contestable, both underserved. Demand context: Miami leads the US in medical-office construction.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Add as service-pages and/or deepen the relevant <code>/industries/</code> entries (<code>lib/content/industries.ts</code>). Medical especially needs compliance language (OSHA, disinfection) the AI cost-answers reward.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Both verticals have a deep page + city coverage, live and indexed.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S2-4</span><h4>Publish the South Florida Commercial Cleaning Cost Guide</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">The "how much does it cost" query (0/4 in our LLM test) cites ISSA, Bark, MCA, not you. Own the answer.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Build a data-rich cost guide ($/sq ft by service, by city, by frequency) using your real price anchors (post-construction $0.30, strip &amp; wax $0.85-2.00, deep clean $0.40). Clean tables + clear ranges = the citable format LLMs and Google both reward. Ship EN + ES.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Cost guide live; re-running the cost prompt in S3-5 starts citing mbcleansolutions.com.</div></div>
+      </div>
+    </div>
+
+    <div class="task p2">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S2-5</span><h4>Triage the thin service-city pages</h4><span class="tag code">code</span><span class="badge" style="background:#EEF2F6;color:var(--muted)">P2</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">359 service-city pages; hundreds rank pos 40-95 with 0 traffic and drag the site-wide average down (the main reason June fell to 37).</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Two buckets. <strong>Deepen</strong> pages ranking pos 8-20 with real impressions (they are close). <strong>noindex</strong> the pos-40+ zero-click set: <code>generatePageMetadata()</code> already supports <code>noIndex: true</code> (<code>lib/seo/metadata.ts</code>), drive it from a suppression list keyed by slug, or consolidate several weak cities into one regional page.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Zero-click pos-40+ pages are noindexed or merged; site-wide average position trends back under 30.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S2-6</span><h4>Tier 1+2 citations &amp; local links</h4><span class="tag offsite">offsite</span><span class="badge med">P1</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Directories are cited by both Google and the LLMs. Getting listed turns rivals into your citations and closes the local-signal gap.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">BBB, Yelp, Angi, Thumbtack, Nextdoor, Apple Business Connect, Bing Places, Manta, MapQuest, Foursquare + the Greater Miami / Greater Fort Lauderdale / Palm Beach chambers. (Note: locl.io citation sync was already running, audit/refresh it, fill gaps manually.) NAP must match S1-8 exactly.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Listed + NAP-consistent on all Tier-1 directories and 3 chambers; referring-domain count climbs in Semrush.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S2-7</span><h4>Add offers / areaServed to Service schema</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">S</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">LLMs already quote your per-sq-ft prices from page text. Structured <code>offers</code>/<code>priceRange</code> + <code>areaServed</code> make the extraction more reliable and unlock Google price rich-results.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">In <code>lib/seo/schemas.ts</code>, add <code>offers: { '@type':'Offer', priceSpecification: {...} }</code> and <code>areaServed</code> (every city) to the Service builder. The <code>OfferCatalog</code> + <code>areaServed</code> scaffolding already exists in <code>localBusinessSchema()</code>, reuse it.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Rich Results Test shows valid Offer/price on service pages.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPRINT 3 -->
+<section id="sprint3">
+  <div class="wrap">
+    <div class="sprint-tag"><span class="dot"></span>Sprint 3 · Days 61 to 90</div>
+    <h2>Compound: authority,<br>AI &amp; the <em class="display-italic">Spanish</em> moat.</h2>
+    <p class="lede" style="margin-top:18px;max-width:820px;">The structural fixes are in. Now press the durable advantages, the AEO wedge and the bilingual moat, and prove the lift.</p>
+    <div class="ornament">· · ·</div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S3-1</span><h4>Standardize the "citable page" formula</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">You win 3/4 AI citations for floor stripping &amp; waxing because those pages expose price + process + certifications + NAP in clean text. Most other pages do not.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Bake the formula into the service-page template (<code>ServicePageContent.tsx</code> / <code>ServiceCityContent.tsx</code>): a per-sq-ft price line, a numbered process block, the SBE/WOSB certifications, same-day note, and the NAP, on EVERY service and city. This is the highest-leverage AEO move.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Every service-city page exposes price + process + certs + NAP as plain, extractable text.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S3-2</span><h4>Expand Spanish to the wedge verticals</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Spanish pages convert at 2.03% (16x English) and your franchise rivals are English-only. This is the cheapest, most defensible growth on the site.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Ensure every money / vertical / seasonal page has a Spanish twin (translations in <code>messages/</code> + content) carrying the SAME AggregateRating + FAQ + Offer schema as its English version. Prioritize the floor-care &amp; post-construction wedge and the new dealership / cost-guide pages. Add Spanish GBP posts.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Spanish coverage mirrors the English wedge pages 1:1, with parity schema.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S3-3</span><h4>Consolidate brand vs mbfloorsolutions.com</h4><span class="tag code">code</span><span class="badge med">P1</span><span class="tag eff">S</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">AI cited BOTH mbcleansolutions.com and the sister mbfloorsolutions.com for floor care, plus a stale, misspelled URL <code>/striping-and-waxing-services/</code>. The two domains split authority and confuse the models.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Decide the canonical home for floor-care (recommend mbcleansolutions.com, the bilingual, better-built site). 301 the stale <code>/striping-and-waxing-services/</code> to <code>/services/stripping-and-waxing</code> (add to <code>next.config.ts</code> redirects). Align cross-links and NAP so authority consolidates on one domain.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">Stale URL 301s correctly; one domain is the clear canonical for floor-care.</div></div>
+      </div>
+    </div>
+
+    <div class="task p2">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S3-4</span><h4>Tier 3+4 links &amp; digital PR</h4><span class="tag offsite">offsite</span><span class="badge" style="background:#EEF2F6;color:var(--muted)">P2</span><span class="tag eff">M</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Industry + partnership links close the authority gap on the head terms; PR earns the editorial links the cost guide and hurricane content can attract.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">BSCAI / ISSA / IFMA / GBAC member directories; GC + property-manager "preferred vendor" pages (these also deliver the actual high-margin work); pitch a Hurricane-Season Commercial Cleanup guide to local news (Aug-Oct window) and respond on HARO/Qwoted as a commercial-cleaning source.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">5+ genuine industry/partnership links + 1 PR placement landed.</div></div>
+      </div>
+    </div>
+
+    <div class="task p1">
+      <div class="task-head"><span class="chk"></span><span class="task-id">S3-5</span><h4>Re-run the audit instruments &amp; check targets</h4><span class="tag measure">measure</span><span class="badge med">P1</span><span class="tag eff">S</span></div>
+      <div class="task-body">
+        <div class="task-row"><div class="rl">What</div><div class="rc">Prove the lift with the same instruments that found the problems, so the next cycle is data-driven.</div></div>
+        <div class="task-row"><div class="rl">Fix</div><div class="rc">Export a fresh GSC file, drop it next to the others, and re-run <code>analysis/gsc_compare.py</code> (it auto-builds the 28-day windows). Re-run the 20-call LLM test (5 prompts x 4 flagship models, web_search on; prompts in <a href="#reference">Reference</a>). Compare against the targets below.</div></div>
+        <div class="task-row done"><div class="rl">Done when</div><div class="rc">A new comparison.json + citation tally exist and the Done-targets are measured.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCE -->
+<section id="reference" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">02 · Reference Library</span></div>
+    <h2>Everything you'll<br>reach for <em class="display-italic">twice</em>.</h2>
+    <p class="lede" style="margin-top:18px;max-width:780px;">The reusable assets: the rewrite library, the codebase map, the schema target, the disavow + citation lists, the commands, and the exact re-test.</p>
+    <div class="ornament">· · ·</div>
+
+    <h3 style="margin-bottom:8px;">Title &amp; meta rewrite library (S1-5)</h3>
+    <p class="small" style="margin-bottom:14px;">Copy-paste starters. Title shown is the page part; the layout template adds <code>| MB Clean</code>. Meta ends in the phone to drive calls.</p>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Page</th><th>Title (page part)</th><th>Meta description (&le;155)</th></tr></thead>
+      <tbody>
+        <tr><td class="kw">Homepage</td><td>Commercial Cleaning Miami &amp; South Florida</td><td>Project-based deep cleaning, floor stripping &amp; post-construction cleanup for South Florida businesses. SBE-certified, insured. Free quote: (954) 482-5008.</td></tr>
+        <tr><td class="kw">/areas/delray-beach</td><td>Commercial Cleaning Delray Beach FL, Free Quote</td><td>Office, retail &amp; warehouse deep cleaning, floor care &amp; pressure washing in Delray Beach. Project-based, no contracts, SBE-certified. (954) 482-5008.</td></tr>
+        <tr><td class="kw">post-construction/miami</td><td>Post-Construction Cleaning Miami, From $0.30/sq ft</td><td>Rough &amp; final post-construction cleanup for Miami builders and GCs. From $0.30/sq ft, insured, fast turnaround. Free on-site estimate: (954) 482-5008.</td></tr>
+        <tr><td class="kw">carpet-cleaning/hialeah</td><td>Commercial Carpet Cleaning Hialeah, Offices &amp; Retail</td><td>Hot-water-extraction carpet cleaning for Hialeah offices &amp; retail, not homes. From $0.30/sq ft, SBE-certified. Free quote: (954) 482-5008.</td></tr>
+        <tr><td class="kw">stripping-and-waxing/ftl</td><td>Floor Stripping &amp; Waxing Fort Lauderdale, $0.85/sq ft</td><td>Commercial VCT, terrazzo &amp; concrete strip-and-wax for Fort Lauderdale businesses. 4-6 coats, night/weekend work. Free estimate: (954) 482-5008.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin:40px 0 8px;">Codebase map (the SEO surface)</h3>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>File</th><th>Owns</th><th>Touched by</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">app/layout.tsx</td><td>Root metadata + <code>title.template</code> (line 23)</td><td>S1-1</td></tr>
+        <tr><td class="mono">app/[locale]/layout.tsx</td><td>GA4/GTM + <code>&lt;Analytics/&gt;</code> (line 63), html lang</td><td>S1-3</td></tr>
+        <tr><td class="mono">lib/seo/metadata.ts</td><td><code>generatePageMetadata</code>, hreflang, canonical, noIndex flag</td><td>S1-2, S2-5</td></tr>
+        <tr><td class="mono">lib/seo/schemas.ts</td><td>All JSON-LD builders (localBusiness, service, FAQ, breadcrumb)</td><td>S1-7, S2-7</td></tr>
+        <tr><td class="mono">components/seo/JsonLd.tsx</td><td>Renders schema into pages</td><td>S1-7</td></tr>
+        <tr><td class="mono">lib/content/areas.ts</td><td>Area titles/metas/copy (the duplicate-brand strings)</td><td>S1-1, S1-5, S2-1</td></tr>
+        <tr><td class="mono">lib/content/city-service-data.ts</td><td>Per-city <code>localContext</code> copy</td><td>S1-5, S2-1</td></tr>
+        <tr><td class="mono">lib/content/service-pages/*.ts</td><td>Service definitions (+ <code>index.ts</code> registry)</td><td>S1-5, S2-2, S3-1</td></tr>
+        <tr><td class="mono">lib/content/industries.ts</td><td>Industry definitions (restaurant, medical, etc.)</td><td>S1-4, S2-3</td></tr>
+        <tr><td class="mono">.../services/[serviceSlug]/[citySlug]/page.tsx</td><td>Service-city title builder (line ~31)</td><td>S1-6</td></tr>
+        <tr><td class="mono">.../industries/[industrySlug]/IndustryPageContent.tsx</td><td>Industry H1 (the "Kitchenin" join, ~line 171)</td><td>S1-4</td></tr>
+        <tr><td class="mono">.../areas/[areaSlug]/AreaPageContent.tsx · CityPageContent.tsx</td><td>Area page body</td><td>S2-1</td></tr>
+        <tr><td class="mono">next.config.ts</td><td>Redirects (for the stale URL 301)</td><td>S3-3</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 style="margin:40px 0 8px;">The schema target (S1-7 / S2-7)</h3>
+    <pre class="code"><span class="c">// extend the Service builder in lib/seo/schemas.ts</span>
+{
+  <span class="k">"@type"</span>: <span class="s">"Service"</span>,
+  <span class="k">"name"</span>: <span class="s">"Floor Stripping &amp; Waxing"</span>,
+  <span class="k">"areaServed"</span>: [<span class="s">"Miami"</span>,<span class="s">"Fort Lauderdale"</span>,<span class="s">"West Palm Beach"</span>, <span class="c">/* ...all cities */</span>],
+  <span class="k">"offers"</span>: {
+    <span class="k">"@type"</span>: <span class="s">"Offer"</span>,
+    <span class="k">"priceSpecification"</span>: {
+      <span class="k">"@type"</span>: <span class="s">"UnitPriceSpecification"</span>,
+      <span class="k">"price"</span>: <span class="s">"0.85"</span>, <span class="k">"priceCurrency"</span>: <span class="s">"USD"</span>,
+      <span class="k">"unitText"</span>: <span class="s">"per square foot"</span>
+    }
+  },
+  <span class="k">"aggregateRating"</span>: { <span class="k">"@type"</span>:<span class="s">"AggregateRating"</span>, <span class="k">"ratingValue"</span>:<span class="s">"4.8"</span>, <span class="k">"reviewCount"</span>:<span class="s">"18"</span> }
+}</pre>
+
+    <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:36px;">
+      <div>
+        <h4 style="margin-bottom:10px;">Disavow cluster (S1-10)</h4>
+        <p class="small" style="margin-bottom:8px;">Moldova PBN on IP 195.20.19.178 + spam vendors. Add <code>domain:</code> lines to disavow.txt:</p>
+        <pre class="code">domain:drjack.world
+domain:websites.freemyip.com
+domain:seol.store
+domain:all-aged-domains.com
+<span class="c"># + the remaining ~10 on 195.20.19.178</span>
+<span class="c"># pull the full list from Semrush</span>
+<span class="c"># refdomains.json (audit/semrush/)</span></pre>
+        <p class="small">Full referring-domain list: <code>audit/semrush/refdomains.json</code>.</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom:10px;">Commands</h4>
+        <pre class="code"><span class="c"># dev / build (in site/)</span>
+npm run dev
+npm run build
+
+<span class="c"># refresh the GSC comparison</span>
+python analysis/gsc_compare.py
+
+<span class="c"># deploy: push to the site's own</span>
+<span class="c"># git repo, Vercel auto-builds</span></pre>
+        <h4 style="margin:18px 0 10px;">Re-test prompts (S3-5)</h4>
+        <p class="small">Same 5, all 4 flagship models, <code>web_search=true</code>:</p>
+        <ol class="small" style="padding-left:1.1em;color:var(--ink-2);">
+          <li>Best commercial cleaning company in Miami</li>
+          <li>How do I hire a commercial cleaning service in Fort Lauderdale?</li>
+          <li>Post construction cleaning company in West Palm Beach</li>
+          <li>How much does commercial office cleaning cost in South Florida?</li>
+          <li>Commercial floor stripping and waxing service in Miami</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONE -->
+<section id="done">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · Definition of Done</span></div>
+    <h2>How you'll know<br>it <em class="display-italic">worked</em>.</h2>
+    <p class="lede" style="margin-top:18px;max-width:780px;">The targets to hold the work to, measured in Search Console and the re-test (S3-5). Hit these and the site is a commercial-cleaning lead machine.</p>
+    <div class="ornament">· · ·</div>
+    <div class="kpi-grid">
+      <div class="kpi cta"><div class="kpi-label">Sitewide CTR</div><div class="kpi-value">0.6<small>%</small></div><div class="kpi-trend">from 0.18% · 3x</div></div>
+      <div class="kpi cta"><div class="kpi-label">Clicks / 28d</div><div class="kpi-value">60<small>+</small></div><div class="kpi-trend">from 20</div></div>
+      <div class="kpi cta"><div class="kpi-label">Keywords page 1</div><div class="kpi-value">8<small>+</small></div><div class="kpi-trend">from 0</div></div>
+      <div class="kpi cta"><div class="kpi-label">GBP reviews</div><div class="kpi-value">40<small>+</small></div><div class="kpi-trend">map-pack entry</div></div>
+    </div>
+    <div class="kpi-grid" style="margin-top:14px;">
+      <div class="kpi cta"><div class="kpi-label">AI citations / 20</div><div class="kpi-value">8<small>+</small></div><div class="kpi-trend">from 4</div></div>
+      <div class="kpi cta"><div class="kpi-label">New vertical pages</div><div class="kpi-value">4</div><div class="kpi-trend">dealership · PM · medical · cost</div></div>
+      <div class="kpi cta"><div class="kpi-label">Toxic ref domains</div><div class="kpi-value">0</div><div class="kpi-trend">disavowed</div></div>
+      <div class="kpi cta"><div class="kpi-label">Avg position</div><div class="kpi-value">&lt;25</div><div class="kpi-trend">after thin-page triage</div></div>
+    </div>
+    <div class="callout opp" style="margin-top:30px;"><strong>The one-line success test:</strong> in 90 days, a facilities manager who Googles "commercial cleaning near me" or asks ChatGPT "floor stripping company Miami" finds MB Clean Solutions, sees stars and a price, and calls (954) 482-5008. Everything above is in service of that single moment.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mark">ThinkFlowLabs</div>
+    <p style="margin-top:12px;">Implementation Runbook · Companion to the MB Clean Solutions SEO Audit · June 2026</p>
+    <p class="small" style="margin-top:16px;max-width:600px;margin-left:auto;margin-right:auto;">Every task is grounded in the codebase at <span class="mono">Projects/mb-clean-solutions/site/</span> as of June 28, 2026. Verify file line numbers against current code before editing, the repo evolves. Confidential, noindex.</p>
+    <p class="small" style="margin-top:14px;"><a href="./" style="color:#8FD0FF;">← Back to the SEO Audit</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
