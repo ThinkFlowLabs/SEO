@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Chefpost · Private Chef Landing Pages — Portfolio &amp; Data</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%8D%BD%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#aa182c; --red-deep:#7d1220; --base:#fdfaf6; --ivory:#f5ede4; --line:#ece2d4;
+    --ink:#1f1b18; --soft:#5a544c; --plum:#946c73; --cream:#faefdf;
+    --green:#2f7a4d; --amber:#b7791f; --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box;} html,body{margin:0;padding:0;}
+  body{font-family:var(--sans);background:var(--base);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+  a{color:var(--red);}
+  .topbar{background:var(--ink);color:#f3ece2;font-size:12.5px;letter-spacing:.02em;padding:9px 0;}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+  .topbar b{color:#fff;font-weight:600;}
+  /* hero */
+  .hero{padding:56px 0 30px;}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:18px;}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,6vw,68px);line-height:1.03;letter-spacing:-.01em;margin:0 0 20px;}
+  h1 em{font-style:italic;color:var(--red);}
+  .lede{font-size:20px;color:var(--soft);max-width:760px;margin:0 0 30px;}
+  .chips{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;}
+  .chip{background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:16px 20px;min-width:150px;}
+  .chip b{display:block;font-family:var(--serif);font-size:30px;color:var(--red);line-height:1;}
+  .chip span{font-size:12.5px;color:var(--soft);letter-spacing:.02em;}
+  /* sections */
+  section{padding:44px 0;border-top:1px solid var(--line);}
+  .sectlabel{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--plum);margin-bottom:12px;}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.6vw,42px);margin:0 0 14px;letter-spacing:-.01em;}
+  .sub{font-size:18px;color:var(--soft);max-width:820px;margin:0 0 26px;}
+  .two{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start;}
+  .prose p{margin:0 0 14px;color:#3a352f;font-size:16.5px;}
+  .prose strong{color:var(--ink);}
+  .callout{background:var(--ivory);border-left:4px solid var(--red);border-radius:10px;padding:20px 22px;font-size:15.5px;color:#3a352f;}
+  .callout b{color:var(--red-deep);}
+  /* tables */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff;}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px;}
+  th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line);}
+  thead th{background:var(--ink);color:#f3ece2;font-weight:600;font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;position:sticky;top:0;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:var(--cream);}
+  td.num{font-variant-numeric:tabular-nums;font-weight:600;text-align:right;white-space:nowrap;}
+  td.kw{font-weight:500;}
+  td.pg a{font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;}
+  tr.tierhead td{background:var(--ivory);font-family:var(--serif);font-style:italic;font-size:15px;color:var(--red-deep);border-bottom:1px solid var(--line);}
+  .muted{color:var(--plum);font-size:13px;}
+  .badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap;}
+  .c-low{background:#e7f3ec;color:var(--green);} .c-med{background:#f7efe0;color:var(--amber);}
+  .c-high{background:#f7e6e9;color:var(--red-deep);} .c-tail{background:#efeae2;color:var(--soft);}
+  .tnote{font-size:13px;color:var(--soft);margin-top:12px;}
+  /* portfolio cards */
+  .grouptitle{font-family:var(--serif);font-size:24px;font-weight:500;margin:34px 0 16px;display:flex;align-items:baseline;gap:12px;}
+  .grouptitle span{font-family:var(--sans);font-size:13px;color:var(--plum);background:var(--ivory);border-radius:999px;padding:2px 11px;}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s,border-color .18s;}
+  .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(60,20,26,.4);border-color:var(--red);}
+  .thumb{aspect-ratio:16/10;background-size:cover;background-position:center;background-color:var(--ivory);}
+  .cbody{padding:14px 16px 16px;display:flex;flex-direction:column;gap:9px;flex:1;}
+  .ctitle{font-family:var(--serif);font-size:18px;line-height:1.2;color:var(--ink);}
+  .cmeta{flex:1;} .kwtag{font-size:12.5px;color:var(--soft);}
+  .crow{display:flex;justify-content:space-between;align-items:center;gap:8px;}
+  .golive{font-size:12px;font-weight:600;color:var(--red);}
+  /* footer */
+  footer{background:var(--ink);color:#cfc7bc;padding:40px 0;margin-top:20px;font-size:14px;}
+  footer b{color:#fff;} footer a{color:#e7b7bd;}
+  @media(max-width:980px){.two{grid-template-columns:1fr;}.grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:720px){.grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:460px){.grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>Prepared by <b>ThinkFlowLabs</b> for Chefpost</span><span>Private client deliverable · July 2026</span></div></div>
+
+  <header class="hero"><div class="wrap">
+    <div class="eyebrow">Chefpost · Private Chef Landing Pages</div>
+    <h1>39 new pages, built on the <em>data</em>.</h1>
+    <p class="lede">A live portfolio of every private-chef landing page we designed and shipped to chefpost.com, mapped to the exact search demand that justified building it. Every card links to the real, live page. The tables below show the keywords, monthly search volume, and competition behind each one.</p>
+    <div class="chips">
+      <div class="chip"><b>39</b><span>pages live on chefpost.com</span></div>
+      <div class="chip"><b>~26,150</b><span>core monthly U.S. searches targeted</span></div>
+      <div class="chip"><b>2</b><span>pillars at &lt;0.10 competition</span></div>
+      <div class="chip"><b>14,799</b><span>Miami GSC impressions that had no page</span></div>
+    </div>
+  </div></header>
+
+  <section><div class="wrap">
+    <div class="sectlabel">Why we built these</div>
+    <h2>The demand was already there. There was nowhere to send it.</h2>
+    <div class="two">
+      <div class="prose">
+        <p>Chefpost's own Google Search Console showed the site being surfaced for city and service searches across 16 months — but with <strong>no dedicated landing pages</strong>, that demand landed on the generic <em>/filter</em> query URLs, which converted at just <strong>0.2%–0.5% CTR</strong> from <strong>page 3–5</strong> of Google.</p>
+        <p>The May 2026 SEO audit named it directly: priority <strong>#4 was "Build static city landing pages"</strong>, starting with Miami. Non-brand organic CTR sat at <strong>0.32%</strong>, and <strong>79.5% of all clicks were branded</strong> — the marketplace was barely acquiring customers from non-brand search.</p>
+        <p>So we sized the real opportunity with <strong>DataForSEO</strong> and <strong>Semrush</strong>, then built a page for each pocket of demand. The table on the right is the demand Google was <em>already</em> showing Chefpost, with no page to catch it.</p>
+        <div class="callout"><b>The gap in one line:</b> Google was already showing Chefpost ~14,799 impressions/16mo for Miami private-chef terms at position ~25–45 — with no Miami page. Now there is one, plus 38 more.</div>
+      </div>
+      <div>
+        <div class="tablewrap"><table>
+          <thead><tr><th>City (GSC)</th><th>Impressions</th><th>Avg. position</th></tr></thead>
+          <tbody><tr>
+    <td class="kw">Miami</td><td class="num">14,799</td><td>~25–45 (page 3–5)</td>
+  </tr><tr>
+    <td class="kw">Fort Lauderdale</td><td class="num">3,568</td><td>page 3–4</td>
+  </tr><tr>
+    <td class="kw">Tampa</td><td class="num">2,643</td><td>page 3–4</td>
+  </tr><tr>
+    <td class="kw">Palm Beach</td><td class="num">2,104</td><td>page 3–4</td>
+  </tr><tr>
+    <td class="kw">Boca Raton</td><td class="num">1,892</td><td>page 3–4</td>
+  </tr><tr>
+    <td class="kw">Aventura</td><td class="num">1,281</td><td>page 2–3</td>
+  </tr><tr>
+    <td class="kw">NYC</td><td class="num">1,094</td><td>page 3–4</td>
+  </tr><tr>
+    <td class="kw">West Palm Beach</td><td class="num">1,053</td><td>page 3–4</td>
+  </tr></tbody>
+        </table></div>
+        <p class="tnote">Source: Chefpost GSC, 16-month export (Jun 2026). Impressions Google served with no dedicated landing page to capture the click.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sectlabel">The demand behind the pages</div>
+    <h2>Keywords, volume &amp; competition</h2>
+    <p class="sub">Every page was chosen against real search data, not guesswork. Volume is average monthly U.S. searches; competition is DataForSEO's paid-competition index (0–1) and/or Semrush keyword difficulty (KD). Lower competition = easier to rank.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Keyword</th><th>DataForSEO vol.</th><th>Semrush vol.</th><th>Competition / KD</th><th>Live page</th></tr></thead>
+      <tbody><tr class="tierhead"><td colspan="5">Service pillars — high volume, low competition</td></tr><tr>
+        <td class="kw">private chef service / services</td>
+        <td class="num">6,600</td>
+        <td class="num">—</td>
+        <td><span class="badge c-low">0.04 · Low</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-services" target="_blank" rel="noopener">/private-chef-services ↗</a></td>
+      </tr><tr>
+        <td class="kw">personal chef services</td>
+        <td class="num">5,400</td>
+        <td class="num">—</td>
+        <td><span class="badge c-low">0.07 · Low</span></td>
+        <td class="pg"><a href="https://chefpost.com/personal-chef-services" target="_blank" rel="noopener">/personal-chef-services ↗</a></td>
+      </tr><tr>
+        <td class="kw">personal chef</td>
+        <td class="num">9,900</td>
+        <td class="num">6,600</td>
+        <td><span class="badge c-low">0.28 · Low · KD 23</span></td>
+        <td class="pg"><a href="https://chefpost.com/personal-chef-services" target="_blank" rel="noopener">/personal-chef-services ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef vs personal chef</td>
+        <td class="num">320</td>
+        <td class="num">—</td>
+        <td><span class="badge c-low">0.02 · Low</span></td>
+        <td class="pg"><a href="https://chefpost.com/personal-chef-services" target="_blank" rel="noopener">/personal-chef-services ↗</a></td>
+      </tr><tr class="tierhead"><td colspan="5">Cost guide — the single best-converting asset (informational, low competition)</td></tr><tr>
+        <td class="kw">how much does a private chef cost</td>
+        <td class="num">3,600</td>
+        <td class="num">1,900</td>
+        <td><span class="badge c-low">Low</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-cost" target="_blank" rel="noopener">/private-chef-cost ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef cost</td>
+        <td class="num">1,300</td>
+        <td class="num">1,000</td>
+        <td><span class="badge c-low">Low</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-cost" target="_blank" rel="noopener">/private-chef-cost ↗</a></td>
+      </tr><tr>
+        <td class="kw">how much is a private chef</td>
+        <td class="num">1,300</td>
+        <td class="num">—</td>
+        <td><span class="badge c-low">0.21 · Low</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-cost" target="_blank" rel="noopener">/private-chef-cost ↗</a></td>
+      </tr><tr>
+        <td class="kw">cost of a private chef</td>
+        <td class="num">1,300</td>
+        <td class="num">—</td>
+        <td><span class="badge c-low">0.15 · Low</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-cost" target="_blank" rel="noopener">/private-chef-cost ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef hourly rate</td>
+        <td class="num">880</td>
+        <td class="num">—</td>
+        <td><span class="badge c-low">0.01 · Low · ↑ +85%</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-cost" target="_blank" rel="noopener">/private-chef-cost ↗</a></td>
+      </tr><tr class="tierhead"><td colspan="5">City head terms — the traffic engine</td></tr><tr>
+        <td class="kw">private chef nyc</td>
+        <td class="num">880</td>
+        <td class="num">720</td>
+        <td><span class="badge c-high">High</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-nyc" target="_blank" rel="noopener">/private-chef-nyc ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef miami</td>
+        <td class="num">880</td>
+        <td class="num">590</td>
+        <td><span class="badge c-high">High</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-miami" target="_blank" rel="noopener">/private-chef-miami ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef austin</td>
+        <td class="num">880</td>
+        <td class="num">480</td>
+        <td><span class="badge c-high">High</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-austin" target="_blank" rel="noopener">/private-chef-austin ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef houston</td>
+        <td class="num">880</td>
+        <td class="num">480</td>
+        <td><span class="badge c-med">Medium</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-houston" target="_blank" rel="noopener">/private-chef-houston ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef atlanta</td>
+        <td class="num">590</td>
+        <td class="num">390</td>
+        <td><span class="badge c-med">Medium</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-atlanta" target="_blank" rel="noopener">/private-chef-atlanta ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef dallas</td>
+        <td class="num">480</td>
+        <td class="num">320</td>
+        <td><span class="badge c-med">Medium</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-dallas" target="_blank" rel="noopener">/private-chef-dallas ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef hamptons</td>
+        <td class="num">390</td>
+        <td class="num">210</td>
+        <td><span class="badge c-med">Medium · CPC $15</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-hamptons" target="_blank" rel="noopener">/private-chef-hamptons ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef fort lauderdale</td>
+        <td class="num">320</td>
+        <td class="num">260</td>
+        <td><span class="badge c-med">Medium</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-fort-lauderdale" target="_blank" rel="noopener">/private-chef-fort-lauderdale ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef long island</td>
+        <td class="num">260</td>
+        <td class="num">210</td>
+        <td><span class="badge c-high">High</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-long-island" target="_blank" rel="noopener">/private-chef-long-island ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef tampa</td>
+        <td class="num">210</td>
+        <td class="num">170</td>
+        <td><span class="badge c-high">High</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-tampa" target="_blank" rel="noopener">/private-chef-tampa ↗</a></td>
+      </tr><tr class="tierhead"><td colspan="5">Experiences & occasions</td></tr><tr>
+        <td class="kw">private chef for a dinner party</td>
+        <td class="num">880</td>
+        <td class="num">140</td>
+        <td><span class="badge c-med">Medium</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-for-dinner-party" target="_blank" rel="noopener">/private-chef-for-dinner-party ↗</a></td>
+      </tr><tr>
+        <td class="kw">private sushi chef / sushi chef at home</td>
+        <td class="num">320</td>
+        <td class="num">140</td>
+        <td><span class="badge c-med">Medium</span></td>
+        <td class="pg"><a href="https://chefpost.com/sushi-chef-at-home" target="_blank" rel="noopener">/sushi-chef-at-home ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef for a night</td>
+        <td class="num">170</td>
+        <td class="num">170</td>
+        <td><span class="badge c-med">Medium</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-for-a-night" target="_blank" rel="noopener">/private-chef-for-a-night ↗</a></td>
+      </tr><tr>
+        <td class="kw">private chef bachelorette party</td>
+        <td class="num">40</td>
+        <td class="num">40</td>
+        <td><span class="badge c-med">Medium</span></td>
+        <td class="pg"><a href="https://chefpost.com/private-chef-bachelorette-party" target="_blank" rel="noopener">/private-chef-bachelorette-party ↗</a></td>
+      </tr><tr>
+        <td class="kw">chef a domicilio (US Spanish)</td>
+        <td class="num">880</td>
+        <td class="num">—</td>
+        <td><span class="badge c-tail">KD 57</span></td>
+        <td class="pg"><a href="https://chefpost.com/es/chef-a-domicilio-miami" target="_blank" rel="noopener">/es/chef-a-domicilio-miami ↗</a></td>
+      </tr><tr class="tierhead"><td colspan="5">Big benchmark terms — captured across the city + pillar pages (no single page owns them)</td></tr><tr>
+        <td class="kw">private chef near me</td>
+        <td class="num">8,100</td>
+        <td class="num">3,600</td>
+        <td><span class="badge c-med">0.55 · Medium</span></td>
+        <td class="pg"><span class="muted">across pages</span></td>
+      </tr><tr>
+        <td class="kw">personal chef near me</td>
+        <td class="num">8,100</td>
+        <td class="num">4,400</td>
+        <td><span class="badge c-med">0.55 · Medium</span></td>
+        <td class="pg"><span class="muted">across pages</span></td>
+      </tr><tr>
+        <td class="kw">private chef</td>
+        <td class="num">14,800</td>
+        <td class="num">—</td>
+        <td><span class="badge c-low">KD 8 · Low</span></td>
+        <td class="pg"><span class="muted">across pages</span></td>
+      </tr></tbody>
+    </table></div>
+    <p class="tnote">Two data sources are shown side by side so the numbers are verifiable, not cherry-picked. Where they differ, both are reported. "Across pages" = a high-volume term (e.g. "private chef near me", 8,100/mo) that is won through the local city + pillar pages rather than a single URL.</p>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sectlabel">What's live</div>
+    <h2>The full page portfolio</h2>
+    <p class="sub">All 39 pages, grouped. Each links to the real, live page on chefpost.com. Thumbnails are the pages' own photography.</p>
+    <h3 class="grouptitle">Chef Services <span>2</span></h3><div class="grid"><a class="card" href="https://chefpost.com/private-chef-services" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/wa-cook.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Services</div>
+          <div class="cmeta"><span class="kwtag">private chef service(s)</span></div>
+          <div class="crow"><span class="badge c-low">6,600/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/personal-chef-services" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/wa-gina-weekday.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Personal Chef Services</div>
+          <div class="cmeta"><span class="kwtag">personal chef services</span></div>
+          <div class="crow"><span class="badge c-low">5,400/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a></div><h3 class="grouptitle">Florida <span>6</span></h3><div class="grid"><a class="card" href="https://chefpost.com/private-chef-miami" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/miami-hero.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Miami</div>
+          <div class="cmeta"><span class="kwtag">private chef miami</span></div>
+          <div class="crow"><span class="badge c-high">880/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-fort-lauderdale" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/alfresco-48.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Fort Lauderdale</div>
+          <div class="cmeta"><span class="kwtag">private chef fort lauderdale</span></div>
+          <div class="crow"><span class="badge c-med">320/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-west-palm-beach" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/ts-tablescape.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef West Palm Beach</div>
+          <div class="cmeta"><span class="kwtag">private chef west palm beach</span></div>
+          <div class="crow"><span class="badge c-med">90/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-boca-raton" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/table-elegant.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Boca Raton</div>
+          <div class="cmeta"><span class="kwtag">private chef boca raton</span></div>
+          <div class="crow"><span class="badge c-high">50/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-tampa" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/chef-plating-hero.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Tampa</div>
+          <div class="cmeta"><span class="kwtag">private chef tampa</span></div>
+          <div class="crow"><span class="badge c-high">210/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-st-petersburg" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/alfresco-10.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef St. Petersburg</div>
+          <div class="cmeta"><span class="kwtag">private chef st petersburg</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a></div><h3 class="grouptitle">New York <span>4</span></h3><div class="grid"><a class="card" href="https://chefpost.com/private-chef-nyc" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/scallops.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef NYC</div>
+          <div class="cmeta"><span class="kwtag">private chef nyc</span></div>
+          <div class="crow"><span class="badge c-high">880/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-brooklyn" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/dinner-served.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Brooklyn</div>
+          <div class="cmeta"><span class="kwtag">private chef brooklyn</span></div>
+          <div class="crow"><span class="badge c-high">70/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-long-island" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/table-deluxe2.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Long Island</div>
+          <div class="cmeta"><span class="kwtag">private chef long island</span></div>
+          <div class="crow"><span class="badge c-high">260/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-hamptons" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/alfresco-7.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Hamptons</div>
+          <div class="cmeta"><span class="kwtag">private chef hamptons</span></div>
+          <div class="crow"><span class="badge c-med">390/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a></div><h3 class="grouptitle">New Jersey <span>4</span></h3><div class="grid"><a class="card" href="https://chefpost.com/private-chef-jersey-city" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/wa-dsc055.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Jersey City</div>
+          <div class="cmeta"><span class="kwtag">private chef jersey city</span></div>
+          <div class="crow"><span class="badge c-high">40/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-hoboken" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/risotto.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Hoboken</div>
+          <div class="cmeta"><span class="kwtag">private chef hoboken</span></div>
+          <div class="crow"><span class="badge c-low">10/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-montclair" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/ts-tablesettings.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Montclair</div>
+          <div class="cmeta"><span class="kwtag">private chef montclair</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-short-hills" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/table-decor.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Short Hills</div>
+          <div class="cmeta"><span class="kwtag">private chef short hills</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a></div><h3 class="grouptitle">Texas <span>3</span></h3><div class="grid"><a class="card" href="https://chefpost.com/private-chef-austin" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/bbq-picanha.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Austin</div>
+          <div class="cmeta"><span class="kwtag">private chef austin</span></div>
+          <div class="crow"><span class="badge c-high">880/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-houston" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/beef.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Houston</div>
+          <div class="cmeta"><span class="kwtag">private chef houston</span></div>
+          <div class="crow"><span class="badge c-med">880/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-dallas" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/bbq-ribs-camilo.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Dallas</div>
+          <div class="cmeta"><span class="kwtag">private chef dallas</span></div>
+          <div class="crow"><span class="badge c-med">480/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a></div><h3 class="grouptitle">Georgia <span>1</span></h3><div class="grid"><a class="card" href="https://chefpost.com/private-chef-atlanta" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/wa-dsc361.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Atlanta</div>
+          <div class="cmeta"><span class="kwtag">private chef atlanta</span></div>
+          <div class="crow"><span class="badge c-med">590/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a></div><h3 class="grouptitle">Miami Neighborhoods <span>12</span></h3><div class="grid"><a class="card" href="https://chefpost.com/private-chef-brickell" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/chef-plating.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Brickell</div>
+          <div class="cmeta"><span class="kwtag">private chef brickell</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-coconut-grove" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/alfresco-22.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Coconut Grove</div>
+          <div class="cmeta"><span class="kwtag">private chef coconut grove</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-coral-gables" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/wa-table-green2.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Coral Gables</div>
+          <div class="cmeta"><span class="kwtag">private chef coral gables</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-miami-beach" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/ts-48.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Miami Beach</div>
+          <div class="cmeta"><span class="kwtag">private chef miami beach</span></div>
+          <div class="crow"><span class="badge c-high">30/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-south-beach" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/ts-01132.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef South Beach</div>
+          <div class="cmeta"><span class="kwtag">private chef south beach</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-key-biscayne" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/ts-58.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Key Biscayne</div>
+          <div class="cmeta"><span class="kwtag">private chef key biscayne</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-wynwood" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/caprese.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Wynwood</div>
+          <div class="cmeta"><span class="kwtag">private chef wynwood</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-edgewater" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/wa-dsc065.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Edgewater</div>
+          <div class="cmeta"><span class="kwtag">private chef edgewater</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-bal-harbour" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/ts-5819.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Bal Harbour</div>
+          <div class="cmeta"><span class="kwtag">private chef bal harbour</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-aventura" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/table-green.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Aventura</div>
+          <div class="cmeta"><span class="kwtag">private chef aventura</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-sunny-isles" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/ts-60.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Sunny Isles</div>
+          <div class="cmeta"><span class="kwtag">private chef sunny isles</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-pinecrest" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/ts-medbbq.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef Pinecrest</div>
+          <div class="cmeta"><span class="kwtag">private chef pinecrest</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a></div><h3 class="grouptitle">Experiences & Guides <span>6</span></h3><div class="grid"><a class="card" href="https://chefpost.com/private-chef-for-dinner-party" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/table-deluxe.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef for a Dinner Party</div>
+          <div class="cmeta"><span class="kwtag">private chef for a dinner party</span></div>
+          <div class="crow"><span class="badge c-med">880/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/sushi-chef-at-home" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/Sushi-Experience.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Sushi Chef at Home</div>
+          <div class="cmeta"><span class="kwtag">sushi chef at home</span></div>
+          <div class="crow"><span class="badge c-med">260/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-for-a-night" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/Couple-drinking-wine-sq.jpeg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Private Chef for a Night</div>
+          <div class="cmeta"><span class="kwtag">private chef for a night</span></div>
+          <div class="crow"><span class="badge c-med">170/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-bachelorette-party" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/brunch-table-set.jpeg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Bachelorette Party Chef</div>
+          <div class="cmeta"><span class="kwtag">private chef bachelorette party</span></div>
+          <div class="crow"><span class="badge c-med">40/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/private-chef-cost" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/wa-beef2.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">How Much Does a Private Chef Cost</div>
+          <div class="cmeta"><span class="kwtag">how much does a private chef cost</span></div>
+          <div class="crow"><span class="badge c-low">3,600/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a><a class="card" href="https://chefpost.com/es/chef-a-domicilio-miami" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/alfresco-25.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Chef a Domicilio en Miami (ES)</div>
+          <div class="cmeta"><span class="kwtag">chef a domicilio</span></div>
+          <div class="crow"><span class="badge c-tail">880/mo</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a></div><h3 class="grouptitle">Hub <span>1</span></h3><div class="grid"><a class="card" href="https://chefpost.com/private-chef-locations" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('https://chefpost.com/img/cp/table-elegant.jpg')"></div>
+        <div class="cbody">
+          <div class="ctitle">Areas We Serve — Hub</div>
+          <div class="cmeta"><span class="kwtag">private chef locations</span></div>
+          <div class="crow"><span class="badge c-tail">long-tail</span><span class="golive">View live ↗</span></div>
+        </div>
+      </a></div>
+    <div class="callout" style="margin-top:30px;"><b>A note on the neighborhood &amp; small-market pages:</b> the 12 Miami neighborhood pages plus a few small markets (St. Petersburg, Montclair, Short Hills) target near-zero exact-match volume by design. They are a long-tail and topical-authority layer that strengthens the head-term city pages and the hub — not standalone traffic drivers. The traffic engine is the ~10 head-term city pages, the two service pillars, and the cost guide.</div>
+  </div></section>
+
+  <footer><div class="wrap">
+    <p style="margin:0 0 8px;"><b>Chefpost — Private Chef Landing Pages</b> · designed, written and shipped by ThinkFlowLabs.</p>
+    <p style="margin:0;color:#a99f93;">Data: DataForSEO + Semrush (US, 2026) &amp; Chefpost Google Search Console. All pages live on chefpost.com. This page is confidential and excluded from search engines.</p>
+  </div></footer>
+</body>
+</html>
