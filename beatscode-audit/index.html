@@ -494,6 +494,18 @@
   section.dark .bar-val { color:#C9B6E4; }
   section.dark .lede { color:#CFC0E4; }
 
+  /* ============ ROADMAP LIST FIX ============ */
+  /* base rule is `display:grid; grid-template-columns:24px 1fr auto`, which assumes
+     every li carries a .check span, the text and a .pri badge. A bare text node lands
+     in the 24px track and breaks one word per line. Flex degrades gracefully instead. */
+  .road-col li {
+    display: flex; gap: 10px; align-items: flex-start;
+    grid-template-columns: none;
+  }
+  .road-col li .check { flex: 0 0 18px; }
+  .road-col li .pri { flex: 0 0 auto; margin-left: auto; }
+  .road-col ul { margin: 0; }
+
   /* ============ INLINE-SPAN BAR FIX ============ */
   /* base .bar-fill assumes a block element; these are spans */
   .bar-bg { display: block; }
@@ -1750,14 +1762,14 @@
         <div class="dot"></div>
         <div class="label">Días 1 a 30 · Desbloquear</div>
         <ul>
-          <li>Corregir la etiqueta canónica en las 8 páginas internas para que cada una se declare a sí misma</li>
-          <li>Generar y enviar el mapa del sitio a Google Search Console</li>
-          <li>Redirigir las 9 páginas rotas hacia su equivalente actual</li>
-          <li>Eliminar las palabras clave heredadas del blog</li>
-          <li>Añadir datos estructurados de organización con el nombre, la ubicación y las redes oficiales</li>
-          <li>Actualizar la biografía de Instagram y reclamar el perfil de empresa en LinkedIn</li>
-          <li>Crear la ficha de Google Business Profile en Bogotá</li>
-          <li>Reducir el peso de la portada para subir el rendimiento de 52 hacia 80</li>
+          <li><span class="check"></span>Corregir la etiqueta canónica en las 8 páginas internas para que cada una se declare a sí misma</li>
+          <li><span class="check"></span>Generar y enviar el mapa del sitio a Google Search Console</li>
+          <li><span class="check"></span>Redirigir las 9 páginas rotas hacia su equivalente actual</li>
+          <li><span class="check"></span>Eliminar las palabras clave heredadas del blog</li>
+          <li><span class="check"></span>Añadir datos estructurados de organización con el nombre, la ubicación y las redes oficiales</li>
+          <li><span class="check"></span>Actualizar la biografía de Instagram y reclamar el perfil de empresa en LinkedIn</li>
+          <li><span class="check"></span>Crear la ficha de Google Business Profile en Bogotá</li>
+          <li><span class="check"></span>Reducir el peso de la portada para subir el rendimiento de 52 hacia 80</li>
         </ul>
         <p class="mono" style="font-size:13px; margin-top:14px; color:var(--coral-dk);">
           Medición: páginas indexadas en Search Console pasan de 1 a 8
@@ -1768,12 +1780,12 @@
         <div class="dot"></div>
         <div class="label">Días 31 a 60 · Ocupar</div>
         <ul>
-          <li>Publicar "Agencia de inteligencia artificial en Colombia" con casos, precios y proceso</li>
-          <li>Publicar "Agencia de IA en España" apuntando a las 720 búsquedas mensuales</li>
-          <li>Publicar "Agente de IA para WhatsApp integrado con tu ERP", que es la pregunta 2 del test</li>
-          <li>Publicar la página pública de rangos de precios, que es lo que más citan los modelos</li>
-          <li>Reactivar el blog con el caso de WooCommerce y el de real estate, con métricas reales</li>
-          <li>Lanzar la primera campaña de Google Ads en Colombia con 1.000 a 1.500 dólares mensuales</li>
+          <li><span class="check"></span>Publicar "Agencia de inteligencia artificial en Colombia" con casos, precios y proceso</li>
+          <li><span class="check"></span>Publicar "Agencia de IA en España" apuntando a las 720 búsquedas mensuales</li>
+          <li><span class="check"></span>Publicar "Agente de IA para WhatsApp integrado con tu ERP", que es la pregunta 2 del test</li>
+          <li><span class="check"></span>Publicar la página pública de rangos de precios, que es lo que más citan los modelos</li>
+          <li><span class="check"></span>Reactivar el blog con el caso de WooCommerce y el de real estate, con métricas reales</li>
+          <li><span class="check"></span>Lanzar la primera campaña de Google Ads en Colombia con 1.000 a 1.500 dólares mensuales</li>
         </ul>
         <p class="mono" style="font-size:13px; margin-top:14px; color:var(--coral-dk);">
           Medición: primeras impresiones para términos de servicio, no de marca
@@ -1784,12 +1796,12 @@
         <div class="dot"></div>
         <div class="label">Días 61 a 90 · Reclamar</div>
         <ul>
-          <li>Publicar la nota técnica de arquitectura con LangGraph y MCP en producción, con diagramas</li>
-          <li>Publicar una comparativa honesta entre LangGraph, CrewAI y AutoGen basada en experiencia real</li>
-          <li>Añadir datos estructurados de preguntas frecuentes a las 10 preguntas de la portada</li>
-          <li>Publicar el archivo de guía para modelos de IA en la raíz del dominio</li>
-          <li>Conseguir 5 menciones en fuentes que los modelos ya citan, incluidos directorios verificados</li>
-          <li>Repetir el test de 20 preguntas y comparar contra la línea base de cero</li>
+          <li><span class="check"></span>Publicar la nota técnica de arquitectura con LangGraph y MCP en producción, con diagramas</li>
+          <li><span class="check"></span>Publicar una comparativa honesta entre LangGraph, CrewAI y AutoGen basada en experiencia real</li>
+          <li><span class="check"></span>Añadir datos estructurados de preguntas frecuentes a las 10 preguntas de la portada</li>
+          <li><span class="check"></span>Publicar el archivo de guía para modelos de IA en la raíz del dominio</li>
+          <li><span class="check"></span>Conseguir 5 menciones en fuentes que los modelos ya citan, incluidos directorios verificados</li>
+          <li><span class="check"></span>Repetir el test de 20 preguntas y comparar contra la línea base de cero</li>
         </ul>
         <p class="mono" style="font-size:13px; margin-top:14px; color:var(--coral-dk);">
           Medición: al menos 1 de 4 modelos cita la marca en la pregunta 3
