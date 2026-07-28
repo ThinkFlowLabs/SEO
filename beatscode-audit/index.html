@@ -1,0 +1,1668 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Auditoria de visibilidad de beatscode.co, julio 2026</title>
+<meta name="description" content="Auditoria de SEO, mercado y visibilidad en IA de beatscode.co preparada por ThinkFlow Labs. Demanda por pais, benchmark competitivo, costos de Google Ads y plan de 90 dias." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --ink:        #0E1014;
+    --ink-2:      #1F2630;
+    --muted:      #5E6675;
+    --line:       #E6DFD2;
+    --line-2:     #EFE7D8;
+    --cream:      #FBF6EB;
+    --cream-2:    #F4ECD9;
+    --paper:      #FFFBF1;
+    --coral:      #E63946;
+    --coral-dk:   #BC2C2C;
+    --coral-sft:  #FBE3E2;
+    --gold:       #C89A4A;
+    --gold-sft:   #F6E7C7;
+    --green:      #1F7A6A;
+    --green-sft:  #DAEEE7;
+    --amber:      #B45309;
+    --amber-sft:  #FFE9BD;
+    --red-bg:     #FFEBE9;
+
+    --r-sm: 4px; --r-md: 10px; --r-lg: 18px; --r-xl: 26px;
+    --shadow-sm: 0 1px 0 rgba(20,18,12,.06);
+    --shadow-md: 0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --shadow-lg: 0 30px 80px -30px rgba(60,40,18,.36);
+
+    --serif:      "Fraunces", "Times New Roman", serif;
+    --sans:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:       "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--coral-dk); text-decoration: none; border-bottom: 1px solid rgba(188,44,44,.25); }
+  a:hover { border-bottom-color: var(--coral-dk); }
+
+  /* ============ LAYOUT ============ */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); position: relative; }
+  section.alt { background: var(--paper); }
+  section.dark { background: var(--ink); color: #F2EAD7; border-top-color: #2A2520; }
+  section.dark a { color: #FFD8AC; border-bottom-color: rgba(255,216,172,.3); }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.012em; line-height: 1.08; margin: 0; }
+  h1 { font-size: clamp(48px, 8vw, 96px); font-weight: 380; letter-spacing: -.03em; }
+  h2 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 400; letter-spacing: -.022em; }
+  h3 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.18; }
+  h4 { font-size: 19px; font-weight: 600; line-height: 1.3; font-family: var(--sans); letter-spacing: -.005em; }
+  .display-italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 500; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--coral-dk);
+  }
+  p { margin: 0 0 1em; }
+  p.lede { font-size: 21px; line-height: 1.55; color: var(--ink-2); }
+  ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
+  ul li, ol li { margin-bottom: .35em; }
+  strong { font-weight: 600; }
+  .mono { font-family: var(--mono); font-size: .9em; }
+  .small { font-size: 13px; color: var(--muted); }
+
+  /* ============ HERO ============ */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #FBE3E2 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-top: 0;
+    padding: 56px 0 96px;
+    overflow: hidden; position: relative;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%23E63946' opacity='.06'/></svg>");
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; position: relative; }
+  .hero h1 { margin-bottom: .18em; }
+  .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .hero .meta { font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+  .hero .by-line { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-2); margin-top: 36px; font-size: 14px; }
+  .hero .by-line span b { color: var(--ink); font-weight: 600; }
+  .hero-side {
+    background: white; border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 30px; box-shadow: var(--shadow-md);
+    font-size: 14px;
+  }
+  .hero-side h4 { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-family: var(--sans); margin-bottom: 16px; font-weight: 600; }
+  .hero-side dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; }
+  .hero-side dt { color: var(--muted); }
+  .hero-side dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .hero-side .severity-strip { margin: 22px -30px -30px; padding: 18px 30px; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); color: white; border-radius: 0 0 var(--r-lg) var(--r-lg); display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ TLDR (Executive Summary) ============ */
+  .tldr { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; }
+  .tldr h2 em { font-style: italic; color: var(--coral); font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .tldr-bullets { font-size: 17px; line-height: 1.6; }
+  .tldr-bullets li { margin-bottom: 16px; padding-left: 4px; }
+  .tldr-bullets li::marker { color: var(--coral); }
+  .verdict-card {
+    background: var(--ink); color: #F2EAD7;
+    border-radius: var(--r-lg); padding: 36px;
+    position: sticky; top: 24px;
+  }
+  .verdict-card h4 { color: #F6E7C7; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; font-weight: 500; }
+  .verdict-card p { font-size: 15px; line-height: 1.65; color: #D8CDB5; }
+  .verdict-card .score-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--mono); font-size: 12px; }
+  .verdict-card .score-row b { color: white; font-size: 18px; }
+  @media (max-width: 820px) { .tldr { grid-template-columns: 1fr; } .verdict-card { position: static; } }
+
+  /* ============ KPI GRID ============ */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 22px 18px; position: relative; overflow: hidden;
+  }
+  .kpi-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+  .kpi-value small { font-size: 17px; color: var(--muted); margin-left: 4px; font-family: var(--sans); font-weight: 500; }
+  .kpi-trend { font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+  .kpi-trend.up { color: var(--green); }
+  .kpi-trend.dn { color: var(--coral-dk); }
+  .kpi.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; } .kpi-value { font-size: 36px; } }
+
+  /* ============ FINDINGS CARDS ============ */
+  .findings { display: grid; gap: 24px; }
+  .finding {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 36px; display: grid; grid-template-columns: 88px 1fr; gap: 28px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+  }
+  .finding .num {
+    font-family: var(--serif); font-size: 78px; font-weight: 400; line-height: 1; color: var(--coral); letter-spacing: -.04em; opacity: .9;
+  }
+  .finding h3 { margin-bottom: 8px; }
+  .finding .impact-line { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; font-family: var(--mono); letter-spacing: .02em; }
+  .finding p { font-size: 16px; }
+  .finding .fix {
+    background: var(--cream-2); padding: 18px 22px; border-radius: var(--r-md);
+    margin-top: 18px; border-left: 3px solid var(--coral); font-size: 15.5px;
+  }
+  .finding .fix b { color: var(--ink); }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+  }
+  .badge.crit { background: var(--coral); color: white; }
+  .badge.high { background: var(--amber-sft); color: var(--amber); }
+  .badge.med { background: var(--gold-sft); color: var(--gold); }
+  .badge.opp { background: var(--green-sft); color: var(--green); }
+  .badge.brand { background: var(--ink); color: var(--cream); }
+  @media (max-width: 820px) {
+    .finding { grid-template-columns: 1fr; padding: 26px; }
+    .finding .num { font-size: 56px; }
+  }
+
+  /* ============ DATA TABLES ============ */
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14.5px;
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  }
+  th { text-align: left; font-weight: 600; padding: 14px 16px; background: var(--cream-2); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  td.kw { font-weight: 500; }
+  td .badge { font-size: 10px; padding: 3px 8px; }
+
+  .table-scroll { overflow-x: auto; }
+
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #F4C7C5; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
+  /* ============ PILLS / CALLOUTS ============ */
+  .callout {
+    background: var(--coral-sft); border: 1px solid #F4C7C5;
+    border-radius: var(--r-md); padding: 22px 26px;
+    font-size: 15.5px; color: var(--coral-dk); margin: 24px 0;
+  }
+  .callout.opp { background: var(--green-sft); border-color: #BFE0D6; color: #135548; }
+  .callout.warn { background: var(--amber-sft); border-color: #F2D5A0; color: var(--amber); }
+  .callout strong { color: inherit; }
+
+  /* ============ TWO-COL ============ */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ============ HIERARCHY CARDS ============ */
+  .page-card {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+  .page-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .page-card-head h4 { font-family: var(--mono); font-size: 14px; color: var(--ink); letter-spacing: 0; word-break: break-all; }
+  .pc-issues { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pc-issue { font-size: 11.5px; padding: 3px 9px; border-radius: 4px; background: var(--coral-sft); color: var(--coral-dk); font-weight: 600; }
+  .pc-issue.ok { background: var(--green-sft); color: var(--green); }
+  .pc-issue.warn { background: var(--amber-sft); color: var(--amber); }
+
+  /* ============ ROADMAP ============ */
+  .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .road-col {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 28px;
+  }
+  .road-col .label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 12.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--coral-dk); margin-bottom: 6px; }
+  .road-col .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--coral); }
+  .road-col h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 18px; }
+  .road-col ul { list-style: none; padding: 0; }
+  .road-col li { padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .road-col li:last-child { border-bottom: 0; }
+  .road-col li .check { width: 18px; height: 18px; border: 1.5px solid var(--line); border-radius: 4px; margin-top: 2px; }
+  .road-col li .pri { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; align-self: start; }
+  @media (max-width: 1000px) { .roadmap { grid-template-columns: 1fr; } }
+
+  /* ============ SCHEMA SNIPPETS ============ */
+  pre.code {
+    background: #1A1F26; color: #DCD0AE; padding: 22px 26px;
+    border-radius: var(--r-md); font-family: var(--mono); font-size: 13px;
+    overflow-x: auto; line-height: 1.55; margin: 18px 0;
+  }
+  .code .k { color: #FFD89B; }
+  .code .s { color: #B5DCC7; }
+  .code .c { color: #6E6452; font-style: italic; }
+
+  /* ============ FOOTER ============ */
+  footer { padding: 56px 0 36px; background: var(--ink); color: #BAB099; text-align: center; }
+  footer .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 28px; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  footer .small { color: #76705F; }
+
+  /* ============ STICKY NAV ============ */
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 246, 235, 0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  .topnav .inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .topnav a { color: var(--ink); border-bottom: 0; font-size: 13px; font-weight: 500; }
+  .topnav .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 20px; font-variation-settings: "SOFT" 100, "WONK" 1; border: 0; }
+  .topnav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .topnav nav { display: none; } }
+
+  /* ============ HORIZONTAL BAR CHART ============ */
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 80px; gap: 14px; align-items: center; padding: 8px 0; font-size: 14px; }
+  .bar-bg { height: 22px; background: var(--cream-2); border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); }
+  .bar-fill.alt { background: linear-gradient(90deg, var(--gold) 0%, #A77F35 100%); }
+  .bar-fill.green { background: linear-gradient(90deg, #2C9D8B 0%, var(--green) 100%); }
+  .bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; text-align: right; color: var(--ink-2); }
+  @media (max-width: 600px) { .bar-row { grid-template-columns: 120px 1fr 60px; font-size: 13px; } }
+
+  /* ============ DIVIDERS ============ */
+  .ornament { text-align: center; margin: 48px 0; color: var(--coral); font-family: var(--serif); font-size: 22px; letter-spacing: .4em; opacity: .7; }
+  .section-eyebrow { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .section-eyebrow .bar { width: 36px; height: 1px; background: var(--coral); }
+
+  /* ============ MISC ============ */
+  .quote {
+    border-left: 3px solid var(--coral); padding: 12px 0 12px 26px;
+    font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink-2);
+    font-style: italic; margin: 28px 0;
+  }
+  .quote cite { display: block; margin-top: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: normal; letter-spacing: .04em; }
+
+  details.acc { background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 22px; margin-bottom: 10px; }
+  details.acc summary { cursor: pointer; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.acc summary::after { content: "+"; font-family: var(--serif); font-size: 22px; color: var(--coral); }
+  details.acc[open] summary::after { content: "−"; }
+  details.acc[open] { box-shadow: var(--shadow-md); }
+  details.acc .body { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: white; }
+    section { padding: 28px 0; page-break-inside: avoid; }
+    .topnav, .hero::before { display: none; }
+    .finding, .road-col, table { box-shadow: none; }
+    a { color: var(--ink); }
+  }
+
+  /* ============ BEATS CODE BRAND OVERRIDE ============ */
+  :root {
+    --coral:      #8100FF;
+    --coral-dk:   #6B21A8;
+    --coral-sft:  #F3E8FF;
+    --line:       #E4DCEE;
+    --line-2:     #EFE9F6;
+    --cream:      #FAF7FD;
+    --cream-2:    #F2EBFA;
+    --paper:      #FFFCFF;
+  }
+
+  /* ============ COUNTRY / DATA TABLES ============ */
+  .dtable-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 22px 0 6px;
+    border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--paper);
+    box-shadow: var(--shadow-md); }
+  table.dtable { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 15px; }
+  table.dtable thead th {
+    text-align: left; font-family: var(--sans); font-size: 11.5px; font-weight: 600;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+    padding: 15px 16px; border-bottom: 1px solid var(--line); background: var(--cream-2);
+    white-space: nowrap;
+  }
+  table.dtable tbody td { padding: 13px 16px; border-bottom: 1px solid var(--line-2); vertical-align: middle; }
+  table.dtable tbody tr:last-child td { border-bottom: 0; }
+  table.dtable tbody tr.hi { background: var(--coral-sft); }
+  table.dtable tbody tr.hi td { font-weight: 600; }
+  table.dtable tbody tr.dim td { color: var(--muted); }
+  table.dtable td.n, table.dtable th.n { text-align: right; font-family: var(--mono); font-size: 14px; white-space: nowrap; }
+  table.dtable td.co { font-weight: 600; white-space: nowrap; }
+  .swipe-hint { display: none; font-size: 12.5px; color: var(--muted); margin: 8px 2px 0; letter-spacing: .04em; }
+  @media (max-width: 760px) { .swipe-hint { display: block; } }
+
+  .tag-lo { display:inline-block; padding:2px 9px; border-radius:999px; font-size:11.5px; font-weight:600;
+    background: var(--green-sft); color: var(--green); letter-spacing:.03em; }
+  .tag-md { display:inline-block; padding:2px 9px; border-radius:999px; font-size:11.5px; font-weight:600;
+    background: var(--gold-sft); color: #8A6520; letter-spacing:.03em; }
+  .tag-hi { display:inline-block; padding:2px 9px; border-radius:999px; font-size:11.5px; font-weight:600;
+    background: var(--red-bg); color: #A32C24; letter-spacing:.03em; }
+
+  /* ============ MATRIX (LLM 5x4) ============ */
+  table.mx { width:100%; border-collapse:collapse; min-width:560px; font-size:14.5px; }
+  table.mx thead th { padding:14px 12px; font-family:var(--sans); font-size:11.5px; font-weight:600;
+    letter-spacing:.1em; text-transform:uppercase; color:#B9AFCB; border-bottom:1px solid #2E2739; text-align:center; }
+  table.mx thead th:first-child { text-align:left; width:44%; }
+  table.mx tbody td { padding:14px 12px; border-bottom:1px solid #241E2E; text-align:center; font-family:var(--mono); }
+  table.mx tbody td:first-child { text-align:left; font-family:var(--sans); color:#EFE6FA; }
+  table.mx tbody tr:last-child td { border-bottom:0; }
+  .no { color:#C9556B; font-weight:700; }
+  .mx-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #2E2739;
+    border-radius:var(--r-lg); background:#16121D; margin:24px 0 8px; }
+
+  /* ============ SCENARIO CARDS ============ */
+  .scen-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px; }
+  @media (max-width: 900px) { .scen-grid { grid-template-columns:1fr; } }
+  .scen { background:var(--paper); border:1px solid var(--line); border-radius:var(--r-lg);
+    padding:26px 24px 24px; box-shadow:var(--shadow-md); position:relative; overflow:hidden; }
+  .scen::before { content:''; position:absolute; inset:0 0 auto 0; height:4px;
+    background:linear-gradient(90deg,var(--coral) 0%,var(--coral-dk) 100%); }
+  .scen .letter { font-family:var(--serif); font-size:40px; line-height:1; color:var(--coral);
+    font-style:italic; font-variation-settings:"SOFT" 100,"WONK" 1; margin-bottom:10px; }
+  .scen h4 { margin:0 0 10px; font-size:20px; }
+  .scen p { margin:0 0 14px; font-size:15px; color:var(--ink-2); }
+  .scen .out { border-top:1px dashed var(--line); padding-top:14px; margin-top:auto;
+    font-size:14px; font-family:var(--mono); color:var(--coral-dk); font-weight:500; }
+
+  /* ============ GOOD LIST ============ */
+  .good { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:24px; }
+  @media (max-width: 820px) { .good { grid-template-columns:1fr; } }
+  .good-item { background:var(--green-sft); border:1px solid #BFDFD6; border-radius:var(--r-md);
+    padding:18px 20px; }
+  .good-item b { display:block; font-family:var(--serif); font-size:17px; margin-bottom:5px; color:#14544A; }
+  .good-item span { font-size:14.5px; color:#1F4B44; line-height:1.55; }
+
+  /* ============ QUOTE STACK (dark) ============ */
+  .qstack { display:grid; gap:16px; margin-top:26px; }
+  .qq { border-left:3px solid var(--coral); background:#1A1522; border-radius:0 var(--r-md) var(--r-md) 0;
+    padding:20px 24px; }
+  .qq p { margin:0 0 10px; font-family:var(--serif); font-size:18px; line-height:1.5; color:#F4ECFF; font-style:italic; }
+  .qq cite { font-style:normal; font-family:var(--mono); font-size:12.5px; color:#B79FD6; letter-spacing:.04em; }
+
+  /* ============ TRENDS BARS ============ */
+  .tb { display:grid; grid-template-columns:150px 1fr 52px; gap:14px; align-items:center; margin-bottom:9px; }
+  @media (max-width: 620px) { .tb { grid-template-columns:110px 1fr 46px; gap:10px; font-size:14px; } }
+  .tb .nm { font-size:14.5px; font-weight:500; }
+  .tb .tr { height:11px; background:var(--cream-2); border-radius:999px; overflow:hidden; }
+  .tb .tf { height:100%; background:linear-gradient(90deg,var(--coral) 0%,var(--coral-dk) 100%); border-radius:999px; }
+  .tb .tf.g { background:linear-gradient(90deg,#2FA98F 0%,#1F7A6A 100%); }
+  .tb .tf.d { background:#CFC4DE; }
+  .tb .vv { font-family:var(--mono); font-size:13px; text-align:right; color:var(--muted); }
+
+  /* ============ NUMBER STRIP ============ */
+  .nstrip { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:30px 0 6px;
+    border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--paper); }
+  @media (max-width: 820px) { .nstrip { grid-template-columns:repeat(2,1fr); } }
+  .nstrip div { padding:24px 20px; border-right:1px solid var(--line-2); }
+  .nstrip div:last-child { border-right:0; }
+  @media (max-width: 820px) { .nstrip div:nth-child(2) { border-right:0; } }
+  .nstrip .nv { font-family:var(--serif); font-size:38px; line-height:1; color:var(--coral); font-weight:500; }
+  .nstrip .nl { font-size:13px; color:var(--muted); margin-top:8px; line-height:1.45; }
+
+  /* ============ FIXES FOR REUSED BASE CLASSES ============ */
+  /* hero side card: base .score-row is scoped to .verdict-card only */
+  .hero-side .score-row {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 18px;
+    padding: 13px 0; border-bottom: 1px solid var(--line-2);
+    font-family: var(--sans); font-size: 14px; margin: 0;
+  }
+  .hero-side .score-row:last-of-type { border-bottom: 0; }
+  .hero-side .score-row .k { color: var(--muted); line-height: 1.35; }
+  .hero-side .score-row .s {
+    color: var(--ink); font-family: var(--mono); font-size: 17px; font-weight: 600;
+    white-space: nowrap; font-variant-numeric: tabular-nums;
+  }
+
+  /* tldr used without a side card: go full width */
+  .tldr { display: block !important; }
+  .tldr-bullets { max-width: 960px; }
+
+  /* verdict-card used standalone: no sticky, style h3 */
+  .verdict-card { position: static !important; }
+  .verdict-card h3 {
+    color: #E9D9FF; font-family: var(--serif); font-size: 25px;
+    margin: 0 0 14px; font-weight: 500;
+  }
+  .verdict-card p b { color: #FFFFFF; }
+
+  /* hero wash in brand purple */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #F0E2FF 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #EDE4FB 0%, transparent 55%),
+      var(--cream);
+  }
+  .hero::before {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%238100FF' opacity='.07'/></svg>");
+  }
+
+  /* two-col used for SERP comparison */
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+  @media (max-width: 900px) { .two-col { grid-template-columns:1fr; } }
+
+  /* dark-section callout readability */
+  section.dark .callout { background:#1A1522; border-color:#33293F; color:#E8DDF7; }
+  section.dark h3 { color:#F4ECFF; }
+  section.dark .bar-row .label { color:#E8DDF7; }
+  section.dark .bar-bg { background:#2A2235; }
+  section.dark .bar-val { color:#C9B6E4; }
+  section.dark .lede { color:#CFC0E4; }
+
+  /* ============ INLINE-SPAN BAR FIX ============ */
+  /* base .bar-fill assumes a block element; these are spans */
+  .bar-bg { display: block; }
+  .bar-fill { display: block; }
+  .tb .tr { display: block; }
+  .tb .tf { display: block; }
+
+  /* ============ DARK TABLE FIX ============ */
+  /* base `table { background:white }` leaks into the dark section */
+  section.dark table, table.mx { background: transparent; border: 0; border-radius: 0; }
+  table.mx thead th { background: #221B2D; color: #CDBBE6; }
+  table.mx tbody td { color: #EFE6FA; background: transparent; }
+  table.mx tbody tr:nth-child(even) td { background: #1B1624; }
+  section.dark .eyebrow { color: #C9B6E4; }
+  section.dark .ornament { color: #6F5A8C; }
+
+  /* ============ SMALL PHONE HARDENING (checked at 390px) ============ */
+  @media (max-width: 520px) {
+    .wrap, .narrow { padding: 0 20px; }
+    .kpi-grid { grid-template-columns: 1fr; }
+    .nstrip { grid-template-columns: 1fr; }
+    .nstrip div { border-right: 0; border-bottom: 1px solid var(--line-2); padding: 20px; }
+    .nstrip div:last-child { border-bottom: 0; }
+    .nstrip .nv { font-size: 32px; }
+    h1 { font-size: 40px; }
+    h2 { font-size: 31px; }
+    .hero-side { padding: 24px; }
+    .hero-side .severity-strip { margin: 18px -24px -24px; padding: 16px 24px; }
+    .scen { padding: 22px 20px; }
+    .good-item { padding: 16px 18px; }
+    .qq { padding: 18px 20px; }
+    .qq p { font-size: 16.5px; }
+    .verdict-card { padding: 26px 22px; }
+    table.dtable, table.mx { font-size: 14px; }
+  }
+
+  /* ============ FOOT ============ */
+  .foot { padding:56px 0 70px; text-align:center; color:var(--muted); font-size:14px; }
+  .foot b { color:var(--ink); }
+
+</style>
+</head>
+<body>
+<a id="top"></a>
+
+<div class="topnav">
+  <div class="wrap inner">
+    <a href="#top" class="mark">beats code · auditoría seo</a>
+    <nav>
+      <a href="#tldr">Resumen</a>
+      <a href="#hoy">Hoy</a>
+      <a href="#bien">Lo que va bien</a>
+      <a href="#hallazgos">Hallazgos</a>
+      <a href="#mercado">Mercado</a>
+      <a href="#benchmark">Benchmark</a>
+      <a href="#llm">IA</a>
+      <a href="#categoria">Categoría vacía</a>
+      <a href="#abc">Escenarios</a>
+      <a href="#ads">Google Ads</a>
+      <a href="#plan">Plan 90 días</a>
+      <a href="#anexo">Anexo</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow" style="margin-bottom:22px;">Auditoría de visibilidad · 28 de julio de 2026</div>
+      <h1>Beats Code construye<br>sistemas que el mercado<br><em class="display-italic">todavía no encuentra</em>.</h1>
+      <p class="lede" style="margin-top:26px; max-width:620px;">
+        La ingeniería está resuelta. La distribución no. Este informe mide, con datos de Google Ads,
+        Google Trends, Semrush y DataForSEO, cuánta gente está buscando exactamente lo que Beats Code
+        vende, en qué países, cuánto cuesta llegar a ellos y qué separa a la empresa de esa demanda.
+      </p>
+      <p class="by-line" style="margin-top:30px;">
+        Preparado por <b>ThinkFlow Labs</b> · Datos medidos entre el 11 y el 28 de julio de 2026
+      </p>
+    </div>
+
+    <aside class="hero-side">
+      <div class="eyebrow" style="margin-bottom:20px;">De un vistazo</div>
+      <div class="score-row"><span class="k">Visitas orgánicas al mes</span><span class="s">0</span></div>
+      <div class="score-row"><span class="k">Keywords de servicio posicionadas</span><span class="s">0</span></div>
+      <div class="score-row"><span class="k">Keywords de marca posicionadas</span><span class="s">6</span></div>
+      <div class="score-row"><span class="k">Citaciones en IA (20 pruebas)</span><span class="s">0</span></div>
+      <div class="score-row"><span class="k">Búsquedas mensuales al alcance</span><span class="s">6.400</span></div>
+      <div class="score-row"><span class="k">Salud técnica del sitio</span><span class="s">Alta</span></div>
+      <div class="severity-strip"></div>
+    </aside>
+  </div>
+</header>
+
+<!-- ================= 01 RESUMEN ================= -->
+<section id="tldr">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">01 · Resumen ejecutivo</span></div>
+    <h2>El veredicto en<br><em class="display-italic">sesenta segundos</em>.</h2>
+
+    <div class="tldr" style="margin-top:32px;">
+      <ul class="tldr-bullets">
+        <li><b>El sitio está bien hecho.</b> Puntaje técnico de SEO de 100 sobre 100, accesibilidad 96, cero saltos de diseño al cargar. El problema no es la calidad del sitio.</li>
+        <li><b>Pero Google solo tiene permiso para mostrar una página.</b> Todas las páginas internas llevan una instrucción que le dice a Google que la versión oficial de ese contenido es la portada. Servicios, plataforma, blog y las fichas de servicio quedan fuera del índice por decisión propia del código.</li>
+        <li><b>Resultado medible:</b> Semrush registra 1 keyword en Colombia, 5 en México, 2 en Brasil y 1 en Estados Unidos, con tráfico orgánico estimado en cero. DataForSEO encuentra 6 keywords en Estados Unidos y todas son variantes del nombre de la marca, ninguna del servicio.</li>
+        <li><b>La demanda existe y está creciendo.</b> Solo entre España, México, Colombia, Argentina, Chile y el mercado hispano de Estados Unidos hay más de 6.400 búsquedas mensuales sobre agentes de IA y agencias de inteligencia artificial. En Colombia esa demanda creció 120 por ciento en doce meses.</li>
+        <li><b>Los competidores directos ya capturan esa demanda.</b> agenciaia.ai recibe 912 visitas orgánicas al mes, un volumen que comprado en Google Ads costaría 4.877 dólares mensuales. Beats Code recibe cero.</li>
+        <li><b>En la capa de IA la marca es invisible.</b> Se enviaron 5 preguntas comerciales a ChatGPT, Claude, Gemini y Perplexity, con búsqueda web activa. Beats Code no apareció en ninguna de las 20 respuestas. Sí aparecieron 60 competidores.</li>
+        <li><b>Y existe una categoría vacía esperando dueño.</b> Tres de los cuatro modelos declararon por escrito que no hay empresas latinoamericanas verificables que operen sistemas multi agente con LangGraph y MCP en producción. Beats Code es exactamente esa empresa y ningún modelo la conoce.</li>
+      </ul>
+    </div>
+
+    <div class="nstrip">
+      <div><div class="nv">100</div><div class="nl">Puntaje técnico de SEO de la portada, sobre 100</div></div>
+      <div><div class="nv">0</div><div class="nl">Páginas internas que Google tiene permitido indexar</div></div>
+      <div><div class="nv">6.400</div><div class="nl">Búsquedas mensuales de servicio en los seis mercados medidos</div></div>
+      <div><div class="nv">0 / 20</div><div class="nl">Veces que la IA mencionó a Beats Code</div></div>
+    </div>
+
+    <div class="callout opp" style="margin-top:34px;">
+      <b>La lectura corta.</b> Beats Code no tiene un problema de producto ni de sitio web. Tiene un problema
+      de permiso y de presencia. El permiso se corrige en una línea de código por página. La presencia se
+      construye con contenido en los lugares donde hoy se decide la compra, que ya no son solo los diez
+      resultados azules de Google.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 HOY ================= -->
+<section id="hoy" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">02 · Estado actual</span></div>
+    <h2>Dónde está Beats Code<br><em class="display-italic">hoy</em>, en números.</h2>
+    <p class="lede" style="margin-top:18px; max-width:800px;">
+      Todo lo que sigue está medido, no estimado a ojo. Cada cifra proviene de Semrush, DataForSEO,
+      Google Ads Keyword Planner, Google Trends o de la lectura directa del código del sitio.
+    </p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="kpi-grid">
+      <div class="kpi cta">
+        <div class="kpi-value">0</div>
+        <div class="kpi-label">Visitas orgánicas mensuales</div>
+        <div class="kpi-trend">Semrush reporta tráfico orgánico cero en las cuatro bases de datos donde el dominio aparece</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">9</div>
+        <div class="kpi-label">Visitas mensuales estimadas por DataForSEO</div>
+        <div class="kpi-trend">Todas provienen de búsquedas del nombre, no del servicio</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">1</div>
+        <div class="kpi-label">Keyword posicionada en Colombia</div>
+        <div class="kpi-trend">Siendo Colombia el país hispanohablante con mayor interés en el tema</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">21</div>
+        <div class="kpi-label">Dominios que enlazan al sitio</div>
+        <div class="kpi-trend">De ellos, 15 tienen puntaje de spam entre 50 y 80 sobre 100</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">52</div>
+        <div class="kpi-label">Rendimiento de carga sobre 100</div>
+        <div class="kpi-trend">La única métrica técnica realmente floja del sitio</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">389</div>
+        <div class="kpi-label">Días sin publicar en el blog</div>
+        <div class="kpi-trend">Último artículo publicado el 4 de julio de 2025</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:52px;">Las únicas seis búsquedas donde aparece la marca</h3>
+    <p style="max-width:820px;">
+      Esta es la lista completa de términos donde beatscode.co aparece hoy en Google, medida en Estados Unidos,
+      que es el único mercado donde el dominio registra posiciones. Ninguna describe lo que la empresa vende.
+    </p>
+
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead>
+          <tr>
+            <th>Búsqueda</th>
+            <th class="n">Búsquedas / mes</th>
+            <th class="n">Posición</th>
+            <th>Qué busca realmente esa persona</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="co">beats code</td><td class="n">90</td><td class="n">4</td><td>Mezcla de la marca con audio, música y una plataforma de programación</td></tr>
+          <tr><td class="co">beatcode</td><td class="n">90</td><td class="n">37</td><td>Plataforma de retos de programación con nombre casi idéntico</td></tr>
+          <tr><td class="co">códigos beat</td><td class="n">70</td><td class="n">7</td><td>Códigos promocionales de audio, detectado por Google como portugués</td></tr>
+          <tr><td class="co">código beat</td><td class="n">70</td><td class="n">10</td><td>Variante del anterior</td></tr>
+          <tr><td class="co">code beats</td><td class="n">50</td><td class="n">15</td><td>Música y programación</td></tr>
+          <tr><td class="co">beats login</td><td class="n">50</td><td class="n">21</td><td>Acceso a una cuenta de audífonos Beats</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+
+    <div class="callout warn" style="margin-top:28px;">
+      <b>Lo que esto significa en la práctica.</b> Las nueve visitas mensuales que llegan por Google no son
+      compradores potenciales. Son personas buscando audífonos, música o una plataforma de programación.
+      El tráfico comercial de Beats Code proveniente de búsqueda es, hoy, cero.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 LO QUE VA BIEN ================= -->
+<section id="bien">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · Fortalezas</span></div>
+    <h2>Lo que Beats Code<br>ya hace <em class="display-italic">muy bien</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:800px;">
+      Conviene decirlo con claridad antes de entrar en los problemas: la base sobre la que se va a construir
+      es sólida. Estas siete cosas están bien resueltas y son exactamente los activos que hacen que el resto
+      del plan sea viable en meses y no en años.
+    </p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="good">
+      <div class="good-item">
+        <b>Salud técnica sobresaliente</b>
+        <span>Lighthouse otorga 100 sobre 100 en SEO técnico, 96 en accesibilidad y 96 en buenas prácticas.
+        El desplazamiento acumulado de diseño es cero, lo que significa que la página no salta mientras carga.
+        Muy pocos sitios de este sector llegan a estas cifras.</span>
+      </div>
+      <div class="good-item">
+        <b>Posicionamiento diferenciado y honesto</b>
+        <span>La sección "No somos lo que crees" separa a la empresa de las agencias de chatbots y de los
+        envoltorios de OpenAI. Es una diferenciación real, defendible y poco común en el mercado hispano.</span>
+      </div>
+      <div class="good-item">
+        <b>Etiquetas y descripciones bien escritas</b>
+        <span>Cada página tiene un título y una descripción propios, específicos y con las palabras correctas.
+        La consistencia entre título y contenido es de 100 por ciento en la portada y en la ficha de agentes a medida.</span>
+      </div>
+      <div class="good-item">
+        <b>Diez preguntas frecuentes en la portada</b>
+        <span>Desde "¿Qué es exactamente un agente de IA?" hasta "¿Qué pasa si el modelo cambia o sube de precio?".
+        Este formato de pregunta y respuesta es precisamente el que los modelos de IA prefieren citar.
+        El material ya existe, solo le falta ser visible.</span>
+      </div>
+      <div class="good-item">
+        <b>Casos reales documentados</b>
+        <span>El agente de WhatsApp con MCP de WooCommerce, el sistema multi agente para real estate y el caso
+        de Guitarras Andalucía son evidencia concreta. Es el tipo de prueba que los compradores B2B piden
+        y que la mayoría de competidores no tiene.</span>
+      </div>
+      <div class="good-item">
+        <b>Argumento de seguridad ya construido</b>
+        <span>Aislamiento, cifrado en tránsito y en reposo, control de accesos por rol, cláusula de no
+        entrenamiento y hoja de ruta hacia SOC 2 e ISO 27001. Es exactamente la objeción número uno de
+        cualquier empresa mediana y ya está respondida.</span>
+      </div>
+      <div class="good-item">
+        <b>Arquitectura de URLs limpia</b>
+        <span>Direcciones cortas, legibles y con la palabra clave dentro, como /servicios/agentes-a-medida.
+        No hay parámetros raros ni cadenas ininteligibles. Es la estructura correcta desde el primer día.</span>
+      </div>
+      <div class="good-item">
+        <b>Perfil de enlaces limpio de penalizaciones</b>
+        <span>El puntaje de spam del dominio es 5 sobre 100. Pese a que hay directorios de baja calidad
+        enlazando, el dominio no arrastra ningún castigo. Se parte de cero, no de números negativos.</span>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:32px;">
+      <b>Por qué esto importa.</b> Cuando un sitio está mal construido, recuperar visibilidad toma entre
+      doce y dieciocho meses porque primero hay que rehacerlo. Aquí no hay nada que rehacer. Hay que
+      quitar un freno y llenar un espacio vacío, y ambas cosas se hacen en semanas.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 HALLAZGOS ================= -->
+<section id="hallazgos" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · Diagnóstico</span></div>
+    <h2>Los cinco hallazgos que<br>explican <em class="display-italic">los ceros</em>.</h2>
+
+    <div class="findings" style="margin-top:34px;">
+
+      <article class="finding">
+        <div class="num">01</div>
+        <div>
+          <span class="badge crit">Crítico</span>
+          <h3>Cada página interna le pide a Google que no la indexe</h3>
+          <p>
+            En el código de las páginas hay una etiqueta llamada canónica cuya función es decirle a Google
+            cuál es la versión oficial de un contenido. En beatscode.co esa etiqueta está puesta en todas
+            las páginas internas y apunta siempre al mismo lugar: la portada.
+          </p>
+          <p>
+            Se verificó una por una. La página de servicios, la de plataforma, la del blog y la ficha de
+            agentes a medida declaran todas que su versión oficial es <span class="mono">https://beatscode.co/</span>.
+            En términos prácticos, Google entiende que esas páginas son copias de la portada y decide no
+            mostrarlas en resultados.
+          </p>
+          <div class="impact-line">
+            <b>Consecuencia:</b> la página /servicios/agentes-a-medida está optimizada para "agentes de IA a
+            medida para empresas", tiene 480 palabras, cinco preguntas frecuentes y un caso real. Y no puede
+            posicionar para nada, porque ella misma le pide a Google que no la considere.
+          </div>
+          <div class="impact-line" style="margin-top:12px;">
+            <b>Corrección:</b> una línea por página. Cada página debe declararse a sí misma como su versión
+            oficial. Es la reparación de mayor impacto y menor esfuerzo de todo este informe.
+          </div>
+        </div>
+      </article>
+
+      <article class="finding">
+        <div class="num">02</div>
+        <div>
+          <span class="badge crit">Crítico</span>
+          <h3>El nombre de la marca compite con cuatro entidades distintas</h3>
+          <p>
+            Google y los modelos de IA necesitan entender qué es Beats Code antes de poder recomendarla.
+            Hoy el nombre está repartido entre varias empresas sin relación:
+          </p>
+          <div class="dtable-wrap" style="margin-top:18px;">
+            <table class="dtable">
+              <thead><tr><th>Propiedad</th><th>A quién pertenece hoy</th><th>Señal que envía</th></tr></thead>
+              <tbody>
+                <tr><td class="co">beatscode.com</td><td>Action Sports, serigrafía y bordados en Estados Unidos</td><td>Confunde el dominio principal de la marca</td></tr>
+                <tr><td class="co">linkedin.com/company/beatscode</td><td>BeatsCode, empresa brasileña de gestión de clubes de fútbol, 557 seguidores</td><td>El perfil corporativo más visible del nombre no es de Beats Code</td></tr>
+                <tr><td class="co">soundcloud.com/beatscode</td><td>Proyecto musical</td><td>Refuerza la asociación con audio</td></tr>
+                <tr><td class="co">facebook.com/BEATCODE</td><td>Perfil bajo el nombre BEATS CODE</td><td>Duplica la identidad</td></tr>
+                <tr class="dim"><td class="co">instagram.com/beats_code</td><td>Beats Code, 119 seguidores</td><td>La biografía todavía dice "sitios web a la medida", posicionamiento anterior</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="impact-line">
+            <b>Consecuencia:</b> las seis búsquedas donde el sitio aparece son todas de esta confusión.
+            Cuando alguien busca "beats code" Google no sabe si mostrar audífonos, música, una plataforma
+            de programación o una empresa de ingeniería de IA.
+          </div>
+        </div>
+      </article>
+
+      <article class="finding">
+        <div class="num">03</div>
+        <div>
+          <span class="badge high">Alto</span>
+          <h3>No existe una sola página que responda a una búsqueda comercial</h3>
+          <p>
+            El sitio tiene páginas excelentes para explicar qué hace la empresa. No tiene ninguna construida
+            para interceptar a alguien que está buscando contratar. Las páginas actuales están escritas en el
+            lenguaje de la ingeniería, con títulos como "Ingeniería de Sistema Agéntico" y "Arquitectura de
+            Integración". Nadie escribe eso en Google.
+          </p>
+          <p>
+            Lo que sí se busca, con volumen medido, es "agentes de IA", "agencia de inteligencia artificial",
+            "automatización con IA", "chatbot para WhatsApp" y "cuánto cuesta un agente de IA". Ninguna página
+            del sitio está escrita alrededor de esos términos ni menciona un país en su título.
+          </p>
+          <div class="impact-line">
+            <b>Consecuencia:</b> aunque mañana se corrigiera el problema técnico del hallazgo 01, el sitio
+            seguiría sin material con el que competir por las búsquedas que generan clientes.
+          </div>
+        </div>
+      </article>
+
+      <article class="finding">
+        <div class="num">04</div>
+        <div>
+          <span class="badge high">Alto</span>
+          <h3>El blog lleva 389 días detenido y arrastra restos de la versión anterior</h3>
+          <p>
+            Hay diez artículos publicados entre febrero y julio de 2025. El último es del 4 de julio de 2025.
+            En un sector donde el vocabulario cambia cada trimestre, un año de silencio es una señal fuerte
+            tanto para Google como para los modelos de IA, que priorizan fuentes activas.
+          </p>
+          <p>
+            Además quedaron restos técnicos de la plantilla original. Las palabras clave declaradas en el
+            blog son <span class="mono">Next.js, React, TypeScript, Clean Architecture, Auth.js, shadcn ui,
+            Resend, React Email, Stripe</span>, que no tienen relación con el contenido publicado. Y hay
+            nueve páginas rotas en el dominio, entre ellas /nosotros y /pricing, que Bing y Brave todavía
+            muestran con el posicionamiento antiguo de "empresa especializada en Data Science".
+          </p>
+          <div class="impact-line">
+            <b>Consecuencia:</b> conviven dos identidades públicas de la empresa. La actual, de ingeniería
+            agéntica, y la anterior, de ciencia de datos y diseño web. Los buscadores y los modelos de IA
+            leen ambas.
+          </div>
+        </div>
+      </article>
+
+      <article class="finding">
+        <div class="num">05</div>
+        <div>
+          <span class="badge med">Medio</span>
+          <h3>El 95 por ciento de los enlaces entrantes viene de dos sitios</h3>
+          <p>
+            El dominio recibe 525 enlaces desde 21 dominios distintos. La cifra suena razonable hasta que se
+            mira la distribución: 388 enlaces vienen de tandemweb.com y 111 de dulcelolacol.com, ambos
+            repetidos en todas las páginas de esos sitios. Es decir, 499 de los 525 enlaces, el 95 por ciento,
+            provienen de dos fuentes.
+          </p>
+          <p>
+            De los 21 dominios restantes, 15 son directorios automáticos con puntaje de spam entre 50 y 80,
+            del tipo wallpapers.pro, booksreadr.org o thebestbacklinksavailable.click. No causan daño hoy,
+            el puntaje de spam del dominio sigue siendo 5 sobre 100, pero tampoco aportan autoridad.
+          </p>
+          <div class="impact-line">
+            <b>Consecuencia:</b> la autoridad real del dominio es baja, y eso es lo que limita la velocidad
+            a la que el sitio puede escalar posiciones una vez corregido lo demás.
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 MERCADO ================= -->
+<section id="mercado">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">05 · Tamaño del mercado</span></div>
+    <h2>Cuánta gente busca esto,<br>y en <em class="display-italic">qué país</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px;">
+      Estos números vienen del Planificador de Palabras Clave de Google Ads, que es la misma fuente que
+      usa Google para cobrar por publicidad. Son promedios de los últimos doce meses. El costo por clic
+      indicado es el que Google reporta para la parte superior de la página.
+    </p>
+
+    <div class="ornament">· · ·</div>
+
+    <h3>La búsqueda principal: "agentes de IA"</h3>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead>
+          <tr>
+            <th>País</th>
+            <th class="n">Búsquedas / mes</th>
+            <th class="n">Costo por clic</th>
+            <th>Competencia publicitaria</th>
+            <th>Lectura</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="co">España</td><td class="n">1.300</td><td class="n">9,78 USD</td><td><span class="tag-md">Media 61</span></td><td>El mercado más grande en español</td></tr>
+          <tr><td class="co">México</td><td class="n">880</td><td class="n">18,48 USD</td><td><span class="tag-md">Media 49</span></td><td>Mismo volumen que Colombia, publicidad 3,6 veces más cara</td></tr>
+          <tr class="hi"><td class="co">Colombia</td><td class="n">880</td><td class="n">5,17 USD</td><td><span class="tag-md">Media 51</span></td><td>La mejor relación entre volumen y costo de todo el estudio</td></tr>
+          <tr><td class="co">Argentina</td><td class="n">720</td><td class="n">4,28 USD</td><td><span class="tag-hi">Alta 68</span></td><td>El clic más barato, aunque más disputado</td></tr>
+          <tr><td class="co">Chile</td><td class="n">390</td><td class="n">5,99 USD</td><td><span class="tag-md">Media 56</span></td><td>Mercado pequeño y accesible</td></tr>
+          <tr><td class="co">EE.UU. en español</td><td class="n">140</td><td class="n">12,11 USD</td><td><span class="tag-lo">Baja 33</span></td><td>Poco volumen, pero muy poca competencia</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+
+    <h3 style="margin-top:48px;">Las búsquedas de intención comercial</h3>
+    <p style="max-width:820px;">
+      Estas son distintas y más valiosas. Quien escribe "agentes de IA" normalmente quiere entender qué son.
+      Quien escribe "agencia de inteligencia artificial" está buscando a quién contratar.
+    </p>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead>
+          <tr>
+            <th>Búsqueda</th>
+            <th>País</th>
+            <th class="n">Búsquedas / mes</th>
+            <th class="n">Costo por clic</th>
+            <th>Competencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hi"><td class="co">agencia de ia</td><td>España</td><td class="n">720</td><td class="n">5,57 USD</td><td><span class="tag-md">Media 34</span></td></tr>
+          <tr class="hi"><td class="co">agencia de inteligencia artificial</td><td>España</td><td class="n">320</td><td class="n">4,58 USD</td><td><span class="tag-lo">Baja 5</span></td></tr>
+          <tr><td class="co">empresas de inteligencia artificial</td><td>España</td><td class="n">320</td><td class="n">8,95 USD</td><td><span class="tag-md">Media 44</span></td></tr>
+          <tr><td class="co">automatización con ia</td><td>España</td><td class="n">260</td><td class="n">7,66 USD</td><td><span class="tag-md">Media 64</span></td></tr>
+          <tr><td class="co">chatbot para whatsapp</td><td>México</td><td class="n">170</td><td class="n">12,77 USD</td><td><span class="tag-hi">Alta 72</span></td></tr>
+          <tr><td class="co">automatización con ia</td><td>Argentina</td><td class="n">170</td><td class="n">2,94 USD</td><td><span class="tag-hi">Alta 75</span></td></tr>
+          <tr><td class="co">empresas de inteligencia artificial</td><td>EE.UU. en español</td><td class="n">140</td><td class="n">4,46 USD</td><td><span class="tag-lo">Baja 3</span></td></tr>
+          <tr><td class="co">chatbot para whatsapp</td><td>Colombia</td><td class="n">140</td><td class="n">10,26 USD</td><td><span class="tag-hi">Alta 73</span></td></tr>
+          <tr class="hi"><td class="co">agencia de inteligencia artificial</td><td>Colombia</td><td class="n">110</td><td class="n">1,06 USD</td><td><span class="tag-lo">Baja 25</span></td></tr>
+          <tr><td class="co">agencia de inteligencia artificial</td><td>EE.UU. en español</td><td class="n">110</td><td class="n">sin dato</td><td><span class="tag-lo">Baja 1</span></td></tr>
+          <tr><td class="co">automatización con ia</td><td>Colombia</td><td class="n">110</td><td class="n">8,80 USD</td><td><span class="tag-md">Media 61</span></td></tr>
+          <tr><td class="co">ia para inmobiliarias</td><td>España</td><td class="n">90</td><td class="n">5,52 USD</td><td><span class="tag-md">Media 64</span></td></tr>
+          <tr><td class="co">agentes de ia para empresas</td><td>España</td><td class="n">70</td><td class="n">11,77 USD</td><td><span class="tag-md">Media 61</span></td></tr>
+          <tr><td class="co">implementar ia en mi empresa</td><td>España</td><td class="n">20</td><td class="n">14,71 USD</td><td><span class="tag-hi">Alta 79</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+
+    <div class="callout opp" style="margin-top:30px;">
+      <b>Dos oportunidades que saltan del cuadro.</b> "Agencia de inteligencia artificial" en España tiene
+      320 búsquedas al mes con un índice de competencia publicitaria de 5 sobre 100, es decir, prácticamente
+      nadie está pujando. Y en Colombia el mismo término cuesta 1,06 dólares por clic, casi cinco veces menos
+      que la búsqueda genérica. Son dos puertas abiertas.
+    </div>
+
+    <h3 style="margin-top:52px;">Dónde está el interés, según Google Trends</h3>
+    <p style="max-width:820px;">
+      Este índice compara el interés relativo por "agentes de IA" entre países durante los últimos doce meses.
+      El valor 100 corresponde al país con mayor interés proporcional. Es la respuesta directa a la pregunta
+      de en qué países hay más demanda.
+    </p>
+
+    <div style="margin-top:26px;">
+      <div class="tb"><span class="nm">Brasil</span><span class="tr"><span class="tf" style="width:100%"></span></span><span class="vv">100</span></div>
+      <div class="tb"><span class="nm">Colombia</span><span class="tr"><span class="tf g" style="width:84%"></span></span><span class="vv">84</span></div>
+      <div class="tb"><span class="nm">España</span><span class="tr"><span class="tf g" style="width:81%"></span></span><span class="vv">81</span></div>
+      <div class="tb"><span class="nm">Chile</span><span class="tr"><span class="tf" style="width:65%"></span></span><span class="vv">65</span></div>
+      <div class="tb"><span class="nm">Perú</span><span class="tr"><span class="tf" style="width:60%"></span></span><span class="vv">60</span></div>
+      <div class="tb"><span class="nm">Argentina</span><span class="tr"><span class="tf" style="width:57%"></span></span><span class="vv">57</span></div>
+      <div class="tb"><span class="nm">Uruguay</span><span class="tr"><span class="tf" style="width:57%"></span></span><span class="vv">57</span></div>
+      <div class="tb"><span class="nm">Ecuador</span><span class="tr"><span class="tf" style="width:57%"></span></span><span class="vv">57</span></div>
+      <div class="tb"><span class="nm">Costa Rica</span><span class="tr"><span class="tf" style="width:52%"></span></span><span class="vv">52</span></div>
+      <div class="tb"><span class="nm">Venezuela</span><span class="tr"><span class="tf" style="width:44%"></span></span><span class="vv">44</span></div>
+      <div class="tb"><span class="nm">Bolivia</span><span class="tr"><span class="tf" style="width:39%"></span></span><span class="vv">39</span></div>
+      <div class="tb"><span class="nm">Panamá</span><span class="tr"><span class="tf" style="width:36%"></span></span><span class="vv">36</span></div>
+      <div class="tb"><span class="nm">México</span><span class="tr"><span class="tf" style="width:34%"></span></span><span class="vv">34</span></div>
+      <div class="tb"><span class="nm">Paraguay</span><span class="tr"><span class="tf" style="width:31%"></span></span><span class="vv">31</span></div>
+      <div class="tb"><span class="nm">Rep. Dominicana</span><span class="tr"><span class="tf" style="width:31%"></span></span><span class="vv">31</span></div>
+      <div class="tb"><span class="nm">Guatemala</span><span class="tr"><span class="tf" style="width:26%"></span></span><span class="vv">26</span></div>
+      <div class="tb"><span class="nm">Estados Unidos</span><span class="tr"><span class="tf d" style="width:2%"></span></span><span class="vv">2</span></div>
+      <div class="tb"><span class="nm">Canadá</span><span class="tr"><span class="tf d" style="width:2%"></span></span><span class="vv">2</span></div>
+      <div class="tb"><span class="nm">Reino Unido</span><span class="tr"><span class="tf d" style="width:1%"></span></span><span class="vv">0</span></div>
+    </div>
+
+    <div class="callout warn" style="margin-top:30px;">
+      <b>Un dato que conviene mirar dos veces.</b> Estados Unidos marca 2 sobre 100 en interés por la búsqueda
+      "agentes de IA". No porque allí no haya mercado de IA, que lo hay y es el más grande del mundo, sino
+      porque ese mercado busca en inglés. La conclusión operativa es que el mercado hispano de Estados Unidos
+      es real pero pequeño para esta categoría, mientras que Colombia y España concentran el interés en español.
+    </div>
+
+    <h3 style="margin-top:52px;">La demanda está creciendo, no estabilizada</h3>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead><tr><th>Búsqueda y país</th><th class="n">Hace 12 meses</th><th class="n">Pico 2026</th><th class="n">Crecimiento</th></tr></thead>
+        <tbody>
+          <tr><td class="co">"agentes ia" en España</td><td class="n">1.000</td><td class="n">2.900</td><td class="n">+190 %</td></tr>
+          <tr><td class="co">"agentes de ia" en Colombia</td><td class="n">590</td><td class="n">1.300</td><td class="n">+120 %</td></tr>
+          <tr><td class="co">"agencia de inteligencia artificial" en España</td><td class="n">140</td><td class="n">880</td><td class="n">+529 %</td></tr>
+          <tr><td class="co">"agentes de ia" en Argentina</td><td class="n">390</td><td class="n">1.000</td><td class="n">+156 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+    <p style="max-width:820px; margin-top:20px;">
+      El punto no es solo que la demanda exista. Es que se está formando ahora. Las posiciones que se ocupan
+      durante la fase de crecimiento de una categoría son mucho más difíciles de arrebatar después.
+    </p>
+
+    <h3 style="margin-top:52px;">Y para contexto, el mercado en inglés</h3>
+    <p style="max-width:820px;">
+      Vale la pena verlo porque cambia por completo la conversación sobre presupuesto. Estos son los mismos
+      servicios, buscados en inglés en Estados Unidos.
+    </p>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead><tr><th>Búsqueda</th><th class="n">Búsquedas / mes</th><th class="n">Costo por clic</th><th>Competencia</th></tr></thead>
+        <tbody>
+          <tr><td class="co">ai agency</td><td class="n">49.500</td><td class="n">24,30 USD</td><td><span class="tag-md">Media 55</span></td></tr>
+          <tr><td class="co">ai automation agency</td><td class="n">4.400</td><td class="n">17,80 USD</td><td><span class="tag-lo">Baja 27</span></td></tr>
+          <tr><td class="co">ai development company</td><td class="n">2.900</td><td class="n">72,30 USD</td><td><span class="tag-lo">Baja 18</span></td></tr>
+          <tr><td class="co">ai consulting services</td><td class="n">2.400</td><td class="n">51,53 USD</td><td><span class="tag-lo">Baja 11</span></td></tr>
+          <tr><td class="co">enterprise ai solutions</td><td class="n">720</td><td class="n">58,58 USD</td><td><span class="tag-lo">Baja 9</span></td></tr>
+          <tr><td class="co">ai integration services</td><td class="n">590</td><td class="n">65,65 USD</td><td><span class="tag-lo">Baja 19</span></td></tr>
+          <tr><td class="co">hire ai engineers</td><td class="n">320</td><td class="n">78,69 USD</td><td><span class="tag-lo">Baja 29</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+
+    <div class="callout" style="margin-top:26px;">
+      <b>La comparación que importa.</b> Un clic de "ai development company" en Estados Unidos cuesta
+      72,30 dólares. El mismo tipo de cliente, buscando en español en Colombia, cuesta 5,17 dólares.
+      Catorce veces menos por la misma intención de compra. Beats Code opera desde Colombia, con
+      presencia en México, Estados Unidos y España, y esa geografía es una ventaja de costo que
+      hoy no se está usando.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 BENCHMARK ================= -->
+<section id="benchmark" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">06 · Competencia</span></div>
+    <h2>Qué están consiguiendo<br>los <em class="display-italic">demás</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px;">
+      Estas cifras son visitas orgánicas mensuales estimadas por DataForSEO para el mismo conjunto de
+      búsquedas analizado. Ninguna de estas empresas tiene mejor ingeniería que Beats Code. Varias tienen
+      bastante menos. Lo que tienen es páginas que Google puede leer y mostrar.
+    </p>
+
+    <div class="ornament">· · ·</div>
+
+    <h3>Mercado español</h3>
+    <div style="margin-top:22px;">
+      <div class="tb"><span class="nm">gurusup.com</span><span class="tr"><span class="tf" style="width:100%"></span></span><span class="vv">3.236</span></div>
+      <div class="tb"><span class="nm">agenciaia.ai</span><span class="tr"><span class="tf" style="width:28%"></span></span><span class="vv">912</span></div>
+      <div class="tb"><span class="nm">dobleo.com</span><span class="tr"><span class="tf" style="width:17%"></span></span><span class="vv">561</span></div>
+      <div class="tb"><span class="nm">agenciaautomatiza.com</span><span class="tr"><span class="tf" style="width:5%"></span></span><span class="vv">138</span></div>
+      <div class="tb"><span class="nm">agentesdeia.com</span><span class="tr"><span class="tf" style="width:3%"></span></span><span class="vv">75</span></div>
+      <div class="tb"><span class="nm">agentes.ai</span><span class="tr"><span class="tf" style="width:3%"></span></span><span class="vv">71</span></div>
+      <div class="tb"><span class="nm">potenzzia.com</span><span class="tr"><span class="tf" style="width:2%"></span></span><span class="vv">62</span></div>
+      <div class="tb"><span class="nm"><b>beatscode.co</b></span><span class="tr"><span class="tf d" style="width:0.5%"></span></span><span class="vv">0</span></div>
+    </div>
+
+    <h3 style="margin-top:44px;">Mercado colombiano</h3>
+    <div style="margin-top:22px;">
+      <div class="tb"><span class="nm">zapia.com</span><span class="tr"><span class="tf" style="width:100%"></span></span><span class="vv">1.048</span></div>
+      <div class="tb"><span class="nm">expandlatam.com</span><span class="tr"><span class="tf" style="width:41%"></span></span><span class="vv">432</span></div>
+      <div class="tb"><span class="nm">prolego.co</span><span class="tr"><span class="tf" style="width:19%"></span></span><span class="vv">197</span></div>
+      <div class="tb"><span class="nm">agcseo.com</span><span class="tr"><span class="tf" style="width:14%"></span></span><span class="vv">142</span></div>
+      <div class="tb"><span class="nm"><b>beatscode.co</b></span><span class="tr"><span class="tf d" style="width:0.5%"></span></span><span class="vv">0</span></div>
+    </div>
+
+    <div class="callout" style="margin-top:34px;">
+      <b>El número que traduce esto a dinero.</b> DataForSEO calcula que las 912 visitas mensuales de
+      agenciaia.ai equivalen a <b>4.877 dólares al mes</b> si se compraran en Google Ads. Eso es lo que
+      esa empresa recibe gratis, cada mes, por tener páginas indexables. Beats Code recibe cero por el
+      mismo trabajo de ingeniería, o mejor.
+    </div>
+
+    <h3 style="margin-top:52px;">Qué hacen ellos que Beats Code no hace</h3>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead><tr><th>Práctica</th><th>Quién la usa</th><th>Estado en beatscode.co</th></tr></thead>
+        <tbody>
+          <tr><td class="co">Título que repite la búsqueda exacta</td><td>agenciaia.ai, automaxia.com, agcseo.com, neuroagentes.co</td><td>No, los títulos usan lenguaje de ingeniería</td></tr>
+          <tr><td class="co">Página por país en la dirección o el título</td><td>agenciaia.com.co, neuroagentes.co, agcseo.com con "en Bogotá"</td><td>No, ninguna página menciona país</td></tr>
+          <tr><td class="co">Artículo público de precios</td><td>dinolabs.dev, consolidaciondigital.com, gulupadigital.com, mentoracolombia.com</td><td>No, el precio se entrega solo tras una reunión</td></tr>
+          <tr><td class="co">Ficha de Google Business Profile activa</td><td>Aparecen dos negocios de Bogotá en el paquete local de "agentes de ia"</td><td>No se detectó ficha</td></tr>
+          <tr><td class="co">Páginas internas indexables</td><td>Todos los competidores medidos</td><td>No, por la etiqueta canónica</td></tr>
+          <tr><td class="co">Publicación continua</td><td>mentoracolombia.com, botpress.com, datapath.ai</td><td>Detenida desde julio de 2025</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+
+    <h3 style="margin-top:52px;">Cómo se ve hoy la primera página de Google</h3>
+    <p style="max-width:820px;">
+      Se revisaron dos búsquedas reales en Colombia el 28 de julio de 2026. La diferencia entre ellas
+      define la estrategia.
+    </p>
+
+    <div class="two-col" style="margin-top:24px;">
+      <div class="url-group warn">
+        <h4>"agentes de ia" en Colombia</h4>
+        <p>880 búsquedas al mes. La primera página la ocupan AWS, Google Cloud, IBM, Globant, DataCamp y
+        Databricks, todos con artículos explicativos. Arriba de todo hay un resumen generado por IA que
+        cita a IBM, Google Cloud, NVIDIA, DataCamp, Globant y Databricks.</p>
+        <div class="group-fix"><b>Lectura:</b> quien busca esto quiere entender, no contratar. Competir de
+        frente contra IBM y AWS por este término no es rentable. Pero hay una puerta lateral: en esta misma
+        página aparece un paquete local de Google con dos negocios de Bogotá, y ese espacio se gana con una
+        ficha de empresa, no con autoridad de dominio.</div>
+      </div>
+      <div class="url-group opp">
+        <h4>"agencia de inteligencia artificial" en Colombia</h4>
+        <p>110 búsquedas al mes a 1,06 dólares por clic. Aquí no hay gigantes. Los primeros puestos son
+        agenciaia.ai, automaxia.com, agcseo.com con una página titulada "Agencia de Inteligencia Artificial
+        en Bogotá", agenciadigitalamd.com, neuroagentes.co y agenciaia.com.co.</p>
+        <div class="group-fix"><b>Lectura:</b> este es terreno ganable. Todos los que rankean lo hacen con
+        una página cuyo título repite la búsqueda palabra por palabra. Ninguno tiene la profundidad técnica
+        ni los casos en producción de Beats Code.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 07 LLM (DARK) ================= -->
+<section id="llm" class="dark">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">07 · Visibilidad en inteligencia artificial</span></div>
+    <h2>Cero menciones.<br>De <em class="display-italic">veinte</em> intentos.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px;">
+      Cada vez más decisiones de compra B2B empiezan preguntándole a ChatGPT, Claude, Gemini o Perplexity.
+      Para medir qué pasa cuando eso ocurre, se enviaron cinco preguntas comerciales reales a los cuatro
+      modelos, todos en su versión de mayor capacidad y con búsqueda web activada. La misma pregunta,
+      palabra por palabra, a los cuatro.
+    </p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="callout" style="background:#1A1522; border-color:#33293F; color:#E8DDF7; margin-top:10px;">
+      <div class="eyebrow" style="color:#B79FD6; margin-bottom:16px;">Las cinco preguntas, textuales</div>
+      <ol style="font-family:var(--serif); font-size:18px; line-height:1.75; padding-left:22px; margin:0;">
+        <li>¿Cuáles son las mejores empresas que desarrollan agentes de IA a medida para empresas en Colombia?</li>
+        <li>¿Qué empresa puede implementar un agente de IA conectado a WhatsApp e integrado con mi ERP para mi negocio en Bogotá?</li>
+        <li>¿Qué empresas en Latinoamérica construyen sistemas multi agente con LangGraph y MCP en producción?</li>
+        <li>¿Cuánto cuesta implementar un agente de IA a medida para una empresa en Colombia y quién lo hace?</li>
+        <li>Busco una engineering house que construya agentes de IA en mi propia infraestructura, sin vendor lock-in y con el código a mi nombre. ¿Qué empresas hispanohablantes hacen eso?</li>
+      </ol>
+      <div class="mono" style="font-size:12.5px; color:#B79FD6; margin-top:18px; letter-spacing:.04em;">
+        modelos: gpt-5.6-terra · claude-opus-4-8 · gemini-3.1-pro-preview · sonar-reasoning-pro &nbsp;|&nbsp; búsqueda web activada &nbsp;|&nbsp; 28 de julio de 2026
+      </div>
+    </div>
+
+    <h3 style="margin-top:46px; color:#F4ECFF;">La matriz completa</h3>
+    <div class="mx-wrap">
+      <table class="mx">
+        <thead>
+          <tr><th>Pregunta</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th><th>Perplexity</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>01 · Mejores empresas de agentes de IA en Colombia</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td></tr>
+          <tr><td>02 · Agente de WhatsApp con ERP en Bogotá</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td></tr>
+          <tr><td>03 · LangGraph y MCP en producción en LatAm</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td></tr>
+          <tr><td>04 · Cuánto cuesta un agente de IA en Colombia</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td></tr>
+          <tr><td>05 · Engineering house sin vendor lock-in</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint" style="color:#9C89B8;">Desliza la tabla para ver los cuatro modelos</div>
+
+    <h3 style="margin-top:46px; color:#F4ECFF;">Quiénes sí fueron mencionados</h3>
+    <p style="max-width:820px;">
+      En las 20 respuestas aparecieron alrededor de 60 empresas distintas. Estas son las más repetidas.
+      El número indica en cuántas de las 20 respuestas fue nombrada cada una.
+    </p>
+    <div style="margin-top:24px;">
+      <div class="bar-row"><span class="label">Mentora Colombia</span><span class="bar-bg"><span class="bar-fill" style="width:100%"></span></span><span class="bar-val">4</span></div>
+      <div class="bar-row"><span class="label">Automaxia</span><span class="bar-bg"><span class="bar-fill" style="width:100%"></span></span><span class="bar-val">4</span></div>
+      <div class="bar-row"><span class="label">Bots Colombia</span><span class="bar-bg"><span class="bar-fill" style="width:75%"></span></span><span class="bar-val">3</span></div>
+      <div class="bar-row"><span class="label">Consolidación Digital</span><span class="bar-bg"><span class="bar-fill" style="width:75%"></span></span><span class="bar-val">3</span></div>
+      <div class="bar-row"><span class="label">NeuroAgentes</span><span class="bar-bg"><span class="bar-fill alt" style="width:50%"></span></span><span class="bar-val">2</span></div>
+      <div class="bar-row"><span class="label">Prolego</span><span class="bar-bg"><span class="bar-fill alt" style="width:50%"></span></span><span class="bar-val">2</span></div>
+      <div class="bar-row"><span class="label">DCM System</span><span class="bar-bg"><span class="bar-fill alt" style="width:50%"></span></span><span class="bar-val">2</span></div>
+      <div class="bar-row"><span class="label">SyncManager</span><span class="bar-bg"><span class="bar-fill alt" style="width:50%"></span></span><span class="bar-val">2</span></div>
+      <div class="bar-row"><span class="label">Archgents (Bogotá)</span><span class="bar-bg"><span class="bar-fill alt" style="width:25%"></span></span><span class="bar-val">1</span></div>
+      <div class="bar-row"><span class="label"><b>Beats Code</b></span><span class="bar-bg"><span class="bar-fill" style="width:0.5%; background:#4A3A5E;"></span></span><span class="bar-val">0</span></div>
+    </div>
+
+    <div class="callout warn" style="margin-top:36px; background:#2A1B1B; border-color:#4A2C2C; color:#F6DED8;">
+      <b>El detalle incómodo.</b> Varias de las empresas más citadas no rankean bien en Google. Archgents,
+      de Bogotá, tiene 1 sola keyword posicionada en Colombia y prácticamente cero tráfico orgánico, y aun
+      así ChatGPT la recomienda por su nombre. Esto significa que la visibilidad en IA <b>no requiere años
+      de autoridad de dominio</b>. Se gana con contenido claro, específico y citable. Es una carrera que
+      empieza casi de cero para todos, y que hoy Beats Code no está corriendo.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 08 CATEGORIA VACIA ================= -->
+<section id="categoria">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">08 · El hallazgo principal</span></div>
+    <h2>Hay una categoría vacía<br>y tiene <em class="display-italic">nombre y apellido</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:840px;">
+      La tercera pregunta del test fue: "¿Qué empresas en Latinoamérica construyen sistemas multi agente
+      con LangGraph y MCP en producción?". Es, literalmente, la descripción de Beats Code. Estas fueron
+      las respuestas.
+    </p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="qstack" style="--coral:#8100FF;">
+      <div class="qq" style="background:#F6F1FC; border-left-color:#8100FF;">
+        <p style="color:#2A1B3D;">"Con un criterio estricto, empresa latinoamericana, sistema multi agente, uso explícito de LangGraph y MCP, y evidencia pública de estar en producción, la lista verificable públicamente es hoy muy corta."</p>
+        <cite style="color:#6B21A8;">ChatGPT, gpt-5.6-terra, con búsqueda web. Solo nombró una empresa, brasileña.</cite>
+      </div>
+      <div class="qq" style="background:#F6F1FC; border-left-color:#8100FF;">
+        <p style="color:#2A1B3D;">"No encontré información pública específica y verificable de empresas latinoamericanas concretas, con nombre, que tengan sistemas multi agente con LangGraph y MCP en producción."</p>
+        <cite style="color:#6B21A8;">Claude, claude-opus-4-8, con búsqueda web.</cite>
+      </div>
+      <div class="qq" style="background:#F6F1FC; border-left-color:#8100FF;">
+        <p style="color:#2A1B3D;">"No hay documentación pública que identifique por nombre a empresas de Latinoamérica que usen simultáneamente LangGraph y MCP en sistemas multi agente de producción."</p>
+        <cite style="color:#6B21A8;">Perplexity, sonar-reasoning-pro, con búsqueda web.</cite>
+      </div>
+      <div class="qq" style="background:#F6F1FC; border-left-color:#8100FF;">
+        <p style="color:#2A1B3D;">"No encontré una firma hispanohablante que documente públicamente y de forma inequívoca las tres condiciones a la vez: on-premise o tu infraestructura, cero lock-in y cesión total del código."</p>
+        <cite style="color:#6B21A8;">ChatGPT, gpt-5.6-terra, respondiendo a la quinta pregunta.</cite>
+      </div>
+    </div>
+
+    <div class="callout opp" style="margin-top:36px;">
+      <b>Ahora, la descripción oficial de Beats Code, tomada de su propio sitio:</b>
+      <p style="margin:14px 0 0; font-family:var(--serif); font-size:19px; font-style:italic; line-height:1.55;">
+        "Engineering house que diseña, construye y opera agentes de IA en producción. Código tuyo, sin
+        vendor lock-in. Colombia, México, US."
+      </p>
+      <p style="margin:12px 0 0; font-size:15px;">
+        Y el stack declarado en la portada: <span class="mono">LangGraph, MCP, Claude, Gemini, PostgreSQL con pgvector, LangSmith</span>.
+        Con más de 15 agentes reportados en producción.
+      </p>
+    </div>
+
+    <div class="verdict-card" style="margin-top:34px;">
+      <h3 style="margin-top:0;">Traducido a lenguaje de negocio</h3>
+      <p>
+        Existe una pregunta que compradores sofisticados están haciendo, cuya respuesta correcta es
+        Beats Code, y los cuatro sistemas de IA más usados del mundo responden que esa empresa no existe.
+      </p>
+      <p>
+        No es una posición disputada que haya que arrebatarle a un competidor. Es una posición <b>vacante</b>.
+        Cuando un modelo dice "la lista verificable es muy corta", está anunciando que el primero que
+        publique evidencia pública y verificable ocupa el lugar.
+      </p>
+      <p style="margin-bottom:0;">
+        El costo de ocupar esa posición es publicar lo que ya se sabe. La ingeniería está hecha. Los casos
+        existen. Falta escribirlos de forma que una máquina pueda leerlos, citarlos y atribuirlos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 09 ABC ================= -->
+<section id="abc" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">09 · Escenarios</span></div>
+    <h2>Qué pasaría si se hace<br><em class="display-italic">A, B y C</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px;">
+      Tres niveles de esfuerzo, con lo que cada uno desbloquea. Las proyecciones se construyen sobre los
+      volúmenes de búsqueda medidos y sobre lo que hoy logran competidores comparables, no sobre supuestos
+      optimistas.
+    </p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="scen-grid">
+      <div class="scen">
+        <div class="letter">A</div>
+        <h4>Quitar el freno</h4>
+        <p>
+          Corregir la etiqueta canónica en todas las páginas internas. Enviar el mapa del sitio a Google.
+          Redirigir las nueve páginas rotas. Limpiar las palabras clave heredadas del blog. Reclamar y
+          unificar los perfiles de marca. Abrir una ficha de Google Business Profile en Bogotá.
+        </p>
+        <p><b>Esfuerzo:</b> bajo. Semanas 1 y 2. La mayor parte es trabajo de código de una sola vez.</p>
+        <div class="out">
+          Resultado esperado: pasar de 1 página indexable a las 8 actuales. Elegibilidad para el paquete
+          local de Bogotá, donde hoy aparecen dos competidores. Primeras posiciones de marca limpias en 30 a 45 días.
+        </div>
+      </div>
+
+      <div class="scen">
+        <div class="letter">B</div>
+        <h4>Ocupar el terreno comercial</h4>
+        <p>
+          Crear seis páginas escritas alrededor de búsquedas reales: agencia de inteligencia artificial en
+          Colombia, agencia de IA en España, agentes de IA para empresas, agente de IA para WhatsApp con ERP,
+          automatización con IA, y una página pública de rangos de precios. Reactivar el blog con dos
+          artículos al mes, empezando por los casos en producción.
+        </p>
+        <p><b>Esfuerzo:</b> medio. Meses 1 a 3. Es escritura, no desarrollo.</p>
+        <div class="out">
+          Objetivo alcanzable a 6 meses: entre 150 y 400 visitas orgánicas mensuales, que es el rango en
+          el que hoy están prolego.co con 197 y agenciaautomatiza.com con 138. Equivale a entre 800 y
+          2.000 dólares mensuales de tráfico que no hay que comprar.
+        </div>
+      </div>
+
+      <div class="scen">
+        <div class="letter">C</div>
+        <h4>Ganar la capa de IA</h4>
+        <p>
+          Publicar la evidencia que los modelos dicen que no encuentran: arquitectura de los sistemas en
+          producción, métricas de los casos, comparativas técnicas honestas y documentación pública.
+          Añadir datos estructurados de organización y de preguntas frecuentes. Publicar un archivo de
+          guía para modelos de IA. Conseguir menciones en fuentes que los modelos ya citan.
+        </p>
+        <p><b>Esfuerzo:</b> medio y continuo. Meses 2 a 6.</p>
+        <div class="out">
+          Objetivo: pasar de 0 a al menos 2 de 4 modelos citando la marca en la pregunta sobre LangGraph y
+          MCP en LatAm, que hoy nadie responde. Es la posición más defendible de todo el plan.
+        </div>
+      </div>
+    </div>
+
+    <div class="callout opp" style="margin-top:36px;">
+      <b>El orden importa.</b> Hacer B sin A es escribir páginas que Google no leerá. Hacer C sin B deja
+      la conversión sin destino. A cuesta poco y desbloquea todo lo demás, por eso va primero.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10 ADS ================= -->
+<section id="ads">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">10 · Publicidad pagada</span></div>
+    <h2>Si además quisieran<br>invertir en <em class="display-italic">Google Ads</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px;">
+      El SEO tarda entre tres y seis meses en dar resultado. La publicidad da resultado la misma semana,
+      pero se apaga cuando se deja de pagar. Lo razonable es usar Ads para validar qué mensajes y qué
+      países convierten, mientras el trabajo orgánico madura. Estos son los costos reales.
+    </p>
+
+    <div class="ornament">· · ·</div>
+
+    <h3>Dónde el clic es barato y dónde es caro</h3>
+    <p style="max-width:820px;">
+      Costo por clic reportado por Google para la búsqueda "agentes de IA", y cuántos clics compra un
+      presupuesto de 1.500 dólares al mes en cada país.
+    </p>
+
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead>
+          <tr>
+            <th>Mercado</th>
+            <th class="n">Costo por clic</th>
+            <th class="n">Clics con 1.500 USD</th>
+            <th class="n">Búsquedas / mes</th>
+            <th>Recomendación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hi"><td class="co">Colombia</td><td class="n">5,17 USD</td><td class="n">290</td><td class="n">880</td><td>Empezar aquí. Mejor relación entre volumen, costo y cercanía operativa</td></tr>
+          <tr><td class="co">Argentina</td><td class="n">4,28 USD</td><td class="n">350</td><td class="n">720</td><td>El clic más barato, útil para probar mensajes con poco presupuesto</td></tr>
+          <tr><td class="co">Chile</td><td class="n">5,99 USD</td><td class="n">250</td><td class="n">390</td><td>Mercado pequeño, buen ticket promedio</td></tr>
+          <tr><td class="co">España</td><td class="n">9,78 USD</td><td class="n">153</td><td class="n">1.300</td><td>Mayor volumen y mayor ticket. Segunda fase</td></tr>
+          <tr><td class="co">EE.UU. en español</td><td class="n">12,11 USD</td><td class="n">124</td><td class="n">140</td><td>Competencia bajísima, pero poco volumen. Nicho, no motor</td></tr>
+          <tr class="dim"><td class="co">México</td><td class="n">18,48 USD</td><td class="n">81</td><td class="n">880</td><td>Mismo volumen que Colombia por 3,6 veces el precio. Entrar después</td></tr>
+          <tr class="dim"><td class="co">EE.UU. en inglés</td><td class="n">24,30 a 72,30 USD</td><td class="n">21 a 62</td><td class="n">2.900 a 49.500</td><td>Mercado enorme y muy caro. Requiere presupuesto de otra escala</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+
+    <h3 style="margin-top:48px;">Cuánto costaría cada contacto comercial</h3>
+    <p style="max-width:820px;">
+      Este cuadro divide el costo por clic entre tres tasas de conversión posibles de la página de destino.
+      No son promesas, son escenarios. Se incluyen las tres para que se pueda leer el riesgo completo.
+    </p>
+
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead>
+          <tr>
+            <th>Mercado</th>
+            <th class="n">Costo por clic</th>
+            <th class="n">Si convierte 2 %</th>
+            <th class="n">Si convierte 3 %</th>
+            <th class="n">Si convierte 5 %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hi"><td class="co">Argentina</td><td class="n">4,28</td><td class="n">214 USD</td><td class="n">143 USD</td><td class="n">86 USD</td></tr>
+          <tr class="hi"><td class="co">Colombia</td><td class="n">5,17</td><td class="n">259 USD</td><td class="n">172 USD</td><td class="n">103 USD</td></tr>
+          <tr><td class="co">Chile</td><td class="n">5,99</td><td class="n">300 USD</td><td class="n">200 USD</td><td class="n">120 USD</td></tr>
+          <tr><td class="co">España</td><td class="n">9,78</td><td class="n">489 USD</td><td class="n">326 USD</td><td class="n">196 USD</td></tr>
+          <tr><td class="co">EE.UU. en español</td><td class="n">12,11</td><td class="n">606 USD</td><td class="n">404 USD</td><td class="n">242 USD</td></tr>
+          <tr class="dim"><td class="co">México</td><td class="n">18,48</td><td class="n">924 USD</td><td class="n">616 USD</td><td class="n">370 USD</td></tr>
+          <tr class="dim"><td class="co">EE.UU. "ai agency"</td><td class="n">24,30</td><td class="n">1.215 USD</td><td class="n">810 USD</td><td class="n">486 USD</td></tr>
+          <tr class="dim"><td class="co">EE.UU. "ai development company"</td><td class="n">72,30</td><td class="n">3.615 USD</td><td class="n">2.410 USD</td><td class="n">1.446 USD</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+
+    <div class="callout opp" style="margin-top:30px;">
+      <b>Para poner estas cifras en contexto.</b> Al preguntarle a los modelos cuánto cuesta un agente de IA
+      en Colombia, las respuestas citaron rangos publicados por el propio mercado: entre 2.000 y 5.000 dólares
+      para un agente de una tarea, entre 5.000 y 15.000 para un agente autónomo con varias integraciones, y
+      por encima de 20.000 para sistemas multi agente. Con un contacto comercial costando entre 103 y 259
+      dólares en Colombia, un solo proyecto cerrado paga muchos meses de inversión publicitaria.
+    </div>
+
+    <h3 style="margin-top:48px;">Tres términos por los que sí conviene pujar</h3>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead><tr><th>Búsqueda</th><th>País</th><th class="n">Búsquedas</th><th class="n">Costo por clic</th><th>Por qué</th></tr></thead>
+        <tbody>
+          <tr><td class="co">agencia de inteligencia artificial</td><td>Colombia</td><td class="n">110</td><td class="n">1,06 USD</td><td>Intención de contratar y el clic más barato de toda la tabla</td></tr>
+          <tr><td class="co">agencia de inteligencia artificial</td><td>España</td><td class="n">320</td><td class="n">4,58 USD</td><td>Índice de competencia de 5 sobre 100, casi nadie puja</td></tr>
+          <tr><td class="co">empresas de inteligencia artificial</td><td>EE.UU. en español</td><td class="n">140</td><td class="n">4,46 USD</td><td>Índice de competencia de 3 sobre 100 en el mercado de mayor poder adquisitivo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+
+    <div class="callout warn" style="margin-top:26px;">
+      <b>Y uno por el que no conviene pujar todavía.</b> "Agentes de IA" a secas tiene el mayor volumen,
+      pero la primera página está llena de artículos explicativos de AWS, IBM y Google. La gente que escribe
+      eso está estudiando, no comprando. Pagar 5,17 dólares por ese clic es pagar por curiosidad.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 11 PLAN ================= -->
+<section id="plan" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">11 · Ejecución</span></div>
+    <h2>Los próximos<br><em class="display-italic">noventa días</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:800px;">
+      Ordenado por impacto sobre esfuerzo. Cada bloque tiene una forma concreta de saber si funcionó.
+    </p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="roadmap">
+      <div class="road-col">
+        <div class="dot"></div>
+        <div class="label">Días 1 a 30 · Desbloquear</div>
+        <ul>
+          <li>Corregir la etiqueta canónica en las 8 páginas internas para que cada una se declare a sí misma</li>
+          <li>Generar y enviar el mapa del sitio a Google Search Console</li>
+          <li>Redirigir las 9 páginas rotas hacia su equivalente actual</li>
+          <li>Eliminar las palabras clave heredadas del blog</li>
+          <li>Añadir datos estructurados de organización con el nombre, la ubicación y las redes oficiales</li>
+          <li>Actualizar la biografía de Instagram y reclamar el perfil de empresa en LinkedIn</li>
+          <li>Crear la ficha de Google Business Profile en Bogotá</li>
+          <li>Reducir el peso de la portada para subir el rendimiento de 52 hacia 80</li>
+        </ul>
+        <p class="mono" style="font-size:13px; margin-top:14px; color:var(--coral-dk);">
+          Medición: páginas indexadas en Search Console pasan de 1 a 8
+        </p>
+      </div>
+
+      <div class="road-col">
+        <div class="dot"></div>
+        <div class="label">Días 31 a 60 · Ocupar</div>
+        <ul>
+          <li>Publicar "Agencia de inteligencia artificial en Colombia" con casos, precios y proceso</li>
+          <li>Publicar "Agencia de IA en España" apuntando a las 720 búsquedas mensuales</li>
+          <li>Publicar "Agente de IA para WhatsApp integrado con tu ERP", que es la pregunta 2 del test</li>
+          <li>Publicar la página pública de rangos de precios, que es lo que más citan los modelos</li>
+          <li>Reactivar el blog con el caso de WooCommerce y el de real estate, con métricas reales</li>
+          <li>Lanzar la primera campaña de Google Ads en Colombia con 1.000 a 1.500 dólares mensuales</li>
+        </ul>
+        <p class="mono" style="font-size:13px; margin-top:14px; color:var(--coral-dk);">
+          Medición: primeras impresiones para términos de servicio, no de marca
+        </p>
+      </div>
+
+      <div class="road-col">
+        <div class="dot"></div>
+        <div class="label">Días 61 a 90 · Reclamar</div>
+        <ul>
+          <li>Publicar la nota técnica de arquitectura con LangGraph y MCP en producción, con diagramas</li>
+          <li>Publicar una comparativa honesta entre LangGraph, CrewAI y AutoGen basada en experiencia real</li>
+          <li>Añadir datos estructurados de preguntas frecuentes a las 10 preguntas de la portada</li>
+          <li>Publicar el archivo de guía para modelos de IA en la raíz del dominio</li>
+          <li>Conseguir 5 menciones en fuentes que los modelos ya citan, incluidos directorios verificados</li>
+          <li>Repetir el test de 20 preguntas y comparar contra la línea base de cero</li>
+        </ul>
+        <p class="mono" style="font-size:13px; margin-top:14px; color:var(--coral-dk);">
+          Medición: al menos 1 de 4 modelos cita la marca en la pregunta 3
+        </p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:56px;">Las seis acciones de mayor retorno, si solo se pudieran hacer seis</h3>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead><tr><th class="n">#</th><th>Acción</th><th>Esfuerzo</th><th>Impacto</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td class="n">1</td><td>Corregir la etiqueta canónica en las páginas internas</td><td>1 hora de desarrollo</td><td>Desbloquea todo el sitio</td></tr>
+          <tr class="hi"><td class="n">2</td><td>Crear la ficha de Google Business Profile en Bogotá</td><td>1 hora</td><td>Acceso al paquete local donde ya hay competidores</td></tr>
+          <tr><td class="n">3</td><td>Publicar la página de precios públicos</td><td>1 día</td><td>Es el contenido que más citan los cuatro modelos</td></tr>
+          <tr><td class="n">4</td><td>Publicar "Agencia de inteligencia artificial en Colombia"</td><td>2 días</td><td>Término comercial con clic a 1,06 dólares</td></tr>
+          <tr><td class="n">5</td><td>Escribir la nota técnica de LangGraph y MCP en producción</td><td>3 días</td><td>Reclama la categoría que hoy nadie ocupa</td></tr>
+          <tr><td class="n">6</td><td>Reactivar el blog con dos artículos al mes</td><td>Continuo</td><td>Señal de actividad para Google y para los modelos</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="swipe-hint">Desliza la tabla para ver todas las columnas</div>
+  </div>
+</section>
+
+<!-- ================= 12 ANEXO ================= -->
+<section id="anexo">
+  <div class="wrap narrow" style="padding-left:0; padding-right:0;">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">12 · Anexo</span></div>
+    <h2>Metodología, fuentes<br>y <em class="display-italic">límites</em>.</h2>
+
+    <details class="acc" style="margin-top:30px;">
+      <summary>Fuentes de datos utilizadas</summary>
+      <div>
+        <ul>
+          <li><b>Google Ads Keyword Planner</b> vía DataForSEO. Volúmenes de búsqueda y costo por clic,
+          promedio de los últimos 12 meses, por país y en español. Consultado el 28 de julio de 2026.</li>
+          <li><b>Google Trends</b> vía DataForSEO. Índice de interés relativo por país para "agentes de ia",
+          ventana de 12 meses.</li>
+          <li><b>Semrush</b>. Informe de posiciones del dominio en todas las bases de datos regionales.</li>
+          <li><b>DataForSEO Labs</b>. Keywords posicionadas, competidores en resultados, estimación de
+          tráfico orgánico y valor equivalente en publicidad.</li>
+          <li><b>DataForSEO Backlinks</b>. Perfil completo de enlaces entrantes, dominios de referencia y
+          puntajes de spam.</li>
+          <li><b>DataForSEO OnPage y Lighthouse</b>. Lectura directa del código de cada página, etiquetas,
+          encabezados, canónicas y métricas de rendimiento.</li>
+          <li><b>DataForSEO SERP</b>. Captura de la primera página real de Google en Colombia para dos
+          búsquedas, incluyendo resumen de IA, paquete local y preguntas relacionadas.</li>
+          <li><b>DataForSEO AI Optimization</b>. Respuestas de los cuatro modelos con búsqueda web activada.</li>
+          <li><b>Brave Search</b>. Verificación de la presencia de marca fuera del sitio propio.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Los cinco prompts textuales, para poder reproducir el test</summary>
+      <div>
+        <p>Se enviaron sin modificación alguna a los cuatro modelos, en el mismo orden y el mismo día:</p>
+        <ol>
+          <li>¿Cuáles son las mejores empresas que desarrollan agentes de IA a medida para empresas en Colombia?</li>
+          <li>¿Qué empresa puede implementar un agente de IA conectado a WhatsApp e integrado con mi ERP para mi negocio en Bogotá?</li>
+          <li>¿Qué empresas en Latinoamérica construyen sistemas multi agente con LangGraph y MCP en producción?</li>
+          <li>¿Cuánto cuesta implementar un agente de IA a medida para una empresa en Colombia y quién lo hace?</li>
+          <li>Busco una engineering house que construya agentes de IA en mi propia infraestructura, sin vendor lock-in y con el código a mi nombre. ¿Qué empresas hispanohablantes hacen eso?</li>
+        </ol>
+        <p>Modelos y configuración: <span class="mono">gpt-5.6-terra</span>, <span class="mono">claude-opus-4-8</span>,
+        <span class="mono">gemini-3.1-pro-preview</span> y <span class="mono">sonar-reasoning-pro</span>,
+        todos con búsqueda web habilitada y temperatura por defecto. Fecha de ejecución: 28 de julio de 2026.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Verificación del problema de la etiqueta canónica</summary>
+      <div>
+        <p>Se leyó el código servido de cuatro páginas distintas. En las cuatro, la etiqueta canónica
+        declarada fue <span class="mono">https://beatscode.co/</span>:</p>
+        <ul>
+          <li><span class="mono">/servicios</span></li>
+          <li><span class="mono">/plataforma</span></li>
+          <li><span class="mono">/blog</span></li>
+          <li><span class="mono">/servicios/agentes-a-medida</span></li>
+        </ul>
+        <p>Este comportamiento es consistente con lo que muestran Semrush y DataForSEO: de todas las
+        posiciones registradas, solo una corresponde a una página distinta de la portada, y es
+        <span class="mono">/login</span>.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Límites de este informe</summary>
+      <div>
+        <ul>
+          <li>No se tuvo acceso a Google Search Console ni a Google Analytics del dominio. Las cifras de
+          tráfico son estimaciones de terceros basadas en posiciones y volúmenes, no datos propios. Con
+          acceso a esas herramientas el diagnóstico se puede afinar bastante.</li>
+          <li>Las tasas de conversión usadas en el cuadro de costo por contacto son escenarios, no
+          mediciones. Se presentan tres para mostrar el rango completo.</li>
+          <li>Los volúmenes de búsqueda de Google son promedios redondeados por el propio Google y se
+          agrupan por familias de términos similares.</li>
+          <li>Las respuestas de los modelos de IA varían entre ejecuciones. El resultado de cero menciones
+          sobre veinte es consistente y contundente, pero conviene repetir la medición periódicamente.</li>
+          <li>El estudio se centró en búsqueda en español. El mercado en inglés se incluyó solo como
+          referencia de costo.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Cifras clave y su origen exacto</summary>
+      <div>
+        <ul>
+          <li><b>0 visitas orgánicas:</b> Semrush, informe domain_ranks, columna Organic Traffic, valor 0 en
+          las bases mx, co, br y us.</li>
+          <li><b>6 keywords en Estados Unidos:</b> DataForSEO Labs, ranked keywords, ubicación Estados Unidos,
+          idioma inglés.</li>
+          <li><b>9 visitas mensuales estimadas:</b> suma del tráfico estimado de esas 6 posiciones.</li>
+          <li><b>525 enlaces desde 21 dominios:</b> DataForSEO Backlinks Summary, 28 de julio de 2026.</li>
+          <li><b>912 visitas de agenciaia.ai y 4.877 dólares equivalentes:</b> DataForSEO Labs, estimación de
+          tráfico y de costo publicitario equivalente, ubicación España.</li>
+          <li><b>Rendimiento 52, accesibilidad 96, SEO 100:</b> Lighthouse ejecutado sobre la portada.</li>
+          <li><b>Interés por país:</b> Google Trends, término "agentes de ia", ventana de 12 meses.</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="foot">
+      <p><b>Auditoría de visibilidad de beatscode.co</b><br>
+      Preparada por ThinkFlow Labs · 28 de julio de 2026</p>
+      <p style="margin-top:14px; font-size:13px;">
+        Documento confidencial. Todas las cifras provienen de las fuentes listadas en el anexo y son
+        verificables en la fecha indicada.
+      </p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
