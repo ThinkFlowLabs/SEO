@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Chefpost.com SEO Re-Audit, August 2026</title>
+<meta name="description" content="A full re-run of the May 2026 audit of chefpost.com: GSC and GA4 before/after, verification of every May fix, the identical 20-call flagship LLM citation test, and the next 90-day plan. Prepared by ThinkFlowLabs." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --ink:        #0E1014;
+    --ink-2:      #1F2630;
+    --muted:      #5E6675;
+    --line:       #E6DFD2;
+    --line-2:     #EFE7D8;
+    --cream:      #FBF6EB;
+    --cream-2:    #F4ECD9;
+    --paper:      #FFFBF1;
+    --coral:      #E63946;
+    --coral-dk:   #BC2C2C;
+    --coral-sft:  #FBE3E2;
+    --gold:       #C89A4A;
+    --gold-sft:   #F6E7C7;
+    --green:      #1F7A6A;
+    --green-sft:  #DAEEE7;
+    --amber:      #B45309;
+    --amber-sft:  #FFE9BD;
+    --red-bg:     #FFEBE9;
+
+    --r-sm: 4px; --r-md: 10px; --r-lg: 18px; --r-xl: 26px;
+    --shadow-sm: 0 1px 0 rgba(20,18,12,.06);
+    --shadow-md: 0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --shadow-lg: 0 30px 80px -30px rgba(60,40,18,.36);
+
+    --serif:      "Fraunces", "Times New Roman", serif;
+    --sans:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:       "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--coral-dk); text-decoration: none; border-bottom: 1px solid rgba(188,44,44,.25); }
+  a:hover { border-bottom-color: var(--coral-dk); }
+
+  /* ============ LAYOUT ============ */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); position: relative; }
+  section.alt { background: var(--paper); }
+  section.dark { background: var(--ink); color: #F2EAD7; border-top-color: #2A2520; }
+  section.dark a { color: #FFD8AC; border-bottom-color: rgba(255,216,172,.3); }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.012em; line-height: 1.08; margin: 0; }
+  h1 { font-size: clamp(48px, 8vw, 96px); font-weight: 380; letter-spacing: -.03em; }
+  h2 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 400; letter-spacing: -.022em; }
+  h3 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.18; }
+  h4 { font-size: 19px; font-weight: 600; line-height: 1.3; font-family: var(--sans); letter-spacing: -.005em; }
+  .display-italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 500; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--coral-dk);
+  }
+  p { margin: 0 0 1em; }
+  p.lede { font-size: 21px; line-height: 1.55; color: var(--ink-2); }
+  ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
+  ul li, ol li { margin-bottom: .35em; }
+  strong { font-weight: 600; }
+  .mono { font-family: var(--mono); font-size: .9em; }
+  .small { font-size: 13px; color: var(--muted); }
+
+  /* ============ HERO ============ */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #FBE3E2 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-top: 0;
+    padding: 56px 0 96px;
+    overflow: hidden; position: relative;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%23E63946' opacity='.06'/></svg>");
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; position: relative; }
+  .hero h1 { margin-bottom: .18em; }
+  .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .hero .meta { font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+  .hero .by-line { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-2); margin-top: 36px; font-size: 14px; }
+  .hero .by-line span b { color: var(--ink); font-weight: 600; }
+  .hero-side {
+    background: white; border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 30px; box-shadow: var(--shadow-md);
+    font-size: 14px;
+  }
+  .hero-side h4 { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-family: var(--sans); margin-bottom: 16px; font-weight: 600; }
+  .hero-side dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; }
+  .hero-side dt { color: var(--muted); }
+  .hero-side dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .hero-side .severity-strip { margin: 22px -30px -30px; padding: 18px 30px; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); color: white; border-radius: 0 0 var(--r-lg) var(--r-lg); display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ TLDR (Executive Summary) ============ */
+  .tldr { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; }
+  .tldr h2 em { font-style: italic; color: var(--coral); font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .tldr-bullets { font-size: 17px; line-height: 1.6; }
+  .tldr-bullets li { margin-bottom: 16px; padding-left: 4px; }
+  .tldr-bullets li::marker { color: var(--coral); }
+  .verdict-card {
+    background: var(--ink); color: #F2EAD7;
+    border-radius: var(--r-lg); padding: 36px;
+    position: sticky; top: 24px;
+  }
+  .verdict-card h4 { color: #F6E7C7; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; font-weight: 500; }
+  .verdict-card p { font-size: 15px; line-height: 1.65; color: #D8CDB5; }
+  .verdict-card .score-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--mono); font-size: 12px; }
+  .verdict-card .score-row b { color: white; font-size: 18px; }
+  @media (max-width: 820px) { .tldr { grid-template-columns: 1fr; } .verdict-card { position: static; } }
+
+  /* ============ KPI GRID ============ */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 22px 18px; position: relative; overflow: hidden;
+  }
+  .kpi-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+  .kpi-value small { font-size: 17px; color: var(--muted); margin-left: 4px; font-family: var(--sans); font-weight: 500; }
+  .kpi-trend { font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+  .kpi-trend.up { color: var(--green); }
+  .kpi-trend.dn { color: var(--coral-dk); }
+  .kpi.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; } .kpi-value { font-size: 36px; } }
+
+  /* ============ FINDINGS CARDS ============ */
+  .findings { display: grid; gap: 24px; }
+  .finding {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 36px; display: grid; grid-template-columns: 88px 1fr; gap: 28px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+  }
+  .finding .num {
+    font-family: var(--serif); font-size: 78px; font-weight: 400; line-height: 1; color: var(--coral); letter-spacing: -.04em; opacity: .9;
+  }
+  .finding h3 { margin-bottom: 8px; }
+  .finding .impact-line { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; font-family: var(--mono); letter-spacing: .02em; }
+  .finding p { font-size: 16px; }
+  .finding .fix {
+    background: var(--cream-2); padding: 18px 22px; border-radius: var(--r-md);
+    margin-top: 18px; border-left: 3px solid var(--coral); font-size: 15.5px;
+  }
+  .finding .fix b { color: var(--ink); }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+  }
+  .badge.crit { background: var(--coral); color: white; }
+  .badge.high { background: var(--amber-sft); color: var(--amber); }
+  .badge.med { background: var(--gold-sft); color: var(--gold); }
+  .badge.opp { background: var(--green-sft); color: var(--green); }
+  .badge.brand { background: var(--ink); color: var(--cream); }
+  @media (max-width: 820px) {
+    .finding { grid-template-columns: 1fr; padding: 26px; }
+    .finding .num { font-size: 56px; }
+  }
+
+  /* ============ DATA TABLES ============ */
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14.5px;
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  }
+  th { text-align: left; font-weight: 600; padding: 14px 16px; background: var(--cream-2); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  td.kw { font-weight: 500; }
+  td .badge { font-size: 10px; padding: 3px 8px; }
+
+  .table-scroll { overflow-x: auto; }
+
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #F4C7C5; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
+  /* ============ PILLS / CALLOUTS ============ */
+  .callout {
+    background: var(--coral-sft); border: 1px solid #F4C7C5;
+    border-radius: var(--r-md); padding: 22px 26px;
+    font-size: 15.5px; color: var(--coral-dk); margin: 24px 0;
+  }
+  .callout.opp { background: var(--green-sft); border-color: #BFE0D6; color: #135548; }
+  .callout.warn { background: var(--amber-sft); border-color: #F2D5A0; color: var(--amber); }
+  .callout strong { color: inherit; }
+
+  /* ============ TWO-COL ============ */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ============ HIERARCHY CARDS ============ */
+  .page-card {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+  .page-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .page-card-head h4 { font-family: var(--mono); font-size: 14px; color: var(--ink); letter-spacing: 0; word-break: break-all; }
+  .pc-issues { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pc-issue { font-size: 11.5px; padding: 3px 9px; border-radius: 4px; background: var(--coral-sft); color: var(--coral-dk); font-weight: 600; }
+  .pc-issue.ok { background: var(--green-sft); color: var(--green); }
+  .pc-issue.warn { background: var(--amber-sft); color: var(--amber); }
+
+  /* ============ ROADMAP ============ */
+  .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .road-col {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 28px;
+  }
+  .road-col .label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 12.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--coral-dk); margin-bottom: 6px; }
+  .road-col .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--coral); }
+  .road-col h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 18px; }
+  .road-col ul { list-style: none; padding: 0; }
+  .road-col li { padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .road-col li:last-child { border-bottom: 0; }
+  .road-col li .check { width: 18px; height: 18px; border: 1.5px solid var(--line); border-radius: 4px; margin-top: 2px; }
+  .road-col li .pri { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; align-self: start; }
+  @media (max-width: 1000px) { .roadmap { grid-template-columns: 1fr; } }
+
+  /* ============ SCHEMA SNIPPETS ============ */
+  pre.code {
+    background: #1A1F26; color: #DCD0AE; padding: 22px 26px;
+    border-radius: var(--r-md); font-family: var(--mono); font-size: 13px;
+    overflow-x: auto; line-height: 1.55; margin: 18px 0;
+  }
+  .code .k { color: #FFD89B; }
+  .code .s { color: #B5DCC7; }
+  .code .c { color: #6E6452; font-style: italic; }
+
+  /* ============ FOOTER ============ */
+  footer { padding: 56px 0 36px; background: var(--ink); color: #BAB099; text-align: center; }
+  footer .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 28px; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  footer .small { color: #76705F; }
+
+  /* ============ STICKY NAV ============ */
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 246, 235, 0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  .topnav .inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .topnav a { color: var(--ink); border-bottom: 0; font-size: 13px; font-weight: 500; }
+  .topnav .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 20px; font-variation-settings: "SOFT" 100, "WONK" 1; border: 0; }
+  .topnav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .topnav nav { display: none; } }
+
+  /* ============ HORIZONTAL BAR CHART ============ */
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 80px; gap: 14px; align-items: center; padding: 8px 0; font-size: 14px; }
+  .bar-bg { height: 22px; background: var(--cream-2); border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); }
+  .bar-fill.alt { background: linear-gradient(90deg, var(--gold) 0%, #A77F35 100%); }
+  .bar-fill.green { background: linear-gradient(90deg, #2C9D8B 0%, var(--green) 100%); }
+  .bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; text-align: right; color: var(--ink-2); }
+  @media (max-width: 600px) { .bar-row { grid-template-columns: 120px 1fr 60px; font-size: 13px; } }
+
+  /* ============ DIVIDERS ============ */
+  .ornament { text-align: center; margin: 48px 0; color: var(--coral); font-family: var(--serif); font-size: 22px; letter-spacing: .4em; opacity: .7; }
+  .section-eyebrow { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .section-eyebrow .bar { width: 36px; height: 1px; background: var(--coral); }
+
+  /* ============ MISC ============ */
+  .quote {
+    border-left: 3px solid var(--coral); padding: 12px 0 12px 26px;
+    font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink-2);
+    font-style: italic; margin: 28px 0;
+  }
+  .quote cite { display: block; margin-top: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: normal; letter-spacing: .04em; }
+
+  details.acc { background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 22px; margin-bottom: 10px; }
+  details.acc summary { cursor: pointer; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.acc summary::after { content: "+"; font-family: var(--serif); font-size: 22px; color: var(--coral); }
+  details.acc[open] summary::after { content: "−"; }
+  details.acc[open] { box-shadow: var(--shadow-md); }
+  details.acc .body { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: white; }
+    section { padding: 28px 0; page-break-inside: avoid; }
+    .topnav, .hero::before { display: none; }
+    .finding, .road-col, table { box-shadow: none; }
+    a { color: var(--ink); }
+  }
+
+/* Aug 2026 re-audit overrides */
+section.dark table { background: transparent; }
+section.dark table td, section.dark table th { color: #D8CDB5; }
+.bar-fill { display: block; }
+</style>
+</head>
+<body>
+<!-- =================== STICKY NAV =================== -->
+<div class="topnav">
+  <div class="wrap inner">
+    <a href="#top" class="mark">chefpost · seo re-audit · aug 2026</a>
+    <nav>
+      <a href="#tldr">Summary</a>
+      <a href="#scoreboard">Scoreboard</a>
+      <a href="#traffic">Traffic</a>
+      <a href="#critical">Critical</a>
+      <a href="#quickwins">Quick Wins</a>
+      <a href="#catalog">URL Catalog</a>
+      <a href="#keywords">Keywords</a>
+      <a href="#backlinks">Backlinks</a>
+      <a href="#llm">AI/LLM</a>
+      <a href="#roadmap">90-Day Plan</a>
+    </nav>
+  </div>
+</div>
+
+<!-- =================== HERO =================== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="meta">SEO RE-AUDIT &amp; PROGRESS VERDICT &nbsp;·&nbsp; CONFIDENTIAL</div>
+      <h1>66 days later:<br>did the work<br><em>work?</em></h1>
+      <p class="lede" style="margin-top:32px; max-width:620px;">
+        In May we audited <strong>chefpost.com</strong> and prescribed a rebuild: fix the canonicals, ship real schema, build city and money pages, and go after AI visibility. In July, 40 landing pages went live. This report re-runs the entire May methodology, GSC, GA4, Semrush, DataForSEO, a live Playwright crawl, and the identical 20-call flagship LLM test, to answer one question honestly: what worked, what has not worked yet, and what to do next.
+      </p>
+      <div class="by-line">
+        <span>Prepared by <b>ThinkFlowLabs</b></span>
+        <span>·</span>
+        <span>Issued <b>August 3, 2026</b></span>
+        <span>·</span>
+        <span>Data window <b>May 2 to Aug 1 2026 (GSC) · Jan 1 to Aug 3 2026 (GA4)</b></span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h4>AT-A-GLANCE · AUG 3 vs MAY 29</h4>
+      <dl>
+        <dt>LLM citations (same 5×4 grid)</dt><dd>6 of 20 · was 1</dd>
+        <dt>Ranked keywords (Semrush US)</dt><dd>418 · was ~169 in Jul</dd>
+        <dt>New pages live &amp; serving</dt><dd>38 of 40</dd>
+        <dt>New-page impressions (2.5 wks)</dt><dd>4,226</dd>
+        <dt>Cost guide avg position</dt><dd>6.75</dd>
+        <dt>Site health (Semrush)</dt><dd>82 · was 80</dd>
+        <dt>Authority Score</dt><dd>16 · flat</dd>
+        <dt>Referring domains</dt><dd>207 · flat</dd>
+        <dt>GSC clicks/day</dt><dd>7.6 · was 6.4</dd>
+        <dt>GA4 key events configured</dt><dd>0</dd>
+      </dl>
+      <div class="severity-strip">
+        <span>Overall verdict</span>
+        <span>🟡 Working, needs fuel</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- =================== 01 EXEC SUMMARY =================== -->
+<section id="tldr" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">01 · Executive Summary</span>
+    </div>
+    <div class="tldr">
+      <div>
+        <h2>The verdict in <em class="display-italic">60 seconds</em>.</h2>
+        <p class="lede" style="margin-top:24px;">
+          The July rebuild did exactly what a launch is supposed to do in its first three weeks: every technical bug from May is fixed, 38 of 40 pages are indexed and earning impressions, and AI assistants now recommend Chefpost six times out of twenty where they used to say its name once. What has not moved yet is clicks, and the reasons are no longer on-page.
+        </p>
+        <ol class="tldr-bullets" style="margin-top:24px;">
+          <li><strong>Every May-critical bug is verifiably fixed.</strong> Blog posts self-canonical, the homepage and /filter carry keyword H1s, all 40 new pages emit five valid JSON-LD blocks (169 of 169 items validate, invalid schema went 38 to 0), and dev./booking. subdomains are gone from DNS entirely.</li>
+          <li><strong>AI search flipped first.</strong> The identical 5-prompt × 4-model test scored <strong>6 of 20</strong> citations, versus 1 of 20 in May, and every cited URL is a July page: the Miami page, the cost guide, the Hamptons page, the yacht page. The 90-day target was 3.</li>
+          <li><strong>Google is serving the pages but not yet paying them.</strong> The cost guide sits at position 6.75 with 2,659 impressions, and neighborhoods rank top-10, but total clicks are 7.6/day vs 6.4 pre-launch. Non-brand CTR is 0.12%; brand still carries 86% of clicks.</li>
+          <li><strong>The bottleneck moved from content to authority and measurement.</strong> Referring domains are flat at 207 (the only new links are spam shorteners), Authority Score is stuck at 16 vs takeachef's 43, there is still no local-pack presence, and GA4 has <strong>zero key events configured</strong>, so none of this can be tied to bookings yet.</li>
+          <li><strong>The next 90 days are about fuel, not pages:</strong> conversion tracking, host consolidation, two cannibalization merges, GBP execution, the seasonal cluster before Sept 1, and a real link program. Each is specified below.</li>
+        </ol>
+      </div>
+      <div class="verdict-card">
+        <h4>Our verdict</h4>
+        <p>The May diagnosis was correct and the July prescription is taking effect in the right order: technical first, indexation second, AI citations third, rankings currently in the volatile entry phase, clicks last. Nothing in the new data says the strategy is wrong; everything says it is under-fueled.</p>
+        <p style="margin-top:12px;">Three things now decide whether this compounds or stalls: <strong>links</strong> (207 flat referring domains cannot hold positions 11 to 48 against a 2,486-domain leader), <strong>the local pack</strong> (the Miami money SERPs are won in Maps, where Chefpost still does not appear), and <strong>measurement</strong> (zero GA4 key events means zero provable ROI).</p>
+        <p style="margin-top:12px;"><strong>Confidence:</strong> high on the direction, moderate on the timeline. Rankings 2 to 4 weeks post-launch are violently volatile; the three data sources in this report disagree about individual positions but agree on every structural conclusion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 02 SCOREBOARD =================== -->
+<section id="scoreboard">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">02 · The Before / After Scoreboard</span>
+    </div>
+    <h2>What May flagged,<br>and what August <em class="display-italic">measures</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Every headline diagnosis from the May 29 report, re-tested with the same tools on August 2 and 3. Fixed means verified in production by a live crawl, not assumed from a commit.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>May 2026 finding</th><th>Status Aug 3</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td>Blog posts canonical to /blog/ (killing a 44k-impression post)</td><td><span class="badge opp">FIXED</span></td><td>Live crawl: the anti-inflammatory post now self-canonicals.</td></tr>
+        <tr><td>9 of 12 templates with no H1</td><td><span class="badge opp">FIXED</span></td><td>Homepage leads with visually-hidden "Vetted personal chefs cooking in your home."; /filter, /faq, /contact-us carry keyword H1s. Blog template still missing its H1 (see catalog).</td></tr>
+        <tr><td>Zero schema.org anywhere on the site</td><td><span class="badge opp">FIXED</span></td><td>All 40 new pages emit 5 JSON-LD blocks; Semrush markups score 100 (+24), invalid items 38 → 0. Legacy pages (/filter, blog, /meal-prep) still bare.</td></tr>
+        <tr><td>dev. / booking. subdomains indexed (security + duplication)</td><td><span class="badge opp">FIXED</span></td><td>Both NXDOMAIN, verified in-browser and via DNS.</td></tr>
+        <tr><td>No city or money pages (Miami demand landing on /filter at pos ~33)</td><td><span class="badge opp">SHIPPED</span></td><td>40 pages live Jul 15: 18 cities, 12 neighborhoods, 2 service pillars, cost guide, yacht, sushi, experiences, Spanish Miami.</td></tr>
+        <tr><td>1 of 20 LLM citations</td><td><span class="badge opp">6 OF 20</span></td><td>Identical prompts and models, Aug 3. Target was 3+.</td></tr>
+        <tr><td>Placeholder GA4 G-12345HHDSD polluting analytics</td><td><span class="badge crit">STILL BROKEN</span></td><td>Still fires on the homepage via GTM-WZV66CS, alongside the real G-41JH1G30DC.</td></tr>
+        <tr><td>http:// and www. hosts holding ~20% of clicks</td><td><span class="badge high">STILL LEAKING</span></td><td>17% of 3-month clicks: http homepage alone 71 clicks / 13,788 impressions at pos 4.0.</td></tr>
+        <tr><td>Mobile LCP 6.1s, Perf 0.65</td><td><span class="badge high">UNCHANGED</span></td><td>Homepage Perf 0.64, LCP 6.3s (Aug 3). The new landing template is healthy: /private-chef-miami Perf 0.79, LCP 2.4s.</td></tr>
+        <tr><td>Authority Score 17, weak link profile</td><td><span class="badge crit">FLAT</span></td><td>AS 16, 207 referring domains (-3 since Jul); the only new links are URL-shortener spam, score 50-65.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout opp" style="margin-top:28px;">
+      <b>Scoreboard read:</b> everything the dev team and this engagement could ship on-page has shipped and verifies clean. Both remaining reds (authority, measurement) and both ambers (host consolidation, homepage performance) live outside the page templates: GTM, DNS/server config, GBP, and outreach.
+    </div>
+  </div>
+</section>
+
+<!-- =================== 03 TRAFFIC REALITY =================== -->
+<section id="traffic" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">03 · Traffic Reality · GSC × GA4</span>
+    </div>
+    <h2>Impressions arrived.<br>Clicks are still <em class="display-italic">loading</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">Last-3-months Search Console (May 2 to Aug 1) crossed with GA4 year-to-date. The launch is 2.5 weeks old in this window; page-level numbers below are effectively 18 days of life.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Clicks/day · post-launch</div>
+        <div class="kpi-value">7.6</div>
+        <div class="kpi-trend up">↑ from 6.4 pre-launch</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Clicks/day · same window 2025</div>
+        <div class="kpi-value">8.0</div>
+        <div class="kpi-trend dn">still below last year</div>
+      </div>
+      <div class="kpi cta">
+        <div class="kpi-label">New-page impressions</div>
+        <div class="kpi-value">4,226</div>
+        <div class="kpi-trend up">38 of 40 pages serving</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Cost guide position</div>
+        <div class="kpi-value">6.75</div>
+        <div class="kpi-trend up">2,659 imps in 18 days</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Brand share of clicks</div>
+        <div class="kpi-value">86<small>%</small></div>
+        <div class="kpi-trend dn">was 79.5% in June</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Non-brand CTR</div>
+        <div class="kpi-value">0.12<small>%</small></div>
+        <div class="kpi-trend dn">44,180 imps → 53 clicks</div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:36px;">
+      <div>
+        <h3>Where the new pages landed (18 days in)</h3>
+        <div class="table-scroll">
+        <table>
+          <thead><tr><th>Page</th><th>Imps</th><th>Pos</th><th>Clicks</th></tr></thead>
+          <tbody>
+            <tr><td><code class="mono">/private-chef-cost</code></td><td>2,659</td><td>6.75</td><td>8</td></tr>
+            <tr><td><code class="mono">/private-chef-miami</code></td><td>473</td><td>33.4</td><td>2</td></tr>
+            <tr><td><code class="mono">/sushi-chef-at-home</code></td><td>143</td><td>7.85</td><td>3</td></tr>
+            <tr><td><code class="mono">/private-chef-atlanta</code></td><td>132</td><td>27.5</td><td>0</td></tr>
+            <tr><td><code class="mono">/private-chef-fort-lauderdale</code></td><td>89</td><td>28.1</td><td>0</td></tr>
+            <tr><td><code class="mono">/private-chef-coconut-grove</code></td><td>76</td><td>9.2</td><td>0</td></tr>
+            <tr><td><code class="mono">/private-chef-hamptons</code></td><td>65</td><td>13.7</td><td>2</td></tr>
+            <tr><td><code class="mono">/private-chef-boca-raton</code></td><td>56</td><td>8.1</td><td>1</td></tr>
+            <tr><td><code class="mono">/private-chef-services</code></td><td>48</td><td>32.7</td><td>0</td></tr>
+            <tr><td>29 more pages</td><td>485</td><td>4 to 49</td><td>3</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="small" style="margin-top:10px;">Neighborhood pages prove the authority-layer thesis: Brickell pos 2.3, Key Biscayne 5.0, Sunny Isles 5.1, Bal Harbour 5.3, Aventura 6.6, on single-digit impressions. They rank; there is simply little to win there, exactly as scoped.</p>
+      </div>
+      <div>
+        <h3>GA4 cross-check (Jan 1 to Aug 3)</h3>
+        <div class="table-scroll">
+        <table>
+          <thead><tr><th>Channel</th><th>Sessions</th><th>Engaged</th></tr></thead>
+          <tbody>
+            <tr><td>Direct</td><td>8,400</td><td>31%</td></tr>
+            <tr><td><strong>Organic Search</strong></td><td><strong>3,944</strong></td><td><strong>56%</strong></td></tr>
+            <tr><td>Referral</td><td>1,616</td><td>74%</td></tr>
+            <tr><td>Organic Social</td><td>1,525</td><td>65%</td></tr>
+            <tr><td>Paid Social</td><td>338</td><td>59%</td></tr>
+            <tr><td>AI Assistant</td><td>58</td><td>69%</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="callout warn" style="margin-top:16px;">
+          <b>Key events: 0. On every channel.</b> GA4 has no conversions defined, so 3,944 organic sessions produce exactly zero measurable business outcomes. Until quote requests, chef contacts, WhatsApp taps and booking starts are marked as key events, the SEO program cannot prove or disprove its own ROI. This is finding #1 in the next section.
+        </div>
+        <p class="small" style="margin-top:12px;">Note the <strong>AI Assistant</strong> channel already exists in GA4: 58 sessions at 69% engagement, small but the most engaged acquisition source after referral, and consistent with the 6-of-20 citation result. This channel is the leading indicator to watch monthly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 04 CRITICAL FINDINGS =================== -->
+<section id="critical">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">04 · The 5 Critical Findings · August Edition</span>
+    </div>
+    <h2>Five things stand between<br>impressions and <em class="display-italic">bookings</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">The May list was about broken pages. This list is about a working site that is unmeasured, under-linked, self-competing, invisible in Maps, and squeezed by AI Overviews.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="findings">
+
+      <div class="finding">
+        <div class="num">1</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · MEASUREMENT</span></div>
+          <h3>The program is flying blind: zero key events, and a fake GA4 property still collecting.</h3>
+          <p class="impact-line">Impact: no conversion data on 15,800+ YTD sessions; every SEO decision from here is unprovable.</p>
+          <p>GA4 property G-41JH1G30DC records zero key events across all channels year-to-date. Simultaneously, the placeholder property <code class="mono">G-12345HHDSD</code>, flagged in May, still fires on the homepage through GTM-WZV66CS next to the real tag, splitting hits into a dead property. Semrush independently reports the site audit's GA connection as NOT_CONNECTED.</p>
+          <div class="fix"><b>Fix:</b> In GTM: delete the placeholder gtag destination. In GA4: define 4 key events, <code class="mono">chef_contact</code> (profile contact/quote), <code class="mono">filter_engaged</code> (filter search with location), <code class="mono">whatsapp_click</code> (wa.me tap), <code class="mono">booking_start</code>. Half a day of work; it turns every other number in this report into revenue math.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">2</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge crit">CRITICAL · AUTHORITY</span></div>
+          <h3>The link profile did not move, and what did move is spam.</h3>
+          <p class="impact-line">Impact: pages enter at positions 11 to 48 and stall; the leader holds 2,486 referring domains to Chefpost's 207.</p>
+          <p>Since July: referring domains 210 → 207 (Semrush), and every link DataForSEO logged in June-August is a URL shortener or scraper with spam score 50 to 65. Only five linking domains have authority 50+. Meanwhile the SERPs the new pages entered are cheap to win, "how much does a private chef cost" top-10 pages average 1.8 referring domains, "private chef miami" just 1.7, which is precisely why a real link program has outsized returns here.</p>
+          <div class="fix"><b>Fix:</b> Run the 4-tier program in section 08: citations first (Yelp, Bing, Apple, chambers), then STR/yacht/wedding partnerships, then digital PR anchored on a proprietary-stats page. 90-day goal: +30 to +40 real referring domains, AS 16 → 20.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">3</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · CANNIBALIZATION</span></div>
+          <h3>Chefpost is its own strongest competitor on its two best clusters.</h3>
+          <p class="impact-line">Impact: Miami and cost, the two highest-value clusters, each split signals across 2 to 3 URLs.</p>
+          <p><strong>Miami:</strong> the old blog guide ranks pos ~13 for "private chefs miami" while <code class="mono">/private-chef-miami</code> sits at pos 33; /filter also ranks for Miami intent. Semrush tracking shows the symptom: "miami private chef" fell 14 → 37 while "private chef miami fl" entered at 32, classic URL-flip churn. <strong>Cost:</strong> the old post <code class="mono">/blog/how-much-is-a-personal-chef-less-than-you-think</code> still ranks pos 24-35 on the 3,600-volume cluster that <code class="mono">/private-chef-cost</code> (pos 6.75 in GSC) is built for.</p>
+          <div class="fix"><b>Fix:</b> 301 the old cost post into /private-chef-cost. In Sanity, edit the Miami blog guide to link prominently to /private-chef-miami (and reference it as the canonical resource). Add /private-chef-miami links from homepage and footer Miami mentions. Do not delete the blog guide; repoint its equity.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">4</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge high">HIGH · LOCAL</span></div>
+          <h3>The money SERPs are won in the map pack, where Chefpost still is not.</h3>
+          <p class="impact-line">Impact: "private chef near me" + "personal chef near me" = 16,200 monthly searches at KD 1, served by a pack Chefpost never enters.</p>
+          <p>Live SERP checks confirm: Miami, services and near-me queries lead with a local 3-pack above organic #1. Chefpost's GBP (5.0 stars, 72 reviews) has the thinnest category set in the market, 36 of 37 services with empty descriptions, a description naming zero cities, ~0.7 reviews/month velocity, and zero reviews mentioning a service or city. Competitors rank in the pack from twice the distance with fewer reviews. The full paste-ready punch list already exists (GBP-8-PROMPT-STACK-JUL2026.md) and management access was granted Jul 27.</p>
+          <div class="fix"><b>Fix:</b> Execute the GBP doc: description v3, 12 service texts, categories (+Service establishment, +Catering food and drink supplier, +Food and beverage consultant), onsite-services attribute, weekly posts, and a review-request flow that prompts city + service mentions. No new research needed; it is written and waiting.</div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">5</div>
+        <div>
+          <div style="margin-bottom:6px;"><span class="badge med">STRUCTURAL · CTR</span></div>
+          <h3>AI Overviews are absorbing the clicks the cost cluster earns, and legacy hosts leak the rest.</h3>
+          <p class="impact-line">Impact: position 6.75 with 0.3% CTR on the cost guide; 17% of all clicks still landing on http:// and www. URLs.</p>
+          <p>The cost and sushi SERPs open with an AI Overview; "how much does a private chef cost" at position 8.8 yields zero clicks in GSC. That makes AEO the economically correct answer, and it is already working: GPT-5.5 quotes the cost guide's prices verbatim. Separately, the http:// homepage still collects 71 clicks / 13,788 impressions at position 4.0, and www. chef profiles (francesco-nyc: 22 clicks) rank on the wrong host, signals split four ways since May.</p>
+          <div class="fix"><b>Fix:</b> Server-level 301s: http → https and www → apex, one redirect rule each. Keep dollar figures in the first screen of every money page (they are what every LLM quoted). Sharpen titles on pos-6-to-15 pages toward click-worthy formats ("2026 Price Guide" is already the cited pattern).</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== 05 QUICK WINS =================== -->
+<section id="quickwins" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">05 · Quick Wins · next 2 weeks</span>
+    </div>
+    <h2>Twelve fixes, none of which<br>require new <em class="display-italic">pages</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>#</th><th>Action</th><th>Owner</th><th>Effort</th><th>Why now</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Delete placeholder GA4 <code class="mono">G-12345HHDSD</code> from GTM</td><td>Dev/TFL</td><td>15 min</td><td>Stops polluting analytics; May leftover</td></tr>
+        <tr><td>2</td><td>Define 4 GA4 key events (chef_contact, filter_engaged, whatsapp_click, booking_start)</td><td>TFL</td><td>3 h</td><td>Turns sessions into provable ROI</td></tr>
+        <tr><td>3</td><td>Server 301s: http → https, www → apex</td><td>Dev</td><td>1 h</td><td>Reclaims 17% of clicks onto canonical host</td></tr>
+        <tr><td>4</td><td>301 old cost blog post → /private-chef-cost</td><td>Dev</td><td>30 min</td><td>Ends cost-cluster cannibalization</td></tr>
+        <tr><td>5</td><td>Edit Sanity Miami blog guide to link /private-chef-miami</td><td>TFL/Diana</td><td>30 min</td><td>Swaps the ranking URL to the money page</td></tr>
+        <tr><td>6</td><td>/cooking-classes: build a minimal real page or noindex + unlink</td><td>Diana + Dev</td><td>2 h</td><td>Sitewide links point at an indexable stub</td></tr>
+        <tr><td>7</td><td>Add FAQPage + Service schema to /filter and /meal-prep</td><td>Dev</td><td>2 h</td><td>Money pages are the last schema-bare URLs</td></tr>
+        <tr><td>8</td><td>Blog template: real H1, Article schema, unique meta descriptions</td><td>Dev</td><td>3 h</td><td>32,421 imps at 0.07% CTR deserve a template fix</td></tr>
+        <tr><td>9</td><td>Sushi page: add "private sushi chef" to title + a per-person price row</td><td>TFL</td><td>30 min</td><td>takeachef wins that SERP with a "$99" price snippet</td></tr>
+        <tr><td>10</td><td>Publish llms.txt + entity About block (sameAs) to split from chefpost.fi</td><td>TFL</td><td>1 h</td><td>Brand disambiguation for AI retrieval</td></tr>
+        <tr><td>11</td><td>Execute the GBP punch list (copy is paste-ready)</td><td>Jimmy/Diana</td><td>2 h</td><td>16,200/mo near-me demand sits in the pack</td></tr>
+        <tr><td>12</td><td>Homepage LCP: preload hero image, defer 4 render-blocking scripts</td><td>Dev</td><td>3 h</td><td>6.3s LCP on the highest-traffic page</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 06 URL CATALOG =================== -->
+<section id="catalog">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">06 · URL × Error × Fix Catalog</span>
+    </div>
+    <h2>The remaining problem surface,<br>URL by <em class="display-italic">URL</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">In May this section was 12 templates deep because everything was broken. In August the new pages pass every check (five schema blocks, single H1s, zero missing alts, 955 to 2,676 words). What remains is the legacy surface and two consolidation moves.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="sub-eyebrow">Host-level</div>
+
+    <div class="url-audit crit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">http://chefpost.com/ + https://www.chefpost.com/*</div>
+          <div class="url-audit-meta">http homepage: 71 clicks · 13,788 imp · pos 4.03 &nbsp;|&nbsp; www profiles: francesco-nyc 22 clicks · 2,431 imp</div>
+        </div>
+        <span class="badge crit">P0 · CONSOLIDATION</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Protocol split</div>
+          <div class="issue-current">The insecure http:// homepage still ranks (pos 4.0) and collects clicks Google attributes to a different URL than the canonical https apex.</div>
+          <div class="issue-fix"><b>Fix:</b> Single server-level rule: 301 all http → https.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">www split</div>
+          <div class="issue-current">Chef profiles (francesco-nyc, Natasha, chef-gina-2, magaly-NYC) rank on www., not the apex; Sonar's NYC answer even pulled the www profile URL as its Chefpost source.</div>
+          <div class="issue-fix"><b>Fix:</b> 301 www → apex. After both rules, request re-crawl of the top affected URLs in GSC.</div>
+        </div>
+        <div class="url-issue ok">
+          <div class="issue-name">Resolved since May</div>
+          <div class="issue-current">dev.chefpost.com and booking.chefpost.com no longer exist in DNS. The June finding of newly-indexed dev URLs is fully closed.</div>
+          <div class="issue-fix">No action. Keep the removals permanent.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-eyebrow">Consolidation moves</div>
+
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">/blog/how-much-is-a-personal-chef-less-than-you-think → /private-chef-cost</div>
+          <div class="url-audit-meta">old post: pos 24-35 on the 3,600-vol cost cluster · new guide: pos 6.75, 2,659 imp, cited by GPT-5.5</div>
+        </div>
+        <span class="badge high">P1 · 301 MERGE</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Two URLs, one intent</div>
+          <div class="issue-current">DataForSEO shows the legacy post outranking the purpose-built guide on parts of the cost cluster while the guide holds the featured positions in GSC, a signal split that caps both.</div>
+          <div class="issue-fix"><b>Fix:</b> 301 the post to /private-chef-cost; port its one unique section (the "less than you think" framing) into the guide as an FAQ.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">/blog/a-local-guide-for-top-private-chefs-in-miami vs /private-chef-miami</div>
+          <div class="url-audit-meta">blog: 6 clicks · 1,299 imp · pos 13.25 &nbsp;|&nbsp; landing: 2 clicks · 473 imp · pos 33.4</div>
+        </div>
+        <span class="badge high">P1 · REPOINT</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Blog outranks the money page</div>
+          <div class="issue-current">The guide holds the Miami ranking the landing page needs; tracking shows churn as Google flips between URLs.</div>
+          <div class="issue-fix"><b>Fix:</b> Keep the guide but make it the landing page's biggest fan: prominent in-content links to /private-chef-miami, plus homepage/footer internal links. GPT-5.5 already cites the landing page; help Google agree.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-eyebrow">Legacy money pages</div>
+
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/filter</div>
+          <div class="url-audit-meta">10 clicks · 7,950 imp · pos 14.2 · the actual booking funnel</div>
+        </div>
+        <span class="badge high">P1</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue ok">
+          <div class="issue-name">H1 (fixed Jul 27)</div>
+          <div class="issue-current">Visually-hidden location-aware H1 confirmed live.</div>
+          <div class="issue-fix">Done.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Zero structured data</div>
+          <div class="issue-current">2,773 words, ranks for "private chef service" intent, emits no JSON-LD at all.</div>
+          <div class="issue-fix"><b>Fix:</b> Add Organization reference + Service + FAQPage (reuse the pillar-page FAQ set).</div>
+        </div>
+        <div class="url-issue warn">
+          <div class="issue-name">Canonical mismatch</div>
+          <div class="issue-current">Canonical points to the trailing-slash variant of the URL it serves on.</div>
+          <div class="issue-fix"><b>Fix:</b> Self-canonical to the exact served URL.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/meal-prep</div>
+          <div class="url-audit-meta">25 clicks · 2,507 imp · pos 21.5 · best-clicking core page after homepage</div>
+        </div>
+        <span class="badge med">P2</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Thin vs the new standard</div>
+          <div class="issue-current">543 words against the 1,000+ standard of the July pages; has a visible FAQ section but no FAQPage schema; canonical has the same trailing-slash mismatch.</div>
+          <div class="issue-fix"><b>Fix:</b> Extend to ~1,200 words with per-week pricing table ("personal chef meal prep" demand is +88% YoY), FAQPage schema, self-canonical. This page is also the natural home for the January anti-inflammatory tie-in.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/cooking-classes</div>
+          <div class="url-audit-meta">"Coming Soon" stub · 72 words · indexable · linked from every landing page footer set</div>
+        </div>
+        <span class="badge med">P2</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue">
+          <div class="issue-name">Indexable stub receiving sitewide links</div>
+          <div class="issue-current">No meta description, no canonical, no H1, no schema. Forty pages link to it as if real.</div>
+          <div class="issue-fix"><b>Fix:</b> Decision for Diana: ship a minimal real page (classes exist as chef services; "cooking classes pembroke pines" already earns clicks) or noindex it and repoint LINK.cookingClasses.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-eyebrow">Blog surface</div>
+
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">/blog/ index + post template</div>
+          <div class="url-audit-meta">cluster: 23 clicks · 32,421 imp · 0.07% CTR · anti-inflammatory post alone 22,830 imp</div>
+        </div>
+        <span class="badge med">P2 · TEMPLATE</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue ok">
+          <div class="issue-name">Canonicals (the May killer)</div>
+          <div class="issue-current">Posts self-canonical now. Verified live.</div>
+          <div class="issue-fix">Done.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Index page has no keywords</div>
+          <div class="issue-current">Title/H1 "Relax and Enjoy", 177 words, 9 console errors on load.</div>
+          <div class="issue-fix"><b>Fix:</b> Title "Private Chef Tips, Menus &amp; Pricing Guides | Chefpost Blog", 300-word intro, fix the console errors.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Post template gaps</div>
+          <div class="issue-current">No H1 (title renders as H2), meta description duplicates the title, 4 of 8 images without alt, no Article schema.</div>
+          <div class="issue-fix"><b>Fix:</b> One template pass: H1, Article + author schema, unique metas, alt text. Then the 22,830-imp post gets a jump-to-plan block and an in-content CTA to /meal-prep (its readers are January's meal-prep buyers).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="url-group opp" style="margin-top:34px;">
+      <h4>Pattern: pricing drift across 38 pages</h4>
+      <p>The client-revised /private-chef-services shows "$50 cocktail pp / $80 private dining pp / $200-350 meal prep"; the other 38 pages still show the older "$65-$150 per guest" system. Same site, two price stories, and LLMs quote both (GPT cited "$65-$150", Sonar cited the Hamptons "$125-$275"). Not a penalty risk, but a brand-trust and AI-consistency risk.</p>
+      <div class="url-list">
+        <span><code>/private-chef-miami</code> <span class="cnt">$65-150</span></span>
+        <span><code>/private-chef-nyc</code> <span class="cnt">$65-150</span></span>
+        <span><code>/private-chef-hamptons</code> <span class="cnt">$125-275</span></span>
+        <span><code>/private-chef-services</code> <span class="cnt">client copy</span></span>
+        <span>+ 34 more city/experience pages</span>
+      </div>
+      <div class="group-fix"><b>Template-level fix:</b> Get Diana's sign-off on one price architecture, then propagate via the shared PRICE source in a single commit. Flagged since Jul 28; highest-risk open content item.</div>
+    </div>
+
+    <div class="url-group" style="margin-top:18px;">
+      <h4>Pattern: /yacht-chef-miami ranks for nothing on Google, and that is fine</h4>
+      <p>Zero ranked keywords in both indexes, but Sonar-Reasoning-Pro cites it with its exact pricing in the yacht answer, and the page exists for 140-vol demand + high-ticket conversion. Judge it on charter inquiries and citations, not rankings.</p>
+      <div class="group-fix"><b>Fix:</b> Add internal links from Miami/Fort Lauderdale pages and the services hub; pitch 2 to 3 yacht-charter partner links (section 08). No content surgery.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 07 KEYWORDS =================== -->
+<section id="keywords" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">07 · Keyword &amp; Content Strategy · what to build next</span>
+    </div>
+    <h2>The next pages, chosen by<br>what August <em class="display-italic">proved</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:780px;">August's evidence: cost-intent pages work (pos 6.75 in 18 days), cuisine pages work (sushi top-10 on two indexes), LLMs cite pages with visible prices, and seasonal AEO windows close early. That selects the next builds.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Build</th><th>Target keywords · vol</th><th>KD</th><th>Evidence it will work</th></tr></thead>
+      <tbody>
+        <tr><td><strong>/hibachi-at-home</strong> (needs Diana's sign-off; removed Jul 14 as off-brand)</td><td>hibachi at home 12,100 + hibachi chef 2,000 cluster</td><td>3</td><td>Largest gap on the board; takeachef monetizes it at #1-5. If still off-brand, skip knowingly, this is the cost of that decision, quantified.</td></tr>
+        <tr><td><strong>/personal-chef-meal-prep-nyc</strong></td><td>private chef meal prep NYC cluster · 1,300+ related</td><td>low</td><td>The only LLM prompt with zero Chefpost presence; cited competitors are small locals. Per-week pricing table = the citation pattern that already works.</td></tr>
+        <tr><td><strong>Seasonal cluster × 18 markets</strong> (Thanksgiving, Christmas/Seven Fishes, NYE, Valentine's)</td><td>"thanksgiving private chef {city}" et al</td><td>low</td><td>Platesfull's leaked brief says publish by Sept 1. Chefs fill 4-6 weeks out; LLMs quote book-by dates verbatim.</td></tr>
+        <tr><td><strong>/kosher-private-chef</strong> (Miami + NYC)</td><td>kosher cluster · takeachef blog ranks #2-4 on 22,200</td><td>low-med</td><td>Strong Miami + NY/NJ market fit; PASF data shows "private chef miami kosher".</td></tr>
+        <tr><td><strong>Chefpost data page</strong> ("What Americans pay private chefs, 2026")</td><td>citation bait, not rankings</td><td>n/a</td><td>takeachef's stats (1,390 Valentine's bookings, 14.72% avg tip) earn its LLM citations. Chefpost's marketplace data can do the same.</td></tr>
+        <tr><td><strong>January wellness meal-prep tie-in</strong></td><td>anti-inflammatory meal plan · 12,745 imps already</td><td>owned</td><td>The blog asset already has the audience; 67% of chefs report anti-inflammatory demand. Route it to /meal-prep with key events live.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout" style="margin-top:26px;">
+      <b>What not to build:</b> more neighborhood pages (they rank on no demand), more generic city pages beyond the 18 markets (Orlando/LA stay 2027 flags), and anything targeting the job-seeker cluster ("private chef positions", 1,600-4,400/mo) which is the wrong side of the marketplace.
+    </div>
+  </div>
+</section>
+
+<!-- =================== 08 BACKLINKS =================== -->
+<section id="backlinks">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">08 · Backlink Strategy · the binding constraint</span>
+    </div>
+    <h2>207 flat domains is now<br>the whole <em class="display-italic">ballgame</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">The pages are built, the schema validates, the AI citations arrived. Positions 11 to 48 harden into page one with links, or decay without them. Four tiers, cheapest first.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="two-col">
+      <div>
+        <h3>Tier 1 · Citations (week 1-2)</h3>
+        <p class="small">Yelp (fix the MB-style contamination risks early), Bing Places, Apple Maps, Nextdoor, Thumbtack, Angi, Greater Miami Chamber, Miami Beach Chamber, Aventura Chamber, USPCA + APPCA directories. 15 to 20 listings, NAP matched to the Aventura GBP.</p>
+        <h3 style="margin-top:22px;">Tier 2 · Partnerships (week 2-6)</h3>
+        <p class="small">The competitor link pattern that actually works in this niche: yacht charter companies (Chefpost already has the yacht page they lack), Airbnb/STR property managers in FL and TX (Yhangry's playbook), wedding planners and venues via PartySlate (Ritz Bal Harbour pattern), real-estate concierge programs. Target: 10 to 15 links, all locally relevant.</p>
+      </div>
+      <div>
+        <h3>Tier 3 · Digital PR (week 4-10)</h3>
+        <p class="small">Anchor asset: the proprietary stats page from section 07. Pitch Ocean Drive, Thrillist Miami, Miami New Times, CNBC/Food&amp;Wine private-chef trend coverage, plus HARO/Connectively requests. One strong data story typically returns 10 to 30 referring domains in this market (cozymeal's single linkable asset earned 189).</p>
+        <h3 style="margin-top:22px;">Tier 4 · Ecosystem (ongoing)</h3>
+        <p class="small">Alternatives listicles ("Take a Chef alternatives"), lead-gen roundups that LLMs retrieve, guest essays from founder Diana on marketplace/food-tech blogs, and chef-community mentions. These are the placements Claude-style models lean on, the one model family still at 0 of 5 citations.</p>
+      </div>
+    </div>
+
+    <div class="callout opp" style="margin-top:26px;">
+      <b>90-day target:</b> +30 to 40 real referring domains, Authority Score 16 → 20, and at least 5 links pointing directly at /private-chef-miami, /private-chef-cost and /yacht-chef-miami (deep links, not just homepage).
+    </div>
+  </div>
+</section>
+
+<!-- =================== 09 COMPETITIVE =================== -->
+<section id="competitive" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">09 · Competitive Landscape · what changed since May</span>
+    </div>
+    <h2>Same enemy, plus a new one<br>that fights with <em class="display-italic">AI pages</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Competitor</th><th>AS / ref domains</th><th>Est. traffic</th><th>What they do that wins</th></tr></thead>
+      <tbody>
+        <tr><td><strong>takeachef.com</strong></td><td>43 / 2,486</td><td>~40,800 ETV, 4,836 kws</td><td>607 city pages + a lifestyle blog that earns its LLM citations (menus, how-tos, proprietary stats). #1 or #2 on 4 of the 5 money SERPs; wins the sushi snippet with visible "$99" pricing.</td></tr>
+        <tr><td><strong>platesfull.com</strong> <span class="badge brand">NEW THREAT</span></td><td>rising</td><td>programmatic</td><td>Mass-produced seasonal + cost clusters with heavy FAQ schema; already ChatGPT's primary source for Miami cost queries; its leaked content brief targets Sept 1 publication. Beatable on craft, not on volume.</td></tr>
+        <tr><td>Local pack incumbents (Lavish, tpcemiami, Marina Staver)</td><td>tiny (AS 9-)</td><td>local</td><td>Win Miami money SERPs from the map pack with review velocity and query-matching names, above every organic result.</td></tr>
+        <tr><td>yhangry / miummium / cozymeal</td><td>30 / ~1,250 each</td><td>steady</td><td>Yhangry: $1M+ raise, 50-US-city push, STR partnerships. Cozymeal: content farm + experiences. MiumMium: scale claims.</td></tr>
+        <tr><td>LLM-era entrants (UpChef, Gradito, ChefMaison, CookinGenie)</td><td>small</td><td>small</td><td>Appear repeatedly in AI answers with one sharp differentiator each (0% commission, Michelin-trained, price transparency). The AI answer layer has its own competitive set.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="quote" style="margin-top:28px;">
+      The August LLM test settles the strategic question: AI assistants do not rank authority, they retrieve differentiated, price-transparent, locally-anchored pages. That is a game a 16-AS site can win now, and Chefpost just proved it, going from 1 to 6 citations in 66 days while its Authority Score did not move at all.
+      <cite>ThinkFlowLabs, August 2026</cite>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 10 LLM (DARK) =================== -->
+<section id="llm" class="dark">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow" style="color:#FFD8AC;">10 · AI / LLM Visibility · the re-test</span></div>
+    <h2 style="color:#FFFBF1;">Six citations.<br>Out of <em style="color:#F4A8A2; font-style:italic;">twenty</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:820px; color:#D8CDB5;">Identical test to May 29: the same five prompts, verbatim, to <strong>Claude Sonnet 4.6</strong>, <strong>Gemini 3.1 Pro</strong>, <strong>GPT-5.5</strong> and <strong>Sonar-Reasoning-Pro</strong>, every call with live web search. May result: 1 of 20. August 3 result: <strong>6 of 20</strong>. The 90-day target set in May was 3.</p>
+
+    <div class="ornament" style="color:#76705F;">· · ·</div>
+
+    <div style="background:#11151B; border:1px solid #2C2823; border-radius: 14px; padding: 26px 28px; margin: 26px 0;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:14px;">
+        <h3 style="color:#FFFBF1;">The 5 prompts we sent (verbatim, unchanged from May)</h3>
+        <span class="small" style="color:#76705F; font-family: var(--mono);">user_prompt · web_search=true · same string to all 4 models</span>
+      </div>
+      <ol style="color:#FFE8A8; font-family: var(--serif); font-size: 19px; line-height: 1.7; padding-left: 1.4em; margin: 0;">
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Best private chef booking platform in Miami"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How do I hire a private chef for a dinner party in the Hamptons?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Private chef meal prep service in New York City"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"How much does a private chef cost in Florida?"</span></li>
+        <li style="margin-bottom:6px;"><span style="color:#FFFBF1;">"Yacht chef services in Miami"</span></li>
+      </ol>
+      <p class="small" style="color:#76705F; margin-top: 22px; font-size: 13px;">Keeping the prompt set frozen is the point: it makes the citation rate a comparable monthly KPI. Run 3 is due early September.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 style="color:#FFFBF1;">The 5 × 4 matrix, August 3</h3>
+        <div style="background:#1A1F26; border-radius: 10px; padding: 22px 22px; margin-top: 14px; font-size:13.5px; color:#D8CDB5;">
+          <table style="background:transparent; border:0; color:#D8CDB5;">
+            <thead><tr style="background:transparent;">
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 10px; font-size:11px;">Prompt</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Claude<br>Sonnet 4.6</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Gemini<br>3.1 Pro</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">GPT-5.5</th>
+              <th style="background:transparent; color:#FFD8AC; padding: 8px 4px; font-size:11px; text-align:center;">Sonar<br>R-Pro</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Best platform · Miami</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Dinner party · Hamptons</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Meal prep · NYC</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td></tr>
+              <tr><td style="border-bottom:1px solid #2C2823; padding: 8px 10px;">Cost · Florida</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td><td style="text-align:center; border-bottom:1px solid #2C2823; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td><td style="text-align:center; border-bottom:1px solid #2C2823;">·</td></tr>
+              <tr><td style="padding: 8px 10px;"><strong style="color:#FFFBF1;">Yacht chef · Miami</strong></td><td style="text-align:center;">·</td><td style="text-align:center;">·</td><td style="text-align:center;">·</td><td style="text-align:center; color:#FFE8A8; font-weight:700; font-size:18px;">✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small" style="color:#76705F; margin-top:12px;">Run Aug 3, 2026 via DataForSEO AI Optimization API, ~$0.90 across 20 calls. May matrix for contrast: a single Gemini ✓ on yacht. Note Gemini flipped: lost yacht, gained the Miami head prompt.</p>
+      </div>
+
+      <div>
+        <h3 style="color:#FFFBF1;">Who AI cites, August tally</h3>
+        <p style="color:#D8CDB5; font-size:14.5px; margin-bottom:14px;">Brand mentions across all 20 answers.</p>
+        <div style="background:#1A1F26; border-radius: 10px; padding: 18px 22px; font-size:14px;">
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Take a Chef</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:100%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">9×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#FFFBF1; font-weight:600;">
+            <span>Chefpost</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill green" style="width:67%"></div></div>
+            <span class="bar-val" style="color:#7FD1B9;">6×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Cozymeal</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:56%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">5×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>EverCook</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:56%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">5×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Chef Collin</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:44%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">4×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>Platesfull</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:44%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">4×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>MiumMium</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:44%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">4×</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns: 170px 1fr 40px; color:#D8CDB5;">
+            <span>The Culinistas</span>
+            <div class="bar-bg" style="background:#2C2823;"><div class="bar-fill" style="width:33%"></div></div>
+            <span class="bar-val" style="color:#F4A8A2;">3×</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#11151B; border:1px solid #2C4A3E; border-radius: 14px; padding: 26px 28px; margin-top: 30px;">
+      <h3 style="color:#7FD1B9;">The quotes that matter (verbatim from the models)</h3>
+      <ul style="color:#D8CDB5; line-height:1.8; margin-top:12px; padding-left:1.2em;">
+        <li><strong style="color:#FFFBF1;">Gemini, Miami prompt:</strong> "Best Local Platform: Chefpost ... a locally well-known, Miami-based platform."</li>
+        <li><strong style="color:#FFFBF1;">GPT-5.5, Miami prompt:</strong> "Best if you want a more curated/local Miami option: Chefpost", closing with "start with Take a Chef and Chefpost", citing <code style="color:#7FD1B9;">/private-chef-miami</code>.</li>
+        <li><strong style="color:#FFFBF1;">GPT-5.5, cost prompt:</strong> "Chefpost's 2026 guide lists Miami and other Florida markets at about $65-$150 per guest", citing <code style="color:#7FD1B9;">/private-chef-cost</code>.</li>
+        <li><strong style="color:#FFFBF1;">Sonar, Hamptons prompt:</strong> quotes the Hamptons page's "$125 to $275 per guest ... $1,800 to $3,200 for a 10-person party" as its pricing source.</li>
+        <li><strong style="color:#FFFBF1;">Sonar, yacht prompt:</strong> a dedicated Chefpost section quoting "from about $180 per person, all-inclusive" and the $600-$1,000 day-rate range from <code style="color:#7FD1B9;">/yacht-chef-miami</code>.</li>
+      </ul>
+      <p style="color:#D8CDB5; margin-top:14px;">Every citation quotes a dollar figure that the July pages put on screen. Machine-quotable pricing is the single most transferable lesson of this re-audit.</p>
+    </div>
+
+    <div class="two-col" style="margin-top:30px;">
+      <div>
+        <h3 style="color:#FFFBF1;">The remaining gaps</h3>
+        <p style="color:#D8CDB5;">Claude Sonnet is the holdout at 0 of 5: it leans on editorial roundups and long-established domains, which is a third-party-mentions problem (Tier 3 and 4 of the link plan), not an on-site one. NYC meal prep is the one prompt with zero presence, and its cited competitors are small locals; the /personal-chef-meal-prep-nyc page in section 07 is aimed exactly there. And one organic bonus found in the wild: DataForSEO's mentions database logged a January ChatGPT answer ranking Chefpost <strong style="color:#FFFBF1;">#1</strong> for "what is the best website for personal chef?".</p>
+      </div>
+      <div>
+        <h3 style="color:#FFFBF1;">Next targets</h3>
+        <p style="color:#D8CDB5;">Re-run this frozen 5×4 grid monthly. Early-September target: <strong style="color:#FFFBF1;">hold 6+, gain the first Claude citation</strong>. November target: <strong style="color:#FFFBF1;">10 of 20</strong> with at least one NYC meal-prep citation. The grid is now the program's cleanest KPI: it moved 6× in 66 days while every authority metric stood still.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 11 ROADMAP =================== -->
+<section id="roadmap">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">11 · 90-Day Roadmap · August to October</span>
+    </div>
+    <h2>Three sprints:<br>measure, publish, <em class="display-italic">fuel</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="roadmap">
+      <div class="road-col">
+        <span class="dot"></span>
+        <div class="label">SPRINT 1 · AUGUST · MEASURE &amp; CONSOLIDATE</div>
+        <ul>
+          <li><span class="check"></span>GA4: 4 key events live, placeholder tag deleted <span class="pri">P0</span></li>
+          <li><span class="check"></span>301s: http → https, www → apex <span class="pri">P0</span></li>
+          <li><span class="check"></span>301 old cost post → /private-chef-cost <span class="pri">P1</span></li>
+          <li><span class="check"></span>Sanity Miami guide links to /private-chef-miami <span class="pri">P1</span></li>
+          <li><span class="check"></span>GBP punch list executed (copy exists) <span class="pri">P1</span></li>
+          <li><span class="check"></span>Sushi title + price row; /cooking-classes decision <span class="pri">P2</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <span class="dot"></span>
+        <div class="label">SPRINT 2 · SEPTEMBER · PUBLISH THE WINDOW</div>
+        <ul>
+          <li><span class="check"></span>Seasonal cluster live by Sept 1 (Thanksgiving first) <span class="pri">P0</span></li>
+          <li><span class="check"></span>/personal-chef-meal-prep-nyc page <span class="pri">P1</span></li>
+          <li><span class="check"></span>Blog template fixes + index rewrite <span class="pri">P1</span></li>
+          <li><span class="check"></span>llms.txt + entity About (vs chefpost.fi) <span class="pri">P2</span></li>
+          <li><span class="check"></span>Chefpost stats page drafted from booking data <span class="pri">P1</span></li>
+          <li><span class="check"></span>LLM grid re-run #3, first Claude citation target <span class="pri">KPI</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <span class="dot"></span>
+        <div class="label">SPRINT 3 · OCTOBER · FUEL</div>
+        <ul>
+          <li><span class="check"></span>Tier 1 citations complete (15-20 listings) <span class="pri">P0</span></li>
+          <li><span class="check"></span>5+ partnership links (STR, yacht, wedding) <span class="pri">P1</span></li>
+          <li><span class="check"></span>Stats-page PR pitch cycle (Ocean Drive, Thrillist, HARO) <span class="pri">P1</span></li>
+          <li><span class="check"></span>Review schema on chef profiles (real reviews, dev + Diana) <span class="pri">P2</span></li>
+          <li><span class="check"></span>Pricing architecture unified across all 40 pages <span class="pri">P1</span></li>
+          <li><span class="check"></span>Homepage LCP under 3.5s <span class="pri">P2</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px;">Measurable targets for November 1</h3>
+    <div class="kpi-grid" style="margin-top:16px;">
+      <div class="kpi"><div class="kpi-label">Non-brand clicks/week</div><div class="kpi-value">25+</div><div class="kpi-trend">vs ~4 today</div></div>
+      <div class="kpi"><div class="kpi-label">Keywords in top 10</div><div class="kpi-value">10+</div><div class="kpi-trend">vs 2-3 volatile today</div></div>
+      <div class="kpi cta"><div class="kpi-label">LLM citations</div><div class="kpi-value">10/20</div><div class="kpi-trend up">from 6/20</div></div>
+      <div class="kpi"><div class="kpi-label">Referring domains</div><div class="kpi-value">240+</div><div class="kpi-trend">real ones, from 207</div></div>
+      <div class="kpi"><div class="kpi-label">GA4 key events recorded</div><div class="kpi-value">30+</div><div class="kpi-trend">from unmeasurable</div></div>
+      <div class="kpi"><div class="kpi-label">Local pack entries (Miami)</div><div class="kpi-value">1+</div><div class="kpi-trend">from zero</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 12 APPENDIX =================== -->
+<section id="appendix" class="alt">
+  <div class="wrap narrow">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">12 · Appendix</span>
+    </div>
+    <h2>Methodology, sources,<br>and honest <em class="display-italic">limitations</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <details class="acc" open>
+      <summary>Methodology</summary>
+      <ul>
+        <li><strong>GSC:</strong> last-3-months export (May 2 to Aug 1, 2026, Web search, domain property: Queries, Pages, Chart, Devices, Countries), contrasted against the May 29 and June 12 16-month exports. Launch split at July 15.</li>
+        <li><strong>GA4:</strong> Traffic acquisition by default channel group, Jan 1 to Aug 3, 2026 (property chefpost.com, account Summerlee).</li>
+        <li><strong>Semrush (Aug 2-3):</strong> domain overview, organic research, backlinks, position tracking campaign 29801289, site audit (health 82, 227 pages).</li>
+        <li><strong>DataForSEO (Aug 3):</strong> Labs ranked keywords (298), backlinks, competitor domains, Lighthouse (desktop form factor this run), and 5 live mobile SERP pulls for the money keywords.</li>
+        <li><strong>Playwright live crawl (Aug 3):</strong> 15 templates, full-scroll at 1440px, homepage also 375px; extraction of canonicals, H1s, JSON-LD, alts, word counts, analytics tags; DNS checks on dev./booking. subdomains.</li>
+        <li><strong>Flagship LLM citation test (Aug 3):</strong> 5 prompts × 4 models = 20 live calls via DataForSEO AI Optimization, web_search enabled on every call. Models: Claude Sonnet 4.6, Gemini 3.1 Pro (preview), GPT-5.5, Sonar-Reasoning-Pro. The verbatim prompts:
+          <ol style="margin-top:8px;">
+            <li><code class="mono">"Best private chef booking platform in Miami"</code></li>
+            <li><code class="mono">"How do I hire a private chef for a dinner party in the Hamptons?"</code></li>
+            <li><code class="mono">"Private chef meal prep service in New York City"</code></li>
+            <li><code class="mono">"How much does a private chef cost in Florida?"</code></li>
+            <li><code class="mono">"Yacht chef services in Miami"</code></li>
+          </ol>
+          A citation = Chefpost named in the answer text, or a chefpost.com URL cited as a source the answer used. Source-pool-only appearances (one, on the NYC prompt) were not counted.</li>
+      </ul>
+    </details>
+
+    <details class="acc">
+      <summary>Files produced</summary>
+      <ul>
+        <li><code class="mono">audit/aug2026/gsc-ga4-analysis.md</code>, the GSC × GA4 cross-analysis.</li>
+        <li><code class="mono">audit/aug2026/playwright-audit.json</code> + summary, 16 screenshots in <code class="mono">screenshots/aug2026/</code>.</li>
+        <li><code class="mono">audit/aug2026/semrush/</code> (10 JSON files + SUMMARY.md) and <code class="mono">audit/aug2026/dataforseo/</code> (12 JSON files + SUMMARY.md).</li>
+        <li><code class="mono">research/aug2026/</code>: trends, competitor moves, seasonal calendar, PAA harvest, AI-mentions dumps, and <code class="mono">llm-flagship-run/citation-tally.md</code>.</li>
+      </ul>
+    </details>
+
+    <details class="acc">
+      <summary>Limitations, read before quoting numbers</summary>
+      <ul>
+        <li><strong>18 days is not a rankings verdict.</strong> The launch window is inside Google's re-ranking churn. The three sources disagree on individual positions (Semrush Aug 2 shows sushi top-10 and cost #11-18; DataForSEO Aug 3 shows those slots vacated; GSC's 3-month average shows cost at 6.75). We report all three and anchor conclusions only where they agree.</li>
+        <li><strong>GSC page rows aggregate the full 3-month window</strong>, so per-page average positions mix strong and weak weeks.</li>
+        <li><strong>Lighthouse ran desktop form factor this cycle</strong> (MCP limitation); the May baseline was mobile. LCP comparisons are directional.</li>
+        <li><strong>GA4 has no key events</strong>, so all business-impact statements are inferences from engagement, not conversions, which is precisely why finding #1 is finding #1.</li>
+        <li><strong>The LLM grid is a 20-call sample.</strong> Model answers vary run to run; the frozen prompt set limits, but does not remove, that variance. Monthly re-runs build the trendline that single runs cannot.</li>
+      </ul>
+    </details>
+
+    <p class="small" style="margin-top:34px;">Prepared by ThinkFlowLabs · August 3, 2026 · Confidential, for the Chefpost team. This page is noindexed; only people with the link can find it.</p>
+  </div>
+</section>
+
+</body>
+</html>
