@@ -8,6 +8,7 @@ Each subfolder of this repo is one engagement. Pages are blocked from search eng
 
 | Client | Folder | URL |
 |---|---|---|
+| Chefpost (supper clubs research) | [`/chefpost-supper-clubs-research/`](./chefpost-supper-clubs-research/) | https://thinkflowlabs.github.io/SEO/chefpost-supper-clubs-research/ |
 | Chefpost (SEO Re-Audit Aug 2026, before/after + LLM re-test) | [`/chefpost-audit-aug2026/`](./chefpost-audit-aug2026/) | https://thinkflowlabs.github.io/SEO/chefpost-audit-aug2026/ |
 | Beats Code (auditoria SEO + IA, agentes de IA) | [`/beatscode-audit/`](./beatscode-audit/) | https://thinkflowlabs.github.io/SEO/beatscode-audit/ |
 | Chefpost (Private Chef Landing Pages · portfolio + data) | [`/chefpost-pages/`](./chefpost-pages/) | https://thinkflowlabs.github.io/SEO/chefpost-pages/ |

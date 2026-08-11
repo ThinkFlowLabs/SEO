@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Chefpost Supper Club and Founder Dinner Research, August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --ink:        #0E1014;
+    --ink-2:      #1F2630;
+    --muted:      #5E6675;
+    --line:       #E6DFD2;
+    --line-2:     #EFE7D8;
+    --cream:      #FBF6EB;
+    --cream-2:    #F4ECD9;
+    --paper:      #FFFBF1;
+    --coral:      #E63946;
+    --coral-dk:   #BC2C2C;
+    --coral-sft:  #FBE3E2;
+    --gold:       #C89A4A;
+    --gold-sft:   #F6E7C7;
+    --green:      #1F7A6A;
+    --green-sft:  #DAEEE7;
+    --amber:      #B45309;
+    --amber-sft:  #FFE9BD;
+    --red-bg:     #FFEBE9;
+
+    --r-sm: 4px; --r-md: 10px; --r-lg: 18px; --r-xl: 26px;
+    --shadow-sm: 0 1px 0 rgba(20,18,12,.06);
+    --shadow-md: 0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --shadow-lg: 0 30px 80px -30px rgba(60,40,18,.36);
+
+    --serif:      "Fraunces", "Times New Roman", serif;
+    --sans:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:       "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--coral-dk); text-decoration: none; border-bottom: 1px solid rgba(188,44,44,.25); }
+  a:hover { border-bottom-color: var(--coral-dk); }
+
+  /* ============ LAYOUT ============ */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); position: relative; }
+  section.alt { background: var(--paper); }
+  section.dark { background: var(--ink); color: #F2EAD7; border-top-color: #2A2520; }
+  section.dark a { color: #FFD8AC; border-bottom-color: rgba(255,216,172,.3); }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.012em; line-height: 1.08; margin: 0; }
+  h1 { font-size: clamp(48px, 8vw, 96px); font-weight: 380; letter-spacing: -.03em; }
+  h2 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 400; letter-spacing: -.022em; }
+  h3 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.18; }
+  h4 { font-size: 19px; font-weight: 600; line-height: 1.3; font-family: var(--sans); letter-spacing: -.005em; }
+  .display-italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 500; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--coral-dk);
+  }
+  p { margin: 0 0 1em; }
+  p.lede { font-size: 21px; line-height: 1.55; color: var(--ink-2); }
+  ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
+  ul li, ol li { margin-bottom: .35em; }
+  strong { font-weight: 600; }
+  .mono { font-family: var(--mono); font-size: .9em; }
+  .small { font-size: 13px; color: var(--muted); }
+
+  /* ============ HERO ============ */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #FBE3E2 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-top: 0;
+    padding: 56px 0 96px;
+    overflow: hidden; position: relative;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%23E63946' opacity='.06'/></svg>");
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; position: relative; }
+  .hero h1 { margin-bottom: .18em; }
+  .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .hero .meta { font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+  .hero .by-line { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-2); margin-top: 36px; font-size: 14px; }
+  .hero .by-line span b { color: var(--ink); font-weight: 600; }
+  .hero-side {
+    background: white; border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 30px; box-shadow: var(--shadow-md);
+    font-size: 14px;
+  }
+  .hero-side h4 { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-family: var(--sans); margin-bottom: 16px; font-weight: 600; }
+  .hero-side dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; }
+  .hero-side dt { color: var(--muted); }
+  .hero-side dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .hero-side .severity-strip { margin: 22px -30px -30px; padding: 18px 30px; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); color: white; border-radius: 0 0 var(--r-lg) var(--r-lg); display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ TLDR (Executive Summary) ============ */
+  .tldr { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; }
+  .tldr h2 em { font-style: italic; color: var(--coral); font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .tldr-bullets { font-size: 17px; line-height: 1.6; }
+  .tldr-bullets li { margin-bottom: 16px; padding-left: 4px; }
+  .tldr-bullets li::marker { color: var(--coral); }
+  .verdict-card {
+    background: var(--ink); color: #F2EAD7;
+    border-radius: var(--r-lg); padding: 36px;
+    position: sticky; top: 24px;
+  }
+  .verdict-card h4 { color: #F6E7C7; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; font-weight: 500; }
+  .verdict-card p { font-size: 15px; line-height: 1.65; color: #D8CDB5; }
+  .verdict-card .score-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--mono); font-size: 12px; }
+  .verdict-card .score-row b { color: white; font-size: 18px; }
+  @media (max-width: 820px) { .tldr { grid-template-columns: 1fr; } .verdict-card { position: static; } }
+
+  /* ============ KPI GRID ============ */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 22px 18px; position: relative; overflow: hidden;
+  }
+  .kpi-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+  .kpi-value small { font-size: 17px; color: var(--muted); margin-left: 4px; font-family: var(--sans); font-weight: 500; }
+  .kpi-trend { font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+  .kpi-trend.up { color: var(--green); }
+  .kpi-trend.dn { color: var(--coral-dk); }
+  .kpi.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; } .kpi-value { font-size: 36px; } }
+
+  /* ============ FINDINGS CARDS ============ */
+  .findings { display: grid; gap: 24px; }
+  .finding {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 36px; display: grid; grid-template-columns: 88px 1fr; gap: 28px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+  }
+  .finding .num {
+    font-family: var(--serif); font-size: 78px; font-weight: 400; line-height: 1; color: var(--coral); letter-spacing: -.04em; opacity: .9;
+  }
+  .finding h3 { margin-bottom: 8px; }
+  .finding .impact-line { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; font-family: var(--mono); letter-spacing: .02em; }
+  .finding p { font-size: 16px; }
+  .finding .fix {
+    background: var(--cream-2); padding: 18px 22px; border-radius: var(--r-md);
+    margin-top: 18px; border-left: 3px solid var(--coral); font-size: 15.5px;
+  }
+  .finding .fix b { color: var(--ink); }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+  }
+  .badge.crit { background: var(--coral); color: white; }
+  .badge.high { background: var(--amber-sft); color: var(--amber); }
+  .badge.med { background: var(--gold-sft); color: var(--gold); }
+  .badge.opp { background: var(--green-sft); color: var(--green); }
+  .badge.brand { background: var(--ink); color: var(--cream); }
+  @media (max-width: 820px) {
+    .finding { grid-template-columns: 1fr; padding: 26px; }
+    .finding .num { font-size: 56px; }
+  }
+
+  /* ============ DATA TABLES ============ */
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14.5px;
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  }
+  th { text-align: left; font-weight: 600; padding: 14px 16px; background: var(--cream-2); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  td.kw { font-weight: 500; }
+  td .badge { font-size: 10px; padding: 3px 8px; }
+
+  .table-scroll { overflow-x: auto; }
+
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #F4C7C5; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
+  /* ============ PILLS / CALLOUTS ============ */
+  .callout {
+    background: var(--coral-sft); border: 1px solid #F4C7C5;
+    border-radius: var(--r-md); padding: 22px 26px;
+    font-size: 15.5px; color: var(--coral-dk); margin: 24px 0;
+  }
+  .callout.opp { background: var(--green-sft); border-color: #BFE0D6; color: #135548; }
+  .callout.warn { background: var(--amber-sft); border-color: #F2D5A0; color: var(--amber); }
+  .callout strong { color: inherit; }
+
+  /* ============ TWO-COL ============ */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ============ HIERARCHY CARDS ============ */
+  .page-card {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+  .page-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .page-card-head h4 { font-family: var(--mono); font-size: 14px; color: var(--ink); letter-spacing: 0; word-break: break-all; }
+  .pc-issues { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pc-issue { font-size: 11.5px; padding: 3px 9px; border-radius: 4px; background: var(--coral-sft); color: var(--coral-dk); font-weight: 600; }
+  .pc-issue.ok { background: var(--green-sft); color: var(--green); }
+  .pc-issue.warn { background: var(--amber-sft); color: var(--amber); }
+
+  /* ============ ROADMAP ============ */
+  .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .road-col {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 28px;
+  }
+  .road-col .label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 12.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--coral-dk); margin-bottom: 6px; }
+  .road-col .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--coral); }
+  .road-col h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 18px; }
+  .road-col ul { list-style: none; padding: 0; }
+  .road-col li { padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .road-col li:last-child { border-bottom: 0; }
+  .road-col li .check { width: 18px; height: 18px; border: 1.5px solid var(--line); border-radius: 4px; margin-top: 2px; }
+  .road-col li .pri { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; align-self: start; }
+  @media (max-width: 1000px) { .roadmap { grid-template-columns: 1fr; } }
+
+  /* ============ SCHEMA SNIPPETS ============ */
+  pre.code {
+    background: #1A1F26; color: #DCD0AE; padding: 22px 26px;
+    border-radius: var(--r-md); font-family: var(--mono); font-size: 13px;
+    overflow-x: auto; line-height: 1.55; margin: 18px 0;
+  }
+  .code .k { color: #FFD89B; }
+  .code .s { color: #B5DCC7; }
+  .code .c { color: #6E6452; font-style: italic; }
+
+  /* ============ FOOTER ============ */
+  footer { padding: 56px 0 36px; background: var(--ink); color: #BAB099; text-align: center; }
+  footer .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 28px; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  footer .small { color: #76705F; }
+
+  /* ============ STICKY NAV ============ */
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 246, 235, 0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  .topnav .inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .topnav a { color: var(--ink); border-bottom: 0; font-size: 13px; font-weight: 500; }
+  .topnav .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 20px; font-variation-settings: "SOFT" 100, "WONK" 1; border: 0; }
+  .topnav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .topnav nav { display: none; } }
+
+  /* ============ HORIZONTAL BAR CHART ============ */
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 80px; gap: 14px; align-items: center; padding: 8px 0; font-size: 14px; }
+  .bar-bg { height: 22px; background: var(--cream-2); border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); }
+  .bar-fill.alt { background: linear-gradient(90deg, var(--gold) 0%, #A77F35 100%); }
+  .bar-fill.green { background: linear-gradient(90deg, #2C9D8B 0%, var(--green) 100%); }
+  .bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; text-align: right; color: var(--ink-2); }
+  @media (max-width: 600px) { .bar-row { grid-template-columns: 120px 1fr 60px; font-size: 13px; } }
+
+  /* ============ DIVIDERS ============ */
+  .ornament { text-align: center; margin: 48px 0; color: var(--coral); font-family: var(--serif); font-size: 22px; letter-spacing: .4em; opacity: .7; }
+  .section-eyebrow { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .section-eyebrow .bar { width: 36px; height: 1px; background: var(--coral); }
+
+  /* ============ MISC ============ */
+  .quote {
+    border-left: 3px solid var(--coral); padding: 12px 0 12px 26px;
+    font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink-2);
+    font-style: italic; margin: 28px 0;
+  }
+  .quote cite { display: block; margin-top: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: normal; letter-spacing: .04em; }
+
+  details.acc { background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 22px; margin-bottom: 10px; }
+  details.acc summary { cursor: pointer; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.acc summary::after { content: "+"; font-family: var(--serif); font-size: 22px; color: var(--coral); }
+  details.acc[open] summary::after { content: "−"; }
+  details.acc[open] { box-shadow: var(--shadow-md); }
+  details.acc .body { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: white; }
+    section { padding: 28px 0; page-break-inside: avoid; }
+    .topnav, .hero::before { display: none; }
+    .finding, .road-col, table { box-shadow: none; }
+    a { color: var(--ink); }
+  }
+
+/* Aug 2026 re-audit overrides */
+section.dark table { background: transparent; }
+section.dark table td, section.dark table th { color: #D8CDB5; }
+.bar-fill { display: block; }
+
+/* aug11 report patch: dark-section lede contrast */
+section.dark .lede { color: #C9BFA9; }
+section.dark .sub-eyebrow { color: #C9BFA9; }
+
+</style>
+</head>
+<body>
+<div class="topnav">
+  <div class="wrap inner">
+    <a href="#top" class="mark">chefpost · category research · aug 2026</a>
+    <nav>
+      <a href="#tldr">Summary</a>
+      <a href="#status">Status</a>
+      <a href="#trend">The Trend</a>
+      <a href="#beachhead">Beachhead</a>
+      <a href="#keywords">Keywords</a>
+      <a href="#competitive">Competitors</a>
+      <a href="#llm">AI Search</a>
+      <a href="#plan">The Plan</a>
+      <a href="#roadmap">Priorities</a>
+      <a href="#appendix">Appendix</a>
+    </nav>
+  </div>
+</div>
+
+<!-- =================== HERO =================== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="meta">CATEGORY RESEARCH &amp; STATUS CHECK &nbsp;·&nbsp; CONFIDENTIAL</div>
+      <h1>The dinner table<br>is having<br><em>a moment.</em></h1>
+      <p class="lede" style="margin-top:32px; max-width:640px;">
+        Diana asked one question: can Chefpost own the world of <strong>founder dinners, brand dinners, supper clubs and private dining experiences</strong>? We measured it four ways: live Google search demand, five years of trend data, the actual page-one results for twelve target queries, and eighteen live AI-assistant answers. The short version: the category is real, it is growing fast, nobody owns it yet, and Chefpost already holds a position-one beachhead it did not know it had.
+      </p>
+      <div class="by-line">
+        <span>Prepared by <b>ThinkFlowLabs</b></span>
+        <span>·</span>
+        <span>Issued <b>August 11, 2026</b></span>
+        <span>·</span>
+        <span>Data <b>GSC to Aug 9 · live SERPs, Trends &amp; LLM tests Aug 11</b></span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h4>AT-A-GLANCE · AUG 11 2026</h4>
+      <dl>
+        <dt>"supper club" interest, 5-yr Trends</dt><dd>All-time high · +45%</dd>
+        <dt>"what is a supper club" searches</dt><dd>5,400/mo · KD 5</dd>
+        <dt>Chefpost rank on its tail queries</dt><dd>#1 today</dd>
+        <dt>AI-assistant searches "supper club"</dt><dd>16,411/mo</dd>
+        <dt>"founder dinner" Trends signal</dt><dd>First ever, 2026</dd>
+        <dt>Companies owning the category</dt><dd>None found</dd>
+        <dt>Chefpost citations, 6 new AI prompts</dt><dd>3 of 18</dd>
+        <dt>Ranked keywords (vs Aug 3)</dt><dd>328 · +30</dd>
+        <dt>GSC clicks/day (last 7 days)</dt><dd>7.7 · flat</dd>
+      </dl>
+      <div class="severity-strip">
+        <span>Verdict</span>
+        <span>🟢 Category open. Move now.</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- =================== 01 EXEC SUMMARY =================== -->
+<section id="tldr" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">01 · Executive Summary</span>
+    </div>
+    <div class="tldr">
+      <div>
+        <h2>The answer in <em class="display-italic">60 seconds</em>.</h2>
+        <p class="lede" style="margin-top:24px;">
+          The instinct behind this brief is correct, and the data is unusually one-sided: every measurement we ran says this category is rising, unclaimed, and winnable with content Chefpost is uniquely positioned to write.
+        </p>
+        <ol class="tldr-bullets" style="margin-top:24px;">
+          <li><strong>The trend is real and structural, not a spike.</strong> US search interest in "supper club" is at its all-time high, up 45% in five years, with peaks every November and December. "Founder dinner" registered its first-ever Google Trends signal in 2026. "Private chef" interest has grown 160% in five years. Diana is early, not late.</li>
+          <li><strong>Nobody owns it.</strong> Across twelve target searches, page one belongs to Reddit threads, Medium posts, Substack newsletters and personal blogs from 2016 to 2018. The biggest competitor, Take a Chef, ranks #1 on every "hire a chef" query using generic city pages and has zero supper-club, founder, corporate or influencer content. A blog that launched in January 2026 already reached #7 on "how to start a supper club". Entry is fast here.</li>
+          <li><strong>Chefpost already holds the beachhead.</strong> A blog post from April 2024 ranks <strong>position 1</strong> today for "what is a supper club", "how to start a supper club with friends" and five sibling queries, with a generic title tag and no internal structure. The head query "what is a supper club" carries 5,400 searches per month at keyword difficulty 5. The post is ranking on trust alone; it has never been optimized.</li>
+          <li><strong>AI search is where the category will actually be decided.</strong> "Supper club" gets 16,411 AI-assistant searches per month, three times any other term we tested. Today the AI answers cite Wikipedia, Reddit and Instagram reels. Chefpost's entire AI footprint is its pricing page (26 recorded citations, all cost questions). The mechanism that earned those citations, concrete numbers on exact-phrase pages, extends directly to this category.</li>
+          <li><strong>The engine needs two repairs while we build.</strong> A new redirect misconfiguration sends every www visitor to a dead server port (this is the "site feels slow" complaint from our Aug 5 call), and GA4 has still recorded zero conversions. Both fixes are specified in Section 02 and cost hours, not weeks.</li>
+        </ol>
+      </div>
+      <div class="verdict-card">
+        <h4>Our recommendation</h4>
+        <p>Claim the category in three moves: <strong>(1)</strong> upgrade the already-ranking 2024 post into a true Supper Club pillar this month, <strong>(2)</strong> publish the occasion pages nobody has built (founder dinners, brand and influencer dinners, client appreciation dinners, corporate dinner chef), each with a price table, and <strong>(3)</strong> pair every page with Diana's PR run so the same phrases appear in interviews, backlinks and AI answers.</p>
+        <p style="margin-top:12px;">The search volume on the founder-dinner side is still small. That is precisely the point: the category vocabulary is forming right now, and the pages that define it will be the ones AI assistants quote when the volume arrives. Supper clubs supply today's traffic; founder dinners supply the land grab.</p>
+        <p style="margin-top:12px;"><strong>Confidence:</strong> high. Four independent data sources (Ads volumes, five-year Trends, live SERPs, live LLM answers) agree on every structural conclusion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 02 STATUS =================== -->
+<section id="status">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">02 · Where the Engine Stands Today</span>
+    </div>
+    <h2>Status check:<br>Aug 3 to <em class="display-italic">Aug 11</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Before building new territory, we re-verified the existing machine: everything shipped on Aug 4 is live and correct, rankings are broadening, and two infrastructure faults need attention this week.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Checkpoint</th><th>Status</th><th>Evidence, Aug 11</th></tr></thead>
+      <tbody>
+        <tr><td>Ranked keywords (DataForSEO US)</td><td><span class="badge opp">328 · UP 30</span></td><td>+10% since Aug 3. /filter ranks #10 for "private chef services" (6,600/mo) and #10 for "private chef" (14,800/mo).</td></tr>
+        <tr><td>Aug 4 deploy (blog H1 + schema, blog index, sushi title, /cooking-classes rebuild)</td><td><span class="badge opp">VERIFIED LIVE</span></td><td>Live crawl: blog posts carry one H1 + Article JSON-LD + real meta descriptions; sushi title reads "Private Sushi Chef at Home | Omakase Experience"; /cooking-classes is a real 2,100-word page.</td></tr>
+        <tr><td>Cost guide /private-chef-cost</td><td><span class="badge opp">HOLDING</span></td><td>GSC: position 6.8 to 10.9 across head cost terms, 2,976 impressions in 90 days. Still Chefpost's strongest asset in both Google and AI answers.</td></tr>
+        <tr><td>GSC clicks</td><td><span class="badge med">FLAT</span></td><td>7.7/day over the last 7 days vs 7.6 at the Aug 3 audit. Expected: the fuel lines (links, local pack, conversions) have not changed yet.</td></tr>
+        <tr><td>www redirect</td><td><span class="badge crit">P0 · BROKEN</span></td><td>https://www.chefpost.com now 301-redirects to https://chefpost.com:3000, a development port where no server answers. Every www visitor waits ~20 seconds and gets nothing. Verified live twice on Aug 11.</td></tr>
+        <tr><td>http to https redirect</td><td><span class="badge opp">FIXED</span></td><td>http://chefpost.com now 301s to the secure apex host. This half of the host consolidation landed correctly.</td></tr>
+        <tr><td>GA4 conversion tracking</td><td><span class="badge crit">STILL ZERO</span></td><td>The two key events created Aug 4 (Checkout, add_to_cart) have recorded 0 in 8 days; roughly 5 checkouts were statistically expected. Customer forms still do not fire a trackable submit event.</td></tr>
+        <tr><td>Miami cannibalization</td><td><span class="badge high">PERSISTS</span></td><td>On "private chef miami": the 2019-era blog guide ranks 13.8, the landing page 51.9. The blog guide wins every Miami variant. Merge plan unchanged from the Aug 3 report.</td></tr>
+        <tr><td>Backlink authority</td><td><span class="badge high">FLAT</span></td><td>Net minus 11 referring domains May to July; August added mostly link-seller spam. One genuine win: a dofollow mention in the Female Startup Club newsletter (Aug 7). The link program remains the #1 bottleneck.</td></tr>
+        <tr><td>dev.chefpost.com</td><td><span class="badge high">INDEXED AGAIN</span></td><td>The dev subdomain is back in Google's index and ranking (a chef menu page at #15). Needs noindex or authentication.</td></tr>
+        <tr><td>/yacht-services stub</td><td><span class="badge med">STILL INDEXED</span></td><td>Still a ~50-word Coming Soon page, no noindex, and it is what Google shows for "coming soon" site queries. Build it or noindex it.</td></tr>
+        <tr><td>/cooking-classes snippet</td><td><span class="badge med">STALE</span></td><td>The page is rebuilt and live, but Google's cached snippet still says "Coming Soon". Needs a reindex request in Search Console.</td></tr>
+        <tr><td>Site speed (working host)</td><td><span class="badge high">UNCHANGED</span></td><td>Homepage LCP 6.7s, time-to-interactive 10.5s (desktop). The measured lever: 1,226 KiB of unused JavaScript. This plus the www dead-end fully explains the "10 seconds" experience raised on Aug 5.</td></tr>
+        <tr><td>llms.txt</td><td><span class="badge med">MISSING</span></td><td>Still returns 404.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout warn" style="margin-top:28px;">
+      <b>About the speed complaint from the Aug 5 call.</b> Two separate things are true. First, anyone reaching a www URL right now hits the dead :3000 redirect and waits until the browser gives up; that is the catastrophic version of "slow" and it is a one-line server fix. Second, even on the healthy host the homepage takes 10.5 seconds to become interactive, and the measured cause is 1.2 MB of JavaScript the page loads but never uses. Image weight is not the problem (the team's instinct on the call was right): converting PNGs to WebP is still good hygiene, but the bundle is the lever. Both items are packaged for Abdul in Section 09.
+    </div>
+  </div>
+</section>
+
+<!-- =================== 03 THE TREND =================== -->
+<section id="trend" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">03 · Why Now</span>
+    </div>
+    <h2>Five years of data say<br>this is <em class="display-italic">structural</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Google Trends, US, indexed on a shared scale. Yearly averages; 2026 is year-to-date through Aug 11.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Year</th><th>supper club</th><th>founder dinner</th><th>private chef</th><th>dinner party</th></tr></thead>
+      <tbody>
+        <tr><td>2021</td><td>53</td><td>0</td><td>12</td><td>51</td></tr>
+        <tr><td>2022</td><td>67</td><td>0</td><td>15</td><td>51</td></tr>
+        <tr><td>2023</td><td>71</td><td>0.1</td><td>17</td><td>55</td></tr>
+        <tr><td>2024</td><td>72</td><td>0</td><td>19</td><td>61</td></tr>
+        <tr><td>2025</td><td>73</td><td>0.3</td><td>23</td><td>58</td></tr>
+        <tr><td><b>2026 YTD</b></td><td><b>77</b></td><td><b>2.8</b></td><td><b>32</b></td><td><b>71</b></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="two-col" style="margin-top:28px;">
+      <div class="callout opp">
+        <b>Supper club: +45% in five years, peaking now.</b> The term hit its all-time maximum twice in the last nine months (the weeks of Nov 16 and Dec 28, 2025) and currently runs 85 to 90 against 74 to 78 a year ago. Seasonality peaks November-December: content published by early fall rides the wave.
+      </div>
+      <div class="callout opp">
+        <b>Founder dinner: the signal just switched on.</b> Five years of flat zero, then the first sustained interest ever recorded, February to June 2026. There is no keyword ecosystem yet (the entire suggestion database returns 4 noise entries). Categories at this stage are claimed by definition-setters, not by bidders.
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px;">AI assistants already field more supper club questions than Google fields for most keywords</h3>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Term</th><th>AI-assistant searches/mo (Jul 2026)</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>supper club</td><td><b>16,411</b></td><td>Three times any other term tested. Currently answered by Wikipedia (137 citations), Reddit (84) and TripAdvisor. The only marketplace cited at all is eatwith.com, weakly (48).</td></tr>
+        <tr><td>private chef</td><td>5,900</td><td>Citation field = price-guide content farms (fash.com 103, chefry.io 74) plus Take a Chef's city pages (124). Chefpost already competes here via the cost page.</td></tr>
+        <tr><td>brand dinner</td><td><b>518</b></td><td>Real, stable, and completely uncontested. The most surprising number in the study.</td></tr>
+        <tr><td>hire a private chef</td><td>101</td><td>Spiky (peaked 1,412 in March 2026).</td></tr>
+        <tr><td>founder dinner</td><td>~1</td><td>Pre-volume, matching Trends. The land-grab window.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout" style="margin-top:28px;">
+      <b>The cultural signal beyond the data.</b> Google now shows a "Perspectives" carousel on supper club queries filled with Instagram reels and TikToks posted days ago ("HOW TO BUILD A SUPPER CLUB"). Diana is being interviewed on exactly this topic (Substack feature published Aug 4, another event Aug 6). The moment the brief described is visible in the SERPs themselves.
+    </div>
+  </div>
+</section>
+
+<!-- =================== 04 BEACHHEAD =================== -->
+<section id="beachhead">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">04 · The Beachhead Chefpost Already Holds</span>
+    </div>
+    <h2>Position one,<br>by <em class="display-italic">accident</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Search Console, last 180 days. One Chefpost blog post from April 2024 already ranks first for the questions that define this category.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="url-audit">
+      <div class="url-audit-head">
+        <div>
+          <div class="url-audit-url">https://chefpost.com/blog/the-benefits-of-hosting-regular-in-person-events</div>
+          <div class="url-audit-meta">Published Apr 2024 · H1: "From Dinner Parties to Supper Club: A New Way to Grow Your Community"</div>
+        </div>
+        <span class="badge opp">RANKS #1 TODAY</span>
+      </div>
+      <div class="url-audit-body">
+        <div class="url-issue ok">
+          <div class="issue-name">Where it ranks</div>
+          <div class="issue-current">Position <b>1.0</b>: "what is a supper club", "what's the difference between a supper club and a restaurant", "how to start a supper club with friends", "supper club what is it", "what does supper club mean". Position <b>2.3</b>: "supper club".</div>
+          <div class="issue-fix">Google already trusts Chefpost on this topic. The head query "what is a supper club" carries <b>5,400 searches/mo at KD 5</b>; the post only catches its long-tail today.</div>
+        </div>
+        <div class="url-issue">
+          <div class="issue-name">Why impressions are tiny</div>
+          <div class="issue-current">Title tag is generic ("The Benefits of Hosting Regular In-Person Events"), the meta description just repeats it, and the post has <b>zero H2 headings</b> and ~1,100 words.</div>
+          <div class="issue-fix"><b>Fix:</b> retitle to the keyword ("What Is a Supper Club? How to Host One at Home"), add an H2 for every People-Also-Ask question, expand to 2,000+ words with a per-seat price block, add FAQ schema. Keep the URL: the rankings live there.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:28px;">
+      <div class="callout opp">
+        <b>The whitespace next door is total.</b> Queries containing "founder", "brand dinner", "influencer" or "gathering" have generated <b>zero Chefpost impressions in 180 days</b>. Nothing to fix, nothing to cannibalize: pure unclaimed inventory.
+      </div>
+      <div class="callout">
+        <b>Supporting assets already in place.</b> The dinner-party blog cluster earns impressions today (table-setting post: 339, position 25.7; dinner-party-ideas post: position 7.7; "chef for dinner party": position 14). And /events ranks #67 for "chef for a dinner party", a query with a <b>$14.28 CPC</b>, despite being a 255-word page with no H1 and no schema. That page becomes the Events hub in Section 08.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 05 KEYWORDS =================== -->
+<section id="keywords" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">05 · The Keyword Universe</span>
+    </div>
+    <h2>Demand, difficulty,<br>and <em class="display-italic">intent</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Google Ads live volumes and DataForSEO difficulty, US, August 11. A dash in KD means the SERP has never been scored for competition: in this space that means nobody serious is competing. Full tables are archived in the project research folder.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="sub-eyebrow">Supper club cluster · the ownable side</div>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Keyword</th><th>Vol/mo</th><th>KD</th><th>Intent</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td><b>what is a supper club</b></td><td><b>5,400</b></td><td>5</td><td>Informational</td><td>The definitional battleground. AI Overview present. Chefpost #1 on its tails now.</td></tr>
+        <tr><td>supper club nyc / new york</td><td>2,400</td><td>18 / 5</td><td>Scene discovery</td><td>NYC intent skews event-series, not Wisconsin restaurants. Expansion market.</td></tr>
+        <tr><td>dinner club</td><td>1,300</td><td>32</td><td>Mixed</td><td></td></tr>
+        <tr><td><b>supper club miami</b></td><td><b>480</b></td><td>~0</td><td>Scene discovery</td><td>Spiked to 1,900 in June. Home market. Weakest local SERP we found (Section 06).</td></tr>
+        <tr><td>how to start a supper club (+ dinner club variant)</td><td>140 + 140</td><td>-</td><td>Pure community</td><td>Natural "or let a Chefpost chef run it" page.</td></tr>
+        <tr><td>supper club ideas</td><td>140</td><td>-</td><td>Hosting</td><td></td></tr>
+        <tr><td>private / underground supper club + membership</td><td>90 + 90 + 20</td><td>-</td><td>Community</td><td>Membership micro-cluster; supports a Chefpost-hosted series.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout warn" style="margin-top:16px;">
+      <b>Deliberately excluded:</b> "supper club near me" (40,500/mo) and the raw head term's local-pack layer. That volume is restaurant discovery, largely the Wisconsin supper-club tradition, and a chef marketplace cannot fulfill it. Chasing it would burn relevance. The community-gathering side above is the ownable side.
+    </div>
+
+    <div class="sub-eyebrow" style="margin-top:36px;">Booking-intent money terms</div>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Keyword</th><th>Vol/mo</th><th>KD</th><th>CPC</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td><b>private chef for dinner party</b></td><td><b>880</b></td><td>-</td><td>$5.92</td><td>Transactional 0.99. Ran at 1,600 in April-May: growing. Take a Chef ranks #1 with a generic Los Angeles city page.</td></tr>
+        <tr><td>dinner party catering</td><td>880</td><td>16</td><td>$4.09</td><td>Adjacent demand Chefpost already fulfills.</td></tr>
+        <tr><td>private chef experience</td><td>260</td><td>-</td><td>$4.25</td><td>Gift and experience framing.</td></tr>
+        <tr><td>chef's table experience</td><td>210</td><td>3</td><td>$3.83</td><td>December seasonal spike. At-home chef's table angle unserved.</td></tr>
+        <tr><td>hire a chef for a dinner party</td><td>110</td><td>-</td><td>$6.91</td><td>Pure booking intent; Reddit sits at #3.</td></tr>
+        <tr><td><b>dinner party chef</b></td><td>70</td><td><b>3</b></td><td><b>$14.28</b></td><td>The highest CPC in the study on a near-zero difficulty SERP. Advertisers value this click at $14; organic is wide open.</td></tr>
+        <tr><td>hire a private chef for a night</td><td>70</td><td>-</td><td>$7.42</td><td></td></tr>
+        <tr><td>private chef dinner party cost</td><td>40</td><td>-</td><td>-</td><td>Commercial 0.95. Feeds the proven cost-page citation engine.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="sub-eyebrow" style="margin-top:36px;">Corporate and occasion wedge</div>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Keyword</th><th>Vol/mo</th><th>KD</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>company dinner ideas</td><td>590</td><td>8</td><td>Corporate wedge with real volume.</td></tr>
+        <tr><td><b>team dinner ideas</b></td><td>480</td><td>-</td><td><b>Jumps to 1,300 every September</b> (holiday-party planning). Publish before September to catch the 2026 wave.</td></tr>
+        <tr><td>corporate murder mystery dinner</td><td>590</td><td>17</td><td>Sep-Dec seasonal, peaks at 2,400. Themed chef-hosted experience angle.</td></tr>
+        <tr><td>corporate dinner venues / restaurants</td><td>110 + 140</td><td>-</td><td>Top-of-page bid $52.74: enterprise budgets. Wedge page: "skip the venue, host it at your office with a chef".</td></tr>
+        <tr><td>unique dining experiences</td><td>880</td><td>-</td><td>Listicle SERP; position at-home chef dining inside it.</td></tr>
+        <tr><td>founder dinner</td><td>70</td><td>-</td><td>Growing from 30-40 (mid-2025) to 70-90 (2026). No ecosystem = definitional land grab.</td></tr>
+        <tr><td>influencer dinner + brand dinner</td><td>70 + 30</td><td>-</td><td>Small in Google, but "brand dinner" = 518 AI searches/mo, uncontested.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout opp" style="margin-top:28px;">
+      <b>The pattern across all three tables:</b> nearly everything is KD 21 or below, or unscored, while the transactional terms carry CPCs of $4.78 to $14.28. Advertisers already price this demand as valuable; organic competition has not arrived. That gap is the opportunity.
+    </div>
+  </div>
+</section>
+
+<!-- =================== 06 COMPETITIVE =================== -->
+<section id="competitive">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">06 · Who Owns These SERPs Today</span>
+    </div>
+    <h2>Twelve searches.<br><em class="display-italic">No owner.</em></h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">We pulled the live page-one results for twelve target queries on August 11. The pattern repeats everywhere: hobby content on the informational side, generic city pages on the transactional side, and nothing in between.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Who ranks</th><th>Where</th><th>What that tells us</th></tr></thead>
+      <tbody>
+        <tr><td><b>takeachef.com</b> (marketplace)</td><td>#1 on every "hire a chef" query tested (dinner party, corporate x2, hire-for-party)</td><td>Ranks with generic programmatic city pages: its #1 for "private chef for corporate event" is a Philadelphia page that never says "corporate". Zero supper-club, founder, influencer or client-appreciation content in its 350-keyword occasion footprint. Its blind spot is exactly this brief.</td></tr>
+        <tr><td><b>Reddit, Medium, Substack, Pinterest</b></td><td>#1 or top-4 on "client appreciation dinner ideas", "how to host a supper club", "hire a chef for a dinner party"</td><td>UGC ranking on money-adjacent queries is the classic weak-SERP signal. A 2016 personal blog holds #7 on client appreciation.</td></tr>
+        <tr><td><b>foundersdinner.org, an Instagram page with 380 followers, a UK events site</b></td><td>Top 10 for "founder dinners" (US)</td><td>The category is so unformed that Google fills page one with fragments. The People-Also-Ask "What is a founders event?" is currently answered by a population-genetics paper.</td></tr>
+        <tr><td><b>Jon Levy</b> (author, one person)</td><td>Owns "influencer dinner party" via his personal brand + a 2013 Forbes piece</td><td>One commercial result exists in the whole SERP (a PR agency's portfolio). The buyer intent (brands and PR teams hosting creator dinners) has no serving page anywhere.</td></tr>
+        <tr><td><b>thesupperclubinc.com</b></td><td>#1 for "supper club miami" with a chapter page that has an empty meta description</td><td>Chefpost's home market is held by a near-empty page, a 2017 blog post at #7, and a tiny local service at #8. No current "Miami supper clubs" editorial hub exists at all.</td></tr>
+        <tr><td><b>Restaurant venues only</b></td><td>Entire top 10 of "private dining experience miami"</td><td>The at-home, private-chef interpretation of private dining is 100% unserved. The related searches "cheap private dining experience miami" and "...cost" have no answer.</td></tr>
+        <tr><td><b>intentionalhospitality.com, milehighcook.net</b></td><td>#7 on "how to start a supper club" (published Jan 2026); #6-7 on two hire-a-chef SERPs (published 3 days before our pull)</td><td>Proof of entry speed: fresh, targeted content ranks here in days to weeks, not months.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout" style="margin-top:28px;">
+      <b>AI Overviews are present on 7 of the 12 SERPs</b>, and they cite Instagram reels, TikToks, Medium posts and hobby blogs. No business has claimed the citation surface on any of the twelve. Google is answering these questions without an authoritative source to lean on, which is precisely the condition under which a well-structured page becomes the cited source quickly.
+    </div>
+  </div>
+</section>
+
+<!-- =================== 07 LLM (dark) =================== -->
+<section id="llm" class="dark">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">07 · The AI Answer Test</span>
+    </div>
+    <h2>Three citations.<br>Out of <em class="display-italic">eighteen</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Six occasion prompts, three live models (GPT-5.5 with web search, Gemini 3.6 Flash with web search, Perplexity Sonar Pro), August 11. Same methodology as the flagship monthly test.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="callout" style="margin-bottom:24px;">
+      <b>THE VERBATIM PROMPTS</b> <span class="mono" style="font-size:12px;">· user_prompt · web_search=true · identical string to all 3 models</span>
+      <ol style="margin-top:14px; line-height:1.9; font-family:var(--serif);">
+        <li>How do I host a founder dinner for my startup community? Any companies that can handle the chef and food?</li>
+        <li>I want to start a paid supper club at my home in Miami. How do I find a professional chef for it?</li>
+        <li>What is the best way to organize a brand dinner for influencers and creators? Who can provide the chef?</li>
+        <li>How much does it cost to hire a private chef for a dinner party of 10 people?</li>
+        <li>Best platforms to book a private chef for a corporate event in South Florida</li>
+        <li>What companies organize private dining experiences for client appreciation dinners?</li>
+      </ol>
+    </div>
+
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Prompt</th><th>GPT-5.5</th><th>Gemini 3.6</th><th>Sonar Pro</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Founder dinner + chef</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td>2 · Paid supper club, Miami</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td>3 · Brand dinner for creators</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td>4 · Cost, dinner party of 10</td><td>✓ only price source cited</td><td>-</td><td>✓ cited</td></tr>
+        <tr><td>5 · Corporate platforms, South Florida</td><td>-</td><td>-</td><td>✓ "Best local Miami-specific option"</td></tr>
+        <tr><td>6 · Client appreciation dinners</td><td>-</td><td>-</td><td>-</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="two-col" style="margin-top:28px;">
+      <div class="callout opp">
+        <b>The 3 that hit are the proven engine working.</b> GPT-5.5 answered the cost prompt with $65 to $150 per person and $1,200 to $1,800 all-in, quoting chefpost.com/private-chef-cost as its only price citation. Perplexity ranked Chefpost "Best local Miami-specific option" from /private-chef-miami. The AI mentions database tells the same story: 26 recorded Chefpost citations, every single one a cost question, 18 of them via the cost page.
+      </div>
+      <div class="callout warn">
+        <b>The 15 that missed are the brief.</b> On the Miami supper-club prompt, in Chefpost's own city, Perplexity named fifteen competitors and not Chefpost. GPT answered with Florida cottage-food law and Miami-Dade zoning, citing no marketplace at all: an empty citation slot for a "start a supper club in Florida: legality plus chef" guide. On founder dinners, Perplexity cited zero vendors of any kind. On client appreciation, GPT cited a tiny site and explained why: it "specifically mentions client appreciation dinners". Exact-phrase pages with concrete numbers get cited. That is the whole playbook.
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px;">
+      <b>Model-by-model read:</b> Gemini scored 0 of 6 and cites whatever ranks in Google, so Gemini visibility arrives with the Google rankings. Perplexity is Chefpost's friendliest surface (2 of 6). ChatGPT's internal searches on these prompts included "private chef marketplace corporate dinners United States startup founder dinner": it is actively looking for the page this report proposes, and not finding it.
+    </div>
+  </div>
+</section>
+
+<!-- =================== 08 THE PLAN =================== -->
+<section id="plan" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">08 · The Content Plan</span>
+    </div>
+    <h2>Two pillars, eight pages,<br>one <em class="display-italic">authority loop</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Every deliverable from the brief: pillar pages, service pages, local landings, supporting articles, FAQs, and the internal-linking rules that keep them from competing with each other.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="sub-eyebrow">Pillar A · Supper Clubs (today's traffic)</div>
+    <div class="url-group">
+      <h4>Upgrade the ranking post into the category pillar</h4>
+      <p>Keep the URL that already ranks #1 (/blog/the-benefits-of-hosting-regular-in-person-events). Retitle to "What Is a Supper Club? How to Host One at Home", restructure with an H2 per People-Also-Ask question (what qualifies, format, typical menu, can you make money, club vs restaurant), expand past 2,000 words, add a per-seat price block and FAQ schema. Target: the 5,400/mo head term it already touches.</p>
+      <div class="url-list">
+        <span><code>How to start a supper club (+ Florida legality: cottage food, zoning)</code> <span class="cnt">140+140/mo · GPT cites law, no vendor</span></span>
+        <span><code>Supper club ideas and themes</code> <span class="cnt">140/mo</span></span>
+        <span><code>How much does a supper club cost per seat</code> <span class="cnt">clones the cost-page engine</span></span>
+        <span><code>Supper club vs dinner party vs restaurant</code> <span class="cnt">definitional tails</span></span>
+      </div>
+      <div class="group-fix"><b>Local pair:</b> a "Supper Clubs in Miami" scene guide (480/mo, June spike to 1,900, #1 today is an empty-description page) + "Private dining experience at home in Miami" (the entire current SERP is restaurant venues). NYC versions follow once Miami proves the template.</div>
+    </div>
+
+    <div class="sub-eyebrow" style="margin-top:32px;">Pillar B · Founder &amp; Brand Dinners (the land grab)</div>
+    <div class="url-group">
+      <h4>Own the vocabulary before the volume arrives</h4>
+      <p>Service-plus-guide pages, each leading with a definition (the PAA slots are literally unfilled), a hosting playbook, a price table, and a booking CTA. Diana's PR run uses the same phrases so interviews, backlinks and AI answers reinforce the pages.</p>
+      <div class="url-list">
+        <span><code>/founder-dinners</code> <span class="cnt">70/mo growing · zero competition · GPT is searching for exactly this page</span></span>
+        <span><code>/brand-dinners (brand + influencer + creator)</code> <span class="cnt">518 AI searches/mo uncontested</span></span>
+        <span><code>/client-appreciation-dinners</code> <span class="cnt">exact-phrase pages get cited: proven Aug 11</span></span>
+        <span><code>/corporate-dinner-party-chef</code> <span class="cnt">takeachef ranks #1 with a page that never says corporate</span></span>
+      </div>
+      <div class="group-fix"><b>Cost extensions (highest AI leverage):</b> add per-headcount blocks ("private chef for 30 / 50 / 100 people") to the cost guide and the corporate page. "How much is a private chef for 100 people" appears in the PAA of two SERPs and in Chefpost's own AI-mentions log, with no owner.</div>
+    </div>
+
+    <div class="sub-eyebrow" style="margin-top:32px;">The hub, the FAQs, the links</div>
+    <div class="three-col">
+      <div class="callout">
+        <b>Rebuild /events as the Events hub.</b> Today it is 255 words with no H1 and no schema, yet it already ranks #67 for "chef for a dinner party" ($14.28 CPC). It becomes the navigation answer from the Aug 5 call: one hub linking bachelorette, founder, brand, client-appreciation, corporate and supper-club pages, with photo place-cards.
+      </div>
+      <div class="callout">
+        <b>FAQ schema from the PAA bank.</b> Every page ships 4 to 6 questions pulled verbatim from the People-Also-Ask data in this report (full bank in the Appendix). PAA, AI Overviews and LLM answers draw from the same well: one block of markup serves all three.
+      </div>
+      <div class="callout">
+        <b>Internal linking rules.</b> Hub-and-spoke with breadcrumbs: money pages receive, articles support. Every article canonicalizes normally but links its money page in the first screen of copy, exactly the discipline agreed on the Aug 5 call. Blogs never compete with landings for the same head term.
+      </div>
+    </div>
+
+    <div class="callout opp" style="margin-top:28px;">
+      <b>The authority loop that makes this compound.</b> Diana is already being interviewed on this topic. Three standing asks per placement: the exact phrase ("founder dinners", "supper club") in the piece, a dofollow link to the matching Chefpost page with that anchor, and a quote from Diana the page itself repeats. Add the /media press page (modeled on Food Fire Knives) to collect every placement, and run the first Chefpost-curated founder dinner in Miami as the proof event: photos, an attendee review with the phrase in it, and a recap post per event. The Female Startup Club newsletter link (Aug 7, dofollow) is the first brick of exactly this wall.
+    </div>
+  </div>
+</section>
+
+<!-- =================== 09 ROADMAP =================== -->
+<section id="roadmap">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">09 · Priorities, Impact vs Effort</span>
+    </div>
+    <h2>What to do,<br>in <em class="display-italic">order</em>.</h2>
+    <p class="lede" style="margin-top:18px; max-width:760px;">Three sprints. Sprint 0 is repairs (hours of work, immediate effect). Sprints 1 and 2 are the category build, sequenced by impact against difficulty and by the September and November seasonal windows.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="roadmap">
+      <div class="road-col">
+        <div class="dot"></div>
+        <div class="label">SPRINT 0 · THIS WEEK · REPAIRS</div>
+        <ul>
+          <li><span class="check"></span>Fix the www redirect: remove :3000 so www 301s to https://chefpost.com<span class="pri">P0 · Abdul</span></li>
+          <li><span class="check"></span>GA4: instrument customer forms + WhatsApp clicks; point key events at events that actually fire<span class="pri">P0</span></li>
+          <li><span class="check"></span>Request reindex of /cooking-classes (stale "Coming Soon" snippet)<span class="pri">P1</span></li>
+          <li><span class="check"></span>Noindex or build /yacht-services; noindex dev.chefpost.com<span class="pri">P1</span></li>
+          <li><span class="check"></span>Ship llms.txt<span class="pri">P1</span></li>
+          <li><span class="check"></span>Speed brief for Abdul: 1,226 KiB unused JS is the lever, not images<span class="pri">P1</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="dot"></div>
+        <div class="label">SPRINT 1 · WEEKS 1-2 · CLAIM</div>
+        <ul>
+          <li><span class="check"></span>Upgrade the 2024 post into the Supper Club pillar (retitle, PAA H2s, price block, FAQ schema)<span class="pri">P0</span></li>
+          <li><span class="check"></span>Publish /founder-dinners (guide + service + price table)<span class="pri">P0</span></li>
+          <li><span class="check"></span>Publish Supper Clubs in Miami guide<span class="pri">P1</span></li>
+          <li><span class="check"></span>Publish /client-appreciation-dinners + /corporate-dinner-party-chef<span class="pri">P1</span></li>
+          <li><span class="check"></span>Rebuild /events as the hub linking all occasion pages<span class="pri">P1</span></li>
+          <li><span class="check"></span>Publish "team dinner ideas" before September (480/mo jumps to 1,300)<span class="pri">P1 · deadline</span></li>
+        </ul>
+      </div>
+      <div class="road-col">
+        <div class="dot"></div>
+        <div class="label">SPRINT 2 · WEEKS 3-6 · COMPOUND</div>
+        <ul>
+          <li><span class="check"></span>Publish /brand-dinners, how-to-start-a-supper-club (+ Florida legality), per-seat cost article<span class="pri">P1</span></li>
+          <li><span class="check"></span>Per-headcount cost blocks (30/50/100 people) on cost + corporate pages<span class="pri">P1</span></li>
+          <li><span class="check"></span>Launch /media press page; anchor-text ask in every Diana interview<span class="pri">P1</span></li>
+          <li><span class="check"></span>First Chefpost-curated founder dinner in Miami + recap content + GBP posts<span class="pri">P2</span></li>
+          <li><span class="check"></span>Seasonal: corporate murder mystery + holiday supper club content live by Oct 1<span class="pri">P2</span></li>
+          <li><span class="check"></span>Add these 6 prompts to the monthly LLM test (baseline 3/18, target 8/18 by November)<span class="pri">P2</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:32px;">
+      <b>How we will know it is working.</b> Four dials, checked monthly: (1) the six-prompt AI matrix above (3/18 today), (2) impressions on "supper", "founder" and "dinner party" query families in Search Console (near zero today, so every gain is visible), (3) position of the supper-club pillar on "what is a supper club" (long-tail #1 today, head-term unranked), and (4) GA4 key events, which finally start counting the day Sprint 0 lands. Existing commitments from the Aug 3 audit (Miami cannibalization merge, GBP execution, link outreach) continue in parallel and are unchanged by this plan.
+    </div>
+  </div>
+</section>
+
+<!-- =================== 10 APPENDIX =================== -->
+<section id="appendix" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <span class="bar"></span>
+      <span class="eyebrow">10 · Appendix</span>
+    </div>
+    <h2>Sources, prompts,<br>and the <em class="display-italic">question bank</em>.</h2>
+
+    <div class="ornament">· · ·</div>
+
+    <details class="acc">
+      <summary>The verbatim AI prompts and models</summary>
+      <div>
+        <p>Run August 11, 2026 via live API. Models: GPT-5.5 (web search on), Gemini 3.6 Flash (web search on), Perplexity Sonar Pro. Identical strings to all three:</p>
+        <ol>
+          <li>How do I host a founder dinner for my startup community? Any companies that can handle the chef and food?</li>
+          <li>I want to start a paid supper club at my home in Miami. How do I find a professional chef for it?</li>
+          <li>What is the best way to organize a brand dinner for influencers and creators? Who can provide the chef?</li>
+          <li>How much does it cost to hire a private chef for a dinner party of 10 people?</li>
+          <li>Best platforms to book a private chef for a corporate event in South Florida</li>
+          <li>What companies organize private dining experiences for client appreciation dinners?</li>
+        </ol>
+        <p>These six join the frozen five-prompt flagship set for the monthly KPI run. Baseline for the new set: 3 of 18.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>People-Also-Ask question bank (verbatim, grouped)</summary>
+      <div>
+        <p><b>Supper club mechanics:</b> Can you make money from a supper club? · What is the format of a supper club? · What qualifies a supper club? · What is a typical supper club menu? · How to host a supper club at home? · How does a supper club work? · What makes a supper club different from a restaurant? · Are there any supper clubs in Florida?</p>
+        <p><b>Founder and business dinners:</b> What is a founders dinner? · What is a founders event? · Who pays for a business dinner? · What are some good client appreciation ideas? · What are some fun ideas for client events? · How to show appreciation to your clients?</p>
+        <p><b>Influencer and brand:</b> What is an influencer dinner? · How do I get invited to influencer events? · What are some good company dinner ideas?</p>
+        <p><b>Cost (the dominant transactional theme, 11 questions across 4 SERPs):</b> How much does a private chef cost for a meal? · How much is a private chef for 100 people? · How much is a private chef for 30 people? · How much does a private chef cost for an evening? · How much do private chefs cost for meal prep? · How much does a dinner party cost? · Is hiring a personal chef worth the cost? · Can you rent a private chef? · How can I hire a private chef?</p>
+        <p><b>Miami:</b> What restaurants in Miami are good for private events? · What are some unique dining experiences in Miami? · What is a private dining experience?</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>Data sources and method notes</summary>
+      <div>
+        <ul>
+          <li>Search volumes and CPC: Google Ads live data, US, August 11 2026. Keyword difficulty and intent: DataForSEO Labs. Unscored KD reported as a dash.</li>
+          <li>Trends: Google Trends US, five-year window, shared index scale; yearly averages computed from weekly data.</li>
+          <li>SERPs: DataForSEO live organic, depth 10 to 20, US and Miami geolocation, August 11.</li>
+          <li>AI answers: DataForSEO LLM endpoint, live, web search enabled. AI search volumes: DataForSEO AI keyword data, July 2026 month. Citation-field data: LLM mentions database, ChatGPT platform, US.</li>
+          <li>Site status: Search Console API (sc-domain property, data through Aug 9), GA4 API (property 255030659), live crawls and Lighthouse (desktop) on August 11.</li>
+          <li>Known caveats: "press dinner" volume (590) is a news artifact of the April correspondents' dinner and was excluded. "Brand dinner ideas" is a recipe-intent SERP; the marketing intent lives in "brand activation dinner" phrasing. DataForSEO's ranked-keyword index lags live SERPs by 2 to 6 weeks, so the August 4 releases are not yet reflected in its position data; Search Console is treated as ground truth throughout.</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="by-line" style="margin-top:40px;">
+      <span>Prepared by <b>ThinkFlowLabs</b> for Chefpost</span>
+      <span>·</span>
+      <span>August 11, 2026</span>
+      <span>·</span>
+      <span>Confidential: this page is noindexed and shared by link only</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
