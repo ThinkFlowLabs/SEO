@@ -14,6 +14,7 @@ Each subfolder of this repo is one engagement. Pages are blocked from search eng
 | MB Clean Solutions | [`/mb-clean-solutions-audit/`](./mb-clean-solutions-audit/) | https://thinkflowlabs.github.io/SEO/mb-clean-solutions-audit/ |
 | MB Clean Solutions (Avances Mar-Jun 2026) | [`/mb-clean-solutions-progreso/`](./mb-clean-solutions-progreso/) | https://thinkflowlabs.github.io/SEO/mb-clean-solutions-progreso/ |
 | MB Clean Solutions (Avances Ene-Ago 2026) | [`/mb-clean-solutions-avances-2026/`](./mb-clean-solutions-avances-2026/) | https://thinkflowlabs.github.io/SEO/mb-clean-solutions-avances-2026/ |
+| MB Clean Solutions (Propuesta Mensual Ago 2026) | [`/mb-clean-solutions-propuesta-2026/`](./mb-clean-solutions-propuesta-2026/) | https://thinkflowlabs.github.io/SEO/mb-clean-solutions-propuesta-2026/ |
 | ThinkFlow Labs (own brand) | [`/thinkflowlabs-audit/`](./thinkflowlabs-audit/) | https://thinkflowlabs.github.io/SEO/thinkflowlabs-audit/ |
 | Medical Travel Colombia | [`/medical-travel-colombia-audit/`](./medical-travel-colombia-audit/) | https://thinkflowlabs.github.io/SEO/medical-travel-colombia-audit/ |
 | Chefpost | [`/chefpost-audit/`](./chefpost-audit/) | https://thinkflowlabs.github.io/SEO/chefpost-audit/ |
