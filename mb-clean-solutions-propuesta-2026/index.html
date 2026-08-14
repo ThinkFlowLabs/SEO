@@ -124,6 +124,19 @@
   section.dark .road-col{color:var(--ink);}
   @media (max-width:860px){.road{grid-template-columns:1fr;}}
 
+  .tbl-wrap{margin-top:30px;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--paper);}
+  .tbl-scroll{overflow-x:auto;}
+  table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:640px;}
+  table.tbl th{text-align:left;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:13px 18px;background:var(--cream-2);border-bottom:1px solid var(--line);}
+  table.tbl td{padding:13px 18px;border-bottom:1px solid var(--line-2);color:var(--ink-2);vertical-align:top;line-height:1.45;}
+  table.tbl tbody tr:last-child td{border-bottom:0;}
+  table.tbl td.site{color:var(--ink);font-weight:600;width:23%;}
+  table.tbl td.cost{font-variant-numeric:tabular-nums;width:24%;color:var(--ink);font-weight:500;}
+  table.tbl tr.group td{background:var(--blue-sft);color:var(--blue-dk);font-weight:600;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:10px 18px;border-bottom:1px solid var(--line);}
+  table.tbl tr.free td.cost{color:var(--green);}
+
+  .total-strip{margin-top:18px;background:linear-gradient(90deg,var(--blue) 0%,var(--blue-dk) 100%);color:#fff;border-radius:var(--r-md);padding:15px 22px;font-size:14.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-align:center;}
+
   .price-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-xl);padding:44px;box-shadow:var(--shadow-md);margin-top:44px;display:grid;grid-template-columns:1fr 1.4fr;gap:44px;align-items:start;}
   .price-card .amount{font-family:var(--serif);font-size:clamp(52px,6vw,84px);font-weight:400;letter-spacing:-.03em;line-height:1;color:var(--blue-dk);font-variant-numeric:tabular-nums;}
   .price-card .per{font-size:15px;color:var(--muted);margin-top:6px;}
@@ -152,22 +165,41 @@
     .hero-side .severity-strip{margin:18px -24px -24px;padding:12px 24px;}
     .finding,.road-col,.kpi,.kpi-grid,.callout,.price-card,.hero-side,.section-eyebrow{box-shadow:none;page-break-inside:avoid;}
     h2,h3,.section-eyebrow,p.lede{page-break-after:avoid;}
-    #contexto,#alcance,#equipo,#inversion{page-break-before:always;border-top:0;}
+    #contexto,#alcance,#backlinks,#equipo,#inversion{page-break-before:always;border-top:0;}
+    .hero-side dl{gap:9px 14px;}
+    #backlinks{padding:12px 0;}
+    #backlinks .callout{margin:9px 0!important;padding:9px 14px;}
+    #backlinks .callout h4{font-size:12.5px;margin-bottom:3px;}
+    #backlinks .callout p{font-size:10px;line-height:1.38;}
+    #backlinks p.lede{font-size:11.4px;margin-bottom:.35em;}
+    .tbl-wrap{margin-top:9px;box-shadow:none;page-break-inside:auto;}
+    .tbl-scroll{overflow:visible;}
+    table.tbl{font-size:8.6px;min-width:0;}
+    table.tbl th{font-size:7.4px;padding:4px 8px;letter-spacing:.1em;}
+    table.tbl td{padding:3px 8px;line-height:1.26;}
+    table.tbl tr.group td{font-size:7.8px;padding:3px 8px;letter-spacing:.09em;}
+    table.tbl tr{page-break-inside:avoid;}
+    #backlinks .small{font-size:8.4px;margin-top:5px;}
+    .total-strip{margin-top:12px;padding:9px 16px;font-size:11.5px;}
     .kpi{padding:14px 16px 12px;} .kpi .num{font-size:26px;} .kpi .lbl{font-size:11.5px;}
     .kpi-grid{gap:12px;margin-top:26px;}
     .callout{padding:14px 18px;margin:16px 0;}
     #alcance .wrap>div[style]{margin-top:14px!important;}
-    .finding{padding:10px 14px;margin-bottom:7px;gap:12px;grid-template-columns:36px minmax(0,1fr);}
-    .finding h4{font-size:14px;margin-bottom:3px;} .finding .num{font-size:21px;}
-    .finding p,.finding ul{font-size:11.5px;line-height:1.42;}
-    .finding ul{margin-top:4px;} .finding ul li{margin-bottom:2px;}
+    .finding{padding:8px 13px;margin-bottom:6px;gap:11px;grid-template-columns:32px minmax(0,1fr);}
+    .finding h4{font-size:13px;margin-bottom:2px;} .finding .num{font-size:19px;}
+    .finding p,.finding ul{font-size:10.6px;line-height:1.36;}
+    .finding ul{margin-top:3px;padding-left:1em;} .finding ul li{margin-bottom:1px;}
+    .finding .freq{margin-left:7px;} .pill{font-size:10px;padding:2px 8px;}
     .road{grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}
     .road-col{padding:18px 20px;} .road-col ul{font-size:12.5px;} .road-col ul li{margin-bottom:8px;}
     .road-col h3{margin:8px 0 12px;}
-    .price-card{padding:22px 26px;gap:24px;margin-top:20px;}
-    .price-card .amount{font-size:44px;}
-    .price-card ul{font-size:12.5px;} .price-card ul li{margin-bottom:7px;}
-    #inversion .callout[style]{margin-top:18px!important;}
+    .price-card{padding:18px 22px;gap:20px;margin-top:16px;}
+    .price-card .amount{font-size:38px;} .price-card .per{font-size:12.5px;}
+    .price-card ul{font-size:11.6px;} .price-card ul li{margin-bottom:5px;}
+    .price-card p.small{font-size:10.6px;line-height:1.4;}
+    #inversion .callout[style]{margin-top:14px!important;padding:12px 16px;}
+    #inversion .callout h4{font-size:13px;margin-bottom:4px;}
+    #inversion .callout p{font-size:11px;line-height:1.42;}
     footer{padding:14px 0 18px;page-break-inside:avoid;}
     footer .brand img{height:36px;width:36px;}
     footer .small{font-size:10.5px;}
@@ -183,6 +215,7 @@
     <nav>
       <a href="#contexto">Contexto</a>
       <a href="#alcance">Alcance</a>
+      <a href="#backlinks">Backlinks</a>
       <a href="#equipo">Trabajo en equipo</a>
       <a href="#inversion">Inversión</a>
     </nav>
@@ -209,8 +242,10 @@
           <dt>Posts en Google Business Profile</dt><dd>4 al mes</dd>
           <dt>Artículos blog MB Floor</dt><dd>4 al mes</dd>
           <dt>Artículos blog MB Clean</dt><dd>4 a 12 al mes</dd>
+          <dt>Fotos automáticas en los 2 GBP</dt><dd>2 por semana</dd>
           <dt>Campañas Google Ads</dt><dd>Gestión completa</dd>
           <dt>Landing pages nuevas</dt><dd>Según datos</dd>
+          <dt>Backlinks nuevos</dt><dd>Lista dirigida</dd>
           <dt>Reporte de resultados</dt><dd>Mensual</dd>
           <dt>Inversión mensual</dt><dd>$600 USD</dd>
         </dl>
@@ -277,8 +312,13 @@
       <div class="finding">
         <div class="num">4</div>
         <div>
-          <h4>Automatización de contenido y landing pages <span class="pill gray freq">Revisión continua</span></h4>
-          <p>Revisión y ejecución de la automatización de contenido, con control de calidad y supervisión humana antes de publicar. Cuando los datos muestren una oportunidad clara (volumen de búsqueda, intención comercial y posición alcanzable), se crean <strong>nuevas landing pages</strong> siguiendo el modelo de las páginas que hoy están en página 1.</p>
+          <h4>Automatizaciones: contenido, fotos en los dos perfiles y landing pages <span class="pill gray freq">Revisión continua</span></h4>
+          <p>Revisión y ejecución de la automatización de contenido, con control de calidad y supervisión humana antes de publicar.</p>
+          <ul>
+            <li><strong>Foto semanal automática en el Google Business Profile de MB Clean y en el de MB Floor</strong>: una foto real de trabajo por semana en cada perfil, publicada mediante una automatización conectada a los dos perfiles a través del <strong>API de Zernio</strong>. Se configura una vez y corre sola; lo único que necesita es que el equipo envíe las fotos.</li>
+            <li>Las fotos propias son la señal que más diferencia un perfil de otro en el mapa, y son lo único que ningún competidor puede copiar. Mantener los dos perfiles activos con material real refuerza también las reseñas y las llamadas directas.</li>
+            <li><strong>Landing pages nuevas</strong> cuando los datos muestren una oportunidad clara (volumen de búsqueda, intención comercial y posición alcanzable), siguiendo el modelo de las páginas que hoy están en página 1.</li>
+          </ul>
         </div>
       </div>
 
@@ -300,9 +340,111 @@
         <div class="num">6</div>
         <div>
           <h4>Medición, mantenimiento y reporte mensual <span class="pill green freq">Incluido</span></h4>
-          <p>Reporte mensual con los datos de Search Console, Analytics, Google Ads y las solicitudes de cotización recibidas, en el mismo formato de los reportes que ya conoces. Incluye el monitoreo técnico de los dos sitios y <strong>2 citaciones locales nuevas por mes</strong> (Yelp, Angi, Thumbtack, BBB, cámaras de comercio) para cerrar la brecha de autoridad: hoy 26 dominios de enlace frente a 133 a 260 de los competidores fuertes.</p>
+          <p>Reporte mensual con los datos de Search Console, Analytics, Google Ads y las solicitudes de cotización recibidas, en el mismo formato de los reportes que ya conoces. Incluye el monitoreo técnico de los dos sitios y <strong>2 citaciones locales nuevas por mes</strong> para cerrar la brecha de autoridad: hoy 26 dominios de enlace frente a 133 a 260 de los competidores fuertes. La lista dirigida de qué sitios se trabajan y en qué orden está en la sección 03.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BACKLINKS ================= -->
+<section id="backlinks" class="alt">
+  <div class="wrap">
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · Backlinks</span></div>
+    <h2>Backlinks: qué sitios y en qué <em>orden</em>.</h2>
+    <p class="lede">Los enlaces son hoy la brecha más grande frente a la competencia: 26 dominios de enlace contra 133 a 260 de los competidores fuertes. Esta es la lista dirigida de dónde se construyen los enlaces nuevos, con la prioridad y el costo de cada sitio.</p>
+
+    <div class="callout">
+      <h4>Cómo funciona el presupuesto de este frente</h4>
+      <p>La investigación, la definición de la lista, la redacción de los perfiles y el alta en cada sitio están incluidas en el plan mensual. Lo que varía es el costo del directorio o del citation builder que se apruebe: se paga directo al proveedor, igual que la pauta de Google Ads, y se decide sitio por sitio. Las <strong>2 citaciones nuevas por mes</strong> del frente 6 salen de esta lista y en este orden.</p>
+    </div>
+
+    <div class="tbl-wrap">
+      <div class="tbl-scroll">
+      <table class="tbl">
+        <thead>
+          <tr><th>Sitio</th><th>Por qué entra en la lista</th><th>Costo</th></tr>
+        </thead>
+        <tbody>
+          <tr class="group"><td colspan="3">Prioridad 1 · Gratuitos, se ejecutan primero</td></tr>
+          <tr class="free">
+            <td class="site">Yelp for Business</td>
+            <td>Directorio local de alta autoridad. El perfil ya existe pero aparece mezclado con la marca MB Floor: la primera tarea es reclamarlo y limpiarlo.</td>
+            <td class="cost">Gratis</td>
+          </tr>
+          <tr class="free">
+            <td class="site">Angi y Thumbtack</td>
+            <td>Los dos directorios de servicios que ya usan los competidores del pack local. El alta es gratuita; los leads de pago son opcionales.</td>
+            <td class="cost">Gratis</td>
+          </tr>
+          <tr class="free">
+            <td class="site">Bing Places, Apple Business Connect y Foursquare</td>
+            <td>Alimentan mapas, navegadores y asistentes de IA fuera de Google. Es la vía más directa para aparecer en respuestas de ChatGPT, Siri y Alexa.</td>
+            <td class="cost">Gratis</td>
+          </tr>
+          <tr class="free">
+            <td class="site">Nextdoor Business</td>
+            <td>Red de vecindarios con peso en el sur de la Florida, útil para edificios y comunidades que contratan limpieza comercial.</td>
+            <td class="cost">Gratis</td>
+          </tr>
+          <tr class="free">
+            <td class="site">Manta, Hotfrog, Cylex y ChamberofCommerce.com</td>
+            <td>Citaciones generales de cobertura amplia. Aportan la consistencia de nombre, dirección y teléfono que Google usa para validar el negocio.</td>
+            <td class="cost">Gratis</td>
+          </tr>
+
+          <tr class="group"><td colspan="3">Prioridad 2 · De pago, los de mayor relevancia por industria</td></tr>
+          <tr>
+            <td class="site">ISSA</td>
+            <td>Asociación mundial de la industria de la limpieza. Incluye ficha pública en el directorio de miembros: el enlace más relevante por temática de toda la lista, y el más barato.</td>
+            <td class="cost">95 USD al año más cuota de capítulo</td>
+          </tr>
+          <tr>
+            <td class="site">IICRC Certified Firm</td>
+            <td>Certificación de firma con ficha pública en el Global Locator, que consultan clientes comerciales y aseguradoras. Suma enlace y credencial.</td>
+            <td class="cost">199 USD al año más 25 de inscripción</td>
+          </tr>
+          <tr>
+            <td class="site">BBB, acreditación</td>
+            <td>Sello de confianza reconocido por clientes comerciales en Estados Unidos, con ficha y enlace en un dominio de autoridad alta.</td>
+            <td class="cost">Aproximadamente 500 a 700 USD al año más 75 a 175 de inscripción</td>
+          </tr>
+          <tr>
+            <td class="site">Cámara de comercio local</td>
+            <td>Se elige según la ciudad objetivo: Aventura Marketing Council 475 USD hasta 10 empleados, Doral Chamber 497, Miami-Dade Chamber 175 a 275, Greater Miami 820. Además del enlace, abren contacto con administradores de edificios.</td>
+            <td class="cost">175 a 820 USD al año, según la cámara</td>
+          </tr>
+          <tr>
+            <td class="site">BSCAI, opcional</td>
+            <td>Asociación de contratistas de servicios para edificios. Su directorio es solo para miembros, así que el valor de enlace es bajo frente al costo.</td>
+            <td class="cost">495 USD al año</td>
+          </tr>
+
+          <tr class="group"><td colspan="3">Prioridad 3 · Citation builders, para escalar volumen</td></tr>
+          <tr>
+            <td class="site">BrightLocal Citation Builder</td>
+            <td>Envío manual sitio por sitio, con control exacto de dónde se publica. Permite avanzar de a poco, sin comprometer un presupuesto anual.</td>
+            <td class="cost">3.20 USD por citación, desde 2.00 en bloques. Agregadores de datos 30 USD cada uno o 5 por 120</td>
+          </tr>
+          <tr>
+            <td class="site">Whitespark Listings</td>
+            <td>Paquetes de pago único con limpieza de listados existentes incluida. Premium cubre 35 sitios generales y 7 de industria; Comprehensive, 70 y 10.</td>
+            <td class="cost">399 a 999 USD, pago único por ubicación</td>
+          </tr>
+          <tr>
+            <td class="site">Yext, no recomendado</td>
+            <td>Cubre muchos directorios rápido, pero los listados son alquilados: si se cancela la suscripción, desaparecen. Se incluye solo como referencia.</td>
+            <td class="cost">199 a 999 USD al año por ubicación</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <p class="small" style="margin-top:12px;">Precios de referencia consultados en agosto de 2026 en las páginas oficiales de cada proveedor. Cada uno puede ajustarlos y las cuotas de membresía varían según el tamaño del negocio.</p>
+
+    <div class="callout win" style="margin-top:30px;">
+      <h4>Recomendación de arranque</h4>
+      <p>Primero los gratuitos, que ya suman una decena de dominios sin costo, y en paralelo <strong>ISSA e IICRC</strong>: son los dos enlaces más relevantes por temática de toda la lista y juntos cuestan menos de 320 USD al año. Los citation builders entran después, con BrightLocal por citación para controlar exactamente qué sitio se usa. Se mantiene además el archivo de rechazo de enlaces subido en julio, para que los dominios de baja calidad heredados no resten autoridad al trabajo nuevo.</p>
     </div>
   </div>
 </section>
@@ -310,7 +452,7 @@
 <!-- ================= LO QUE NECESITAMOS ================= -->
 <section id="equipo" class="dark">
   <div class="wrap">
-    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · Trabajo en equipo</span></div>
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · Trabajo en equipo</span></div>
     <h2>Lo que ponemos y lo que <em>necesitamos</em>.</h2>
     <p class="lede">El plan cubre toda la ejecución técnica y editorial. Hay cuatro aportes que solo el equipo de MB Clean puede dar, y ninguno toma más de unos minutos por semana.</p>
 
@@ -322,18 +464,19 @@
           <li>Investigación de keywords y planificación editorial con datos</li>
           <li>Redacción, optimización y publicación de todo el contenido</li>
           <li>Landing pages nuevas y gestión completa de Google Ads</li>
+          <li>Automatización de la foto semanal en los dos Google Business Profile</li>
           <li>Seguimiento de conversiones de punta a punta</li>
           <li>Sistema de reseñas listo para usar: enlace, QR y plantillas</li>
-          <li>Citaciones locales, monitoreo técnico y reporte mensual</li>
+          <li>Plan dirigido de backlinks, monitoreo técnico y reporte mensual</li>
         </ul>
       </div>
       <div class="road-col client">
         <span class="dot"></span><span class="label">El equipo de MB Clean aporta</span>
         <h3>Cuatro hábitos de minutos</h3>
         <ul>
-          <li><strong>Fotos reales de los trabajos</strong>: 3 a 5 por semana desde el celular, material que ningún competidor puede copiar</li>
+          <li><strong>Fotos reales de los trabajos</strong>: 3 a 5 por semana desde el celular. Alimentan los posts y la foto semanal automática de los dos perfiles, y son material que ningún competidor puede copiar</li>
           <li><strong>Pedir la reseña</strong> a cada cliente satisfecho con la plantilla y el enlace que entregamos: meta de 10 reseñas en 60 días</li>
-          <li><strong>Presupuesto de pauta</strong> pagado directo a Google</li>
+          <li><strong>Presupuestos externos</strong>: la pauta de Google Ads pagada directo a Google y, cuando se aprueben, los directorios de pago del plan de backlinks</li>
           <li><strong>Accesos</strong>: cuenta de Google Ads y WordPress de MB Floor; el resto ya lo tenemos</li>
         </ul>
       </div>
@@ -346,7 +489,8 @@
         <li><strong>Pisos: 400 a 500 USD al mes</strong>, cerrado a búsquedas exactas, muy relevantes y de intención comercial</li>
         <li><strong>Nichos nuevos (post construction, entre otros): aproximadamente 600 USD al mes</strong> para explorar y generar datos de conversión reales</li>
       </ul>
-      <p>El presupuesto se puede ajustar o pausar en cualquier momento según los resultados.</p>
+      <div class="total-strip">TOTAL: 1,000 A 1,200 USD DE PRESUPUESTO TOTAL POR MES</div>
+      <p style="margin-top:16px;">El presupuesto se puede ajustar o pausar en cualquier momento según los resultados.</p>
     </div>
   </div>
 </section>
@@ -354,7 +498,7 @@
 <!-- ================= INVERSION ================= -->
 <section id="inversion">
   <div class="wrap">
-    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · Inversión</span></div>
+    <div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">05 · Inversión</span></div>
     <h2>Un solo monto mensual, todo <em>incluido</em>.</h2>
 
     <div class="price-card">
@@ -368,11 +512,12 @@
           <li>4 posts al mes en el Google Business Profile de MB Clean, con sistema de reseñas incluido</li>
           <li>4 artículos al mes en el blog de MB Floor, nicho de pisos</li>
           <li>4 a 12 artículos al mes en el blog de MB Clean, bilingües según los datos</li>
-          <li>Automatización de contenido supervisada y landing pages nuevas según datos</li>
+          <li>Automatización de contenido supervisada, foto semanal automática en los dos Google Business Profile y landing pages nuevas según datos</li>
           <li>Gestión completa de Google Ads en MB Floor, optimizado para conversión, con pruebas en post construction cleaning</li>
-          <li>Seguimiento de conversiones, 2 citaciones locales al mes, monitoreo técnico y reporte mensual</li>
+          <li>Plan dirigido de backlinks: lista priorizada de sitios, redacción de perfiles y alta, con 2 citaciones nuevas al mes</li>
+          <li>Seguimiento de conversiones, monitoreo técnico de los dos sitios y reporte mensual</li>
         </ul>
-        <p class="small" style="margin-top:14px;">No incluido: la pauta publicitaria, que se paga directo a Google (pisos: 400 a 500 USD al mes; nichos nuevos como post construction: aproximadamente 600 USD al mes) y las membresías opcionales de directorios de pago como la acreditación de BBB.</p>
+        <p class="small" style="margin-top:14px;">No incluido: la pauta publicitaria, que se paga directo a Google (pisos: 400 a 500 USD al mes; nichos nuevos como post construction: aproximadamente 600 USD al mes, para un total de 1,000 a 1,200 USD al mes) y el costo de los directorios y citation builders de pago que se aprueben en el plan de backlinks.</p>
       </div>
     </div>
 
