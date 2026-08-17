@@ -1,0 +1,399 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chefpost: Competitive Review, August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1014; --ink-2:#1F2630; --muted:#5E6675;
+    --line:#E6DFD2; --line-2:#EFE7D8;
+    --cream:#FBF6EB; --cream-2:#F4ECD9; --paper:#FFFBF1;
+    --coral:#E63946; --coral-dk:#BC2C2C; --coral-sft:#FBE3E2;
+    --gold:#C89A4A; --gold-sft:#F6E7C7;
+    --green:#1F7A6A; --green-sft:#DAEEE7;
+    --amber:#B45309; --amber-sft:#FFE9BD;
+    --r-sm:4px; --r-md:10px; --r-lg:18px; --r-xl:26px;
+    --shadow-sm:0 1px 0 rgba(20,18,12,.06);
+    --shadow-md:0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --display:"Fraunces","Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--cream);
+    font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  h1,h2,h3,h4{font-family:var(--display);margin:0;color:var(--ink)}
+  h1{font-size:clamp(48px,8vw,96px);font-weight:380;letter-spacing:-.03em;line-height:1.02}
+  h2{font-size:clamp(34px,4.6vw,58px);font-weight:400;letter-spacing:-.022em;line-height:1.06}
+  h3{font-size:clamp(21px,2.2vw,27px);font-weight:500;letter-spacing:-.012em;line-height:1.2}
+  h4{font-size:18px;font-weight:600;letter-spacing:-.005em}
+  p{margin:0 0 1.05rem;color:var(--ink-2)}
+  strong{font-weight:600;color:var(--ink)}
+  .display-italic{font-style:italic;color:var(--coral-dk)}
+
+  .eyebrow{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--coral-dk);margin-bottom:18px}
+
+  .hero{background:
+      radial-gradient(60% 80% at 80% 0%, #FBE3E2 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-bottom:1px solid var(--line);padding:96px 0 72px}
+  .hero .lede{font-size:20px;max-width:66ch;margin-top:26px;color:var(--ink-2)}
+  .by-line{margin-top:34px;font-size:13.5px;color:var(--muted);letter-spacing:.01em}
+
+  section{padding:78px 0;border-bottom:1px solid var(--line)}
+  section.alt{background:var(--paper)}
+  section:last-of-type{border-bottom:0}
+  .sec-head{max-width:74ch;margin-bottom:34px}
+  .sec-head p{font-size:17.5px;margin-top:18px}
+
+  .grid{display:grid;gap:20px;margin:30px 0}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+    padding:26px 28px;box-shadow:var(--shadow-sm)}
+  .card h3,.card h4{margin-bottom:.5rem}
+  .card p:last-child{margin-bottom:0}
+
+  .metric{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px 24px}
+  .metric .n{font-family:var(--display);font-size:44px;font-weight:400;line-height:1;
+    letter-spacing:-.03em;display:block}
+  .metric .l{font-size:13px;color:var(--muted);margin-top:10px;display:block;line-height:1.45}
+  .n.up{color:var(--green)} .n.dn{color:var(--coral-dk)} .n.am{color:var(--amber)}
+
+  .callout{background:var(--coral-sft);border:1px solid #F4C7C5;border-radius:var(--r-md);
+    padding:22px 26px;font-size:15.5px;color:var(--coral-dk);margin:26px 0}
+  .callout strong{color:var(--coral-dk)}
+  .callout .lab{display:block;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+    font-weight:600;margin-bottom:8px}
+  .callout.good{background:var(--green-sft);border-color:#B9DED4;color:#155E51}
+  .callout.good strong{color:#155E51}
+  .callout.warn{background:var(--amber-sft);border-color:#F0D9A6;color:#8A4A08}
+  .callout.warn strong{color:#8A4A08}
+
+  .tw{overflow-x:auto;margin:28px 0;border-radius:var(--r-md)}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;
+    border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;min-width:600px}
+  th{text-align:left;font-weight:600;padding:14px 16px;background:var(--cream-2);
+    border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  td{padding:14px 16px;border-bottom:1px solid var(--line-2);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .us{font-weight:700}
+  .x{color:var(--coral-dk);font-weight:700}
+  .one{color:var(--green);font-weight:700}
+
+  ol.steps{counter-reset:s;list-style:none;padding:0;margin:32px 0}
+  ol.steps li{counter-increment:s;position:relative;padding:22px 0 22px 66px;
+    border-bottom:1px solid var(--line-2)}
+  ol.steps li:last-child{border-bottom:0}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:20px;width:42px;height:42px;
+    border-radius:50%;background:var(--coral);color:#fff;font-family:var(--display);font-weight:500;
+    display:flex;align-items:center;justify-content:center;font-size:19px}
+  ol.steps p{margin:.35rem 0 0}
+
+  .check{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line-2)}
+  .check:last-child{border-bottom:0}
+  .check .dot{flex:0 0 22px;height:22px;border-radius:50%;background:var(--green-sft);
+    color:var(--green);display:flex;align-items:center;justify-content:center;font-size:13px;
+    font-weight:700;margin-top:2px}
+  .check p{margin:.3rem 0 0;font-size:15.5px}
+
+  footer{padding:60px 0 90px;color:var(--muted);font-size:13.5px;background:var(--paper)}
+  .theme{position:fixed;top:16px;right:16px;background:#fff;border:1px solid var(--line);
+    color:var(--muted);border-radius:999px;padding:8px 15px;font-size:12px;cursor:pointer;
+    font-family:var(--sans);z-index:20;box-shadow:var(--shadow-sm)}
+  @media print{.theme{display:none}section{break-inside:avoid;page-break-inside:avoid}}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Chefpost &middot; Competitive review &middot; August 2026</div>
+    <h1>Where we stand,<br>and what we <span class="display-italic">take</span> next</h1>
+    <p class="lede">We measured seven competing chef marketplaces against Chefpost across search rankings, AI answers, local listings and backlinks. This covers what we shipped this month, what the competition does that works, and the openings we can reach.</p>
+    <p class="by-line">Prepared by ThinkFlow Labs &middot; Sources: DataForSEO, Semrush, Google Search Console, and live tests run in ChatGPT with web search enabled</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Shipped this month</div>
+      <h2>What we built in August</h2>
+      <p>Eight releases went live, all verified in production. The work falls into three groups: winning back Miami, rebuilding how the site is navigated, and making it fast.</p>
+    </div>
+
+    <div class="grid g4">
+      <div class="metric"><span class="n up">13</span><span class="l">internal links the Services menu now gives every page, where it previously gave none</span></div>
+      <div class="metric"><span class="n up">96%</span><span class="l">smaller page weight on Events, from 1,054 KB to 42 KB</span></div>
+      <div class="metric"><span class="n up">54%</span><span class="l">less image weight sitewide, from 76.6 MB to 35.6 MB</span></div>
+      <div class="metric"><span class="n up">0.5s</span><span class="l">for a returning visitor to load a page, against roughly 13 seconds before</span></div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4>Miami is now defended by the right page</h4>
+        <div class="check"><span class="dot">&check;</span><p>A blog post from 2023 was outranking our own Miami page on every commercial search. The page has been rewritten to absorb what made that post work, including named chefs with their specialities, and the post now points search engines to the page.</p></div>
+        <div class="check"><span class="dot">&check;</span><p>The page now uses the words customers actually search, including <strong>hire</strong>, which appeared nowhere on the site before.</p></div>
+      </div>
+      <div class="card">
+        <h4>The site is easier to navigate and to find</h4>
+        <div class="check"><span class="dot">&check;</span><p>The Services menu now lists thirteen destinations in three groups. It also turned out this menu had never been visible to search engines, which is now corrected.</p></div>
+        <div class="check"><span class="dot">&check;</span><p>Areas We Serve rebuilt with photography for all eighteen cities, and Events rebuilt from a 255 word page with no main heading into nine bookable occasions.</p></div>
+        <div class="check"><span class="dot">&check;</span><p>A placeholder page that had sat unfinished was retired and redirected properly.</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Speed, measured before and after</h4>
+      <div class="check"><span class="dot">&check;</span><p>Photographs were not being cached by browsers at all, so every visit re-downloaded everything. Fixed.</p></div>
+      <div class="check"><span class="dot">&check;</span><p>Sixty six oversized image files were recompressed with no visible loss of quality, verified side by side at the size they appear on screen.</p></div>
+      <div class="check"><span class="dot">&check;</span><p>The chef search page made two data requests one after the other. They now run at the same time.</p></div>
+      <div class="check"><span class="dot">&check;</span><p>Every photograph now shows a preview while it loads instead of an empty block, and every one of the site's 57 pages was checked at four screen widths.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The competitive picture</div>
+      <h2>The market leader uses the same approach we do</h2>
+      <p>This is the most useful finding in the study, because it tells us the structure we have been building is the right one.</p>
+    </div>
+
+    <p>Take a Chef is the largest competitor by a wide margin. They rank for 5,229 searches and hold 306 first place positions. Crucially, they do not win from their homepage. They win with <strong>city pages</strong>, the same kind of page we have been publishing.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Search</th><th class="n">Monthly searches</th><th>The page Take a Chef ranks</th><th class="n">Position</th></tr></thead>
+        <tbody>
+          <tr><td>personal chef</td><td class="n">9,900</td><td>their San Diego city page</td><td class="n">7</td></tr>
+          <tr><td>private chef near me</td><td class="n">8,100</td><td>their New Braunfels city page</td><td class="n">5</td></tr>
+          <tr><td>personal chef near me</td><td class="n">8,100</td><td>their Downers Grove city page</td><td class="n">7</td></tr>
+          <tr><td>personal cook near me</td><td class="n">8,100</td><td>their South Bend city page</td><td class="n">9</td></tr>
+          <tr><td>hire a chef</td><td class="n">2,400</td><td>their Houston city page</td><td class="n">2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout good">
+      <span class="lab">What this confirms</span>
+      <p>A page about a town of 90,000 people ranks fifth in the country for <strong>private chef near me</strong>. City pages are not a side project for the market leader, they are the engine. Our library of eighteen city pages and twelve Miami neighbourhood pages is the correct foundation. What those pages have been missing is support: internal links pointing at them, structured data, and clear navigation paths. That is where this month's work went, and where the next phase should go.</p>
+    </div>
+
+    <p>There is a second competitor, Hire a Chef, that ranks everything from its homepage with only 427 pages in total. It is worth knowing they exist, but they earn roughly a quarter of what Take a Chef earns, and a homepage cannot rank for Miami, Hoboken and Austin at the same time. Their approach is an interesting outlier, not the model to follow.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The scoreboard</div>
+      <h2>Where we appear, and where we do not</h2>
+      <p>We took the searches that at least three competitors rank for. These are proven demand: several companies invested in ranking for them, so the market is real rather than theoretical.</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="metric"><span class="n">41</span><span class="l">searches that three or more competitors rank for</span></div>
+      <div class="metric"><span class="n up">11</span><span class="l">where Chefpost already appears</span></div>
+      <div class="metric"><span class="n dn">30</span><span class="l">where we do not appear at all</span></div>
+    </div>
+
+    <p>The numbers below are positions in Google results, so lower is better. An X means the site does not appear in the first thirty results.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Search</th><th class="n">Monthly</th><th class="n">Click value</th><th class="n">Take a Chef</th><th class="n">Hire a Chef</th><th class="n">Chefpost</th></tr></thead>
+        <tbody>
+          <tr><td>private chef</td><td class="n">14,800</td><td class="n">$5.06</td><td class="n">6</td><td class="n">7</td><td class="n us">16</td></tr>
+          <tr><td>personal chef</td><td class="n">9,900</td><td class="n">$4.61</td><td class="n">7</td><td class="n">5</td><td class="n us">29</td></tr>
+          <tr><td>private chef near me</td><td class="n">8,100</td><td class="n">$4.44</td><td class="n">5</td><td class="n">7</td><td class="n x">X</td></tr>
+          <tr><td>private chef services</td><td class="n">6,600</td><td class="n">$5.27</td><td class="n">5</td><td class="n">6</td><td class="n us">15</td></tr>
+          <tr><td>personal chef services</td><td class="n">5,400</td><td class="n">$4.34</td><td class="n">10</td><td class="n">5</td><td class="n us">24</td></tr>
+          <tr><td>hire a chef</td><td class="n">2,400</td><td class="n">$6.94</td><td class="n">2</td><td class="n one">1</td><td class="n x">X</td></tr>
+          <tr><td>hire private chef</td><td class="n">880</td><td class="n">$3.89</td><td class="n">3</td><td class="n one">1</td><td class="n x">X</td></tr>
+          <tr><td>private chef miami</td><td class="n">880</td><td class="n">$8.79</td><td class="n">5</td><td class="n">X</td><td class="n us">27</td></tr>
+          <tr><td>rent a chef</td><td class="n">390</td><td class="n">$5.87</td><td class="n">2</td><td class="n one">1</td><td class="n x">X</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <span class="lab">The clearest single gap</span>
+      <p>Every version of the word <strong>hire</strong> is held at position one by a competitor, and we do not appear. Until this month the word did not exist anywhere on our site. It is now on the Miami page and should be rolled out across the rest.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The pages are built, the visibility is not</div>
+      <h2>New Jersey</h2>
+    </div>
+    <p>We publish four New Jersey pages: Jersey City, Hoboken, Montclair and Short Hills. Across five New Jersey searches worth <strong>$6.74 per click</strong>, Take a Chef holds position one and we do not appear in the first thirty results.</p>
+    <p>This is the clearest illustration of the point above. The pages exist and the content is there. What they lack is the internal linking and authority that would make Google treat them as the answer. It is also the cheapest opportunity in this report, because the expensive part is already done.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Worth borrowing</div>
+      <h2>Four things competitors do well</h2>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <h4>City pages carry national searches</h4>
+        <p>Covered above, and the single most important structural lesson. Their city pages rank for searches that have no city in them at all.</p>
+      </div>
+      <div class="card">
+        <h4>Two blog posts doing the work of a campaign</h4>
+        <p>One article on what a private chef costs and one on what a private chef earns rank for roughly <strong>17,000 searches a month</strong> between them. Two pieces of writing, no ongoing cost.</p>
+      </div>
+      <div class="card">
+        <h4>Chef profiles that rank for the chefs themselves</h4>
+        <p>Searches for individual chefs by name bring them around <strong>5,500 visits a month</strong>. Chefpost has chef profiles too, so this is close to free traffic once they are properly visible.</p>
+      </div>
+      <div class="card">
+        <h4>Specific pricing wins AI answers</h4>
+        <p>We ran a real question in ChatGPT about hiring a private chef in Miami. <strong>Chefpost was recommended first.</strong> A competitor appeared twice, because they publish prices broken down by group size and occasion while we publish one range.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Where the demand is</div>
+      <h2>The best openings, grouped by theme</h2>
+      <p>Searches competitors rank for and we do not. Together they represent <strong>111,770 searches a month</strong> at an average click value of <strong>$8.44</strong>, well above what we currently compete for.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Theme</th><th class="n">Monthly searches</th><th class="n">Click value</th><th>Who holds it today</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Pizza chef</strong></td><td class="n">22,200</td><td class="n">$1.22</td><td>Take a Chef, position 20</td></tr>
+          <tr><td><strong>Indian chef</strong></td><td class="n">14,080</td><td class="n">$3.20</td><td>Take a Chef, position 2</td></tr>
+          <tr><td><strong>"Near me" searches</strong></td><td class="n">16,200</td><td class="n">$4.44</td><td>Take a Chef, positions 5 and 6</td></tr>
+          <tr><td><strong>Chef pay and salary</strong></td><td class="n">9,600</td><td class="n">$9.16</td><td>MiumMium, positions 7 to 11</td></tr>
+          <tr><td><strong>What a chef costs</strong></td><td class="n">9,400</td><td class="n">$9.11</td><td>Take a Chef and MiumMium</td></tr>
+          <tr><td><strong>The word "hire"</strong></td><td class="n">6,950</td><td class="n">$5.90</td><td>Hire a Chef, position 1</td></tr>
+          <tr><td><strong>Vegan and plant based</strong></td><td class="n">3,920</td><td class="n">$4.75</td><td>Take a Chef, position 2</td></tr>
+          <tr><td><strong>Hibachi chef</strong></td><td class="n">3,600</td><td class="n">$8.24</td><td>Take a Chef, position 8</td></tr>
+          <tr><td><strong>Los Angeles</strong></td><td class="n">3,000</td><td class="n">$11.54</td><td>Take a Chef, positions 1 and 4</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:14.5px;color:var(--muted)">A note on method: the raw list contained high volume terms with no relevance to booking a chef, such as diet questions that competitors' blogs pick up incidentally. We removed 804 of those. Only searches a potential customer would genuinely make are shown.</p>
+
+    <div class="callout warn">
+      <span class="lab">Two decisions worth revisiting</span>
+      <p>In July we set aside the chef pay and salary searches as the wrong audience, and removed hibachi from our pages. Both look different with this data. Someone searching <strong>private chef salary</strong> is a chef, and recruiting chefs is half of what a marketplace does. Hibachi carries some of the highest click values in the study.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Beyond Google</div>
+      <h2>AI answers and the local map</h2>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <h4>AI search</h4>
+        <p>Across ChatGPT answers about private chefs, Take a Chef is cited 121 times and a smaller competitor, Chefry, 61 times. Chefpost appears around 5 times.</p>
+        <p>The encouraging part is that <strong>Chefry has fewer websites linking to it than we do</strong> and still gets cited twelve times more often. This is not a question of authority or budget. It is about publishing concrete numbers, which we can act on immediately.</p>
+      </div>
+      <div class="card">
+        <h4>Why we are not in the Miami map results</h4>
+        <p>Our Google listing is in good shape: <strong>76 reviews at a perfect 5.0</strong>. The business sitting at the top of the Miami map results has 77 reviews, so reputation is not the gap.</p>
+        <p>The reason is distance. Google ranks map results by proximity to the searcher, and our verified address is in Aventura. That is a structural constraint, not a reputation problem.</p>
+      </div>
+    </div>
+    <div class="callout good">
+      <span class="lab">Two openings this creates</span>
+      <p>First, compete in <strong>Aventura, Sunny Isles and Bal Harbour</strong>, where we are physically located and already publish pages, and where proximity works in our favour. Second, photographs: we have 30 on the listing against the leader's 112, and that is entirely within our control.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Recommended order</div>
+      <h2>What we would do next</h2>
+      <p>Ordered by return against effort. The first three build on pages that already exist.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Give the city pages the support they need</h3>
+        <p>New Jersey is the test case: four pages published, five valuable searches, no visibility. Internal links, structured data and breadcrumbs are what turn a published page into a ranking one, and the competitive data shows this is exactly how the market leader wins.</p>
+      </li>
+      <li>
+        <h3>Publish detailed pricing on the Miami page</h3>
+        <p>Break the price down by group size and occasion rather than a single range. ChatGPT already recommends us first, so this is about occupying space a competitor currently takes. It is an edit to an existing page.</p>
+      </li>
+      <li>
+        <h3>Use the word "hire" across the site</h3>
+        <p>Nearly 7,000 searches a month where a competitor holds position one and we are absent. Started on Miami, worth extending everywhere.</p>
+      </li>
+      <li>
+        <h3>Build out the cost guide</h3>
+        <p>Competitor articles earn 17,000 searches a month on this theme, and our cost page is already our strongest performer in AI answers, which suggests the appetite is there.</p>
+      </li>
+      <li>
+        <h3>Add the missing specialities</h3>
+        <p>Hibachi, Indian, pizza and vegan are roughly 44,000 searches a month between them, all on the same pattern: one page per speciality, the model that already works for sushi.</p>
+      </li>
+      <li>
+        <h3>Compete on the map where we are located</h3>
+        <p>Aventura, Sunny Isles and Bal Harbour, plus more photographs on the Google listing. No new pages required.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Needs a decision</div>
+      <h2>Three things outside our reach</h2>
+      <p>Each of these is measured and specific, and each needs access or a decision from the Chefpost side.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <h4>Bookings are not being recorded</h4>
+        <p>Six of the eight tracking tags point to an analytics account that does not exist, so completed bookings are not counted. We recovered part of it without needing access. Finishing it requires the tag manager. Until then no channel can be credited with a booking, which affects every decision about where to invest.</p>
+      </div>
+      <div class="card">
+        <h4>A content delivery network</h4>
+        <p>First visits remain slow because every photograph is processed by the server on demand. A delivery network removes that work entirely and is the single remaining change that would make a large difference to speed.</p>
+      </div>
+      <div class="card">
+        <h4>A large download on the chef search page</h4>
+        <p>The chef search page downloads 1.8 MB of filter options on every visit, which is most of why it takes over a second to respond. Almost every button on the site leads there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Figures from DataForSEO and Semrush for the United States market, Google Search Console for chefpost.com, and live tests run in ChatGPT with web search enabled. Positions are Google organic results and move day to day. Search volumes are monthly averages. Click value is the advertising cost per click, used here as an indicator of commercial intent.</p>
+    <p>ThinkFlow Labs &middot; August 2026</p>
+  </div>
+</footer>
+
+<button class="theme" onclick="print()">Save as PDF</button>
