@@ -113,34 +113,114 @@
   <div class="wrap">
     <div class="eyebrow">Chefpost &middot; Progress and next steps &middot; August 2026</div>
     <h1>What we built,<br>and what the data<br><span class="display-italic">changed</span></h1>
-    <p class="lede">Three things shipped since the last report. One investigation overturned a priority we had been carrying for weeks, and pointed at a better one. This is what happened and what we recommend doing next.</p>
-    <p class="by-line">Prepared by ThinkFlow Labs &middot; Sources: Google Search Console, DataForSEO, and live Google result pages checked during this period</p>
+    <p class="lede">This month covered three fronts: how the site looks and feels, how fast it loads, and how it is found. All of it is live. One investigation also overturned a priority we had been carrying for weeks, and pointed at a better one.</p>
+    <p class="by-line">Prepared by ThinkFlow Labs &middot; Sources: Google Search Console, DataForSEO, live Google result pages, and measurements taken on the live site</p>
   </div>
 </div>
 
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Shipped this period</div>
-      <h2>Three changes are live on the site</h2>
-      <p>All three are in production and verified. Each one closed a gap we could measure rather than one we assumed.</p>
+      <div class="eyebrow">Shipped this month</div>
+      <h2>Design and experience</h2>
+      <p>The visible half of the work. These are pages a visitor sees and uses, rebuilt because the old versions were holding the site back rather than because a report asked for it.</p>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4>Areas we serve, rebuilt as a browsable page</h4>
+        <p>It was a list of links. It is now <strong>18 cities as photograph cards</strong>, with a bar at the top that follows you down the page so you can jump straight to a state, and the Miami neighbourhoods laid out as tappable chips.</p>
+        <p>The photographs were generated for Chefpost rather than taken from stock libraries, so there is no licensing question attached to any of them.</p>
+      </div>
+      <div class="card">
+        <h4>A services menu that shows the whole catalogue</h4>
+        <p>The services existed but were hard to reach. The header now opens a menu with <strong>13 services in three groups</strong>: chef services, events and occasions, and guides.</p>
+        <p>Private chef, personal chef, weekly meal prep, yacht chef, cooking classes, dinner parties, bachelorette parties, sushi and omakase, pricing, cuisines, and the Spanish page are all one click from anywhere on the site.</p>
+      </div>
+      <div class="card">
+        <h4>The events page, rebuilt from the ground up</h4>
+        <p>The old page presented a wall of text pulled straight from the content system. It now opens with a split hero, and the occasions are <strong>13 photograph cards</strong> covering birthdays, bachelorette parties, holidays, corporate dinners and the cuisines behind them.</p>
+      </div>
+      <div class="card">
+        <h4>The Miami page, and one page retired</h4>
+        <p>The Miami page absorbed the useful parts of a 2023 article that was competing with it, and gained a section introducing real chefs by name.</p>
+        <p>We also retired a yacht services page that was a 63 word "coming soon" placeholder with no heading, still visible to Google and returning nothing. It now redirects to the real yacht chef page.</p>
+      </div>
+    </div>
+
+    <div class="callout good">
+      <span class="lab">Checked, not assumed</span>
+      <strong>Every page on the site was tested at six screen widths, from a small phone to a wide desktop.</strong> That check found two layout faults that predated this work, on the become a chef page and the privacy policy, where content ran off the edge of the screen on a phone. Both are fixed.
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Shipped this month</div>
+      <h2>Speed, which was the loudest complaint</h2>
+      <p>Photographs were being processed one at a time on every single visit, with nothing kept for the next one. That is now fixed, and the difference is large.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Page</th><th class="n">Return visit before</th><th class="n">Return visit now</th><th class="n">Difference</th></tr></thead>
+        <tbody>
+          <tr><td>Areas we serve</td><td class="n">12,949 ms</td><td class="n one">703 ms</td><td class="n one">18 times faster</td></tr>
+          <tr><td>Private chef Miami</td><td class="n">9,515 ms</td><td class="n one">555 ms</td><td class="n one">17 times faster</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g3">
+      <div class="metric"><span class="n up">18x</span><span class="l">Faster on return visits, measured on the live site</span></div>
+      <div class="metric"><span class="n up">53%</span><span class="l">Smaller photo library, from 76.6 MB down to 35.6 MB</span></div>
+      <div class="metric"><span class="n up">94%</span><span class="l">Smaller events page, from 1,054 KB down to 58 KB</span></div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4>Pages no longer look broken while they load</h4>
+        <p>139 photographs now carry a tiny blurred preview that appears instantly and sharpens as the real image arrives. Before this, a visitor on a slower connection saw empty grey rectangles and could reasonably conclude the page was broken.</p>
+      </div>
+      <div class="card">
+        <h4>Buttons no longer feel dead</h4>
+        <p>Tapping a button used to give no response at all while the next page was prepared, long enough for people to tap again or leave. A thin progress bar now appears at the top of the screen the moment you tap, so the site acknowledges you immediately.</p>
+        <p>The chef search page itself was also made to request its two sets of data at the same time rather than one after the other.</p>
+      </div>
+    </div>
+
+    <p>One honest note on this: <strong>first visits are still slower than they should be</strong>, and we have measured exactly why. The remaining fix is a content delivery network, which is covered at the end of this report.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Shipped this month</div>
+      <h2>Search visibility</h2>
+      <p>The least visible work and, in one case here, the most consequential thing we found all month.</p>
+    </div>
+
+    <div class="callout">
+      <span class="lab">The finding worth knowing about</span>
+      <strong>The services menu was working perfectly for people and was completely invisible to Google.</strong> The menu was only built when a visitor opened it, which a search engine never does. Every page on the site was therefore showing Google zero links to the service pages. That is now fixed, and every page carries <strong>13 links</strong> into the catalogue. It is the single largest change to how the site is connected internally, and it cost one line of code.
     </div>
 
     <div class="grid g3">
       <div class="card">
         <h4>New Jersey now has a page</h4>
-        <p>Searches for a private chef in New Jersey run about <strong>2,950 a month</strong>, and the site had no page for them. Both likely addresses returned a "page not found" error. The four New Jersey town pages were left competing for statewide searches on their own.</p>
-        <p>There is now a New Jersey page that gathers all four towns, and the short form of the address redirects to it instead of failing.</p>
+        <p>Searches for a private chef in New Jersey run about <strong>2,950 a month</strong>, and the site had no page for them. Both likely addresses returned a "page not found" error, leaving the four town pages to compete for statewide searches on their own.</p>
+        <p>There is now a New Jersey page gathering all four towns, and the short form of the address redirects to it instead of failing.</p>
       </div>
       <div class="card">
         <h4>The town pages were missing "NJ"</h4>
-        <p>Hoboken, Jersey City, Montclair and Short Hills each used the words "New Jersey" six to eight times, and the abbreviation "NJ" <strong>zero times</strong>. Anyone searching with the abbreviation, which is how most people type it, could not find them.</p>
-        <p>All four now carry it in the page title and description.</p>
+        <p>Hoboken, Jersey City, Montclair and Short Hills each used the words "New Jersey" six to eight times, and the abbreviation "NJ" <strong>zero times</strong>. Anyone searching with the abbreviation, which is how most people type it, could not find them. All four now carry it.</p>
       </div>
       <div class="card">
         <h4>The meal prep page was pointing at itself incorrectly</h4>
-        <p>The page carried <strong>2,516 impressions</strong> but sat at an average position of 23.6, which is page three. It also told Google its official address was a slightly different one that immediately redirects back, and it carried none of the structured information Google uses to understand a service page.</p>
-        <p>Both are fixed, and the page now speaks to the searches that indicate someone wants to hire.</p>
+        <p>The page carried <strong>2,516 impressions</strong> at an average position of 23.6, which is page three. It told Google its official address was a slightly different one that immediately redirects back, and it carried none of the structured information Google uses to understand a service page. Both are fixed.</p>
       </div>
     </div>
   </div>
