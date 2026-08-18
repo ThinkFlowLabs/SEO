@@ -1,0 +1,337 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chefpost: Progress and Next Steps, August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1014; --ink-2:#1F2630; --muted:#5E6675;
+    --line:#E6DFD2; --line-2:#EFE7D8;
+    --cream:#FBF6EB; --cream-2:#F4ECD9; --paper:#FFFBF1;
+    --coral:#E63946; --coral-dk:#BC2C2C; --coral-sft:#FBE3E2;
+    --gold:#C89A4A; --gold-sft:#F6E7C7;
+    --green:#1F7A6A; --green-sft:#DAEEE7;
+    --amber:#B45309; --amber-sft:#FFE9BD;
+    --r-sm:4px; --r-md:10px; --r-lg:18px; --r-xl:26px;
+    --shadow-sm:0 1px 0 rgba(20,18,12,.06);
+    --shadow-md:0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --display:"Fraunces","Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--cream);
+    font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  h1,h2,h3,h4{font-family:var(--display);margin:0;color:var(--ink)}
+  h1{font-size:clamp(48px,8vw,96px);font-weight:380;letter-spacing:-.03em;line-height:1.02}
+  h2{font-size:clamp(34px,4.6vw,58px);font-weight:400;letter-spacing:-.022em;line-height:1.06}
+  h3{font-size:clamp(21px,2.2vw,27px);font-weight:500;letter-spacing:-.012em;line-height:1.2}
+  h4{font-size:18px;font-weight:600;letter-spacing:-.005em}
+  p{margin:0 0 1.05rem;color:var(--ink-2)}
+  strong{font-weight:600;color:var(--ink)}
+  .display-italic{font-style:italic;color:var(--coral-dk)}
+
+  .eyebrow{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--coral-dk);margin-bottom:18px}
+
+  .hero{background:
+      radial-gradient(60% 80% at 80% 0%, #FBE3E2 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-bottom:1px solid var(--line);padding:96px 0 72px}
+  .hero .lede{font-size:20px;max-width:66ch;margin-top:26px;color:var(--ink-2)}
+  .by-line{margin-top:34px;font-size:13.5px;color:var(--muted);letter-spacing:.01em}
+
+  section{padding:78px 0;border-bottom:1px solid var(--line)}
+  section.alt{background:var(--paper)}
+  section:last-of-type{border-bottom:0}
+  .sec-head{max-width:74ch;margin-bottom:34px}
+  .sec-head p{font-size:17.5px;margin-top:18px}
+
+  .grid{display:grid;gap:20px;margin:30px 0}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+    padding:26px 28px;box-shadow:var(--shadow-sm)}
+  .card h3,.card h4{margin-bottom:.5rem}
+  .card p:last-child{margin-bottom:0}
+
+  .metric{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px 24px}
+  .metric .n{font-family:var(--display);font-size:44px;font-weight:400;line-height:1;
+    letter-spacing:-.03em;display:block}
+  .metric .l{font-size:13px;color:var(--muted);margin-top:10px;display:block;line-height:1.45}
+  .n.up{color:var(--green)} .n.dn{color:var(--coral-dk)} .n.am{color:var(--amber)}
+
+  .callout{background:var(--coral-sft);border:1px solid #F4C7C5;border-radius:var(--r-md);
+    padding:22px 26px;font-size:15.5px;color:var(--coral-dk);margin:26px 0}
+  .callout strong{color:var(--coral-dk)}
+  .callout .lab{display:block;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+    font-weight:600;margin-bottom:8px}
+  .callout.good{background:var(--green-sft);border-color:#B9DED4;color:#155E51}
+  .callout.good strong{color:#155E51}
+  .callout.warn{background:var(--amber-sft);border-color:#F0D9A6;color:#8A4A08}
+  .callout.warn strong{color:#8A4A08}
+
+  .tw{overflow-x:auto;margin:28px 0;border-radius:var(--r-md)}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;
+    border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;min-width:600px}
+  th{text-align:left;font-weight:600;padding:14px 16px;background:var(--cream-2);
+    border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  td{padding:14px 16px;border-bottom:1px solid var(--line-2);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .us{font-weight:700}
+  .x{color:var(--coral-dk);font-weight:700}
+  .one{color:var(--green);font-weight:700}
+
+  .steps{counter-reset:s;margin:30px 0;padding:0;list-style:none}
+  .steps li{counter-increment:s;background:#fff;border:1px solid var(--line);
+    border-radius:var(--r-md);padding:24px 28px 24px 74px;position:relative;margin-bottom:14px}
+  .steps li::before{content:counter(s);position:absolute;left:26px;top:24px;
+    font-family:var(--display);font-size:28px;color:var(--coral-dk);line-height:1}
+  .steps h4{margin-bottom:.4rem}
+  .steps p:last-child{margin-bottom:0}
+  .tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    font-weight:600;padding:4px 10px;border-radius:999px;margin-left:10px;vertical-align:2px}
+  .tag.now{background:var(--green-sft);color:#155E51}
+  .tag.next{background:var(--gold-sft);color:#7A5A16}
+  .tag.dec{background:var(--amber-sft);color:#8A4A08}
+
+  footer{padding:60px 0 90px;color:var(--muted);font-size:13.5px;background:var(--paper)}
+  .theme{position:fixed;right:22px;bottom:22px;background:var(--coral);color:#fff;border:0;
+    padding:12px 20px;border-radius:999px;font-family:var(--sans);font-weight:600;font-size:14px;
+    cursor:pointer;box-shadow:var(--shadow-md)}
+  @media print{.theme{display:none}section{page-break-inside:avoid}}
+</style>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Chefpost &middot; Progress and next steps &middot; August 2026</div>
+    <h1>What we built,<br>and what the data<br><span class="display-italic">changed</span></h1>
+    <p class="lede">Three things shipped since the last report. One investigation overturned a priority we had been carrying for weeks, and pointed at a better one. This is what happened and what we recommend doing next.</p>
+    <p class="by-line">Prepared by ThinkFlow Labs &middot; Sources: Google Search Console, DataForSEO, and live Google result pages checked during this period</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Shipped this period</div>
+      <h2>Three changes are live on the site</h2>
+      <p>All three are in production and verified. Each one closed a gap we could measure rather than one we assumed.</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <h4>New Jersey now has a page</h4>
+        <p>Searches for a private chef in New Jersey run about <strong>2,950 a month</strong>, and the site had no page for them. Both likely addresses returned a "page not found" error. The four New Jersey town pages were left competing for statewide searches on their own.</p>
+        <p>There is now a New Jersey page that gathers all four towns, and the short form of the address redirects to it instead of failing.</p>
+      </div>
+      <div class="card">
+        <h4>The town pages were missing "NJ"</h4>
+        <p>Hoboken, Jersey City, Montclair and Short Hills each used the words "New Jersey" six to eight times, and the abbreviation "NJ" <strong>zero times</strong>. Anyone searching with the abbreviation, which is how most people type it, could not find them.</p>
+        <p>All four now carry it in the page title and description.</p>
+      </div>
+      <div class="card">
+        <h4>The meal prep page was pointing at itself incorrectly</h4>
+        <p>The page carried <strong>2,516 impressions</strong> but sat at an average position of 23.6, which is page three. It also told Google its official address was a slightly different one that immediately redirects back, and it carried none of the structured information Google uses to understand a service page.</p>
+        <p>Both are fixed, and the page now speaks to the searches that indicate someone wants to hire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The investigation</div>
+      <h2>Our largest source of impressions cannot be converted</h2>
+      <p>One article on the site collects more search impressions than almost anything else. We had it marked as the top priority to fix. Looking at it properly changed that conclusion, and we would rather tell you now than spend the budget finding out.</p>
+    </div>
+
+    <div class="grid g4">
+      <div class="metric"><span class="n">15,914</span><span class="l">Impressions for the anti-inflammatory article in 90 days</span></div>
+      <div class="metric"><span class="n dn">2</span><span class="l">Clicks it received in the same period</span></div>
+      <div class="metric"><span class="n">11,014</span><span class="l">Impressions across the whole topic, 60 different searches</span></div>
+      <div class="metric"><span class="n dn">1</span><span class="l">Click across all 60 of those searches</span></div>
+    </div>
+
+    <p>The obvious explanation is that the entry looked unappealing in the results, and that a better title would fix it. That was our assumption too. It is not what is happening.</p>
+
+    <h3 style="margin-top:38px">We already rank near the top and still get nothing</h3>
+    <p>On a dozen variations of this topic the site is already inside the top five results, which is normally the most valuable position in search. The clicks are still zero.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Search</th><th class="n">Impressions</th><th class="n">Position</th><th class="n">Clicks</th></tr></thead>
+        <tbody>
+          <tr><td>7-day anti-inflammatory meal plan</td><td class="n">1</td><td class="n one">3.0</td><td class="n x">0</td></tr>
+          <tr><td>anti inflammatory food diet plan</td><td class="n">27</td><td class="n one">4.2</td><td class="n x">0</td></tr>
+          <tr><td>anti inflammatory diet plan for weight loss</td><td class="n">112</td><td class="n one">4.5</td><td class="n x">0</td></tr>
+          <tr><td>anti inflammatory diet example meal plan</td><td class="n">33</td><td class="n one">4.7</td><td class="n x">0</td></tr>
+          <tr><td>anti inflammatory diet 7 day plan</td><td class="n">17</td><td class="n one">5.1</td><td class="n x">0</td></tr>
+          <tr class="us"><td>anti inflammatory meal plan</td><td class="n">7,324</td><td class="n">9.0</td><td class="n x">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>When a page sits in fifth place and earns no clicks at all, the entry is not the problem. Something is taking the clicks before anyone reaches the results.</p>
+
+    <h3 style="margin-top:38px">Google answers this question itself, above the results</h3>
+    <p>We pulled the live Google results page for the main search. Sitting in fourth place is Google's own AI summary, and inside it is <strong>a complete three-day meal plan</strong> with breakfast, lunch and dinner written out. The person searching has their answer without visiting any website.</p>
+
+    <p>Below that, the actual results are the University of Arizona's integrative medicine centre, Healthline, a registered dietitian, and Harvard Health. Google's summary draws on Harvard, Johns Hopkins, the Cleveland Clinic and the US Department of Veterans Affairs.</p>
+
+    <div class="callout">
+      <span class="lab">What this means</span>
+      <strong>This is a health question, and Google answers those with medical institutions.</strong> A private chef marketplace is not going to be preferred over Harvard for dietary advice, and no rewrite changes that. The article also does not contain the seven-day plan its title promises, so improving the title alone would have made a promise the page cannot keep.
+    </div>
+
+    <p>We checked a second article with the same pattern, the healthy meal prep ideas piece, which holds 4,167 impressions at position 5.2 with one click. Its results page is led by a recipe carousel, then recipe blogs, Pinterest, Instagram and YouTube. It is a recipe request, not a request to hire anyone. The conclusion is the same.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Where the opportunity is</div>
+      <h2>Split the traffic into people reading and people buying</h2>
+      <p>Once we separate the searches that indicate someone wants to hire a chef from the ones that indicate someone wants to read an article, the picture becomes clear.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Type of search, positions 4 to 20</th><th class="n">Searches</th><th class="n">Impressions</th><th class="n">Clicks</th></tr></thead>
+        <tbody>
+          <tr><td>Informational: diets, meal plans, recipes</td><td class="n">45</td><td class="n">13,040</td><td class="n x">1</td></tr>
+          <tr class="us"><td>Commercial: hiring a chef, prices, locations</td><td class="n">48</td><td class="n">3,296</td><td class="n">5</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Eighty percent of the impressions that look like an opportunity are in the first row, and that row is the one we have just shown cannot be converted. The second row is smaller and it is the one worth the work.</p>
+
+    <p>One honest adjustment to that second figure: 1,299 of those 3,296 impressions come from the search "home chef", which is a meal kit company's brand name. Those visitors are looking for a different business. The genuinely addressable pool is closer to <strong>2,000 impressions</strong>, and every one of them is someone considering hiring.</p>
+
+    <h3 style="margin-top:38px">Three clusters inside that pool are ready to move</h3>
+
+    <div class="grid g3">
+      <div class="card">
+        <h4>What a chef costs</h4>
+        <p><strong>340 impressions, zero clicks</strong>, sitting between positions 8.7 and 18.3 across six variations of "how much does a private chef cost".</p>
+        <p>We already have a page built for exactly this question. It is close to the first page and not quite there, which makes it the cheapest improvement available.</p>
+      </div>
+      <div class="card">
+        <h4>Chefs searched by name</h4>
+        <p><strong>305 impressions</strong> for individual chefs, at positions between 5.1 and 10.1. People are searching for Chef Gina, Chef Farid, Chef Carolina and Chef Mehmet by name.</p>
+        <p>That is the highest intent traffic on the site and nobody has optimised the chef profile pages. This is unclaimed.</p>
+      </div>
+      <div class="card">
+        <h4>Miami, still on page two</h4>
+        <p><strong>434 impressions</strong> across "private chefs miami", "best private chef miami" and similar, at positions 11 to 20.</p>
+        <p>The Miami page was rebuilt recently, so some movement is expected. Worth measuring before doing more.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:38px">The meal prep market pays far more than the meal plan market</h3>
+    <p>The advertising cost per click is a reliable signal of how much a visitor is worth, because it is what businesses actually pay for one. The gap here is large.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Search</th><th class="n">Monthly</th><th class="n">Click value</th><th>What the searcher wants</th><th class="n">Difficulty</th></tr></thead>
+        <tbody>
+          <tr><td>anti inflammatory meal plan</td><td class="n">2,900</td><td class="n">$4.18</td><td>To read a plan</td><td class="n">8</td></tr>
+          <tr class="us"><td>anti inflammatory meal delivery</td><td class="n">720</td><td class="n one">$18.67</td><td>To buy</td><td class="n">Low</td></tr>
+          <tr class="us"><td>anti inflammatory meal prep</td><td class="n">880</td><td class="n">$5.89</td><td>Mixed, growing 49% a year</td><td class="n one">9</td></tr>
+          <tr class="us"><td>private chef meal prep</td><td class="n">260</td><td class="n">$7.24</td><td>To hire, growing 86% a year</td><td class="n">Low</td></tr>
+          <tr class="us"><td>meal prep chef near me</td><td class="n">320</td><td class="n">$7.40</td><td>To hire</td><td class="n">Low</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout good">
+      <span class="lab">The reason this one is winnable</span>
+      <strong>Google's AI summary cannot answer the question "who will cook this for me".</strong> That question needs a provider, and Chefpost is a legitimate answer to it. It is the same audience as the article, approached at the moment they stop reading and start looking for help.
+    </div>
+
+    <p>This is why the meal prep page was rewritten rather than the article. It now covers six dietary needs including anti-inflammatory, high protein, plant based and allergy safe cooking, with a clear note that chefs cook to your specification and are not dietitians.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Recommended order</div>
+      <h2>What we suggest doing next</h2>
+      <p>Ordered by return against effort, based on what the measurements above show rather than on general practice.</p>
+    </div>
+
+    <ol class="steps">
+      <li>
+        <h4>Improve the private chef cost page <span class="tag now">Ready now</span></h4>
+        <p>Six searches about pricing, 340 impressions, no clicks, all sitting just off the first page. The page exists and needs sharpening rather than building. This is the shortest distance between effort and result on the whole site.</p>
+      </li>
+      <li>
+        <h4>Claim the chef name searches <span class="tag now">Ready now</span></h4>
+        <p>People are already searching for individual chefs by name and finding us in the top ten. The chef profile pages have never been reviewed for search. Improving their titles, descriptions and structured information would convert an existing position into visits, and these are the most motivated visitors on the site.</p>
+      </li>
+      <li>
+        <h4>Finish the older pages <span class="tag next">Planned</span></h4>
+        <p>Fifteen pages predate the current build. Six have no structured information at all, eleven show no navigation trail, ten have titles too long to display fully, and one has no main heading. None of this is urgent, and all of it is straightforward.</p>
+      </li>
+      <li>
+        <h4>Build the dietary meal prep landing <span class="tag next">Planned</span></h4>
+        <p>The commercial half of the meal prep market is roughly 2,180 searches a month with low competition and strong growth. The section now on the meal prep page is the first step. A dedicated page is the second, once we see how the first performs.</p>
+      </li>
+      <li>
+        <h4>Confirm the Miami consolidation held <span class="tag next">Planned</span></h4>
+        <p>In mid September it will be six weeks since we pointed the old Miami article at the main Miami page. If Google has combined them, nothing more is needed. If it has not, we redirect the article permanently. This is a scheduled check, not a task.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Needs a decision</div>
+      <h2>Three items outside our reach</h2>
+      <p>Each of these limits results and none can be resolved without access or a decision from your side.</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <h4>A content delivery network</h4>
+        <p>First visits are still slow because every photograph is processed by the server on demand, and there is no delivery network in front of the site. We confirmed this again this period.</p>
+        <p>It would also solve a second problem. During each deployment there is a short window where a visitor can load the site without its styling, because the page and its design files briefly come from different versions. A delivery network removes both issues at once.</p>
+      </div>
+      <div class="card">
+        <h4>Booking measurement</h4>
+        <p>Six of the eight tracking tags still point to an analytics account that does not exist, so completed bookings are not counted. Until the tag manager is available, no channel can be credited with a booking, which affects every decision about where to invest.</p>
+      </div>
+      <div class="card">
+        <h4>The chef search page download</h4>
+        <p>The chef search page downloads 1.8 MB of filter options on every visit, which is most of why it takes over a second to respond. Almost every button on the site leads there, so this affects the experience broadly.</p>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <span class="lab">Worth knowing</span>
+      <strong>The staging environment runs in development mode.</strong> That makes it several times slower than the live site by design. It does not affect visitors, but any impression of the site's speed formed there would be misleading. Speed should only be judged on the live site.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Figures from Google Search Console for chefpost.com covering the 90 days to mid August 2026, and from DataForSEO for the United States market. Live Google result pages were retrieved during this period. Positions are Google organic results and move day to day. Search volumes are monthly averages. Click value is the advertising cost per click, used here as an indicator of commercial intent. Difficulty is a 0 to 100 scale where lower is easier.</p>
+    <p>ThinkFlow Labs &middot; August 2026</p>
+  </div>
+</footer>
+
+<button class="theme" onclick="print()">Save as PDF</button>
