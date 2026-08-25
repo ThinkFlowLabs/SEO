@@ -399,7 +399,7 @@ section.dark .sub-eyebrow { color: #C9BFA9; }
       <dl>
         <dt>"supper club" interest, 5-yr Trends</dt><dd>All-time high · +45%</dd>
         <dt>"what is a supper club" searches</dt><dd>5,400/mo · KD 5</dd>
-        <dt>AI-assistant searches "supper club"</dt><dd>16,411/mo</dd>
+        <dt>"supper club" AI question index<br><span style="font-size:11px; opacity:.7;">modelled, see Section 02</span></dt><dd>16,411/mo</dd>
         <dt>"founder dinner" Trends signal</dt><dd>First ever, 2026</dd>
         <dt>Companies owning the category</dt><dd>None found</dd>
         <dt class="warn-dt">Occasion-cluster impressions, 180d</dt><dd class="warn-dd">Zero</dd>
@@ -432,7 +432,7 @@ section.dark .sub-eyebrow { color: #C9BFA9; }
           <li><strong>The trend is real and structural, not a spike.</strong> US search interest in "supper club" is at its all-time high, up 45% in five years, with peaks every November and December. "Founder dinner" registered its first-ever Google Trends signal in 2026. "Private chef" interest has grown 160% in five years. Diana is early, not late.</li>
           <li><strong>Nobody owns it.</strong> Across twelve target searches, page one belongs to Reddit threads, Medium posts, Substack newsletters and personal blogs from 2016 to 2018. The biggest competitor, Take a Chef, ranks #1 on every "hire a chef" query using generic city pages and has zero supper-club, founder, corporate or influencer content. A blog that launched in January 2026 already reached #7 on "how to start a supper club". Entry is fast here.</li>
           <li><strong>But the demand has not arrived in Google, and we can prove it.</strong> Across the last 180 days of Chefpost's Search Console, the entire occasion vocabulary from the brief returned <strong>zero impressions</strong>: founder dinner, brand dinner, client appreciation dinner, corporate dinner, team dinner, networking dinner, community dinner. Not low. Zero. And the position-one ranking Chefpost holds on "what is a supper club" produced <strong>four impressions and no clicks in six months</strong>, because an AI Overview answers that question above the results. Ranking first in this category currently pays nothing.</li>
-          <li><strong>AI search is not a side channel here. It is the channel.</strong> "Supper club" gets 16,411 AI-assistant searches per month and "brand dinner" 518 with no owner. More to the point, Chefpost's AI traffic went from <strong>0 sessions in May to 126 in August</strong>, growing 291% in the last month alone and engaging at 80%, the highest of any channel on the site. On August 25, Perplexity named Chefpost the <strong>"best all-around booking platform"</strong> and quoted our own price ranges back to us.</li>
+          <li><strong>AI search is not a side channel here. It is the channel.</strong> The industry estimates of AI question volume are modelled rather than measured, and Section 02 explains exactly how, so we are not resting the case on them. The measured evidence is Chefpost's own: <strong>AI traffic went from 0 sessions in May to 126 in August</strong>, growing 291% in the last month alone and engaging at 80%, the highest of any channel on the site. On August 25, Perplexity named Chefpost the <strong>"best all-around booking platform"</strong> and quoted our own price ranges back to us.</li>
           <li><strong>We know exactly what earns those citations.</strong> GPT cited a small competitor and stated the reason: its page "specifically mentions client appreciation dinners". Exact phrases plus concrete numbers. Chefpost's own 26 recorded AI citations are all cost questions, 18 of them from a single price page. The proof is repeatable: <strong>/private-chef-new-jersey was published on August 17 and Perplexity was citing it eight days later, while it still had 7 impressions in Google.</strong></li>
         </ol>
       </div>
@@ -482,7 +482,12 @@ section.dark .sub-eyebrow { color: #C9BFA9; }
       </div>
     </div>
 
-    <h3 style="margin-top:40px;">AI assistants already field more supper club questions than Google fields for most keywords</h3>
+    <h3 style="margin-top:40px;">Question-shaped demand, and how to read this number honestly</h3>
+
+    <div class="callout warn" style="margin-bottom:20px;">
+      <b>What "AI search volume" is, and what it is not.</b> No provider publishes its query logs, so nobody can measure what people actually ask ChatGPT or Perplexity. This metric is <b>modelled</b>: DataForSEO derives it from the questions in Google's "People Also Ask" results, on the reasoning that those are conversational and question-shaped, the same form as a prompt. They describe it as measuring "the popularity of a specific keyword in questions to AI", and call it question-based rather than query-based.
+      <br><br>Two consequences worth knowing before quoting the number. Multi-word terms are matched on <b>all words present, not the exact phrase</b>, so "supper club" counts every question containing both "supper" and "club", which sweeps in the Wisconsin-restaurant and definitional mass this report already flags as the wrong intent. Grammatical variants also collapse into a single score. <b>Read 16,411 as a relative index of question-shaped demand, not as 16,411 people asking an assistant how to host a supper club.</b>
+      <br><br>The twelve-month series adds the part a single month hides: <b>supper club has been flat between 14,626 and 19,726 all year, so it is not growing in this metric</b>, and "private chef" has fallen from 10,819 to 5,900, down 45% year on year. The hard evidence that this channel is real for Chefpost is not this number. It is the 126 AI-assistant sessions in GA4 and the citations in Section 06.</div>
     <div class="table-scroll">
     <table>
       <thead><tr><th>Term</th><th>AI-assistant searches/mo (Jul 2026)</th><th>Reading</th></tr></thead>
@@ -895,7 +900,8 @@ section.dark .sub-eyebrow { color: #C9BFA9; }
           <li>Search volumes and CPC: Google Ads live data, US, August 11 2026. Keyword difficulty and intent: DataForSEO Labs. Unscored KD reported as a dash.</li>
           <li>Trends: Google Trends US, five-year window, shared index scale; yearly averages computed from weekly data.</li>
           <li>SERPs: DataForSEO live organic, depth 10 to 20, US and Miami geolocation, August 11.</li>
-          <li>AI answers: DataForSEO LLM endpoint, live, web search enabled, run August 11 and re-run August 25. AI search volumes: DataForSEO AI keyword data, July 2026 month. Citation-field data: LLM mentions database, ChatGPT platform, US.</li>
+          <li>AI answers: DataForSEO LLM endpoint, live, web search enabled, run August 11 and re-run August 25. Citation-field data: LLM mentions database, ChatGPT platform, US.</li>
+          <li><b>AI search volumes are modelled, not measured.</b> No AI provider publishes query logs. DataForSEO states these values are "calculated using statistical data from questions in the 'People Also Ask' SERP element" via a proprietary algorithm, and describe the result as question-based rather than query-based. Multi-word terms match on all words present rather than the exact phrase, and grammatical variants are collapsed. Figures are the July 2026 month with the twelve-month series checked alongside. We report them as a relative index only, and rest the argument on Chefpost's own GA4 and citation data instead.</li>
           <li>Chefpost first-party data: Search Console API (sc-domain property), 180-day and 28-day windows through <b>August 23 2026</b>, the freshest day available. GA4 API, property 255030659, channel and landing-page reports for the same windows.</li>
           <li>Known caveats: "press dinner" volume (590) is a news artifact of the April correspondents' dinner and was excluded. "Brand dinner ideas" is a recipe-intent SERP; the marketing intent lives in "brand activation dinner" phrasing. DataForSEO's ranked-keyword index lags live SERPs by 2 to 6 weeks, so Search Console is treated as ground truth throughout. GA4 "AI Assistant" is Google's own channel grouping and undercounts assistants that send no referrer, so the 126-session figure is a floor rather than a ceiling.</li>
         </ul>
