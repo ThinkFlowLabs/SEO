@@ -69,6 +69,33 @@
   .note.warn{background:var(--amber-sft);border-color:#F2D5A0;color:var(--amber)}
   .note b{font-weight:700}
 
+  /* clickable page lists: every page named in this report opens live */
+  .links{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+  .links a{display:inline-block;font-size:13px;text-decoration:none;color:var(--ink-2);
+    background:var(--cream);border:1px solid var(--line);border-radius:99px;padding:5px 13px;
+    transition:background .15s,border-color .15s,color .15s}
+  section.alt .links a{background:var(--paper)}
+  .links a:hover{background:var(--coral-sft);border-color:#F0BEBC;color:var(--coral-dk)}
+  .links a::after{content:" ↗";opacity:.45;font-size:11px}
+  .links .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;align-self:center;margin-right:4px}
+
+  /* results */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:30px}
+  .kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+  .kpi .n{font-family:var(--serif);font-size:40px;font-weight:600;line-height:1;color:var(--coral-dk)}
+  .kpi .n small{font-size:20px;font-weight:500}
+  .kpi .l{font-weight:600;font-size:15px;margin-top:10px}
+  .kpi .s{font-size:13.5px;color:var(--muted);margin-top:5px;line-height:1.45}
+  table{width:100%;border-collapse:collapse;margin-top:26px;font-size:15px;background:#fff;
+    border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:var(--cream);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  td{font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  tr.now td{background:var(--coral-sft);font-weight:600}
+  .table-scroll{overflow-x:auto}
+
   footer{padding:44px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
   a{color:var(--coral-dk)}
 </style>
@@ -104,6 +131,23 @@
         <h3>The Services menu</h3>
         <p>Rebuilt into three labelled groups, so people browse by what they actually need rather than scanning one long list. <b>Chef services</b> for the recurring stuff, <b>Events and occasions</b> for a specific night, and <b>Browse and guides</b> for someone still deciding. Fourteen destinations, every link checked.</p>
         <p class="why"><b>Why it matters:</b> a visitor who came for a birthday dinner now discovers weekly meal prep, cooking classes and yacht service without hunting. It turns one visit into several possible bookings.</p>
+        <div class="links">
+          <span class="lbl">Open</span>
+          <a href="https://chefpost.com/private-chef-services" target="_blank" rel="noopener">Private chef services</a>
+          <a href="https://chefpost.com/personal-chef-services" target="_blank" rel="noopener">Personal chef services</a>
+          <a href="https://chefpost.com/meal-prep" target="_blank" rel="noopener">Weekly meal prep</a>
+          <a href="https://chefpost.com/yacht-chef-miami" target="_blank" rel="noopener">Yacht chef</a>
+          <a href="https://chefpost.com/cooking-classes" target="_blank" rel="noopener">Cooking classes</a>
+          <a href="https://chefpost.com/events" target="_blank" rel="noopener">Dinner parties</a>
+          <a href="https://chefpost.com/founder-dinners" target="_blank" rel="noopener">Founder and brand dinners</a>
+          <a href="https://chefpost.com/private-chef-for-dinner-party" target="_blank" rel="noopener">Chef for a dinner party</a>
+          <a href="https://chefpost.com/private-chef-bachelorette-party" target="_blank" rel="noopener">Bachelorette parties</a>
+          <a href="https://chefpost.com/private-chef-for-a-night" target="_blank" rel="noopener">Chef for a night</a>
+          <a href="https://chefpost.com/sushi-chef-at-home" target="_blank" rel="noopener">Sushi and omakase</a>
+          <a href="https://chefpost.com/cuisines" target="_blank" rel="noopener">Menus and cuisines</a>
+          <a href="https://chefpost.com/private-chef-cost" target="_blank" rel="noopener">What a chef costs</a>
+          <a href="https://chefpost.com/es/chef-a-domicilio-miami" target="_blank" rel="noopener">Chef a domicilio</a>
+        </div>
       </div>
     </div>
 
@@ -117,6 +161,10 @@
         <h3>Areas We Serve</h3>
         <p>Was a wall of text links doing three jobs at once. Now it does one job, answers one question, and answers it visually: eighteen cities as photo cards, each with its own photograph of the real place, a line about what people book there, and a single clear button. A sticky bar across the top jumps you to Florida, New York, New Jersey, Texas, Georgia or the Miami neighborhoods.</p>
         <p class="why"><b>Why it matters:</b> the page is over 6,000 pixels tall. Without the jump bar, reaching Texas meant scrolling past everything. Now it is two clicks from anywhere. The photographs were generated for us rather than taken from the web, so there is no third-party image rights to clear on any of them.</p>
+        <div class="links">
+          <span class="lbl">Open</span>
+          <a href="https://chefpost.com/private-chef-locations" target="_blank" rel="noopener">Areas We Serve</a>
+        </div>
       </div>
     </div>
 
@@ -139,6 +187,10 @@
         <h3>Founder dinners</h3>
         <p>A new page for founder dinners, brand dinners, client appreciation dinners, networking dinners, influencer and creator dinners, team dinners, supper clubs and community dinners. Each format named explicitly, with its own guest count and budget, plus a cost table by table size from 8 to 30 guests and a full hosting guide.</p>
         <p class="why"><b>Why it matters:</b> this is a category nobody owns yet. The page is written to be the one AI assistants quote when someone asks how to host one of these, which is already how Chefpost gets found for pricing questions.</p>
+        <div class="links">
+          <span class="lbl">Open</span>
+          <a href="https://chefpost.com/founder-dinners" target="_blank" rel="noopener">Founder dinners</a>
+        </div>
       </div>
     </div>
 
@@ -158,31 +210,105 @@
         <h3>New Jersey</h3>
         <p>The first state-level page on the site, with the four New Jersey city pages linked underneath it.</p>
         <p class="why"><b>Why it matters:</b> people searching for a chef in New Jersey had nowhere to land. The address people actually type, chefpost.com/private-chef-nj, returned a "page not found". It now goes to the right place, and the four city pages that never once said "NJ" now do.</p>
+        <div class="links">
+          <span class="lbl">Open</span>
+          <a href="https://chefpost.com/private-chef-new-jersey" target="_blank" rel="noopener">New Jersey</a>
+          <a href="https://chefpost.com/private-chef-jersey-city" target="_blank" rel="noopener">Jersey City</a>
+          <a href="https://chefpost.com/private-chef-hoboken" target="_blank" rel="noopener">Hoboken</a>
+          <a href="https://chefpost.com/private-chef-montclair" target="_blank" rel="noopener">Montclair</a>
+          <a href="https://chefpost.com/private-chef-short-hills" target="_blank" rel="noopener">Short Hills</a>
+        </div>
       </div>
       <div class="item">
         <h3>Weekly meal prep</h3>
         <p>Rewritten to speak to people looking to hire a chef for weekly cooking, rather than to a general audience. Proper headline, full page structure, real description.</p>
         <p class="why"><b>Why it matters:</b> meal prep is recurring revenue, not a one-night booking. It is the highest-value thing on the site to be found for, and the page was two words long at the top.</p>
+        <div class="links">
+          <span class="lbl">Open</span>
+          <a href="https://chefpost.com/meal-prep" target="_blank" rel="noopener">Weekly meal prep</a>
+        </div>
       </div>
       <div class="item">
         <h3>Eighteen cities, twelve Miami neighborhoods, and Spanish</h3>
-        <p>A page each for Miami, Fort Lauderdale, West Palm Beach, Boca Raton, Tampa, St. Petersburg, New York, Brooklyn, Long Island, the Hamptons, Jersey City, Hoboken, Montclair, Short Hills, Austin, Houston, Dallas and Atlanta. Twelve Miami neighborhoods from Brickell to Key Biscayne. Plus a Spanish page for chef a domicilio.</p>
+        <p>A page each for eighteen cities, twelve Miami neighborhoods from Brickell to Key Biscayne, plus a Spanish page for chef a domicilio. Every one of them is below, and every one opens.</p>
         <p class="why"><b>Why it matters:</b> people search by their city, not by "private chef". Each page carries local menus, local pricing and the chefs who actually cover that area.</p>
+        <div class="links">
+          <span class="lbl">Florida</span>
+          <a href="https://chefpost.com/private-chef-miami" target="_blank" rel="noopener">Miami</a>
+          <a href="https://chefpost.com/private-chef-fort-lauderdale" target="_blank" rel="noopener">Fort Lauderdale</a>
+          <a href="https://chefpost.com/private-chef-west-palm-beach" target="_blank" rel="noopener">West Palm Beach</a>
+          <a href="https://chefpost.com/private-chef-boca-raton" target="_blank" rel="noopener">Boca Raton</a>
+          <a href="https://chefpost.com/private-chef-tampa" target="_blank" rel="noopener">Tampa</a>
+          <a href="https://chefpost.com/private-chef-st-petersburg" target="_blank" rel="noopener">St. Petersburg</a>
+        </div>
+        <div class="links">
+          <span class="lbl">New York</span>
+          <a href="https://chefpost.com/private-chef-nyc" target="_blank" rel="noopener">New York City</a>
+          <a href="https://chefpost.com/private-chef-brooklyn" target="_blank" rel="noopener">Brooklyn</a>
+          <a href="https://chefpost.com/private-chef-long-island" target="_blank" rel="noopener">Long Island</a>
+          <a href="https://chefpost.com/private-chef-hamptons" target="_blank" rel="noopener">The Hamptons</a>
+        </div>
+        <div class="links">
+          <span class="lbl">Texas &amp; Georgia</span>
+          <a href="https://chefpost.com/private-chef-austin" target="_blank" rel="noopener">Austin</a>
+          <a href="https://chefpost.com/private-chef-houston" target="_blank" rel="noopener">Houston</a>
+          <a href="https://chefpost.com/private-chef-dallas" target="_blank" rel="noopener">Dallas</a>
+          <a href="https://chefpost.com/private-chef-atlanta" target="_blank" rel="noopener">Atlanta</a>
+        </div>
+        <div class="links">
+          <span class="lbl">Miami areas</span>
+          <a href="https://chefpost.com/private-chef-brickell" target="_blank" rel="noopener">Brickell</a>
+          <a href="https://chefpost.com/private-chef-coconut-grove" target="_blank" rel="noopener">Coconut Grove</a>
+          <a href="https://chefpost.com/private-chef-coral-gables" target="_blank" rel="noopener">Coral Gables</a>
+          <a href="https://chefpost.com/private-chef-key-biscayne" target="_blank" rel="noopener">Key Biscayne</a>
+          <a href="https://chefpost.com/private-chef-aventura" target="_blank" rel="noopener">Aventura</a>
+          <a href="https://chefpost.com/private-chef-bal-harbour" target="_blank" rel="noopener">Bal Harbour</a>
+          <a href="https://chefpost.com/private-chef-sunny-isles" target="_blank" rel="noopener">Sunny Isles</a>
+          <a href="https://chefpost.com/private-chef-wynwood" target="_blank" rel="noopener">Wynwood</a>
+          <a href="https://chefpost.com/private-chef-edgewater" target="_blank" rel="noopener">Edgewater</a>
+          <a href="https://chefpost.com/private-chef-pinecrest" target="_blank" rel="noopener">Pinecrest</a>
+          <a href="https://chefpost.com/private-chef-south-beach" target="_blank" rel="noopener">South Beach</a>
+          <a href="https://chefpost.com/private-chef-miami-beach" target="_blank" rel="noopener">Miami Beach</a>
+        </div>
+        <div class="links">
+          <span class="lbl">Espanol</span>
+          <a href="https://chefpost.com/es/chef-a-domicilio-miami" target="_blank" rel="noopener">Chef a domicilio Miami</a>
+        </div>
       </div>
       <div class="item">
         <h3>The service pillars</h3>
         <p>Private chef services, personal chef services, yacht chef, in-home cooking classes, sushi and omakase at home, and an expanded cost guide.</p>
         <p class="why"><b>Why it matters:</b> the cost guide is the single most-cited Chefpost page in AI answers. Every recorded citation is someone asking what a private chef costs.</p>
+        <div class="links">
+          <span class="lbl">Open</span>
+          <a href="https://chefpost.com/private-chef-services" target="_blank" rel="noopener">Private chef services</a>
+          <a href="https://chefpost.com/personal-chef-services" target="_blank" rel="noopener">Personal chef services</a>
+          <a href="https://chefpost.com/yacht-chef-miami" target="_blank" rel="noopener">Yacht chef</a>
+          <a href="https://chefpost.com/cooking-classes" target="_blank" rel="noopener">Cooking classes</a>
+          <a href="https://chefpost.com/sushi-chef-at-home" target="_blank" rel="noopener">Sushi and omakase</a>
+          <a href="https://chefpost.com/private-chef-cost" target="_blank" rel="noopener">What a chef costs</a>
+        </div>
       </div>
       <div class="item">
         <h3>Dinner parties and celebrations</h3>
         <p>The events page rebuilt around thirteen occasion cards instead of a short block of text.</p>
         <p class="why"><b>Why it matters:</b> it was 255 words with no headline at all. It is now the hub that connects every occasion page.</p>
+        <div class="links">
+          <span class="lbl">Open</span>
+          <a href="https://chefpost.com/events" target="_blank" rel="noopener">Dinner parties and celebrations</a>
+          <a href="https://chefpost.com/private-chef-for-dinner-party" target="_blank" rel="noopener">Chef for a dinner party</a>
+          <a href="https://chefpost.com/private-chef-bachelorette-party" target="_blank" rel="noopener">Bachelorette parties</a>
+          <a href="https://chefpost.com/private-chef-for-a-night" target="_blank" rel="noopener">Chef for a night</a>
+        </div>
       </div>
       <div class="item">
         <h3>About Us</h3>
         <p>Redesigned with an editorial layout, real photography, a trust band, and real chefs featured by name.</p>
         <p class="why"><b>Why it matters:</b> hiring someone to cook in your home is a trust decision. This is the page where that gets decided.</p>
+        <div class="links">
+          <span class="lbl">Open</span>
+          <a href="https://chefpost.com/about-us" target="_blank" rel="noopener">About Us</a>
+        </div>
       </div>
     </div>
 
@@ -280,6 +406,11 @@
       <div class="item fix">
         <h3>A "Coming Soon" page that was still being indexed</h3>
         <p>The yacht services page was 63 words of placeholder with no headline, publicly listed. Retired and pointed at the real yacht chef page.</p>
+        <div class="links">
+          <span class="lbl">Try it</span>
+          <a href="https://chefpost.com/yacht-services" target="_blank" rel="noopener">The old address now lands here</a>
+          <a href="https://chefpost.com/private-chef-nj" target="_blank" rel="noopener">And so does /private-chef-nj</a>
+        </div>
       </div>
       <div class="item fix">
         <h3>The search filter was outranking the pages built to sell</h3>
@@ -288,6 +419,13 @@
       <div class="item fix">
         <h3>Pages with no headline at all</h3>
         <p>The filter, FAQ and contact pages had none. Added, and the home page headline rewritten to lead with what Chefpost actually does.</p>
+        <div class="links">
+          <span class="lbl">Open</span>
+          <a href="https://chefpost.com/filter" target="_blank" rel="noopener">Browse chefs</a>
+          <a href="https://chefpost.com/faq" target="_blank" rel="noopener">FAQ</a>
+          <a href="https://chefpost.com/contact-us" target="_blank" rel="noopener">Contact</a>
+          <a href="https://chefpost.com/" target="_blank" rel="noopener">Home</a>
+        </div>
       </div>
       <div class="item fix">
         <h3>Two Miami pages competing with each other</h3>
@@ -300,8 +438,103 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- 06 RESULTS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>06 · What it produced</div>
+    <h2>August is running at the fastest<br>pace we have <em class="i">ever measured</em>.</h2>
+    <p class="sub">Everything below comes straight from Google Search Console and Google Analytics. The comparison is the last 28 days of data against the 28 before it, and against the same window a year ago. August is not finished, so where we project the full month we say so.</p>
+
+    <div class="kpis">
+      <div class="kpi">
+        <div class="n">+50<small>%</small></div>
+        <div class="l">More clicks from Google</div>
+        <div class="s">270 clicks against 180 the month before. Against the same period last year, up 80%.</div>
+      </div>
+      <div class="kpi">
+        <div class="n">10.2</div>
+        <div class="l">Clicks a day in August</div>
+        <div class="s">The highest daily rate in the thirteen months of data we hold, ahead of the previous best of 9.6. If it holds, the full month lands near 315, which would also be the highest monthly total.</div>
+      </div>
+      <div class="kpi">
+        <div class="n">1.27<small>%</small></div>
+        <div class="l">Click-through rate</div>
+        <div class="s">Up from 1.13% last month and 0.93% a year ago. More of the people who see Chefpost now click it.</div>
+      </div>
+      <div class="kpi">
+        <div class="n">+45<small>%</small></div>
+        <div class="l">More visitors on the site</div>
+        <div class="s">2,151 sessions against 1,484, with the internal team's own visits excluded from both.</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:22px;margin-top:44px">The last six months</h3>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Month</th><th>Clicks</th><th>Times shown</th><th>Click-through rate</th></tr></thead>
+        <tbody>
+          <tr><td>March</td><td>287</td><td>24,197</td><td>1.19%</td></tr>
+          <tr><td>April</td><td>242</td><td>33,782</td><td>0.72%</td></tr>
+          <tr><td>May</td><td>215</td><td>36,366</td><td>0.59%</td></tr>
+          <tr><td>June</td><td>194</td><td>21,069</td><td>0.92%</td></tr>
+          <tr><td>July</td><td>205</td><td>20,498</td><td>1.00%</td></tr>
+          <tr class="now"><td>August, first 23 days</td><td>234</td><td>15,516</td><td>1.51%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sub" style="margin-top:14px;font-size:14.5px">The interesting column is the last one, and it is the best of these six months. August is being shown to fewer people than May and converting more than twice the share of them. That is the difference between being found by anyone and being found by the right people. Fewer, better-qualified appearances is the goal, not a bigger impression count.</p>
+
+    <div class="items" style="margin-top:34px">
+      <div class="item">
+        <h3>The new city pages went from almost nothing to a third of the growth</h3>
+        <p>Clicks to the city landing pages went from 3 to 32, and the number of times they were shown went from 718 to 2,682.</p>
+        <p class="why"><b>Why it matters:</b> these pages were built and then sat quiet for weeks, which is normal. This is the month they started working.</p>
+      </div>
+      <div class="item">
+        <h3>Miami finally ranks on its own page</h3>
+        <p>The Miami page went from 0 clicks to 10, and from 183 appearances to 1,002.</p>
+        <p class="why"><b>Why it matters:</b> an old article had been competing with it for the same audience. Merging them is what freed it.</p>
+      </div>
+      <div class="item">
+        <h3>Weekly meal prep is climbing</h3>
+        <p>From 598 appearances to 1,401, and its average position improved from 24th to 20th. It now shows up for 111 different meal prep searches, up from 69.</p>
+        <p class="why"><b>Why it matters:</b> this page was rewritten eight days before the end of this window. It is early, and it is already moving.</p>
+      </div>
+      <div class="item">
+        <h3>People are staying longer</h3>
+        <p>Pages viewed per visit went from 3.00 to 3.33, and the share of people who leave immediately dropped from 52% to 46%.</p>
+        <p class="why"><b>Why it matters:</b> this is the navigation and speed work showing up in behaviour rather than in a chart.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:22px;margin-top:44px">The channel that did not exist in May</h3>
+    <div class="kpis">
+      <div class="kpi">
+        <div class="n">126</div>
+        <div class="l">Visits from AI assistants in August</div>
+        <div class="s">Against 45 in July, 7 in June and none in May. Almost all of it from ChatGPT.</div>
+      </div>
+      <div class="kpi">
+        <div class="n">78<small>%</small></div>
+        <div class="l">Of them engage with the site</div>
+        <div class="s">Well ahead of every channel that brings real volume: direct sits at 35%, search at 61%, social at 76%.</div>
+      </div>
+      <div class="kpi">
+        <div class="n">#1</div>
+        <div class="l">Perplexity's recommendation</div>
+        <div class="s">Asked who to use for a private chef doing weekly meal prep, it named Chefpost the best all-around booking platform, quoting our own prices back.</div>
+      </div>
+    </div>
+
     <div class="note">
-      <b>Where it landed.</b> Search clicks are up 50% against the previous month and 80% against the same month last year, the best month of the year so far. Traffic arriving from AI assistants went from nothing in May to the fastest-growing and most engaged channel on the site, and Perplexity now names Chefpost the best all-around platform for booking a private chef, quoting our own pricing back.
+      <b>The clearest proof that this is working.</b> The New Jersey page was published, and eight days later Perplexity was already recommending it and quoting its pricing, at a point when Google had shown it to just seven people. Pages are now earning their keep in AI answers long before they earn it in search results.
+    </div>
+
+    <div class="note warn">
+      <b>The honest caveat.</b> Most clicks still come from people searching for Chefpost by name. That is normal for a brand at this stage, and it is the number we are working to change: the whole point of the city, occasion and service pages is to be found by people who have never heard of Chefpost. Those pages growing from 3 clicks to 32 is the first real movement on it.
     </div>
   </div>
 </section>
