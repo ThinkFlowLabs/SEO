@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<title>C'est ici Design · SEO, Authority and AI Visibility Audit · September 2026</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%239E5B3C'/%3E%3Ctext x='16' y='21' font-family='Georgia,serif' font-size='16' fill='white' text-anchor='middle'%3ECi%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ DESIGN TOKENS ============ */
+  :root {
+    --ink:        #0E1014;
+    --ink-2:      #1F2630;
+    --muted:      #5E6675;
+    --line:       #E6DFD2;
+    --line-2:     #EFE7D8;
+    --cream:      #FBF6EB;
+    --cream-2:    #F4ECD9;
+    --paper:      #FFFBF1;
+    --coral:      #E63946;
+    --coral-dk:   #BC2C2C;
+    --coral-sft:  #FBE3E2;
+    --gold:       #C89A4A;
+    --gold-sft:   #F6E7C7;
+    --green:      #1F7A6A;
+    --green-sft:  #DAEEE7;
+    --amber:      #B45309;
+    --amber-sft:  #FFE9BD;
+    --red-bg:     #FFEBE9;
+
+    --r-sm: 4px; --r-md: 10px; --r-lg: 18px; --r-xl: 26px;
+    --shadow-sm: 0 1px 0 rgba(20,18,12,.06);
+    --shadow-md: 0 14px 38px -22px rgba(60,40,18,.32), 0 2px 0 rgba(20,18,12,.04);
+    --shadow-lg: 0 30px 80px -30px rgba(60,40,18,.36);
+
+    --serif:      "Fraunces", "Times New Roman", serif;
+    --sans:       "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono:       "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    font-size: 16.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--coral-dk); text-decoration: none; border-bottom: 1px solid rgba(188,44,44,.25); }
+  a:hover { border-bottom-color: var(--coral-dk); }
+
+  /* ============ LAYOUT ============ */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 84px 0; border-top: 1px solid var(--line); position: relative; }
+  section.alt { background: var(--paper); }
+  section.dark { background: var(--ink); color: #F2EAD7; border-top-color: #2A2520; }
+  section.dark a { color: #FFD8AC; border-bottom-color: rgba(255,216,172,.3); }
+
+  /* ============ TYPOGRAPHY ============ */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.012em; line-height: 1.08; margin: 0; }
+  h1 { font-size: clamp(48px, 8vw, 96px); font-weight: 380; letter-spacing: -.03em; }
+  h2 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 400; letter-spacing: -.022em; }
+  h3 { font-size: clamp(22px, 2.6vw, 30px); font-weight: 500; line-height: 1.18; }
+  h4 { font-size: 19px; font-weight: 600; line-height: 1.3; font-family: var(--sans); letter-spacing: -.005em; }
+  .display-italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .eyebrow {
+    font-family: var(--sans); font-weight: 500; font-size: 12px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--coral-dk);
+  }
+  p { margin: 0 0 1em; }
+  p.lede { font-size: 21px; line-height: 1.55; color: var(--ink-2); }
+  ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
+  ul li, ol li { margin-bottom: .35em; }
+  strong { font-weight: 600; }
+  .mono { font-family: var(--mono); font-size: .9em; }
+  .small { font-size: 13px; color: var(--muted); }
+
+  /* ============ HERO ============ */
+  .hero {
+    background:
+      radial-gradient(60% 80% at 80% 0%, #FBE3E2 0%, transparent 60%),
+      radial-gradient(50% 70% at 0% 70%, #F6E7C7 0%, transparent 55%),
+      var(--cream);
+    border-top: 0;
+    padding: 56px 0 96px;
+    overflow: hidden; position: relative;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%23E63946' opacity='.06'/></svg>");
+    pointer-events: none;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; position: relative; }
+  .hero h1 { margin-bottom: .18em; }
+  .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; color: var(--coral); }
+  .hero .meta { font-family: var(--sans); font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+  .hero .by-line { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-2); margin-top: 36px; font-size: 14px; }
+  .hero .by-line span b { color: var(--ink); font-weight: 600; }
+  .hero-side {
+    background: white; border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 30px; box-shadow: var(--shadow-md);
+    font-size: 14px;
+  }
+  .hero-side h4 { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-family: var(--sans); margin-bottom: 16px; font-weight: 600; }
+  .hero-side dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; }
+  .hero-side dt { color: var(--muted); }
+  .hero-side dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+  .hero-side .severity-strip { margin: 22px -30px -30px; padding: 18px 30px; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); color: white; border-radius: 0 0 var(--r-lg) var(--r-lg); display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 13px; letter-spacing: .05em; text-transform: uppercase; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  /* ============ TLDR (Executive Summary) ============ */
+  .tldr { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; }
+  .tldr h2 em { font-style: italic; color: var(--coral); font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .tldr-bullets { font-size: 17px; line-height: 1.6; }
+  .tldr-bullets li { margin-bottom: 16px; padding-left: 4px; }
+  .tldr-bullets li::marker { color: var(--coral); }
+  .verdict-card {
+    background: var(--ink); color: #F2EAD7;
+    border-radius: var(--r-lg); padding: 36px;
+    position: sticky; top: 24px;
+  }
+  .verdict-card h4 { color: #F6E7C7; font-family: var(--serif); font-size: 24px; margin-bottom: 14px; font-weight: 500; }
+  .verdict-card p { font-size: 15px; line-height: 1.65; color: #D8CDB5; }
+  .verdict-card .score-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--mono); font-size: 12px; }
+  .verdict-card .score-row b { color: white; font-size: 18px; }
+  @media (max-width: 820px) { .tldr { grid-template-columns: 1fr; } .verdict-card { position: static; } }
+
+  /* ============ KPI GRID ============ */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 22px 18px; position: relative; overflow: hidden;
+  }
+  .kpi-label { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .kpi-value { font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1; letter-spacing: -.02em; color: var(--ink); }
+  .kpi-value small { font-size: 17px; color: var(--muted); margin-left: 4px; font-family: var(--sans); font-weight: 500; }
+  .kpi-trend { font-size: 12px; margin-top: 8px; font-family: var(--mono); }
+  .kpi-trend.up { color: var(--green); }
+  .kpi-trend.dn { color: var(--coral-dk); }
+  .kpi.cta::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); }
+  @media (max-width: 820px) { .kpi-grid { grid-template-columns: 1fr 1fr; } .kpi-value { font-size: 36px; } }
+
+  /* ============ FINDINGS CARDS ============ */
+  .findings { display: grid; gap: 24px; }
+  .finding {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 36px; display: grid; grid-template-columns: 88px 1fr; gap: 28px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+  }
+  .finding .num {
+    font-family: var(--serif); font-size: 78px; font-weight: 400; line-height: 1; color: var(--coral); letter-spacing: -.04em; opacity: .9;
+  }
+  .finding h3 { margin-bottom: 8px; }
+  .finding .impact-line { font-size: 13.5px; color: var(--muted); margin-bottom: 18px; font-family: var(--mono); letter-spacing: .02em; }
+  .finding p { font-size: 16px; }
+  .finding .fix {
+    background: var(--cream-2); padding: 18px 22px; border-radius: var(--r-md);
+    margin-top: 18px; border-left: 3px solid var(--coral); font-size: 15.5px;
+  }
+  .finding .fix b { color: var(--ink); }
+  .badge {
+    display: inline-block; padding: 4px 11px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+  }
+  .badge.crit { background: var(--coral); color: white; }
+  .badge.high { background: var(--amber-sft); color: var(--amber); }
+  .badge.med { background: var(--gold-sft); color: var(--gold); }
+  .badge.opp { background: var(--green-sft); color: var(--green); }
+  .badge.brand { background: var(--ink); color: var(--cream); }
+  @media (max-width: 820px) {
+    .finding { grid-template-columns: 1fr; padding: 26px; }
+    .finding .num { font-size: 56px; }
+  }
+
+  /* ============ DATA TABLES ============ */
+  table {
+    width: 100%; border-collapse: collapse; font-size: 14.5px;
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden;
+  }
+  th { text-align: left; font-weight: 600; padding: 14px 16px; background: var(--cream-2); border-bottom: 1px solid var(--line); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  td.kw { font-weight: 500; }
+  td .badge { font-size: 10px; padding: 3px 8px; }
+
+  .table-scroll { overflow-x: auto; }
+
+  /* ============ URL AUDIT CARDS ============ */
+  .url-audit { background: white; border: 1px solid var(--line); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .url-audit.crit { border-color: #F4C7C5; }
+  .url-audit-head { background: var(--cream-2); padding: 16px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .url-audit.crit .url-audit-head { background: var(--coral-sft); }
+  .url-audit-url { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--ink); word-break: break-all; line-height: 1.4; }
+  .url-audit-meta { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 4px; letter-spacing: .01em; }
+  .url-audit-body { padding: 0; }
+  .url-issue { display: grid; grid-template-columns: 200px 1fr 1.5fr; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .url-issue:first-child { border-top: 0; }
+  .url-issue .issue-name { font-weight: 600; color: var(--coral-dk); display: flex; align-items: flex-start; gap: 8px; padding-top: 1px; }
+  .url-issue .issue-name::before { content: "✗"; font-weight: 700; flex-shrink: 0; }
+  .url-issue.ok .issue-name { color: var(--green); }
+  .url-issue.ok .issue-name::before { content: "✓"; }
+  .url-issue.warn .issue-name { color: var(--amber); }
+  .url-issue.warn .issue-name::before { content: "!"; }
+  .url-issue .issue-current { color: var(--ink-2); line-height: 1.5; }
+  .url-issue .issue-fix { color: var(--ink); background: var(--cream); padding: 9px 13px; border-radius: 4px; font-size: 13px; border-left: 3px solid var(--coral); line-height: 1.5; }
+  .url-issue .issue-fix b { color: var(--ink); }
+  .url-issue code { font-size: 11.5px; background: rgba(0,0,0,.04); padding: 1px 5px; border-radius: 3px; }
+  .url-issue .issue-fix code { background: rgba(20,18,12,.07); }
+
+  .url-group { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--coral); border-radius: var(--r-md); padding: 26px 28px; margin-bottom: 22px; }
+  .url-group.opp { border-left-color: var(--green); }
+  .url-group.warn { border-left-color: var(--amber); }
+  .url-group h4 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .url-group p { font-size: 14.5px; margin-bottom: 0; }
+  .url-group .url-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); margin-top: 16px; background: white; padding: 16px 18px; border-radius: 4px; border: 1px solid var(--line); }
+  .url-group .url-list span.cnt { color: var(--muted); margin-left: 6px; font-size: 11px; }
+  .url-group .group-fix { margin-top: 16px; padding: 14px 18px; background: var(--cream-2); border-radius: 4px; font-size: 14px; line-height: 1.55; }
+  .url-group .group-fix b { color: var(--coral-dk); }
+  .url-group .group-fix code { font-size: 11.5px; background: rgba(20,18,12,.07); padding: 1px 5px; border-radius: 3px; }
+
+  .sub-eyebrow { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--coral-dk); margin-top: 48px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--coral); }
+
+  @media (max-width: 820px) {
+    .url-issue { grid-template-columns: 1fr; gap: 8px; }
+    .url-group .url-list { grid-template-columns: 1fr; }
+  }
+
+  /* ============ PILLS / CALLOUTS ============ */
+  .callout {
+    background: var(--coral-sft); border: 1px solid #F4C7C5;
+    border-radius: var(--r-md); padding: 22px 26px;
+    font-size: 15.5px; color: var(--coral-dk); margin: 24px 0;
+  }
+  .callout.opp { background: var(--green-sft); border-color: #BFE0D6; color: #135548; }
+  .callout.warn { background: var(--amber-sft); border-color: #F2D5A0; color: var(--amber); }
+  .callout strong { color: inherit; }
+
+  /* ============ TWO-COL ============ */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 820px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+  /* ============ HIERARCHY CARDS ============ */
+  .page-card {
+    background: white; border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 22px 24px; margin-bottom: 14px;
+  }
+  .page-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+  .page-card-head h4 { font-family: var(--mono); font-size: 14px; color: var(--ink); letter-spacing: 0; word-break: break-all; }
+  .pc-issues { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .pc-issue { font-size: 11.5px; padding: 3px 9px; border-radius: 4px; background: var(--coral-sft); color: var(--coral-dk); font-weight: 600; }
+  .pc-issue.ok { background: var(--green-sft); color: var(--green); }
+  .pc-issue.warn { background: var(--amber-sft); color: var(--amber); }
+
+  /* ============ ROADMAP ============ */
+  .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .road-col {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 28px;
+  }
+  .road-col .label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 12.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--coral-dk); margin-bottom: 6px; }
+  .road-col .dot { width: 9px; height: 9px; border-radius: 999px; background: var(--coral); }
+  .road-col h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 18px; }
+  .road-col ul { list-style: none; padding: 0; }
+  .road-col li { padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: start; }
+  .road-col li:last-child { border-bottom: 0; }
+  .road-col li .check { width: 18px; height: 18px; border: 1.5px solid var(--line); border-radius: 4px; margin-top: 2px; }
+  .road-col li .pri { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; align-self: start; }
+  @media (max-width: 1000px) { .roadmap { grid-template-columns: 1fr; } }
+
+  /* ============ SCHEMA SNIPPETS ============ */
+  pre.code {
+    background: #1A1F26; color: #DCD0AE; padding: 22px 26px;
+    border-radius: var(--r-md); font-family: var(--mono); font-size: 13px;
+    overflow-x: auto; line-height: 1.55; margin: 18px 0;
+  }
+  .code .k { color: #FFD89B; }
+  .code .s { color: #B5DCC7; }
+  .code .c { color: #6E6452; font-style: italic; }
+
+  /* ============ FOOTER ============ */
+  footer { padding: 56px 0 36px; background: var(--ink); color: #BAB099; text-align: center; }
+  footer .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 28px; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  footer .small { color: #76705F; }
+
+  /* ============ STICKY NAV ============ */
+  .topnav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 246, 235, 0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  .topnav .inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .topnav a { color: var(--ink); border-bottom: 0; font-size: 13px; font-weight: 500; }
+  .topnav .mark { font-family: var(--serif); font-style: italic; color: var(--coral); font-size: 20px; font-variation-settings: "SOFT" 100, "WONK" 1; border: 0; }
+  .topnav nav { display: flex; gap: 22px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .topnav nav { display: none; } }
+
+  /* ============ HORIZONTAL BAR CHART ============ */
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 80px; gap: 14px; align-items: center; padding: 8px 0; font-size: 14px; }
+  .bar-bg { height: 22px; background: var(--cream-2); border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--coral-dk) 100%); }
+  .bar-fill.alt { background: linear-gradient(90deg, var(--gold) 0%, #A77F35 100%); }
+  .bar-fill.green { background: linear-gradient(90deg, #2C9D8B 0%, var(--green) 100%); }
+  .bar-val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; text-align: right; color: var(--ink-2); }
+  @media (max-width: 600px) { .bar-row { grid-template-columns: 120px 1fr 60px; font-size: 13px; } }
+
+  /* ============ DIVIDERS ============ */
+  .ornament { text-align: center; margin: 48px 0; color: var(--coral); font-family: var(--serif); font-size: 22px; letter-spacing: .4em; opacity: .7; }
+  .section-eyebrow { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+  .section-eyebrow .bar { width: 36px; height: 1px; background: var(--coral); }
+
+  /* ============ MISC ============ */
+  .quote {
+    border-left: 3px solid var(--coral); padding: 12px 0 12px 26px;
+    font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink-2);
+    font-style: italic; margin: 28px 0;
+  }
+  .quote cite { display: block; margin-top: 10px; font-family: var(--sans); font-size: 13px; color: var(--muted); font-style: normal; letter-spacing: .04em; }
+
+  details.acc { background: white; border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px 22px; margin-bottom: 10px; }
+  details.acc summary { cursor: pointer; font-weight: 600; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details.acc summary::after { content: "+"; font-family: var(--serif); font-size: 22px; color: var(--coral); }
+  details.acc[open] summary::after { content: "−"; }
+  details.acc[open] { box-shadow: var(--shadow-md); }
+  details.acc .body { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+
+  /* ============ PRINT ============ */
+  @media print {
+    body { background: white; }
+    section { padding: 28px 0; page-break-inside: avoid; }
+    .topnav, .hero::before { display: none; }
+    .finding, .road-col, table { box-shadow: none; }
+    a { color: var(--ink); }
+  }
+
+:root{ --coral:#9E5B3C; --coral-dk:#7A4530; --coral-sft:#F1E3DA; }
+.hero{ background: radial-gradient(60% 80% at 80% 0%, #F1E3DA 0%, transparent 60%), radial-gradient(50% 70% at 0% 70%, #EFE7D8 0%, transparent 55%), var(--cream); }
+.hero::before{ background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'><circle cx='1' cy='1' r='.6' fill='%239E5B3C' opacity='.08'/></svg>"); }
+.callout{ border-color:#E8CDBF; }
+.url-audit.crit{ border-color:#E8CDBF; }
+body.lang-es .en{ display:none !important; }
+body:not(.lang-es) .es{ display:none !important; }
+.lang-toggle{ display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; font-size:12px; font-weight:600; letter-spacing:.08em; }
+.lang-toggle button{ background:transparent; border:0; padding:6px 12px; cursor:pointer; color:var(--muted); font-family:var(--sans); }
+.lang-toggle button.on{ background:var(--ink); color:var(--cream); }
+.topnav nav{ display:flex; }
+@media (max-width:820px){ .topnav nav{ display:none; } }
+.section-eyebrow{ margin-top:0; }
+section{ padding:64px 0; }
+h2{ font-size:clamp(30px,4vw,46px); }
+p.lede{ font-size:18px; }
+.kpi-grid.six{ grid-template-columns:repeat(6,1fr); }
+@media (max-width:1000px){ .kpi-grid.six{ grid-template-columns:repeat(3,1fr); } }
+@media (max-width:600px){ .kpi-grid.six{ grid-template-columns:1fr 1fr; } }
+.kpi-value{ font-size:40px; }
+table{ width:100%; border-collapse:collapse; background:white; font-size:14px; }
+td.small{ font-size:12.5px; color:var(--muted); }
+tr.me td{ background:var(--coral-sft); font-weight:600; }
+.finding{ padding:26px 28px; grid-template-columns:60px 1fr; gap:18px; }
+.finding .num{ font-size:52px; }
+.finding h3{ font-size:20px; }
+.finding p{ font-size:15px; }
+.finding .fix{ font-size:14.5px; margin-top:12px; }
+.findings.two{ grid-template-columns:1fr 1fr; }
+@media (max-width:900px){ .findings.two{ grid-template-columns:1fr; } }
+section.dark table, section.dark .table-scroll{ background:transparent; }
+.matrix{ width:100%; border-collapse:collapse; font-size:13.5px; background:transparent !important; color:#F2EAD7; border:1px solid rgba(255,255,255,.14); border-radius:var(--r-md); overflow:hidden; }
+.matrix td{ color:#F2EAD7; }
+section.dark .ornament{ color:#FFD8AC; opacity:.5; }
+section.dark .section-eyebrow .bar{ background:#FFD8AC; }
+.matrix th,.matrix td{ padding:10px 12px; border-bottom:1px solid rgba(255,255,255,.1); text-align:center; }
+.matrix th{ background:rgba(255,255,255,.05); color:#F2EAD7; font-size:11px; letter-spacing:.12em; }
+.matrix td:first-child,.matrix th:first-child{ text-align:left; }
+.matrix .yes{ color:#8FE3C4; font-weight:700; }
+.matrix .no{ color:#8A7F6A; }
+section.dark .bar-bg{ background:rgba(255,255,255,.08); }
+section.dark .bar-val{ color:#F2EAD7; }
+section.dark .bar-row{ color:#F2EAD7; }
+section.dark h2 em{ color:#FFD8AC; }
+section.dark .eyebrow{ color:#FFD8AC; }
+section.dark p.lede{ color:#D8CDB5; }
+.road-col li{ grid-template-columns:1fr auto; }
+.appendix p, .appendix li{ font-size:14px; color:var(--ink-2); }
+.tag{ display:inline-block; font-family:var(--mono); font-size:11px; padding:2px 7px; border-radius:4px; background:var(--cream-2); color:var(--ink-2); margin-right:4px; }
+.tag.c{ background:var(--green-sft); color:var(--green); }
+.tag.t{ background:var(--gold-sft); color:#7A5A1C; }
+.tag.n{ background:#E9E4DA; color:var(--muted); }
+.tag.i{ background:#E9E4DA; color:var(--muted); }
+.gbp{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+@media (max-width:820px){ .gbp{ grid-template-columns:1fr; } }
+.gbp .card{ background:white; border:1px solid var(--line); border-radius:var(--r-md); padding:22px 24px; }
+.gbp .card h4{ font-family:var(--serif); font-size:20px; margin-bottom:10px; }
+.gbp dl{ display:grid; grid-template-columns:1fr auto; gap:8px 14px; font-size:14px; margin:0; }
+.gbp dt{ color:var(--muted); }
+.gbp dd{ margin:0; text-align:right; font-weight:600; }
+.pill-list{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.pill-list span{ background:white; border:1px solid var(--line); border-radius:999px; padding:5px 12px; font-size:13px; }
+.pill-list span.warn{ background:var(--amber-sft); border-color:#F2D5A0; color:var(--amber); }
+.pill-list span.ok{ background:var(--green-sft); border-color:#BFE0D6; color:var(--green); }
+footer{ padding:36px 0 60px; font-size:13px; color:var(--muted); text-align:center; border-top:1px solid var(--line); }
+html,body{ overflow-x:clip; }
+.two-col > *, .three-col > *, .gbp > *, .tldr > *, .findings > *, .hero-grid > *, .roadmap > * { min-width:0; }
+.table-scroll{ max-width:100%; -webkit-overflow-scrolling:touch; }
+@media (max-width:600px){ .kpi-grid{ grid-template-columns:1fr 1fr; } .hero-side dl{ grid-template-columns:1fr auto; } .bar-row{ grid-template-columns:110px 1fr 50px; } }
+</style>
+</head>
+<body>
+<div class="topnav"><div class="wrap inner">
+<a class="mark" href="#top">ThinkFlow Labs</a>
+<nav>
+<a href="#verdict"><span class="en">Verdict</span><span class="es">Veredicto</span></a>
+<a href="#competitors"><span class="en">Competitors</span><span class="es">Competidores</span></a>
+<a href="#keywords"><span class="en">Keywords</span><span class="es">Palabras clave</span></a>
+<a href="#site"><span class="en">Website</span><span class="es">Sitio web</span></a>
+<a href="#local"><span class="en">Local</span><span class="es">Local</span></a>
+<a href="#links"><span class="en">Authority and PR</span><span class="es">Autoridad y PR</span></a>
+<a href="#ai"><span class="en">AI visibility</span><span class="es">Visibilidad en IA</span></a>
+<a href="#plan"><span class="en">90-day plan</span><span class="es">Plan 90 dias</span></a>
+</nav>
+<div class="lang-toggle"><button id="btn-en" class="on" onclick="setLang('en')">EN</button><button id="btn-es" onclick="setLang('es')">ES</button></div>
+</div></div>
+<section class="hero" id="top"><div class="wrap"><div class="hero-grid">
+<div>
+<div class="meta"><span class="en">SEO · Authority · Local · AI visibility · September 2026</span><span class="es">SEO · Autoridad · Local · Visibilidad en IA · Septiembre 2026</span></div>
+<h1><span class="en">Where <em>C'est ici</em> stands, and what to fix first.</span><span class="es">Donde esta <em>C'est ici</em> hoy, y que arreglar primero.</span></h1>
+<p class="lede" style="max-width:640px"><span class="en">A five-minute read. We measured the studio against the 11 competitors you named and the 8 international references, across Google, Google Maps and the four main AI assistants. The numbers are honest, and every section ends with what you could do better.</span><span class="es">Lectura de cinco minutos. Medimos el estudio frente a los 11 competidores que nombraron y las 8 referencias internacionales, en Google, Google Maps y los cuatro asistentes de IA principales. Los numeros son honestos, y cada seccion termina con lo que podrian mejorar.</span></p>
+<div class="by-line"><span><span class="en">Prepared by</span><span class="es">Preparado por</span> <b>ThinkFlow Labs</b></span><span><span class="en">Data</span><span class="es">Datos</span>: <b>DataForSEO, Google Trends, Playwright, GPT / Claude / Gemini / Perplexity</b></span><span><span class="en">Site</span><span class="es">Sitio</span>: <b>cesticidecor.com</b></span></div>
+</div>
+<aside class="hero-side"><h4><span class="en">At a glance</span><span class="es">De un vistazo</span></h4>
+<dl>
+<dt><span class="en">Keywords ranking in the UAE</span><span class="es">Palabras clave posicionadas en EAU</span></dt><dd>1</dd>
+<dt><span class="en">Monthly visits from Google (UAE)</span><span class="es">Visitas mensuales desde Google (EAU)</span></dt><dd>~2</dd>
+<dt><span class="en">Referring domains (links)</span><span class="es">Dominios que enlazan</span></dt><dd>66</dd>
+<dt><span class="en">Competitors' range</span><span class="es">Rango de competidores</span></dt><dd>82 to 436</dd>
+<dt><span class="en">Monthly searches for your name</span><span class="es">Busquedas mensuales de su nombre</span></dt><dd>0</dd>
+<dt><span class="en">Google reviews</span><span class="es">Resenas en Google</span></dt><dd>1</dd>
+<dt><span class="en">AI recommendations that name you</span><span class="es">Recomendaciones de IA que los nombran</span></dt><dd><span class="en">1 of 20</span><span class="es">1 de 20</span></dd>
+</dl>
+<div class="severity-strip"><span><span class="en">Overall</span><span class="es">Global</span></span><span><span class="en">Invisible online, fixable in 90 days</span><span class="es">Invisible online, corregible en 90 dias</span></span></div>
+</aside>
+</div></div></section>
+<section id="verdict" class="alt"><div class="wrap">
+<div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">01 · <span class="en">The 60-second verdict</span><span class="es">El veredicto en 60 segundos</span></span></div>
+<h2><span class="en">A studio with awards and press, and a website that <em>Google cannot see</em>.</span><span class="es">Un estudio con premios y prensa, y un sitio web que <em>Google no ve</em>.</span></h2>
+<div class="ornament">· · ·</div>
+<div class="tldr">
+<div><ol class="tldr-bullets">
+<li><span class="en"><b>You are not ranking for anything.</b> Across 84 pages and 62 newsletter posts, the site appears for exactly one keyword in the UAE, and it is not even related to interior design. There is no penalty. The site simply gives Google nothing to rank: 10 H1 headings on the home page, 220 words of text, project pages named after cities, and no page that says 'hospitality interior design Dubai'.</span><span class="es"><b>No estan posicionando por nada.</b> Con 84 paginas y 62 posts de newsletter, el sitio aparece por exactamente una palabra clave en EAU, y ni siquiera tiene que ver con interiorismo. No hay penalizacion. El sitio simplemente no le da a Google nada que posicionar: 10 encabezados H1 en la home, 220 palabras de texto, paginas de proyecto con nombres de ciudades, y ninguna pagina que diga 'hospitality interior design Dubai'.</span></li>
+<li><span class="en"><b>Your competitors do not win on service keywords either.</b> Roar, VSHD, Bishop and LW get their Google traffic from people searching their names and their projects. The big commercial terms (8,100 searches a month for 'interior design company dubai') are owned by fit-out companies with 300 to 10,000 linking websites. That is not a fight a boutique studio should pick.</span><span class="es"><b>Sus competidores tampoco ganan por palabras clave de servicio.</b> Roar, VSHD, Bishop y LW reciben su trafico de Google de gente que busca sus nombres y sus proyectos. Los grandes terminos comerciales (8.100 busquedas al mes por 'interior design company dubai') los dominan empresas de fit-out con 300 a 10.000 sitios enlazando. No es una pelea que un estudio boutique deba elegir.</span></li>
+<li><span class="en"><b>The real gap is brand, authority and reviews.</b> Nobody searches 'C'est ici design' in measurable volume, while LW Design gets 1,600 searches a month and Bishop 1,000. You have 66 linking domains; the closest competitor has 82, and the international references have 400 to 4,400. Your Google Business Profile is filed as a 'Drafting service' with one review.</span><span class="es"><b>La brecha real es marca, autoridad y resenas.</b> Nadie busca 'C'est ici design' en volumen medible, mientras LW Design recibe 1.600 busquedas al mes y Bishop 1.000. Tienen 66 dominios enlazando; el competidor mas cercano tiene 82, y las referencias internacionales entre 400 y 4.400. Su perfil de Google Business esta registrado como 'Drafting service' con una resena.</span></li>
+<li><span class="en"><b>AI assistants know you, but do not recommend you.</b> Asked 'who is C'est ici Design', all four of ChatGPT, Claude, Gemini and Perplexity describe the studio and Monica correctly. Asked the questions a client asks before they know your name, you appear once in twenty answers. Bishop Design and Roar appear four times each. Recognition is fine; discovery is the gap.</span><span class="es"><b>Los asistentes de IA los conocen, pero no los recomiendan.</b> Al preguntar 'quien es C'est ici Design', los cuatro (ChatGPT, Claude, Gemini y Perplexity) describen bien el estudio y a Monica. Al hacer las preguntas que hace un cliente antes de conocer su nombre, aparecen una vez de veinte. Bishop Design y Roar aparecen cuatro veces cada uno. El reconocimiento esta bien; la brecha es el descubrimiento.</span></li>
+</ol></div>
+<div><div class="verdict-card"><h4><span class="en">Our recommendation</span><span class="es">Nuestra recomendacion</span></h4>
+<p><span class="en">Do not chase 'interior design company dubai'. Build the three things that actually drive leads for a boutique studio: a website Google can read (service pages for residential, hospitality and F&B, a founder page, clean headings), a Google profile with 15+ reviews, and press and directory links that AI assistants trust. Then add one page each for Saudi Arabia and Spain.</span><span class="es">No persigan 'interior design company dubai'. Construyan las tres cosas que de verdad generan leads para un estudio boutique: un sitio que Google pueda leer (paginas de servicio para residencial, hospitality y F&B, una pagina de la fundadora, encabezados limpios), un perfil de Google con mas de 15 resenas, y enlaces de prensa y directorios en los que confien los asistentes de IA. Luego una pagina para Arabia Saudita y otra para Espana.</span></p>
+<div class="score-row"><span><span class="en">SEO health</span><span class="es">Salud SEO</span><br><b>2 / 10</b></span><span><span class="en">Authority</span><span class="es">Autoridad</span><br><b>2 / 10</b></span><span><span class="en">Local</span><span class="es">Local</span><br><b>3 / 10</b></span><span><span class="en">AI</span><span class="es">IA</span><br><b>1 / 10</b></span></div>
+</div></div>
+</div>
+</div></section>
+<section id="competitors"><div class="wrap">
+<div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">02 · <span class="en">Where you stand against the competitors you named</span><span class="es">Donde estan frente a los competidores que nombraron</span></span></div>
+<h2><span class="en">Last on every metric, but the gap to the <em>nearest studio</em> is small.</span><span class="es">Ultimos en cada metrica, pero la distancia al <em>estudio mas cercano</em> es corta.</span></h2>
+<p class="lede" style="margin-top:14px;max-width:820px"><span class="en">Referring domains are the number of different websites linking to you. It is the best single proxy for authority in Google and in AI answers. Keywords and visits are for the UAE. Brand searches are how many times a month people type the studio's name into Google in the UAE.</span><span class="es">Los dominios que enlazan son la cantidad de sitios web distintos que apuntan a ustedes. Es el mejor indicador de autoridad en Google y en las respuestas de IA. Palabras clave y visitas son para EAU. Las busquedas de marca son cuantas veces al mes la gente escribe el nombre del estudio en Google en EAU.</span></p>
+<div class="ornament">· · ·</div>
+<div class="table-scroll"><table>
+<thead><tr><th><span class="en">Studio</span><span class="es">Estudio</span></th><th class="num"><span class="en">Linking domains</span><span class="es">Dominios que enlazan</span></th><th class="num"><span class="en">UAE keywords</span><span class="es">Keywords EAU</span></th><th class="num"><span class="en">Google visits / mo</span><span class="es">Visitas Google / mes</span></th><th class="num"><span class="en">Brand searches / mo</span><span class="es">Busquedas de marca / mes</span></th><th><span class="en">Note</span><span class="es">Nota</span></th></tr></thead>
+<tbody><tr class="me"><td><b>C'est ici Design</b><br><span class="small mono">cesticidecor.com</span></td><td class="num">66</td><td class="num">1</td><td class="num">2</td><td class="num">0</td><td class="small"><span class="en">You</span><span class="es">Ustedes</span></td></tr><tr><td><b>Styled Habitat</b><br><span class="small mono">styledhabitat.com</span></td><td class="num">82</td><td class="num">32</td><td class="num">322</td><td class="num">260</td><td class="small"><span class="en">Closest realistic benchmark</span><span class="es">Referente realista mas cercano</span></td></tr><tr><td><b>BONE</b><br><span class="small mono">bone.studio</span></td><td class="num">134</td><td class="num">6</td><td class="num">418</td><td class="num">50</td><td class="small"><span class="en">Ranks on brand and press only</span><span class="es">Posiciona solo por marca y prensa</span></td></tr><tr><td><b>Sneha Divias Atelier</b><br><span class="small mono">snehadivias.com</span></td><td class="num">149</td><td class="num">0</td><td class="num">0</td><td class="num">110</td><td class="small"><span class="en">Invisible on Google too</span><span class="es">Tambien invisible en Google</span></td></tr><tr><td><b>Bishop Design</b><br><span class="small mono">wearebishopdesign.com</span></td><td class="num">197</td><td class="num">47</td><td class="num">1,064</td><td class="num">1,000</td><td class="small"><span class="en">Project pages drive traffic</span><span class="es">Las paginas de proyecto traen el trafico</span></td></tr><tr><td><b>VSHD Design</b><br><span class="small mono">vshd.net</span></td><td class="num">216</td><td class="num">22</td><td class="num">995</td><td class="num">260</td><td class="small"><span class="en">12 to 18 month target</span><span class="es">Objetivo a 12-18 meses</span></td></tr><tr><td><b>Roar</b><br><span class="small mono">designbyroar.com</span></td><td class="num">231</td><td class="num">36</td><td class="num">266</td><td class="num">130</td><td class="small"><span class="en">Founder-led, most press</span><span class="es">Liderado por fundadora, mas prensa</span></td></tr><tr><td><b>LW Design</b><br><span class="small mono">lw.co</span></td><td class="num">263</td><td class="num">18</td><td class="num">707</td><td class="num">1,600</td><td class="small"><span class="en">Strongest brand demand</span><span class="es">Mayor demanda de marca</span></td></tr><tr><td><b>Studio EM</b><br><span class="small mono">studioem.net</span></td><td class="num">315</td><td class="num">5</td><td class="num">70</td><td class="num">10</td><td class="small"><span class="en">Links, but little search</span><span class="es">Enlaces, pero poca busqueda</span></td></tr><tr><td><b>4SPACE</b><br><span class="small mono">4space.ae</span></td><td class="num">322</td><td class="num">167</td><td class="num">938</td><td class="num">590</td><td class="small"><span class="en">Only one with service pages</span><span class="es">El unico con paginas de servicio</span></td></tr><tr><td><b>XBD Collective</b><br><span class="small mono">xbdesign.com</span></td><td class="num">384</td><td class="num">49</td><td class="num">445</td><td class="num">1,000</td><td class="small"><span class="en">Strong brand demand</span><span class="es">Fuerte demanda de marca</span></td></tr><tr><td><b>YODEZEEN</b><br><span class="small mono">yodezeen.com</span></td><td class="num">436</td><td class="num">5</td><td class="num">103</td><td class="num">260</td><td class="small"><span class="en">Global links, Wikipedia page</span><span class="es">Enlaces globales, pagina en Wikipedia</span></td></tr></tbody></table></div>
+<div class="two-col" style="margin-top:36px;align-items:start">
+<div><h3 style="margin-bottom:14px"><span class="en">Linking domains, ranked</span><span class="es">Dominios que enlazan, ordenados</span></h3><div class="bar-row"><span>YODEZEEN</span><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">436</span></div><div class="bar-row"><span>XBD Collective</span><div class="bar-bg"><div class="bar-fill" style="width:88%"></div></div><span class="bar-val">384</span></div><div class="bar-row"><span>4SPACE</span><div class="bar-bg"><div class="bar-fill" style="width:74%"></div></div><span class="bar-val">322</span></div><div class="bar-row"><span>Studio EM</span><div class="bar-bg"><div class="bar-fill" style="width:72%"></div></div><span class="bar-val">315</span></div><div class="bar-row"><span>LW Design</span><div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div><span class="bar-val">263</span></div><div class="bar-row"><span>Roar</span><div class="bar-bg"><div class="bar-fill" style="width:53%"></div></div><span class="bar-val">231</span></div><div class="bar-row"><span>VSHD Design</span><div class="bar-bg"><div class="bar-fill" style="width:50%"></div></div><span class="bar-val">216</span></div><div class="bar-row"><span>Bishop Design</span><div class="bar-bg"><div class="bar-fill" style="width:45%"></div></div><span class="bar-val">197</span></div><div class="bar-row"><span>Sneha Divias Atelier</span><div class="bar-bg"><div class="bar-fill" style="width:34%"></div></div><span class="bar-val">149</span></div><div class="bar-row"><span>BONE</span><div class="bar-bg"><div class="bar-fill" style="width:31%"></div></div><span class="bar-val">134</span></div><div class="bar-row"><span>Styled Habitat</span><div class="bar-bg"><div class="bar-fill" style="width:19%"></div></div><span class="bar-val">82</span></div><div class="bar-row"><span>C'est ici Design</span><div class="bar-bg"><div class="bar-fill alt" style="width:15%"></div></div><span class="bar-val">66</span></div></div>
+<div>
+<div class="callout"><strong><span class="en">International references:</span><span class="es">Referencias internacionales:</span></strong> Laura Gonzalez 416, Studio KO 605, Studiopepe 609, Lazaro Rosa-Violan 675, Pierre Yovanovitch 775, Dimorestudio 1,021, India Mahdavi 1,348, Kelly Wearstler 4,366 <span class="en">linking domains. Reaching that league is a multi-year PR effort, not an SEO tactic. The realistic 12-month target is VSHD and Roar territory (200+).</span><span class="es">dominios que enlazan. Llegar a esa liga es un esfuerzo de PR de varios anos, no una tactica SEO. El objetivo realista a 12 meses es el territorio de VSHD y Roar (mas de 200).</span></div>
+<div class="callout opp"><strong><span class="en">What you could do better:</span><span class="es">Lo que podrian mejorar:</span></strong> <span class="en">copy how Bishop and VSHD earn traffic. Their project pages rank for the restaurant and hotel names they designed (Studio One Hotel, Orijins, Soub). Your project pages are named Kyoto, Formentera or Bogota, which are mood names, so Google cannot connect them to a real Dubai venue or client. Rename and describe projects by the real property or venue whenever the client allows it.</span><span class="es">copien como Bishop y VSHD consiguen trafico. Sus paginas de proyecto posicionan por los nombres de los restaurantes y hoteles que disenaron (Studio One Hotel, Orijins, Soub). Sus paginas de proyecto se llaman Kyoto, Formentera o Bogota, que son nombres de inspiracion, asi que Google no puede conectarlas con un local o cliente real en Dubai. Renombren y describan los proyectos por la propiedad o local real siempre que el cliente lo permita.</span></div>
+</div></div>
+</div></section>
+<section id="keywords" class="alt"><div class="wrap">
+<div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">03 · <span class="en">Keywords: what people search, and what it is worth</span><span class="es">Palabras clave: que busca la gente, y cuanto vale</span></span></div>
+<h2><span class="en">The commercial market in the UAE is worth about <em>$184,000 a month</em> in search demand.</span><span class="es">El mercado comercial en EAU vale unos <em>184.000 USD al mes</em> en demanda de busqueda.</span></h2>
+<p class="lede" style="margin-top:14px;max-width:820px"><span class="en">We grouped every commercial and transactional keyword for interior design in the UAE: 30 keyword groups, 22,190 searches a month. Multiplied by what advertisers pay per click, that is $184,000 a month of demand. Two thirds of it sits in the generic 'company / firm' terms owned by fit-out companies. The rows marked Target are the ones a boutique studio can realistically win with the right page.</span><span class="es">Agrupamos todas las palabras clave comerciales y transaccionales de interiorismo en EAU: 30 grupos, 22.190 busquedas al mes. Multiplicado por lo que pagan los anunciantes por clic, son 184.000 USD al mes de demanda. Dos tercios estan en los terminos genericos de 'company / firm' que dominan las empresas de fit-out. Las filas marcadas Objetivo son las que un estudio boutique puede ganar de forma realista con la pagina correcta.</span></p>
+<div class="kpi-grid" style="margin-top:28px">
+<div class="kpi"><div class="kpi-label"><span class="en">Generic 'company / firm'</span><span class="es">Genericas 'company / firm'</span></div><div class="kpi-value">16,260<small>/mo</small></div><div class="kpi-trend "><span class="en">$119k value</span><span class="es">119k USD de valor</span></div></div>
+<div class="kpi"><div class="kpi-label"><span class="en">Workplace and commercial</span><span class="es">Oficinas y comercial</span></div><div class="kpi-value">4,430<small>/mo</small></div><div class="kpi-trend "><span class="en">$36k value</span><span class="es">36k USD de valor</span></div></div>
+<div class="kpi"><div class="kpi-label"><span class="en">Residential (villa, home, penthouse)</span><span class="es">Residencial (villa, casa, penthouse)</span></div><div class="kpi-value">1,360<small>/mo</small></div><div class="kpi-trend "><span class="en">$26k value</span><span class="es">26k USD de valor</span></div></div>
+<div class="kpi cta"><div class="kpi-label"><span class="en">Hospitality and F&B</span><span class="es">Hospitality y F&B</span></div><div class="kpi-value">140<small>/mo</small></div><div class="kpi-trend "><span class="en">$4k value, but $53 per click</span><span class="es">4k USD de valor, pero 53 USD por clic</span></div></div>
+</div>
+<div class="ornament">· · ·</div>
+<h3><span class="en">United Arab Emirates (English)</span><span class="es">Emiratos Arabes Unidos (ingles)</span></h3>
+<p class="small" style="margin:6px 0 14px"><span class="en">Volume = searches per month. CPC = what advertisers pay per click in USD. KD = keyword difficulty, 0 to 100. Owner = who is on page one today.</span><span class="es">Volumen = busquedas al mes. CPC = lo que pagan los anunciantes por clic en USD. KD = dificultad, de 0 a 100. Dueno = quien esta hoy en la primera pagina.</span></p>
+<div class="table-scroll"><table>
+<thead><tr><th><span class="en">Keyword</span><span class="es">Palabra clave</span></th><th class="num"><span class="en">Volume</span><span class="es">Volumen</span></th><th class="num">CPC</th><th class="num">KD</th><th><span class="en">Intent</span><span class="es">Intencion</span></th><th><span class="en">Who owns it</span><span class="es">Quien lo domina</span></th><th></th></tr></thead>
+<tbody><tr><td class="kw">interior design company dubai</td><td class="num">8,100</td><td class="num">$7.87</td><td class="num">26</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Fit-out firms with 300 to 10,000 links (Antonovich, Zen, Algedra)</span><span class="es">Empresas de fit-out con 300 a 10.000 enlaces (Antonovich, Zen, Algedra)</span></td><td><span class="badge med"><span class="en">Skip</span><span class="es">Evitar</span></span></td></tr><tr><td class="kw">interior design dubai</td><td class="num">2,400</td><td class="num">$8.50</td><td class="num">24</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Same fit-out firms</span><span class="es">Las mismas empresas de fit-out</span></td><td><span class="badge med"><span class="en">Skip</span><span class="es">Evitar</span></span></td></tr><tr><td class="kw">interior designer dubai</td><td class="num">1,600</td><td class="num">$7.09</td><td class="num">35</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Fit-out firms, Instagram, directories</span><span class="es">Fit-out, Instagram, directorios</span></td><td><span class="badge med"><span class="en">Skip</span><span class="es">Evitar</span></span></td></tr><tr><td class="kw">interior design abu dhabi</td><td class="num">720</td><td class="num">$5.41</td><td class="num">-</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Abu Dhabi fit-out firms</span><span class="es">Fit-out de Abu Dhabi</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">office interior design dubai</td><td class="num">720</td><td class="num">$7.68</td><td class="num">6</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Fit-out firms, low difficulty</span><span class="es">Fit-out, dificultad baja</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">villa renovation dubai</td><td class="num">720</td><td class="num">$24.46</td><td class="num">-</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Contractors</span><span class="es">Contratistas</span></td><td><span class="badge med"><span class="en">Skip</span><span class="es">Evitar</span></span></td></tr><tr><td class="kw">best interior design company in dubai</td><td class="num">590</td><td class="num">$5.49</td><td class="num">24</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Listicles (Dubai Design Week, Accouter)</span><span class="es">Listas (Dubai Design Week, Accouter)</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">luxury interior design dubai</td><td class="num">480</td><td class="num">$7.26</td><td class="num">23</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Antonovich, Elliot James, Instagram</span><span class="es">Antonovich, Elliot James, Instagram</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">villa interior design dubai</td><td class="num">260</td><td class="num">$19.04</td><td class="num">-</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Whitebricks, Accouter, Pinterest</span><span class="es">Whitebricks, Accouter, Pinterest</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">interior design studio dubai</td><td class="num">210</td><td class="num">$4.31</td><td class="num">24</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Small studios: Idea Art, Euphoria, Finch</span><span class="es">Estudios pequenos: Idea Art, Euphoria, Finch</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">interior design consultancy dubai</td><td class="num">140</td><td class="num">$10.23</td><td class="num">18</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Few strong pages</span><span class="es">Pocas paginas fuertes</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">luxury interior design company dubai</td><td class="num">140</td><td class="num">$4.56</td><td class="num">25</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Antonovich, Algedra</span><span class="es">Antonovich, Algedra</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">restaurant interior design dubai</td><td class="num">70</td><td class="num">$53.18</td><td class="num">31</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Antonovich, H2R, Finch, 4SPACE</span><span class="es">Antonovich, H2R, Finch, 4SPACE</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">interior architecture dubai</td><td class="num">50</td><td class="num">-</td><td class="num">47</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Universities and Idea Art</span><span class="es">Universidades e Idea Art</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">luxury villa interior design dubai</td><td class="num">30</td><td class="num">$55.47</td><td class="num">-</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Highest cost per click on the list</span><span class="es">El clic mas caro de la lista</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr><tr><td class="kw">hospitality interior design dubai</td><td class="num">20</td><td class="num">-</td><td class="num">-</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td><td class="small"><span class="en">Almost nobody. Easy win</span><span class="es">Casi nadie. Victoria facil</span></td><td><span class="badge opp"><span class="en">Target</span><span class="es">Objetivo</span></span></td></tr></tbody></table></div>
+<div class="callout" style="margin-top:22px"><strong><span class="en">What you could do better:</span><span class="es">Lo que podrian mejorar:</span></strong> <span class="en">you currently have zero pages built for any of these. Create four service pages (Residential, Hospitality and F&B, Workplace, Retail and brand spaces), each 600 to 900 words with real Dubai projects, and one page for Abu Dhabi. 'Hospitality interior design dubai' and 'restaurant interior design dubai' have almost no boutique competition and the highest value per click in the market.</span><span class="es">hoy no tienen ninguna pagina construida para ninguna de estas. Creen cuatro paginas de servicio (Residencial, Hospitality y F&B, Oficinas, Retail y espacios de marca), cada una de 600 a 900 palabras con proyectos reales en Dubai, y una pagina para Abu Dhabi. 'Hospitality interior design dubai' y 'restaurant interior design dubai' casi no tienen competencia boutique y tienen el mayor valor por clic del mercado.</span></div>
+
+<div class="two-col" style="margin-top:40px;align-items:start">
+<div>
+<h3><span class="en">Saudi Arabia</span><span class="es">Arabia Saudita</span></h3>
+<p class="small" style="margin:6px 0 14px"><span class="en">English demand is tiny. Arabic is where the volume is, and the generic Arabic term 'interior design' alone has 5,400 searches a month.</span><span class="es">La demanda en ingles es minima. El volumen esta en arabe, y solo el termino generico 'diseno interior' en arabe tiene 5.400 busquedas al mes.</span></p>
+<div class="table-scroll"><table>
+<thead><tr><th><span class="en">Keyword</span><span class="es">Palabra clave</span></th><th></th><th class="num"><span class="en">Volume</span><span class="es">Volumen</span></th><th class="num">CPC</th><th><span class="en">Intent</span><span class="es">Intencion</span></th></tr></thead>
+<tbody><tr><td class="kw">interior design riyadh</td><td><span class="tag">EN</span></td><td class="num">320</td><td class="num">$3.90</td><td><span class="tag i"><span class="en">Informational</span><span class="es">Informativa</span></span></td></tr><tr><td class="kw">interior design jeddah</td><td><span class="tag">EN</span></td><td class="num">140</td><td class="num">$2.29</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td class="kw">interior design company riyadh</td><td><span class="tag">EN</span></td><td class="num">50</td><td class="num">$4.11</td><td><span class="tag n"><span class="en">Navigational</span><span class="es">Navegacional</span></span></td></tr><tr><td class="kw">interior design companies in saudi arabia</td><td><span class="tag">EN</span></td><td class="num">50</td><td class="num">$4.45</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td class="kw">تصميم داخلي الرياض (interior design Riyadh)</td><td><span class="tag">AR</span></td><td class="num">210</td><td class="num">$4.53</td><td><span class="tag n"><span class="en">Navigational</span><span class="es">Navegacional</span></span></td></tr><tr><td class="kw">تصميم مطاعم (restaurant design)</td><td><span class="tag">AR</span></td><td class="num">170</td><td class="num">$1.79</td><td><span class="tag i"><span class="en">Informational</span><span class="es">Informativa</span></span></td></tr><tr><td class="kw">تصميم داخلي جدة (interior design Jeddah)</td><td><span class="tag">AR</span></td><td class="num">110</td><td class="num">$1.79</td><td><span class="tag i"><span class="en">Informational</span><span class="es">Informativa</span></span></td></tr><tr><td class="kw">مصمم داخلي الرياض (interior designer Riyadh)</td><td><span class="tag">AR</span></td><td class="num">90</td><td class="num">$2.35</td><td><span class="tag n"><span class="en">Navigational</span><span class="es">Navegacional</span></span></td></tr><tr><td class="kw">تصميم فنادق (hotel design)</td><td><span class="tag">AR</span></td><td class="num">90</td><td class="num">$1.12</td><td><span class="tag i"><span class="en">Informational</span><span class="es">Informativa</span></span></td></tr><tr><td class="kw">شركات التصميم الداخلي في الرياض (design companies Riyadh)</td><td><span class="tag">AR</span></td><td class="num">50</td><td class="num">$2.81</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr></tbody></table></div>
+<div class="callout warn" style="margin-top:16px"><strong><span class="en">Read this as:</span><span class="es">Leanlo asi:</span></strong> <span class="en">Saudi Arabia is a relationship and PR market, not a search market. One strong page ('Interior design studio for Saudi Arabia: Riyadh, Jeddah, AlUla') in English and Arabic gives you credibility when a developer Googles you, and gives AI assistants something to cite. Do not expect leads from search alone.</span><span class="es">Arabia Saudita es un mercado de relaciones y PR, no de busqueda. Una pagina fuerte ('Interior design studio for Saudi Arabia: Riyadh, Jeddah, AlUla') en ingles y arabe les da credibilidad cuando un desarrollador los googlea, y le da a los asistentes de IA algo que citar. No esperen leads solo de busqueda.</span></div>
+</div>
+<div>
+<h3><span class="en">Secondary markets</span><span class="es">Mercados secundarios</span></h3>
+<p class="small" style="margin:6px 0 14px"><span class="en">Volumes per country. Marbella stands out: real commercial demand with a difficulty of 1 to 3 out of 100.</span><span class="es">Volumenes por pais. Marbella destaca: demanda comercial real con una dificultad de 1 a 3 sobre 100.</span></p>
+<div class="table-scroll"><table>
+<thead><tr><th><span class="en">City</span><span class="es">Ciudad</span></th><th><span class="en">Keyword</span><span class="es">Palabra clave</span></th><th class="num"><span class="en">Volume</span><span class="es">Volumen</span></th><th class="num">CPC</th><th class="num">KD</th><th><span class="en">Intent</span><span class="es">Intencion</span></th></tr></thead>
+<tbody><tr><td>London</td><td class="kw">interior designer london</td><td class="num">3,600</td><td class="num">$7.08</td><td class="num">25</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td>London</td><td class="kw">interior design studio london</td><td class="num">320</td><td class="num">$5.67</td><td class="num">22</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td>Miami</td><td class="kw">interior designer miami</td><td class="num">1,600</td><td class="num">$10.80</td><td class="num">30</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td>Miami</td><td class="kw">interior design firm miami</td><td class="num">170</td><td class="num">$6.42</td><td class="num">30</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td>Paris</td><td class="kw">architecte d'interieur paris</td><td class="num">2,900</td><td class="num">$7.01</td><td class="num">21</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td>Nice / Cannes</td><td class="kw">architecte d'interieur nice</td><td class="num">880</td><td class="num">$4.06</td><td class="num">13</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td>Cannes</td><td class="kw">architecte d'interieur cannes</td><td class="num">320</td><td class="num">$2.72</td><td class="num">-</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td>Marbella</td><td class="kw">interior design marbella</td><td class="num">590</td><td class="num">$4.59</td><td class="num">1</td><td><span class="tag c"><span class="en">Commercial</span><span class="es">Comercial</span></span></td></tr><tr><td>Marbella</td><td class="kw">interiorista marbella</td><td class="num">480</td><td class="num">$3.55</td><td class="num">3</td><td><span class="tag n"><span class="en">Navigational</span><span class="es">Navegacional</span></span></td></tr><tr><td>Madrid</td><td class="kw">estudio de interiorismo madrid</td><td class="num">480</td><td class="num">$5.55</td><td class="num">20</td><td><span class="tag n"><span class="en">Navigational</span><span class="es">Navegacional</span></span></td></tr><tr><td>Barcelona</td><td class="kw">estudio de interiorismo barcelona</td><td class="num">140</td><td class="num">$3.07</td><td class="num">28</td><td><span class="tag n"><span class="en">Navigational</span><span class="es">Navegacional</span></span></td></tr></tbody></table></div>
+<div class="callout opp" style="margin-top:16px"><strong><span class="en">What you could do better:</span><span class="es">Lo que podrian mejorar:</span></strong> <span class="en">start Europe with one Spanish-language page for Marbella and the Balearics. It matches your Mediterranean identity, the difficulty is close to zero, and 'interior design marbella' has 590 searches a month. London and Paris are worth a page only once you have a local project to show.</span><span class="es">empiecen Europa con una pagina en espanol para Marbella y Baleares. Encaja con su identidad mediterranea, la dificultad es casi cero, e 'interior design marbella' tiene 590 busquedas al mes. Londres y Paris merecen una pagina solo cuando tengan un proyecto local que mostrar.</span></div>
+</div></div>
+</div></section>
+<section id="site"><div class="wrap">
+<div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">04 · <span class="en">The website: this is what you could do better</span><span class="es">El sitio web: esto es lo que podrian mejorar</span></span></div>
+<h2><span class="en">Beautiful to look at, <em>unreadable</em> for Google and AI.</span><span class="es">Bonito a la vista, <em>ilegible</em> para Google y la IA.</span></h2>
+<p class="lede" style="margin-top:14px;max-width:820px"><span class="en">We crawled 10 template pages with a real browser and ran Google Lighthouse. The design is elegant. The structure underneath is what stops it from ranking.</span><span class="es">Recorrimos 10 paginas plantilla con un navegador real y ejecutamos Google Lighthouse. El diseno es elegante. La estructura por debajo es lo que impide posicionar.</span></p>
+<div class="ornament">· · ·</div>
+<div class="findings two">
+<div class="finding"><div class="num">1</div><div>
+<span class="badge crit"><span class="en">Critical</span><span class="es">Critico</span></span>
+<h3 style="margin-top:10px"><span class="en">Headings are chaos</span><span class="es">Los encabezados son un caos</span></h3>
+<div class="impact-line"><span class="en">Home: 10 H1 tags. Services: 15. Press: 12. Almost no H2.</span><span class="es">Home: 10 H1. Services: 15. Press: 12. Casi ningun H2.</span></div>
+<p><span class="en">Every section label on Wix is set as an H1, so Google sees ten 'main titles' on the home page and cannot tell what the page is about. None of them contains 'interior design Dubai'.</span><span class="es">Cada etiqueta de seccion en Wix esta puesta como H1, asi que Google ve diez 'titulos principales' en la home y no puede saber de que trata la pagina. Ninguno contiene 'interior design Dubai'.</span></p>
+<div class="fix"><b><span class="en">What you could do better:</span><span class="es">Lo que podrias mejorar:</span></b> <span class="en">one H1 per page that names the service and the city ('Interior architecture and design studio in Dubai'), H2 for sections, H3 for projects. This is a 2-hour job in the Wix editor for the 10 core pages.</span><span class="es">un solo H1 por pagina que nombre el servicio y la ciudad ('Interior architecture and design studio in Dubai'), H2 para secciones, H3 para proyectos. Son 2 horas de trabajo en el editor de Wix para las 10 paginas principales.</span></div>
+</div></div>
+<div class="finding"><div class="num">2</div><div>
+<span class="badge crit"><span class="en">Critical</span><span class="es">Critico</span></span>
+<h3 style="margin-top:10px"><span class="en">No page sells a service</span><span class="es">Ninguna pagina vende un servicio</span></h3>
+<div class="impact-line"><span class="en">/services offers Consultation Lab, E-Design and Lux Package</span><span class="es">/services ofrece Consultation Lab, E-Design y Lux Package</span></div>
+<p><span class="en">The only services page is written for homeowners: a style quiz, e-design, 'let us shop for you'. There is no page for hospitality, F&B, workplace or developers, which is exactly the audience you want. Google matches searches to pages, and the page does not exist.</span><span class="es">La unica pagina de servicios esta escrita para propietarios de casas: un quiz de estilo, e-design, 'let us shop for you'. No hay pagina para hospitality, F&B, oficinas ni desarrolladores, que es justo la audiencia que quieren. Google conecta busquedas con paginas, y la pagina no existe.</span></p>
+<div class="fix"><b><span class="en">What you could do better:</span><span class="es">Lo que podrias mejorar:</span></b> <span class="en">four service pages plus a Founder page for Monica Arango with a proper bio, awards and press quotes. Keep the consumer packages, but move them under Residential.</span><span class="es">cuatro paginas de servicio mas una pagina de la fundadora, Monica Arango, con biografia completa, premios y citas de prensa. Mantengan los paquetes para particulares, pero debajo de Residencial.</span></div>
+</div></div>
+<div class="finding"><div class="num">3</div><div>
+<span class="badge high"><span class="en">High</span><span class="es">Alto</span></span>
+<h3 style="margin-top:10px"><span class="en">Titles and descriptions work against you</span><span class="es">Los titulos y descripciones juegan en contra</span></h3>
+<div class="impact-line"><span class="en">Home title: 95 characters, 'design services' twice, 'Al Safa'</span><span class="es">Titulo de la home: 95 caracteres, 'design services' dos veces, 'Al Safa'</span></div>
+<p><span class="en">The home page title repeats 'design services' and names Al Safa, while your Google profile says Al Quoz. The social sharing description calls you 'one of the best interior fit out companies in Dubai', the opposite of a boutique studio. Project pages reuse a boilerplate description ('Welcome to C'est Ici Design Studio, where creativity meets innovation') and the services page has a typo ('gibe').</span><span class="es">El titulo de la home repite 'design services' y nombra Al Safa, mientras su perfil de Google dice Al Quoz. La descripcion para redes sociales los llama 'one of the best interior fit out companies in Dubai', lo contrario de un estudio boutique. Las paginas de proyecto reutilizan una descripcion generica ('Welcome to C'est Ici Design Studio, where creativity meets innovation') y la pagina de servicios tiene un error de tipeo ('gibe').</span></p>
+<div class="fix"><b><span class="en">What you could do better:</span><span class="es">Lo que podrias mejorar:</span></b> <span class="en">one unique title and description per page, under 60 and 155 characters, written for the person searching. Example home title: 'C'est ici Design | Interior Architecture Studio in Dubai'.</span><span class="es">un titulo y una descripcion unicos por pagina, de menos de 60 y 155 caracteres, escritos para quien busca. Ejemplo de titulo para la home: 'C'est ici Design | Interior Architecture Studio in Dubai'.</span></div>
+</div></div>
+<div class="finding"><div class="num">4</div><div>
+<span class="badge high"><span class="en">High</span><span class="es">Alto</span></span>
+<h3 style="margin-top:10px"><span class="en">Project pages are thin and half-invisible</span><span class="es">Las paginas de proyecto son pobres y medio invisibles</span></h3>
+<div class="impact-line"><span class="en">Villa 37: about 110 words, 76% of images without alt text. 65 project pages, most only reachable via the sitemap.</span><span class="es">Villa 37: unas 110 palabras, 76% de imagenes sin texto alternativo. 65 paginas de proyecto, casi todas solo alcanzables por el sitemap.</span></div>
+<p><span class="en">The portfolio index shows 50+ project names as gallery text, not as real links, so Google finds the projects only through the sitemap and gives them little weight. Three pages are leftover duplicates (copy-of-lecce, copy-of-jotun-together, copia-de-paros). Images carry the story but have no descriptions.</span><span class="es">El indice de portafolio muestra mas de 50 nombres de proyecto como texto de galeria, no como enlaces reales, asi que Google solo encuentra los proyectos por el sitemap y les da poco peso. Tres paginas son duplicados olvidados (copy-of-lecce, copy-of-jotun-together, copia-de-paros). Las imagenes cuentan la historia pero no tienen descripciones.</span></p>
+<div class="fix"><b><span class="en">What you could do better:</span><span class="es">Lo que podrias mejorar:</span></b> <span class="en">make every portfolio tile a real link, delete the copy-of pages, and for your 15 best projects write 250 to 400 words (client type, location, brief, materials, result) plus descriptive alt text on every image. Group them by type: Residential, Hospitality and F&B, Workplace, Retail.</span><span class="es">conviertan cada tarjeta del portafolio en un enlace real, borren las paginas copy-of, y para sus 15 mejores proyectos escriban 250 a 400 palabras (tipo de cliente, ubicacion, brief, materiales, resultado) mas texto alternativo descriptivo en cada imagen. Agrupenlos por tipo: Residencial, Hospitality y F&B, Oficinas, Retail.</span></div>
+</div></div>
+<div class="finding"><div class="num">5</div><div>
+<span class="badge med"><span class="en">Medium</span><span class="es">Medio</span></span>
+<h3 style="margin-top:10px"><span class="en">Slow and heavy on desktop, a broken image on mobile</span><span class="es">Lento y pesado en escritorio, una imagen rota en movil</span></h3>
+<div class="impact-line"><span class="en">Lighthouse desktop: performance 50 / 100. Page weight 14.8 MB. 1.5 seconds of blocking scripts.</span><span class="es">Lighthouse escritorio: rendimiento 50 / 100. Peso de pagina 14,8 MB. 1,5 segundos de scripts bloqueantes.</span></div>
+<p><span class="en">The home page downloads 14.8 MB, mostly uncompressed photography. On the mobile home page the INVERTI block shows a broken green image placeholder instead of the product photo. A dead Universal Analytics tag from 2023 is still in the code.</span><span class="es">La home descarga 14,8 MB, sobre todo fotografia sin comprimir. En la home movil el bloque INVERTI muestra un placeholder verde de imagen rota en lugar de la foto del producto. Un tag antiguo de Universal Analytics de 2023 sigue en el codigo.</span></p>
+<div class="fix"><b><span class="en">What you could do better:</span><span class="es">Lo que podrias mejorar:</span></b> <span class="en">compress hero and gallery images to WebP under 300 KB each, fix the mobile image, remove the old UA tag. Aim for performance above 80.</span><span class="es">compriman las imagenes de portada y galeria a WebP de menos de 300 KB cada una, arreglen la imagen movil, quiten el tag antiguo de UA. Apunten a un rendimiento superior a 80.</span></div>
+</div></div>
+<div class="finding"><div class="num">6</div><div>
+<span class="badge med"><span class="en">Medium</span><span class="es">Medio</span></span>
+<h3 style="margin-top:10px"><span class="en">No structured data, no languages, no WhatsApp</span><span class="es">Sin datos estructurados, sin idiomas, sin WhatsApp</span></h3>
+<div class="impact-line"><span class="en">Only the home page has LocalBusiness schema. English only. No click-to-chat.</span><span class="es">Solo la home tiene schema LocalBusiness. Solo ingles. Sin clic para chatear.</span></div>
+<p><span class="en">Structured data is how you tell Google and AI assistants who you are: a Person entry for Monica, a Service entry per service page, an Organization entry with your awards. Almost none of it exists. The site is English only in a market where Arabic and Spanish clients are part of your story, and there is no WhatsApp button, which is how UAE clients actually enquire.</span><span class="es">Los datos estructurados son la forma de decirle a Google y a los asistentes de IA quienes son: una entrada Person para Monica, una entrada Service por pagina de servicio, una entrada Organization con sus premios. Casi nada de eso existe. El sitio esta solo en ingles en un mercado donde clientes arabes y de habla hispana son parte de su historia, y no hay boton de WhatsApp, que es como los clientes en EAU realmente consultan.</span></p>
+<div class="fix"><b><span class="en">What you could do better:</span><span class="es">Lo que podrias mejorar:</span></b> <span class="en">add Organization, Person, Service and FAQ schema (a developer can do it in Wix in a day), add a WhatsApp button on every page, and plan Arabic and Spanish versions of the five key pages.</span><span class="es">agreguen schema Organization, Person, Service y FAQ (un desarrollador lo hace en Wix en un dia), un boton de WhatsApp en cada pagina, y planifiquen versiones en arabe y espanol de las cinco paginas clave.</span></div>
+</div></div>
+</div>
+</div></section>
+<section id="local" class="alt"><div class="wrap">
+<div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">05 · <span class="en">Local SEO: Google Maps</span><span class="es">SEO local: Google Maps</span></span></div>
+<h2><span class="en">One review and the <em>wrong category</em>.</span><span class="es">Una resena y la <em>categoria equivocada</em>.</span></h2>
+<p class="lede" style="margin-top:14px;max-width:820px"><span class="en">For 'interior design studio dubai', Google shows a map with three studios before any website. Getting into that map is the fastest visibility win available to you.</span><span class="es">Para 'interior design studio dubai', Google muestra un mapa con tres estudios antes que cualquier sitio web. Entrar en ese mapa es la victoria de visibilidad mas rapida que tienen disponible.</span></p>
+<div class="ornament">· · ·</div>
+<div class="gbp">
+<div class="card"><h4><span class="en">Your profile today</span><span class="es">Su perfil hoy</span></h4>
+<dl>
+<dt><span class="en">Category</span><span class="es">Categoria</span></dt><dd style="color:var(--coral-dk)">Drafting service</dd>
+<dt><span class="en">Reviews</span><span class="es">Resenas</span></dt><dd>1 (5.0)</dd>
+<dt><span class="en">Photos</span><span class="es">Fotos</span></dt><dd>6</dd>
+<dt><span class="en">Address on Google</span><span class="es">Direccion en Google</span></dt><dd>Al Quoz (Kia Flagship Building)</dd>
+<dt><span class="en">Address in website title</span><span class="es">Direccion en el titulo del sitio</span></dt><dd>Al Safa</dd>
+<dt><span class="en">Claimed</span><span class="es">Reclamado</span></dt><dd><span class="en">Yes</span><span class="es">Si</span></dd>
+<dt><span class="en">Attributes</span><span class="es">Atributos</span></dt><dd><span class="en">Women-owned</span><span class="es">Propiedad de mujeres</span></dd>
+</dl></div>
+<div class="card"><h4><span class="en">Who is in the map today</span><span class="es">Quien esta hoy en el mapa</span></h4>
+<p class="small" style="margin-bottom:10px"><span class="en">Searched from Dubai on mobile.</span><span class="es">Buscado desde Dubai en movil.</span></p>
+<dl>
+<dt>'interior design studio dubai'</dt><dd></dd>
+<dt style="padding-left:12px">Glow Space Studio</dt><dd>5.0 · 4 <span class="en">reviews</span><span class="es">resenas</span></dd>
+<dt style="padding-left:12px">24 West Studio</dt><dd>4.9 · 17</dd>
+<dt style="padding-left:12px">Muse Interior Design</dt><dd>4.9 · 105</dd>
+<dt>'restaurant interior design dubai'</dt><dd></dd>
+<dt style="padding-left:12px">Interioritalia</dt><dd>5.0 · 7</dd>
+<dt style="padding-left:12px">Antonovich Design</dt><dd>4.4 · 154</dd>
+<dt style="padding-left:12px">Royal Fitout</dt><dd>4.9 · 192</dd>
+</dl></div>
+</div>
+<h3 style="margin-top:34px"><span class="en">Reviews on the competitors you named</span><span class="es">Resenas de los competidores que nombraron</span></h3>
+<div class="table-scroll" style="margin-top:12px"><table>
+<thead><tr><th><span class="en">Studio</span><span class="es">Estudio</span></th><th><span class="en">Google category</span><span class="es">Categoria en Google</span></th><th class="num"><span class="en">Rating</span><span class="es">Calificacion</span></th><th class="num"><span class="en">Reviews</span><span class="es">Resenas</span></th></tr></thead>
+<tbody>
+<tr class="me"><td><b>C'est ici Design</b></td><td style="color:var(--coral-dk)">Drafting service</td><td class="num">5.0</td><td class="num">1</td></tr>
+<tr><td>4Space Design</td><td class="small">Interior designer + 3 more</td><td class="num">4.9</td><td class="num">60</td></tr><tr><td>Roar (Pallavi Dean Interiors)</td><td class="small">Interior designer</td><td class="num">4.9</td><td class="num">44</td></tr><tr><td>LW Design Group</td><td class="small">Interior designer, Architect</td><td class="num">4.4</td><td class="num">46</td></tr><tr><td>Bishop Design</td><td class="small">Interior designer</td><td class="num">4.5</td><td class="num">32</td></tr><tr><td>VSHD Design</td><td class="small">Interior designer</td><td class="num">3.6</td><td class="num">17</td></tr><tr><td>Studio EM</td><td class="small">No listing found</td><td class="num"><span class="en">No listing</span><span class="es">Sin ficha</span></td><td class="num">-</td></tr>
+</tbody></table></div>
+<div class="callout" style="margin-top:22px"><strong><span class="en">What you could do better:</span><span class="es">Lo que podrian mejorar:</span></strong> <span class="en">change the primary category to 'Interior designer' and add 'Interior architect office' and 'Design agency' as secondary. Make the address match on the website and the profile. Ask your last 20 clients, suppliers and collaborators for a Google review. The studios sitting in the map today have as few as 4, 7 and 17 reviews, so the barrier is low. Upload 30 project photos and post one project a week. This alone can put you on the map for 'interior design studio dubai' within 60 days.</span><span class="es">cambien la categoria principal a 'Interior designer' y agreguen 'Interior architect office' y 'Design agency' como secundarias. Hagan coincidir la direccion en el sitio y en el perfil. Pidan una resena en Google a sus ultimos 20 clientes, proveedores y colaboradores. Los estudios que hoy estan en el mapa tienen apenas 4, 7 y 17 resenas, asi que la barrera es baja. Suban 30 fotos de proyectos y publiquen un proyecto por semana. Solo esto puede ponerlos en el mapa para 'interior design studio dubai' en 60 dias.</span></div>
+</div></section>
+<section id="links"><div class="wrap">
+<div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">06 · <span class="en">Authority: backlinks and PR</span><span class="es">Autoridad: enlaces y PR</span></span></div>
+<h2><span class="en">66 linking websites, and the press you already have <em>does not link</em> to you.</span><span class="es">66 sitios enlazando, y la prensa que ya tienen <em>no enlaza</em> a su web.</span></h2>
+<div class="ornament">· · ·</div>
+<div class="two-col" style="align-items:start">
+<div>
+<h3><span class="en">What you have</span><span class="es">Lo que tienen</span></h3>
+<ul style="margin-top:12px;font-size:15px;line-height:1.6">
+<li><span class="en"><b>66 linking domains</b>, 150 links. Spam score 23 / 100, which is normal for this sector (competitors are 8 to 37).</span><span class="es"><b>66 dominios enlazando</b>, 150 enlaces. Puntuacion de spam 23 / 100, normal para el sector (los competidores van de 8 a 37).</span></li>
+<li><span class="en"><b>Good links:</b> Vibia (31 links, articles naming Monica as founder), Marie Claire Arabia, Nate Lee Cocks, F&F Dubai.</span><span class="es"><b>Buenos enlaces:</b> Vibia (31 enlaces, articulos que nombran a Monica como fundadora), Marie Claire Arabia, Nate Lee Cocks, F&F Dubai.</span></li>
+<li><span class="en"><b>Missing links:</b> the AD Middle East feature about your studio ranks in Google Images for 'interior design studio dubai', but it does not link to cesticidecor.com. Your own Press page lists years of coverage with no outbound links, so Google cannot verify it.</span><span class="es"><b>Enlaces que faltan:</b> el articulo de AD Middle East sobre su estudio aparece en Google Imagenes para 'interior design studio dubai', pero no enlaza a cesticidecor.com. Su propia pagina de Prensa lista anos de cobertura sin enlaces salientes, asi que Google no puede verificarla.</span></li>
+<li><span class="en"><b>Spam to clean:</b> since August 2026, 12 low-quality sites link to you with the anchor 'Buy backlinks PBN'. The same network hits Roar, VSHD, Bishop and Bone, so it is sector-wide noise, not an attack. Disavow it once.</span><span class="es"><b>Spam por limpiar:</b> desde agosto de 2026, 12 sitios de baja calidad enlazan con el texto 'Buy backlinks PBN'. La misma red afecta a Roar, VSHD, Bishop y Bone, asi que es ruido del sector, no un ataque. Desautoricenlo una vez.</span></li>
+</ul>
+<div class="callout" style="margin-top:18px"><strong><span class="en">What you could do better:</span><span class="es">Lo que podrian mejorar:</span></strong> <span class="en">every press mention should become a link. Email the 10 editors who already covered you and ask for the website link to be added (most will). Add outbound links on your Press page. Then aim for 4 new quality links a month: one press feature, one directory profile, one award listing, one supplier or collaborator story (Jotun, Poltrona Frau, Vibia already work with you).</span><span class="es">cada mencion de prensa deberia convertirse en un enlace. Escriban a los 10 editores que ya los cubrieron y pidan que agreguen el enlace al sitio (la mayoria lo hara). Agreguen enlaces salientes en su pagina de Prensa. Luego apunten a 4 enlaces de calidad nuevos al mes: un articulo de prensa, un perfil en directorio, un listado de premio, una historia con proveedor o colaborador (Jotun, Poltrona Frau, Vibia ya trabajan con ustedes).</span></div>
+</div>
+<div>
+<h3><span class="en">Where competitors get their links</span><span class="es">De donde sacan enlaces los competidores</span></h3>
+<p class="small" style="margin:6px 0 4px"><span class="en">Sites linking to Roar, VSHD, Bishop, Bone and Sneha Divias but not to you:</span><span class="es">Sitios que enlazan a Roar, VSHD, Bishop, Bone y Sneha Divias pero no a ustedes:</span></p>
+<div class="pill-list"><span class="ok">dezeen.com</span><span class="ok">identity.ae</span><span class="ok">onofficemagazine.com</span><span class="ok">design-milk.com</span><span class="ok">thedesignawards.co.uk</span><span>buildeey.com</span></div>
+<p class="small" style="margin:18px 0 4px"><span class="en">Publications that cover Dubai boutique studios:</span><span class="es">Publicaciones que cubren estudios boutique de Dubai:</span></p>
+<div class="pill-list"><span>Commercial Interior Design (CID)</span><span>Design Middle East</span><span>identity</span><span>Archello</span><span>ArchDaily</span><span>Dezeen</span><span>AD Middle East</span><span>Frame</span><span>Sleeper</span><span>Hospitality Design</span><span>Elle Decoration Arabia</span><span>Harper's Bazaar Interiors</span></div>
+<p class="small" style="margin:18px 0 4px"><span class="en">Awards worth entering in the next 12 months:</span><span class="es">Premios que vale la pena presentar en los proximos 12 meses:</span></p>
+<div class="pill-list"><span>CID Awards MENA (entries mid-July, ceremony September)</span><span>identity Design Awards (entries mid-September, gala November)</span><span>Design Middle East Awards UAE (entries mid-November)</span><span>Restaurant and Bar Design Awards (entries by 31 May)</span><span>Dezeen Awards (entries February to June)</span><span>AHEAD MEA (ceremony November, Dubai)</span><span>Design Middle East Awards KSA (ceremony March)</span><span>Downtown Design Riyadh (May)</span></div>
+<p class="small" style="margin:18px 0 4px"><span class="en">Directories that pass links and feed AI assistants:</span><span class="es">Directorios que pasan enlaces y alimentan a los asistentes de IA:</span></p>
+<div class="pill-list"><span>Archello</span><span>Love That Design</span><span>Houzz UAE</span><span>LinkedIn company page</span><span>ArchDaily</span><span>Dezeen studio directory</span><span>CID Power List</span><span>Sleeper directory</span><span>AD50 Middle East</span><span>Design Middle East directory</span><span>Architizer A+</span><span>World-Architects</span><span>Architonic</span><span>Clutch UAE</span><span>Crunchbase</span></div>
+</div></div>
+</div></section>
+<section id="ai" class="dark"><div class="wrap">
+<div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">07 · <span class="en">AI visibility: ChatGPT, Claude, Gemini, Perplexity</span><span class="es">Visibilidad en IA: ChatGPT, Claude, Gemini, Perplexity</span></span></div>
+<h2><span class="en">They know you. They just <em>never recommend</em> you.</span><span class="es">Los conocen. Simplemente <em>nunca los recomiendan</em>.</span></h2>
+<p class="lede" style="margin-top:14px;max-width:820px"><span class="en">We asked each of the four assistants six questions a potential client would ask, with web search switched on. Five are discovery questions, where the client does not yet know your name. One asks about you directly. You are named in 1 of the 20 discovery answers, and in 4 of 4 direct ones. DataForSEO estimates 558 AI prompts a month already mention 'interior design dubai', and 'best interior designers in dubai' went from near zero to 171 prompts a month during 2026.</span><span class="es">Hicimos a cada uno de los cuatro asistentes seis preguntas que haria un cliente potencial, con busqueda web activada. Cinco son preguntas de descubrimiento, donde el cliente todavia no conoce su nombre. Una pregunta directamente por ustedes. Los nombran en 1 de las 20 respuestas de descubrimiento, y en 4 de 4 directas. DataForSEO estima que 558 prompts de IA al mes ya mencionan 'interior design dubai', y 'best interior designers in dubai' paso de casi cero a 171 prompts al mes durante 2026.</span></p>
+<div class="ornament">· · ·</div>
+<div class="table-scroll"><table class="matrix">
+<thead><tr><th><span class="en">Question asked</span><span class="es">Pregunta</span></th><th>ChatGPT</th><th>Claude</th><th>Gemini</th><th>Perplexity</th></tr></thead>
+<tbody><tr><td><span class="en">Best boutique interior design studios in Dubai for a luxury villa</span><span class="es">Mejores estudios boutique de interiorismo en Dubai para una villa de lujo</span></td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr><tr><td><span class="en">Which studios should I hire for a restaurant or F&B concept in Dubai?</span><span class="es">Que estudios deberia contratar para un restaurante o concepto de F&B en Dubai?</span></td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr><tr><td><span class="en">Top studios for boutique hotels and F&B in Saudi Arabia (Riyadh, Jeddah, AlUla)</span><span class="es">Mejores estudios para hoteles boutique y F&B en Arabia Saudita (Riad, Jeddah, AlUla)</span></td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr><tr><td><span class="en">How much does a high-end interior designer cost in Dubai?</span><span class="es">Cuanto cuesta un interiorista de alta gama en Dubai?</span></td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr><tr><td><span class="en">Studios in Dubai with a Latin American or Mediterranean aesthetic</span><span class="es">Estudios en Dubai con estetica latinoamericana o mediterranea</span></td><td class="no">·</td><td class="no">·</td><td class="yes">✓</td><td class="no">·</td></tr><tr><td><span class="en">Who is C'est ici Design and who is Monica Arango? (asked by name)</span><span class="es">Quien es C'est ici Design y quien es Monica Arango? (preguntado por nombre)</span></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr></tbody></table></div>
+<div class="two-col" style="margin-top:36px;align-items:start">
+<div><h3 style="margin-bottom:12px;color:#F2EAD7"><span class="en">Studios the assistants recommend instead</span><span class="es">Estudios que los asistentes recomiendan en su lugar</span></h3><div class="bar-row"><span>Bishop Design</span><div class="bar-bg"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-val">4</span></div><div class="bar-row"><span>Roar</span><div class="bar-bg"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-val">4</span></div><div class="bar-row"><span>HBA (Hirsch Bedner)</span><div class="bar-bg"><div class="bar-fill green" style="width:100%"></div></div><span class="bar-val">4</span></div><div class="bar-row"><span>Algedra</span><div class="bar-bg"><div class="bar-fill green" style="width:75%"></div></div><span class="bar-val">3</span></div><div class="bar-row"><span>Muse Interior Design</span><div class="bar-bg"><div class="bar-fill green" style="width:75%"></div></div><span class="bar-val">3</span></div><div class="bar-row"><span>FINCH</span><div class="bar-bg"><div class="bar-fill green" style="width:75%"></div></div><span class="bar-val">3</span></div><div class="bar-row"><span>H2R Design</span><div class="bar-bg"><div class="bar-fill green" style="width:75%"></div></div><span class="bar-val">3</span></div><div class="bar-row"><span>SK-Touch</span><div class="bar-bg"><div class="bar-fill green" style="width:75%"></div></div><span class="bar-val">3</span></div><div class="bar-row"><span>Antonovich Design</span><div class="bar-bg"><div class="bar-fill green" style="width:50%"></div></div><span class="bar-val">2</span></div><div class="bar-row"><span>Zen Interiors</span><div class="bar-bg"><div class="bar-fill green" style="width:50%"></div></div><span class="bar-val">2</span></div></div>
+<div>
+<h3 style="margin-bottom:12px;color:#F2EAD7"><span class="en">What the assistants know about you</span><span class="es">Lo que los asistentes saben de ustedes</span></h3>
+<p style="font-size:15px;line-height:1.65;color:#D8CDB5"><span class="en">Asked by name, all four assistants know you. They correctly describe C'est ici as a Dubai studio founded in 2017 by Monica Arango, a Colombian founder, with a bespoke furniture arm. Only Gemini names the CID Awards 2024 win precisely; the other three say only 'award-winning'. Perplexity adds Milan Design Week and the Veuve Clicquot lounge. So recognition is not the problem.</span><span class="es">Preguntando por el nombre, los cuatro asistentes los conocen. Describen correctamente a C'est ici como un estudio de Dubai fundado en 2017 por Monica Arango, fundadora colombiana, con una linea de mobiliario a medida. Solo Gemini nombra con precision el premio CID Awards 2024; los otros tres solo dicen 'award-winning'. Perplexity agrega Milan Design Week y el lounge de Veuve Clicquot. El problema no es el reconocimiento.</span></p>
+<p style="font-size:15px;line-height:1.65;color:#D8CDB5;margin-top:12px"><span class="en">The problem is discovery. On the five questions a real client asks before they know your name, you appear once out of twenty, and that one hit was Gemini naming your Cadiz project on the Mediterranean-aesthetic question. Perplexity actually crawled your website for that question and still did not name you in the answer. Two of the competitors you listed, VSHD and BONE, were never cited either. The studios that do get named come from listicles and directories, not from their own websites.</span><span class="es">El problema es el descubrimiento. En las cinco preguntas que hace un cliente real antes de conocer su nombre, aparecen una vez de veinte, y esa unica mencion fue Gemini nombrando su proyecto Cadiz en la pregunta de estetica mediterranea. Perplexity incluso rastreo su sitio para esa pregunta y aun asi no los nombro en la respuesta. Dos de los competidores que listaron, VSHD y BONE, tampoco fueron citados nunca. Los estudios que si aparecen vienen de listas y directorios, no de sus propios sitios.</span></p>
+<div class="callout" style="background:rgba(255,216,172,.08);border-color:rgba(255,216,172,.25);color:#FFD8AC;margin-top:18px"><strong><span class="en">What you could do better:</span><span class="es">Lo que podrian mejorar:</span></strong> <span class="en">AI assistants cite what they can verify on the open web: a clear 'About' with the founder's name and the CID 2024 award, a Press page with links, directory profiles (Archello, ArchDaily, Dezeen), and the same one-line description of the studio on the website, LinkedIn, Instagram and Google. Add a short FAQ on the site answering 'best boutique interior design studio in Dubai for hospitality' style questions in plain sentences.</span><span class="es">los asistentes de IA citan lo que pueden verificar en la web abierta: un 'About' claro con el nombre de la fundadora y el premio CID 2024, una pagina de Prensa con enlaces, perfiles en directorios (Archello, ArchDaily, Dezeen), y la misma descripcion de una linea del estudio en el sitio, LinkedIn, Instagram y Google. Agreguen un FAQ corto en el sitio que responda preguntas tipo 'best boutique interior design studio in Dubai for hospitality' en frases simples.</span></div>
+</div></div>
+</div></section>
+<section id="plan" class="alt"><div class="wrap">
+<div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">08 · <span class="en">The 90-day plan</span><span class="es">El plan de 90 dias</span></span></div>
+<h2><span class="en">Three months, three priorities, <em>measurable</em> results.</span><span class="es">Tres meses, tres prioridades, resultados <em>medibles</em>.</span></h2>
+<div class="ornament">· · ·</div>
+<div class="roadmap">
+<div class="road-col"><div class="label"><span class="dot"></span><span class="en">Month 1</span><span class="es">Mes 1</span></div><h3><span class="en">Fix the foundation</span><span class="es">Arreglar la base</span></h3><ul><li><span><span class="en">One H1 per page, new titles and descriptions on the 10 core pages</span><span class="es">Un H1 por pagina, nuevos titulos y descripciones en las 10 paginas principales</span></span><span class="pri">P1</span></li><li><span><span class="en">Google profile: category, address, 30 photos, review campaign to 15+ reviews</span><span class="es">Perfil de Google: categoria, direccion, 30 fotos, campana de resenas hasta 15+</span></span><span class="pri">P1</span></li><li><span><span class="en">Disavow the PBN spam, remove the dead UA tag, fix the mobile broken image</span><span class="es">Desautorizar el spam PBN, quitar el tag UA antiguo, arreglar la imagen rota en movil</span></span><span class="pri">P1</span></li><li><span><span class="en">Make portfolio tiles real links, delete the 3 copy-of pages, alt text on top 15 projects</span><span class="es">Convertir el portafolio en enlaces reales, borrar las 3 paginas copy-of, alt text en los 15 mejores proyectos</span></span><span class="pri">P2</span></li><li><span><span class="en">Compress images, target Lighthouse performance above 80</span><span class="es">Comprimir imagenes, objetivo Lighthouse rendimiento mayor a 80</span></span><span class="pri">P2</span></li></ul></div>
+<div class="road-col"><div class="label"><span class="dot"></span><span class="en">Month 2</span><span class="es">Mes 2</span></div><h3><span class="en">Build the pages that sell</span><span class="es">Construir las paginas que venden</span></h3><ul><li><span><span class="en">4 service pages: Residential, Hospitality and F&B, Workplace, Retail and brand spaces</span><span class="es">4 paginas de servicio: Residencial, Hospitality y F&B, Oficinas, Retail y espacios de marca</span></span><span class="pri">P1</span></li><li><span><span class="en">Founder page for Monica Arango with Person schema, awards and press quotes</span><span class="es">Pagina de la fundadora Monica Arango con schema Person, premios y citas de prensa</span></span><span class="pri">P1</span></li><li><span><span class="en">Abu Dhabi page and Saudi Arabia page (English and Arabic)</span><span class="es">Pagina de Abu Dhabi y pagina de Arabia Saudita (ingles y arabe)</span></span><span class="pri">P1</span></li><li><span><span class="en">Organization, Service and FAQ schema; WhatsApp button on every page</span><span class="es">Schema Organization, Service y FAQ; boton de WhatsApp en cada pagina</span></span><span class="pri">P2</span></li><li><span><span class="en">Rewrite 15 project pages with real venue names, 250 to 400 words each</span><span class="es">Reescribir 15 paginas de proyecto con nombres reales de local, 250 a 400 palabras cada una</span></span><span class="pri">P2</span></li></ul></div>
+<div class="road-col"><div class="label"><span class="dot"></span><span class="en">Month 3</span><span class="es">Mes 3</span></div><h3><span class="en">Earn authority and AI citations</span><span class="es">Ganar autoridad y citas en IA</span></h3><ul><li><span><span class="en">Ask the 10 editors who already covered you to add the website link</span><span class="es">Pedir a los 10 editores que ya los cubrieron que agreguen el enlace al sitio</span></span><span class="pri">P1</span></li><li><span><span class="en">Profiles on Archello, ArchDaily, Dezeen directory, Houzz UAE, Love That Design</span><span class="es">Perfiles en Archello, ArchDaily, directorio de Dezeen, Houzz UAE, Love That Design</span></span><span class="pri">P1</span></li><li><span><span class="en">Enter 3 awards; pitch 2 project stories to identity, CID and AD Middle East</span><span class="es">Presentar 3 premios; proponer 2 historias de proyecto a identity, CID y AD Middle East</span></span><span class="pri">P1</span></li><li><span><span class="en">Marbella and Balearics page in Spanish; same studio description on every platform</span><span class="es">Pagina de Marbella y Baleares en espanol; misma descripcion del estudio en cada plataforma</span></span><span class="pri">P2</span></li><li><span><span class="en">Re-run the 24-question AI test and the ranking check</span><span class="es">Repetir el test de IA de 24 preguntas y la revision de posiciones</span></span><span class="pri">P2</span></li></ul></div>
+</div>
+<div class="kpi-grid" style="margin-top:28px">
+<div class="kpi"><div class="kpi-label"><span class="en">Linking domains</span><span class="es">Dominios que enlazan</span></div><div class="kpi-value">66 <small>→ 90</small></div><div class="kpi-trend up"><span class="en">Day 90 target</span><span class="es">Objetivo dia 90</span></div></div>
+<div class="kpi"><div class="kpi-label"><span class="en">Google reviews</span><span class="es">Resenas en Google</span></div><div class="kpi-value">1 <small>→ 15</small></div><div class="kpi-trend up"><span class="en">Enters the map pack</span><span class="es">Entra en el mapa</span></div></div>
+<div class="kpi"><div class="kpi-label"><span class="en">UAE keywords ranking</span><span class="es">Keywords posicionadas en EAU</span></div><div class="kpi-value">1 <small>→ 40</small></div><div class="kpi-trend up"><span class="en">Service and project pages</span><span class="es">Paginas de servicio y proyecto</span></div></div>
+<div class="kpi cta"><div class="kpi-label"><span class="en">AI recommendations naming you</span><span class="es">Recomendaciones de IA que los nombran</span></div><div class="kpi-value">1<small>/20</small> <small>→ 5/20</small></div><div class="kpi-trend up"><span class="en">Re-test at day 90</span><span class="es">Repetir test el dia 90</span></div></div>
+</div>
+</div></section>
+<section class="appendix"><div class="wrap">
+<div class="section-eyebrow"><span class="bar"></span><span class="eyebrow">09 · <span class="en">Method and sources</span><span class="es">Metodo y fuentes</span></span></div>
+<div class="two-col" style="align-items:start">
+<div>
+<h3><span class="en">What we measured</span><span class="es">Que medimos</span></h3>
+<ul style="margin-top:10px">
+<li><span class="en"><b>Rankings, keyword volumes, CPC and difficulty:</b> DataForSEO Labs (Google, UAE, Saudi Arabia, UK, US, Spain, France), September 2026. Volumes are 12-month averages.</span><span class="es"><b>Posiciones, volumenes, CPC y dificultad:</b> DataForSEO Labs (Google, EAU, Arabia Saudita, Reino Unido, EE. UU., Espana, Francia), septiembre 2026. Los volumenes son promedios de 12 meses.</span></li>
+<li><span class="en"><b>Backlinks and authority:</b> DataForSEO Backlinks for 20 domains (referring domains, rank, spam score, link gap).</span><span class="es"><b>Enlaces y autoridad:</b> DataForSEO Backlinks para 20 dominios (dominios que enlazan, rank, spam, brecha de enlaces).</span></li>
+<li><span class="en"><b>Local:</b> DataForSEO Business Data (Google Maps listing) and live Google results from Dubai and Riyadh.</span><span class="es"><b>Local:</b> DataForSEO Business Data (ficha de Google Maps) y resultados de Google en vivo desde Dubai y Riad.</span></li>
+<li><span class="en"><b>Website:</b> Playwright crawl of 10 template pages at desktop, tablet and mobile sizes; Google Lighthouse (desktop).</span><span class="es"><b>Sitio web:</b> rastreo con Playwright de 10 paginas plantilla en escritorio, tablet y movil; Google Lighthouse (escritorio).</span></li>
+<li><span class="en"><b>AI visibility:</b> 6 prompts sent to GPT, Claude, Gemini and Perplexity with web search on, via the DataForSEO LLM API.</span><span class="es"><b>Visibilidad en IA:</b> 6 prompts enviados a GPT, Claude, Gemini y Perplexity con busqueda web activada, via la API LLM de DataForSEO.</span></li>
+<li><span class="en"><b>Demand trend:</b> Google Trends, 5 years, 'interior design dubai' interest roughly doubled from August 2025.</span><span class="es"><b>Tendencia de demanda:</b> Google Trends, 5 anos, el interes por 'interior design dubai' casi se duplico desde agosto de 2025.</span></li>
+</ul>
+</div>
+<div>
+<h3><span class="en">Limits</span><span class="es">Limites</span></h3>
+<ul style="margin-top:10px">
+<li><span class="en">Semrush data is not included in this version: the Semrush connection requires a one-time login authorisation. We will add its keyword-gap and traffic-analytics views as an annex once connected.</span><span class="es">Los datos de Semrush no estan en esta version: la conexion con Semrush requiere una autorizacion de inicio de sesion unica. Agregaremos sus vistas de brecha de palabras clave y analitica de trafico como anexo cuando este conectada.</span></li>
+<li><span class="en">We had no access to your Google Search Console or Analytics. Enquiry numbers and real visits are therefore not in this report; sharing access would let us track the 90-day targets precisely.</span><span class="es">No tuvimos acceso a su Google Search Console ni Analytics. Por eso las consultas y visitas reales no estan en este informe; compartir el acceso nos permitiria seguir los objetivos de 90 dias con precision.</span></li>
+<li><span class="en">Search volumes are estimates. 'Value' is volume multiplied by the average advertiser cost per click, a proxy for what the demand would cost to buy with ads.</span><span class="es">Los volumenes de busqueda son estimaciones. El 'valor' es el volumen multiplicado por el costo por clic promedio de los anunciantes, una aproximacion a lo que costaria comprar esa demanda con anuncios.</span></li>
+<li><span class="en">Brand search volume for 'C'est ici' returned no data in Google's database, which means it is below the reporting threshold (roughly under 10 searches a month), not literally zero.</span><span class="es">El volumen de busqueda de marca para 'C'est ici' no devolvio datos en la base de Google, lo que significa que esta por debajo del umbral de reporte (unas 10 busquedas al mes), no literalmente cero.</span></li>
+</ul>
+</div></div>
+</div></section>
+<footer>ThinkFlow Labs · <span class="en">Prepared for C'est ici Design, Dubai · September 2026 · Confidential</span><span class="es">Preparado para C'est ici Design, Dubai · Septiembre 2026 · Confidencial</span></footer>
+<script>
+function setLang(l){document.body.classList.toggle('lang-es', l==='es');document.documentElement.lang=l;document.getElementById('btn-en').classList.toggle('on',l==='en');document.getElementById('btn-es').classList.toggle('on',l==='es');try{localStorage.setItem('cestici-lang',l);}catch(e){}}
+(function(){var l='en';try{l=localStorage.getItem('cestici-lang')||((navigator.language||'').toLowerCase().startsWith('es')?'es':'en');}catch(e){}setLang(l);})();
+</script>
+</body></html>
