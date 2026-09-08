@@ -8,6 +8,7 @@ Each subfolder of this repo is one engagement. Pages are blocked from search eng
 
 | Client | Folder | URL |
 |---|---|---|
+| Chefpost (Monthly Report, August 2026, EN/ES) | [`/chefpost-agosto-2026/`](./chefpost-agosto-2026/) | https://thinkflowlabs.github.io/SEO/chefpost-agosto-2026/ |
 | Chefpost (supper clubs research) | [`/chefpost-supper-clubs-research/`](./chefpost-supper-clubs-research/) | https://thinkflowlabs.github.io/SEO/chefpost-supper-clubs-research/ |
 | Chefpost (SEO Re-Audit Aug 2026, before/after + LLM re-test) | [`/chefpost-audit-aug2026/`](./chefpost-audit-aug2026/) | https://thinkflowlabs.github.io/SEO/chefpost-audit-aug2026/ |
 | C’est ici Design (Dubai, interiorismo boutique, EN/ES) | [`/cestici-design-audit/`](./cestici-design-audit/) | https://thinkflowlabs.github.io/SEO/cestici-design-audit/ |
