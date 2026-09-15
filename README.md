@@ -12,6 +12,7 @@ Each subfolder of this repo is one engagement. Pages are blocked from search eng
 | Chefpost (supper clubs research) | [`/chefpost-supper-clubs-research/`](./chefpost-supper-clubs-research/) | https://thinkflowlabs.github.io/SEO/chefpost-supper-clubs-research/ |
 | Chefpost (SEO Re-Audit Aug 2026, before/after + LLM re-test) | [`/chefpost-audit-aug2026/`](./chefpost-audit-aug2026/) | https://thinkflowlabs.github.io/SEO/chefpost-audit-aug2026/ |
 | C’est ici Design (Dubai, interiorismo boutique, EN/ES) | [`/cestici-design-audit/`](./cestici-design-audit/) | https://thinkflowlabs.github.io/SEO/cestici-design-audit/ |
+| C’est ici Design — Website Action Plan (EN/ES) | [`/cestici-design-website-plan/`](./cestici-design-website-plan/) | https://thinkflowlabs.github.io/SEO/cestici-design-website-plan/ |
 | C’est ici Design (alcance de trabajo, EN/ES) | [`/cestici-design-scope/`](./cestici-design-scope/) | https://thinkflowlabs.github.io/SEO/cestici-design-scope/ |
 | Beats Code (auditoria SEO + IA, agentes de IA) | [`/beatscode-audit/`](./beatscode-audit/) | https://thinkflowlabs.github.io/SEO/beatscode-audit/ |
 | Chefpost (Private Chef Landing Pages · portfolio + data) | [`/chefpost-pages/`](./chefpost-pages/) | https://thinkflowlabs.github.io/SEO/chefpost-pages/ |
