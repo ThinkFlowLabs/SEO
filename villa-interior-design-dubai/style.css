@@ -29,3 +29,7 @@
 @media(max-width:820px){.hero-project-credit{right:24px}.hero h1.hero-title{font-size:96px}.service-list summary h3{font-size:23px}}
 @media(max-width:640px){.hero h1.hero-title{font-size:clamp(58px,16vw,90px);line-height:1}.hero-eyebrow{font-size:9px;letter-spacing:.1em}.hero-project-credit{right:20px;left:20px;bottom:22px;font-size:10px;justify-content:space-between}.hero-media>img{object-position:52% center}.hero-bottom p{max-width:320px}.section-top h2{font-size:43px}.service-list summary h3{font-size:23px}.process-grid{grid-template-columns:1fr}.process-grid h3{font-size:32px}.questions-heading h2{font-size:46px}.enquire-main h2{font-size:64px}}
 @media(max-width:360px){.hero h1.hero-title{font-size:55px}.hero-eyebrow{font-size:8px}.section-top h2{font-size:37px}.enquire-main h2{font-size:55px}.questions-heading h2{font-size:41px}}
+
+/* Keep the new furniture composition consistent between the still and film. */
+.hero-media>img,.hero-media>video{object-position:58% center}.film-controls{justify-content:flex-end}.film-controls button{min-height:40px;font-size:10px}
+@media(max-width:640px){.hero-media>img,.hero-media>video{object-position:55% center}.film-controls{bottom:20px}.film-controls button{min-height:44px}}
