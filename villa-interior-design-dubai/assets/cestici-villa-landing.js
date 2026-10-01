@@ -20,6 +20,8 @@ class CesticiVillaLanding extends HTMLElement {
     // These rules apply only to this landing page and let its content size the grid.
     const layout = document.createElement('style');
     layout.textContent = `
+      html:has(#v65zh) { overflow-x:clip!important; }
+      #pageBackground_v65zh { min-width:0!important; width:100%!important; }
       #site-root:has(#v65zh) { min-width:0!important; width:100%!important; margin:0!important; }
       #v65zh #comp-muoysoqt { min-width:0!important; width:100%!important; }
       #v65zh #comp-muoywmoe { min-width:0!important; width:100%!important; margin:0!important; }
