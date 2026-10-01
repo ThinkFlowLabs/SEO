@@ -23,6 +23,12 @@ class CesticiVillaLanding extends HTMLElement {
       html:has(#v65zh) { overflow-x:clip!important; }
       #pageBackground_v65zh { min-width:0!important; width:100%!important; }
       #site-root:has(#v65zh) { min-width:0!important; width:100%!important; margin:0!important; }
+      #SITE_CONTAINER:has(#v65zh), #main_MF:has(#v65zh),
+      #masterPage:has(#v65zh), #PAGES_CONTAINER:has(#v65zh),
+      #SITE_PAGES:has(#v65zh), #v65zh {
+        min-width:0!important; width:100%!important; margin:0!important; left:0!important;
+      }
+      #v65zh cestici-villa-landing { width:100%!important; min-width:0!important; }
       #v65zh #comp-muoysoqt { min-width:0!important; width:100%!important; }
       #v65zh #comp-muoywmoe { min-width:0!important; width:100%!important; margin:0!important; }
       #v65zh div:has(> #comp-muoywmoe),
