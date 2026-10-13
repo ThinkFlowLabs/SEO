@@ -8,6 +8,7 @@ Each subfolder of this repo is one engagement. Pages are blocked from search eng
 
 | Client | Folder | URL |
 |---|---|---|
+| Chefpost (October 2026 SEO, AI & Local Growth Strategy, EN/ES) | [`/chefpost-october-growth-2026/`](./chefpost-october-growth-2026/) | https://thinkflowlabs.github.io/SEO/chefpost-october-growth-2026/ |
 | Chefpost (Monthly Report, August 2026, EN/ES) | [`/chefpost-agosto-2026/`](./chefpost-agosto-2026/) | https://thinkflowlabs.github.io/SEO/chefpost-agosto-2026/ |
 | Chefpost (supper clubs research) | [`/chefpost-supper-clubs-research/`](./chefpost-supper-clubs-research/) | https://thinkflowlabs.github.io/SEO/chefpost-supper-clubs-research/ |
 | Chefpost (SEO Re-Audit Aug 2026, before/after + LLM re-test) | [`/chefpost-audit-aug2026/`](./chefpost-audit-aug2026/) | https://thinkflowlabs.github.io/SEO/chefpost-audit-aug2026/ |
