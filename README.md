@@ -8,6 +8,7 @@ Each subfolder of this repo is one engagement. Pages are blocked from search eng
 
 | Client | Folder | URL |
 |---|---|---|
+| MB Clean + MB Floor (Avances de noviembre) | [`/mb-solutions-noviembre-2026/`](./mb-solutions-noviembre-2026/) | https://thinkflowlabs.github.io/SEO/mb-solutions-noviembre-2026/ |
 | Chefpost (Monthly Work Report, October 2026, EN/ES) | [`/chefpost-octubre-2026/`](./chefpost-octubre-2026/) | https://thinkflowlabs.github.io/SEO/chefpost-octubre-2026/ |
 | Chefpost (October 2026 SEO, AI & Local Growth Strategy, EN/ES) | [`/chefpost-october-growth-2026/`](./chefpost-october-growth-2026/) | https://thinkflowlabs.github.io/SEO/chefpost-october-growth-2026/ |
 | Chefpost (Monthly Report, August 2026, EN/ES) | [`/chefpost-agosto-2026/`](./chefpost-agosto-2026/) | https://thinkflowlabs.github.io/SEO/chefpost-agosto-2026/ |
