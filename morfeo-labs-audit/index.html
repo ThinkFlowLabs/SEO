@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Morfeo Labs · Auditoría SEO y LLM SEO · LATAM y Estados Unidos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14130F;
+  --ink-2:#1E1C17;
+  --ink-3:#2A271F;
+  --line:#3A3529;
+  --paper:#F7F4EC;
+  --paper-dim:#C9C3B2;
+  --paper-mute:#938C78;
+  --amber:#E0A033;
+  --amber-dim:#8A6420;
+  --red:#D4634A;
+  --green:#6FA06A;
+  --blue:#6E92B8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--ink);color:var(--paper);
+  font-family:'Public Sans',system-ui,sans-serif;
+  font-size:16.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* ---------- header ---------- */
+header.hero{
+  border-bottom:1px solid var(--line);
+  padding:68px 0 54px;
+  background:
+    radial-gradient(900px 400px at 12% -10%, rgba(224,160,51,.13), transparent 70%),
+    var(--ink);
+}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--amber);margin:0 0 20px;
+}
+h1{
+  font-family:'Fraunces',Georgia,serif;font-weight:600;
+  font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.04;
+  letter-spacing:-.02em;margin:0 0 22px;max-width:26ch;
+}
+.lede{font-size:1.16rem;color:var(--paper-dim);max-width:62ch;margin:0 0 34px}
+.meta-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);margin-top:38px;
+}
+.meta-grid div{background:var(--ink-2);padding:16px 18px}
+.meta-grid dt{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--paper-mute);margin:0 0 7px;
+}
+.meta-grid dd{margin:0;font-size:14.5px;font-weight:600}
+
+/* ---------- nav ---------- */
+nav.toc{
+  position:sticky;top:0;z-index:40;
+  background:rgba(20,19,15,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding:0 28px;scrollbar-width:none}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{
+  flex:0 0 auto;color:var(--paper-dim);text-decoration:none;
+  font-size:13px;font-weight:600;padding:14px 13px;white-space:nowrap;
+  border-bottom:2px solid transparent;
+}
+nav.toc a:hover{color:var(--amber);border-bottom-color:var(--amber-dim)}
+
+/* ---------- sections ---------- */
+section{padding:66px 0;border-bottom:1px solid var(--line)}
+.sec-num{
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.14em;
+  color:var(--amber);display:block;margin-bottom:12px;
+}
+h2{
+  font-family:'Fraunces',Georgia,serif;font-weight:600;
+  font-size:clamp(1.65rem,3.2vw,2.5rem);line-height:1.12;
+  letter-spacing:-.015em;margin:0 0 14px;max-width:34ch;
+}
+h3{
+  font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.3rem;
+  margin:46px 0 12px;letter-spacing:-.01em;
+}
+h4{font-size:1rem;font-weight:700;margin:30px 0 10px;color:var(--paper)}
+p{margin:0 0 17px;max-width:76ch}
+p.intro{font-size:1.08rem;color:var(--paper-dim);max-width:70ch}
+ul,ol{max-width:76ch;padding-left:22px;margin:0 0 20px}
+li{margin-bottom:9px}
+strong{color:#FFF;font-weight:700}
+a{color:var(--amber)}
+code{
+  font-family:'JetBrains Mono',monospace;font-size:.86em;
+  background:var(--ink-3);padding:2px 6px;border-radius:3px;color:var(--amber);
+}
+
+/* ---------- callouts ---------- */
+.box{
+  border:1px solid var(--line);background:var(--ink-2);
+  padding:24px 26px;margin:28px 0;
+}
+.box-head{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--amber);margin:0 0 12px;
+}
+.box.alert{border-left:3px solid var(--red)}
+.box.alert .box-head{color:var(--red)}
+.box.win{border-left:3px solid var(--green)}
+.box.win .box-head{color:var(--green)}
+.box p:last-child,.box ul:last-child,.box ol:last-child{margin-bottom:0}
+
+/* ---------- stats ---------- */
+.stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);margin:32px 0;
+}
+.stat{background:var(--ink-2);padding:22px 20px}
+.stat b{
+  display:block;font-family:'Fraunces',Georgia,serif;font-weight:600;
+  font-size:2.1rem;line-height:1;margin-bottom:9px;letter-spacing:-.02em;
+}
+.stat span{font-size:13px;color:var(--paper-mute);display:block;line-height:1.45}
+.stat.bad b{color:var(--red)}
+.stat.good b{color:var(--green)}
+.stat.neutral b{color:var(--amber)}
+
+/* ---------- tables ---------- */
+.tbl-wrap{
+  overflow-x:auto;border:1px solid var(--line);margin:26px 0;
+  background:var(--ink-2);
+}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+caption{
+  caption-side:top;text-align:left;padding:17px 18px 15px;
+  font-size:13px;color:var(--paper-dim);border-bottom:1px solid var(--line);
+  background:var(--ink-3);
+}
+caption b{display:block;color:#FFF;font-size:14.5px;margin-bottom:4px;font-weight:700}
+th,td{padding:9px 13px;text-align:left;border-bottom:1px solid rgba(58,53,41,.65);vertical-align:top}
+thead th{
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--paper-mute);font-weight:600;
+  background:var(--ink-3);position:sticky;top:0;white-space:nowrap;
+}
+tbody tr:hover{background:rgba(224,160,51,.045)}
+td.n{text-align:right;font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.kw{font-weight:600;color:#FFF}
+tbody tr.hi{background:rgba(224,160,51,.075)}
+tbody tr.hi td.kw{color:var(--amber)}
+.zero{color:var(--paper-mute)}
+.pill{
+  display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;
+  letter-spacing:.06em;text-transform:uppercase;padding:2.5px 7px;
+  border:1px solid var(--line);border-radius:2px;white-space:nowrap;
+}
+.pill.com{color:var(--amber);border-color:var(--amber-dim)}
+.pill.inf{color:var(--blue);border-color:#3D5468}
+.pill.nav{color:var(--paper-mute)}
+.pill.tra{color:var(--green);border-color:#3E5C3B}
+.up{color:var(--green);font-weight:600}
+.dn{color:var(--red);font-weight:600}
+
+/* ---------- engine cards ---------- */
+.engines{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:16px;margin:30px 0}
+.engine{border:1px solid var(--line);background:var(--ink-2);padding:20px 21px}
+.engine h5{
+  margin:0 0 4px;font-size:15px;font-weight:700;color:#FFF;
+  display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+}
+.engine h5 em{
+  font-style:normal;font-family:'JetBrains Mono',monospace;font-size:10px;
+  color:var(--paper-mute);letter-spacing:.08em;
+}
+.engine .q{
+  font-size:12.5px;color:var(--paper-mute);font-style:italic;
+  margin:0 0 14px;padding-bottom:12px;border-bottom:1px solid var(--line);
+}
+.engine ol{padding-left:19px;margin:0 0 13px;font-size:13.5px}
+.engine ol li{margin-bottom:5px;color:var(--paper-dim)}
+.engine ol li b{color:#FFF}
+.engine .verdict{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.07em;
+  color:var(--red);margin:0;padding-top:11px;border-top:1px solid var(--line);
+}
+
+/* ---------- roadmap ---------- */
+.phase{border:1px solid var(--line);background:var(--ink-2);margin:20px 0;padding:0}
+.phase-top{
+  padding:18px 24px;border-bottom:1px solid var(--line);background:var(--ink-3);
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
+}
+.phase-top h3{margin:0;font-size:1.18rem}
+.phase-top span{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--amber);
+}
+.phase-body{padding:22px 24px}
+.phase-body ol{margin-bottom:0}
+.phase-body ol>li{margin-bottom:14px}
+
+footer{padding:52px 0 66px;color:var(--paper-mute);font-size:13.5px}
+footer p{max-width:80ch}
+footer a{color:var(--amber)}
+.src{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--paper-mute);margin-top:10px}
+@media(max-width:640px){
+  .wrap{padding:0 18px}
+  nav.toc .wrap{padding:0 18px}
+  section{padding:48px 0}
+  body{font-size:15.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">ThinkFlow Labs · Auditoría SEO + LLM SEO · 17 de noviembre de 2026</p>
+    <h1>Morfeo Labs es invisible para Google y para la IA. Esto es lo que hace falta.</h1>
+    <p class="lede">Auditoría completa de <strong>morfeolabs.com</strong> con datos de DataForSEO, Semrush y Perplexity. Cubre volumen e intención de búsqueda en seis mercados de América Latina y Estados Unidos, el estado técnico del sitio, y un mapeo de a quién mencionan y a quién citan ChatGPT, Gemini, Perplexity y Claude cuando alguien pide exactamente el servicio que Morfeo vende.</p>
+    <dl class="meta-grid">
+      <div><dt>Dominio</dt><dd>morfeolabs.com</dd></div>
+      <div><dt>Keywords rankeando</dt><dd style="color:var(--red)">0</dd></div>
+      <div><dt>Menciones en LLM</dt><dd style="color:var(--red)">0 de 9 respuestas</dd></div>
+      <div><dt>Dominios de enlace</dt><dd>58 · spam score 60</dd></div>
+      <div><dt>Mercados analizados</dt><dd>AR MX CO CL PE US</dd></div>
+      <div><dt>Motores auditados</dt><dd>4 LLM + Google</dd></div>
+    </dl>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#veredicto">Veredicto</a>
+    <a href="#oferta">La oferta</a>
+    <a href="#tecnico">Técnico</a>
+    <a href="#visibilidad">Visibilidad</a>
+    <a href="#enlaces">Enlaces</a>
+    <a href="#volumen-latam">Volumen LATAM</a>
+    <a href="#volumen-usa">Volumen USA</a>
+    <a href="#intencion-google">Intención Google</a>
+    <a href="#llm-volumen">Volumen LLM</a>
+    <a href="#llm-prompts">Prompts reales</a>
+    <a href="#llm-menciona">A quién menciona</a>
+    <a href="#llm-cita">A quién cita</a>
+    <a href="#mecanismo">El mecanismo</a>
+    <a href="#plan">El plan</a>
+    <a href="#metodologia">Metodología</a>
+  </div>
+</nav>
+
+<!-- ============ 1 VEREDICTO ============ -->
+<section id="veredicto">
+  <div class="wrap">
+    <span class="sec-num">01 · Veredicto</span>
+    <h2>El problema no es el posicionamiento. Es que no existe nada que posicionar.</h2>
+    <p class="intro">morfeolabs.com es una sola página narrativa, bien construida técnicamente, que cuenta la historia personal de su fundador. No tiene ninguna página que describa un servicio, ningún precio público en el dominio principal, ninguna referencia a un país, y ningún contenido indexable más allá de 740 palabras. Google la rastrea sin problemas y no tiene nada que mostrar. Los LLM la rastrean y no tienen nada que citar.</p>
+
+    <div class="stats">
+      <div class="stat bad"><b>0</b><span>Keywords orgánicas en Argentina, México, Colombia, Chile, Perú y Estados Unidos. Confirmado por DataForSEO y por Semrush de forma independiente.</span></div>
+      <div class="stat bad"><b>0 / 9</b><span>Respuestas de IA en las que Morfeo Labs es mencionado, sobre 9 consultas a ChatGPT, Gemini, Perplexity y Claude con los prompts exactos de su comprador.</span></div>
+      <div class="stat bad"><b>58</b><span>Dominios que le enlazan. Spam score 60. Son scrapers y granjas de enlaces, no citaciones reales.</span></div>
+      <div class="stat neutral"><b>740</b><span>Palabras indexables en todo el dominio principal, con cero menciones de servicio en el título.</span></div>
+      <div class="stat good"><b>97/100</b><span>Score técnico on-page. La base técnica es sólida: 8,9 KB transferidos, interactivo en 568 ms, CLS cero.</span></div>
+      <div class="stat good"><b>US$ 1.500</b><span>Precio público mensual en la página de NORA. Es el único activo del proyecto con formato citable por un LLM.</span></div>
+    </div>
+
+    <h3>Los cinco hallazgos que mandan</h3>
+    <ol>
+      <li><strong>El mercado comercial en español es diminuto.</strong> Sumando Argentina, México, Colombia, Chile y Perú, la keyword comercial más valiosa del rubro, <code>agencia de inteligencia artificial</code>, mueve 150 búsquedas al mes entre los cinco países. Semrush no tiene datos para nueve de las doce keywords comerciales que consultamos en Argentina, porque están por debajo de su umbral de reporte. No hay un negocio de SEO tradicional en español construido sobre intención comercial directa.</li>
+      <li><strong>El mercado en inglés vale entre veinte y cuarenta veces más, por consulta.</strong> <code>ai automation agency</code> mueve 4.400 búsquedas al mes en Estados Unidos con CPC de US$ 26,80. <code>ai consulting</code>, 8.100 con CPC de US$ 50,84. <code>ai training for employees</code>, 320 con CPC de US$ 101,84. El equivalente en español cuesta entre US$ 1 y US$ 5.</li>
+      <li><strong>En los cuatro motores de IA, el ganador es quien escribió el artículo comparativo.</strong> Gemini fundamenta su recomendación en español en <code>somoscamaleon.com/blog/mejor-agencia-inteligencia-artificial-mexico-latam</code>, un post de una agencia sobre su propia categoría. Esa misma agencia aparece recomendada por ChatGPT en dos mercados. Es el patrón más replicable de todo el informe.</li>
+      <li><strong>En Google, la posición 1 ya no es orgánica.</strong> Tanto en <code>agencia de inteligencia artificial</code> en Argentina como en <code>ai automation agency</code> en Estados Unidos, el primer bloque es un AI Overview. Lo que cita son listicles, páginas de precios, Reddit, YouTube y directorios. Morfeo Labs no tiene ninguno de esos cinco tipos de activo.</li>
+      <li><strong>El SERP en español está sorprendentemente débil.</strong> En Argentina, el resultado orgánico número uno para <code>agencia de inteligencia artificial</code> es una agencia francesa en francés. El número tres es un índice de directorio roto que muestra <code>cgi-bin</code> y <code>php.ini</code>. El número cinco es una consultora de Zúrich. Hay espacio real, hoy, con poco esfuerzo.</li>
+    </ol>
+
+    <div class="box alert">
+      <p class="box-head">La contradicción que más cuesta</p>
+      <p>Cuando le preguntamos a ChatGPT, en Argentina, qué agencia recomienda para automatizar contenido con IA, respondió con cuatro nombres y después describió el modelo ideal con estas palabras: <em>"No contrataría simplemente una agencia que publique contenido. Buscaría construir una fábrica de contenido con IA"</em>. Morfeo Labs vende exactamente eso y su comunidad se llama literalmente La Fábrica. El motor ya usa el vocabulario de Morfeo y recomienda a otros cuatro. El problema no es la propuesta. Es que no hay nada publicado que la IA pueda leer, verificar y citar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 OFERTA ============ -->
+<section id="oferta">
+  <div class="wrap">
+    <span class="sec-num">02 · La oferta</span>
+    <h2>Qué vende Morfeo Labs, según lo que está publicado</h2>
+    <p class="intro">Antes de hablar de keywords hay que fijar qué se está vendiendo, porque la auditoría de intención depende de eso. Esto es lo que el sitio declara hoy.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Mapa de oferta publicada</b>Extraído de morfeolabs.com y morfeolabs.com/nora, 17 de noviembre de 2026.</caption>
+        <thead><tr><th>Línea</th><th>Qué es</th><th>Precio público</th><th>Dónde vive</th><th>Keyword comercial que le corresponde</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">NORA</td><td>Sistema de contenido gestionado. 30 publicaciones al mes, reels, carruseles, historias, avatar opcional con cara y voz del cliente, aprobación tipo Tinder, publicación en las cuentas del cliente</td><td>US$ 1.500 / mes</td><td>morfeolabs.com/nora</td><td>agencia de contenido con IA, automatizar contenido, done for you content</td></tr>
+          <tr><td class="kw">La Fábrica</td><td>Comunidad y formación para que el cliente monte su propia fábrica de contenido con IA</td><td>No publicado</td><td>la-fabrica.ai (dominio externo)</td><td>curso de IA, capacitación en IA para empresas</td></tr>
+          <tr><td class="kw">Consultoría 1 a 1</td><td>Una hora por videollamada</td><td>No publicado</td><td>la-fabrica.ai/paul/consultoria</td><td>consultor de inteligencia artificial</td></tr>
+          <tr><td class="kw">Capacitación de equipos</td><td>Formación a equipos internos. Mencionado solo en el formulario</td><td>No publicado</td><td>Sin página propia</td><td>capacitación en IA para empresas, corporate AI training</td></tr>
+          <tr><td class="kw">Sistema de IA a medida</td><td>Desarrollo a medida. Mencionado solo en el formulario</td><td>No publicado</td><td>Sin página propia</td><td>agencia de automatización con IA, AI automation agency</td></tr>
+          <tr><td class="kw">Complementos NORA</td><td>Bots de venta en WhatsApp e Instagram, CRM, ads, ManyChat, web</td><td>Se facturan aparte</td><td>Mencionado en /nora</td><td>chatbot de WhatsApp, Instagram DM automation</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Tres observaciones de posicionamiento, antes del SEO</h3>
+    <p><strong>La entidad está repartida en cuatro dominios.</strong> morfeolabs.com, la-fabrica.ai, sistemanora.com (donde viven los legales de NORA) y morfeoacademy.com (la marca anterior, que LinkedIn todavía lista como "Morfeo - AI Academy", Buenos Aires, fundada en 2023). Para un buscador y para un LLM eso son cuatro entidades débiles en lugar de una fuerte. Ninguna acumula autoridad.</p>
+    <p><strong>El dominio principal está posicionado como marca personal, no como proveedor.</strong> El título es "Paul de Lavallaz · Morfeo Labs". El H1 es "Hola, soy Paul." Eso funciona para quien llega desde Instagram o TikTok, donde Morfeo ya tiene tracción. No funciona para quien busca un proveedor, porque no contiene ninguno de los sustantivos que esa persona escribe o le dicta a un LLM.</p>
+    <p><strong>El único activo con formato citable es el precio de NORA.</strong> US$ 1.500 al mes por 30 publicaciones, con 7 días de arranque y entregables enumerados. Más adelante se ve por qué ese formato exacto, cifra más entregable más plazo, es lo que Gemini levantó de los competidores que sí recomendó.</p>
+
+    <div class="box">
+      <p class="box-head">Dato de mercado que conviene tener a mano</p>
+      <p>El AI Overview de Google para <code>ai automation agency</code> en Estados Unidos publica la tabla de precios del rubro: auditorías y estrategia US$ 1.500 a 15.000, construcción de un flujo único US$ 3.000 a 15.000, sistemas multiagente US$ 15.000 a 100.000 y más, retainers mensuales US$ 500 a 15.000 y más. Gemini, por su parte, cita el precio público de tres competidores: theagency.io con tramos de US$ 2.000, 5.000 y 10.000 al mes, y aimarketingagency.ai con US$ 1.500, 2.500 y 6.000 al mes más US$ 1.750 de alta. Los US$ 1.500 de NORA están en el piso de ese mercado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 TECNICO ============ -->
+<section id="tecnico">
+  <div class="wrap">
+    <span class="sec-num">03 · Estado técnico y on-page</span>
+    <h2>La base técnica está bien. La arquitectura de contenido no existe.</h2>
+    <p class="intro">Es importante separar las dos cosas, porque la conclusión práctica es distinta. No hay que arreglar el sitio. Hay que construir las páginas que todavía no están.</p>
+
+    <h3>Lo que está bien y conviene no tocar</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Señales técnicas correctas</b>DataForSEO OnPage Instant Pages con renderizado de JavaScript, 17 de noviembre de 2026.</caption>
+        <thead><tr><th>Señal</th><th>Valor</th><th>Lectura</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">OnPage score</td><td class="n">97,07 / 100</td><td>Sin errores técnicos bloqueantes</td></tr>
+          <tr><td class="kw">Transferencia total</td><td class="n">8,95 KB</td><td>Comprimido con Brotli, excelente</td></tr>
+          <tr><td class="kw">Time to interactive</td><td class="n">568 ms</td><td>Muy rápido</td></tr>
+          <tr><td class="kw">DOM complete</td><td class="n">823 ms</td><td>Muy rápido</td></tr>
+          <tr><td class="kw">Cumulative layout shift</td><td class="n">0</td><td>Sin salto de maquetación</td></tr>
+          <tr><td class="kw">HTTPS, www, canonical</td><td>Correctos</td><td>Canonical autorreferente en https://www.morfeolabs.com/</td></tr>
+          <tr><td class="kw">Open Graph y Twitter Card</td><td>Completos</td><td>og:image 1200x630, summary_large_image</td></tr>
+          <tr><td class="kw">Hosting</td><td>Vercel</td><td>Sin limitaciones para lo que viene</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Lo que falta y cuesta tráfico</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Brechas on-page, por prioridad</b>P0 bloquea cualquier posicionamiento. P1 limita el alcance. P2 es pulido.</caption>
+        <thead><tr><th>Prio</th><th>Hallazgo</th><th>Dato medido</th><th>Consecuencia</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td><span class="pill" style="color:var(--red);border-color:var(--red)">P0</span></td><td class="kw">Título sin ningún sustantivo de servicio</td><td>"Paul de Lavallaz · Morfeo Labs", 30 caracteres</td><td>El dominio no puede competir por ninguna consulta que no sea su propio nombre</td></tr>
+          <tr class="hi"><td><span class="pill" style="color:var(--red);border-color:var(--red)">P0</span></td><td class="kw">Sin páginas de servicio</td><td>4 enlaces internos en todo el sitio, todos a anclas de la misma página</td><td>Nada que rankear para los 6 servicios que vende</td></tr>
+          <tr class="hi"><td><span class="pill" style="color:var(--red);border-color:var(--red)">P0</span></td><td class="kw">Sin señal geográfica</td><td>Ningún país, ciudad ni región en el HTML. Solo "Buenos Aires" dentro del título de un video</td><td>Queda fuera de toda consulta con modificador de país, que es como se busca un proveedor</td></tr>
+          <tr class="hi"><td><span class="pill" style="color:var(--red);border-color:var(--red)">P0</span></td><td class="kw">H1 sin keyword</td><td>"Hola, soy Paul."</td><td>Señal de relevancia nula para el tema del negocio</td></tr>
+          <tr><td><span class="pill com">P1</span></td><td class="kw">Sin blog ni contenido comparativo</td><td>740 palabras indexables, 0 artículos</td><td>Sin superficie para el long tail informacional, que es donde está todo el volumen en español</td></tr>
+          <tr><td><span class="pill com">P1</span></td><td class="kw">Sin datos estructurados de organización ni de servicio</td><td>Solo OG y Twitter Card. Sin JSON-LD detectado</td><td>La entidad "Morfeo Labs" no está declarada de forma legible por máquina</td></tr>
+          <tr><td><span class="pill com">P1</span></td><td class="kw">41 imágenes sin texto alternativo</td><td><code>no_image_alt: true</code>, <code>no_image_title: true</code></td><td>Pierde el canal de imágenes y accesibilidad. El sitio es casi todo visual</td></tr>
+          <tr><td><span class="pill com">P1</span></td><td class="kw">Sin versión en inglés</td><td>Sin hreflang. Todo en español rioplatense con voseo</td><td>Cierra el acceso al mercado que vale 20 a 40 veces más</td></tr>
+          <tr><td><span class="pill inf">P2</span></td><td class="kw">Precio solo en /nora</td><td>El home ofrece tramos de presupuesto en el formulario, no precios</td><td>Pierde la citación de IA que premia los precios publicados</td></tr>
+          <tr><td><span class="pill inf">P2</span></td><td class="kw">Un recurso CSS bloquea el renderizado</td><td><code>render_blocking_stylesheets_count: 1</code></td><td>Impacto marginal con 8,95 KB de peso total</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box">
+      <p class="box-head">Nota sobre el voseo</p>
+      <p>El sitio está escrito en español rioplatense, con voseo. Eso es correcto y conviene mantenerlo en Argentina y Uruguay, porque es parte de la voz de la marca. Para México, Colombia, Chile y Perú hace falta una variante en español neutro, sobre todo en las páginas de servicio y en los artículos. No es un detalle de estilo: la keyword que se busca en México es "automatizar" y la frase que convierte no incluye "armá" ni "querés".</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 VISIBILIDAD ============ -->
+<section id="visibilidad">
+  <div class="wrap">
+    <span class="sec-num">04 · Visibilidad actual</span>
+    <h2>Dos herramientas independientes miden lo mismo: cero</h2>
+    <p class="intro">Antes de proyectar nada, conviene fijar la línea base con dos fuentes que no comparten crawler ni base de datos.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Visibilidad orgánica de morfeolabs.com</b>DataForSEO Labs y Semrush, consultados el 17 de noviembre de 2026.</caption>
+        <thead><tr><th>Fuente</th><th>Mercado</th><th>Keywords</th><th>Tráfico estimado</th><th>Valor del tráfico</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">DataForSEO Labs</td><td>Argentina, español</td><td class="n zero">0</td><td class="n zero">0</td><td class="n zero">US$ 0</td></tr>
+          <tr><td class="kw">Semrush</td><td>Argentina (ar)</td><td class="n zero">sin registro</td><td class="n zero">0</td><td class="n zero">US$ 0</td></tr>
+          <tr><td class="kw">Semrush</td><td>México (mx)</td><td class="n zero">sin registro</td><td class="n zero">0</td><td class="n zero">US$ 0</td></tr>
+          <tr><td class="kw">Semrush</td><td>Colombia (co), Chile (cl), Perú (pe)</td><td class="n zero">sin registro</td><td class="n zero">0</td><td class="n zero">US$ 0</td></tr>
+          <tr><td class="kw">Semrush</td><td>Estados Unidos (us)</td><td class="n zero">sin registro</td><td class="n zero">0</td><td class="n zero">US$ 0</td></tr>
+          <tr class="hi"><td class="kw">Semrush</td><td>Rumanía (ro)</td><td class="n">1</td><td class="n">0</td><td class="n">US$ 0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Semrush asigna a morfeolabs.com un rank global de 2.547.459 y lo registra en una sola de sus 90 bases regionales: Rumanía, con una keyword y cero tráfico. Eso no significa que el sitio tenga audiencia rumana. Significa que es el único rastro que el crawler encontró, y es coherente con el perfil de enlaces que se ve en la sección siguiente.</p>
+
+    <div class="box win">
+      <p class="box-head">Lo que esto tiene de bueno</p>
+      <p>Partir de cero sin penalizaciones ni deuda técnica es la mejor posición posible para empezar. No hay contenido viejo que canibalice, no hay redirecciones que arreglar, no hay arquitectura heredada. El sitio carga en menos de un segundo y está en Vercel. Todo lo que se construya empieza limpio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 ENLACES ============ -->
+<section id="enlaces">
+  <div class="wrap">
+    <span class="sec-num">05 · Perfil de enlaces</span>
+    <h2>Los 58 dominios que enlazan no son autoridad. Son ruido.</h2>
+    <p class="intro">A primera vista 58 dominios de referencia para un sitio nuevo parece buena señal. Al abrir la lista, no lo es.</p>
+
+    <div class="stats">
+      <div class="stat neutral"><b>62</b><span>Backlinks totales</span></div>
+      <div class="stat neutral"><b>58</b><span>Dominios de referencia, 52 dominios raíz</span></div>
+      <div class="stat bad"><b>60</b><span>Spam score del perfil, sobre 100</span></div>
+      <div class="stat bad"><b>52 / 58</b><span>Dominios sin país asignado, señal típica de red automatizada</span></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Muestra de los 10 dominios más recientes que enlazan</b>DataForSEO Backlinks, 17 de noviembre de 2026. Ordenados por fecha de primera detección.</caption>
+        <thead><tr><th>Dominio</th><th>Spam score</th><th>Primera detección</th><th>Tipo</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">keywordposition.space</td><td class="n">45</td><td>17 nov 2026</td><td>Scraper de posiciones SEO</td></tr>
+          <tr><td class="kw">lorentius.com</td><td class="n">60</td><td>14 nov 2026</td><td>Sin relación temática</td></tr>
+          <tr><td class="kw">topentreno.com</td><td class="n">60</td><td>10 nov 2026</td><td>Sin relación temática</td></tr>
+          <tr class="hi"><td class="kw">lordsserial.xyz</td><td class="n" style="color:var(--red)">90</td><td>5 nov 2026</td><td>Spam puro</td></tr>
+          <tr><td class="kw">quero.party</td><td class="n">50</td><td>4 nov 2026</td><td>Spam, nofollow</td></tr>
+          <tr><td class="kw">productmax.space</td><td class="n">70</td><td>1 nov 2026</td><td>Granja de enlaces</td></tr>
+          <tr><td class="kw">websquemolan.com</td><td class="n">60</td><td>31 oct 2026</td><td>Directorio automatizado</td></tr>
+          <tr><td class="kw">thcradar.com</td><td class="n">60</td><td>25 oct 2026</td><td>Sin relación temática</td></tr>
+          <tr><td class="kw">dbike-us.com</td><td class="n">60</td><td>16 oct 2026</td><td>Sin relación temática</td></tr>
+          <tr><td class="kw">bureatag.com</td><td class="n">60</td><td>14 oct 2026</td><td>Sin relación temática</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>La distribución de extensiones confirma el diagnóstico: cuatro <code>.info</code>, dos <code>.space</code>, dos <code>.fyi</code>, dos <code>.shop</code>, un <code>.xyz</code>, un <code>.link</code>. El tipo de enlace es 100% ancla de texto, sin una sola mención editorial dentro de un artículo (solo dos de los 60 enlaces están en una etiqueta <code>article</code>). Esto no es un ataque: es lo que le pasa a cualquier dominio nuevo que los scrapers de SEO empiezan a indexar.</p>
+
+    <div class="box alert">
+      <p class="box-head">Recomendación</p>
+      <p>No hay que entrar en pánico ni armar un disavow todavía. Con cero contenido y cero rankings, estos enlaces no están perjudicando nada medible. Lo que importa es que <strong>no cuentan como autoridad</strong>, y por lo tanto el plan no puede asumir ninguna ventaja de partida. Conviene volver a medir el perfil cuando el sitio ya tenga páginas rankeando, y solo entonces decidir si hace falta un disavow. Lo urgente es construir los enlaces reales que la sección 12 enumera por nombre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 VOLUMEN LATAM ============ -->
+<section id="volumen-latam">
+  <div class="wrap">
+    <span class="sec-num">06 · Volumen e intención, América Latina</span>
+    <h2>El mercado comercial en español es pequeño. El informacional es grande.</h2>
+    <p class="intro">Esta es la tabla central del informe. Son volúmenes mensuales reales de Google Ads vía DataForSEO, por país, para las 32 keywords que corresponden a lo que Morfeo vende. La columna de intención viene del clasificador de DataForSEO, que distingue informacional, comercial, transaccional y navegacional.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Volumen mensual de búsqueda en Google, español, por país</b>DataForSEO Labs Keyword Overview, datos de Google Ads actualizados entre el 16 de octubre y el 17 de noviembre de 2026. "n/d" significa que no se consultó en ese mercado. "0" significa consultado sin datos.</caption>
+        <thead>
+          <tr>
+            <th>Keyword</th><th>Intención</th>
+            <th>AR</th><th>MX</th><th>CO</th><th>CL</th><th>PE</th><th>US·es</th>
+            <th>CPC más alto</th><th>Tend. anual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hi"><td class="kw">agentes de ia</td><td><span class="pill inf">Informacional</span></td><td class="n">880</td><td class="n">1.000</td><td class="n">1.000</td><td class="n">390</td><td class="n">590</td><td class="n">170</td><td class="n">US$ 28,75 (US)</td><td class="n up">+171% AR</td></tr>
+          <tr><td class="kw">agencia de ia</td><td><span class="pill nav">Navegacional</span></td><td class="n">90</td><td class="n">90</td><td class="n">110</td><td class="n">50</td><td class="n">40</td><td class="n">110</td><td class="n">US$ 8,83 (US)</td><td class="n up">+150% CL</td></tr>
+          <tr><td class="kw">agencia de inteligencia artificial</td><td><span class="pill com">Comercial</span></td><td class="n">30</td><td class="n">40</td><td class="n">40</td><td class="n">20</td><td class="n">20</td><td class="n">90</td><td class="n">US$ 3,37 (US)</td><td class="n up">+400% CL</td></tr>
+          <tr><td class="kw">ia para empresas</td><td><span class="pill inf">Informacional</span></td><td class="n">70</td><td class="n">90</td><td class="n">50</td><td class="n">50</td><td class="n">50</td><td class="n">10</td><td class="n">US$ 9,81 (CL)</td><td class="n up">+75% PE</td></tr>
+          <tr><td class="kw">inteligencia artificial para empresas</td><td><span class="pill com">Comercial</span></td><td class="n">40</td><td class="n">50</td><td class="n">30</td><td class="n">20</td><td class="n">20</td><td class="n">10</td><td class="n">US$ 13,39 (CO)</td><td class="n dn">-50% CO</td></tr>
+          <tr><td class="kw">automatización de procesos con ia</td><td><span class="pill inf">Informacional</span></td><td class="n">70</td><td class="n">50</td><td class="n">50</td><td class="n">30</td><td class="n">40</td><td class="n">10</td><td class="n">US$ 11,62 (MX)</td><td class="n up">+100% CL/PE</td></tr>
+          <tr><td class="kw">crear agentes de ia</td><td><span class="pill inf">Informacional</span></td><td class="n">70</td><td class="n">40</td><td class="n">40</td><td class="n">20</td><td class="n">10</td><td class="n">10</td><td class="n">US$ 4,26 (CO)</td><td class="n up">+800% MX</td></tr>
+          <tr><td class="kw">capacitación en inteligencia artificial</td><td><span class="pill inf">Informacional</span></td><td class="n">70</td><td class="n">20</td><td class="n">20</td><td class="n zero">0</td><td class="n zero">0</td><td class="n">n/d</td><td class="n">US$ 1,04 (MX)</td><td class="n dn">-50% MX/CO</td></tr>
+          <tr><td class="kw">consultoría en inteligencia artificial</td><td><span class="pill com">Comercial</span></td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n zero">0</td><td class="n">10</td><td class="n">n/d</td><td class="n">US$ 11,39 bid (MX)</td><td class="n dn">-50% CO</td></tr>
+          <tr><td class="kw">consultor de inteligencia artificial</td><td><span class="pill com">Comercial</span></td><td class="n">10</td><td class="n">20</td><td class="n zero">0</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">US$ 2,07 (MX)</td><td class="n up">+450% MX</td></tr>
+          <tr class="hi"><td class="kw">capacitación en ia para empresas</td><td><span class="pill com">Comercial</span></td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">n/d</td><td class="n" style="color:var(--amber)">US$ 27,62 (CO)</td><td class="n">estable</td></tr>
+          <tr><td class="kw">curso de inteligencia artificial para empresas</td><td><span class="pill com">Comercial</span></td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">sin CPC</td><td class="n dn">-50% MX</td></tr>
+          <tr><td class="kw">agencia de contenido</td><td><span class="pill com">Comercial</span></td><td class="n">40</td><td class="n">70</td><td class="n">30</td><td class="n">50</td><td class="n">40</td><td class="n">10</td><td class="n">US$ 3,17 (AR)</td><td class="n up">+50% AR/CO</td></tr>
+          <tr><td class="kw">agencia de marketing digital con ia</td><td><span class="pill com">Comercial</span></td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">sin CPC</td><td class="n dn">-100% MX</td></tr>
+          <tr><td class="kw">marketing con inteligencia artificial</td><td><span class="pill com">Comercial</span></td><td class="n">10</td><td class="n">30</td><td class="n">20</td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">US$ 5,01 (CO)</td><td class="n dn">-80% MX</td></tr>
+          <tr><td class="kw">inteligencia artificial para marketing</td><td><span class="pill com">Comercial</span></td><td class="n">10</td><td class="n">30</td><td class="n">10</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">US$ 7,31 (CO)</td><td class="n dn">-71% MX</td></tr>
+          <tr><td class="kw">crear contenido con ia</td><td><span class="pill inf">Informacional</span></td><td class="n zero">0</td><td class="n">50</td><td class="n">20</td><td class="n">10</td><td class="n">20</td><td class="n">10</td><td class="n">US$ 5,58 (US)</td><td class="n up">+300% CO</td></tr>
+          <tr><td class="kw">contenido con inteligencia artificial</td><td><span class="pill inf">Informacional</span></td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">US$ 0,26 (AR)</td><td class="n dn">-100% CO</td></tr>
+          <tr><td class="kw">ia para redes sociales</td><td><span class="pill nav">Navegacional</span></td><td class="n">40</td><td class="n">30</td><td class="n">20</td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">US$ 4,72 (MX)</td><td class="n up">+300% AR</td></tr>
+          <tr><td class="kw">ugc con ia</td><td><span class="pill nav">Navegacional</span></td><td class="n">30</td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">US$ 5,02 (AR)</td><td class="n up">+200% AR</td></tr>
+          <tr><td class="kw">automatizar instagram</td><td><span class="pill nav">Navegacional</span></td><td class="n">20</td><td class="n">10</td><td class="n">20</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">n/d</td><td class="n" style="color:var(--amber)">US$ 29,61 bid (CO)</td><td class="n up">+100%</td></tr>
+          <tr><td class="kw">automatizar redes sociales</td><td><span class="pill inf">Informacional</span></td><td class="n">10</td><td class="n">10</td><td class="n">10</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">US$ 7,65 (CO)</td><td class="n">estable</td></tr>
+          <tr><td class="kw">chatbot de whatsapp</td><td><span class="pill nav">Navegacional</span></td><td class="n">40</td><td class="n">90</td><td class="n">70</td><td class="n">10</td><td class="n">40</td><td class="n">10</td><td class="n">US$ 7,92 (CO)</td><td class="n dn">-82% CO</td></tr>
+          <tr><td class="kw">automatizaciones con n8n</td><td><span class="pill nav">Navegacional</span></td><td class="n">20</td><td class="n">10</td><td class="n">30</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">n/d</td><td class="n">US$ 0,85 (CO)</td><td class="n dn">-50%</td></tr>
+          <tr><td class="kw">avatar ia</td><td><span class="pill inf">Informacional</span></td><td class="n zero">0</td><td class="n">390</td><td class="n zero">0</td><td class="n zero">0</td><td class="n zero">0</td><td class="n">70</td><td class="n">US$ 4,38 (US)</td><td class="n up">+33% MX</td></tr>
+          <tr><td class="kw">clonar voz con ia</td><td><span class="pill inf">Informacional</span></td><td class="n">320</td><td class="n">320</td><td class="n">170</td><td class="n">140</td><td class="n">260</td><td class="n">n/d</td><td class="n">US$ 0,86 (AR)</td><td class="n dn">-46% AR</td></tr>
+          <tr class="hi"><td class="kw">crear videos con ia</td><td><span class="pill inf">Informacional</span></td><td class="n">5.400</td><td class="n">9.900</td><td class="n">6.600</td><td class="n">3.600</td><td class="n">6.600</td><td class="n">880</td><td class="n">US$ 4,34 (US)</td><td class="n up">+22%</td></tr>
+          <tr class="hi"><td class="kw">curso de ia</td><td><span class="pill inf">Informacional</span></td><td class="n">2.400</td><td class="n">2.900</td><td class="n">1.900</td><td class="n">1.600</td><td class="n">1.900</td><td class="n">320</td><td class="n">US$ 8,55 (US)</td><td class="n up">+177% PE</td></tr>
+          <tr><td class="kw">curso de inteligencia artificial</td><td><span class="pill inf">Informacional</span></td><td class="n">1.000</td><td class="n">1.300</td><td class="n">1.000</td><td class="n">590</td><td class="n">880</td><td class="n">260</td><td class="n">US$ 14,51 (US)</td><td class="n dn">-54% AR</td></tr>
+          <tr><td class="kw">n8n</td><td><span class="pill inf">Informacional</span></td><td class="n">27.100</td><td class="n">27.100</td><td class="n">33.100</td><td class="n">14.800</td><td class="n">14.800</td><td class="n">135.000</td><td class="n">US$ 2,98 (US)</td><td class="n dn">-45%</td></tr>
+          <tr><td class="kw">heygen</td><td><span class="pill inf">Informacional</span></td><td class="n">18.100</td><td class="n">33.100</td><td class="n">33.100</td><td class="n">8.100</td><td class="n">14.800</td><td class="n">135.000</td><td class="n">US$ 2,73 (US)</td><td class="n up">+23%</td></tr>
+          <tr><td class="kw">manychat</td><td><span class="pill nav">Navegacional</span></td><td class="n">22.200</td><td class="n">27.100</td><td class="n">22.200</td><td class="n">8.100</td><td class="n">12.100</td><td class="n">110.000</td><td class="n">US$ 0,73 (US)</td><td class="n up">+49% US</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Qué dice esta tabla, en claro</h3>
+    <p><strong>La demanda comercial directa en español suma muy poco.</strong> Si se agrupan las nueve keywords de intención comercial más relevantes (agencia de inteligencia artificial, consultoría, consultor, capacitación en IA para empresas, curso para empresas, agencia de contenido, agencia de marketing con IA, marketing con IA, IA para marketing), el total de los cinco países de LATAM es aproximadamente <strong>640 búsquedas al mes</strong>. Repartidas entre cinco mercados, cinco intenciones distintas y un top 10 de Google por keyword. Eso no financia un negocio por sí solo.</p>
+    <p><strong>El volumen está en el nivel informacional y de herramienta.</strong> <code>crear videos con ia</code> suma 32.100 búsquedas al mes entre los seis mercados, con una dificultad de keyword notablemente baja: KD 5 en Argentina, 13 en México, 20 en Colombia, 9 en Chile. <code>curso de ia</code> suma 11.020 con KD 1 a 22. Son keywords en las que un sitio sin autoridad puede entrar, y son exactamente el tema del negocio.</p>
+    <p><strong>Las keywords de herramienta son el canal más grande y nadie del rubro lo está usando bien.</strong> <code>n8n</code>, <code>heygen</code> y <code>manychat</code> suman 251.500 búsquedas al mes solo en los seis mercados medidos. Morfeo construye sistemas con estas herramientas. Hoy no tiene una sola página sobre ninguna.</p>
+
+    <div class="box">
+      <p class="box-head">Validación cruzada con Semrush: el dato más duro de esta sección</p>
+      <p>Consultamos las mismas doce keywords en la base de Argentina de Semrush. Devolvió datos para <strong>tres</strong>: capacitación en inteligencia artificial (30, KD 52), automatizar redes sociales (20, KD 0) y crear videos con ia (2.900, KD 62). Para las otras nueve, incluidas <code>agencia de ia</code>, <code>agencia de inteligencia artificial</code>, <code>agentes de ia</code>, <code>consultoría en inteligencia artificial</code> y <code>ia para empresas</code>, respondió sin datos. Cuando dos proveedores independientes coinciden en que la demanda comercial en español está por debajo del umbral de reporte, el mensaje es inequívoco: <strong>en LATAM hay que vender por contenido informacional y por visibilidad en IA, no por keywords comerciales</strong>.</p>
+      <p class="src">Fuente: Semrush phrase_these, base ar, 17 nov 2026. Consumo 30 unidades de API.</p>
+    </div>
+
+    <h3>El long tail en español, medido</h3>
+    <p>Para dimensionar el techo real, pedimos a DataForSEO todas las variantes de <code>contenido con ia</code> en México con más de 20 búsquedas al mes. El universo completo son siete keywords.</p>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Universo completo de "contenido con ia" en México</b>DataForSEO Keyword Suggestions, filtro de volumen mayor a 20, 17 de noviembre de 2026. El total devuelto por la API es de 7 keywords.</caption>
+        <thead><tr><th>Keyword</th><th>Intención</th><th>Volumen</th><th>CPC</th><th>Tendencia anual</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">creador de contenido con ia</td><td><span class="pill nav">Navegacional</span></td><td class="n">50</td><td class="n">US$ 1,04</td><td class="n up">+2.000%</td></tr>
+          <tr><td class="kw">crear contenido con ia</td><td><span class="pill inf">Informacional</span></td><td class="n">50</td><td class="n">US$ 2,31</td><td class="n up">+67%</td></tr>
+          <tr><td class="kw">crea contenido con ia</td><td><span class="pill tra">Transaccional</span></td><td class="n">50</td><td class="n">US$ 2,31</td><td class="n up">+67%</td></tr>
+          <tr><td class="kw">creación de contenido con ia</td><td><span class="pill inf">Informacional</span></td><td class="n">30</td><td class="n">US$ 1,68</td><td class="n dn">-33%</td></tr>
+          <tr><td class="kw">cómo crear contenido con ia</td><td><span class="pill inf">Informacional</span></td><td class="n">30</td><td class="n">US$ 1,44</td><td class="n up">+400%</td></tr>
+          <tr><td class="kw">creacion de contenido con ia</td><td><span class="pill inf">Informacional</span></td><td class="n">30</td><td class="n">US$ 1,06</td><td class="n dn">-33%</td></tr>
+          <tr><td class="kw">cómo hacer contenido con ia</td><td><span class="pill inf">Informacional</span></td><td class="n">30</td><td class="n">US$ 1,34</td><td class="n up">+1.000%</td></tr>
+          <tr style="font-weight:700;background:var(--ink-3)"><td class="kw">Total del cluster</td><td></td><td class="n" style="color:var(--amber)">270</td><td class="n">promedio US$ 1,60</td><td class="n up">creciendo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>270 búsquedas al mes en el mercado hispanohablante más grande de la región, para el cluster que describe literalmente el servicio principal de Morfeo. Las tendencias son fuertemente positivas, de +400% a +2.000% interanual, lo que confirma que la categoría está naciendo. Pero el techo absoluto hoy es chico, y hay que planificar con ese número, no con la expectativa.</p>
+  </div>
+</section>
+
+<!-- ============ 7 VOLUMEN USA ============ -->
+<section id="volumen-usa">
+  <div class="wrap">
+    <span class="sec-num">07 · Volumen e intención, Estados Unidos</span>
+    <h2>Aquí está el dinero: entre 20 y 40 veces más valor por consulta</h2>
+    <p class="intro">Misma canasta de servicios, mercado estadounidense, en inglés. Se incluyen las dos fuentes lado a lado porque difieren y conviene ver el rango real, no un número único.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Estados Unidos, inglés: volumen, CPC, dificultad e intención</b>DataForSEO Labs Keyword Overview y Semrush phrase_these, base us, ambos del 17 de noviembre de 2026. KD es el índice de dificultad de Semrush, de 0 a 100.</caption>
+        <thead>
+          <tr><th>Keyword</th><th>Intención</th><th>Vol. DFS</th><th>Vol. Semrush</th><th>CPC DFS</th><th>CPC Semrush</th><th>KD</th><th>Tend. anual</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hi"><td class="kw">ai consulting</td><td><span class="pill com">Comercial</span></td><td class="n">8.100</td><td class="n">6.600</td><td class="n" style="color:var(--amber)">US$ 50,84</td><td class="n">US$ 12,98</td><td class="n">71</td><td class="n dn">-45%</td></tr>
+          <tr class="hi"><td class="kw">ai automation agency</td><td><span class="pill nav">Nav. + comercial</span></td><td class="n">4.400</td><td class="n">3.600</td><td class="n" style="color:var(--amber)">US$ 26,80</td><td class="n">US$ 7,15</td><td class="n">47</td><td class="n up">+125%</td></tr>
+          <tr class="hi"><td class="kw">ai agents for business</td><td><span class="pill com">Comercial</span></td><td class="n">3.600</td><td class="n">2.400</td><td class="n" style="color:var(--amber)">US$ 87,72</td><td class="n">US$ 27,76</td><td class="n">31</td><td class="n up">+5.556%</td></tr>
+          <tr class="hi"><td class="kw">ai marketing agency</td><td><span class="pill com">Comercial</span></td><td class="n">1.900</td><td class="n">3.600</td><td class="n" style="color:var(--amber)">US$ 29,47</td><td class="n">US$ 11,70</td><td class="n">18</td><td class="n dn">-34%</td></tr>
+          <tr><td class="kw">ai ugc</td><td><span class="pill inf">Informacional</span></td><td class="n">1.900</td><td class="n">1.900</td><td class="n">US$ 16,32</td><td class="n">US$ 5,64</td><td class="n">55</td><td class="n up">+46%</td></tr>
+          <tr><td class="kw">ai seo agency</td><td><span class="pill com">Comercial</span></td><td class="n">1.600</td><td class="n">n/d</td><td class="n">US$ 32,60</td><td class="n">n/d</td><td class="n">12</td><td class="n dn">-57% trim.</td></tr>
+          <tr><td class="kw">ai content creation</td><td><span class="pill com">Comercial</span></td><td class="n">1.600</td><td class="n">n/d</td><td class="n">US$ 16,44</td><td class="n">n/d</td><td class="n">32</td><td class="n dn">fuerte caída</td></tr>
+          <tr><td class="kw">ai employee</td><td><span class="pill nav">Navegacional</span></td><td class="n">1.600</td><td class="n">n/d</td><td class="n">US$ 28,64</td><td class="n">n/d</td><td class="n">19</td><td class="n up">+123% trim.</td></tr>
+          <tr><td class="kw">ai workflow automation</td><td><span class="pill com">Comercial</span></td><td class="n">1.000</td><td class="n">n/d</td><td class="n">US$ 38,36</td><td class="n">n/d</td><td class="n">31</td><td class="n up">+39%</td></tr>
+          <tr><td class="kw">ugc ai</td><td><span class="pill inf">Informacional</span></td><td class="n">1.000</td><td class="n">n/d</td><td class="n">US$ 19,85</td><td class="n">n/d</td><td class="n">29</td><td class="n up">+23%</td></tr>
+          <tr><td class="kw">whatsapp chatbot</td><td><span class="pill nav">Navegacional</span></td><td class="n">720</td><td class="n">n/d</td><td class="n">US$ 21,90</td><td class="n">n/d</td><td class="n">23</td><td class="n up">+22% trim.</td></tr>
+          <tr><td class="kw">ai social media management</td><td><span class="pill inf">Informacional</span></td><td class="n">170</td><td class="n">480</td><td class="n">US$ 23,16</td><td class="n">US$ 7,77</td><td class="n">52</td><td class="n up">+80%</td></tr>
+          <tr class="hi"><td class="kw">ai training for employees</td><td><span class="pill com">Comercial</span></td><td class="n">320</td><td class="n">390</td><td class="n" style="color:var(--amber)">US$ 101,84</td><td class="n">US$ 28,55</td><td class="n">37</td><td class="n up">+24% trim.</td></tr>
+          <tr><td class="kw">instagram dm automation</td><td><span class="pill inf">Informacional</span></td><td class="n">260</td><td class="n">n/d</td><td class="n">US$ 19,74</td><td class="n">n/d</td><td class="n">36</td><td class="n up">+24% trim.</td></tr>
+          <tr><td class="kw">automate content creation</td><td><span class="pill com">Comercial</span></td><td class="n">210</td><td class="n">90</td><td class="n">US$ 7,55</td><td class="n">US$ 12,03</td><td class="n">34</td><td class="n dn">-90%</td></tr>
+          <tr><td class="kw">ai automation for business</td><td><span class="pill com">Comercial</span></td><td class="n">210</td><td class="n">n/d</td><td class="n">US$ 35,74</td><td class="n">n/d</td><td class="n">25</td><td class="n up">+53% mes</td></tr>
+          <tr><td class="kw">ai avatar video</td><td><span class="pill inf">Informacional</span></td><td class="n">170</td><td class="n">n/d</td><td class="n">US$ 8,25</td><td class="n">n/d</td><td class="n">39</td><td class="n dn">-18%</td></tr>
+          <tr class="hi"><td class="kw">ai content agency</td><td><span class="pill com">Comercial</span></td><td class="n">110</td><td class="n">260</td><td class="n">US$ 24,15</td><td class="n">US$ 5,76</td><td class="n" style="color:var(--green)">6</td><td class="n dn">-57%</td></tr>
+          <tr><td class="kw">ai growth agency</td><td><span class="pill com">Comercial</span></td><td class="n">110</td><td class="n">n/d</td><td class="n">US$ 16,39</td><td class="n">n/d</td><td class="n" style="color:var(--green)">7</td><td class="n up">+467%</td></tr>
+          <tr><td class="kw">corporate ai training</td><td><span class="pill com">Comercial</span></td><td class="n">70</td><td class="n">n/d</td><td class="n" style="color:var(--amber)">US$ 62,63</td><td class="n">n/d</td><td class="n">n/d</td><td class="n up">+67%</td></tr>
+          <tr><td class="kw">ai content automation</td><td><span class="pill com">Comercial</span></td><td class="n">50</td><td class="n">320</td><td class="n">US$ 5,36</td><td class="n">US$ 5,54</td><td class="n">37</td><td class="n up">+100% trim.</td></tr>
+          <tr><td class="kw">ai content engine</td><td><span class="pill com">Comercial</span></td><td class="n">50</td><td class="n">n/d</td><td class="n">US$ 9,15</td><td class="n">n/d</td><td class="n">n/d</td><td class="n up">+100%</td></tr>
+          <tr class="hi"><td class="kw">done for you content</td><td><span class="pill inf">Informacional</span></td><td class="n">20</td><td class="n">110</td><td class="n">n/d</td><td class="n">US$ 5,93</td><td class="n" style="color:var(--green)">1</td><td class="n">estable</td></tr>
+          <tr class="hi"><td class="kw">ai content system</td><td><span class="pill com">Comercial</span></td><td class="n">n/d</td><td class="n">10</td><td class="n">n/d</td><td class="n">US$ 10,37</td><td class="n" style="color:var(--green)">0</td><td class="n">nuevo</td></tr>
+          <tr><td class="kw">ai video generator</td><td><span class="pill tra">Transaccional</span></td><td class="n">246.000</td><td class="n">n/d</td><td class="n">US$ 6,05</td><td class="n">n/d</td><td class="n">65</td><td class="n dn">-18%</td></tr>
+          <tr><td class="kw">ai voice clone</td><td><span class="pill tra">Transaccional</span></td><td class="n">2.400</td><td class="n">n/d</td><td class="n">US$ 5,36</td><td class="n">n/d</td><td class="n">18</td><td class="n dn">-34%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>La comparación que decide la estrategia</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Mismo servicio, dos mercados</b>Volumen mensual y CPC del término comercial principal de cada línea de negocio.</caption>
+        <thead><tr><th>Servicio</th><th>Keyword en español</th><th>Vol. LATAM (5 países)</th><th>CPC máx.</th><th>Keyword en inglés</th><th>Vol. US</th><th>CPC máx.</th><th>Múltiplo de valor</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">Agencia de automatización con IA</td><td>agencia de inteligencia artificial</td><td class="n">150</td><td class="n">US$ 3,36</td><td>ai automation agency</td><td class="n">4.400</td><td class="n">US$ 26,80</td><td class="n" style="color:var(--amber)">234x</td></tr>
+          <tr><td class="kw">Consultoría de IA</td><td>consultoría en inteligencia artificial</td><td class="n">40</td><td class="n">sin CPC</td><td>ai consulting</td><td class="n">8.100</td><td class="n">US$ 50,84</td><td class="n" style="color:var(--amber)">muy alto</td></tr>
+          <tr><td class="kw">Capacitación de equipos</td><td>capacitación en ia para empresas</td><td class="n">50</td><td class="n">US$ 27,62</td><td>ai training for employees</td><td class="n">320</td><td class="n">US$ 101,84</td><td class="n" style="color:var(--amber)">24x</td></tr>
+          <tr><td class="kw">Contenido gestionado con IA</td><td>agencia de contenido</td><td class="n">230</td><td class="n">US$ 3,17</td><td>ai content agency</td><td class="n">110</td><td class="n">US$ 24,15</td><td class="n" style="color:var(--amber)">3,6x</td></tr>
+          <tr><td class="kw">UGC con IA</td><td>ugc con ia</td><td class="n">70</td><td class="n">US$ 5,02</td><td>ai ugc + ugc ai</td><td class="n">2.900</td><td class="n">US$ 19,85</td><td class="n" style="color:var(--amber)">164x</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box win">
+      <p class="box-head">Las puertas de entrada más baratas en Estados Unidos</p>
+      <p>Tres keywords comerciales con dificultad casi nula y CPC alto, que son exactamente lo que vende NORA:</p>
+      <ul>
+        <li><strong>ai content agency</strong>, KD 6, CPC US$ 24,15, 110 a 260 búsquedas al mes</li>
+        <li><strong>ai growth agency</strong>, KD 7, CPC US$ 16,39, 110 al mes, creciendo 467% interanual</li>
+        <li><strong>done for you content</strong>, KD 1, CPC US$ 5,93, 20 a 110 al mes</li>
+        <li><strong>ai content system</strong>, KD 0, CPC US$ 10,37. Es la frase literal que usa el sitio de Morfeo en español</li>
+      </ul>
+      <p>Un KD de 0 a 7 significa que un dominio nuevo con una buena página puede entrar al top 10 en semanas, no en años. Son las cuatro primeras páginas que conviene escribir en inglés.</p>
+    </div>
+
+    <h3>La intención informacional en inglés, y el giro que importa</h3>
+    <p>Pedimos a Semrush todas las preguntas sobre <code>ai content</code> en Estados Unidos. El resultado revela que una parte sustancial de la demanda ya no es sobre cómo generar contenido con IA, sino sobre <strong>cómo hacer que la IA te recomiende</strong>. Y esas preguntas tienen dificultad bajísima.</p>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Preguntas sobre "ai content" en Estados Unidos</b>Semrush phrase_questions, base us, top 30 por volumen, 17 de noviembre de 2026. Consumo 1.200 unidades de API.</caption>
+        <thead><tr><th>Pregunta</th><th>Volumen</th><th>CPC</th><th>KD</th><th>Oportunidad</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">how to humanize ai content</td><td class="n">2.400</td><td class="n">US$ 3,78</td><td class="n">73</td><td>Alta demanda, difícil</td></tr>
+          <tr><td class="kw">how to use ai for content creation</td><td class="n">2.400</td><td class="n">US$ 3,63</td><td class="n">65</td><td>Núcleo del negocio, difícil</td></tr>
+          <tr><td class="kw">how to tell if content is ai generated</td><td class="n">720</td><td class="n">US$ 0,61</td><td class="n">62</td><td>Tangencial</td></tr>
+          <tr class="hi"><td class="kw">how to optimize content for ai search engines</td><td class="n">590</td><td class="n">US$ 1,93</td><td class="n" style="color:var(--green)">39</td><td style="color:var(--green)">Entrada clara</td></tr>
+          <tr><td class="kw">do ai crawlers like gptbot support content negotiation for markdown</td><td class="n">590</td><td class="n">US$ 0</td><td class="n" style="color:var(--green)">27</td><td style="color:var(--green)">Técnica, baja competencia</td></tr>
+          <tr><td class="kw">how to optimize content for ai search</td><td class="n">390</td><td class="n">US$ 9,58</td><td class="n">50</td><td>CPC alto</td></tr>
+          <tr><td class="kw">how to check ai generated content</td><td class="n">320</td><td class="n">US$ 1,29</td><td class="n" style="color:var(--green)">23</td><td>Tangencial pero fácil</td></tr>
+          <tr class="hi"><td class="kw">how ai answer engines select and cite content sources</td><td class="n">260</td><td class="n">US$ 0</td><td class="n" style="color:var(--green)">15</td><td style="color:var(--green)">Entrada muy clara</td></tr>
+          <tr class="hi"><td class="kw">how to rank in ai search chatgpt perplexity content optimization</td><td class="n">260</td><td class="n">US$ 0</td><td class="n" style="color:var(--green)">14</td><td style="color:var(--green)">Entrada muy clara</td></tr>
+          <tr><td class="kw">how to monitor brand mentions in ai generated content</td><td class="n">260</td><td class="n">US$ 0</td><td class="n" style="color:var(--green)">34</td><td style="color:var(--green)">Entrada clara</td></tr>
+          <tr><td class="kw">is ai content bad for seo</td><td class="n">260</td><td class="n">US$ 0</td><td class="n" style="color:var(--green)">27</td><td>Objeción de venta frecuente</td></tr>
+          <tr><td class="kw">how to update aeo optimized content for evolving ai systems</td><td class="n">210</td><td class="n">US$ 0</td><td class="n" style="color:var(--green)">26</td><td style="color:var(--green)">Entrada clara</td></tr>
+          <tr><td class="kw">how to optimise content for answer engines ai search</td><td class="n">210</td><td class="n">US$ 0</td><td class="n">47</td><td>Variante británica</td></tr>
+          <tr><td class="kw">is ai generated content good for seo</td><td class="n">210</td><td class="n">US$ 0</td><td class="n" style="color:var(--green)">38</td><td>Objeción de venta</td></tr>
+          <tr><td class="kw">does google penalize ai content</td><td class="n">170</td><td class="n">US$ 1,27</td><td class="n">56</td><td>Objeción de venta clave</td></tr>
+          <tr class="hi"><td class="kw">how to create thought leadership content with ai</td><td class="n">170</td><td class="n">US$ 0</td><td class="n" style="color:var(--green)">10</td><td style="color:var(--green)">La más fácil de toda la lista</td></tr>
+          <tr><td class="kw">how to optimize content for chatgpt and ai search results</td><td class="n">170</td><td class="n">US$ 0</td><td class="n">49</td><td>Variante</td></tr>
+          <tr><td class="kw">how to optimize content for generative ai</td><td class="n">170</td><td class="n">US$ 0</td><td class="n">41</td><td>Variante</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Hay una lectura comercial en esto que va más allá del SEO. El mercado estadounidense está preguntando activamente cómo aparecer en las respuestas de IA, con dificultad de 10 a 39. Morfeo Labs construye sistemas de contenido con IA. Esas dos cosas se juntan en una línea de servicio que todavía no tiene y que podría vender a precio de consultoría estadounidense: optimizar la visibilidad de una marca dentro de ChatGPT, Gemini y Perplexity.</p>
+  </div>
+</section>
+
+<!-- ============ 8 INTENCION GOOGLE ============ -->
+<section id="intencion-google">
+  <div class="wrap">
+    <span class="sec-num">08 · Intención de búsqueda en Google</span>
+    <h2>La posición 1 ya no es orgánica, y eso cambia qué hay que escribir</h2>
+    <p class="intro">Rastreamos los SERP reales de las dos keywords ancla, una en cada mercado. En los dos casos el primer bloque de la página es un AI Overview de Google. Lo que el AI Overview cita determina quién capta la consulta.</p>
+
+    <h3>Argentina, "agencia de inteligencia artificial"</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>SERP completo, Argentina, escritorio</b>DataForSEO SERP Organic Live Advanced, 17 de noviembre de 2026.</caption>
+        <thead><tr><th>Pos.</th><th>Tipo</th><th>Quién</th><th>Observación</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td class="n">1</td><td><span class="pill" style="color:var(--amber);border-color:var(--amber-dim)">AI Overview</span></td><td>Google, citando 7 fuentes</td><td>Define la categoría y publica el modelo de negocio y de precios del rubro</td></tr>
+          <tr><td class="n">2</td><td><span class="pill inf">Orgánico 1</span></td><td>ia.agency</td><td>Agencia francesa, contenido en francés</td></tr>
+          <tr><td class="n">3</td><td><span class="pill nav">People Also Ask</span></td><td>4 preguntas</td><td>Las 4 se expanden con AI Overview asíncrono</td></tr>
+          <tr><td class="n">4</td><td><span class="pill inf">Orgánico 2</span></td><td>instagram.com/tuagencia</td><td>Un perfil de Instagram rankea en el top 5</td></tr>
+          <tr class="hi"><td class="n">5</td><td><span class="pill inf">Orgánico 3</span></td><td>agenciaia.ar</td><td>Índice de directorio roto. El snippet que Google muestra es "Name Last Modified Size Directory cgi-bin ... php.ini"</td></tr>
+          <tr><td class="n">6</td><td><span class="pill inf">Orgánico 4</span></td><td>serranodigital.com.ar</td><td>Único competidor argentino real en el top 10</td></tr>
+          <tr><td class="n">7</td><td><span class="pill inf">Orgánico 5</span></td><td>agenticsis.ch</td><td>Consultora con sede en Zúrich</td></tr>
+          <tr><td class="n">8</td><td><span class="pill inf">Orgánico 6</span></td><td>negociosoptimizados.com</td><td>Artículo de junio de 2024, desactualizado</td></tr>
+          <tr><td class="n">9</td><td><span class="pill inf">Orgánico 7</span></td><td>instagram.com/@ai.agentiza</td><td>Segundo perfil de Instagram en el top 10</td></tr>
+          <tr><td class="n">10</td><td><span class="pill inf">Orgánico 8</span></td><td>varka.tech</td><td>Agentes de IA para empresas en Argentina</td></tr>
+          <tr><td class="n">11</td><td><span class="pill inf">Orgánico 9</span></td><td>hostinger.com</td><td>Tutorial genérico</td></tr>
+          <tr><td class="n">12-13</td><td><span class="pill com">Anuncios</span></td><td>ia.propax.ar, enia.io</td><td>Solo dos anunciantes compitiendo</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box win">
+      <p class="box-head">Lectura: el SERP argentino está abierto</p>
+      <p>De los nueve resultados orgánicos, <strong>tres son de fuera de Argentina</strong> (Francia, Suiza, un tutorial global), <strong>dos son perfiles de Instagram</strong> y <strong>uno es un servidor mal configurado</strong> que muestra su listado de archivos. Solo tres son agencias argentinas con una página real. Una página de servicio bien hecha, con señal geográfica explícita y datos estructurados, puede entrar al top 5 de este SERP sin necesidad de un perfil de enlaces fuerte. El volumen es chico, 30 búsquedas al mes, pero es intención comercial pura y la competencia es casi inexistente.</p>
+    </div>
+
+    <h4>Qué cita el AI Overview en Argentina</h4>
+    <p>Siete fuentes, y ninguna es una agencia con una página de servicio:</p>
+    <ol>
+      <li><strong>reddit.com/r/NegociosArgentina</strong>, un hilo titulado "Agencia de IA"</li>
+      <li><strong>youtube.com</strong>, "Como CREAR Tu Agencia IA PASO a PASO"</li>
+      <li><strong>youtube.com</strong>, "Cómo Empezar Una AGENCIA De IA +6H"</li>
+      <li><strong>kersagency.es/blog/como-crear-agencia-ia</strong>, un artículo de blog español</li>
+      <li><strong>agenciaia.ai</strong>, la home de una agencia</li>
+      <li><strong>agentes.ai</strong>, un directorio: "Agencia de IA en Buenos Aires: compara agencias verificadas"</li>
+      <li><strong>besolution.ar</strong>, un artículo: "Agencia IA Argentina: servicios, soluciones y empresas líderes"</li>
+    </ol>
+    <p>Dos de siete son YouTube. Morfeo Labs tiene un canal de YouTube, @MorfeoLabs, que hoy no está trabajado para búsqueda. Dos de siete son un directorio y un artículo de panorama local, los dos accesibles por gestión directa.</p>
+
+    <h3>Estados Unidos, "ai automation agency"</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>SERP completo, Estados Unidos, escritorio</b>DataForSEO SERP Organic Live Advanced, 17 de noviembre de 2026.</caption>
+        <thead><tr><th>Pos.</th><th>Tipo</th><th>Quién</th><th>Observación</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td class="n">1</td><td><span class="pill" style="color:var(--amber);border-color:var(--amber-dim)">AI Overview</span></td><td>Google, citando 7 fuentes</td><td>Incluye una tabla de precios completa del rubro</td></tr>
+          <tr><td class="n">2</td><td><span class="pill inf">Orgánico 1</span></td><td>aiagencyautomation.com</td><td>El título que Google muestra es "500", es decir un error de servidor</td></tr>
+          <tr><td class="n">3</td><td><span class="pill inf">Orgánico 2</span></td><td>amenitytech.ai</td><td>Listicle: "9 AI Automation Agencies to Streamline Your Business"</td></tr>
+          <tr><td class="n">4</td><td><span class="pill inf">Orgánico 3</span></td><td>agent.nexus</td><td>Listicle: "Top 10 AI Automation Services and Platforms in 2026"</td></tr>
+          <tr><td class="n">5</td><td><span class="pill inf">Orgánico 4</span></td><td>agencygrowth.com</td><td>Página de servicio</td></tr>
+          <tr><td class="n">6</td><td><span class="pill inf">Orgánico 5</span></td><td>beyond.agency/ai-agency/new-york</td><td>Página de servicio con ciudad en la URL</td></tr>
+          <tr class="hi"><td class="n">7-9</td><td><span class="pill" style="color:var(--green);border-color:#3E5C3B">Local Pack</span></td><td>3 fichas de Google Business Profile</td><td>"Automation Agency" con 131 reseñas y 5,0. Dos fichas de "Ai Automation Agency 360"</td></tr>
+          <tr><td class="n">10</td><td><span class="pill inf">Orgánico 6</span></td><td>novaeraagency.com</td><td>Página de servicio</td></tr>
+          <tr><td class="n">11</td><td><span class="pill inf">Orgánico 7</span></td><td>moxo.com</td><td>Listicle con precios: "the 10 best platforms and tools in 2026"</td></tr>
+          <tr><td class="n">12</td><td><span class="pill inf">Orgánico 8</span></td><td>ai.missioncoregroup.com</td><td>Página de solución</td></tr>
+          <tr><td class="n">13</td><td><span class="pill inf">Orgánico 9</span></td><td>ninetwothree.co/blog</td><td>Artículo de blog</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Qué cita el AI Overview en Estados Unidos</h4>
+    <ol>
+      <li><strong>jadasquad.com/blog/ai-automation-agencies</strong>, "AI Automation Agencies: 2026 Guide". Google toma de aquí la definición literal de la categoría</li>
+      <li><strong>cloudmotiv.ai/ai-automation-agency-pricing-usa</strong>, una página de precios del rubro. De aquí sale la tabla de tarifas del AI Overview</li>
+      <li><strong>brihaspatitech.com/ai/ai-automation-agency</strong>, página de servicio con una cifra en el título: "Cut Operational Costs by 70%"</li>
+      <li><strong>theaiautomationagency.ai</strong>, la home con un bloque de preguntas frecuentes</li>
+      <li><strong>reddit.com/r/agency</strong>, un hilo de 2024</li>
+      <li><strong>youtube.com</strong> x2</li>
+    </ol>
+
+    <div class="box">
+      <p class="box-head">El patrón que se repite en los dos mercados</p>
+      <p>En Argentina y en Estados Unidos, lo que Google cita en la posición 1 son siempre los mismos seis tipos de activo:</p>
+      <ol>
+        <li>Un <strong>artículo guía</strong> que define la categoría</li>
+        <li>Una <strong>página de precios</strong> del rubro, con cifras</li>
+        <li>Un <strong>listicle comparativo</strong> de proveedores</li>
+        <li>Un <strong>hilo de Reddit</strong></li>
+        <li>Un <strong>video de YouTube</strong></li>
+        <li>Un <strong>directorio</strong> o una ficha de Google Business Profile</li>
+      </ol>
+      <p>Morfeo Labs no tiene ninguno de los seis. Tiene un canal de YouTube sin trabajar y un precio publicado en una página que ningún motor está leyendo todavía.</p>
+    </div>
+
+    <h3>Resumen de intención, por cluster</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Clasificación de intención y qué tipo de página la satisface</b>Intención según el clasificador de DataForSEO Labs. La columna de activo es la recomendación.</caption>
+        <thead><tr><th>Cluster</th><th>Intención dominante</th><th>Dónde está el volumen</th><th>Activo que lo captura</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">Agencia y proveedor</td><td><span class="pill nav">Navegacional</span> + <span class="pill com">comercial</span></td><td>US: 4.400 al mes · LATAM: 150</td><td>Página de servicio por país, con precio y entregables</td></tr>
+          <tr><td class="kw">Consultoría y asesoría</td><td><span class="pill com">Comercial</span></td><td>US: 8.100 · LATAM: 40</td><td>Página de consultoría con alcance y tarifa por hora</td></tr>
+          <tr><td class="kw">Capacitación de equipos</td><td><span class="pill com">Comercial</span></td><td>US: 390 (CPC US$ 101) · LATAM: 50 (CPC US$ 27)</td><td>Página de programa corporativo con temario y duración</td></tr>
+          <tr><td class="kw">Agentes y automatización</td><td><span class="pill inf">Informacional</span></td><td>LATAM: 3.860 · US: 3.600</td><td>Guías técnicas y casos con flujos reales</td></tr>
+          <tr><td class="kw">Producción de contenido con IA</td><td><span class="pill inf">Informacional</span></td><td>LATAM: 32.100 (crear videos con ia)</td><td>Tutoriales y comparativas de herramientas</td></tr>
+          <tr><td class="kw">Formación y cursos</td><td><span class="pill inf">Informacional</span></td><td>LATAM: 11.020 (curso de ia)</td><td>Página de curso con programa, precio y formato</td></tr>
+          <tr><td class="kw">Herramientas con marca</td><td><span class="pill inf">Informacional</span> + <span class="pill nav">nav.</span></td><td>251.500 en los 6 mercados</td><td>Guías, alternativas y comparativas de n8n, HeyGen, ManyChat</td></tr>
+          <tr><td class="kw">Visibilidad en IA (AEO/GEO)</td><td><span class="pill inf">Informacional</span></td><td>US: más de 2.500 en preguntas, KD 10 a 39</td><td>Guías operativas. Línea de servicio nueva</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9 LLM VOLUMEN ============ -->
+<section id="llm-volumen">
+  <div class="wrap">
+    <span class="sec-num">09 · Volumen de consulta dentro de los LLM</span>
+    <h2>En inglés hay demanda medible dentro de ChatGPT. En español todavía no.</h2>
+    <p class="intro">DataForSEO modela el volumen de consultas dentro de los LLM. Es un dato valioso y conviene decir con claridad qué es: una estimación derivada de señales de búsqueda, no un conteo de las consultas reales de OpenAI. Lo tratamos como orden de magnitud y tendencia, no como cifra absoluta.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Volumen de consulta estimado en ChatGPT, Estados Unidos, inglés</b>DataForSEO AI Optimization Keyword Data, octubre de 2026 con serie de 12 meses. Dato modelado, no un conteo directo.</caption>
+        <thead><tr><th>Keyword</th><th>Vol. LLM oct 26</th><th>Vol. Google</th><th>LLM / Google</th><th>Nov 25</th><th>Crecimiento 12 m</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td class="kw">ai consulting</td><td class="n" style="color:var(--amber)">1.262</td><td class="n">8.100</td><td class="n">15,6%</td><td class="n">731</td><td class="n up">+73%</td></tr>
+          <tr><td class="kw">ai social media management</td><td class="n">106</td><td class="n">170</td><td class="n" style="color:var(--amber)">62,4%</td><td class="n">27</td><td class="n up">+293%</td></tr>
+          <tr><td class="kw">ai ugc</td><td class="n">91</td><td class="n">1.900</td><td class="n">4,8%</td><td class="n">35</td><td class="n up">+160%</td></tr>
+          <tr><td class="kw">ai avatar video</td><td class="n">78</td><td class="n">170</td><td class="n" style="color:var(--amber)">45,9%</td><td class="n">61</td><td class="n up">+28%</td></tr>
+          <tr><td class="kw">ai marketing agency</td><td class="n">60</td><td class="n">1.900</td><td class="n">3,2%</td><td class="n">31</td><td class="n up">+94%</td></tr>
+          <tr class="hi"><td class="kw">ai agents for business</td><td class="n">57</td><td class="n">3.600</td><td class="n">1,6%</td><td class="n">11</td><td class="n up">+418%</td></tr>
+          <tr><td class="kw">ai automation agency</td><td class="n">44</td><td class="n">4.400</td><td class="n">1,0%</td><td class="n">38</td><td class="n up">+16%</td></tr>
+          <tr><td class="kw">automate content creation</td><td class="n">9</td><td class="n">210</td><td class="n">4,3%</td><td class="n">12</td><td class="n dn">-25%</td></tr>
+          <tr><td class="kw">ai content automation</td><td class="n">3</td><td class="n">50</td><td class="n">6,0%</td><td class="n">2</td><td class="n up">+50%</td></tr>
+          <tr><td class="kw">ai training for employees</td><td class="n">3</td><td class="n">320</td><td class="n">0,9%</td><td class="n">3</td><td class="n">estable</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Volumen de consulta estimado en ChatGPT, español</b>DataForSEO AI Optimization Keyword Data, mismo método. "sin registro" significa que el modelo no detecta volumen suficiente para reportarlo.</caption>
+        <thead><tr><th>Keyword</th><th>Vol. LLM</th><th>Meses con registro</th><th>Vol. Google LATAM</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">agentes de ia</td><td class="n">1 a 2</td><td>7 de 12 (mar a sep 2026)</td><td class="n">3.860</td></tr>
+          <tr><td class="kw">ia para redes sociales</td><td class="n">1</td><td>3 de 12 (abr a jun 2026)</td><td class="n">110</td></tr>
+          <tr><td class="kw">clonar voz con ia</td><td class="n">1</td><td>3 de 12 (nov 25 a ene 26)</td><td class="n">1.210</td></tr>
+          <tr><td class="kw">agencia de ia</td><td class="n zero">sin registro</td><td>0 de 12</td><td class="n">380</td></tr>
+          <tr><td class="kw">automatizacion de contenido con ia</td><td class="n zero">sin registro</td><td>0 de 12</td><td class="n">n/d</td></tr>
+          <tr><td class="kw">crear contenido con ia</td><td class="n zero">sin registro</td><td>0 de 12</td><td class="n">100</td></tr>
+          <tr><td class="kw">capacitacion en ia para empresas</td><td class="n zero">sin registro</td><td>0 de 12</td><td class="n">50</td></tr>
+          <tr><td class="kw">consultoria en inteligencia artificial</td><td class="n zero">sin registro</td><td>0 de 12</td><td class="n">40</td></tr>
+          <tr><td class="kw">avatar con ia</td><td class="n zero">sin registro</td><td>0 de 12</td><td class="n">n/d</td></tr>
+          <tr><td class="kw">automatizar instagram</td><td class="n zero">sin registro</td><td>0 de 12</td><td class="n">50</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Tres conclusiones de esta medición</h3>
+    <p><strong>El LLM SEO es, hoy, un juego en inglés.</strong> "ai consulting" registra 1.262 consultas mensuales modeladas dentro de ChatGPT, mientras que ninguna keyword comercial en español llega a registrar volumen. Quien quiera capturar demanda de IA generativa este año tiene que publicar en inglés.</p>
+    <p><strong>El crecimiento es la señal, no el nivel.</strong> "ai agents for business" pasó de 11 a 57 consultas mensuales modeladas en doce meses, un 418%. "ai social media management", de 27 a 106, un 293%. En Google, la misma keyword "ai agents for business" creció 5.556% interanual. La categoría se está formando ahora, y eso favorece a quien publica primero.</p>
+    <p><strong>Cuando una keyword tiene poco volumen en Google pero mucha proporción en LLM, es una keyword de IA.</strong> "ai social media management" tiene 170 búsquedas en Google y 106 consultas modeladas en ChatGPT, un 62%. "ai avatar video", 46%. Esas dos consultas se están mudando a los chats. Optimizarlas para Google solo es dejar pasar la mitad de la demanda.</p>
+
+    <div class="box alert">
+      <p class="box-head">Advertencia metodológica, para no inflar expectativas</p>
+      <p>El "AI search volume" de DataForSEO se construye a partir de señales de búsqueda, principalmente del bloque People Also Ask, no de datos que OpenAI publique. Es útil para comparar keywords entre sí y para leer tendencias de doce meses, que es como lo usamos aquí. No conviene presentarlo como el número de personas que preguntaron algo en ChatGPT, ni usarlo para proyectar leads. Para eso sirve la medición de la sección siguiente, que son respuestas reales de los motores.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 PROMPTS ============ -->
+<section id="llm-prompts">
+  <div class="wrap">
+    <span class="sec-num">10 · Los prompts reales</span>
+    <h2>Qué escribe exactamente la gente, y en qué lo convierte el motor</h2>
+    <p class="intro">Hay dos capas que conviene no confundir. La primera es lo que la persona escribe. La segunda es lo que el motor busca internamente para responder, el llamado fan-out. Esa segunda capa es la que define qué página gana, y la capturamos directamente de las respuestas de Gemini y Claude.</p>
+
+    <h3>Capa 1: los prompts del comprador</h3>
+    <p>Estos son los nueve prompts con los que auditamos los cuatro motores. No son inventados: replican la forma en que alguien que busca el servicio de Morfeo formula el pedido, en los dos idiomas.</p>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Prompts auditados y motores consultados</b>Ejecutados el 17 de noviembre de 2026 contra ChatGPT con búsqueda web forzada, Gemini 3.1 Pro con grounding, Perplexity Sonar Pro y Claude Sonnet 5.5 con búsqueda web.</caption>
+        <thead><tr><th>Prompt</th><th>Idioma</th><th>Mercado</th><th>Motor</th><th>¿Aparece Morfeo?</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">¿Qué agencia me recomendás para automatizar la creación de contenido de mi marca con inteligencia artificial en Latinoamérica?</td><td>es</td><td>Argentina</td><td>ChatGPT</td><td style="color:var(--red);font-weight:700">No</td></tr>
+          <tr><td class="kw">Mejores agencias de inteligencia artificial para marketing en México</td><td>es</td><td>México</td><td>ChatGPT</td><td style="color:var(--red);font-weight:700">No</td></tr>
+          <tr><td class="kw">Best AI content automation agency for brands that want done-for-you social content</td><td>en</td><td>Estados Unidos</td><td>ChatGPT</td><td style="color:var(--red);font-weight:700">No</td></tr>
+          <tr><td class="kw">¿Qué agencia me recomendás para automatizar la creación de contenido de mi marca con IA en Latinoamérica? Dame nombres concretos con su web</td><td>es</td><td>LATAM</td><td>Gemini 3.1 Pro</td><td style="color:var(--red);font-weight:700">No</td></tr>
+          <tr><td class="kw">Who can build and run a done-for-you AI content system for my brand? Name specific agencies with websites and pricing</td><td>en</td><td>Global</td><td>Gemini 3.1 Pro</td><td style="color:var(--red);font-weight:700">No</td></tr>
+          <tr><td class="kw">¿Qué agencia o consultora me recomiendas para automatizar la creación de contenido de mi marca con IA en Latinoamérica? Quiero delegar reels, carruseles y publicaciones</td><td>es</td><td>LATAM</td><td>Perplexity Sonar Pro</td><td style="color:var(--red);font-weight:700">No</td></tr>
+          <tr><td class="kw">Who are the best AI content automation agencies that will build and run a done-for-you AI content system for my brand?</td><td>en</td><td>Global</td><td>Perplexity Sonar Pro</td><td style="color:var(--red);font-weight:700">No</td></tr>
+          <tr><td class="kw">¿Qué agencia me recomendás para automatizar la creación de contenido de mi marca con IA en Latinoamérica?</td><td>es</td><td>LATAM</td><td>Claude Sonnet 5.5</td><td style="color:var(--red);font-weight:700">No</td></tr>
+          <tr><td class="kw">agencia de inteligencia artificial (SERP + AI Overview)</td><td>es</td><td>Argentina</td><td>Google AI Overview</td><td style="color:var(--red);font-weight:700">No</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Capa 2: el fan-out, lo que el motor busca de verdad</h3>
+    <p>Esta es la parte accionable. Cuando se le pide una recomendación, el motor no busca el prompt del usuario. Reescribe la consulta y busca con sus propias palabras. Capturamos esas consultas internas, literales, de la respuesta de la API.</p>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Consultas internas que ejecutaron los motores</b>Campo fan_out_queries devuelto por la API de DataForSEO AI Optimization, 17 de noviembre de 2026. Son las consultas textuales que el modelo lanzó a su índice.</caption>
+        <thead><tr><th>Motor</th><th>Consulta interna literal</th><th>Qué página gana esta consulta</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td class="kw">Gemini, español</td><td><code>agencia de marketing "automatización" IA contenido latam</code></td><td>Una página de servicio con las cuatro palabras en el título y en el H1</td></tr>
+          <tr class="hi"><td class="kw">Gemini, español</td><td><code>"agencia" "inteligencia artificial" "creación de contenido" Latinoamérica OR Latam</code></td><td>Lo mismo, con "Latinoamérica" explícito en el texto</td></tr>
+          <tr class="hi"><td class="kw">Gemini, inglés</td><td><code>AI content marketing agency pricing</code></td><td>Una página de precios. Gemini citó tres páginas /pricing en su respuesta</td></tr>
+          <tr class="hi"><td class="kw">Gemini, inglés</td><td><code>"done for you" AI content agency OR system</code></td><td>Una página que use la frase "done for you" de forma literal</td></tr>
+          <tr class="hi"><td class="kw">Claude, español</td><td><code>agencias automatización contenido con IA Latinoamérica</code></td><td>Un listado o comparativa regional</td></tr>
+          <tr class="hi"><td class="kw">Claude, español</td><td><code>mejores agencias marketing con inteligencia artificial LATAM 2026</code></td><td>Un artículo con "mejores", "LATAM" y el año en el título</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box win">
+      <p class="box-head">Esto es lo más directamente aplicable de todo el informe</p>
+      <p>Las seis consultas de arriba son la especificación exacta del contenido que hay que escribir. No son una interpretación nuestra: son el texto literal que los motores lanzaron a su índice. Traducido a páginas:</p>
+      <ol>
+        <li>Una página de servicio titulada con las palabras <strong>agencia, inteligencia artificial, creación de contenido y Latinoamérica</strong>, todas presentes</li>
+        <li>Una página <strong>/precios</strong> en español y una <strong>/pricing</strong> en inglés, con cifras, porque Gemini busca literalmente "pricing" y cita páginas de precios</li>
+        <li>Una página que use la frase <strong>"done for you"</strong> tal cual, que en español equivale a "lo hacemos por ti" pero que en inglés hay que escribir con esas tres palabras exactas</li>
+        <li>Un artículo titulado <strong>"Mejores agencias de marketing con inteligencia artificial en LATAM 2026"</strong>, porque esa consulta la ejecuta Claude de forma literal y hoy la responden nichoseo.com y solumize.com</li>
+      </ol>
+    </div>
+
+    <h3>Preguntas de seguimiento que los motores plantean, y lo que revelan del comprador</h3>
+    <p>Las cuatro respuestas largas terminaron pidiendo datos al usuario. Esas preguntas son el formulario de calificación que el motor considera necesario, y coinciden casi palabra por palabra con el formulario que Morfeo ya tiene en su sitio.</p>
+    <ul>
+      <li><strong>ChatGPT, Argentina:</strong> tipo de marca (comercial, personal, e-commerce, agencia, varias), objetivo, volumen de contenido (12 a 30, 30 a 60, 60 a 150, más de 150 piezas al mes) y presupuesto (menos de US$ 500, US$ 500 a 1.500, US$ 1.500 a 3.000, más de US$ 3.000)</li>
+      <li><strong>ChatGPT, México:</strong> necesidad, presupuesto en pesos (menos de MXN 20.000, 20.000 a 50.000, 50.000 a 100.000, más de 100.000) y ubicación</li>
+      <li><strong>ChatGPT, Estados Unidos:</strong> si es para la marca propia, para varias marcas de clientes, o en modalidad white label para otra agencia</li>
+    </ul>
+    <p>Los tramos de presupuesto que ChatGPT propone en Argentina son prácticamente los mismos que el formulario de morfeolabs.com, y los US$ 1.500 de NORA caen justo en el tramo medio alto. El encaje de oferta es correcto. Lo que falta es que el motor sepa que Morfeo existe.</p>
+  </div>
+</section>
+
+<!-- ============ 11 A QUIEN MENCIONA ============ -->
+<section id="llm-menciona">
+  <div class="wrap">
+    <span class="sec-num">11 · A quién menciona la IA</span>
+    <h2>Las 38 empresas que los motores nombran, y Morfeo no está en ninguna lista</h2>
+    <p class="intro">Esta es la respuesta directa a la pregunta de quién está capturando la demanda. Son los nombres textuales que cada motor devolvió, en el orden en que los devolvió.</p>
+
+    <div class="engines">
+      <div class="engine">
+        <h5>ChatGPT <em>es · Argentina</em></h5>
+        <p class="q">"¿Qué agencia me recomendás para automatizar la creación de contenido de mi marca con IA en Latinoamérica?"</p>
+        <ol>
+          <li><b>NoMa Studio AI</b> · nomastudio.ai · Argentina. Marcada como "mi primera recomendación"</li>
+          <li><b>Somos Camaleón</b> · somoscamaleon.com · México, 15 países</li>
+          <li><b>VŌRA Agency</b> · vora-agency.com · Colombia. "12 a 24 piezas mensuales con IA"</li>
+          <li><b>InPulse Digital</b> · inpulsedigital.com · LATAM y Estados Unidos</li>
+        </ol>
+        <p class="verdict">Morfeo Labs: 0 menciones</p>
+      </div>
+
+      <div class="engine">
+        <h5>ChatGPT <em>es · México</em></h5>
+        <p class="q">"Mejores agencias de inteligencia artificial para marketing en México"</p>
+        <ol>
+          <li><b>Keenfolks</b> · Polanco, CDMX</li>
+          <li><b>IDS Agency</b> · Monterrey</li>
+          <li><b>Seedup</b> · Chihuahua, CDMX, Monterrey</li>
+          <li><b>Birth Group</b>, <b>Media Source</b>, <b>ABC Digital</b></li>
+          <li>Y en tabla: <b>SEOTopSecret</b>, <b>Caragu IA</b>, <b>Kernel Digital</b>, <b>CE Digital</b>, <b>Licorne</b></li>
+          <li>Con ficha de Google y reseñas: <b>Somos Camaleón</b> (5,0 · 34), <b>CE Digital</b> (4,9 · 85), <b>Caragu</b> (4,9 · 33), <b>Puente Digital</b> (4,9 · 277)</li>
+        </ol>
+        <p class="verdict">Morfeo Labs: 0 menciones · 13 competidores nombrados</p>
+      </div>
+
+      <div class="engine">
+        <h5>ChatGPT <em>en · Estados Unidos</em></h5>
+        <p class="q">"Best AI content automation agency for brands that want done-for-you social content"</p>
+        <ol>
+          <li><b>newtwelve</b> · newtwelve.com · Miami y Los Ángeles. "Best overall match"</li>
+          <li><b>SCROLLR</b> · scrollr.ai · "Best for AI-generated content at scale"</li>
+          <li><b>Assurgit</b> · assurgit.com · desde US$ 397 al mes, 5 videos por semana</li>
+          <li><b>gocomo</b> · gocomo.io · Berlín</li>
+        </ol>
+        <p class="verdict">Morfeo Labs: 0 menciones</p>
+      </div>
+
+      <div class="engine">
+        <h5>Gemini 3.1 Pro <em>es · LATAM</em></h5>
+        <p class="q">"¿Qué agencia me recomendás para automatizar la creación de contenido de mi marca con IA en Latinoamérica?"</p>
+        <ol>
+          <li><b>Aurion</b> · aurionlatam.com</li>
+          <li><b>The AI Gen Studio</b> · theaigenstudio.com · B2B</li>
+          <li><b>Futuraria</b> · futuraria.com · Perú, atiende LATAM</li>
+          <li><b>HEAT IA</b> · heatlatam.com · LATAM y Estados Unidos</li>
+          <li><b>Agencia AMD / Agencia GEO</b> · agenciageo.ai · Colombia. Vende visibilidad en ChatGPT, Gemini y Perplexity</li>
+        </ol>
+        <p class="verdict">Morfeo Labs: 0 menciones</p>
+      </div>
+
+      <div class="engine">
+        <h5>Gemini 3.1 Pro <em>en · Global</em></h5>
+        <p class="q">"Who can build and run a done-for-you AI content system for my brand? Name agencies with websites and pricing"</p>
+        <ol>
+          <li><b>The Agency</b> · theagency.io · US$ 2.000, 5.000 y 10.000 al mes</li>
+          <li><b>AIMarketingAgency</b> · aimarketingagency.ai · US$ 1.500, 2.500 y 6.000 más US$ 1.750 de alta</li>
+          <li><b>Somos Media</b> · EUR 2.000 a 25.000 por construcción</li>
+          <li><b>Venture Media</b> · venturemedia.io · fee de construcción más retainer</li>
+        </ol>
+        <p class="verdict">Morfeo Labs: 0 menciones · los 4 publican precio</p>
+      </div>
+
+      <div class="engine">
+        <h5>Perplexity Sonar Pro <em>es · LATAM</em></h5>
+        <p class="q">"¿Qué agencia o consultora me recomiendas para delegar reels, carruseles y publicaciones con IA en Latinoamérica?"</p>
+        <ol>
+          <li><b>Claura</b> · claura-ai.com · "la recomendación principal". Reels, carruseles, historias, avatar con voz de la marca, LATAM, España y Estados Unidos</li>
+          <li><b>ConTesta</b> · agenciacontesta.com · Argentina</li>
+          <li><b>Increnta</b> · increnta.com</li>
+          <li><b>Julius Connected 2 Grow</b> · julius.com</li>
+          <li><b>5entidos</b> · 5entidos.com</li>
+        </ol>
+        <p class="verdict">Morfeo Labs: 0 menciones · Claura vende lo mismo que NORA</p>
+      </div>
+
+      <div class="engine">
+        <h5>Perplexity Sonar Pro <em>en · Global</em></h5>
+        <p class="q">"Best AI content automation agencies that will build and run a done-for-you AI content system"</p>
+        <ol>
+          <li><b>Winston Digital Marketing</b> · desde US$ 1.500 al mes</li>
+          <li><b>busyless</b> · busyless.space · US$ 2.500 de auditoría, US$ 5.000 al mes</li>
+          <li><b>RZLT</b>, <b>Single Grain</b>, <b>TripleDart</b>, <b>Scalerrs</b></li>
+          <li><b>NoGood</b> (más de US$ 20.000 al mes), <b>Omniscient Digital</b>, <b>Fractl</b>, <b>Xponent21</b>, <b>Superside</b>, <b>WebFX</b></li>
+        </ol>
+        <p class="verdict">Morfeo Labs: 0 menciones · 12 competidores con precio público</p>
+      </div>
+
+      <div class="engine">
+        <h5>Claude Sonnet 5.5 <em>es · LATAM</em></h5>
+        <p class="q">"¿Qué agencia me recomendás para automatizar la creación de contenido de mi marca con IA en Latinoamérica?"</p>
+        <ol>
+          <li><b>Trendeo</b>, <b>Seedup</b>, <b>Solumize</b>, <b>Agencia Digital AMD</b>, <b>Boomit</b></li>
+          <li><b>Automaxia</b> · automaxia.com · <b>Agencia IA</b> · agenciaia.io · <b>AURION</b> · aurionlatam.com</li>
+          <li>Pymes: <b>AIMA</b> (Chile), <b>Funk IA</b> (Chile), <b>e-Qapla</b> (Perú), <b>Devmark</b> (Perú)</li>
+        </ol>
+        <p class="verdict">Morfeo Labs: 0 menciones · 12 competidores nombrados</p>
+      </div>
+    </div>
+
+    <h3>Los competidores que aparecen en más de un motor</h3>
+    <p>Aparecer una vez puede ser suerte. Aparecer en varios motores a la vez es un patrón, y señala quién hizo el trabajo.</p>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Competidores con presencia multimotor</b>Recuento sobre las 8 respuestas de LLM auditadas.</caption>
+        <thead><tr><th>Competidor</th><th>País base</th><th>Motores que lo nombran</th><th>Qué hizo para lograrlo</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td class="kw">Somos Camaleón</td><td>México</td><td>ChatGPT AR, ChatGPT MX (x2, texto y ficha de Google), y Gemini lo usa como <strong>fuente</strong></td><td>Escribió el artículo <code>/blog/mejor-agencia-inteligencia-artificial-mexico-latam</code> y tiene ficha de Google con 34 reseñas y 5,0</td></tr>
+          <tr class="hi"><td class="kw">Seedup</td><td>México</td><td>ChatGPT MX, Claude · y es <strong>fuente</strong> de ChatGPT MX</td><td>Publicó dos comparativas: <code>/comparativa-agencias-marketing-digital-mexico</code> y <code>/agencias-marketing-ia-mexico</code></td></tr>
+          <tr class="hi"><td class="kw">AURION</td><td>LATAM</td><td>Gemini ES, Claude ES</td><td>Páginas separadas por servicio: <code>/marketing-digital</code> e <code>/inteligencia-artificial</code>, con antigüedad declarada desde 2019</td></tr>
+          <tr><td class="kw">Agencia AMD / GEO</td><td>Colombia</td><td>Gemini ES, Claude ES</td><td>Dominio exacto <code>agenciageo.ai</code> y venta explícita de visibilidad en ChatGPT, Gemini y Perplexity</td></tr>
+          <tr><td class="kw">CE Digital, Caragu</td><td>México</td><td>ChatGPT MX en texto y en ficha de Google</td><td>Fichas de Google Business Profile con 85 y 33 reseñas, categoría declarada</td></tr>
+          <tr><td class="kw">Solumize</td><td>México</td><td>Claude ES · y es <strong>fuente</strong> de su propia mención</td><td>Escribió <code>/blog/mejores-agencias-ia-marketing-mexico-latam-2026</code> y aparece en su propio ranking</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box alert">
+      <p class="box-head">El dato que resume la sección</p>
+      <p>Tres de los seis competidores multimotor se metieron en las respuestas <strong>escribiendo ellos mismos el artículo comparativo de su categoría</strong>, y después apareciendo en él. Somos Camaleón, Seedup y Solumize hicieron exactamente eso. Gemini cita el blog de Somos Camaleón como fuente y, en la misma respuesta, recomienda a las agencias que ese blog menciona. No es un truco: es que el motor necesita una fuente que compare, y si nadie la escribió, la escribe el competidor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 A QUIEN CITA ============ -->
+<section id="llm-cita">
+  <div class="wrap">
+    <span class="sec-num">12 · A quién cita la IA</span>
+    <h2>Los 44 dominios fuente, por nombre, que hay que conquistar</h2>
+    <p class="intro">Mencionar y citar son dos cosas distintas y conviene separarlas. El motor menciona a una empresa. Cita un dominio como evidencia. Para entrar en las menciones hay que estar en los dominios citados. Esta es la lista completa que registramos, con el motor que la usó.</p>
+
+    <h3>Fuentes citadas en español</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Dominios que los motores citaron al responder en español</b>Capturado de los campos sources, annotations y references de cada respuesta, 17 de noviembre de 2026.</caption>
+        <thead><tr><th>Dominio y página</th><th>Tipo de activo</th><th>Motor que lo cita</th><th>¿Accesible para Morfeo?</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td class="kw">somoscamaleon.com/blog/mejor-agencia-inteligencia-artificial-mexico-latam</td><td>Artículo comparativo propio</td><td>Gemini</td><td style="color:var(--green)">Replicable. Es el modelo a copiar</td></tr>
+          <tr class="hi"><td class="kw">seedup.mx/comparativa-agencias-marketing-digital-mexico</td><td>Comparativa propia</td><td>ChatGPT MX</td><td style="color:var(--green)">Replicable</td></tr>
+          <tr class="hi"><td class="kw">seedup.mx/agencias-marketing-ia-mexico</td><td>Guía propia</td><td>ChatGPT MX</td><td style="color:var(--green)">Replicable</td></tr>
+          <tr class="hi"><td class="kw">solumize.com/blog/mejores-agencias-ia-marketing-mexico-latam-2026</td><td>Ranking propio</td><td>Claude</td><td style="color:var(--green)">Replicable</td></tr>
+          <tr><td class="kw">nichoseo.com/agencias-de-inteligencia-artificial-en-latam</td><td>Listicle de tercero</td><td>Claude</td><td style="color:var(--amber)">Gestión: pedir inclusión</td></tr>
+          <tr><td class="kw">nublit.com/blog/mejores-agencias-de-generacion-de-contenido-con-ia</td><td>Listicle de tercero, posiblemente patrocinado</td><td>Claude</td><td style="color:var(--amber)">Gestión o pago</td></tr>
+          <tr><td class="kw">andresospina.co/agencias/ia</td><td>Directorio, 79 agencias verificadas en 6 países</td><td>Claude</td><td style="color:var(--green)">Alta directa</td></tr>
+          <tr><td class="kw">proyectoia.com/categoria/marketing-y-contenido</td><td>Directorio LATAM</td><td>Claude</td><td style="color:var(--green)">Alta directa</td></tr>
+          <tr><td class="kw">agentes.ai</td><td>Directorio: "Agencia de IA en Buenos Aires, compara agencias verificadas"</td><td>Google AI Overview AR</td><td style="color:var(--green)">Alta directa, y es de Buenos Aires</td></tr>
+          <tr><td class="kw">besolution.ar</td><td>Artículo de panorama: "Agencia IA Argentina, servicios y empresas líderes"</td><td>Google AI Overview AR</td><td style="color:var(--amber)">Gestión: pedir inclusión</td></tr>
+          <tr><td class="kw">theautomationpartner.com/es/agencia-de-automatizacion-con-ia</td><td>Guía de categoría</td><td>Gemini</td><td style="color:var(--amber)">Gestión</td></tr>
+          <tr><td class="kw">elranking.mx (2 artículos de agosto 2026)</td><td>Ranking editorial</td><td>ChatGPT MX</td><td style="color:var(--amber)">Prensa o gestión</td></tr>
+          <tr><td class="kw">necta.me/agencias/s/social-media-management</td><td>Marketplace de agencias México</td><td>ChatGPT MX</td><td style="color:var(--green)">Alta directa</td></tr>
+          <tr><td class="kw">sortlist.co.uk</td><td>Marketplace global de agencias</td><td>Perplexity</td><td style="color:var(--green)">Alta directa</td></tr>
+          <tr><td class="kw">ecosystem.hubspot.com (Colombia, soluciones de contenido)</td><td>Directorio de partners</td><td>Perplexity</td><td style="color:var(--green)">Requiere ser partner</td></tr>
+          <tr><td class="kw">reviewmember.com</td><td>Sitio de reseñas</td><td>Perplexity</td><td style="color:var(--amber)">Gestión</td></tr>
+          <tr><td class="kw">kersagency.es/blog/como-crear-agencia-ia</td><td>Artículo de blog español</td><td>Google AI Overview AR</td><td style="color:var(--paper-mute)">Competencia de contenido</td></tr>
+          <tr><td class="kw">reddit.com/r/NegociosArgentina</td><td>Hilo de foro</td><td>Google AI Overview AR</td><td style="color:var(--green)">Participación genuina</td></tr>
+          <tr><td class="kw">youtube.com (2 videos)</td><td>Video tutorial</td><td>Google AI Overview AR</td><td style="color:var(--green)">Morfeo ya tiene canal</td></tr>
+          <tr><td class="kw">claura-ai.com, aurionlatam.com, futuraria.com, heatlatam.com, theaigenstudio.com, agenciageo.ai, automaxia.com, agenciaia.io</td><td>Webs propias de competidores</td><td>Gemini, Perplexity, Claude</td><td style="color:var(--green)">Es lo que Morfeo debe ser</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Fuentes citadas en inglés</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Dominios que los motores citaron al responder en inglés</b>Mismo método de captura.</caption>
+        <thead><tr><th>Dominio y página</th><th>Tipo de activo</th><th>Motor</th><th>Nota</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td class="kw">jadasquad.com/blog/ai-automation-agencies</td><td>Guía de categoría, "2026 Guide"</td><td>Google AI Overview US</td><td>Google toma de aquí la definición literal del rubro</td></tr>
+          <tr class="hi"><td class="kw">cloudmotiv.ai/ai-automation-agency-pricing-usa</td><td>Página de precios del rubro</td><td>Google AI Overview US</td><td>De aquí sale la tabla de tarifas del AI Overview</td></tr>
+          <tr class="hi"><td class="kw">theagency.io/pricing</td><td>Página de precios propia</td><td>Gemini EN</td><td>Gemini cita la URL /pricing directamente</td></tr>
+          <tr class="hi"><td class="kw">aimarketingagency.ai/pricing</td><td>Página de precios propia</td><td>Gemini EN</td><td>Idem</td></tr>
+          <tr class="hi"><td class="kw">venturemedia.io/done-for-you-content-workflow-social-media-growth</td><td>Página de servicio con slug descriptivo</td><td>Gemini EN</td><td>El slug contiene la consulta literal</td></tr>
+          <tr><td class="kw">digitalmarketingsupermarket.com/services/ai-social-media-agencies</td><td>Shortlist de terceros, "Worldwide Shortlist 2026", publicado 5 nov 2026</td><td>ChatGPT US</td><td>Actualizado hace días. Muy activo</td></tr>
+          <tr><td class="kw">assurgit.com/best/done-for-you-social-media-content-services</td><td>Comparativa propia donde la agencia se incluye</td><td>ChatGPT US</td><td>ChatGPT advierte que el precio viene de su propia página</td></tr>
+          <tr><td class="kw">digitalagencynetwork.com/ai-agency-pricing</td><td>Benchmark de precios</td><td>Gemini EN</td><td>Fuente de referencia del rubro</td></tr>
+          <tr><td class="kw">cipionmarketing.com/blog/ai-marketing-agency-cost-2026</td><td>Artículo de costos</td><td>Gemini EN</td><td>Formato "cost + año"</td></tr>
+          <tr><td class="kw">columnfivemedia.com, upbusinessco.com</td><td>Artículos de precios de agencia</td><td>Gemini EN</td><td></td></tr>
+          <tr><td class="kw">brihaspatitech.com/ai/ai-automation-agency</td><td>Página de servicio con cifra en el título</td><td>Google AI Overview US</td><td>"Cut Operational Costs by 70%"</td></tr>
+          <tr><td class="kw">theaiautomationagency.ai</td><td>Home con bloque de preguntas frecuentes</td><td>Google AI Overview US</td><td>El FAQ es lo que se cita</td></tr>
+          <tr><td class="kw">pixelcrayons.com/rankings/best-ai-automation-agencies</td><td>Ranking de terceros</td><td>Perplexity EN</td><td>Gestión: pedir inclusión</td></tr>
+          <tr><td class="kw">aiagencyradar.com/best/ai-marketing-agencies</td><td>Directorio especializado</td><td>Perplexity EN</td><td>Alta directa</td></tr>
+          <tr><td class="kw">storypros.io, shila.so/blog/ai-marketing-agency, startupcookie.com, scalerrs.co/blog, busyless.space/blog, rankglobal.ai, 50pros.com</td><td>Listicles y directorios</td><td>Perplexity EN</td><td>7 objetivos concretos de gestión</td></tr>
+          <tr><td class="kw">moxo.com, amenitytech.ai, agent.nexus, ninetwothree.co</td><td>Listicles que rankean en el top 10 orgánico</td><td>SERP US</td><td>Gestión de inclusión</td></tr>
+          <tr><td class="kw">reddit.com/r/agency, youtube.com (2)</td><td>Foro y video</td><td>Google AI Overview US</td><td>Participación genuina</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Qué cita ChatGPT a nivel de categoría</h3>
+    <p>Además de las respuestas individuales, consultamos el agregado de menciones de ChatGPT para la categoría completa <code>ai automation agency</code>. Son 152 menciones sobre un volumen de IA modelado de 17.184. El resultado explica por qué es tan difícil para una agencia chica entrar.</p>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Dominios más citados por ChatGPT en la categoría "ai automation agency"</b>DataForSEO LLM Mentions, plataforma chat_gpt, scope sources, Estados Unidos, 17 de noviembre de 2026.</caption>
+        <thead><tr><th>Dominio</th><th>Menciones</th><th>Volumen IA asociado</th><th>Qué es</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">uschamber.com</td><td class="n">27</td><td class="n">5.416</td><td>Cámara de Comercio de Estados Unidos</td></tr>
+          <tr><td class="kw">shopify.com</td><td class="n">24</td><td class="n">1.743</td><td>Blog de plataforma</td></tr>
+          <tr><td class="kw">bls.gov</td><td class="n">16</td><td class="n">4.861</td><td>Oficina de Estadísticas Laborales</td></tr>
+          <tr><td class="kw">mckinsey.com</td><td class="n">13</td><td class="n">4.268</td><td>Consultora</td></tr>
+          <tr><td class="kw">xero.com</td><td class="n">13</td><td class="n">301</td><td>Blog de software</td></tr>
+          <tr><td class="kw">upwork.com</td><td class="n">12</td><td class="n">1.425</td><td>Marketplace de freelancers</td></tr>
+          <tr><td class="kw">businessinsider.com</td><td class="n">10</td><td class="n">360</td><td>Prensa</td></tr>
+          <tr><td class="kw">reddit.com</td><td class="n">10</td><td class="n">79</td><td>Foro</td></tr>
+          <tr><td class="kw">sba.gov</td><td class="n">9</td><td class="n">972</td><td>Small Business Administration</td></tr>
+          <tr><td class="kw">census.gov</td><td class="n">9</td><td class="n">223</td><td>Censo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Y cuando ChatGPT nombra marcas en esta categoría, no nombra agencias. Nombra herramientas: <strong>n8n</strong> con 5 menciones, <strong>Voiceflow</strong> con 3, <strong>Make</strong> con 3, <strong>Zapier</strong> con 2. Por categoría de entidad: software 8, negocio local 5, organización 4, empresa 2.</p>
+
+    <div class="box">
+      <p class="box-head">Dos lecturas prácticas de este agregado</p>
+      <p><strong>Primera.</strong> A nivel de categoría abstracta, ChatGPT se apoya en instituciones y prensa, donde una agencia chica no entra. Por eso no conviene perseguir la consulta genérica. Conviene perseguir la consulta específica, del tipo "agencia para automatizar contenido de mi marca en LATAM", donde el motor sí cita webs de agencias, porque no tiene una fuente institucional que responda eso.</p>
+      <p><strong>Segunda.</strong> La categoría "negocio local" con 5 menciones, y las fichas de Google Business Profile que aparecieron tanto en el SERP de Estados Unidos como en la respuesta de ChatGPT en México, señalan algo concreto: <strong>Morfeo Labs no tiene ficha de Google Business Profile</strong>. Las cuatro agencias que ChatGPT mostró en México aparecen con dirección, teléfono, categoría y reseñas. Es el activo más barato y más rápido de la lista, y hoy está sin hacer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 MECANISMO ============ -->
+<section id="mecanismo">
+  <div class="wrap">
+    <span class="sec-num">13 · El mecanismo</span>
+    <h2>Seis tipos de activo producen citación. Morfeo tiene medio.</h2>
+    <p class="intro">Si se cruzan las 44 fuentes citadas con los dos SERP rastreados, el patrón se reduce a seis formatos. Esta tabla es el diagnóstico completo y la lista de tareas.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Los seis activos que generan citación en IA, y el estado de Morfeo Labs en cada uno</b>Síntesis de las 9 respuestas de IA y 2 SERP auditados.</caption>
+        <thead><tr><th>Activo</th><th>Evidencia de que funciona</th><th>Morfeo hoy</th><th>Esfuerzo</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td class="kw">1. Página de precios con cifras</td><td>Gemini cita <code>theagency.io/pricing</code> y <code>aimarketingagency.ai/pricing</code>. El AI Overview de Google toma su tabla de tarifas de <code>cloudmotiv.ai/ai-automation-agency-pricing-usa</code>. Gemini busca literalmente "AI content marketing agency pricing"</td><td style="color:var(--amber)">Parcial. US$ 1.500 están en /nora, pero no hay página de precios ni en el home ni en inglés</td><td style="color:var(--green)">Bajo. 1 a 2 días</td></tr>
+          <tr class="hi"><td class="kw">2. Artículo comparativo de la propia categoría</td><td>Somos Camaleón, Seedup y Solumize escribieron el ranking de su categoría y los motores lo citan como fuente. Claude busca literalmente "mejores agencias marketing con inteligencia artificial LATAM 2026"</td><td style="color:var(--red)">No existe. Sin blog</td><td style="color:var(--amber)">Medio. El de mayor retorno</td></tr>
+          <tr class="hi"><td class="kw">3. Página de servicio con país en el título y en la URL</td><td><code>beyond.agency/ai-agency/new-york</code> rankea en el top 6 en Estados Unidos. Gemini busca "...Latinoamérica OR Latam". AURION tiene páginas separadas por servicio</td><td style="color:var(--red)">No existe. Una sola página, sin país</td><td style="color:var(--amber)">Medio</td></tr>
+          <tr class="hi"><td class="kw">4. Ficha de Google Business Profile con reseñas</td><td>ChatGPT en México devolvió 4 fichas con dirección, teléfono y reseñas: Somos Camaleón 5,0 con 34, Puente Digital 4,9 con 277, CE Digital 4,9 con 85, Caragu 4,9 con 33. El SERP de Estados Unidos muestra un local pack de 3 fichas</td><td style="color:var(--red)">No existe</td><td style="color:var(--green)">Bajo. Es la tarea más barata del plan</td></tr>
+          <tr><td class="kw">5. Alta en directorios que los motores leen</td><td>andresospina.co/agencias/ia (79 agencias), proyectoia.com, agentes.ai, necta.me, sortlist, aiagencyradar.com, 50pros.com, rankglobal.ai. Los cuatro motores los citan</td><td style="color:var(--red)">En ninguno</td><td style="color:var(--green)">Bajo. 8 a 12 altas</td></tr>
+          <tr><td class="kw">6. YouTube y Reddit</td><td>2 de 7 fuentes del AI Overview argentino son YouTube. 2 de 7 del estadounidense también. Reddit aparece en los dos</td><td style="color:var(--amber)">Canal @MorfeoLabs existe pero no está optimizado para búsqueda</td><td style="color:var(--amber)">Medio. El canal ya está</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Por qué el formato importa tanto como el contenido</h3>
+    <p>Hay un detalle en la respuesta de ChatGPT en Estados Unidos que conviene leer con atención. Al describir a Assurgit, escribió: <em>"Published starting price: $397/month. AI-assisted research and scripting. Five short-form videos per week. Instagram, TikTok, LinkedIn and YouTube. Publishing handled."</em> Y agregó una advertencia: <em>"The pricing and service claims come from its own comparison page, so verify them directly."</em></p>
+    <p>El motor citó la cifra, enumeró el entregable semanal, listó las plataformas, y dijo de dónde lo sacó. Eso significa que lo que se publica en un formato verificable, con número, unidad y plazo, es lo que el motor puede repetir. Una frase como "automatizamos tu contenido" no se puede citar. "30 publicaciones al mes por US$ 1.500, publicando en 7 días" sí.</p>
+    <p>Morfeo ya tiene esa frase. Está en /nora. Lo que falta es ponerla donde los motores la encuentren, repetirla en inglés, y sumarle el país.</p>
+
+    <div class="box win">
+      <p class="box-head">La ventaja de partida que Morfeo sí tiene</p>
+      <ul>
+        <li><strong>Precio público y entregable medible.</strong> US$ 1.500 por 30 publicaciones al mes. Es el formato exacto que los motores citan, y la mayoría de los competidores en español no lo publica.</li>
+        <li><strong>Audiencia social real.</strong> El sitio declara 9,7 millones de vistas, 214 publicaciones y más de 94.000 seguidores en 30 días, TikTok de 44 mil a 66 mil en dos meses, Instagram con 28 mil. Para una categoría donde el comprador duda de todo, eso es prueba social verificable.</li>
+        <li><strong>Trabajos con marcas reconocibles.</strong> Franuí con la campaña Franatics, Villavicencio y Citric aparecen como recreaciones de producto. Conviene aclarar el alcance de cada uno, y si son casos de cliente, convertirlos en páginas de caso con cifras.</li>
+        <li><strong>Canal de YouTube propio.</strong> Dos de siete fuentes del AI Overview argentino son videos de YouTube. El canal existe, la competencia ahí es débil.</li>
+        <li><strong>Base técnica impecable.</strong> 8,9 KB, 568 ms, CLS cero, en Vercel. Publicar 50 páginas no va a degradar nada.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 PLAN ============ -->
+<section id="plan">
+  <div class="wrap">
+    <span class="sec-num">14 · El plan</span>
+    <h2>Qué necesita Morfeo Labs, en orden de retorno</h2>
+    <p class="intro">Las cuatro fases están ordenadas por relación entre esfuerzo y resultado, no por lógica cronológica estricta. Las fases 0 y 1 se pueden hacer en paralelo.</p>
+
+    <div class="phase">
+      <div class="phase-top">
+        <h3>Fase 0 · Existir para una máquina</h3>
+        <span>2 a 3 semanas · prerrequisito de todo lo demás</span>
+      </div>
+      <div class="phase-body">
+        <ol>
+          <li><strong>Reescribir el título y el H1 del home.</strong> Hoy: "Paul de Lavallaz · Morfeo Labs" y "Hola, soy Paul." Hace falta que el título contenga el sustantivo del servicio y la región. Sugerencia en español: <em>"Morfeo Labs · Sistemas de contenido con IA para marcas en Latinoamérica"</em>. La narrativa personal no se toca, se mueve a una sección más abajo, porque es buena y convierte a quien llega desde las redes.</li>
+          <li><strong>Crear seis páginas de servicio, una por línea de negocio.</strong> <code>/automatizacion-de-contenido-con-ia</code>, <code>/agentes-de-ia</code>, <code>/capacitacion-ia-empresas</code>, <code>/consultoria-ia</code>, <code>/sistemas-de-ia-a-medida</code>, <code>/chatbots-whatsapp-instagram</code>. Cada una con el sustantivo en el título, el H1 y la URL, y cada una con un entregable numerado, un plazo y un rango de precio.</li>
+          <li><strong>Publicar una página de precios en el dominio principal.</strong> <code>/precios</code> en español y <code>/pricing</code> en inglés. Gemini busca "pricing" de forma literal y cita las URL que la contienen. Los US$ 1.500 de NORA van ahí, con los tramos de los otros servicios.</li>
+          <li><strong>Sumar datos estructurados.</strong> JSON-LD de <code>Organization</code> con el nombre, la ubicación de Buenos Aires, los perfiles sociales y los fundadores, más <code>Service</code> en cada página de servicio con <code>areaServed</code> y <code>offers</code>, y <code>FAQPage</code> en las preguntas frecuentes de NORA. El AI Overview estadounidense cita el bloque de preguntas frecuentes de theaiautomationagency.ai, no su página de servicio.</li>
+          <li><strong>Poner texto alternativo en las 41 imágenes.</strong> El sitio es casi todo visual y hoy ninguna imagen tiene alt ni title.</li>
+          <li><strong>Resolver la entidad repartida.</strong> Decidir si la-fabrica.ai y sistemanora.com siguen separados o se consolidan bajo morfeolabs.com. La recomendación es consolidar al menos los legales y el blog, para que la autoridad se acumule en un solo dominio. Si se mantienen separados, hay que enlazarlos de forma consistente en las dos direcciones y declarar la relación en el <code>sameAs</code> del JSON-LD.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-top">
+        <h3>Fase 1 · Activos de citación en IA</h3>
+        <span>3 a 5 semanas · el mayor retorno del plan</span>
+      </div>
+      <div class="phase-body">
+        <ol>
+          <li><strong>Abrir y completar la ficha de Google Business Profile.</strong> Categoría primaria "Agencia de marketing", Buenos Aires, servicios cargados uno por uno, fotos y las primeras reseñas de clientes reales. Esto es lo más barato de toda la lista y es la única razón estructural por la que ChatGPT mostró cuatro competidores mexicanos con dirección y reseñas y no mostró a Morfeo.</li>
+          <li><strong>Escribir el artículo comparativo de la categoría.</strong> Título sugerido: <em>"Mejores agencias de automatización de contenido con IA en Latinoamérica 2026"</em>. Es la consulta literal que Claude ejecuta. El artículo tiene que comparar de verdad, incluir a los competidores por nombre, con sus precios públicos y su alcance, y ubicar a Morfeo con su propio precio y entregable. Es el formato con el que Somos Camaleón, Seedup y Solumize entraron en tres motores distintos.</li>
+          <li><strong>Escribir el artículo de precios del rubro.</strong> <em>"Cuánto cuesta automatizar el contenido de una marca con IA en 2026"</em>, con la tabla de rangos por tipo de servicio. El AI Overview de Google toma su tabla de tarifas de una página así. Los datos del rubro están en la sección 2 de este informe.</li>
+          <li><strong>Dar de alta la marca en los directorios que los motores leen.</strong> Por orden de valor medido: andresospina.co/agencias, proyectoia.com, agentes.ai, necta.me, sortlist, aiagencyradar.com, rankglobal.ai, 50pros.com, pixelcrayons.com y el ecosistema de partners de HubSpot. Diez altas, todas accesibles.</li>
+          <li><strong>Pedir inclusión en los listicles que ya rankean.</strong> nichoseo.com, nublit.com, besolution.ar, elranking.mx, digitalmarketingsupermarket.com, storypros.io, shila.so. Siete contactos concretos, con el precio y el entregable listos para que el editor los copie.</li>
+          <li><strong>Trabajar el canal de YouTube para búsqueda.</strong> Dos de siete fuentes del AI Overview argentino son videos. El canal @MorfeoLabs ya existe. Hacen falta títulos con la keyword, descripción con el servicio y el país, y transcripción, porque es lo que el motor lee.</li>
+          <li><strong>Convertir los trabajos en casos con cifras.</strong> Franuí, Villavicencio y Citric. Una página por caso, con qué se hizo, en cuánto tiempo y qué resultado. Si no son clientes formales, conviene decirlo con claridad y presentarlos como recreaciones de producto, que es lo que el sitio ya hace bien.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-top">
+        <h3>Fase 2 · Contenido donde está el volumen en español</h3>
+        <span>2 a 4 meses · tráfico sostenido</span>
+      </div>
+      <div class="phase-body">
+        <p>En español el volumen comercial no alcanza, así que el tráfico tiene que venir del nivel informacional y de herramienta, donde la dificultad es baja y el tema coincide con el negocio.</p>
+        <ol>
+          <li><strong>Cluster de producción de video con IA.</strong> <code>crear videos con ia</code> suma 32.100 búsquedas al mes entre los seis mercados, con KD de 5 a 20. Es el cluster más grande y más accesible de todo el informe.</li>
+          <li><strong>Cluster de herramientas.</strong> n8n, HeyGen y ManyChat suman 251.500 búsquedas al mes en los seis mercados. Guías, alternativas y comparativas. Morfeo construye con estas herramientas, así que el contenido sale de la operación real y no hay que investigarlo.</li>
+          <li><strong>Cluster de formación.</strong> <code>curso de ia</code> suma 11.020 al mes con KD de 1 a 22, y <code>curso de inteligencia artificial</code> otras 5.030. Alimenta directo a La Fábrica.</li>
+          <li><strong>Cluster de agentes de IA.</strong> <code>agentes de ia</code> suma 3.860 al mes en LATAM con KD de 5 a 21, y crece 171% interanual en Argentina y 164% en México.</li>
+          <li><strong>Variante en español neutro.</strong> Las páginas de servicio y los artículos para México, Colombia, Chile y Perú necesitan una versión sin voseo. En Argentina y Uruguay se mantiene la voz rioplatense, que es parte de la marca.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-top">
+        <h3>Fase 3 · El mercado que paga 20 a 40 veces más</h3>
+        <span>3 a 6 meses · la decisión estratégica</span>
+      </div>
+      <div class="phase-body">
+        <p>Esta fase es una decisión de negocio, no una táctica de SEO, y conviene tomarla con los números a la vista. NORA cobra en dólares y el formulario del sitio ya ofrece tramos en dólares, así que la infraestructura comercial existe.</p>
+        <ol>
+          <li><strong>Abrir <code>/en/</code> con hreflang.</strong> Cuatro páginas para empezar, elegidas por dificultad casi nula y CPC alto: <code>ai content agency</code> (KD 6, CPC US$ 24,15), <code>ai growth agency</code> (KD 7, CPC US$ 16,39, creciendo 467%), <code>done for you content</code> (KD 1) y <code>ai content system</code> (KD 0, que es la frase literal que Morfeo ya usa en español).</li>
+          <li><strong>Publicar <code>/pricing</code> en inglés.</strong> Con los tramos en dólares. Los competidores que Gemini recomendó publican US$ 1.500 a 10.000 al mes. Morfeo está en el piso de ese rango, lo que es una ventaja competitiva si se comunica.</li>
+          <li><strong>Lanzar la línea de capacitación corporativa.</strong> <code>ai training for employees</code> tiene CPC de US$ 101,84 y <code>corporate ai training</code> de US$ 62,63. Morfeo ya capacita equipos, hoy sin página. El valor por lead en este nicho es de los más altos que medimos.</li>
+          <li><strong>Evaluar la línea de visibilidad en IA.</strong> El mercado estadounidense pregunta activamente cómo aparecer en las respuestas de IA, con dificultad de 10 a 39: "how ai answer engines select and cite content sources" (KD 15), "how to rank in ai search chatgpt perplexity" (KD 14), "how to create thought leadership content with ai" (KD 10). Un competidor colombiano, agenciageo.ai, ya vende exactamente esto. Morfeo tiene la capacidad técnica y hoy no lo ofrece.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="box alert">
+      <p class="box-head">Lo que conviene no hacer</p>
+      <ul>
+        <li><strong>No perseguir "agencia de inteligencia artificial" como keyword principal.</strong> Treinta búsquedas al mes en Argentina, cuarenta en México, en caída del 50% al 88% interanual en cuatro de los seis mercados. Conviene cubrirla con una página de servicio porque el SERP está débil, pero no construir la estrategia sobre ella.</li>
+          <li><strong>No comprar enlaces.</strong> El perfil ya arrastra 58 dominios de spam con score 60. Sumar más enlaces pagos en ese perfil es el peor escenario posible.</li>
+        <li><strong>No esperar resultados de LLM SEO en español este trimestre.</strong> El volumen de consulta modelado en español es de cero a dos por mes en las keywords del rubro. El trabajo en IA en español es de posicionamiento de marca a futuro, no de generación de leads inmediata. Los leads en IA, hoy, están en inglés.</li>
+        <li><strong>No publicar las cifras de redes sin fecha de corte.</strong> El sitio ya lo hace bien, aclara que los datos de Instagram y TikTok son al 10 de noviembre de 2026. Conviene mantener esa práctica en todo lo nuevo, porque es justo el tipo de dato que los motores citan y que, sin fecha, envejece mal.</li>
+      </ul>
+    </div>
+
+    <h3>Cómo se va a medir si funciona</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Métricas de control y línea base del 17 de noviembre de 2026</b>Todas verificables con las mismas herramientas de este informe.</caption>
+        <thead><tr><th>Métrica</th><th>Hoy</th><th>90 días</th><th>180 días</th><th>Cómo se mide</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">Páginas indexadas</td><td class="n">2</td><td class="n">25 a 35</td><td class="n">60 a 80</td><td>Search Console</td></tr>
+          <tr><td class="kw">Keywords en top 100, LATAM</td><td class="n zero">0</td><td class="n">60 a 120</td><td class="n">250 a 400</td><td>DataForSEO Ranked Keywords</td></tr>
+          <tr><td class="kw">Keywords en top 10, LATAM</td><td class="n zero">0</td><td class="n">5 a 15</td><td class="n">30 a 60</td><td>DataForSEO Ranked Keywords</td></tr>
+          <tr><td class="kw">Menciones en respuestas de IA, 9 prompts</td><td class="n zero">0 de 9</td><td class="n">2 a 3 de 9</td><td class="n">5 a 6 de 9</td><td>Repetir esta auditoría con los mismos prompts</td></tr>
+          <tr><td class="kw">Directorios con alta activa</td><td class="n zero">0</td><td class="n">8 a 10</td><td class="n">12 a 15</td><td>Verificación manual</td></tr>
+          <tr><td class="kw">Reseñas en Google Business Profile</td><td class="n zero">sin ficha</td><td class="n">10 a 15</td><td class="n">30 a 40</td><td>Ficha de Google</td></tr>
+          <tr><td class="kw">Dominios de referencia no spam</td><td class="n zero">0 de 58</td><td class="n">10 a 15</td><td class="n">30 a 40</td><td>DataForSEO Backlinks</td></tr>
+          <tr><td class="kw">Keywords en top 10, Estados Unidos</td><td class="n zero">0</td><td class="n zero">0</td><td class="n">3 a 8</td><td>Semrush, base us</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Los rangos son estimaciones basadas en la dificultad medida de las keywords objetivo y en el hecho de que el dominio parte sin autoridad real. Son proyecciones, no compromisos. La métrica que mejor resume el avance es la cuarta: volver a correr estos nueve prompts contra los cuatro motores cada 90 días y contar las menciones.</p>
+  </div>
+</section>
+
+<!-- ============ 15 METODOLOGIA ============ -->
+<section id="metodologia">
+  <div class="wrap">
+    <span class="sec-num">15 · Metodología y fuentes</span>
+    <h2>Cómo se obtuvo cada número de este informe</h2>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Fuentes, endpoints y fechas</b>Todo recogido el 17 de noviembre de 2026 salvo donde se indique otra cosa.</caption>
+        <thead><tr><th>Dato del informe</th><th>Herramienta y endpoint</th><th>Parámetros</th></tr></thead>
+        <tbody>
+          <tr><td>Contenido y estado on-page</td><td>DataForSEO OnPage · instant_pages y content_parsing</td><td>JavaScript activado, morfeolabs.com y /nora</td></tr>
+          <tr><td>Volumen e intención por país</td><td>DataForSEO Labs · google/keyword_overview</td><td>6 mercados, es y en, 32 y 26 keywords</td></tr>
+          <tr><td>Universo long tail México</td><td>DataForSEO Labs · google/keyword_suggestions</td><td>Filtro de volumen mayor a 20</td></tr>
+          <tr><td>Visibilidad orgánica</td><td>DataForSEO Labs · google/domain_rank_overview</td><td>Argentina, es</td></tr>
+          <tr><td>Perfil de enlaces</td><td>DataForSEO Backlinks · summary y referring_domains</td><td>Excluyendo enlaces internos</td></tr>
+          <tr><td>SERP y AI Overview</td><td>DataForSEO SERP · google/organic/live/advanced</td><td>Profundidad 10, escritorio, AR y US</td></tr>
+          <tr><td>Volumen de consulta en LLM</td><td>DataForSEO AI Optimization · keyword_data/search_volume</td><td>Serie de 12 meses, es y en. Dato modelado</td></tr>
+          <tr><td>Respuestas y citaciones de ChatGPT</td><td>DataForSEO AI Optimization · chat_gpt/llm_responses</td><td>Búsqueda web forzada, 3 prompts, AR MX US</td></tr>
+          <tr><td>Agregado de menciones por dominio</td><td>DataForSEO AI Optimization · llm_mentions/top_domains</td><td>chat_gpt, scope sources, US</td></tr>
+          <tr><td>Respuestas de Gemini</td><td>DataForSEO AI Optimization · gemini/llm_responses</td><td>gemini-3.1-pro-preview, grounding activo, 2 prompts</td></tr>
+          <tr><td>Respuestas de Claude</td><td>DataForSEO AI Optimization · claude/llm_responses</td><td>claude-sonnet-5-5, búsqueda web activa, 1 prompt</td></tr>
+          <tr><td>Respuestas de Perplexity</td><td>Perplexity API · Sonar Pro</td><td>search_context_size alto, 2 prompts</td></tr>
+          <tr><td>Rank global y presencia regional</td><td>Semrush · domain_ranks</td><td>morfeolabs.com, todas las bases</td></tr>
+          <tr><td>Validación cruzada de volumen</td><td>Semrush · phrase_these</td><td>Bases ar y us, 12 keywords cada una</td></tr>
+          <tr><td>Preguntas en Estados Unidos</td><td>Semrush · phrase_questions</td><td>Base us, "ai content", top 30 por volumen</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Límites de esta auditoría, dichos con claridad</h3>
+    <ul>
+      <li><strong>Sin acceso a Search Console ni a Analytics.</strong> No hay datos de impresiones, clics ni conversiones reales. Todo lo de tráfico es estimación de terceros. Con acceso a las propiedades, varias de las proyecciones de la sección 14 se pueden ajustar con datos propios.</li>
+      <li><strong>El volumen de consulta en LLM es modelado.</strong> Se explica en la sección 9. Sirve para comparar y para leer tendencias, no como conteo absoluto.</li>
+      <li><strong>Las respuestas de IA son una foto de un momento.</strong> Son no deterministas y cambian entre ejecuciones y entre ubicaciones. Lo que se sostiene es el patrón de fuentes, que fue consistente en los cuatro motores, no el orden exacto de los nombres.</li>
+      <li><strong>Semrush no tiene datos para nueve de las doce keywords en Argentina ni para las preguntas sobre "contenido con ia" en México.</strong> Lo reportamos tal cual, sin rellenar el hueco con otra fuente, porque la ausencia de dato es en sí misma el hallazgo.</li>
+      <li><strong>Chile y Perú se midieron con una canasta de 24 keywords</strong> en lugar de las 32 de Argentina, México y Colombia. Las celdas sin consultar aparecen como n/d, no como cero.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Auditoría SEO y LLM SEO de morfeolabs.com</strong> · Preparada por ThinkFlow Labs · 17 de noviembre de 2026</p>
+    <p>Datos de DataForSEO (OnPage, Labs, SERP, Backlinks, AI Optimization), Semrush (Domain Ranks, Keyword Overview, Keyword Magic) y Perplexity (Sonar Pro). Los nombres de empresas y los dominios citados son los que los motores devolvieron textualmente, sin edición.</p>
+    <p class="src">Las cifras de precio, volumen y dificultad reflejan el estado de las bases consultadas en la fecha indicada y conviene volver a medirlas antes de usarlas en una decisión de inversión.</p>
+  </div>
+</footer>
+
+</body>
+</html>

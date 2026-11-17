@@ -8,6 +8,7 @@ Each subfolder of this repo is one engagement. Pages are blocked from search eng
 
 | Client | Folder | URL |
 |---|---|---|
+| Morfeo Labs (auditoría SEO + LLM SEO, LATAM y USA) | [`/morfeo-labs-audit/`](./morfeo-labs-audit/) | https://thinkflowlabs.github.io/SEO/morfeo-labs-audit/ |
 | MB Clean + MB Floor (Reporte de octubre) | [`/mb-solutions-octubre-2026/`](./mb-solutions-octubre-2026/) | https://thinkflowlabs.github.io/SEO/mb-solutions-octubre-2026/ |
 | Chefpost (Monthly Work Report, October 2026, EN/ES) | [`/chefpost-octubre-2026/`](./chefpost-octubre-2026/) | https://thinkflowlabs.github.io/SEO/chefpost-octubre-2026/ |
 | Chefpost (October 2026 SEO, AI & Local Growth Strategy, EN/ES) | [`/chefpost-october-growth-2026/`](./chefpost-october-growth-2026/) | https://thinkflowlabs.github.io/SEO/chefpost-october-growth-2026/ |
