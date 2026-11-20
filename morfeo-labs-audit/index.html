@@ -254,6 +254,7 @@ footer a{color:var(--amber)}
     <a href="#llm-menciona">A quién menciona</a>
     <a href="#llm-cita">A quién cita</a>
     <a href="#mecanismo">El mecanismo</a>
+    <a href="#multipais">Varios países</a>
     <a href="#plan">El plan</a>
     <a href="#metodologia">Metodología</a>
   </div>
@@ -275,9 +276,10 @@ footer a{color:var(--amber)}
       <div class="stat good"><b>US$ 1.500</b><span>Precio público mensual en la página de NORA. Es el único activo del proyecto con formato citable por un LLM.</span></div>
     </div>
 
-    <h3>Los cinco hallazgos que mandan</h3>
+    <h3>Los seis hallazgos que mandan</h3>
     <ol>
       <li><strong>El mercado comercial en español es diminuto.</strong> Sumando Argentina, México, Colombia, Chile y Perú, la keyword comercial más valiosa del rubro, <code>agencia de inteligencia artificial</code>, mueve 150 búsquedas al mes entre los cinco países. Semrush no tiene datos para nueve de las doce keywords comerciales que consultamos en Argentina, porque están por debajo de su umbral de reporte. No hay un negocio de SEO tradicional en español construido sobre intención comercial directa.</li>
+      <li><strong>El sitio habla rioplatense, y eso lo deja fuera de cinco de los seis mercados.</strong> Todo el contenido está escrito con voseo: "querés", "armá", "contame", "aprendés a hacerlo". Para un lector en México, Colombia, Chile o Perú esa voz dice "esto es para Argentina" antes de que llegue a leer el servicio. Y Argentina es justamente el mercado más chico del grupo en poder adquisitivo en dólares, que es la moneda en la que Morfeo cobra. Es el límite de alcance más grande que tiene el proyecto y el más barato de corregir, porque no se trata de traducir sino de cambiar el registro. Se desarrolla en la sección 14.</li>
       <li><strong>El mercado en inglés vale entre veinte y cuarenta veces más, por consulta.</strong> <code>ai automation agency</code> mueve 4.400 búsquedas al mes en Estados Unidos con CPC de US$ 26,80. <code>ai consulting</code>, 8.100 con CPC de US$ 50,84. <code>ai training for employees</code>, 320 con CPC de US$ 101,84. El equivalente en español cuesta entre US$ 1 y US$ 5.</li>
       <li><strong>En los cuatro motores de IA, el ganador es quien escribió el artículo comparativo.</strong> Gemini fundamenta su recomendación en español en <code>somoscamaleon.com/blog/mejor-agencia-inteligencia-artificial-mexico-latam</code>, un post de una agencia sobre su propia categoría. Esa misma agencia aparece recomendada por ChatGPT en dos mercados. Es el patrón más replicable de todo el informe.</li>
       <li><strong>En Google, la posición 1 ya no es orgánica.</strong> Tanto en <code>agencia de inteligencia artificial</code> en Argentina como en <code>ai automation agency</code> en Estados Unidos, el primer bloque es un AI Overview. Lo que cita son listicles, páginas de precios, Reddit, YouTube y directorios. Morfeo Labs no tiene ninguno de esos cinco tipos de activo.</li>
@@ -363,16 +365,18 @@ footer a{color:var(--amber)}
           <tr><td><span class="pill com">P1</span></td><td class="kw">Sin blog ni contenido comparativo</td><td>740 palabras indexables, 0 artículos</td><td>Sin superficie para el long tail informacional, que es donde está todo el volumen en español</td></tr>
           <tr><td><span class="pill com">P1</span></td><td class="kw">Sin datos estructurados de organización ni de servicio</td><td>Solo OG y Twitter Card. Sin JSON-LD detectado</td><td>La entidad "Morfeo Labs" no está declarada de forma legible por máquina</td></tr>
           <tr><td><span class="pill com">P1</span></td><td class="kw">41 imágenes sin texto alternativo</td><td><code>no_image_alt: true</code>, <code>no_image_title: true</code></td><td>Pierde el canal de imágenes y accesibilidad. El sitio es casi todo visual</td></tr>
-          <tr><td><span class="pill com">P1</span></td><td class="kw">Sin versión en inglés</td><td>Sin hreflang. Todo en español rioplatense con voseo</td><td>Cierra el acceso al mercado que vale 20 a 40 veces más</td></tr>
+          <tr><td><span class="pill com">P1</span></td><td class="kw">Un solo idioma y una sola variante</td><td>Todo en español rioplatense con voseo, sin versión en inglés</td><td>Limita el alcance a dos de los seis mercados medidos y cierra el que vale 20 a 40 veces más</td></tr>
           <tr><td><span class="pill inf">P2</span></td><td class="kw">Precio solo en /nora</td><td>El home ofrece tramos de presupuesto en el formulario, no precios</td><td>Pierde la citación de IA que premia los precios publicados</td></tr>
           <tr><td><span class="pill inf">P2</span></td><td class="kw">Un recurso CSS bloquea el renderizado</td><td><code>render_blocking_stylesheets_count: 1</code></td><td>Impacto marginal con 8,95 KB de peso total</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="box">
-      <p class="box-head">Nota sobre el voseo</p>
-      <p>El sitio está escrito en español rioplatense, con voseo. Eso es correcto y conviene mantenerlo en Argentina y Uruguay, porque es parte de la voz de la marca. Para México, Colombia, Chile y Perú hace falta una variante en español neutro, sobre todo en las páginas de servicio y en los artículos. No es un detalle de estilo: la keyword que se busca en México es "automatizar" y la frase que convierte no incluye "armá" ni "querés".</p>
+    <div class="box alert">
+      <p class="box-head">El idioma del sitio es un límite de mercado, no un detalle de estilo</p>
+      <p>Todo morfeolabs.com está escrito en español rioplatense, con voseo. Aparece en los títulos de las tres vías de trabajo ("Aprendés a hacerlo", "Charlemos y me contás qué necesitás"), en los botones ("Quiero delegar", "Contame más") y en las preguntas del formulario ("¿Qué querés automatizar?", "¿Qué presupuesto tenés pensado?").</p>
+      <p>Eso funciona en Argentina y Uruguay, donde es parte de la voz de la marca y conviene conservarlo. En los otros cuatro mercados hispanohablantes que este informe mide, trabaja en contra: le dice al lector que el servicio es para otro país antes de que entienda de qué se trata. El costo es alto y el arreglo es barato, porque no hay que traducir nada, solo cambiar el registro.</p>
+      <p>La sección 14 desarrolla cómo resolverlo sin duplicar el sitio.</p>
     </div>
   </div>
 </section>
@@ -1142,9 +1146,83 @@ footer a{color:var(--amber)}
 </section>
 
 <!-- ============ 14 PLAN ============ -->
+<section id="multipais">
+  <div class="wrap">
+    <span class="sec-num">14 · Un solo sitio, seis mercados</span>
+    <h2>Competir en varios países no pide cinco sitios. Pide cinco decisiones.</h2>
+    <p class="intro">Con los volúmenes de la sección 6, abrir una versión por país sería un error caro: repartiría 150 búsquedas mensuales entre cinco páginas casi idénticas, que competirían entre sí y multiplicarían por cinco el mantenimiento. Lo que corresponde es un solo sitio que declare, de forma explícita, que atiende la región. Estos son los cambios mínimos para lograrlo, en orden de impacto.</p>
+
+    <h3>1. Pasar el sitio a español neutro</h3>
+    <p>Es el cambio más importante de esta sección y el más barato de ejecutar. Hoy la voz del sitio es rioplatense de principio a fin, y eso reduce el mercado alcanzable de seis países a dos.</p>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Texto actual del sitio y su equivalente neutro</b>Ejemplos tomados de morfeolabs.com y morfeolabs.com/nora, 17 de noviembre de 2026.</caption>
+        <thead><tr><th>Dónde aparece</th><th>Texto actual</th><th>Versión neutra</th></tr></thead>
+        <tbody>
+          <tr><td>Título de la vía 2</td><td class="kw">Aprendés a hacerlo</td><td>Aprende a hacerlo</td></tr>
+          <tr><td>Título de la vía 3</td><td class="kw">Charlemos y me contás qué necesitás</td><td>Conversemos y me cuentas qué necesitas</td></tr>
+          <tr><td>Botón principal</td><td class="kw">Contame más</td><td>Cuéntame más</td></tr>
+          <tr><td>Formulario, paso 1</td><td class="kw">¿Qué querés automatizar?</td><td>¿Qué quieres automatizar?</td></tr>
+          <tr><td>Formulario, presupuesto</td><td class="kw">¿Qué presupuesto tenés pensado?</td><td>¿Qué presupuesto tienes pensado?</td></tr>
+          <tr><td>NORA, cierre</td><td class="kw">Dejanos tu Instagram</td><td>Déjanos tu Instagram</td></tr>
+          <tr><td>NORA, prueba</td><td class="kw">Probalo con tu marca</td><td>Pruébalo con tu marca</td></tr>
+          <tr><td>NORA, preguntas</td><td class="kw">Swipeando tu semana en el celular</td><td>Revisando tu semana desde el celular</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Dos aclaraciones para que el cambio no se pase de rosca. La primera: la sección de historia personal puede conservar la voz original, porque ahí la cercanía es el punto y el lector ya decidió quedarse. Lo que debe quedar neutro es todo lo que un comprador lee antes de decidir, es decir las páginas de servicio, los precios, el formulario y los artículos. La segunda: "neutro" no quiere decir frío. Quiere decir que un lector en Guadalajara, Medellín o Lima no sienta que entró a la casa de otro.</p>
+
+    <div class="box">
+      <p class="box-head">Por qué esto también afecta a los motores de IA</p>
+      <p>Cuando le preguntamos a ChatGPT por agencias en México, la respuesta terminó pidiendo: <em>"¿Dónde buscas la agencia? Todo México · CDMX y Estado de México · Pachuca, Hidalgo y alrededores · Que trabajen remotamente en México"</em>. El motor califica por país antes de recomendar. Un sitio cuya única señal de lugar es la forma de conjugar los verbos queda clasificado en un solo mercado, y es el más chico de los seis en capacidad de pago en dólares.</p>
+    </div>
+
+    <h3>2. Nombrar la región y los países en el texto visible</h3>
+    <p>Es el cambio más barato de todos y tiene efecto directo sobre la elegibilidad. La consulta interna que ejecutó Gemini para responder en español fue, textualmente, <code>"agencia" "inteligencia artificial" "creación de contenido" Latinoamérica OR Latam</code>. Si esas palabras no están en la página, el sitio no entra al conjunto de candidatos. Alcanza con una línea en la portada y otra en el pie:</p>
+    <div class="box win">
+      <p class="box-head">Texto sugerido</p>
+      <p>Trabajamos con marcas en Argentina, México, Colombia, Chile, Perú y Estados Unidos. Facturamos en dólares y nos reunimos en tu horario.</p>
+    </div>
+
+    <h3>3. Declarar los países en los datos estructurados</h3>
+    <p>Es la versión legible por máquina del punto anterior, y responde a la misma pregunta de ubicación que hacen los motores. En el bloque <code>Service</code> de cada página de servicio se enumeran los países atendidos con <code>areaServed</code>, y se declara el precio con su moneda en <code>offers</code>. Son unas pocas líneas por página y no cambian nada de lo que el visitante ve.</p>
+
+    <h3>4. Hacer explícitas la moneda y la logística</h3>
+    <p>Precio en dólares, medios de pago aceptados, y una línea sobre husos horarios y reuniones. Parece menor y es la objeción real de alguien en Lima que evalúa a un proveedor de Buenos Aires. Morfeo ya cobra en dólares y los tramos del formulario ya están en esa moneda, así que el trabajo es solamente decirlo donde se ve.</p>
+
+    <h3>5. Anunciar las versiones de idioma, cuando exista la segunda</h3>
+    <p>Mientras el sitio esté solo en español no hace falta tocar nada: con un único idioma no hay nada que anunciar. El momento llega cuando se abra la versión en inglés de la fase 3. Ahí se agregan en el encabezado unas etiquetas que le indican a Google que la misma página existe en dos idiomas, más una tercera que señala cuál mostrar por defecto a quien no encaje en ninguna de las dos.</p>
+    <div class="box alert">
+      <p class="box-head">El error que conviene evitar al hacerlo</p>
+      <p>Para la versión en español hay que usar el código simple de idioma, el mismo para los seis mercados. Existe un código específico de "español de Latinoamérica" que circula mucho en tutoriales y que parece la elección obvia. <strong>Google no lo admite</strong>: su documentación acepta únicamente códigos de idioma ISO 639-1 y, cuando se agrega país, códigos ISO 3166-1 de dos letras. El código regional de Latinoamérica queda fuera y la anotación se ignora en silencio, sin aviso en Search Console. Un código de idioma simple cubre Argentina, México, Colombia, Chile, Perú y el público hispanohablante de Estados Unidos sin configuración adicional.</p>
+    </div>
+
+    <h3>Lo que conviene no hacer</h3>
+    <div class="tbl-wrap">
+      <table>
+        <caption><b>Tres caminos habituales que en este caso restan</b>Evaluados contra los volúmenes medidos en la sección 6 y el perfil de enlaces de la sección 5.</caption>
+        <thead><tr><th>Camino</th><th>Por qué suena bien</th><th>Por qué aquí no conviene</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">Una carpeta por país, del tipo /mx/ o /co/</td><td>Parece la forma ordenada de segmentar</td><td>Con 20 a 110 búsquedas mensuales por país, produce cinco páginas casi iguales que compiten entre sí en lugar de sumar, y quintuplica el mantenimiento</td></tr>
+          <tr><td class="kw">Dominios locales, del tipo .com.ar o .com.mx</td><td>Da señal local fuerte</td><td>Reparte la autoridad entre varios dominios. Aquí no hay autoridad que repartir: los 58 dominios que enlazan son spam</td></tr>
+          <tr><td class="kw">Redirección automática según el país del visitante</td><td>Parece cómodo para el usuario</td><td>Los rastreadores de Google y de los motores de IA llegan en su mayoría desde Estados Unidos, así que verían una sola versión y las demás quedarían sin indexar</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>El límite que no se resuelve con el sitio</h3>
+    <p>La ficha de Google Business Profile es de un solo lugar. Ancla en Buenos Aires y no cubre seis países, incluso configurada como negocio de área de servicio. Sigue valiendo la pena abrirla, porque es la razón estructural por la que ChatGPT mostró cuatro competidores mexicanos con dirección, teléfono y reseñas mientras Morfeo no aparecía, pero conviene saber que resuelve Argentina y no la región.</p>
+    <p>La cobertura regional la dan los directorios, no la ficha. Los que los cuatro motores citan y son multi-país están nombrados uno por uno en la sección 12: <code>andresospina.co/agencias</code> con 79 agencias en seis países, <code>proyectoia.com</code> y <code>necta.me</code>. Esa es la vía para existir en México o Colombia sin tener oficina en ninguno de los dos.</p>
+
+    <h3>Cuándo sí se justifica una página dedicada a un país</h3>
+    <p>Cuando ese mercado tenga volumen propio suficiente por sí solo, del orden de 200 a 300 búsquedas mensuales en su conjunto de keywords, o cuando exista una prueba local que ofrecer: un cliente de ese país, un caso con cifras, una factura en moneda local, una persona del equipo radicada ahí. Hoy ninguno de los cinco mercados llega a ese umbral.</p>
+    <p>México es el candidato más cercano, por ser el de mayor volumen en casi todas las keywords medidas y por tener el ecosistema de directorios más desarrollado de la región. Conviene volver a evaluarlo a los seis meses, con datos propios de Search Console en lugar de estimaciones de terceros.</p>
+  </div>
+</section>
+
 <section id="plan">
   <div class="wrap">
-    <span class="sec-num">14 · El plan</span>
+    <span class="sec-num">15 · El plan</span>
     <h2>Qué necesita Morfeo Labs, en orden de retorno</h2>
     <p class="intro">Las cuatro fases están ordenadas por relación entre esfuerzo y resultado, no por lógica cronológica estricta. Las fases 0 y 1 se pueden hacer en paralelo.</p>
 
@@ -1159,6 +1237,8 @@ footer a{color:var(--amber)}
           <li><strong>Crear seis páginas de servicio, una por línea de negocio.</strong> <code>/automatizacion-de-contenido-con-ia</code>, <code>/agentes-de-ia</code>, <code>/capacitacion-ia-empresas</code>, <code>/consultoria-ia</code>, <code>/sistemas-de-ia-a-medida</code>, <code>/chatbots-whatsapp-instagram</code>. Cada una con el sustantivo en el título, el H1 y la URL, y cada una con un entregable numerado, un plazo y un rango de precio.</li>
           <li><strong>Publicar una página de precios en el dominio principal.</strong> <code>/precios</code> en español y <code>/pricing</code> en inglés. Gemini busca "pricing" de forma literal y cita las URL que la contienen. Los US$ 1.500 de NORA van ahí, con los tramos de los otros servicios.</li>
           <li><strong>Sumar datos estructurados.</strong> JSON-LD de <code>Organization</code> con el nombre, la ubicación de Buenos Aires, los perfiles sociales y los fundadores, más <code>Service</code> en cada página de servicio con <code>areaServed</code> y <code>offers</code>, y <code>FAQPage</code> en las preguntas frecuentes de NORA. El AI Overview estadounidense cita el bloque de preguntas frecuentes de theaiautomationagency.ai, no su página de servicio.</li>
+          <li><strong>Pasar todo el sitio a español neutro.</strong> Títulos, botones, formulario y páginas de servicio. La sección de historia personal puede conservar la voz original. Es el cambio que más amplía el mercado alcanzable por unidad de esfuerzo, y la sección 14 trae la tabla de equivalencias lista para aplicar.</li>
+          <li><strong>Nombrar los países atendidos en la portada y en el pie,</strong> con la moneda de facturación. Dos líneas de texto que habilitan la elegibilidad regional descrita en la sección 14.</li>
           <li><strong>Poner texto alternativo en las 41 imágenes.</strong> El sitio es casi todo visual y hoy ninguna imagen tiene alt ni title.</li>
           <li><strong>Resolver la entidad repartida.</strong> Decidir si la-fabrica.ai y sistemanora.com siguen separados o se consolidan bajo morfeolabs.com. La recomendación es consolidar al menos los legales y el blog, para que la autoridad se acumule en un solo dominio. Si se mantienen separados, hay que enlazarlos de forma consistente en las dos direcciones y declarar la relación en el <code>sameAs</code> del JSON-LD.</li>
         </ol>
@@ -1195,7 +1275,7 @@ footer a{color:var(--amber)}
           <li><strong>Cluster de herramientas.</strong> n8n, HeyGen y ManyChat suman 251.500 búsquedas al mes en los seis mercados. Guías, alternativas y comparativas. Morfeo construye con estas herramientas, así que el contenido sale de la operación real y no hay que investigarlo.</li>
           <li><strong>Cluster de formación.</strong> <code>curso de ia</code> suma 11.020 al mes con KD de 1 a 22, y <code>curso de inteligencia artificial</code> otras 5.030. Alimenta directo a La Fábrica.</li>
           <li><strong>Cluster de agentes de IA.</strong> <code>agentes de ia</code> suma 3.860 al mes en LATAM con KD de 5 a 21, y crece 171% interanual en Argentina y 164% en México.</li>
-          <li><strong>Variante en español neutro.</strong> Las páginas de servicio y los artículos para México, Colombia, Chile y Perú necesitan una versión sin voseo. En Argentina y Uruguay se mantiene la voz rioplatense, que es parte de la marca.</li>
+          <li><strong>Escribir todo lo nuevo en español neutro.</strong> El paso a neutro del sitio actual es tarea de la fase 0. De aquí en adelante, cada artículo y cada página nace ya en esa voz, para no generar deuda que haya que corregir después. La sección 14 detalla el criterio.</li>
         </ol>
       </div>
     </div>
@@ -1208,7 +1288,7 @@ footer a{color:var(--amber)}
       <div class="phase-body">
         <p>Esta fase es una decisión de negocio, no una táctica de SEO, y conviene tomarla con los números a la vista. NORA cobra en dólares y el formulario del sitio ya ofrece tramos en dólares, así que la infraestructura comercial existe.</p>
         <ol>
-          <li><strong>Abrir <code>/en/</code> con hreflang.</strong> Cuatro páginas para empezar, elegidas por dificultad casi nula y CPC alto: <code>ai content agency</code> (KD 6, CPC US$ 24,15), <code>ai growth agency</code> (KD 7, CPC US$ 16,39, creciendo 467%), <code>done for you content</code> (KD 1) y <code>ai content system</code> (KD 0, que es la frase literal que Morfeo ya usa en español).</li>
+          <li><strong>Abrir <code>/en/</code>, anunciando las dos versiones de idioma como indica la sección 14.</strong> Cuatro páginas para empezar, elegidas por dificultad casi nula y CPC alto: <code>ai content agency</code> (KD 6, CPC US$ 24,15), <code>ai growth agency</code> (KD 7, CPC US$ 16,39, creciendo 467%), <code>done for you content</code> (KD 1) y <code>ai content system</code> (KD 0, que es la frase literal que Morfeo ya usa en español).</li>
           <li><strong>Publicar <code>/pricing</code> en inglés.</strong> Con los tramos en dólares. Los competidores que Gemini recomendó publican US$ 1.500 a 10.000 al mes. Morfeo está en el piso de ese rango, lo que es una ventaja competitiva si se comunica.</li>
           <li><strong>Lanzar la línea de capacitación corporativa.</strong> <code>ai training for employees</code> tiene CPC de US$ 101,84 y <code>corporate ai training</code> de US$ 62,63. Morfeo ya capacita equipos, hoy sin página. El valor por lead en este nicho es de los más altos que medimos.</li>
           <li><strong>Evaluar la línea de visibilidad en IA.</strong> El mercado estadounidense pregunta activamente cómo aparecer en las respuestas de IA, con dificultad de 10 a 39: "how ai answer engines select and cite content sources" (KD 15), "how to rank in ai search chatgpt perplexity" (KD 14), "how to create thought leadership content with ai" (KD 10). Un competidor colombiano, agenciageo.ai, ya vende exactamente esto. Morfeo tiene la capacidad técnica y hoy no lo ofrece.</li>
@@ -1250,7 +1330,7 @@ footer a{color:var(--amber)}
 <!-- ============ 15 METODOLOGIA ============ -->
 <section id="metodologia">
   <div class="wrap">
-    <span class="sec-num">15 · Metodología y fuentes</span>
+    <span class="sec-num">16 · Metodología y fuentes</span>
     <h2>Cómo se obtuvo cada número de este informe</h2>
 
     <div class="tbl-wrap">
