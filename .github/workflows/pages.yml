@@ -22,6 +22,25 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: .
+      # deploy-pages consulta los metadatos del artefacto apenas medio segundo despues de
+      # que upload-pages-artifact lo finaliza, y con un artefacto grande la API todavia no
+      # lo indexo: devuelve "Found 0 artifact(s)" y el deploy muere. Reintentar no sirve,
+      # porque reproduce la misma carrera. Esperamos a que sea consultable.
+      - name: Esperar a que el artefacto sea visible en la API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 30); do
+            n=$(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" \
+                  --jq '[.artifacts[] | select(.name=="github-pages")] | length' 2>/dev/null || echo 0)
+            if [ "${n:-0}" -ge 1 ]; then
+              echo "Artefacto visible tras ${i} intento(s)."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "El artefacto no aparecio en la API tras 150 segundos."
+          exit 1
       - id: deployment
         uses: actions/deploy-pages@v5
         with:
